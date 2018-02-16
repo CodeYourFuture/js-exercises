@@ -2,29 +2,28 @@ In programming there are different _types of_ data. You've used one data type al
 
 Computers recognise strings as a sequence of characters but to humans, strings are simply lines of text.
 
-```
-var message = 'This is a string';
+```js
+var message = "This is a string";
 ```
 
 Notice that strings are always wrapped **inside of quote marks**. We do this so that the computer knows when the string starts and ends.
 
-You can add two strings together using the plus operator (`+`):
+You can check that the data is a string by using the `typeof` operator:
 
 ```js
-var greetingStart = "Hello, my name is ";
-var name = "Daniel";
+var message = "This is a string";
+var messageType = typeof message;
 
-var greeting = greetingStart + name;
-
-console.log(greeting); // Logs "Hello, my name is Daniel"
+console.log(messageType); // logs 'string'
 ```
 
 ## Exercise
 
-* Write a program that logs a message with a greeting and your name
+* Write a program that logs a message and its type
 
 ## Expected result
 
 ```
-Hello, my name is Daniel
+This is a string
+string
 ```
