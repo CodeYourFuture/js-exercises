@@ -23,7 +23,7 @@ var difference = 10 - 2; // 8
 ## Expected result
 
 ```
-Number of students: 12
+Number of students: 15
 Number of mentors: 8
-Total numnber of students and mentors: 20
+Total numnber of students and mentors: 23
 ```
