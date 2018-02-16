@@ -19,16 +19,12 @@ var greeting = greetingStart + name;
 console.log(greeting); // Logs "Hello, my name is Daniel"
 ```
 
-You can also check how many characters there are in a string:
-
-```js
-var name = "Daniel";
-var nameLength = fullName.length;
-
-console.log(fullNameLength); // Logs 6
-```
-
-### Exercise
+## Exercise
 
 * Write a program that logs a message with a greeting and your name
-* Log another message that prints "My name is X characters long"
+
+## Expected result
+
+```
+Hello, my name is Daniel
+```

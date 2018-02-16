@@ -6,7 +6,7 @@ Inside of `exercise.js` there's a line of code that will print "Hello world!".
 
 ### 1. Run the program
 
-* Open a terminal
+* Open a terminal window
 * Change directory to this folder (`cd week-1/C-hello-world`)
 * Run the program using node (`node exercise.js`)
 

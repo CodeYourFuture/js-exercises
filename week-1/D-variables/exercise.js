@@ -1,3 +1,3 @@
-// Create a variable greeting with the value "Hello world"
+// Start by creating a variable `greeting`
 
 console.log(greeting);
