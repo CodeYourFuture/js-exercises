@@ -15,7 +15,7 @@ var roughAge = Math.round(preciseAge); // 30
 
 * Using the variables provided in the exercise calculate the percentage of mentors and students in the group
 
-## Expected results
+## Expected result
 
 ```
 Percentage students: 65%
