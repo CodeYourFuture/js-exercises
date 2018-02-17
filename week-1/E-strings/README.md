@@ -12,10 +12,9 @@ You can check that the data is a string by using the `typeof` operator:
 
 ```js
 var message = "This is a string";
-var messageType = typeof message;
+var messageType = typeof "string";
 
-console.log(messageType); // logs 'string'
-```
+console.log(messageType); 
 
 ## Exercise
 
