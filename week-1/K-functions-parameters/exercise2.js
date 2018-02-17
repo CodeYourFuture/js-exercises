@@ -1,5 +1,5 @@
 // Declare your function first
 
-// Call the function and assign the result to a variable `result`
+var result = divide(3, 4);
 
 console.log(result);

@@ -1,6 +1,6 @@
-// Declare your function here
+// Complete the function so that it takes input parameters
 function multiply() {
-  // calculate the result of the function and return it
+  // Calculate the result of the function and return it
 }
 
 // Assign the result of calling the function the variable `result`
