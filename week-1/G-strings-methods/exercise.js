@@ -1,3 +1,4 @@
 // Start by creating a variable `message`
-
-console.log(message);
+var name = "Harun Kisac";
+var namelength = name.toLowerCase();
+console.log(namelength);
