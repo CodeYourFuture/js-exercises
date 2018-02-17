@@ -31,3 +31,19 @@ function createCreeting(name, age) {
 Percentage students: 65%
 Percentage mentors: 35%
 ```
+
+## Exercise 2
+
+* In `exercise2.js` you have been provided with the names of some mentors. Write a program that logs a shouty greeting to each one.
+* Your program should include a function that spells their name in uppercase, and a function that creates a shouty greeting.
+* Log each greeting to the console.
+
+## Expected result
+
+```
+HELLO DANIEL
+HELLO IRINA
+HELLO MIMI
+HELLO ROB
+HELLO YOHANNES
+```
