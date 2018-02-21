@@ -9,8 +9,16 @@
 
   As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
 */
+//const pipe = (multiply, add, format) => (...args) =>
+//multiply(add(format(...args)));
+//const pipe = (multiply, add, format);
+//const pipe = (multiply, add);
 
 var startingValue = 5;
+//const result = pipe(multiply(startingValue, 2), add(10), format);
+//const result = pipe(multiply, add, format);
+//const result = pipe(multiply, add);
+var result = format(add(multiply(startingValue, 2), 10));
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
