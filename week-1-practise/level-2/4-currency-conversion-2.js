@@ -7,8 +7,12 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToUSD(price) {}
-function convertToBRL(price) {}
+function convertToUSD(priceusd) {
+  return priceusd + 1 / 100;
+} // I think that we can use just one function for all foreign transations.
+function convertToBRL(pricebrl) {
+  return pricebrl + 1 / 100;
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
