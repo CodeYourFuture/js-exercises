@@ -1,2 +1,3 @@
-var numberOfStudents = 15;
-var numberOfMentors = 8;
+var preciseAge = 30.612437;
+var roughAge = Math.round(preciseAge);
+console.log(roughAge);

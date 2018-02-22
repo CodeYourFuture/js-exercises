@@ -1,5 +1,16 @@
 // Start by creating a variable `greeting`
-var greeting = "hello world";
-var greeting2 = "hello cyf";
-console.log(greeting);
-console.log(greeting2);
+var message = "hello world";
+var message = "hello world";
+var message = "hello world";
+var message = "hello world";
+var message = "hello world";
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);

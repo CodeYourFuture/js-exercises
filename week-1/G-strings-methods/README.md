@@ -12,8 +12,10 @@ You can also get a modified version of a string by calling _string methods_. Let
 ```js
 var name = "Daniel";
 var nameLowerCase = name.toLowerCase();
+var nameLength = name.Length;
 
-console.log(nameLowerCase); // "daniel"
+console.log(nameLowerCase);
+console.log(nameLength); // "daniel"
 ```
 
 You can find out more about string properties and methods by searching for "JavaScript string methods".
@@ -35,6 +37,6 @@ My name is Daniel and my name is 6 characters long
 
 ## Expected result
 
-```
-My name is Daniel and my name is 6 characters long
-```
+````
+My name is Daniel and my name is 6 characters long```
+````

@@ -1,9 +1,13 @@
-// Start by creating a variable `message`
-var message = "1990";
-console.log(message);
-console.log(message);
-console.log(message);
-console.log(message);
-console.log(message);
-var messageType = typeof message;
-console.log(messageType);
+var txt = " every one hello";
+var res = txt.split("");
+var txt = txt.toLowerCase();
+var n = txt.replace("hello", "welcome");
+var x = txt.substring(12, 16);
+var o = txt.indexOf("hello");
+var h = txt.search("hello");
+console.log(res);
+console.log(txt);
+console.log(n);
+console.log(x);
+console.log(o);
+console.log(h);
