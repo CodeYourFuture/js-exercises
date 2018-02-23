@@ -14,20 +14,34 @@ var isHappy = true;
 
 if (isHappy) {
   console.log("I am happy");
-} else {
-  console.log("I am not happy");
 }
 ```
 
 The code in paratheses - e.g. `(isHappy)` - is the condition. The condition can be _any_ expression. The following are all valid conditions:
 
 ```js
+// boolean value
+if (true) {
+  // do something
+}
+
+// variable assigned to boolean value
+if (isHappy) {
+  // do something
+}
+
+// equality operator evaluates to boolean value
 if (1 + 1 === 2) {
+  // do something
 }
 
-if (greaterThan10(5)) {
-}
-
+// comparison operator evaluates to boolean value
 if (10 > 5) {
+  // do something
+}
+
+// function call returns boolean value
+if (greaterThan10(5)) {
+  // do something
 }
 ```
