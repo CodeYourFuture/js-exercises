@@ -2,16 +2,19 @@
   Predicates
   ---------------------------------
   Write a predicate to predicates
-  The variables should have values that match the expected results.
+  The variables should have vcd .calues that match the expected results.
 */
 
 // Finish the predicate function to test if the passed number is negative (less than zero)
-function isNegative(number) {
 
+function isNegative(number) {
+ // return typeOf number === "number";
+    return number<0;
 }
 
 // Finish the predicate function to test if the passed number is between 0 and 10
-function isBetweenZeroAnd10(number) {
+  function isBetweenZeroAnd10(number) {
+  var number = 0
 
 }
 
