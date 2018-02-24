@@ -21,14 +21,14 @@ undefined
 _Returns true if a value is in the array._
 
 ```js
-var mentors = ["Daniel", "Irini", "Ashleigh", "Rob", "Etzali];
+var mentors = ["Daniel", "Irini", "Ashleigh", "Rob", "Etzali"];
 
 function isAMentor(name) {
-    return mentors.includes(name);
+  return mentors.includes(name);
 }
 
-consooe.log('Is Rukmuni a mentor?');
-console.log(isAMentor('Rukmini')); // logs false
+consooe.log("Is Rukmuni a mentor?");
+console.log(isAMentor("Rukmini")); // logs false
 ```
 
 ### `.join()`
