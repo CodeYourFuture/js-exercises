@@ -26,7 +26,7 @@ var roughPercentageOfStudents = Math.round(precisePercentageOfStudents);
 var roughpercentageOfMentors = Math.round(precisepercentageOfMentors);
 
 function message(percentage) {
-  return "Percentage students: " + percentage;
+  return "Percentage students: " + percentage + "%";
 }
 console.log(message(roughPercentageOfStudents));
 console.log(message(roughpercentageOfMentors));
