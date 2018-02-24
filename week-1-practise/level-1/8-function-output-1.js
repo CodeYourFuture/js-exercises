@@ -9,7 +9,7 @@ console.log(result);
 // - What does this program do?
 // this function gets a random number and multiply it by 10
 // - How many parameters does the function take?
-//one
+//none
 // - What is the function name?
 // getNumber
 // - Where is the function called? with what parameters?
