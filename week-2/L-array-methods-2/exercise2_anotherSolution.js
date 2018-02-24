@@ -6,12 +6,12 @@
   For example, capitailise("hello") should return "Hello"
   Tip: use the string method .split() and the array method .join()
 */
-
+//This solution is using methods .splite() and .slice()
 function capitalise(str) {
   var character1 = str.split("");
-  var capitalChar = character1[0].toUpperCase();
-  character1[0] = capitalChar;
-  return character1.join("");
+  var tLength = str.length;
+  var str = character1[0].toUpperCase() + str.slice(1, tLength);
+  return str;
 }
 /* 
   DO NOT EDIT BELOW THIS LINE
