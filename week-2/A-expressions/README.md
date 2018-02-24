@@ -2,15 +2,15 @@ In JavaScript there are **expressions** and **statements**. We will use these wo
 
 ### Expression
 
-An expression produces a value. Sometimes we will say that an expression _evaluates to_ a value.
+An expression returns a value. Sometimes we will say that an expression _evaluates to_ a value.
 
 The following are all examples of expressions:
 
 ```js
-1 + 1; // evaluates to 2
-"hello"; // evaluates to "hello"
-2 * 4; // evaluates to 8
-"hello" + "world"; // evaluates to "helloworld"
+1 + 1; // returns 2
+("hello"); // returns "hello"
+2 * 4; // returns 8
+"hello" + "world"; // returns "helloworld"
 ```
 
 We can take the value produced by an expression and assign it to a variable. That line of code would be called a statement.

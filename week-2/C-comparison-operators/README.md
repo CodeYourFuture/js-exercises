@@ -10,7 +10,7 @@ Here's an expression that evaulates to a boolean.
 
 The `>` symbol in the expression is a **comparison operator**. Comparison operators compare two values. This operator checks to see if the number on the left is bigger than the number on the right.
 
-`1` is not bigger than `2` so this expression evaluates to `false`.
+`1` is not bigger than `2` so this expression returns `false`.
 
 **More comparison operators**
 

@@ -30,12 +30,12 @@ if (isHappy) {
   // do something
 }
 
-// equality operator evaluates to boolean value
+// equality operator returns a boolean value
 if (1 + 1 === 2) {
   // do something
 }
 
-// comparison operator evaluates to boolean value
+// comparison operator returns a boolean value
 if (10 > 5) {
   // do something
 }
