@@ -11,6 +11,6 @@ isNumber(10); // returns true
 isNumber("hello"); // returns false
 ```
 
-JavaScript programmers often give predicate functions a name that starts with a verb e.g. isBig, isNegative, isActive, shouldUpdate,
+JavaScript programmers often give predicate functions a name that starts with a verb e.g. `isBig`, `isNegative`, `isActive`, `shouldUpdate`,
 
 Calling a predicate function is like asking a question: "is this value a number". The return value is the answer to your question.
