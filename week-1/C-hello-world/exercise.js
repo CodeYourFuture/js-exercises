@@ -1,4 +1,5 @@
-var greeting = "Hello world";
+// I am just trying a comment
+/* And this is another 
+comment with two lines */
 
-console.log("Hey scotland");
-console.log("bite ");
+console.log("hello world");
