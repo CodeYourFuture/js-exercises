@@ -1,11 +1,13 @@
 // Start by creating a variables `numberOfStudents` and `numberOfMentors`
-var age=27;
+var age = 27;
 console.log(age);
-var add=20+2;
-console.log(add);
-var diff=20-8;
+var product = 40 * 2;
+console.log(product);
+var diff = 40 - 8;
 console.log(diff);
-var mentors=22;
-var students=24;
-var total=22+24;
+var mentors = 34;
+var students = 24;
+var total = 34 + 24;
+var quotient = 40 / 4;
+console.log(quotient);
 console.log(total);
