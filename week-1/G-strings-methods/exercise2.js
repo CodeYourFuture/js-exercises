@@ -1,3 +1,2 @@
 var name = " Daniel  ";
-
-console.log(message);
+console.log(name.trim() + 2);
