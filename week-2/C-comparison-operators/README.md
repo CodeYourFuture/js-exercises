@@ -1,4 +1,4 @@
-We can also write **expressions** that **evaluate** to boolean values.
+We can also write **expressions** that return boolean values.
 
 Here's an expression that evaulates to a boolean.
 
