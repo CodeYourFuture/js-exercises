@@ -8,11 +8,20 @@
 // Do not change these two statement
 var htmlLevel = 8;
 var cssLevel = 4;
-
-// Finish the statement to check whether HTML, CSS knowledge are above 5
-// (hint: use the comparison operator from before)
+function  satisfiesRequirements(htmlLevel) {
+  if (htmlLevel> 4  &&  8){
+  return true
+  }
+}
 var htmlLevelAbove5;
 var cssLevelAbove5;
+var htmlLevelAbove5 = 8;
+var cssLevelAbove5 = 4;
+function satisfiesRequirements(cssAndHtmlAbove5) {
+  if (htmlLevel < 4 && 8) {
+    return true;
+  }
+}
 
 // Finish the next two statement
 // Use the previous variables and logical operators
