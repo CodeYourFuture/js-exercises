@@ -13,6 +13,7 @@ console.log(result);
 // - What is the function name?
 //s
 // - Where is the function called? with what parameters?
-
+//in the result
 // - What does the function return?
+//
 // - How can this function be improved?

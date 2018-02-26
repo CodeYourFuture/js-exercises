@@ -6,8 +6,7 @@ var result = getNumber();
 console.log(result);
 
 // Answer these questions
-// - What does this program do?
-//mutliply
+// - caunt number between 10 to zero
 // - How many parameters does the function take?
 //no parameters
 // - What is the function name?
