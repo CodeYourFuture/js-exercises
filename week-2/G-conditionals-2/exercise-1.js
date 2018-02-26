@@ -7,8 +7,9 @@
 */
 
 function negativeOrPositive(number) {
-
-}
+if (
+number1=
+)
 
 /* 
   DO NOT EDIT BELOW THIS LINE

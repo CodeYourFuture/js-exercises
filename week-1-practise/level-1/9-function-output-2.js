@@ -1,8 +1,8 @@
 function s(w1, w2) {
-    return w1.concat(w2);
+  return w1.concat(w2);
 }
 
-var result = s('code', 'your');
+var result = s("code", "your");
 console.log(result);
 
 // Answer these questions:
