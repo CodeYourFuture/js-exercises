@@ -5,3 +5,9 @@ function createGreeting(name) {
 var greeting = createGreeting("Mat");
 
 console.log(greeting);
+
+function takesName(izina) {
+  return "Hello" + izina;
+}
+var greetingReturned = takesName(" Mat");
+console.log(greetingReturned);

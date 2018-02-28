@@ -1,5 +1,14 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+function studentsAndMentors(students, mentors) {
+  var ishuli = students + mentors;
+  var percentStudents = students / ishuli;
+  var percentMentors = mentors / ishuli;
+  var percentStudentsRounded = Math.round(percentStudents) * 100;
+  var percentMentorsRounded = Math.round(percentMentors) * 100;
+  var message = "Percent students :" + percentStudentsRounded + "%";
+
+  return message;
+}
+
+var final = studentsAndMentors(15, 20);
+
+console.log(final);

@@ -8,3 +8,9 @@ function multiply(a, b) {
 var result = multiply(3, 4);
 
 console.log(result);
+
+function arthimetics(c, d, e) {
+  return c + d - e;
+}
+var arthimeticsResult = arthimetics(6, 8, 9);
+console.log(arthimeticsResult);
