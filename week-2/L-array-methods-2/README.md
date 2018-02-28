@@ -27,7 +27,7 @@ function isAMentor(name) {
   return mentors.includes(name);
 }
 
-consooe.log("Is Rukmuni a mentor?");
+console.log("Is Rukmuni a mentor?");
 console.log(isAMentor("Rukmini")); // logs false
 ```
 
