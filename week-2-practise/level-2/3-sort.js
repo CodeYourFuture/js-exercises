@@ -3,7 +3,7 @@
 
 var letters = ["a", "n", "c", "e", "z", "f"];
 var letters2 = ["w", "b", "v", "g", "l", "o"];
-var sortedLetters; // complete this statement
+var sortedLetters; // ONLY EDIT THIS LINE
 
 console.log(sortedLetters);
 

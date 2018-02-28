@@ -1,8 +1,8 @@
 // Update the variable `sortedLetters` so that it contains the values of `letters` in ascending order
-// Tip: use an array method
+// TIP: use an array method
 
 var letters = ["a", "n", "c", "e", "z", "f"];
-var sortedLetters; // complete this statement
+var sortedLetters; // ONLY EDIT THIS LINE
 
 console.log(sortedLetters);
 

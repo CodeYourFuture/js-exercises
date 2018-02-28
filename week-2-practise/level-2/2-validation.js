@@ -6,6 +6,10 @@
 
 function validate(num) {}
 
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+
 console.log(validate(10));
 console.log(validate(10.5));
 console.log(validate(101));
