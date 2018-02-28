@@ -1,14 +1,12 @@
 function studentsAndMentors(students, mentors) {
-  var ishuli = students + mentors;
-  var percentStudents = students / ishuli;
-  var percentMentors = mentors / ishuli;
-  var percentStudentsRounded = Math.round(percentStudents) * 100;
-  var percentMentorsRounded = Math.round(percentMentors) * 100;
-  var message = "Percent students :" + percentStudentsRounded + "%";
-
-  return message;
+  return students + mentors;
 }
 
-var final = studentsAndMentors(15, 20);
+var students = 15;
+var mentors = 20;
+var studentsAndMentorsTotal = studentsAndMentors(students, mentors);
+var PercentStudents = 100 * students / studentsAndMentorsTotal;
+var PercentMentors = 100 * mentors / studentsAndMentorsTotal;
 
-console.log(final);
+console.log("Percentage students:" + Math.round(PercentStudents) + "%");
+console.log("Percentage mentors:" + Math.round(PercentMentors) + "%");
