@@ -15,10 +15,10 @@ Arrays also have several methods that you can use.
 _An array method that sorts the values in an array into ascending order._
 
 ```js
-var unorderedNumbers = [19, 12, 99, 41, 82];
-var orderedNumbers = unorderedNumbers.sort();
+var unorderedLetters = ["z", "v", "b", "f", "g"];
+var orderedLetters = unorderedLetters.sort();
 
-console.log(orderedNumbers); // logs [12, 19, 41, 82, 99]
+console.log(orderedLetters); // logs [ 'b', 'f', 'g', 'v', 'z' ]
 ```
 
 > When you call an array method it uses the array on the left side of the dot as an input, and returns a new, transformed, array.
