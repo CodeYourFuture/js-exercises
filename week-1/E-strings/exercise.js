@@ -1,8 +1,8 @@
 // Start by creating a variable `message`
-var messageType = typeof message;
 var message = "This is a string",
   nu = 42,
   bo = true;
+var messageType = typeof message;
 
 console.log(message);
 console.log(messageType);
