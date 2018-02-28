@@ -12,5 +12,5 @@ if (isHappy) {
 /* 
   EXPECTED RESULT
   ---------------
-  I am not happy
+  I am happy
 */
