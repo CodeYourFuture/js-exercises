@@ -13,5 +13,5 @@ if (isBigEnough) {
 /* 
   EXPECTED RESULT
   ---------------
-  I am not happy
+  num is bigger than or equal to 10
 */
