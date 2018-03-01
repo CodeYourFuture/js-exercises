@@ -14,8 +14,8 @@ function remove(arr, valueToRemove) {
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = remove(arr, 2);
-var newNames = remove(arr, "Ashleigh");
+var newNumbers = remove(numbers, 2);
+var newNames = remove(names, "Ashleigh");
 
 console.log(newNumbers);
 console.log(newNames);
@@ -23,6 +23,6 @@ console.log(newNames);
 /* 
   EXPECTED RESULT
   ---------------
-  [1, 2, 3]
+  [1, 3]
   [Irina, Mozafar]
 */

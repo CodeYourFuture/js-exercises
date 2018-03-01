@@ -1,7 +1,7 @@
 /*
   SALES TAX
   =========
-  A business requires a program that caluclates how much sales tax to charge
+  A business requires a program that calculates how much sales tax to charge
   Sales tax is 20% of the price of the product
 */
 
