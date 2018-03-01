@@ -9,7 +9,7 @@ You want to show only the test scores that are higher than 80. How do you do tha
 We can write a function that checks if one score is greater than 80:
 
 ```js
-function scoreChecker(score) {
+function isHighScore(score) {
   return score > 80;
 }
 ```
@@ -21,7 +21,7 @@ To find out which scores were greater than 80, you'd have to run this function a
 _Runs every item in the array through a condition that we set, and returns a new array with the values that match the condition_.
 
 ```js
-var highTestScores = testScores.filter(scoreChecker);
+var highTestScores = testScores.filter(isHighScore);
 
 console.log(highTestScores); // logs [90, 100, 81]
 ```
