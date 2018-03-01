@@ -42,3 +42,4 @@ $ node
 ```
 
 There is a string method `.split()`. In an interactive console try using the string `.split()` method and the array `.join()`. How could they work together?
+[']

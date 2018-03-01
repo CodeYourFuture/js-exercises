@@ -5,7 +5,24 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(number) {
+  if (number<0) {return true}
+  else {return false}
+}
+
+//function isBetween5and10(number)
+{
+  if (number>4 && number<11) {return true}
+  else {return false}
+ }
+
+// function isLongName (string)
+ {
+   if ('string'>5) {return true}
+   else {return false}
+ }
+
+
 
 /* 
   DO NOT EDIT BELOW THIS LINE
@@ -13,10 +30,9 @@ function isNegative() {}
 
 console.log("Is -10 is a negative number?", isNegative(-10));
 console.log("Is 5 a negative number?", isNegative(5));
-console.log("Is 10 in the range 5-10?" isBetween5and10(10))
-console.log("Is Daniel a short name?" isLongName("Daniel"));
-console.log("Does Daniel start with 'D'?" startsWithD("Daniel"));
-
+//console.log("Is 10 in the range 5-10?" isBetween5and10(10))
+//console.log("Is Daniel a short name?" isLongName("Daniel"));
+// console.log("Does Daniel start with 'D'?" startsWithD("Daniel"));
 /* 
   EXPECTED RESULT
   ---------------

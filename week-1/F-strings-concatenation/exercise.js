@@ -1,5 +1,3 @@
-// Start by creating a variable `message`
-var greetingStart="I do not love"
-var name="JavaScript"
-var greeting= greetingStart + name
-console.log(greeting);
+var greetingStart = 'hello my name is '
+var name = 'lesley'
+console.log (greetingStart + name)

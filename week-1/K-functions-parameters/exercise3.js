@@ -1,6 +1,7 @@
 // Write your function here
-var name="Lesley"
-var greetingStart = "hello my name is";
-var greeting = greetingStart + name;
-return greeting;
-console.log(greeting);
+function greeting (fullGreeting) {
+    return (name + hello);
+}
+var name = ('Lesley')
+var hello = ('hello')
+console.log (fullGreeting)
