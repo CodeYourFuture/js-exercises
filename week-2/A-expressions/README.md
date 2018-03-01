@@ -17,9 +17,8 @@ We can take the value produced by an expression and assign it to a variable. Tha
 
 ### Statement
 
-A statement is some code that performs an action. Here are some examples:
+A statement is some code that performs an action.Here are some examples:
 
-```js
 var sum = 1 + 1; // action: assigns result of `1 + 1` to variable `sum`
 var greeting = "hello"; // action: assigns result of the expression "hello" to variable `greeting`
 console.log(2 * 4); // action: logs the result of `2 * 4` to the console
@@ -30,7 +29,8 @@ There are some other different types of statements that we will learn in the com
 
 ## Exercise
 
-You quickly find out the result of an expression by running node in a terminal window.
+You quickly find out the result of an expression by running node in a terminal window. 
+```js
 
 * Open a terminal window
 * Run the command `node`
