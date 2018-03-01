@@ -9,7 +9,7 @@ function first(arr) {
 }
 
 function last(arr) {
-  return; // complete this statement
+  return ; // complete this statement
 }
 
 /* 

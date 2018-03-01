@@ -9,19 +9,14 @@
 var htmlLevel = 8;
 var cssLevel = 4;
 function  satisfiesRequirements(htmlLevel) {
-  if (htmlLevel> 4  &&  8){
-  return true
+  if (htmlLevel>4 && htmlLevel<=8){
+    return "true";
   }
 }
-var htmlLevelAbove5;
-var cssLevelAbove5;
+
 var htmlLevelAbove5 = 8;
 var cssLevelAbove5 = 4;
-function satisfiesRequirements(cssAndHtmlAbove5) {
-  if (htmlLevel < 4 && 8) {
-    return true;
-  }
-}
+function satisfiesRequirements(cssAndHtmlAbove5) 
 
 // Finish the next two statement
 // Use the previous variables and logical operators
