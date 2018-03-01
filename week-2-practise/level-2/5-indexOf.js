@@ -27,6 +27,6 @@ console.log(newNames);
 /* 
   EXPECTED RESULT
   ---------------
-  [1, 2, 3]
+  [1, 3]
   [Irina, Mozafar]
 */

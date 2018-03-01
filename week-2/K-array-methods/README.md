@@ -12,7 +12,7 @@ Arrays also have several methods that you can use.
 
 ### `.sort()`
 
-_An array method that sorts the values in an array into ascending order._
+_An array method that sorts the values in an array into ascending alphabetical order._
 
 ```js
 var unorderedLetters = ["z", "v", "b", "f", "g"];
