@@ -21,3 +21,5 @@ Reviewing students homework
 7. Add a label for each set of exercises the student has completed (e.g. `week-1-class`, `week-1-homework`)
 
 Example PR review: https://github.com/CodeYourFuture/js-exercises/pull/23#pullrequestreview-100326735
+
+Note: this review was written for a student who was advancing quickly so the comments and suggestions to learn additional language features are tailored accordingly.
