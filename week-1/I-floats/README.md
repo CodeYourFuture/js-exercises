@@ -19,5 +19,5 @@ var roughAge = Math.round(preciseAge); // 30
 
 ```
 Percentage students: 65%
-Percentage mentors: 40%
+Percentage mentors: 35%
 ```

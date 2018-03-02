@@ -13,7 +13,7 @@ function formatCurrency(price) {
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
-function calculateSalesTax(price, tax) {
+function calculateSalesTax(price) {
   return price * 0.2;
 }
 
