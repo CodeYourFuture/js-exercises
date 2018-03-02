@@ -6,9 +6,14 @@
 */
 
 function isEmpty(arr) {
-  return; // complete this statement
+  if ([1, 2, 3]) {
+    return "false"; // complete this statement
+  }
+  if ([]) {
+    return "true";
+  }
 }
-
+var arr = [1, 2, 3];
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
