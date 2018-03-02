@@ -2,9 +2,9 @@ You can find out how many characters there are in a string by using the `length`
 
 ```js
 var name = "Daniel";
-var nameLength = fullname.length;
+var nameLength = fullName.length;
 
-console.log(fullnameLength); // Logs 6
+console.log(fullNameLength); // Logs 6
 ```
 
 You can also get a modified version of a string by calling _string methods_. Let's try one:
