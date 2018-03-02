@@ -4,14 +4,14 @@ You can find out how many characters there are in a string by using the `length`
 var name = "Daniel";
 var nameLength = fullname.length;
 
-console.log(nameLength); // Logs 6
+console.log(fullnameLength); // Logs 6
 ```
 
 You can also get a modified version of a string by calling _string methods_. Let's try one:
 
 ```js
 var name = "Daniel";
-var nameLowerCase = fullname.toLowerCase();
+var nameLowerCase = name.toLowerCase();
 
 console.log(nameLowerCase); // "daniel"
 ```
