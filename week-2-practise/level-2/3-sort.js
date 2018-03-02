@@ -2,9 +2,8 @@
 // It should contain the values of `letters` and `letters2` in ascending order
 
 var letters = ["a", "n", "c", "e", "z", "f"];
-var letters2 = ["w", "b", "v", "g", "l", "o"];
-var sortedLetters; // ONLY EDIT THIS LINE
-
+var letters2 = [ "w", "b", "v", "g", "l", "o"];
+var sortedLetters=letters + letters2;// ONLY EDIT THIS LINE
 console.log(sortedLetters);
 
 /* 

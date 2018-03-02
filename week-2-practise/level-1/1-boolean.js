@@ -2,12 +2,12 @@
 // Fix it.
 
 var isHappy = false;
-
-if (isHappy) {
+var isBoolean=isHappy;
+if (isBoolean){
   console.log("I am happy");
-} else {
-  console.log("I am not happy");
 }
+  else{console.log("i am not happy");
+  }
 
 /* 
   EXPECTED RESULT

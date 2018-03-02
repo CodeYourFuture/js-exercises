@@ -2,7 +2,7 @@
 // TIP: use an array method
 
 var letters = ["a", "n", "c", "e", "z", "f"];
-var sortedLetters; // ONLY EDIT THIS LINE
+var sortedLetters=letters.sort(); // ONLY EDIT THIS LINE
 
 console.log(sortedLetters);
 
