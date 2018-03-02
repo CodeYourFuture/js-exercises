@@ -7,8 +7,8 @@
 
 var codeYourFutureIsGreat = true;
 var mozafarIsCool = false;
-caluclationCorrect = true;
-moreThan10Students = true;
+var caluclationCorrect = true;
+var moreThan10Students = false;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
