@@ -1,3 +1,3 @@
-var name = " Daniel  n  ";
-var message = name.trim() + 2;
+var name = " Daniel  ";
+var message = name.trim();
 console.log(message);
