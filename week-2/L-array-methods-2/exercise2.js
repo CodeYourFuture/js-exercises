@@ -8,7 +8,11 @@
 */
 
 function capitalise(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  var var1 = str.charAt(0);
+  var var2 = var1.toUpperCase();
+  var var3 = str.slice(1);
+
+  return var2.concat(var3);
 }
 
 /* 
