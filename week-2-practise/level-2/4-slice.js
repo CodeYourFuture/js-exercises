@@ -5,7 +5,7 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return arr.slice(index); // complete this statement
+  return arr.slice(index, 1); // complete this statement
 }
 
 /* 
@@ -14,8 +14,8 @@ function remove(arr, index) {
 var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = remove(numbers, 2);
-var newNames = remove(names, 1);
+var newNumbers = remove(numbers, 1);
+var newNames = remove(names, 2);
 
 console.log(newNumbers);
 console.log(newNames);
