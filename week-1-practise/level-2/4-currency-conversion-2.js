@@ -7,8 +7,19 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToUSD(price) {}
-function convertToBRL(price) {}
+function convertToUSD(price) {
+  var usd = price * 1.4;
+  var usdAndfee = usd + price * 0.01;
+
+  return usdAndfee;
+}
+
+function convertToBRL(price) {
+  var usDollarPrice = convertToUSD(price);
+  var brazilRealPrice = usDollarPrice * 3.25;
+  var brazilRealPriceAndFee = brazilRealPrice + usDollarPrice * 0.01;
+  return "R$ ".concat(brazilRealPriceAndFee);
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
@@ -19,5 +30,5 @@ var priceInUSD = convertToUSD(price);
 var priceInBRL = convertToBRL(price);
 
 console.log("Product: " + product);
-console.log("Price in USD: " + priceInUSD);
+console.log("Price in USD: " + "$" + priceInUSD);
 console.log("Price in BRL: " + priceInBRL);

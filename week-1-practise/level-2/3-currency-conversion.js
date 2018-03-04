@@ -6,7 +6,7 @@
 */
 
 function convertToUSD(price) {
-  return "$".concat(price / 1.4);
+  return "$".concat(price * 1.4);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */

@@ -10,6 +10,11 @@
 function capitalise(str) {
   var var1 = str.charAt(0);
   var var2 = var1.toUpperCase();
+  var var4 = str.charAt(str.length - 1);
+  var var5 = var4.toUpperCase();
+
+  var6 = str;
+
   var var3 = str.slice(1);
 
   return var2.concat(var3);
@@ -21,7 +26,7 @@ function capitalise(str) {
 var name = "daniel";
 
 console.log(capitalise(name));
-console.log(capitalise("hello"));
+// console.log(capitalise("hello"));
 
 /* 
   EXPECTED RESULT
