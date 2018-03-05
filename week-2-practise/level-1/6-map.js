@@ -11,7 +11,7 @@ function tidyUpString(str) {
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidy=replace.toLowerCase(); // ONLY EDIT THIS LINE
+var mentorsTidy=mentors.map(tidyUpString); // ONLY EDIT THIS LINE
 
 console.log(mentorsTidy);
 
