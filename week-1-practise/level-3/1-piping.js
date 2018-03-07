@@ -26,6 +26,8 @@ function multiply(a, b) {
 function format(num) {
   return "£" + num.toFixed(2);
 }
+var result1 = format(add(multiply(startingValue, 2), 10));
+var result2 = format(startingValue * 2 + 10);
 
-console.log("Expected result: 20.00");
-console.log("Actual result: " + result);
+console.log("Expected result: £20.00");
+console.log("Actual result: " + result1, result2);
