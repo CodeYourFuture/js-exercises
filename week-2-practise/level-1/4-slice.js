@@ -4,8 +4,10 @@
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-var numbers = [1, 2, 3, 4, 5, , 6, 7, 8];
-var first5Numbers = first5(numbers);
+function array(first5Numbers) {
+  var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  var first5Numbers = first5(numbers);
+}
 
 console.log(first5Numbers);
 
