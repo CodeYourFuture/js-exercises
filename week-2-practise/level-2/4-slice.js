@@ -5,10 +5,8 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  var firstArray = arr.slice(0, index);
-  var endArray = arr.slice(index + 1, arr.length); // complete this statement
-  var result = firstArray.concat(endArray);
-  return result;
+  // complete this statement
+  return arr.slice(0, index).concat(arr.slice(index + 1, arr.length));
 }
 
 /* 

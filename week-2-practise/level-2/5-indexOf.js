@@ -6,16 +6,13 @@
 
 function remove(arr, valueToRemove) {
   var index = arr.indexOf(valueToRemove); // complete this statement
-  var firstArray = arr.slice(0, index);
-  var endArray = arr.slice(index + 1, arr.length);
-  var result = firstArray.concat(endArray);
-  return result;
+  return arr.slice(0, index).concat(arr.slice(index + 1, arr.length));
 }
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-var numbers = [1, 3, 3];
+var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
 var newNumbers = remove(numbers, 2);
