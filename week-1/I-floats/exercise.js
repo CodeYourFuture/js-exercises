@@ -7,8 +7,8 @@ function percentage(numberOfStudents, total) {
 var precisePercentageOfStudents = percentage(15, 23);
 var precisepercentageOfMentors = percentage(8, 23);
 
-var roughPercentageOfStudents = Math.round(precisePercentageOfStudents);
-var roughpercentageOfMentors = Math.round(precisepercentageOfMentors);
+var roughPercentageOfStudents = Math.round(precisePercentageOfStudents) + "%";
+var roughpercentageOfMentors = Math.round(precisepercentageOfMentors) + "%";
 
-console.log(roughPercentageOfStudents);
-console.log(roughpercentageOfMentors);
+console.log("Percentage students: " + roughPercentageOfStudents);
+console.log("Percentage mentors: " + roughpercentageOfMentors);
