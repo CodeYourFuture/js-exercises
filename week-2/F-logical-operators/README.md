@@ -12,7 +12,14 @@ function satisfiesRequirements(num) {
     return true;
   }
 
-  return false;
+  retrun false;
+
+
+  //(num > 3 && num < 10)
+  //  ? true
+  //  : false;
+
+
 }
 ```
 
