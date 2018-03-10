@@ -1,4 +1,4 @@
-Do you remember how strings have special functions called methods? Don't worry if not! Here's an example to jog your memory:
+lsDo you remember how strings have special functions called methods? Don't worry if not! Here's an example to jog your memory:
 
 ```sh
 $ node

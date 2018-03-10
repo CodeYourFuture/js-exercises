@@ -5,7 +5,14 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(value) {
+return typeof value === nunber;
+}
+isNegative(-10);
+isNegative(5);
+isBetween5and10(10);
+isLongName("Daniel");
+startsWithD("Daniel");
 
 /* 
   DO NOT EDIT BELOW THIS LINE

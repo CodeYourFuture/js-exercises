@@ -6,11 +6,11 @@
 */
 
 function isEmpty(arr) {
-  if ([1, 2, 3]) {
-    return "false"; // complete this statement
+  if (names) {
+    return "true"; // complete this statement
   }
-  if ([]) {
-    return "true";
+  if (arr) {
+    return "false";
   }
 }
 var arr = [1, 2, 3];

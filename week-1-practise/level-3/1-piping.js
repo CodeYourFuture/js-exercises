@@ -11,6 +11,7 @@
 */
 
 var startingValue = 5;
+var result = 5 * 2 + 10 + format();
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
