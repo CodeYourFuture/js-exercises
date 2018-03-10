@@ -16,7 +16,7 @@ var everyone = [
 ];
 
 var firstFive = everyone.slice(0, 5); // complete this statement
-var lastFive = everyone.slice(2, 7); // complete this statement
+var lastFive = everyone.slice(everyone.length - 5, everyone.length); // complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE

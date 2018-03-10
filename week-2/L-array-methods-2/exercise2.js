@@ -8,12 +8,10 @@
 */
 
 function capitalise(str) {
-  return str
-    .split()
-    .join()
-    .toUpperCase();
+  var characters = str.split("");
+  characters[0] = characters[0].toUpperCase();
+  return characters.join("");
 }
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
