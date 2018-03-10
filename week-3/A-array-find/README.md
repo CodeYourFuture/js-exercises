@@ -18,7 +18,7 @@ To find the first item that satisfies the predicate you would have to go through
 
 ## `.find()`
 
-_Searches through the array and returns the value of the first item that matches satisfies a predicate function._
+_Searches through the array and returns the value of the first item that satisfies a predicate function._
 
 ```js
 var longName = names.find(isLongName);
