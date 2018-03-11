@@ -3,7 +3,13 @@
 // 2. Declare a new array, `percentagesFormatted`, containing
 //    - each item in `percentages` formatted by your function
 
+function tidyUpString(str) {
+  return str.toString().concat("%");
+}
+
 var percentages = [1, 23, 92, 18];
+
+percentagesFormatted = percentages.map(tidyUpString);
 
 console.log(percentagesFormatted);
 

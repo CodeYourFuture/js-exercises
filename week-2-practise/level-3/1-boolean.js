@@ -3,7 +3,9 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
+// The comments used a string instead of a boolean data type
+
+var isHappy = false;
 
 if (isHappy == true) {
   console.log("I am happy");
