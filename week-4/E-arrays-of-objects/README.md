@@ -27,3 +27,11 @@ function isYoung(kitten) {
     return kitten.weeksOld <= 1.5;
 }
 ```
+
+Also have exercises like this:
+
+```js
+var kittens = [{name: 'Fluffy', weeksOld: 2}, {name: 'Megatron', weeksOld: 1}];
+```
+
+Other examples: search results, blog posts, social feed
