@@ -1,10 +1,10 @@
 /* 
-  Using .forEach() print the numbers 0 to 99, with some exceptions:
+  Using .forEach() print the numbers 0 to 15, with some exceptions:
   - For multiples of 3 print “Fizz” instead of the number 
   - For the multiples of 5 print “Buzz”. 
   - For numbers which are multiples of both 3 and 5 print “FizzBuzz”
 
-  You have been given an array with 100 empty items.
+  An array with numbers 0-15 has been provided.
 */
 
 var arr = new Array(100);
@@ -43,5 +43,4 @@ arr.forEach(function(index) {
 13
 14
 'FizzBuzz'
-... etc ...
 */
