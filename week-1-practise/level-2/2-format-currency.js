@@ -6,7 +6,9 @@
   Write a function that transforms numbers into the format £0.00
 */
 
-function formatCurrency() {}
+function formatCurrency(amount) {
+  return "£" + amount + "0";
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
