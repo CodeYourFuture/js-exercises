@@ -3,7 +3,7 @@ function multiply(a, b) {
   return a * b;
 }
 
-// Assign the result of calling the function the variable `result`
-var result = multiply(3, 4);
+// // Assign the result of calling the function the variable `result`
+// var result = multiply(3, 4);
 
-console.log(result);
+console.log(multiply(3, 4));

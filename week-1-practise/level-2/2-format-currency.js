@@ -7,7 +7,7 @@
 */
 
 function formatCurrency(amount) {
-  return "£" + amount + "0";
+  return "£" + amount.toFixed(2);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */

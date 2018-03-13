@@ -4,8 +4,12 @@ var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
+function greetingMentors(greeting) {
+  return "Hello";
+}
+
 function greeting(name) {
-  return ("Hello " + name).toUpperCase();
+  return (greetingMentors(greeting) + " " + name).toUpperCase();
 }
 
 console.log(greeting(mentor1));

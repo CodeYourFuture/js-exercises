@@ -1,10 +1,15 @@
-var numberOfStudents = 15;
-var numberOfMentors = 8;
+// var approximateWeight = 10.008;
+// var roughWeight = Math.round(approximateWeight);
+// console.log(roughWeight);
 
-var total = numberOfStudents + numberOfMentors;
+var mentors = 19;
+var students = 16;
+var total = students + mentors;
+console.log(total);
+percentageStudents = students * 100 / total;
+percentageMentors = mentors * 100 / total;
+var roughPercentage = Math.round(percentageMentors);
+console.log(roughPercentage);
 
-var percentageOfStudents = Math.round(numberOfStudents / total * 100);
-var percentageOfMentors = Math.round(numberOfMentors / total * 100);
-
-console.log("Percentage students: " + percentageOfStudents + "%");
-console.log("Percentage mentors: " + percentageOfMentors + "%");
+console.log(percentageMentors);
+console.log(percentageStudents);
