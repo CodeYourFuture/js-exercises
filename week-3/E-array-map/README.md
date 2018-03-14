@@ -2,7 +2,7 @@ We learnt about the `.map()` method in the previous week. This week we'll study 
 
 You might remember this example:
 
-```js
+```js|
 function double(number) {
   return number * 2;
 }
