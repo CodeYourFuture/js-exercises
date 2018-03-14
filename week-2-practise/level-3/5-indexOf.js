@@ -6,10 +6,10 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
-  var num1 = arr.slice(0, arr.indexOf(valueToReplace));
-  var output1 = num1.concat(newValue);
-  var num2 = arr.slice(arr.indexOf(valueToReplace) + 1, arr.length);
-  var output2 = output1.concat(num2);
+  var pref = arr.slice(0, arr.indexOf(valueToReplace));
+  var output1 = pref.concat(newValue);
+  var suff = arr.slice(arr.indexOf(valueToReplace) + 1, arr.length);
+  var output2 = output1.concat(suff);
   return output2; // complete this statement}
 }
 /* 
