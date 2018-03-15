@@ -1,8 +1,18 @@
-### Goals
+### Objects
 
-- introduce objects as a concept
-- when can we use objects (to store what type of information)
-- the very specific object syntax (the commas after each property, the colon between property name and value, the curly brackets)
-- good practices for naming giving names to properties (not having spaces, what to do when there is a space)
-- the language to use when talking about an objects: object literal, properties, property names, property values
-- very simple exercises to get them used to declaring object literals
+Objects in the real world have properties that describe how they are unique. Your laptop, for example, has a brand (Lenovo/Apple etc.), a screen size (13/15 inch), RAM (8/16GB) etc.
+
+How would we describe the above laptop as a JavaScript object?
+
+```js
+var laptop = {
+    brand: "Lenovo",
+    screenSize: 13,
+    isTouchscreen: true
+};
+```
+
+Useful words to remember when talking about objects:
+- **object literal**: anything that has a set of `{...}` around a set of properties is an object literal
+- **property** or **key**: `brand`, `screenSize` and `isTouchScreen` are properties/keys of the object
+- **values**: `"Lenovo"`, `13` and `true` are values of the object's properties
