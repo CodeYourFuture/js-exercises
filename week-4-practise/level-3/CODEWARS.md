@@ -1,0 +1,4 @@
+- https://www.codewars.com/kata/crash-override/train/javascript
+- https://www.codewars.com/kata/strive-matching-number-1/train/javascript
+- http://www.codewars.com/kata/strive-matching-number-2/train/javascript
+- http://www.codewars.com/kata/strive-matching-number-3/train/javascript
