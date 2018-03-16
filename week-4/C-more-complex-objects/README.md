@@ -1,6 +1,6 @@
 ### More objects!
 
-Did you know you can assign arrays to object properties? And even other objects? Or variables?
+ Object properties can even be assigned other objects or variables too. The example below shows an object with keys that have been assigned a variable, an array, and an object.
 
 ```js
 var kittenName = "Feathers";

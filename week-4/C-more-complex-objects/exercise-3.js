@@ -4,22 +4,22 @@
     Write the code for the functions as per the description above them
 */
 
-var house = {
-    address: '1 Kinning Park',
+var kinningParkHouse = {
+    address: "1 Kinning Park",
     price: 180000,
     currentOwner: {
-      firstName: 'Margaret',
-      lastName: 'Conway',
+      firstName: "Margaret",
+      lastName: "Conway",
       email: "margaret@fake-emails.com"
     }
 };
 
-var house = {
-    address: '50 Park Avenue',
+var parkAvenueHouse = {
+    address: "50 Park Avenue",
     price: 195000,
     currentOwner: {
-      firstName: 'Marie',
-      lastName: 'McDonald',
+      firstName: "Marie",
+      lastName: "McDonald",
       email: "marie.m@real-emails.com"
     }
 };
@@ -49,6 +49,6 @@ function getCheapestAddress(house1, house2) {
 /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
 */
-console.log("Expected result: Margaret Conway. Actual result " + getOwnerFullName(house1));
-console.log("Expected result: margaret@fake-emails.com, marie.m@real-emails.com. Actual result " + getEmailAddresses(house1, house2));
-console.log("Expected result: 1 Kinning Park. Actual result " + getCheapestAddress(house2, house1));
+console.log("Expected result: Margaret Conway. Actual result: " + getOwnerFullName(kinningParkHouse));
+console.log("Expected result: margaret@fake-emails.com, marie.m@real-emails.com. Actual result: " + getEmailAddresses(kinningParkHouse, parkAvenueHouse));
+console.log("Expected result: 1 Kinning Park. Actual result: " + getCheapestAddress(parkAvenueHouse, kinningParkHouse));
