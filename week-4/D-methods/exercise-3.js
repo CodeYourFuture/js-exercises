@@ -1,23 +1,26 @@
 /* 
-A person named Alice is defined below. 
-Add a method "sayName" so this person can say their own name.
+The following code contains syntax errors - try and fix them!
+Once you fix them, run this file, it should output the correct values!
 */
 
 var person = {
     name: "Alice",
-    age: 25
+    age: 25,
+    currentAddress: "Glasgow",
+    changeAddress: (newAddress) {
+        currentAddress = newAddress;
+    },
+    celebrateBirthday: function {
+        that.age = that.age + 1;
+    }
 };
 
 /* 
-DO NOT EDIT ANYTHING ABOVE THIS LINE
-WRITE YOUR CODE BELOW
-*/
-
-
-
-
-/*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log("Expected result: 'My name is Alice'. Actual result: " + person.sayName());
+person.changeAddress("Edinburgh");
+console.log(person.currentAddress); // should output "Edinburgh"
+
+person.celebrateBirthday();
+console.log(person.age); // should output 26

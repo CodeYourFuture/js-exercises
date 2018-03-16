@@ -15,9 +15,8 @@ WRITE YOUR CODE BELOW
 
 
 
-
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log("Expected result: 'Hello everybody'. Actual result: " + person.greet());
+console.log("Expected result: Hello everybody. Actual result: " + person.greet());
