@@ -5,8 +5,11 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  return arr.slice(1, arr.length); // complete this statement
 }
+var arr = ["Gordon", "Alairstair", "James", "Joshua", "Stephen"];
+var newArr = remove(arr, arr.indexOf(0));
+console.log(newArr);
 
 /* 
   DO NOT EDIT BELOW THIS LINE

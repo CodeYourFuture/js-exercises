@@ -5,8 +5,11 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  return arr.slice(0, arr.length - 1); // complete this statement
 }
+var arr = ["Irina", "Ashleigh", "Mozafar", "Daniel"];
+var newArr = remove(arr, 3);
+console.log(newArr);
 
 /* 
   DO NOT EDIT BELOW THIS LINE
@@ -24,5 +27,6 @@ console.log(newNames);
   EXPECTED RESULT
   ---------------
   [1, 2]
+  
   [Irina, Mozafar]
 */
