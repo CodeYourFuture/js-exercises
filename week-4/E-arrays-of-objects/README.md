@@ -1,6 +1,6 @@
 ### Arrays of objects
 
-In the past weeks, you've learned about making arrays of numbers, arrays of string etc... In the following, we will learn how to use arrays of objects.
+In the past weeks, you've learned about using arrays of numbers, arrays of string etc... In the following, we will learn how to use arrays of objects.
 
 ```js
 var kitten1 = {
@@ -21,7 +21,7 @@ var kitten3 = {
 var kittens = [kitten1, kitten2, kitten3];
 ```
 
-You can also use all the functions for arrays that you've been learning in the past weeks (find, some, every, filter, map, forEach...). As an example, we want to filter all the kittens who are less than 3 weeks old:
+You can also use all the functions for arrays that you learned before: find, some, every, filter, map, forEach... As an example, we want to filter all the kittens who are less than 3 weeks old:
 
 ```js
 function isYoungerThan3Weeks(kitten) {

@@ -20,30 +20,30 @@ var restaurant1 = {
     numberOfCustomers: 8,
     address: {
         city: "Glasgow",
-        area: "centre"
-    }
+        area: "center"
+    },
     menu: ["pizza", "calzone", "salad"]
 };
 
 var restaurant2 = {
     name: "Ubiquitous Chip",
     totalSeats: 20,
-    numberOfCurrentCustomers: 10,
+    numberOfCustomers: 10,
     address: {
         city: "Glasgow",
         area: "west"
-    }
+    },
     menu: ["salad", "chocolate cake", "roast lamb"]
 };
 
 var restaurant3 = {
     name: "Monkeyz",
     totalSeats: 15,
-    numberOfCurrentCustomers: 8,
+    numberOfCustomers: 8,
     address: {
         city: "Glasgow",
-        area: "centre"
-    }
+        area: "center"
+    },
     menu: ["stew", "chocolate cake", "panini"]
 };
 
