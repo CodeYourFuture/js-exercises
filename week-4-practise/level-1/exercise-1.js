@@ -42,5 +42,3 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
-
-//originally created under: https://github.com/CodeYourFuture/JS-Core-1-Exercises/blob/master/homework/challenge01.js
