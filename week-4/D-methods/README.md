@@ -1,6 +1,7 @@
 ### Object methods
 
-Besides having specific properties, objects in the real world can also do things. For example, a computer can display something on the screen, a person can say their names etc... To translate this into the Javascript world, let's introduce object's methods.
+Besides having specific properties, objects in the real world can also do things. For example, a computer can display something on the screen, a person can say their names etc... To translate this into the Javascript world, let's introduce object's methods. 
+A method is a function attached to a particular object.
 
 ```js
 var athlete = {
