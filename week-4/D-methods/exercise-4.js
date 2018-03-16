@@ -1,17 +1,13 @@
 /* 
-Alice has a list of good friends. Define a method "makeFriend" to add a new friend called "Bob" to her list.
+Alice has a list of good friends. 
+Define a method "makeFriend" to add a new friend to her list.
 */
+
 
 var person = {
     name: "Alice",
     friends: ["John", "Nina"]
 };
-
-/* 
-DO NOT EDIT ANYTHING ABOVE THIS LINE
-WRITE YOUR CODE BELOW
-*/
-
 
 
 /*

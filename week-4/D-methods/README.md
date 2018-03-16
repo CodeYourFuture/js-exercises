@@ -1,6 +1,6 @@
 ### Object methods
 
-Besides having specific properties, objects in the real world can also do things. For example, a plane can fly, a computer can display something on the screen, an athlete can run etc... To translate this into the Javascript world, let's introduce object's methods.
+Besides having specific properties, objects in the real world can also do things. For example, a computer can display something on the screen, a person can say their names etc... To translate this into the Javascript world, let's introduce object's methods.
 
 ```js
 var athlete = {
@@ -12,7 +12,7 @@ var athlete = {
 };
 ```
 
-How would call this method? 
+How do we call this method? 
 
 ```js
 athlete.sayHi(); // returns "Hi everybody!"
@@ -47,7 +47,7 @@ athlete.winNewMedal();
 console.log(athelete.goldMedals); // prints "26"
 ```
 
-And everything you learn for functions is also true with methods. Then, you can also pass parameters to an object method.
+As methods are just functions attached to objects, they can also take parameters.
 
 ```js
 var athlete = {

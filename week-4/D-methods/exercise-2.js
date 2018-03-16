@@ -4,16 +4,11 @@ Add a method "sayName" so this person can say their own name.
 Hint: use 'this' keyword to access the name property.
 */
 
+
 var person = {
     name: "Alice",
     age: 25
 };
-
-/* 
-DO NOT EDIT ANYTHING ABOVE THIS LINE
-WRITE YOUR CODE BELOW
-*/
-
 
 
 /*
