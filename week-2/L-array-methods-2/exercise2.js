@@ -7,7 +7,9 @@
   Tip: use the string method .split() and the array method .join()
 */
 
-function capitalise(str) {}
+function capitalise(str) {
+  return str;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
@@ -23,3 +25,4 @@ console.log(capitalise("hello"));
   Daniel
   Hello
 */
+/* Nate i didnt get this practice well , please explain me about it .*/
