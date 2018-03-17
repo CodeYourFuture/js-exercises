@@ -32,15 +32,15 @@ var storeBranches = {
 // ONLY EDIT BELOW THIS LINE
 
 // # 1
-// Should return [ 'glasgow', 'edinburgh' ]
+// prints [ 'glasgow', 'edinburgh' ]
 console.log()
 
 // # 2
-// Should return [ 'manager', 'assistant', 'interns' ]
+// prints [ 'manager', 'assistant', 'interns' ]
 console.log()
 
 // # 3
-// Should return [ 'head_intern', 'intern' ]
+// prints [ 'head_intern', 'intern' ]
 console.log()
 
 // ONLY EDIT ABOVE THIS LINE

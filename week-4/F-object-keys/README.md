@@ -1,8 +1,12 @@
-### Goals
+### Object.keys()
 
-`Object.keys()` allows your to iterate over an object's keys, in the same way that a `for..in` loop would, and return an array of strings of your object's keys.
+Since we started JavaScript, we have used `console.log` to print things to our console.
 
-Object is a type that has built-in methods attached to it - such as `.keys()` or `.values()`. You're all very familiar with `console.log()` - `Object` is helpfully provided to us.
+In week 2 and 3, you learned about array methods like `.map()`, `.length()`.
+
+These are what we call built-in methods, and they're part of the JavaScript language. Someone else created these methods, and we can use them in our code.
+
+Like arrays, objects have build in methods that can help us. In this lesson, we will learn about `Object.keys()`. This method goes into our object, and returns the object property names as an array.
 
 Here is an example output for using `.keys()`:
 
@@ -14,5 +18,5 @@ var footballClubs = {
 };
 
 console.log(Object.keys(footballClubs));
-// returns [ 'chelsea_fc', 'fc_barcelona', 'ac_milan' ]
+// prints [ 'chelsea_fc', 'fc_barcelona', 'ac_milan' ]
 ```

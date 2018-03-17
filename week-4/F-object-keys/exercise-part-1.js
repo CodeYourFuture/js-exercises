@@ -22,4 +22,4 @@ var mentorsNamedCapitalised = ;
 // ONLY EDIT ABOVE THIS LINE
 
 console.log(mentorsNamedCapitalised);
-// Should return [ 'JAMES', 'JOSH', 'JAMIE', 'MOZAFAR' ]
+// prints [ 'JAMES', 'JOSH', 'JAMIE', 'MOZAFAR' ]

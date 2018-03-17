@@ -5,10 +5,10 @@ Return the keys of the following object
 */
 
 var capitalCities = {
-  edinburgh: 'Scotland',
-  nairobi: 'Kenya',
-  canberra: 'Australia',
-  ottowa: 'Canada'
+  scotland: 'Edinburgh',
+  kenya: 'Nairobi',
+  australia: 'Canberra',
+  canada: 'Ottawa'
 };
 
 var highScores = {
@@ -26,7 +26,7 @@ var highScoresKeys;
 // ONLY EDIT ABOVE HERE
 
 console.log(capitalCitiesKeys);
-// Should return [ 'edinburgh', 'nairobi', 'canberra', 'ottowa' ]
+// prints [ 'scotland', 'kenya', 'australia', 'canada' ]
 
 console.log(highScoresKeys)
-// Should return ['34, '55', '89', '100']
+// prints ['34, '55', '89', '100']
