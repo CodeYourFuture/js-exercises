@@ -1,6 +1,7 @@
 /*
 
-Objects very often contain other objects. You'll encounter nested objects all the time in the wild. 
+Objects very often contain other objects.
+
 This exercise will give you practice in getting the keys of objects inside other objects.
 
 Use the provided console.log statements below and follow the instructions above them.
