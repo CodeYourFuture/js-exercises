@@ -17,10 +17,11 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
+        //this.insertedAmount += amount;
     },
     getCoffee: function(coffee) {
-
+       // if(this.prices.cappuccino)
+        //return "Please take your " + coffee + " " + this.insertedAmount;
     }
 };
 
