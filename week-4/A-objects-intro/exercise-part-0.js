@@ -12,4 +12,3 @@ var laptop={
      age:20,
 }
 
-}

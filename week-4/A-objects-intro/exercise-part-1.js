@@ -17,8 +17,18 @@ var plants = {
   age: 22,
   isFemale: true
 };
-var children = {
+var child = {
   type: "young",
   age: 25,
   gender: female
+};
+var adult = {
+  type: "diabetic",
+  age: 45,
+  gender: "both"
+};
+var granny = {
+  type: "sedentary",
+  age: above90,
+  gender: "both"
 };
