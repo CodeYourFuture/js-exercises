@@ -5,22 +5,14 @@
 // Tip: write other small functions for each requirement
 
 function isNumber(num) {
-  if (typeof num === "number") {
-    return true;
-  }
-  return false;
-}
+  return typeof num === "number";
 
 function isPositive(num) {
   return num >= 0;
 }
 
 function isLessThanOrEqualTo100(num) {
-  if (num <= 100) {
-    return true;
-  }
-  return false;
-}
+  return num <= 100;
 
 function validate(num) {
   return isPositive(num) && isLessThanOrEqualTo100(num) && isNumber(num);

@@ -6,7 +6,7 @@
 
 function remove(arr, index) {
   var left = arr.slice(0, index);
-  var right = arr.slice(index);
+  var right = arr.slice(index + 1, arr.length);
   return left.concat(right); // complete this statement
 }
 

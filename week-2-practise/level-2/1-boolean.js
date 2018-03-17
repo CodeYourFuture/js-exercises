@@ -4,7 +4,7 @@
 
 var isHappy = "false";
 
-if (isHappy === false) {
+if (!isHappy) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
