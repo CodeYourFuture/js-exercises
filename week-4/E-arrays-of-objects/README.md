@@ -1,37 +1,42 @@
-### Goals
+### Arrays of objects
 
-- This is where the most complex exercises will go
-- A good time to do exercises involving arrays of objects. I.e. combining what we learned in the previous week + this one
-
-Stuff like this:
+In the past weeks, you've learned about using arrays of numbers, arrays of string etc... In the following, we will learn how to use arrays of objects.
 
 ```js
 var kitten1 = {
     name: 'Fluffy',
     weeksOld: 2
 };
+
 var kitten2 = {
     name: 'Megatron',
     weeksOld: 1
 };
+
 var kitten3 = {
     name: 'Billy',
     weeksOld: 5
 };
 
 var kittens = [kitten1, kitten2, kitten3];
-
-var youngKittens = kittens.filter(isYoung);
-
-function isYoung(kitten) {
-    return kitten.weeksOld <= 1.5;
-}
 ```
 
-Also have exercises like this:
+You can also use all the functions for arrays that you learned before: find, some, every, filter, map, forEach... As an example, we want to filter all the kittens who are less than 3 weeks old:
 
 ```js
-var kittens = [{name: 'Fluffy', weeksOld: 2}, {name: 'Megatron', weeksOld: 1}];
+function isYoungerThan3Weeks(kitten) {
+    return kitten.weeksOld <= 3;
+}
+
+kittens.filter(isYoungerThan3Weeks);    // returns [kitten1, kitten2];
 ```
 
-Other examples: search results, blog posts, social feed
+What if we want to get an array of all the kitties names?
+
+```js
+function getName(kitten) {
+    return kitten.name;
+}
+
+kittens.map(getName);   // returns ["Fluffy", "Megatron", "Billy"]
+```
