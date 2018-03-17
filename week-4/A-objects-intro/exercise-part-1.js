@@ -6,4 +6,19 @@ can describe with a JavaScript object
 Assign each of them to a separate variable
 
 */
-
+var animals = {
+  type: "pets",
+  age: 20,
+  gender: female,
+  color: grey
+};
+var plants = {
+  type: "edible",
+  age: 22,
+  isFemale: true
+};
+var children = {
+  type: "young",
+  age: 25,
+  gender: female
+};
