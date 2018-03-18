@@ -17,9 +17,17 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
+        if {
+            prices>==this.insertMoney;
+        
+        return coffee;
+        };
+
+        }
 
     },
     getCoffee: function(coffee) {
+        
 
     }
 };
