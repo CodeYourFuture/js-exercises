@@ -54,9 +54,11 @@ var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
 			destination.distanceKms > 300 &&
 			destination.transportations.includes("train")
 	)
-	.forEach(d => {
-		console.log(d.destinationName + ",");
-	}); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+	.map(destination => destination.destinationName); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+    
+destinationNamesMoreThan300KmsAwayByTrain.forEach(destination => {
+	console.log(destination);
+});
 
 
 /*
