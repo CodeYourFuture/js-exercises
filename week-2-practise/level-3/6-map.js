@@ -11,7 +11,10 @@ function tidyUpString(str) {
 }
 
 function captialise(str) {
-  // complete this function
+  var mentorsTidy = mentors.map(function(str) {
+    return str;
+    // complete this function
+  });
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
