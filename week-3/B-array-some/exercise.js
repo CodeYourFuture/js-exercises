@@ -25,4 +25,8 @@ function isNull(value) {
   return value === null;
 }
 
-if (pairsByIndex.some(isNull)) console.log(pairs);
+if (pairsByIndex.some(isNull)) {
+  process.exitCode === 0;
+}
+
+console.log(pairs);
