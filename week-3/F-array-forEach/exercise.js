@@ -7,8 +7,23 @@
   You have been given an array with 100 empty items.
 */
 
-var arr = new Array(100);
+var arr = new Array(100); // same as var arr = [undefined, undefined, ..., undefined]
 
+for (var i = 0; i < 100; i++) {
+  arr[i] = i;
+}
+function printNumber(number) {
+  if (number % 3 === 0 && number % 5 === 0) {
+    console.log("FizzBuzz");
+  } else if (number % 3 === 0) {
+    console.log("Fizz");
+  } else if (number % 5 === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(number);
+  }
+}
+arr.forEach(printNumber);
 /* EXPECTED OUTPUT */
 
 /*
