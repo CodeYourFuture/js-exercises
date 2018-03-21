@@ -7,3 +7,8 @@ Assign each of them to a separate variable
 
 */
 
+var Bicuits = {
+  brand: "Sesame maps",
+  color: "Yellow",
+  isSweet: True
+};
