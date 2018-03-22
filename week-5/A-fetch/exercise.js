@@ -6,10 +6,10 @@ API: https://codeyourfuture.herokuapp.com/api/greetings
 Response: A greeting in a random language
 */
 
-fetch('https://codeyourfuture.herokuapp.com/api/greetings')
+fetch('*** Write here the API address ***')
     .then(function(response) {
         return response.text();
     })
     .then(function(greeting) {
-        // write your code here
+        // Write the code to display the greeting text here
     });
