@@ -16,3 +16,4 @@ Inside of `exercise.js` there's a line of code that will print "Hello world!".
 * Try to console.log() several things at once.
 * What happens when you get rid of the quote marks?
 * What happens when you console.log() just a number without quotes?
+console.log("hello");

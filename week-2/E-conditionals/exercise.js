@@ -4,18 +4,20 @@
   Add an if statement to only show the name if the role is student
 */
 
+function main(name, role) {
+  if (role === "student") {
+    console.log("My name is " + name);
+  }
+}
 
-var name = "Daniel";
-var role = "mentor";
+var name1 = "Daniel";
+var role1 = "mentor";
 
 var name2 = "Harun";
 var role2 = "student";
 
-
-console.log("Hi, My name is " + name);
-console.log("Hi, My name is " + name2);
-
-
+main(name1, role1);
+main(name2, role2);
 
 /* 
 EXPECTED RESULT

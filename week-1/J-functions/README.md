@@ -3,8 +3,8 @@ Functions are blocks of code that can do a task as many times as you ask it to. 
 Here's a function that doubles a number:
 
 ```js
-function double(number) {
-  return number * 2;
+function halve(number) {
+  return number /2
 }
 ```
 
