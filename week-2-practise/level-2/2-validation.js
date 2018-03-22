@@ -4,7 +4,12 @@
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
 
-function validate(num) {}
+function validate(num) {
+  
+    
+  }
+
+
 
 /* 
   DO NOT EDIT BELOW THIS LINE

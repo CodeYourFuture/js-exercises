@@ -7,8 +7,19 @@
 */
 
 function negativeOrPositive(number) {
-
+  if (number >= 0) {
+    return "positive";
+  } else {
+    return "negative";
+  }
 }
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+var number1 = 5;
+var number2 = -1;
+var number3 = 0;
 
 /* 
   DO NOT EDIT BELOW THIS LINE

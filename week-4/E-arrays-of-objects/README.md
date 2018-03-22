@@ -16,16 +16,16 @@ var kitten2 = {
 var kitten3 = {
     name: 'Billy',
     weeksOld: 5
+```js
+function isYoungerThan3Weeks(kitten) {
+    return kitt
 };
 
 var kittens = [kitten1, kitten2, kitten3];
 ```
 
 You can also use all the functions for arrays that you learned before: find, some, every, filter, map, forEach... As an example, we want to filter all the kittens who are less than 3 weeks old:
-
-```js
-function isYoungerThan3Weeks(kitten) {
-    return kitten.weeksOld <= 3;
+en.weeksOld <= 3;
 }
 
 kittens.filter(isYoungerThan3Weeks);    // returns [kitten1, kitten2];
