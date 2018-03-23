@@ -2,8 +2,8 @@
  
 ### Part 1
 
-Open `homework.html` in your browser. Notice there are 3 buttons: blue, orange and green.
-Edit the file `.js/homework.js` and add the following functionality:
+Open `index.html` in your browser. Notice there are 3 buttons: blue, orange and green.
+Edit the file `.js/main.js` and add the following functionality:
 
 Clicking on the buttons should change the "theme" of the website:
 
@@ -20,8 +20,6 @@ Clicking on the buttons should change the "theme" of the website:
         - **Donate a bike** button background color to `black`
         - **Volunteer** button background color to `#8c9c08`
 
-You can use either the `.className` method or setting the styles directly in JavaScript.
-
 Here's an example of how the website should look for the blue button:
 
 ![Blue button example](images/blue_clicked.png)
@@ -30,7 +28,7 @@ Here's an example of how the website should look for the blue button:
 
 Just below the buttons, there's a form called **Register with us**.
 
-Continue working in `./js/homework.js` to add the following functionality:
+Continue working in `./js/main.js` to add the following functionality:
 
 When the submit button is pressed, it should check that all the form fields are valid:
 - The **Your name**, **Email** and **Describe yourself** fields need to be non-empty (Hint: their `value` length has to be greater than zero)
