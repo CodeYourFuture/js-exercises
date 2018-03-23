@@ -1,7 +1,7 @@
 /*
 Task 1
 =======
-Use fetch to create create a new clipboard.
+Use fetch to create a new clipboard.
 
 HTTP Verb: POST
 API: https://codeyourfuture.herokuapp.com/api/clipboard
