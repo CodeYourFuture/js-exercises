@@ -20,7 +20,6 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<a href="/" class="navbar-brand">
-					<img class="img-fluid" src="https://raw.githubusercontent.com/Code-Your-Future/syllabus/master/html-css/assets/bikes-for-refugees-logo.jpg" alt="Logo for Bikes for Refugees Scotland">
 					<h1 class="sr-only">Bikes for Refugees Scotland - Providing donated bikes and accessories to refugees and asylum seekers.</h1>
 				</a>
 
@@ -54,12 +53,15 @@
 				<div class="primary-content col-lg-8">
 					<div class="jumbotron">
 						<h1 class="display-3">Bikes for Refugees</h1>
-						<p class="lead">Providing donated bikes and accessories to refugees and asylum seekers in Scotland.</p>
+						<div id="jumbotron-text">
+							<p class="lead">Providing donated bikes and accessories to refugees and asylum seekers in Scotland.</p>
+						</div>
 						<hr class="my-4">
 						<div class="buttons">
-							<a id="donateBike" class="btn btn-primary btn-lrg" href="#">Donate a bike today</a>
-							<a id="addToLearnMore" class="btn btn-secondary btn-lrg" href="#">Add to "Learn more"</a>
-							<a id="allImages" class="btn btn-secondary btn-lrg" href="#">All images</a>
+							<a id="bgrChangeBtn" class="btn btn-primary btn-lrg" href="#">Change colour</a>
+							<a id="alertBtn" class="btn btn-secondary btn-lrg" href="#">ALERT</a>
+							<a id="addTextBtn" class="btn btn-secondary btn-lrg" href="#">Add some text</a>
+							<a id="largerLinksBtn" class="btn btn-secondary btn-lrg" href="#">Larger links!</a>
 						</div>
 					</div>
 					<div style="display: flex">
@@ -69,28 +71,10 @@
 					<h2 class="heading-underline">Learn more</h2>
 					<div id="mainArticles" class="articles">
 						<article class="article">
-							<div class="article-title">
-								Why do refugees need bikes?
-							</div>
 							<p class="article-lead">Many refugees are placed in housing in areas where there are few jobs. Bikes provide low-cost transportation so that they can get to work, manage child care and do their shopping.</p>
-							<p class="article-read-more">
-								<a href="#">
-									<span class="fa fa-caret-right"></span>
-									Learn more
-								</a>
-							</p>
 						</article>
 						<article class="article">
-							<div class="article-title">
-								How can I help?
-							</div>
 							<p class="article-lead">We need lots of bikes and bike accessories! If you have an old bike you don't use, bring it to one of our dropoff events. Or come attend one of our fundraisers.</p>
-							<p class="article-read-more">
-								<a href="#">
-									<span class="fa fa-caret-right"></span>
-									Learn more
-								</a>
-							</p>
 						</article>
 					</div>
 				</div>
@@ -99,7 +83,7 @@
 					<div class="articles">
 						<article class="article row">
 							<a href="#">
-								<img class="img-fluid" src="https://raw.githubusercontent.com/Code-Your-Future/syllabus/master/html-css/assets/news-spring-fundraisers.jpg">
+								
 					  	</a>
 							<div class="article-title article-title--sidebar">
 								<a href="#">Join us for our Spring fundraisers</a>
@@ -108,16 +92,12 @@
 						</article>
 						<article class="article row">
 							<a href="#">
-								<img class="img-fluid" src="https://raw.githubusercontent.com/Code-Your-Future/syllabus/master/html-css/assets/bikes-for-refugees-logo.jpg">
 							</a>
 							<div class="article-title article-title--sidebar">
 								<a href="#">Bike dropoff event in Edinburgh on May 11</a>
 							</div>
 						</article>
 						<article class="article row">
-							<a href="#">
-								<img class="img-fluid" src="https://raw.githubusercontent.com/Code-Your-Future/syllabus/master/html-css/assets/news-cycle.jpg">
-							</a>
 							<div class="article-title article-title--sidebar">
 								<a href="#">Help us cycle 4,797km</a>
 							</div>
@@ -145,5 +125,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script src="./js/main.js"></script>
+		<script>
+			document.querySelectorAll('a').forEach(a => a.style.fontSize = "1em");
+		</script>
 	</body>
 </html>
