@@ -7,7 +7,6 @@
 
 function replace(arr, valueToReplace, newValue) {
   var index = arr.indexOf(valueToReplace);
-  // valueToReplace = arr[index];
   var newArr = arr.slice();
   newArr[index] = newValue;
   return newArr; // complete this statement

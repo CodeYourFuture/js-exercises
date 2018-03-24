@@ -7,3 +7,9 @@ Assign each of them to a separate variable
 
 */
 
+var house = {
+  whereItFound: "Goven",
+  isHighflat: true,
+  numberOfRooms: 3,
+  haveBalcone: true
+};
