@@ -24,7 +24,14 @@ var newCurrentOwner = {
 
   WRITE YOUR CODE BELOW
 */
+<<<<<<< Updated upstream
 
+=======
+house.currentOwner = newCurrentOwner;
+house.isForSale = false;
+var index = house.previousOwners.indexOf("John A.");
+house.previousOwners[index] = "Stephen B.";
+>>>>>>> Stashed changes
 // - assign the value of the variable 'newCurrentOwner' as the value to the house's "currentOwner"
 // - from the list of previous owners, replace only "John A." with "Stephen B."
 // - give the house a new property called 'isForSale' with the value 'false'

@@ -5,8 +5,16 @@ Add a method "greet" so this person can say hello.
 
 
 var person = {
+<<<<<<< Updated upstream
     name: "Alice",
     age: 25
+=======
+  name: "Alice",
+  age: 25,
+  greet: function() {
+    return "Hello" + " everybody";
+  }
+>>>>>>> Stashed changes
 };
 
 
