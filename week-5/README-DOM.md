@@ -98,3 +98,21 @@ var container = document.querySelector('#myContainer');
 container.className = "largeBlock";
 //after: <div id="myContainer" class="largeBlock"></div>
 ```
+
+To get the text from an Input field:
+
+```js
+var updateTitleBtn = document.querySelector('#updateTitleBtn');
+
+updateTitleBtn.addEventListener('click', function() {
+    var inputBox = document.querySelector('#titleInput');
+    var title = inputBox.value;
+
+    var titleElement = document.querySelector('#lessonTitle');
+    titleElement.innerText = title;
+    inputBox.value = title;
+});
+```
+
+The above waits for click on a button. When the button is clicked, it gets the input box element (`inputBox` variable).
+To get the entered text from it, we use the `value` property: `var title = inputBox.value`.
