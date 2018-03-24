@@ -1,10 +1,4 @@
 ![](https://img.shields.io/badge/status-draft-darkred.svg)
-# JavaScript Core 4
-** What we will learn today?**
-- JS in the Browser
-- DOM
-- AJAX
----
 
 ## JS in the Browser
 
