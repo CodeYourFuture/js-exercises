@@ -38,18 +38,20 @@ When you open index.html in your browser, it should display the existing message
 
 var messageList = document.querySelector("#message-list"); // select a message-list div
 
-
-fetch("https://codeyourfuture.herokuapp.com/api/messages")
-	.then(function(response) {
-		return response.json(); // changed to json for better look in the page
-	})
-	.then(function(messages) {
-        // iterate through an array of objects and store an array of html text
-        var messageText = messages.map(m => m.content + " <span style='float:right'>" + m.datetime + "</span>");
-        // iterate through an array of html text and put it inside paragraphs on the page
-        messageText.map(m => {
-            var p = document.createElement("p");
-            p.innerHTML = m;
-            messageList.appendChild(p); 
-        });
-	});
+setInterval(function() {
+	fetch("https://codeyourfuture.herokuapp.com/api/messages")
+		.then(function(response) {
+			return response.json(); // changed to json for better look in the page
+		})
+		.then(function(messages) {
+            messageList.innerHTML = ""; // clear the message box every 2 seconds
+			// iterate through an array of objects and store an array of html text
+			var messageText = messages.map(m => m.content + " <span style='float:right'>" + m.datetime + "</span>");
+			// iterate through an array of html text and put it inside paragraphs on the page
+			messageText.map(m => {
+				var p = document.createElement("p");
+				p.innerHTML = m;
+				messageList.appendChild(p);
+			});
+		});
+}, 2000);
