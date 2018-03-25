@@ -1,2 +1,14 @@
-var numberOfStudents = 15;
-var numberOfMentors = 8;
+var mentors = 35;
+var students = 43;
+var total = mentors + students;
+console.log(total);
+var percentageOfMentors = mentors / total * 100;
+var percentageOfStudents = students / total * 100;
+console.log(percentageOfMentors);
+console.log(percentageOfStudents);
+var roughPercent = 44.87194871794876;
+var precisPercent = Math.round(roughPercent);
+console.log(precisPercent);
+var roughStudentsPercent = 55.12820512820513;
+var precis = Math.round(roughStudentsPercent);
+console.log(precis);
