@@ -2,7 +2,7 @@
 
 ## Client/Server architecture
 
-A **server** is a device or program that provides functionality to other programs or devices. There are database servers, mail servers, game servers, etc. The vast majority of these servers are accessed over the internet. They can take the form of industrial server farms that provide a service to millions of users (used by Facebook, Google, etc.), to personal servers for storing your files.
+A **server** is a device or program that provides functionality to other programs or devices. There are database servers, mail servers, game servers, etc. The vast majority of these servers are accessed over the internet. They can take the form of industrial server farms that provide a service to millions of users (used by Facebook, Google, etc.) or they could be personal servers for storing your files.
 
 The server communicates with **clients**. A client can be a web browser, a Slack app, your phone, etc.
 
@@ -14,7 +14,7 @@ Client–server systems use the **request–response** model: a client sends a r
 
 A server stores the data, and the client (other programs or computers) requests data or sends some of its own. But how do they talk to each other?
 
-**For the client and the server to communicate they need an established language (a protocol)**. Which is what HTTP (Hypertext Transfer Protocol) is for. It defines the methods you can use to communicate with a server and indicate your desired actions on the resources of the server.
+**For the client and the server to communicate they need an established language (a protocol)**. This is what HTTP (Hypertext Transfer Protocol) is for. It defines the methods you can use to communicate with a server and indicate your desired actions on the resources of the server.
 
 There are two main types of requests: **GET** and **POST**.
 
