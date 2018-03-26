@@ -26,6 +26,7 @@ arr.forEach(print);
 /* EXPECTED OUTPUT */
 
 /*
+'FizzBuzz'
 1
 2
 'Fizz'
