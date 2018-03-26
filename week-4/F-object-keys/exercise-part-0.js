@@ -20,8 +20,8 @@ var highScores = {
 
 // ONLY EDIT BELOW HERE
 
-var capitalCitiesKeys = ;
-var highScoresKeys;
+var capitalCitiesKeys = Object.keys(capitalCities);
+var highScoresKeys = Object.keys(highScores); // why it prints 34 first though? it sorts first?
 
 // ONLY EDIT ABOVE HERE
 
