@@ -15,14 +15,31 @@
     text-align: center;
     margin: 0 50px;
     padding: 30px;
+    float: left;
+  }
+  button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  #btn{
+    background-color: #4CAF50; /* Green */
+  }
+  #clear{
+    background-color: #ccc; /* Green */
   }
   </style>
 </head>
 
 <body>
   <h1>A greeting in a random language...</h1>
-  <p id="greeting-text"></p>
-
+  <div id="greeting-text"></div>
+  <button type="button" id="btn">Get greeting</button> 
+  <button type="button" id="clear">Clear</button> 
   <script src="exercise.js"></script>
 </body>
 </html>
