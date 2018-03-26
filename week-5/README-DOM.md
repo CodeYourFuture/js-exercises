@@ -1,5 +1,3 @@
-![](https://img.shields.io/badge/status-draft-darkred.svg)
-
 ## JS in the Browser
 
 Up until now we've been using `console.log` to see the results of our code running, because it allows us to focus on writing code and seeing the results instantly. But JavaScript was not meant to be run in `console.log`: it was meant to make web pages pages dynamic.
