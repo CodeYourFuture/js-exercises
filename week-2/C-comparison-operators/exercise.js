@@ -7,15 +7,17 @@
 
 var studentCount = 16;
 var mentorCount = 9;
-var moreStudentsThanMentors; // finish this statement
+var moreStudentsThanMentors = true;
+16 > 9;
 
 var roomMaxCapacity = 25;
-var enoughSpaceInRoom; // finish this statement
+var enoughSpaceInRoom = true;
+25 == 25;
 
 var personA = "Daniel";
 var personB = "Irina";
-var sameName; // finish this statement
-
+var sameName = false;
+"Daniel" !== "irina";
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
