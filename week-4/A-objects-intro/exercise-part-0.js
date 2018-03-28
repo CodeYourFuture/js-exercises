@@ -9,5 +9,5 @@ var myLovelyLaptop = {
   OS: "Ubuntu",
   Model: "Lenovo",
   inchScreenSize: 21,
-  isTouchscreen: False
+  isTouchscreen: false
 };
