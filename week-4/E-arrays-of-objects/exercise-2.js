@@ -43,18 +43,21 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
-var destinationNamesWithin500Kms = travelDestinations.filter(
-  destination => destination.distanceKms < 500
-); // Complete here
+var destinationNamesWithin500Kms = travelDestinations
+  .filter(destination => destination.distanceKms < 500)
+  .map(destination => destination.destinationName); // Complete here
 
-var destinationNameReachableByFerry = travelDestinations.filter(
-  destination => destination.transportations === "ferry"
-); // Complete here
+var destinationNameReachableByFerry = travelDestinations
+  .filter(destination => destination.transportations.indexOf("ferry") !== -1)
+  .map(destination => destination.destinationName);
 
-var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(
-  destination =>
-    destination.distanceKms > 300 && destination.transportations === "train"
-); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .filter(
+    destination =>
+      destination.distanceKms > 300 &&
+      destination.transportations.indexOf("train") !== -1
+  )
+  .map(destination => destination.destinationName); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
