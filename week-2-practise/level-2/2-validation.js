@@ -6,6 +6,23 @@
 
 function validate(num) {}
 
+function isNumber(value) {
+  return typeof value === "number";
+}
+var value = [10, 15, 19, "hello", "fine", 1 / 2];
+console.log(isNumber(19));
+
+function isPositiveNumber(value) {
+  return value > 0;
+}
+console.log(isPositiveNumber(-3));
+
+function isLessThanOrEquallToHundred(values) {
+  return values <= 100;
+}
+
+console.log(isLessThanOrEquallToHundred(120, 90, 150));
+
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

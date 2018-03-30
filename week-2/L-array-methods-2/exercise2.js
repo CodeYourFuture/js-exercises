@@ -8,12 +8,13 @@
 */
 
 function capitalise(str) {}
+var name = ["D", "a", "n", "i", "e", "l"];
+var arr = name.join();
 
 /* 
-  DO NOT EDIT BELOW THIS LINE
+  DO NOT EDIT BELOW THIS LINES
   --------------------------- */
 var name = "daniel";
-
 console.log(capitalise(name));
 console.log(capitalise("hello"));
 

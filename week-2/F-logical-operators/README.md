@@ -19,7 +19,7 @@ function satisfiesRequirements(num) {
 We can test expressions with logical operators in a node console too:
 
 ```sh
-$ node
+$ nodels
 > var num = 10;
 undefined
 > num > 5 && num < 15

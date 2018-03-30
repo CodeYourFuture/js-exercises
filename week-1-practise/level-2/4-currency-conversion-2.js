@@ -8,7 +8,9 @@
 */
 
 function convertToUSD(price) {}
-function convertToBRL(price) {}
+function convertToBRL(price) {
+  return "1.4 BRL to £ + 1%";
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
