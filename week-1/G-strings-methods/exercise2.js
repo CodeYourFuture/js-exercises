@@ -1,3 +1,10 @@
 var name = " Daniel  ";
-
+var name1 = " code your future ";
+var message = name.trim() + " " + name1.trim();
+var message1 = name1.toUpperCase();
+var message2 = name.toLowerCase();
+var messages = message1.concat("  " + message2);
 console.log(message);
+console.log(message1);
+console.log(message2);
+console.log(messages);
