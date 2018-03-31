@@ -4,13 +4,13 @@
 // Leave comments above your changes to explain
 
 var isHappy = "false";
-
-if (isHappy == true) {
-  console.log("I am happy");
-} else {
-  console.log("I am not happy");
+{
+  if (isHappy == true) {
+    console.log("I am happy");
+  } else {
+    console.log("I am not happy");
+  }
 }
-
 /* 
   EXPECTED RESULT
   ---------------

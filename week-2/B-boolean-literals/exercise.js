@@ -6,6 +6,7 @@
 */
 
 var codeYourFutureIsGreat = true;
+var mozafarIsCool = true;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
