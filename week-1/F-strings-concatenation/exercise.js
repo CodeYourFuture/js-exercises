@@ -1,3 +1,24 @@
 // Start by creating a variable `message`
-
+var greeting = 3;
+var name = 5;
+var lastname = 2;
+var message1 = "well done guys";
+var message = greeting * name / lastname;
 console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message);
+console.log(message1);
+var messageType = typeof message1;
+console.log(messageType);

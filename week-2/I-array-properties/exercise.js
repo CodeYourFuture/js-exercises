@@ -5,10 +5,7 @@
 
 */
 
-function isEmpty(arr) {
-  return; // complete this statement
-}
-
+function isEmpty(arr) {}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

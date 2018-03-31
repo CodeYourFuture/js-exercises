@@ -1,0 +1,10 @@
+function sum(x,y){
+    return x+y;
+}
+function bulidAgeMessage(age){
+    return "we are " +"age "+"yearsold";
+}
+var mentarAge=30;
+var studentAge=25;
+var commpintAge=sun(mentarAge,studentAge);
+console.log()

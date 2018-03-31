@@ -5,7 +5,8 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  if (newNames=names.remove())
+  return ; // complete this statement
 }
 
 /* 

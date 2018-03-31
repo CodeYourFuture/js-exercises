@@ -45,7 +45,7 @@ $ node
 > 1 + 2
 3
 > "hello"
-'hello'
+'hello'.ex
 > var greeting = "hello"
 undefined
 > greeting
