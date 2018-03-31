@@ -79,13 +79,9 @@ var restaurantFinderApplication = {
       });
   },
   countNumberOfRestaurantsInArea: function(area) {
-    return this.restaurants
-      .filter(function(restaurant) {
-        return restaurant.address.area.includes(area);
-      })
-      .map(function(restaurant) {
-        return restaurant.name;
-      }).length;
+    return this.restaurants.filter(function(restaurant) {
+      return restaurant.address.area === area;
+    }).length;
   }
 };
 
