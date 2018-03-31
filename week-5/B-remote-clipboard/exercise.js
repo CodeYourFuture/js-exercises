@@ -20,7 +20,7 @@ Also, for GET request, you can use the url directly in your browser address bar
 // Complete the code below
 
 var clipboardTitle = "This-is-It";
-var clipboardText = "CHANGE ME";
+var clipboardText = " This is my new title";
 var requestBody = { title: clipboardTitle, text: clipboardText };
 
 var postRequestParameters = {
