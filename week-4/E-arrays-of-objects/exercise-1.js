@@ -27,18 +27,18 @@ WRITE YOUR CODE BELOW
 var persons = [person1, person2, person3];
 
 // var persons = [
-//   (person1 = {
+//   {
 //     name: "Alice",
 //     age: 25
-//   }),
-//   (person2 = {
+//   },
+//   {
 //     name: "Bob",
 //     age: 30
-//   }),
-//   (person3 = {
+//   },
+//   {
 //     name: "John",
 //     age: 20
-//   })
+//   }
 // ];
 
 // Complete here
