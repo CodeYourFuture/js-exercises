@@ -26,32 +26,24 @@ on the submit button. Then check the following:
 */
 
 // Write your code here
-var messageBox = document.getElementById("message-list");
-fetch("https://codeyourfuture.herokuapp.com/api/messages")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(messages) {
-    var messageBoxTexts = messages.map(
-      message => message.content + " " + message.datetime
-    );
+var input = document.querySelector("#message-input");
+var button = document.querySelector("#submit");
+button.addEventListener("click", submitValue);
 
-    return (messageBox.innerHTML = messageBoxTexts);
-  });
+function submitValue() {
+  var text = input.value;
+  var requestBody = { content: text };
 
-var inputContent = newMessage;
-var inputSomeText = value;
-var requestBody = { content: inputContent, someText: inputSomeText };
+  var postRequestParameters = {
+    body: JSON.stringify(requestBody),
+    method: "POST",
+    headers: { "content-type": "application/json" }
+  };
 
-var postRequestParameters = {
-  body: JSON.stringify(requestBody),
-  method: "POST",
-  headers: { "content-type": "application/json" }
-};
-
-fetch(
-  "https://codeyourfuture.herokuapp.com/api/clipboard",
-  postRequestParameters
-);
+  fetch(
+    "https://codeyourfuture.herokuapp.com/api/messages",
+    postRequestParameters
+  );
+}
 
 // Write your code here
