@@ -19,8 +19,8 @@ Also, for GET request, you can use the url directly in your browser address bar
 // Task 1: create a new clipboard
 // Complete the code below
 
-var clipboardTitle = "fun2";
-var clipboardText = "be smile!";
+var clipboardTitle = "fun4";
+var clipboardText = "Life is too short to waste!";
 var requestBody = { title: clipboardTitle, text: clipboardText };
 
 var postRequestParameters = {
@@ -40,7 +40,7 @@ fetch(
 // Add your code below
 
 var messegBox = document.querySelector("#greeting-text");
-fetch("https://codeyourfuture.herokuapp.com/api/clipboard?title=fun2")
+fetch("https://codeyourfuture.herokuapp.com/api/clipboard?title=fun4")
   .then(function(response) {
     return response.text();
   })

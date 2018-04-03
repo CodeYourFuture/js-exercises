@@ -15,7 +15,7 @@ myButton.addEventListener("click", function() {
   var box = document.querySelector("#addTextBtn");
   var newText = document.createElement("p");
   newText.innerText = "What do you wait now go and donate!!";
-  newText.style.fontColor = "brawn";
+  newText.style.color = "red";
   newText.id = "myPra";
   box.appendChild(newText);
 });
