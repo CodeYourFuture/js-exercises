@@ -19,3 +19,13 @@ addTextButton.addEventListener("click", function() {
   paragraphToAdd.innerText = "Adding some random texts! Blame Rares ! ";
   jumbotronBox.appendChild(paragraphToAdd);
 });
+
+var largeLinksButton = document.querySelector("#largerLinksBtn");
+largeLinksButton.addEventListener("click", function() {
+  var learnMore = document.querySelector(".heading-underline");
+  learnMore.style.backgroundColor = "red";
+  var textToAdd = document.createElement("p");
+  textToAdd.innerText =
+    "Congratulations , You have just clicked this button :) ";
+  learnMore.appendChild(textToAdd);
+});
