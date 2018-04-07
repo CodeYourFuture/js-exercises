@@ -33,15 +33,21 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-var messageBox = document.getElementById("message-list");
-fetch("https://codeyourfuture.herokuapp.com/api/messages")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(messages) {
-    var messageBoxTexts = messages.map(
-      message => message.content + " " + message.datetime
-    );
+function callback() {
+  var messageBox = document.getElementById("message-list");
+  fetch("https://codeyourfuture.herokuapp.com/api/messages")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(messages) {
+      var messageBoxTexts = messages.map(
+        message => message.content + " " + message.datetime
+      );
 
-    return (messageBox.innerHTML = messageBoxTexts);
-  }); // Write your code here
+      return (messageBox.innerHTML = messageBoxTexts);
+    });
+}
+
+setInterval(callback, 2000);
+
+// Write your code here

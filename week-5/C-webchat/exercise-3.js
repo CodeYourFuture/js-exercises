@@ -21,7 +21,6 @@ function callback() {
 
 setInterval(callback, 1000); // Print "Hello" every 1 second
 
-
 =========
 Task 3
 =========
@@ -30,9 +29,11 @@ Use the above example to get familiar with setInterval function.
 For example, print your name every 2 seconds.
 */
 
+function callback() {
+  console.log("Abdulkadir");
+}
 
-// Write your code here
-
+setInterval(callback, 2000); // Print "Hello" every 1 second
 
 /*
 ========
@@ -42,4 +43,3 @@ Task 4
 Use the setInterval function to reload automatically the messages of your webchat every 2 seconds.
 The code responsible to show the messages in the page is in exercise-1.js, so you will need to write your code there :-)
 */
-

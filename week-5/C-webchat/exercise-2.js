@@ -33,6 +33,7 @@ button.addEventListener("click", submitValue);
 function submitValue() {
   var text = input.value;
   var requestBody = { content: text };
+  input.value = "";
 
   var postRequestParameters = {
     body: JSON.stringify(requestBody),
