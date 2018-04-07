@@ -8,6 +8,9 @@
 
 var numbers = [2, 2, 3]; // Don't change this array literal declaration
 
+numbers[0] = 1;
+numbers[3] = 4;
+
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -18,3 +21,14 @@ console.log(numbers);
   ---------------
   [1, 2, 3, 4]
 */
+
+function sum(x, y) {
+  return x + y;
+}
+function buildAgeMessage(age) {
+  return "we are " + age + " years old";
+}
+var mentoreAge = 30;
+var studentAge = 25;
+var combineAge = sum(mentoreAge, studentAge);
+console.log(buildAgeMessage(combineAge));
