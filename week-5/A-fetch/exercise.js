@@ -29,21 +29,21 @@ btn.addEventListener("click", function() {
 			return response.text();
 		})
 		.then(function(greeting) {
-            // Write the code to display the greeting text here
-            var box = document.querySelector("#greeting-text");
+			// Write the code to display the greeting text here
+			var box = document.querySelector("#greeting-text");
 			var paragraph = document.createElement("p");
-            paragraph.innerText = greeting;
-            count++;
-            if(count % 2 === 0){
-                paragraph.style.color = "blue";
-            } else {
-                paragraph.style.color = "red";
-            }
-            
-			box.appendChild(paragraph); 
+			paragraph.innerText = greeting;
+			count++;
+			if (count % 2 === 0) {
+				paragraph.style.color = "blue";
+			} else {
+				paragraph.style.color = "red";
+			}
+
+			box.appendChild(paragraph);
 		});
 });
 
-clear.addEventListener("click", function(){
-    greetText.innerText = "";
+clear.addEventListener("click", function() {
+	greetText.innerText = "";
 });

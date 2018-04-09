@@ -38,7 +38,7 @@ When you open index.html in your browser, it should display the existing message
 
 var messageList = document.querySelector("#message-list"); // select a message-list div
 
-setInterval(function() {
+function loadMessages() {
 	fetch("https://codeyourfuture.herokuapp.com/api/messages")
 		.then(function(response) {
 			return response.json(); // changed to json for better look in the page
@@ -54,4 +54,6 @@ setInterval(function() {
 				messageList.appendChild(p);
 			});
 		});
-}, 2000);
+}
+
+setInterval(loadMessages, 2000);
