@@ -18,6 +18,14 @@ var house = {
 
   WRITE YOUR CODE BELOW
 */
+var house = {
+  address: "51 Berkley Road",
+  previousOwners: ["Brain M.", "Fiona S."],
+  currentOwner: {
+    firstName: "Margaret",
+    lastName: "Montgomery"
+  }
+};
 
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]
