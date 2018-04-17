@@ -1,11 +1,11 @@
 # JavaScript exercises
 
-1. Fork this repo
-2. Clone it to your machine
-3. Open it in your code editor.
-4. In the terminal, run this command to add CodeYourFuture as an `upstream` remote.
-   `git remote add upstream git@github.com:CodeYourFuture/js-exercises.git`
-5. Run the command `git remote -v`. You should have two remotes:
+1.  Fork this repo
+2.  Clone it to your machine
+3.  Open it in your code editor.
+4.  In the terminal, run this command to add CodeYourFuture as an `upstream` remote.
+    `git remote add upstream git@github.com:CodeYourFuture/js-exercises.git`
+5.  Run the command `git remote -v`. You should have two remotes:
 
 * `origin` pointing to your github repo, and
 * `upstream` pointing to CodeYourFuture
@@ -20,9 +20,9 @@ A pull request is a request to merge one branch into another. In this case you w
 
 We won't actually merge your branch, but the pull request will allow us to view and comment on your work.
 
-1. Add the files you have changed using `git add .`
-2. Commit your changes using `git commit` (you can add and commit changes multiple times as you complete exercises)
-3. Push your changes to your own repo using `git push` (this automatically pushes to the `origin` remote)
-4. Go to https://github.com/CodeYourFuture/js-exercises and click the **New pull request** button (this create a request to merge your `origin/master` to our `remote/master`)
-5. Give your pull request a title e.g. `Daniel's homework`
-6. Click **Create pull request**
+1.  Add the files you have changed using `git add .`
+2.  Commit your changes using `git commit` (you can add and commit changes multiple times as you complete exercises)
+3.  Push your changes to your own repo using `git push` (this automatically pushes to the `origin` remote)
+4.  Go to https://github.com/CodeYourFuture/js-exercises and click the **New pull request** button (this create a request to merge your `origin/master` to our `remote/master`)
+5.  Give your pull request a title e.g. `Daniel's homework`
+6.  Click **Create pull request**

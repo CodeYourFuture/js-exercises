@@ -1,13 +1,16 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>CodeYourFuture - WebChat</title>
   <meta name="description" content="Introduction to Fetch">
   <meta name="author" content="CodeYourFuture">
   <style>
-    h1, #message-list, #new-message {
+    h1,
+    #message-list,
+    #new-message {
       margin: 20px;
     }
 
@@ -16,6 +19,8 @@
       width: 50%;
       min-height: 100px;
       background-color: #f5f7ff;
+      height: 500px;
+      overflow-y: auto;
     }
 
     #message-input {
@@ -39,10 +44,11 @@
   <div id="new-message">
     <input type="text" name="newMessage" id="message-input" placeholder="Type some text..." />
     <input type="submit" name="submit" id="submit" value="Submit" />
-  </div>  
+  </div>
 
   <script src="exercise-1.js"></script>
   <script src="exercise-2.js"></script>
   <script src="exercise-3.js"></script>
 </body>
+
 </html>
