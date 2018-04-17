@@ -65,20 +65,42 @@ var submitButton = document.querySelector(".submitBtn");
 
 function emailInputCheck() {
   var emailInputBox = document.querySelector("#exampleInputEmail1");
-  if (emailInputBox.value.length > 0 && emailInputBox.value.includes("@"));
-} else if  {  emailInputBox.style.backgroundColor = "red "}
+  if (!(emailInputBox.value.length > 0 && emailInputBox.value.includes("@"))) {
+    emailInputBox.style.backgroundColor = "red";
+    return false;
+  } else {
+    emailInputBox.style.backgroundColor = "white";
+    return true;
+  }
+}
 
 function nameInputCheck() {
   var nameInputBox = document.querySelector("#example-text-input");
-  nameInputBox.value.length > 0;
+  if (!(nameInputBox.value.length > 0)) {
+    nameInputBox.style.backgroundColor = "red";
+    return false;
+  } else {
+    nameInputBox.style.backgroundColor = "white";
+    return true;
+  }
 }
 function describeYourselfInputCheck() {
-  var describeYourselfbox = document.querySelector("exampleTextarea");
-  describeYourselfbox.value.length > 0;
+  var describeYourselfBox = document.querySelector("#exampleTextarea");
+  if (describeYourselfBox.value.length > 0) {
+    describeYourselfBox.style.backgroundColor = "red";
+    return false;
+  } else {
+    describeYourselfBox.style.backgroundColor = "white";
+    return true;
+  }
 }
 
-submitButton.addEventListener("click", function() {
-  emailInputCheck();
-  nameInputCheck();
-  describeYourselfInputCheck();
+submitButton.addEventListener("click", function(event) {
+  if (
+    !(emailInputCheck() && nameInputCheck() && describeYourselfInputCheck())
+  ) {
+    event.preventDefault();
+  } else {
+    alert("Thank you :)");
+  }
 });
