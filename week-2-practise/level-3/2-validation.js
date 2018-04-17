@@ -6,7 +6,31 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+// function isNumber(num) {
+//   return typeof num === "number";
+// }
+
+// function isInteger(num) {
+//   return Number.isInteger(num);
+// }
+
+// function included(num) {
+//   return excludedNums.indexOf(num) === -1;
+// }
+
+// function validate(num) {
+//   return isNumber(num) && isInteger(num) && included(num);
+// }
+
+// This is the same as the above function
+
+function validate(num) {
+  if (typeof num == "number") {
+    if (Number.isInteger(num) && excludedNums.indexOf(num) === -1) {
+      return true;
+    } else return false;
+  } else return false;
+}
 
 console.log(validate(6));
 console.log(validate(10.5));

@@ -5,12 +5,16 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  var left = arr.slice(0, index);
+  var right = arr.slice(index + 1, arr.length);
+  return left.concat(right); // complete this statement
 }
 
-/* 
+/*  
   DO NOT EDIT BELOW THIS LINE
-  --------------------------- */
+  ---------------------------
+  */
+
 var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 

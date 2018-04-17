@@ -3,6 +3,10 @@
 */
 
 // WRITE CODE BELOW THIS
+var kitten = {
+  name: "Gilbert",
+  isFurnished: true
+};
 
 // WRITE CODE ABOVE THIS
 
