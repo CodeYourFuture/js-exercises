@@ -7,8 +7,6 @@ Assign each of them to a separate variable
 
 */
 
-<<<<<<< Updated upstream
-=======
 var house = {
   address: "Goven",
   isHighflat: true,
@@ -17,4 +15,3 @@ var house = {
 };
 
 console.log(house);
->>>>>>> Stashed changes
