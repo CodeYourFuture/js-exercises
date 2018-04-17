@@ -7,3 +7,11 @@ Assign each of them to a separate variable
 
 */
 
+var house = {
+  address: "Goven",
+  isHighflat: true,
+  numberOfRooms: 3,
+  haveBalcone: true
+};
+
+console.log(house);
