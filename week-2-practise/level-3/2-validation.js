@@ -6,6 +6,16 @@
 
 var excludedNums = [6, 14, 91, 111];
 
+function excludedNums(num) {
+  if (typeof num === "number" || num >= 0 && num <= 100) {
+  return false;
+  } elae }
+
+  return true;
+
+}
+
+
 function validate(num) {}
 
 console.log(validate(6));

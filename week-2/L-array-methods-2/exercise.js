@@ -15,8 +15,8 @@ var everyone = [
   "Swathi"
 ];
 
-var firstFive; // complete this statement
-var lastFive; // complete this statement
+var firstFive = everyone.slice(); // complete this statement
+var lastFive = everyone.slice(); // complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE

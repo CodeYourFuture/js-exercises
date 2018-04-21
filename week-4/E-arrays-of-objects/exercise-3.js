@@ -2,7 +2,9 @@
 Below are some restaurants in Glasgow. Each restaurant has a name, the number of total seats, 
 the number of customers in the restaurant at the moment and the menu with prices.
 
-We want to build an object to simulate a Restaurant Finder application (see below restaurantFinderApplication).
+We want to build an object to simulate a Restaurant Finder appli
+
+cation (see below restaurantFinderApplication).
 
 1) Define a method findAvailableRestaurants which takes a number of people in parameter and returns 
 all the restaurant names which have the required number of seats available at the moment.
@@ -15,36 +17,36 @@ and returns the number of restaurants in this area.
 */
 
 var restaurant1 = {
-    name: "Paesano",
-    totalSeats: 10,
-    numberOfCustomers: 8,
-    address: {
-        city: "Glasgow",
-        area: "center"
-    },
-    menu: ["pizza", "calzone", "salad"]
+  name: "Paesano",
+  totalSeats: 10,
+  numberOfCustomers: 8,
+  address: {
+    city: "Glasgow",
+    area: "center"
+  },
+  menu: ["pizza", "calzone", "salad"]
 };
 
 var restaurant2 = {
-    name: "Ubiquitous Chip",
-    totalSeats: 20,
-    numberOfCustomers: 10,
-    address: {
-        city: "Glasgow",
-        area: "west"
-    },
-    menu: ["salad", "chocolate cake", "roast lamb"]
+  name: "Ubiquitous Chip",
+  totalSeats: 20,
+  numberOfCustomers: 10,
+  address: {
+    city: "Glasgow",
+    area: "west"
+  },
+  menu: ["salad", "chocolate cake", "roast lamb"]
 };
 
 var restaurant3 = {
-    name: "Monkeyz",
-    totalSeats: 15,
-    numberOfCustomers: 8,
-    address: {
-        city: "Glasgow",
-        area: "center"
-    },
-    menu: ["stew", "chocolate cake", "panini"]
+  name: "Monkeyz",
+  totalSeats: 15,
+  numberOfCustomers: 8,
+  address: {
+    city: "Glasgow",
+    area: "center"
+  },
+  menu: ["stew", "chocolate cake", "panini"]
 };
 
 var restaurants = [restaurant1, restaurant2, restaurant3];
@@ -54,32 +56,63 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
-
 var restaurantFinderApplication = {
-    applicationName: "Restaurant Finder",
-    applicationVersion: "1.0",
-    restaurants: restaurants,
-    findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
-    },
-    findRestaurantServingDish: function(dishName) {
-        // Complete here
-    },
-    countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
-    }
+  applicationName: "Restaurant Finder",
+  applicationVersion: "1.0",
+  restaurants: restaurants,
+  findAvailableRestaurants: function(numberOfPeople) {
+    return this.restaurants
+      .filter(res => res.totalSeats - res.numberOfCustomers >= numberOfPeople)
+      .map(res => res.name);
+    //   .filter(
+    //     restaurants =>
+    //       restaurant.totalSeats - restaurant.numberOfCustomers >= numberOfPeople
+    //   )
+    //   .map(restaurant => restaurant.name);
+    // Complete here
+  },
+
+  findRestaurantServingDish: function(dishName) {
+    return this.restaurants
+      .filter(restaurant => restaurant.menu.includes(dishName))
+      .map(restaurant => restaurant.name);
+    // Complete here
+  },
+
+  countNumberOfRestaurantsInArea: function(area) {
+    return this.restaurants.filter(
+      restaurant => restaurant.address.area === area
+    ).length;
+    // Complete here
+  }
 };
 
-
+// 3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (centre, west),
+// and returns the number of restaurants in this area.
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-var restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(5);
-console.log("Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: " + restaurantsAvailableFor5People);
+var restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(
+  5
+);
+console.log(
+  "Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: " +
+    restaurantsAvailableFor5People
+);
 
-var restaurantsServingSalad = restaurantFinderApplication.findRestaurantServingDish("salad");
-console.log("Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: " + restaurantsServingSalad);
+var restaurantsServingSalad = restaurantFinderApplication.findRestaurantServingDish(
+  "salad"
+);
+console.log(
+  "Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: " +
+    restaurantsServingSalad
+);
 
-var numberOfRestaurantsInCityCentre = restaurantFinderApplication.countNumberOfRestaurantsInArea("center");
-console.log("Number of restaurants in city centre: Expected result: 2, actual result: " + numberOfRestaurantsInCityCentre);
+var numberOfRestaurantsInCityCentre = restaurantFinderApplication.countNumberOfRestaurantsInArea(
+  "center"
+);
+console.log(
+  "Number of restaurants in city centre: Expected result: 2, actual result: " +
+    numberOfRestaurantsInCityCentre
+);
