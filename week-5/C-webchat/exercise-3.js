@@ -33,6 +33,12 @@ For example, print your name every 2 seconds.
 
 // Write your code here
 
+function callback() {
+    console.log("Mohamed");
+}
+
+setInterval(callback, 2000); 
+
 
 /*
 ========

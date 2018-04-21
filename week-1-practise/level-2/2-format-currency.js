@@ -7,6 +7,9 @@
 */
 
 function formatCurrency() {}
+function formatCurrency(price) {
+  return "£".concat(price.toFixed(2));
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */

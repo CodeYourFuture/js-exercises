@@ -35,3 +35,18 @@ When you open index.html in your browser, it should display the existing message
 
 
 // Write your code here
+var text = document.querySelector("#message-list");
+
+
+function callback() {
+    fetch("https://codeyourfuture.herokuapp.com/api/messages")
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(messages) {
+    text.innerText = messages;
+  });
+    
+}
+
+setInterval(callback, 2000); 
