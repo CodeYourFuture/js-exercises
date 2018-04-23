@@ -1,6 +1,6 @@
 
-var name = "Daniel";
+var name = " Daniel ";
 
-var message = "My name is " + name + " and my name is " + name.length + " characters long";
+var message = "My name is " + name + " and my name is " + name.trim().length + " characters long";
 
 console.log(message);
