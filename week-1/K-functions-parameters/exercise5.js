@@ -1,8 +1,10 @@
 function createLongGreeting(
-  a,
-  b // Declare your function here
+  name,
+  age
+
+  // Declare your function here
 ) {
-  return "Hello, my name is" + " brook " + "and I'm " + 30 + " years old";
+  return "Hello, my name is " + name + " and I'm " + age + " years old";
 }
 const greeting = createLongGreeting("brook", 30);
 
