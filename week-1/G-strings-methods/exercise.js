@@ -1,3 +1,5 @@
 // Start by creating a variable `message`
 
-console.log(message);
+var message = "Daniel";
+
+console.log(message.length);
