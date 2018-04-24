@@ -12,3 +12,10 @@ console.log(result);
 // - Where is the function called? with what parameters?
 // - What does the function return?
 // - How can this function be improved?
+
+// 
+// two
+// s
+// code, your
+// w1, w2
+// 

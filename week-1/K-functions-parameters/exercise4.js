@@ -7,5 +7,4 @@ function sum(x, y) {
 var sum = (13 + 124);
 // Call the function and assign to a variable `sum`
 
-
 console.log(sum);
