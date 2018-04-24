@@ -4,6 +4,7 @@ function trim(word) {
   return word.trim();
 }
 
+
 var result = trim("  CodeYourFuture  ");
 console.log(result);
 // Expected result "CodeYourFuture"

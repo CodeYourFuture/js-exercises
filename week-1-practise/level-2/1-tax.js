@@ -9,6 +9,7 @@ function calculateSalesTax() {
   return price * 20 / 100;
 }
 
+
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 

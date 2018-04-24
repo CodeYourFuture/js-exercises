@@ -11,6 +11,7 @@ function formatCurrency(price) {
 
 }
 
+
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 

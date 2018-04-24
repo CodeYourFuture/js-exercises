@@ -9,6 +9,7 @@ function convertToUSD(price) {
   return "$" + price * 1.4;
 }
 
+
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 

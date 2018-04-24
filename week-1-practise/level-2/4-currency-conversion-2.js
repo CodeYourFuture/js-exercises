@@ -14,6 +14,7 @@ function convertToBRL(price) {
   return "£" + (price + price * 0.01);
  }
 
+ 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
