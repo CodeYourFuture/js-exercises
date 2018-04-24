@@ -14,5 +14,5 @@ console.log(result); // Expected result 8 - Run the program and make sure it wor
 // 3. Where is the function called? with what parameters?
 
 // Three parameters
-// aadNumbers
+// The function name is addNumbers
 // line 8 with three parameters 1 , 3 , 4

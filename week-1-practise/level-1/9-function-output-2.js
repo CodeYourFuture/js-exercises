@@ -16,6 +16,6 @@ console.log(result);
 // Merge two strings w1, w2
 // Two parameters
 // Function name is s
-// Line 5 with 'code' and 'your'
-// codeyour, w1 merge with w2
+// Line 5 with two parameters 'code' and 'your'
+// codeyour, w1 merge w2
 // 

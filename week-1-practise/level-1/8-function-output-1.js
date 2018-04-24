@@ -11,7 +11,7 @@ console.log(result);
 // - What is the function name?
 // - Where is the function called? with what parameters?
 
-// choose number randomly
-// none
+// Choose a number randomly
+// No parameters
 // getNumber
 // line 5 with no parameters

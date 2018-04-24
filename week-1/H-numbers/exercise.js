@@ -1,12 +1,9 @@
 // Start by creating a variables `numberOfStudents` and `numberOfMent
 
-var numberOfStudents;
-var numberOfMent;
+var numberOfStudents = 15;
+var numberOfMents = 8;
 
-numberOfStudents = 15;
-numberOfMent = 8;
-
-var total = numberOfMent + numberOfStudents;
-console.log("number of students: " + numberOfStudents)
-console.log("number of ments: " + numberOfMent)
-console.log("Total number of students and ment : " + total)
+var total = numberOfMents + numberOfStudents;
+console.log("Number of students: " + numberOfStudents)
+console.log("Number of mentors: " + numberOfMents)
+console.log("Total number of students and mentors : " + total)
