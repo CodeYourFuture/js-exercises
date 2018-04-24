@@ -11,7 +11,7 @@ function convertToUSD(price) {
   return "$" + ((price * 1.4) + (price * 1.4 * 0.01));
 }
 function convertToBRL(price) {
- return "£" + (price + (price * 0.01));
+ return "R$" + ((price * 4.8) + (price * 4.8 * 0.01));
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
