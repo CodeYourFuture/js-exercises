@@ -1,5 +1,5 @@
 function createGreeting(name) {
-    return ('Hello,my name is' + "Daniel");
+    return ('Hello,my name is' + " " + name);
 }
 
 var greeting = createGreeting("Daniel");
