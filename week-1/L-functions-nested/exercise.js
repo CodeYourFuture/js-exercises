@@ -1,5 +1,15 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+
+function getstudentsmentors(students,mentors) {
+  return (student+ mentors);
+}
+var numberOfStudents = 15;
+var numberOfMentors = 8;
+var sum = numberOfStudents +numberOfMentors;
+var percentagestudents;
+var percentagementors;
+
+percentagestudents = numberOfStudents/sum*100;
+percentagementors = numberOfMentors/sum*100;
+console.log(Math.round(percentagestudents)+"%");
+console.log(Math.round(percentagementors)+"%");
+
