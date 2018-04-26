@@ -6,12 +6,12 @@
   They have also decided that they should add a 1% fee to all foreign transactions
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
-
+var fee = 0.01;
 function convertToUSD(price) {
-  return "$" + ((price * 1.4) + (price * 1.4 * 0.01));
+  return "$" + ((price * 1.4) + (price * 1.4 * fee));
 }
 function convertToBRL(price) {
- return "R$" + ((price * 4.8) + (price * 4.8 * 0.01));
+ return "R$" + ((price * 4.8) + (price * 4.8 * fee));
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
