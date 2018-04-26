@@ -18,4 +18,4 @@ console.log(result);
 // Function name is s
 // Line 5 with two parameters 'code' and 'your'
 // codeyour, w1 merge w2
-// I don't know what dose it mean (:
+// Change the name of function to concatenate or something show's what function does :)
