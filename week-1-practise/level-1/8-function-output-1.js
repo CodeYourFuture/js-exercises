@@ -1,5 +1,5 @@
 function getNumber() {
-    return Math.random() * 10;
+    return 10*Math.random();
 }
 
 var result = getNumber();

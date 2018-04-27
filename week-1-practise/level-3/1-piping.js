@@ -10,7 +10,12 @@
   As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
 */
 
-var startingValue = 5;
+function startingValue(){
+  var startingValue=5
+  return startingValue*2 + 10
+}
+
+result =startingValue()
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
