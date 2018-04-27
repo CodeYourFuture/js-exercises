@@ -6,8 +6,14 @@
   - if 50 or higher then return "pass"
 
 */
-
+var fail = "fail";
+var pass = "pass";
 function studentPassed(grade) {
+  if (grade < 50) {
+    return fail;
+  }else if (grade >= 50) {
+    return pass;
+  }
 
 }
 

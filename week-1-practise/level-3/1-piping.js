@@ -12,7 +12,10 @@
 
 
 var startingValue = 5;
-var result = startingValue * 2 + 10;
+
+let result = format(add(multiply(5,2),10));
+
+//var result = startingValue * 2 + 10;
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
