@@ -4,17 +4,17 @@
 var greeting = "Hello World";
 // greeting = "moring";
 console.log(greeting);
-var greeting = "Hello Java";
+greeting = "Hello JavaScript";
 console.log(greeting);
-var greeting = "Learning Java";
+greeting = "Learning JavaScript";
 console.log(greeting);
 console.log(greeting);
 console.log(greeting);
-var greeting = "Hello, Java, Learning Java";
+greeting = "Hello, JavaScript, Learning JavaScript";
 console.log(greeting);
 console.log(greeting);
 console.log(greeting + "\n" + greeting + "\n" + greeting);
-greeting = "Learning Java: {$greeting}";
+greeting = "Learning JavaScript: {$greeting}";
 console.log(greeting);
 
 
