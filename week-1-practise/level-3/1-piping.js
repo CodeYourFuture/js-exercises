@@ -11,7 +11,8 @@
 */
 
 var startingValue = 5;
-const result = (startingValue * 2 + 10).toFixed(2);
+// const result = (startingValue * 2 + 10).toFixed(2);
+let result = format(add((multiply(startingValue, 2)), 10));
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
