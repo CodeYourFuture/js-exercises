@@ -6,7 +6,7 @@ var result = s('code', 'your');
 console.log(result);
 
 
-// Answer these questions:
+//Answer these questions:
 // - What does this program do? Run it and see, or Google some of the methods used ot understand them.
 //using concatente two words in one word.
 // - How many parameters does the function take?

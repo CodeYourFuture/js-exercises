@@ -8,7 +8,6 @@
 
 function formatCurrency(price) {
   return " £ " + price;
-
 }
 
 
