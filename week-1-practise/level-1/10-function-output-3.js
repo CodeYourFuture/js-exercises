@@ -1,5 +1,5 @@
 function concatenate(firstWord, secondWord, thirdWord) {
-     return firstWord.concat(secondWord).concat(thirdWord)
+     return firstWord.concat(secondWord).concat(thirdWord);
     // Write the body of this function to concatenate three words together
 }
 

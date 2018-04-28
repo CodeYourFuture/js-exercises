@@ -10,7 +10,6 @@
   As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
 */
 
-
 var startingValue = 5;
 var result = format(add(multiply(5,2),10));
 
