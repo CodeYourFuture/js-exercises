@@ -1,5 +1,5 @@
 function add(a,b) {
-return 13 + 124;
+return a + b;
 }
 
 var sum = add(13,124);
