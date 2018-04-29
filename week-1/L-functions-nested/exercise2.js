@@ -4,17 +4,17 @@ var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 //
-function stringToUpperCase(myName){
-    displayMessage(myName.toUpperCase());
+function nameToUpperCase(mentorName){
+    displayMessage(mentorName.toUpperCase());
 }
 //
 function displayMessage(string){
     console.log("HELLO", string);
 }
 console.log("~~~~~~~~~~~~~Output~~~~~~~~~~~~~~");
-stringToUpperCase(mentor1);
-stringToUpperCase(mentor2);
-stringToUpperCase(mentor3);
-stringToUpperCase(mentor4);
-stringToUpperCase(mentor5);
+nameToUpperCase(mentor1);
+nameToUpperCase(mentor2);
+nameToUpperCase(mentor3);
+nameToUpperCase(mentor4);
+nameToUpperCase(mentor5);
 console.log("~~~~~~~~~~~~~end~~~~~~~~~~~~~~~~~");
