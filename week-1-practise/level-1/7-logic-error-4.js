@@ -1,8 +1,7 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
 function multiply(a, b, c) {
-  result = a * b * c;
-  return result;
+  return a * b * c;
 }
 
 var result = multiply(1, 3, 4);

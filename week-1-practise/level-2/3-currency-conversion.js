@@ -6,7 +6,8 @@
 */
 
 function convertToUSD(price) {
-  var salesTax = "$" + (price * 1.4).toFixed(2) ;  return salesTax;
+  var usdPrice = "$" + (price * 1.4).toFixed(2);
+  return usdPrice;
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
