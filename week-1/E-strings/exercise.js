@@ -17,7 +17,7 @@ console.log(message);
 console.log(messageType);
 console.log("");
 //
-var message = 2.22552511522;
+var message = 0.22552511522;
 var messageType = typeof message;
 console.log(message);
 console.log(messageType);

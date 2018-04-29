@@ -5,11 +5,11 @@ var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
 function shout() {
-  var x = ["Daniel", "Irina", "Mimi", "Rob", "Yohannes"];
-  var size = x.length;
+  var mentors = ["Daniel", "Irina", "Mimi", "Rob", "Yohannes"];
+  var size = mentors.length;
   for (i = 0; i < size; i++) {
-    var upperName = x[i].toUpperCase();
+    var upperName = mentors[i].toUpperCase();
     console.log("HELLO " + upperName);
   }
 }
-var y = shout();
+shout();
