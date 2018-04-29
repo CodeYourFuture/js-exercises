@@ -11,6 +11,6 @@ console.log(result);
 // - How many parameters does the function take?
 // It doesn't take parameters. It creates a random number.
 // - What is the function name?
-// the function name is gerNumber.
+// the function name is getNumber.
 // - Where is the function called? with what parameters?
-// the function was called in line number 6. There was no paramerter.
+// the function was called in line number 5. There was no paramerter.
