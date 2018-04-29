@@ -14,3 +14,13 @@ console.log(mentor3);
 console.log(mentor4);
 console.log(mentor5);
 
+function consoleMentor(mentor) {
+    var mentorUpperCase = mentor.toUpperCase();
+    console.log("HELLO " + mentorUpperCase);
+}
+
+consoleMentor(mentor1);
+consoleMentor(mentor2);
+consoleMentor(mentor3);
+consoleMentor(mentor4);
+consoleMentor(mentor5);
