@@ -7,12 +7,20 @@
 
 // Finish the predicate function to test if the passed number is negative (less than zero)
 function isNegative(number) {
+<<<<<<< HEAD
 return false;
+=======
+return true;
+>>>>>>> week2-than
 }
 
 // Finish the predicate function to test if the passed number is between 0 and 10
 function isBetweenZeroAnd10(number) {
+<<<<<<< HEAD
 return true;
+=======
+return false;
+>>>>>>> week2-than
 }
 
 /* 

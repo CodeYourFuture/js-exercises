@@ -8,6 +8,15 @@
   Hint: Google how to check if a string contains a word
 */
 
+<<<<<<< HEAD
+=======
+function containsCode(sentence) {
+  if(sentence.includes('code')) {
+    return true; 
+  }else {
+    return false;
+  }
+>>>>>>> week2-than
 
 function containsCode(sentence) {
    if (sentence.includes('code')) {

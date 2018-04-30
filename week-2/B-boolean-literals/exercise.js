@@ -6,8 +6,13 @@
 */
 
 var codeYourFutureIsGreat = true;
+<<<<<<< HEAD
 var mozafarIsCool = false;
 caluclationCorrect = true;
+=======
+var mozafarIsCool =false;
+var caluclationCorrect = true;
+>>>>>>> week2-than
 moreThan10Students = false;
 
 /* 

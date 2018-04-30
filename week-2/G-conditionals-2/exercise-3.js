@@ -14,6 +14,7 @@ function calculateGrade(mark) {
   if (mark >= 80) {
     return "A";
   }else if (mark >= 60 && mark < 80) {
+<<<<<<< HEAD
    return "B";
   }else if (mark >= 50 && mark < 60) {
    return "C";
@@ -22,6 +23,17 @@ function calculateGrade(mark) {
   }
   }
   
+=======
+    return "B";
+   }else if (mark >= 50 && mark < 60) {
+    return "C";
+  }else {
+    return "F";
+  }
+
+}
+
+>>>>>>> week2-than
 /* 
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */
@@ -34,7 +46,10 @@ console.log("'" + grade1 + "': " + calculateGrade(grade1))
 console.log("'" + grade2 + "': " + calculateGrade(grade2))
 console.log("'" + grade3 + "': " + calculateGrade(grade3))
 console.log("'" + grade4 + "': " + calculateGrade(grade4))
+<<<<<<< HEAD
 
+=======
+>>>>>>> week2-than
 
   /* 
   EXPECTED RESULT
