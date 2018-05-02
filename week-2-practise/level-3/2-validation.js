@@ -6,7 +6,22 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === "number" && 101 >= num && num <= 0) {
+    return true;
+  }else {
+    return false;
+  }
+  }
+  
+  /*function validate(num) {
+    if (typeof num === "number" && 100 >= num && num > 0) {
+        return true;
+    } else {
+        return false;
+      }
+    }
+//}*/
 
 console.log(validate(6));
 console.log(validate(10.5));

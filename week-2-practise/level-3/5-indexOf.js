@@ -6,7 +6,17 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
+  let index = arr.indexOf(valueToRemove);
+  if (index >= 0){
+    let part1 = arr.slice(0, index);
+    let part2 =arr.slice(index + 1);
+    return part1.concat(newvalue, part2);
+
+  }
   return; // complete this statement
+}
+function remove(array, element) {
+  return array.filter(e => e !== element);
 }
 
 /* 
