@@ -5,7 +5,12 @@
 
 var percentages = [1, 23, 92, 18];
 
-console.log(percentagesFormatted);
+
+function percentagesFormatted(percentages){
+  return percentages.map(function(per){ return per + "%"});
+}
+
+console.log(percentagesFormatted(percentages));
 
 /* 
   EXPECTED RESULT
