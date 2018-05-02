@@ -4,7 +4,8 @@
 
 var nums = [10, 1, 5, 29, 100];
 var nums2 = [11, 6, 3, 29, 12];
-var sortedNums = (nums.concat(nums2).sort());
+
+var sortedNums = (nums.concat(nums2)).sort((a, b) => a - b);
 console.log(sortedNums);
 
 // 2. Using code, show that the variables nums and nums2 were not changed

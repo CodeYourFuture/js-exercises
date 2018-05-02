@@ -6,14 +6,14 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
-  let index = arr.indexOf(valueToRemove);
+  let index = arr.indexOf(valueToReplace);
   if (index >= 0){
     let part1 = arr.slice(0, index);
     let part2 =arr.slice(index + 1);
-    return part1.concat(newvalue, part2);
+    return part1.concat([newValue], part2);
 
   }
-  return; // complete this statement
+  //return; // complete this statement
 }
 function remove(array, element) {
   return array.filter(e => e !== element);
@@ -25,8 +25,8 @@ function remove(array, element) {
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = replace(arr, 3, 2);
-var newNames = replace(arr, "Ashleigh", "Rares");
+var newNumbers = replace(numbers, 3, 2);
+var newNames = replace(names, "Ashleigh", "Rares");
 
 console.log(numbers);
 console.log(newNumbers);
