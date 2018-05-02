@@ -11,7 +11,7 @@ function double(num) {
 
 var numbers = [1, 2, 3, 4];
 var numbersDoubled; // complete this statement (use map and the double function)
-
+numbersDoubled = numbers.map(double);
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
