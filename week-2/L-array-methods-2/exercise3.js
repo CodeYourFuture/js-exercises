@@ -7,15 +7,20 @@
 var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
 
 function isInUK(country) {
-  return; // complete this statement
+  for(var i = 0; i < ukNations.length; i++){
+    if(country == ukNations[i]){
+      return true;
+    }
+  }
+  return false;// complete this statement
 }
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-console.log(isInUk("France"));
-console.log(isInUk("Republic of Ireland"));
-console.log(isInUk("England"));
+console.log(isInUK("Canada"));s
+console.log(isInUK("Republic of Ireland"));
+console.log(isInUK("Northern Ireland"));
 
 /* 
   EXPECTED RESULT
