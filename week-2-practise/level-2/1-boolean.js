@@ -1,8 +1,10 @@
 // The code is valid but the program does not produce the expected result
 // Why doesn't it work?
+  /* the variable isHappy gets assigned to a string ("false") instead of real boolean. */ 
+  /* in the conditional part it evalutated as a truthy value */ 
 // Fix it.
 
-var isHappy = "false";
+var isHappy = false;
 
 if (isHappy) {
   console.log("I am happy");

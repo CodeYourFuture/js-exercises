@@ -6,7 +6,7 @@
 */
 
 function isEmpty(arr) {
-  return; // complete this statement
+  return arr.length === 0; // complete this statement
 }
 
 /* 
@@ -15,7 +15,7 @@ function isEmpty(arr) {
 var numbers = [1, 2, 3];
 var names = [];
 
-console.log(isEmpty(arr));
+console.log(isEmpty(numbers));
 console.log(isEmpty(names));
 
 /* 
