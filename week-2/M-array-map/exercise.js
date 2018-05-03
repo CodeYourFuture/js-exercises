@@ -5,12 +5,12 @@
   Use the .map() method to transform each item in the array
 */
 
-function double(num) {
-  return num * 2;
+function double(number) {
+  return number * 2;
 }
 
 var numbers = [1, 2, 3, 4];
-var numbersDoubled; // complete this statement (use map and the double function)
+var numbersDoubled = numbers.map(double); // complete this statement (use map and the double function)
 
 /* 
   DO NOT EDIT BELOW THIS LINE

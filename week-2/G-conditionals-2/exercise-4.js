@@ -9,7 +9,11 @@
 */
 
 function containsCode(sentence) {
-
+if(sentence =sentence("code")) {
+  return true;
+}else{
+  return false;
+}
 }
 
 /* 
