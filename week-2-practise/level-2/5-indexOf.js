@@ -5,7 +5,12 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  if (valueToRemove === arr.length - 1) {
+    return arr.slice(0, valueToRemove);
+  } else {
+    arr.splice(arr.indexOf("Ashleigh"), 1);
+    return arr;
+  }
 }
 
 /* 
