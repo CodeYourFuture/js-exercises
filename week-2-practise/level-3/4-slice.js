@@ -5,7 +5,11 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+ 
+  arr.splice(index, 2, "Rares" );
+
+
+  return arr; // complete this statement
 }
 
 /* 
