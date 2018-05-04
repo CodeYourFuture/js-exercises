@@ -14,10 +14,10 @@ function replace(arr, valueToReplace, newValue) {
 
   }
   //return; // complete this statement
-}
-function remove(array, element) {
-  return array.filter(e => e !== element);
-}
+// }
+// function remove(array, element) {
+//   return array.filter(e => e !== element);
+// }
 
 /* 
   DO NOT EDIT BELOW THIS LINE
