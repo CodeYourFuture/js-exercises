@@ -3,9 +3,9 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
+var isHappy = false; //using string is not as strong as a boolian, and also using boolian means I don't need to use ==true as it is defined before.
 
-if (isHappy == true) {
+if (isHappy) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
