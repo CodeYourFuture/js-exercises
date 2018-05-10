@@ -3,9 +3,16 @@
 // - is a positive number
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
-
-function validate(num) {}
-
+var num = 10;
+function validate(num) {
+  return typeof num;
+}
+function validate(num) {
+  return typeof num;
+}
+function validate(num) {
+  return false;
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

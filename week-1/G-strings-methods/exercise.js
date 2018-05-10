@@ -1,6 +1,8 @@
-var name = "brook";
-var nameLength = name.length;
-
-console.log(
-  "My name is brook and my name is " + nameLength + " characters long"
-);
+function finalGrade(exam, projects) {
+  if (exam >= 90 && projects >= 10) {
+    return "passed";
+  } else {
+    return "not passed";
+  }
+}
+console.log(finalGrade(15, 12));

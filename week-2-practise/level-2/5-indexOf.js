@@ -5,7 +5,7 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  return (newNumbers = numbers.pop()); // complete this statement
 }
 
 /* 
