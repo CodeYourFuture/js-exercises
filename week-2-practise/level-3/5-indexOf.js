@@ -7,7 +7,7 @@
 
 function replace(arr, valueToReplace, newValue) {
   let index = arr.indexOf(valueToReplace);
-  return arr.slice(0, index).concat(newValue, arr.slice(index + 1)); // complete this statement
+  return index >= 0 ? arr.slice(0, index).concat(newValue, arr.slice(index + 1)) : 'Value is not found!'; // complete this statement
 }
 
 /* 

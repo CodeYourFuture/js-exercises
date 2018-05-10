@@ -16,7 +16,7 @@ function isAnIntegerNumber(num) {
   return Number.isInteger(num);
 }
 function isNotInArrayOfnumbers(num) {
-  return excludedNums.indexOf(num) < 0 ? true : false;
+  return excludedNums.indexOf(num) < 0 ;
 }
 
 console.log(validate(6));
