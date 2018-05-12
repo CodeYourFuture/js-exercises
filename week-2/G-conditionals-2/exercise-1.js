@@ -7,7 +7,10 @@
 */
 
 function negativeOrPositive(number) {
-
+  if (number < 0) {
+    return "negative";
+  } else number >= 0;
+  return "positive";
 }
 
 /* 
