@@ -6,7 +6,32 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num == "number") {
+    return isAnum(num);
+  } else return false;
+}
+
+function isAnum(num) {
+  if (Number.isInteger(num)) {
+    return isWholenum(num);
+  } else return false;
+}
+
+function isWholenum(num) {
+  for (var i = 0; i < excludedNums.length; i++) {
+    if (excludedNums[i] == num) {
+      return false;
+    } else return true;
+  }
+}
+// var excludedNums = [6, 14, 91, 111];
+
+// function isWholenum(num) {
+//   if (excludedNums.includes(num) == num) {
+//     return false;
+//   } else return true;
+// }
 
 console.log(validate(6));
 console.log(validate(10.5));

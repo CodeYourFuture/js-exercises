@@ -3,8 +3,8 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
-
+var isHappy = false;
+// I have taken out the quotes around false.
 if (isHappy == true) {
   console.log("I am happy");
 } else {
