@@ -1,2 +1,11 @@
 var numberOfStudents = 15;
 var numberOfMentors = 8;
+// let roughStudents = Math.round(numberOfStudents);
+// let roughMentors = Math.round(numberOfMentors);
+let total = numberOfStudents + numberOfMentors;
+let studentsFraction = numberOfStudents / total;
+let mentorsFraction = numberOfMentors / total;
+console.log("--------------------------------------");
+console.log("Students roughly are: " +(Math.round(studentsFraction * 100))+ "%");
+console.log("Mentors roughly are:  " +(Math.round(mentorsFraction * 100))+ "%");
+console.log("--------------------------------------");
