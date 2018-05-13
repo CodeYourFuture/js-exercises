@@ -1,3 +1,5 @@
+// my code
+
 /* 
   You are given an array of test scores.
   Any result over 60 is a pass. 
