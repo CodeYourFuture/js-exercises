@@ -21,4 +21,8 @@ var pairs = pairsByIndex.map(function(indexes) {
   return [student, mentor];
 });
 
-console.log(pairs);
+function isNull(value) {
+  return value === null;
+}
+
+if (pairsByIndex.some(isNull)) console.log(pairs);
