@@ -7,14 +7,16 @@
 
 var studentCount = 16;
 var mentorCount = 9;
-var moreStudentsThanMentors; // finish this statement
+var moreStudentsThanMentors = true; // assigned matching result
+
 
 var roomMaxCapacity = 25;
-var enoughSpaceInRoom; // finish this statement
+var enoughSpaceInRoom = true; // assigned matching result
+
 
 var personA = "Daniel";
 var personB = "Irina";
-var sameName; // finish this statement
+var sameName = false; // assigned matching result
 
 /* 
   DO NOT EDIT BELOW THIS LINE

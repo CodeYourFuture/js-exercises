@@ -4,8 +4,12 @@
   Declare some variables assigned to arrays of values
 */
 
-var numbers = []; // add numbers from 1 to 10 into this array
-var mentors; // Create an array with the names of 4 mentors
+var numbers = [1,2,3,4,5,6,7,8,9,10]; 
+console.log(numbers);// add numbers from 1 to 10 into this array
+
+
+var mentors = ['Bob','Debbie','Andrew','Michael']; // Create an array with the names of 4 mentors
+console.log(mentors);
 
 /* 
   DO NOT EDIT BELOW THIS LINE
