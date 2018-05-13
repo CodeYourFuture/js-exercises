@@ -4,8 +4,9 @@
 // - return a new array with the first item matching `valueToRemove` removed
 // TIP: Use the .indexOf() method
 
-function remove(arr, valueToRemove) {
-  return; // complete this statement
+function remove(numbers, names) {
+  numbers.splice(index, 2);
+  names.splice(index, "Ashleigh"); // complete this statement
 }
 
 /* 

@@ -6,7 +6,19 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function validate(num) {
+  if(num){
+    return true;
+  }else if(num == float){
+    return true;
+  }else if(num!==excludedNums){
+return true;
+
+  }else{
+    return false;
+  }
+  
+}
 
 console.log(validate(6));
 console.log(validate(10.5));

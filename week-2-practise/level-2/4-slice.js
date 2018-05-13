@@ -5,7 +5,14 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+   arr.splice(index, 1);
+   return arr;
+ 
+  
+// complete this statement
+/*if(index>-1){
+  Array.splice(index, 2);
+}*/
 }
 
 /* 
@@ -26,3 +33,9 @@ console.log(newNames);
   [1, 2]
   [Irina, Mozafar]
 */
+
+//*var array = [2, 5, 9];
+//var index = array.indexOf(5);
+//if (index > -1) {
+  //array.splice(index, 1);
+//}*/
