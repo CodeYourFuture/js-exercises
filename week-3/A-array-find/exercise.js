@@ -3,9 +3,21 @@
   Any result over 60 is a pass. 
   Using .find() (and any other array methods necessary), find the lowest pass score
 */
-
+'use strict'
 var testScores = [90, 50, 100, 25, 81, 66, 80];
-var lowestPassScore = findLowestPassScore(haystack);
+
+var testScores = testScores.sort(function(a, b) {
+  return a -b;
+  console.log(testScores);
+})
+
+var lowestPassScore = testScores.find(function(element) {
+return element > 60;
+})
+
+
+//var lowestPassScore = findLowestPassScore(haystack);
+//var lowestPassScore = numbers.find(testScores);
 
 console.log(lowestPassScore);
 

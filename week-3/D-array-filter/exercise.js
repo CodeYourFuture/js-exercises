@@ -6,12 +6,15 @@
   - Do not edit any of the existing code
 */
 
-var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+ var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+ var pairsByIndex = pairsByIndexRaw.filter(function(element) {
+   return element > 0 || element !== null;
+ }); ; // Complete this statement
+
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
-var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+var mentors = ["Daniel", "Irina" , "Mozafar", "Luke"];
 
 var pairs = pairsByIndex.map(function(indexes) {
   var student = students[indexes[0]];
@@ -20,3 +23,7 @@ var pairs = pairsByIndex.map(function(indexes) {
 });
 
 console.log(pairs);
+
+
+
+
