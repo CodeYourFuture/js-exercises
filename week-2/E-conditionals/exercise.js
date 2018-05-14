@@ -11,9 +11,12 @@ var role = "mentor";
 var name2 = "Harun";
 var role2 = "student";
 
-
-console.log("Hi, My name is " + name);
-console.log("Hi, My name is " + name2);
+if (role === 'student') {
+  console.log("Hi, My name is " + name);
+} 
+if (role2 === 'student'){
+  console.log("Hi, My name is " + name2);
+}
 
 
 

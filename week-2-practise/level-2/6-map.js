@@ -4,7 +4,10 @@
 //    - each item in `percentages` formatted by your function
 
 var percentages = [1, 23, 92, 18];
-
+function formatNumbersIntoString(numbers){
+  return numbers.map(number => number + "%");
+}
+let percentagesFormatted = formatNumbersIntoString(percentages); 
 console.log(percentagesFormatted);
 
 /* 

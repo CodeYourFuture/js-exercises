@@ -37,6 +37,11 @@ You quickly find out the result of an expression by running node in a terminal w
 * _You have now opened a node console (also called a REPL)_
 * Type an expression and press enter
 * To exit the console type Ctrl+C or type the command `.exit`
+    raj (raj_js-week1-solutions *) week-2 $ node
+    > 4-3
+    1
+    > .exit
+raj (raj_js-week1-solutions *) 
 
 Example from inside a terminal window:
 
@@ -60,7 +65,19 @@ $
 > Notice how when we execute an expression the value it produces is printed below it. When we execute a statement, we see `undefined` printed below. This is because statements don't produce values like expressions, they _do something_.
 
 * Write some more expressions in the node console
+        raj (raj_js-week1-solutions) week-2 $ node
+        > console.log("statement")
+        statement
+        undefined
+        > "string one" + "string two"
+        'string onestring two'
+        > 1/4
+        0.25
 * Assign some expressions to variables
+    > let x = 102-2+3%2+8/3
+    undefined
 * Check the value of the variables
+    > x
+    103.66666666666667
 
 Further reading on using the node console: https://hackernoon.com/know-node-repl-better-dbd15bca0af6
