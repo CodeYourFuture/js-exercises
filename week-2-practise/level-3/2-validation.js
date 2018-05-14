@@ -6,10 +6,51 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function validate(num) {
+  var res;
+  
+   if (isNum && isExcluded(num) && isInteger(num)){
+     return res = true;
+    }
+   else {
+    return res  = false;
+   }
+}
+function isNum(num){
+  var res;
+  if (typeof num == 'number'){
+    res = true;
+  } 
+  else{
+    res = false;
+  }
+  return res;
+}
+function isInteger(num){
+  var res;
+   if(Number.isInteger(num)){
+      res = true;
+    } 
+    else{
+      res = false;
+    }
+  
+  
+  return res;
+}
+function isExcluded(num){
+ var res;
+  if (excludedNums.indexOf(num) >=0){
+    res = false;
+  }
+   else {
+     res = true;
+   }
+   return res;
+}
 
 console.log(validate(6));
-console.log(validate(10.5));
+console.log(validate(14));
 console.log(validate(101));
 console.log(validate(-91));
 console.log(validate("16"));

@@ -7,7 +7,15 @@
   Tip: use the string method .split() and the array method .join()
 */
 
-function capitalise(str) {}
+ function capitalise(str) {
+    var strArr = str.toLowerCase().split("");
+    strArr = strArr[0].toUpperCase() + strArr.slice(1).join("");
+  
+     return strArr;
+ }
+ 
+
+   
 
 /* 
   DO NOT EDIT BELOW THIS LINE
@@ -16,6 +24,7 @@ var name = "daniel";
 
 console.log(capitalise(name));
 console.log(capitalise("hello"));
+
 
 /* 
   EXPECTED RESULT
