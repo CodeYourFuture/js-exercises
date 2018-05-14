@@ -17,10 +17,21 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
+        this.insertedAmount = amount;
     },
     getCoffee: function(coffee) {
-
+        let price = this.prices[coffee];
+        let insertedAmount = this.insertedAmount;
+        switch (true) {
+          case coffee === "cappuccino" && insertedAmount >= price:
+            return coffee;
+          case coffee === "blackCoffee" && insertedAmount >= price:
+            return coffee;
+          case coffee === "flatWhite" && insertedAmount >= price:
+            return coffee;
+          default:
+            return "`Sorry you don\'t have enough money for a flatWhite'";
+        }
     }
 };
 
