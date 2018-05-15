@@ -8,7 +8,20 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+function goodNumber(element) {
+  let newCleanArray = [];
+  for (var i = 0; i < pairsByIndexRaw.length; i++) {
+    if (
+      pairsByIndexRaw[i] !== null &&
+      pairsByIndexRaw[i] !== false &&
+      typeof pairsByIndexRaw[i] !== "string"
+    )
+      newCleanArray.push(pairsByIndexRaw[i]);
+  }
+  console.log(newCleanArray);
+}
+
+var pairsByIndex = pairsByIndexRaw.filter(goodNumber); // Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
