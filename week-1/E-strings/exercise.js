@@ -1,3 +1,9 @@
-// Start by creating a variable `message`
+// Start by creating a variable `message`var 
 
-console.log(message);
+
+var messages= "This is a String"
+var messagesType= typeof messages;
+
+console.log(messages);
+console.log(messagesType);
+
