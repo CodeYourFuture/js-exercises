@@ -5,9 +5,9 @@
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-var groupIsOnlyStudents = group.every(function(students, group) {
+var groupIsOnlyStudents = group.every(function(students) {
   for (i = 0; i < students.length; i++) {
-    return students == group;
+    console.log(students);
   }
 }); // complete this statement
 
