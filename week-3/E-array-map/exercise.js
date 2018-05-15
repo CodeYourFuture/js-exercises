@@ -3,6 +3,24 @@
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
-const map1 = numbers.map(x => x * 2);
+const map1 = numbers.map(x => x * 100);
 
 console.log(map1);
+
+// multiple solutions
+
+function multipleBy100(number) {
+
+  return number * 100;
+
+}
+
+var numbersDoubled = numbers.map(multipleBy100);
+
+console.log(numbersDoubled);
+
+// multiple solutions
+
+ var numbersDoubled = numbers.map(number => number * 100);
+
+ console.log(numbersDoubled);

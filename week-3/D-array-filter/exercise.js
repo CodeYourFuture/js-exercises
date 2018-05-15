@@ -7,10 +7,15 @@
 */
 
  var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
-
- var pairsByIndex = pairsByIndexRaw.filter(function(element) {
-   return element > 0 || element !== null;
- }); ; // Complete this statement
+ var pairsByID = [];
+ 
+ pairsByIndexRaw.filter(function(element) {
+   if (element !== null && element !==false && element !== "whoops" && element.length > 1) {
+    pairsByID.push(element);
+   }
+ });
+ 
+ var pairsByIndex = pairsByID; ; // Complete this statement
 
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
