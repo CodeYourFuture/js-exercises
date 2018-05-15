@@ -7,9 +7,25 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToUSD(price) {}
-function convertToBRL(price) {}
+var feeRate = 1.01;
 
+ function convertToUSD(price) {
+   return convert(price, 1.4, "$");
+//   return "$" + (price * 1.4 * feeRate).toFixed(2);
+
+//   return usdPrice;
+}
+function convertToBRL(price) {
+  return convert(price, 4.86, "R$");
+  // return "£" + (price + price * feeRate).toFixed(2);
+
+  // return brlPrice;
+ }
+ 
+ function convert(price, exchangeRate, symbol) {
+   return symbol + (price * exchangeRate * feeRate).toFixed(2);
+
+ }
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
