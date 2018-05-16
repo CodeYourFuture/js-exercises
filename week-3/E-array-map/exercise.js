@@ -2,4 +2,8 @@
 // Write multiple solutions using different syntax (as shown in the README)
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
+var numbersMultipliedByHundred = numbers.map(function hundredMulitply(number) {
+  return number * 100;
+});
 
+console.log(numbersMultipliedByHundred);
