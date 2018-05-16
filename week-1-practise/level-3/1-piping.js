@@ -11,7 +11,11 @@
 */
 
 var startingValue = 5;
+<<<<<<< HEAD
 var result = format(add(multiply(startingValue, 2), 10));
+=======
+
+>>>>>>> master
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 

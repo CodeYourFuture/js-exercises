@@ -7,16 +7,24 @@
 
 // Finish the predicate function to test if the passed number is negative (less than zero)
 function isNegative(number) {
+<<<<<<< HEAD
   return number < 0;
+=======
+
+>>>>>>> master
 }
 
 // Finish the predicate function to test if the passed number is between 0 and 10
 function isBetweenZeroAnd10(number) {
+<<<<<<< HEAD
   if (0 >= number <= 10) {
     return true;
   } else {
     return false;
   }
+=======
+
+>>>>>>> master
 }
 
 /* 

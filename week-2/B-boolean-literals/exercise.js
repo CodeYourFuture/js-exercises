@@ -6,9 +6,12 @@
 */
 
 var codeYourFutureIsGreat = true;
+<<<<<<< HEAD
 var mozafarIsCool = true;
 var caluclationCorrect = true;
 var moreThan10Students = false;
+=======
+>>>>>>> master
 
 /* 
   DO NOT EDIT BELOW THIS LINE

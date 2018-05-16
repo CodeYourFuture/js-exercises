@@ -3,6 +3,7 @@ var mentor2 = "Irina";
 var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
+<<<<<<< HEAD
 
 function shout() {
   var mentors = ["Daniel", "Irina", "Mimi", "Rob", "Yohannes"];
@@ -13,3 +14,5 @@ function shout() {
   }
 }
 shout();
+=======
+>>>>>>> master

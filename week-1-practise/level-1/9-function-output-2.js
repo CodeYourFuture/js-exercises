@@ -1,12 +1,20 @@
 function s(w1, w2) {
+<<<<<<< HEAD
   return w1.concat(w2);
 }
 
 var result = s("code", "your");
+=======
+    return w1.concat(w2);
+}
+
+var result = s('code', 'your');
+>>>>>>> master
 console.log(result);
 
 // Answer these questions:
 // - What does this program do? Run it and see, or Google some of the methods used ot understand them.
+<<<<<<< HEAD
 // This program concatinate two parameters and clearreturns them as one word.
 // - How many parameters does the function take?
 // The function takes two parameters.
@@ -16,3 +24,10 @@ console.log(result);
 // The function was called in line 5 with the parameters 'code' and 'your'.
 // - What does the function return?
 // - How can this function be improved?
+=======
+// - How many parameters does the function take?
+// - What is the function name?
+// - Where is the function called? with what parameters?
+// - What does the function return?
+// - How can this function be improved?
+>>>>>>> master

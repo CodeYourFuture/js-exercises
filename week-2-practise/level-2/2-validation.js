@@ -4,6 +4,7 @@
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
 
+<<<<<<< HEAD
 function validate(num) {
   if (typeof num === "number" && 100 >= num && num > 0) {
     return true;
@@ -11,6 +12,9 @@ function validate(num) {
     return false;
   }
 }
+=======
+function validate(num) {}
+>>>>>>> master
 
 /* 
   DO NOT EDIT BELOW THIS LINE

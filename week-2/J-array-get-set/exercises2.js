@@ -7,7 +7,11 @@
 */
 
 var numbers = [2, 2, 3]; // Don't change this array literal declaration
+<<<<<<< HEAD
 numbers.push(4);
+=======
+
+>>>>>>> master
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

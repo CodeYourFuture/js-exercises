@@ -11,6 +11,7 @@ function tidyUpString(str) {
 }
 
 function captialise(str) {
+<<<<<<< HEAD
   return str
   
   .map(function(word) {
@@ -23,6 +24,13 @@ var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
 var mentorsTidy= mentors.map(tidyUpString);
 var mentorsTidyAndCapitalised =  captialise(mentorsTidy);
 
+=======
+  // complete this function
+}
+
+var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
+var mentorsTidyAndCapitalised;
+>>>>>>> master
 
 console.log(mentorsTidyAndCapitalised);
 

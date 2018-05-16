@@ -1,7 +1,11 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
 function trimWord(word) {
+<<<<<<< HEAD
   return word.trim();
+=======
+  return word.trim;
+>>>>>>> master
 }
 
 var result = trimWord("  CodeYourFuture ");

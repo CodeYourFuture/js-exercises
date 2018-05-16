@@ -5,8 +5,12 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
+<<<<<<< HEAD
   arr.splice(index, 1);
   return arr;
+=======
+  return; // complete this statement
+>>>>>>> master
 }
 
 /* 

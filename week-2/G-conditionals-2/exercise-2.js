@@ -7,6 +7,7 @@
 
 */
 
+<<<<<<< HEAD
 var fail = "fail";
 var pass = "pass";
 
@@ -16,6 +17,10 @@ function studentPassed(grade) {
   } else {
     return fail;
   }    
+=======
+function studentPassed(grade) {
+
+>>>>>>> master
 }
 
 /* 

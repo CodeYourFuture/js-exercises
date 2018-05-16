@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var name = " Steve  ";
 var nameLength = name.length;
 var message =
@@ -10,4 +11,8 @@ var nameLength = trimName.length;
 
 var message =
   "Hello my name is Steve and my name is " + nameLength + " characters long";
+=======
+var name = " Daniel  ";
+
+>>>>>>> master
 console.log(message);

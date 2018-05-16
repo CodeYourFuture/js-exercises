@@ -7,6 +7,7 @@
 */
 
 function negativeOrPositive(number) {
+<<<<<<< HEAD
   if (number >= 0) {
     var positive = "positive";
     return positive;
@@ -14,6 +15,9 @@ function negativeOrPositive(number) {
     var negative = "negative";
     return negative;
   }
+=======
+
+>>>>>>> master
 }
 
 /* 

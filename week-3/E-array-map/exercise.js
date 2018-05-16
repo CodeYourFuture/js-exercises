@@ -3,6 +3,7 @@
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
+<<<<<<< HEAD
 // function multiplyByHundred(number) {
 //   return number * 100;
 // }
@@ -17,3 +18,5 @@ var numbersMultipliedByHundred = numbers.map(function hundredMulitply(number) {
 });
 
 console.log(numbersMultipliedByHundred);
+=======
+>>>>>>> master

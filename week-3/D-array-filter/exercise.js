@@ -8,6 +8,7 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
+<<<<<<< HEAD
 var filterarr = [];
 
 pairsByIndexRaw.filter(function(item) {
@@ -17,6 +18,9 @@ pairsByIndexRaw.filter(function(item) {
 });
 
 var pairsByIndex = filterarr; // Complete this statement
+=======
+var pairsByIndex; // Complete this statement
+>>>>>>> master
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];

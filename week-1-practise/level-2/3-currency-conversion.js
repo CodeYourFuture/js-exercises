@@ -5,10 +5,14 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
+<<<<<<< HEAD
 function convertToUSD(price) {
   var usdPrice = "$" + (price * 1.4).toFixed(2);
   return usdPrice;
 }
+=======
+function convertToUSD() {}
+>>>>>>> master
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */

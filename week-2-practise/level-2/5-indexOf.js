@@ -5,10 +5,14 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
+<<<<<<< HEAD
   var index = arr.indexOf(valueToRemove);
     arr.splice(index, 1);
     return newArr;
 
+=======
+  return; // complete this statement
+>>>>>>> master
 }
 
 /* 
