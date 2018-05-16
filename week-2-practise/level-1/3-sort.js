@@ -2,15 +2,11 @@
 // TIP: use an array method
 
 var letters = ["a", "n", "c", "e", "z", "f"];
-<<<<<<< HEAD
 var sortedLetters = letters.sort(); // ONLY EDIT THIS LINE
-=======
-var sortedLetters; // ONLY EDIT THIS LINE
->>>>>>> master
 
 console.log(sortedLetters);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [ 'a', 'c', 'e', 'f', 'n', 'z' ]

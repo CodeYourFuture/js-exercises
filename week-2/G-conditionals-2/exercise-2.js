@@ -7,7 +7,6 @@
 
 */
 
-<<<<<<< HEAD
 var fail = "fail";
 var pass = "pass";
 
@@ -16,14 +15,10 @@ function studentPassed(grade) {
     return pass;
   } else {
     return fail;
-  }    
-=======
-function studentPassed(grade) {
-
->>>>>>> master
+  }
 }
 
-/* 
+/*
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */
 var grade1 = 49;
@@ -34,7 +29,7 @@ console.log("'" + grade1 + "': " + studentPassed(grade1))
 console.log("'" + grade2 + "': " + studentPassed(grade2))
 console.log("'" + grade3 + "': " + studentPassed(grade3))
 
-/* 
+/*
 EXPECTED RESULT
 ---------------
 '49': failed

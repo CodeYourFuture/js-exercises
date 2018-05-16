@@ -1,5 +1,4 @@
 // Start by creating a variable `message`
-<<<<<<< HEAD
 var message = "Helllo World!";
 var messageType = typeof message;
 console.log(message);
@@ -23,7 +22,3 @@ var messageType = typeof message;
 console.log(message);
 console.log(messageType);
 console.log("");
-=======
-
-console.log(message);
->>>>>>> master

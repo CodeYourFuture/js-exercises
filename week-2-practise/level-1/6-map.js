@@ -11,15 +11,11 @@ function tidyUpString(str) {
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-<<<<<<< HEAD
 var mentorsTidy= mentors.map(tidyUpString); // ONLY EDIT THIS LINE
-=======
-var mentorsTidy; // ONLY EDIT THIS LINE
->>>>>>> master
 
 console.log(mentorsTidy);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   ["daniel", "irina", "gordon", "ashleigh"]

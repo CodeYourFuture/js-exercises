@@ -7,26 +7,20 @@
   - if the mark is between 50 and 60 then the grade is "C"
   - Otherwise the grade is "F"
 */
-<<<<<<< HEAD
 var A = "A", B = "B", C = "C", F = "F";
 function calculateGrade(mark) {
   if (mark > 80) {
     return A;
   } else if (mark >= 60 && mark <= 80) {
-    return B;  
+    return B;
   } else if (mark >=50 && mark <= 60) {
-    return C;  
+    return C;
   } else {
-    return F;  
+    return F;
 }
-=======
-
-function calculateGrade(mark) {
-
->>>>>>> master
 }
 
-/* 
+/*
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */
 var grade1 = 49;
@@ -38,7 +32,7 @@ console.log("'" + grade1 + "': " + calculateGrade(grade1))
 console.log("'" + grade2 + "': " + calculateGrade(grade2))
 console.log("'" + grade3 + "': " + calculateGrade(grade3))
 
-  /* 
+  /*
   EXPECTED RESULT
   ---------------
   '49': F
