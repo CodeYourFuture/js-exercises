@@ -12,7 +12,13 @@
 
 var startingValue = 5;
 
+function piping(x) {
+  return startingValue * 2 + 10;
+}
+var result = piping(startingValue);
+
 /* DO NOT EDIT BELOW THIS LINE */
+var result = format(add(multiply(2, startingValue), 10));
 /* --------------------------- */
 
 function add(a, b) {
