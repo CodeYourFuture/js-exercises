@@ -17,3 +17,17 @@ console.log(greeting(mentor2));
 console.log(greeting(mentor3));
 console.log(greeting(mentor4));
 console.log(greeting(mentor5));
+
+
+// Solution from class
+
+// function logMentor(mentor) {
+//     var mentorUpperCase = mentor.toUpperCase();
+//     console.log("HELLO" + mentorUpperCase);
+// }
+
+// logMentor(mentor1);
+// logMentor(mentor2);
+// logMentor(mentor3);
+// logMentor(mentor4);
+// logMentor(mentor5);

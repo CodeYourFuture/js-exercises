@@ -18,8 +18,21 @@ function convertToBRL(price) {
 }
 
 function fee(base) {
-  return base / 100 * 1;
+  return base / 100;
 }
+
+// Solution from class:
+
+// const feeRate = 1.01;
+
+// function convertToBrl(price) {
+//   return convertToBrl(price, 4.86), "£");
+// }
+
+/* function convert (price, exchangeRate) {
+return ("" + price * price * exchangeRate * feeRate).tofixed(2);
+} */
+
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
