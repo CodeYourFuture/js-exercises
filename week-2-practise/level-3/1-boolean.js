@@ -3,9 +3,11 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
 
-if (isHappy == true) {
+//here we dont need a string 
+var isHappy = false;
+// we dont need to make isHappy == to true
+if (isHappy) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
