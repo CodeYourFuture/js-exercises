@@ -5,18 +5,22 @@
 
 function tidyUpString(str) {
   return str
-    .trim()
+    .trim(" ")
     .toLowerCase()
     .replace("/", "");
 }
 
 function captialise(str) {
-  // complete this function
+  var splitStr = tidyUpString(str).split(""); // complete this function
+  var initalStr = splitStr[0].toUpperCase();
+  splitStr[0] = initalStr;
+  var capitalStr = splitStr.join("");
+  return capitalStr;
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidyAndCapitalised;
 
+var mentorsTidyAndCapitalised = mentors.map(tidyUpString).map(captialise);
 console.log(mentorsTidyAndCapitalised);
 
 /* 
