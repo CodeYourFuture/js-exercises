@@ -5,6 +5,12 @@
 
 var percentages = [1, 23, 92, 18];
 
+function addPercentage(percentages) {
+  return percentages + "%";
+}
+
+let percentagesFormatted = percentages.map(addPercentage);
+
 console.log(percentagesFormatted);
 
 /* 

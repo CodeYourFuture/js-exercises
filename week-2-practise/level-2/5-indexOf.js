@@ -5,7 +5,14 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  let position = arr.indexOf(valueToRemove);
+
+  if (position >= 0) {
+    arr.splice(position, 1);
+    return arr;
+  } else {
+    return arr;
+  } // complete this statement
 }
 
 /* 
@@ -23,6 +30,6 @@ console.log(newNames);
 /* 
   EXPECTED RESULT
   ---------------
-  [1, 3]
+  [1, 3, 3]
   [Irina, Mozafar]
 */
