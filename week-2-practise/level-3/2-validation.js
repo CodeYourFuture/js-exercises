@@ -14,17 +14,21 @@ function validate(num) {
 
 function isAnum(num) {
   if (Number.isInteger(num)) {
-    return isWholenum(num);
+    return isNotInTheList(num);
   } else return false;
 }
 
-function isWholenum(num) {
+function isNotInTheList(num) {
   for (var i = 0; i < excludedNums.length; i++) {
     if (excludedNums[i] == num) {
       return false;
-    } else return true;
+    }
   }
+  return true;
 }
+
+console.log(isNotInTheList(91));
+
 // var excludedNums = [6, 14, 91, 111];
 
 // function isWholenum(num) {
@@ -33,11 +37,11 @@ function isWholenum(num) {
 //   } else return true;
 // }
 
-console.log(validate(6));
-console.log(validate(10.5));
-console.log(validate(101));
-console.log(validate(-91));
-console.log(validate("16"));
+// console.log(validate(6));
+// console.log(validate(10.5));
+// console.log(validate(101));
+// console.log(validate(-91));
+// console.log(validate("16"));
 
 /* 
   EXPECTED RESULT
