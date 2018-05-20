@@ -12,3 +12,10 @@ console.log(result);
 // - Where is the function called? with what parameters?
 // - What does the function return?
 // - How can this function be improved?
+
+// Merge two strings w1, w2
+// Two parameters
+// Function name is s
+// Line 5 with two parameters 'code' and 'your'
+// codeyour, w1 merge w2
+// Change the name of function to concatenate or something show's what function does :)

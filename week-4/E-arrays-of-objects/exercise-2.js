@@ -39,12 +39,31 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+var destinationNamesWithin500Kms = travelDestinations.filter(function(destance){
+    if(destance.distanceKms < 500){
+        return b = destance.destinationName;
+    }}).map(function(distance){
+        return distance.destinationName;
+    });
 
-var destinationNamesWithin500Kms = // Complete here
+var destinationNameReachableByFerry = travelDestinations.filter(function(byFerry){
+    for(var i = 0; i < byFerry.transportations.length; i++){
+        if(byFerry.transportations[i] === "ferry"){
+            return byFerry.destinationName;
+      }
+    }}).map(function(byFerry){
+    return byFerry.destinationName;
+});
 
-var destinationNameReachableByFerry = // Complete here
-
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(function(byTrain){
+    for(var i = 0; i < byTrain.transportations.length; i++){
+        if(byTrain.distanceKms > 300 && byTrain.transportations[i] === "train"){
+            return byTrain.destinationName;
+        }
+    }
+}).map(function(byTrain){
+    return byTrain.destinationName;
+});// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
