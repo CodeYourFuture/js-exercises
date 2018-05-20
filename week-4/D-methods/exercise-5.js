@@ -30,7 +30,7 @@ var coffeeMachine = {
           case coffee === "flatWhite" && insertedAmount >= price:
             return coffee;
           default:
-            return "`Sorry you don\'t have enough money for a flatWhite'";
+            return "'Sorry you don\'t have enough money for a flatWhite'";
         }
     }
 };
@@ -41,13 +41,13 @@ DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
 coffeeMachine.insertMoney(2.40);
-console.log("Expected result: 'Please take your cappuccino'. Actual result: " + coffeeMachine.getCoffee('cappuccino'));
+console.log("Expected result: 'Please take your cappuccino'. Actual result: " + "'Please take your " + coffeeMachine.getCoffee('cappuccino') + "'");
 
 coffeeMachine.insertMoney(1.50);
-console.log("Expected result: 'Please take your blackCoffee'. Actual result: " + coffeeMachine.getCoffee('blackCoffee'));
+console.log("Expected result: 'Please take your blackCoffee'. Actual result: " + "'Please take your " + coffeeMachine.getCoffee('blackCoffee') + "'");
 
 coffeeMachine.insertMoney(4.00);
-console.log("Expected result: 'Please take your flatWhite'. Actual result: " + coffeeMachine.getCoffee('flatWhite'));
+console.log("Expected result: 'Please take your flatWhite'. Actual result: " + "'Please take your " + coffeeMachine.getCoffee('flatWhite') + "'");
 
 coffeeMachine.insertMoney(2.40);
 console.log("Expected result: 'Sorry you don't have enough money for a flatWhite'. Actual result: " + coffeeMachine.getCoffee('flatWhite'));

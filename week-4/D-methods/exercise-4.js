@@ -19,4 +19,4 @@ DO NOT EDIT ANYTHING BELOW THIS LINE
 
 person.makeFriend("Bob");
 
-console.log("Expected result: 'John,Nina,Bob'. Actual result: " + person.friends);
+console.log("Expected result: 'John,Nina,Bob'. Actual result: " + `'${person.friends}'.`);
