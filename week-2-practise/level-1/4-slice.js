@@ -9,6 +9,10 @@ var first5Numbers = first5(numbers);
 
 console.log(first5Numbers);
 
+function first5(numbers) {
+  return numbers.slice(0, 5);
+}
+
 /* 
   EXPECTED RESULT
   ---------------

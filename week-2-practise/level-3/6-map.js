@@ -4,18 +4,23 @@
 //    - every resulting item run through the `captialise` function
 
 function tidyUpString(str) {
-  return str
+  var lower = str
     .trim()
     .toLowerCase()
     .replace("/", "");
+  return titleCase(lower);
 }
 
-function captialise(str) {
-  // complete this function
+function titleCase(str) {
+  var first = str.charAt(0).toUpperCase();
+  var rest = str.split("").slice(1);
+  return [first,...rest].join("");
+
 }
+
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidyAndCapitalised;
+var mentorsTidyAndCapitalised = mentors.map(tidyUpString);
 
 console.log(mentorsTidyAndCapitalised);
 

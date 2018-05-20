@@ -3,13 +3,16 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
+// not necessery "false"
+
+var isHappy = false;
 
 if (isHappy == true) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
 }
+
 
 /* 
   EXPECTED RESULT
