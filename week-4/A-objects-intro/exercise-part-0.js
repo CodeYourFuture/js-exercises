@@ -12,7 +12,6 @@ let laptop = {
   processorClockSpeed: '2.5GZ',
   primaryMemory: "8GB",
   secondaryMemorySize: "500GB",
-  keys: "",
   hasWebcam: ture,
   keys:['numbers', 'alphabet', 'function keys'],
   onPower:function(){
