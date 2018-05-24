@@ -4,7 +4,7 @@ Imagine you have an array of names...
 var mentors = ["Daniel ", "irina ", " Gordon", "ashleigh "];
 ```
 
-You notice that he names are not formatted consistently. To fix the array you decide you need to trim whitespace and convert to lowercase. How do you do that for every value in the array?
+You notice that the names are not formatted consistently. To fix the array you decide you need to trim whitespace and convert to lowercase. How do you do that for every value in the array?
 
 We can write a function that changes one name:
 
