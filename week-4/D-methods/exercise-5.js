@@ -17,12 +17,15 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
-    },
+    //if (amount === 2.40) {
+        
+   // }
+},
     getCoffee: function(coffee) {
+        return coffee;
 
     }
-};
+}
 
 
 /*
