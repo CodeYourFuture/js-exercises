@@ -4,7 +4,7 @@
     Follow the instructions below and then run the file 
     and make sure it outputs the correct results
 */
-
+```
 var house = {
     address: "1 Kinning Park",
     previousOwners: ["Claire M.", "John A."],
@@ -24,6 +24,9 @@ var newCurrentOwner = {
 
   WRITE YOUR CODE BELOW
 */
+house.currentOwner = newCurrentOwner;
+house.previousOwners[1] = "Stephen B.";
+house.isForSale = false;
 
 // - assign the value of the variable 'newCurrentOwner' as the value to the house's "currentOwner"
 // - from the list of previous owners, replace only "John A." with "Stephen B."
@@ -40,3 +43,4 @@ console.log(
     "Expected result: true. Actual result: " + (house.currentOwner === newCurrentOwner));
 console.log("Expected result: Claire M., Stephen B. Actual result: " + house.previousOwners.toString());
 console.log("Expected result: false. Actual result: " + house.isForSale);
+```

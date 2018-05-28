@@ -8,8 +8,11 @@ var dog = {
 };
 
 // WRITE CODE BELOW THIS LINE
-
-
+```
+var dog = {
+    name: "Rex",
+    wantsToPlay: true
+}
 
 // WRITE CODE ABOVE THIS LINE
 
@@ -21,3 +24,4 @@ console.log(dog.wantsToPlay);
 // it should output:
 // Rex
 // true
+```

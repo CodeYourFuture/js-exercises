@@ -32,17 +32,21 @@ var storeBranches = {
 
 
 // ONLY EDIT BELOW THIS LINE
-
+var keysGroup1 = Object.keys(storeBranches);
 // # 1
 // prints [ 'glasgow', 'edinburgh' ]
-console.log()
+console.log(keysGroup1)
 
 // # 2
 // prints [ 'manager', 'assistant', 'interns' ]
-console.log()
+//var keysGroup2 = keysGroup1.map((item)=>Object.keys(item));
+var keysGroup2 = Object.keys(storeBranches.glasgow);
+console.log(keysGroup2)
 
 // # 3
 // prints [ 'head_intern', 'intern' ]
-console.log()
+// var keysGroup3 = keysGroup2.map(obj=>Object.keys(obj));
+var keysGroup3 = Object.keys(storeBranches.glasgow.interns);
+console.log(keysGroup3);
 
 // ONLY EDIT ABOVE THIS LINE

@@ -13,6 +13,10 @@ var person = {
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
-
+```
+person.greet = function(){
+    return "Helle everybody"
+}
 
 console.log("Expected result: Hello everybody. Actual result: " + person.greet());
+```

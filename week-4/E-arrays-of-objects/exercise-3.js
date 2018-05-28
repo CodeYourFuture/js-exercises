@@ -13,7 +13,7 @@ all the restaurant names serving this dish.
 3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (centre, west),
 and returns the number of restaurants in this area.
 */
-
+```
 var restaurant1 = {
     name: "Paesano",
     totalSeats: 10,
@@ -61,12 +61,18 @@ var restaurantFinderApplication = {
     restaurants: restaurants,
     findAvailableRestaurants: function(numberOfPeople) {
         // Complete here
+        return this.restaurants.filter(restaurant=>restaurant.totalSeats - restaurant.numberOfCustomers >= numberOfPeople).map(restaurant=>restaurant.name);
+                                                               
+           
     },
+    
     findRestaurantServingDish: function(dishName) {
         // Complete here
+        return this.restaurants.filter(restaurant=>restaurant.menu.includes(dishName)).map(restaurant=>restaurant.name);
     },
     countNumberOfRestaurantsInArea: function(area) {
         // Complete here
+        return this.restaurants.filter(restaurant=>restaurant.address.area == area).length;
     }
 };
 
@@ -83,3 +89,4 @@ console.log("Find restaurants serving salad: Expected result: Paesano,Ubiquitous
 
 var numberOfRestaurantsInCityCentre = restaurantFinderApplication.countNumberOfRestaurantsInArea("center");
 console.log("Number of restaurants in city centre: Expected result: 2, actual result: " + numberOfRestaurantsInCityCentre);
+```
