@@ -29,20 +29,22 @@ var storeBranches = {
     }
   }
 }
-
-
 // ONLY EDIT BELOW THIS LINE
 
 // # 1
-// prints [ 'glasgow', 'edinburgh' ]
-console.log()
+var citiesBranches = storeBranches;// prints [ 'glasgow', 'edinburgh' ]
+console.log(citiesBranches);
+
 
 // # 2
+var storeBranchPositions = citiesBranches.glasgow;
+console.log(storeBranchPositions);
 // prints [ 'manager', 'assistant', 'interns' ]
-console.log()
+// console.log(Object.keys(storeBranches.mananger.assistant.nterns));
 
 // # 3
+var internPositions = citiesBranches.interns;
 // prints [ 'head_intern', 'intern' ]
-console.log()
+// console.log(Object.keys(storeBranches.nterns));
 
 // ONLY EDIT ABOVE THIS LINE

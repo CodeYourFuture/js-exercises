@@ -19,6 +19,7 @@ var pairs = pairsByIndex.map(function(indexes) {
   var student = students[indexes[0]];
   var mentor = mentors[indexes[1]];
   return [student, mentor];
+ 
 });
-
+process.exit(0);
 console.log(pairs);

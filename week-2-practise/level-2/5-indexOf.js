@@ -4,8 +4,10 @@
 // - return a new array with the first item matching `valueToRemove` removed
 // TIP: Use the .indexOf() method
 
-function remove(arr, valueToRemove) {
-  return; // complete this statement
+function remove(arr, index) {
+   arr.splice().indexOf(index, 1);
+  // complete this statement
+  return arr;
 }
 
 /* 
@@ -26,3 +28,12 @@ console.log(newNames);
   [1, 3]
   [Irina, Mozafar]
 */
+/*var my_array = ["baseball", "basketball", "tennis", "golf"];
+        var start_index = 1
+        var number_of_elements_to_remove = 2;
+        var removed_elements = my_array.splice(start_index, number_of_elements_to_remove, "boxing", "bowling", "volleyball");
+        console.log(removed_elements);
+        //["tennis", "golf"]
+        console.log(my_array);
+        //["baseball", "boxing", "bowling", "volleyball", "golf"];*/
+    

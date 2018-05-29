@@ -20,11 +20,11 @@ var highScores = {
 
 // ONLY EDIT BELOW HERE
 
-var capitalCitiesKeys = ;
-var highScoresKeys;
+var capitalCitiesKeys =Object.keys(capitalCities) ;
+var highScoresKeys=Object.keys(highScores);
 
 // ONLY EDIT ABOVE HERE
-
+// console.log(Object.keys(footballClubs));
 console.log(capitalCitiesKeys);
 // prints [ 'scotland', 'kenya', 'australia', 'canada' ]
 

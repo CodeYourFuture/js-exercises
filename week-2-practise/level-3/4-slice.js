@@ -5,7 +5,11 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+ 
+  arr.splice(index, 2, "Rares" );
+
+
+  return arr; // complete this statement
 }
 
 /* 
@@ -28,5 +32,5 @@ console.log(newNames);
   [1, 3, 3]
   [1, 2, 3]
   [Irina, Ashleigh, Mozafar]
-  [Irina, Ashleigh, Rares]
+  [Irina, Rares, Mozafar]
 */

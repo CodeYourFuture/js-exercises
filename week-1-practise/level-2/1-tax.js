@@ -5,10 +5,14 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(price) {
+   
+    return 0.2*price;
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
+// done
 
 var product = "The life and times of Mozafar Haider";
 var price = 12.5;

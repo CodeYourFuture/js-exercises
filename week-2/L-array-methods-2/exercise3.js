@@ -4,10 +4,12 @@
   Complete the function below to check if a country is in the UK
 */
 
-var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
+var isukNation = ["Scotland", "Wales", "England", "Northern Ireland"];
+var country;
 
-function isInUK(country) {
-  return; // complete this statement
+function isInUk(country) {
+  return isukNation.includes(country);
+  // complete this statement
 }
 
 /* 
