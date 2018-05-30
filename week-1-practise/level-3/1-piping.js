@@ -10,9 +10,9 @@
   As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
 */
 
-var startingValue = 5 * 2 + 10;
+var startingValue = 5;
 {
-  result = startingValue;
+var result = format(add(multiply(2, startingValue), 10));
 }
 
 /* DO NOT EDIT BELOW THIS LINE */

@@ -5,8 +5,8 @@
 
 */
 
-function isEmpty(numbers) {
-  return isEmpty.length; // complete this statement
+function isEmpty(arr) {
+  return arr.length == 0; // complete this statement
 }
 
 /* 

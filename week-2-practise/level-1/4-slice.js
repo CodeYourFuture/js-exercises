@@ -2,7 +2,7 @@
 // - returns the first 5 items from a provided array
 
 function first5(numbers) {
-  return (tirst5Numbers = numbers.slice(0, 6));
+  return (first5Numbers = numbers.slice(0, 5));
 }
 /* 
   DO NOT EDIT BELOW THIS LINE

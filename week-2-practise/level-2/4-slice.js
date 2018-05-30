@@ -4,20 +4,23 @@
 // - return a new array with the item removed
 // - remove the item at the specified index
 
+
 function remove(arr, index) {
-  return (newNumbers = numbers.slice(2)); // complete this statement
-}
-function remove(arr, index) {
-  return (newNames = names.slice(1));
-}
+  return arr.slice(0, index).concat(arr.slice(index + 1))}; // complete this statement
+// } 
+// function remove(arr, index) {
+  // return (newNames = names.slice(1));
+// }
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-var numbers = [1, 2, 3];
+var numbers = [1, 3, 3];
+var numbers1 = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = remove(numbers, 0);
+var newNumbers = remove(numbers, 2);
+
 var newNames = remove(names, 1);
 
 console.log(newNumbers);

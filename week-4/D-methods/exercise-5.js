@@ -17,10 +17,10 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
+     this.insertedAmount = this.insertedAmount + 3.40;
     },
     getCoffee: function(coffee) {
-
+       return this.prices.cappuccino;
     }
 };
 

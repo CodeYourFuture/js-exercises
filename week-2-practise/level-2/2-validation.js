@@ -5,13 +5,18 @@
 // Tip: write other small functions for each requirement
 var num = 10;
 function validate(num) {
-  return typeof num;
+  return isNumber(num) && isPositive(num) && isLessOrEqual100(num);
 }
-function validate(num) {
-  return typeof num;
+function isNumber(num) {
+ 
+    return typeof num ==="number";
 }
-function validate(num) {
-  return false;
+
+function isPositive(num) {
+  return num >= 0;
+}
+function isLessOrEqual100(num){
+  return num <=100;
 }
 /* 
   DO NOT EDIT BELOW THIS LINE

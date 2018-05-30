@@ -8,10 +8,10 @@
 */
 
 function convertToUSD(price) {
-  return price * 1.4;
+  return price * 1.4 + (price *.01 /100);
 }
 function convertToBRL(price) {
-  return price * 5 + price * 5 / 100;
+  return price * 5 + (price * .01 / 100);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */

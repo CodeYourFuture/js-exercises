@@ -1,7 +1,7 @@
 function createGreeting(name) {
   // Write your function here
-  return "Hello, my name is" + name;
+  return name = "brook";
 }
-var greeting = createGreeting("brook");
+var greeting = createGreeting();
 
-console.log(greeting);
+console.log("Hello, my name is " + greeting);
