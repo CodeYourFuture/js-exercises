@@ -7,19 +7,40 @@ drinking some of it, and emptying it.
 
 We made a start on this for you here: 
 */
+/*var athlete = {
+    name: 'Usain Bolt',
+    goldMedals: 25,
+    winNewMedal: function() {
+        this.goldMedals = this.goldMedals + 1;
+    }
+};
+
+athlete.winNewMedal();
+console.log(athelete.goldMedals);
+};
+*/
 
 var bottle = {
 	volume: 0,
 	fill: function(){
-	 	// calling this function should make you bottles volume = 100; 
+		this.volume = 100;
+		
+		// calling this function should make you bottles volume = 100; 
 	},
 	drink: function(){
+		this.volume = this.volume - 10;
 		// calling this function should decrease your bottles volume by 10;
 	},
-	empty: function(){
-		// this function should return true if your bottles volume = 0
+		empty: function(){
+		if (this.volume > 0){
+				return false;
+			}else {
+				return true;
+			}
+				;
+			// this function should return true if your bottles volume = 0
+		}
 	}
-}
 
 /*
 --TIP--
