@@ -1,0 +1,9 @@
+var words = ['Hello', 'Thanks', 'GoodBye'];
+
+function printWords(arr) {
+    arr.forEach(function(word){
+        console.log(word);
+
+    });
+}
+printWords(words);
