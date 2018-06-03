@@ -11,6 +11,14 @@
 */
 
 var startingValue = 5;
+<<<<<<< HEAD
+
+//var result = startingValue * 2 + 10;
+var result = format(add(multiply(5,2),10));
+=======
+var result = format(add(multiply(startingValue,2),10));
+>>>>>>> week2-than
+
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
