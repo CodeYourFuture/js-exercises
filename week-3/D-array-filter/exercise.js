@@ -5,12 +5,12 @@
   - Finish the statement on line 11 to produce an array with valid content
   - Do not edit any of the existing code
 */
-
+```
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
 var pairsByIndex = pairsByIndexRaw.filter(arrFiltering); // Complete this statement
 function arrFiltering(pair){
-  if (pair !== null && pair && pair !=="flase" && pair !== "whoops" && pair.length == 2){
+  if (pair !== null && pair !=="flase" && pair !== "whoops" && pair.length == 2){
     return pair;
   }
 }
@@ -25,3 +25,4 @@ var pairs = pairsByIndex.map(function(indexes) {
 });
 
 console.log(pairs);
+```

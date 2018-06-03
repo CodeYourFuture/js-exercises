@@ -21,13 +21,20 @@ var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
-function greetingMentors(name){
-    var  greeting = "hello";
-    message = greeting.toUpperCase()+" "+name.toUpperCase();
-    return message;
-}
-console.log(greetingMentors(mentor1));
-console.log(greetingMentors(mentor2));
-console.log(greetingMentors(mentor3));
-console.log(greetingMentors(mentor4));
-console.log(greetingMentors(mentor5));
+function logMentor(mentor){
+    var mentorUpperCase = mentor.toUpperCase();
+    console.log("Hello" + mentorUpperCase);
+//     var  greeting = "hello";
+//     message = greeting.toUpperCase()+" "+name.toUpperCase();
+//     return message;
+ }
+// console.log(greetingMentors(mentor1));
+// console.log(greetingMentors(mentor2));
+// console.log(greetingMentors(mentor3));
+// console.log(greetingMentors(mentor4));
+// console.log(greetingMentors(mentor5));
+logMentor(mentor1);
+logMentor(mentor2);
+logMentor(mentor3);
+logMentor(mentor4);
+logMentor(mentor5);

@@ -4,10 +4,10 @@
 var num = 10;
 var isBigEnough = true; // ONLY EDIT THIS LINE
 
-if (isBigEnough) {
-  console.log("num is bigger than or equal to 10");
+if (num >= 10) {
+ return isBigEnough = true;
 } else {
-  console.log("num is not big enough");
+  return isBigEnough = false;
 }
 
 /* 

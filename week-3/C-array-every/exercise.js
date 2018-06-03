@@ -1,7 +1,6 @@
 /*
    This program should check if the array `group` contains only students
 */
-
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 

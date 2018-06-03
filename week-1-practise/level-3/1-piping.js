@@ -30,7 +30,7 @@ var startingValue = 5;
 
 
 
-let result = format(add(multiply(2,5),10));
+let result = format(add(multiply(2,startingValue),10));
                
 
  multiply(5,2) | add(5,10) | format;

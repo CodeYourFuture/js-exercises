@@ -5,7 +5,7 @@
   - Add a check for null values, and if one exists, exit the program
   - Do not edit any of the existing code
 */
-
+```
 var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 
 // If there is a null value in the array exit the program with the error code
@@ -14,7 +14,7 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 function checkNull(pair) {
   if (pair == null) {
     console.log(pair);
-    //process.exit(1);
+    process.exit(1);
     
   }
  
@@ -35,3 +35,4 @@ var pairs = pairsByIndex.map(function(indexes) {
 });
 
 console.log(pairs);
+```

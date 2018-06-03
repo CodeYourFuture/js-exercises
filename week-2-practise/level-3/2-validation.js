@@ -18,7 +18,7 @@ function validate(num) {
 }
 function isNum(num){
   var res;
-  if (typeof num == 'number'){
+  if (typeof num === 'number'){
     res = true;
   } 
   else{

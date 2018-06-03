@@ -15,7 +15,7 @@ function validate(num) {
 }
 function isNum(num){
   var res;
-  if (typeof num == 'number'){
+  if (typeof num === 'number'){
     res = true;
   } 
   else{
@@ -24,26 +24,16 @@ function isNum(num){
   return res;
 }
 function isPositive(num){
-  var res;
-   if(num >= 0){
-      res = true;
-    } 
-    else{
-      res = false;
-    }
   
-  
-  return res;
+   return num >= 0;
+      
 }
+  
+  
+ 
 function isLessOrEqual100(num){
-  var res;
-  if (num <= 100){
-    res =true;
-  }
-  else{
-    res = false;
-  }
-  return res;
+   return num <= 100 ;
+  
 }
 //   
 /* 
