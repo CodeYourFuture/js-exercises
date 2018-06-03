@@ -12,8 +12,17 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
 
+
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+
+function isNull(number) {
+  if(number===null) {
+    return process.exit(1);
+  }
+}
+
+var isNullExsist = pairsByIndex.some(isNull);
 
 var pairs = pairsByIndex.map(function(indexes) {
   var student = students[indexes[0]];
@@ -21,5 +30,4 @@ var pairs = pairsByIndex.map(function(indexes) {
   return [student, mentor];
  
 });
-process.exit(0);
 console.log(pairs);

@@ -40,13 +40,36 @@ WRITE YOUR CODE BELOW
 */
 
 
-var destinationNamesWithin500Kms = // Complete here
+var destinationNamesWithin500Kms = travelDestinations.filter(function(distance){
+    if(distance.distanceKms<500){
+        return distance.destinationName;
+    }
+ }).map(function(distance){
+    return distance.destinationName; });// Complete here
 
-var destinationNameReachableByFerry = // Complete here
+var destinationNameReachableByFerry = travelDestinations
+.filter(function(byFerry){
+    for(var i=0; i<byFerry.transportations.length; i++){
+    if( byFerry.transportations[i] === "ferry"){
+        return byFerry.destinationName;
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+    }
+  }
 
+  }).map(function(byFerry){
+      return byFerry.destinationName; });// Complete here
 
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .filter(function(byTrain){
+      for(var i=0; i<byTrain.transportations.length; i++){
+      if(byTrain.distanceKms > 300 && byTrain.transportations[i] === "train"){
+          return byTrain.destinationName;
+
+      }
+    }
+
+    }).map(function(byTrain){
+        return byTrain.destinationName; });
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */

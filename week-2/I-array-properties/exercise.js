@@ -6,7 +6,7 @@
 */
 
 function isEmpty(arr) {
-  if(Array.isArray(arr)<0) {
+  if(Array.isArray(arr)<=0) {
     return true;
   }else{ return false;
 

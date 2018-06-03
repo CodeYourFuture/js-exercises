@@ -3,7 +3,7 @@
 
 
 function first5(numbers){
-  var first5=numbers.slice(1, 6);
+  return numbers.slice(0, 6);
 }
 /* 
 

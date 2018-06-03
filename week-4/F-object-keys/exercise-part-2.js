@@ -32,19 +32,28 @@ var storeBranches = {
 // ONLY EDIT BELOW THIS LINE
 
 // # 1
-var citiesBranches = storeBranches;// prints [ 'glasgow', 'edinburgh' ]
+// var mentorsNames =Object.keys(mentorsAges);
+// function toUpperCase(name) {
+//   return name.toUpperCase();
+// }
+// var mentorsNamedCapitalised= mentorsNames.map(toUpperCase);
+
+var citiesBranches = Object.keys(storeBranches);
+// prints [ 'glasgow', 'edinburgh' ]
 console.log(citiesBranches);
 
 
 // # 2
-var storeBranchPositions = citiesBranches.glasgow;
+
+
+var storeBranchPositions = Object.keys(storeBranches.glasgow);// prints [ 'manager', 'assistant', 'interns' ]
 console.log(storeBranchPositions);
+
 // prints [ 'manager', 'assistant', 'interns' ]
-// console.log(Object.keys(storeBranches.mananger.assistant.nterns));
 
 // # 3
-var internPositions = citiesBranches.interns;
+
 // prints [ 'head_intern', 'intern' ]
-// console.log(Object.keys(storeBranches.nterns));
+ console.log(Object.keys(storeBranches.glasgow.interns));
 
 // ONLY EDIT ABOVE THIS LINE
