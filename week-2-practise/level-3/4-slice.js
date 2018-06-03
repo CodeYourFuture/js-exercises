@@ -28,5 +28,5 @@ console.log(newNames);
   [1, 3, 3]
   [1, 2, 3]
   [Irina, Ashleigh, Mozafar]
-  [Irina, Rares, Mozafar]
+  [Irina, Ashleigh, Rares]
 */

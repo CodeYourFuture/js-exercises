@@ -1,0 +1,30 @@
+Merge branch 'master' of https://github.com/CodeYourFuture/js-exercises into week4
+
+Conflicts:
+	week-3/A-array-find/exercise.js
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch week4
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   week-2-practise/level-3/4-slice.js
+#	new file:   week-5/A-dom-manipulation/exercise.js
+#	modified:   week-5/A-dom-manipulation/index.html
+#	deleted:    week-5/A-dom-manipulation/js/main.js
+#	renamed:    week-5/A-fetch/exercise.js -> week-5/B-fetch/exercise.js
+#	renamed:    week-5/A-fetch/index.html -> week-5/B-fetch/index.html
+#	renamed:    week-5/B-remote-clipboard/exercise.js -> week-5/C-remote-clipboard/exercise.js
+#	renamed:    week-5/B-remote-clipboard/index.html -> week-5/C-remote-clipboard/index.html
+#	renamed:    week-5/C-webchat/exercise-1.js -> week-5/D-webchat/exercise-1.js
+#	renamed:    week-5/C-webchat/exercise-2.js -> week-5/D-webchat/exercise-2.js
+#	renamed:    week-5/C-webchat/exercise-3.js -> week-5/D-webchat/exercise-3.js
+#	renamed:    week-5/C-webchat/index.html -> week-5/D-webchat/index.html
+#
