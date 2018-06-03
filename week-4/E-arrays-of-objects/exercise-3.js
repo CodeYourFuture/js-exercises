@@ -68,27 +68,21 @@ var restaurantFinderApplication = {
           return restaurant.name;
         }
       })
-      .map(restaurant => 
-         restaurant.name
-      );
+      .map(restaurant => restaurant.name);
     return restaurantsAvailableFor5People;
     // Complete here
   },
   findRestaurantServingDish: function(dishName) {
     restaurantsServingSalad = restaurants
       .filter(restaurant => restaurant.menu.includes(dishName))
-      .map(restaurant => 
-         restaurant.name
-      );
+      .map(restaurant => restaurant.name);
     return restaurantsServingSalad;
     // Complete here
   },
   countNumberOfRestaurantsInArea: function(area) {
     numberOfRestaurantsInCityCentre = restaurants
       .filter(restaurant => restaurant.address.area.includes(area))
-      .map(restaurant => 
-         restaurant.name
-      );
+      .map(restaurant => restaurant.name);
     return numberOfRestaurantsInCityCentre.length;
     // Complete here
   }
