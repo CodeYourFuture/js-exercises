@@ -35,3 +35,18 @@ When you open index.html in your browser, it should display the existing message
 
 
 // Write your code here
+const message_list = document.querySelector('#message-list');
+fetch('https://codeyourfuture.herokuapp.com/api/messages').then(function (response) {
+    return response.json();
+}).then(function (msgs) {
+    const len = msgs.length - 1;
+    for (let i = 0; i < 5; i++){
+        if (msgs[len - i].content) {
+            message_list.innerHTML += `<p>${msgs[len - i ].content} : ${msgs[len - i].datetime}</p>`;
+        }
+        
+    }
+    // msgs.map(msg => {
+    //     message_list.innerHTML += `<p>${msg.content} : ${msg.datetime}</p>`;
+    // }); 
+});
