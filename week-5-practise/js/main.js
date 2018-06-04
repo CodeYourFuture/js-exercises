@@ -37,7 +37,6 @@ const jumbotron = document.querySelector(".jumbotron");
 const donateBike = document.querySelector("#donateBike");
 const volunteer = document.querySelector("#volunteer");
 btns.blue.ele.addEventListener('click', () => {
-    console.log(btns.blue.donateBike);
     /*
     When clicking blue it should change: - Jumbotron background color to
      #588fbd - 
@@ -46,14 +45,12 @@ btns.blue.ele.addEventListener('click', () => {
     */  
     jumbotron.style.backgroundColor = btns.blue.jumbotron;
     donateBike.style.backgroundColor = btns.blue.donateBike;
-    console.log(btns.blue.donateBike);
     volunteer.style.backgroundColor = btns.blue.volunteer.bg;
     volunteer.style.color = btns.blue.volunteer.col;
 
 });
 
 btns.orange.ele.addEventListener('click', () => {
-    console.log(btns.orange.donateBike);
     /*
    When clicking orange it should change: 
    - Jumbotron background color to #f0ad4e 
