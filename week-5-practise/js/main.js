@@ -65,7 +65,6 @@ btns.orange.ele.addEventListener('click', () => {
 });
 
 btns.green.ele.addEventListener('click', () => {
-    console.log(btns.green.donateBike);
     /*
     When clicking green it should change: 
     - Jumbotron background color to #87ca8a 
@@ -76,4 +75,40 @@ btns.green.ele.addEventListener('click', () => {
     donateBike.style.backgroundColor = btns.green.donateBike.bg;
     volunteer.style.backgroundColor = btns.green.volunteer.bg;
 
+});
+
+// part two solutions
+
+const formElement = document.querySelector('form');
+const [emailEle, nameEle, descriptionEle, submitEle] = formElement.elements;
+submitEle.addEventListener('click', function(e){
+    e.preventDefault();
+    let regex = /@/;
+    let emailEntered = emailEle.value.trim();
+    const emailMatched = emailEntered.length > 0 && regex.test(emailEntered);
+    regex = /^[a-z]/i;
+    let name = nameEle.value.trim();
+    const nameValid = name.length > 0 && regex.test(name);
+    let description = descriptionEle.value.trim();
+    const descriptionValid = description.length > 0;
+    if (emailMatched && nameValid && descriptionValid){
+        emailEle.value = "";
+        nameEle.value = "";
+        descriptionEle.value = "";
+        alert("Thank you, and your details have been successfully submited!");
+
+    }else {
+        if (!emailMatched){
+            emailEle.style.backgroundColor = 'red';
+            emailEle.style.color = "white";
+        }
+        if (!nameValid){
+            nameEle.style.backgroundColor = "red";
+            nameEle.style.color = "white";
+        }
+        if (!descriptionValid){
+            descriptionEle.style.backgroundColor = "red";
+            descriptionEle.style.color = "white";
+        }
+    }
 });
