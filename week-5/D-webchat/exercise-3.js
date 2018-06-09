@@ -34,6 +34,16 @@ For example, print your name every 2 seconds.
 // Write your code here
 
 
+
+   
+setInterval(myCallBack,2000);
+function myCallBack(){
+    console.log("my name is hasanein");
+}
+
+    
+
+
 /*
 ========
 Task 4

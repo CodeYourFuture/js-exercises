@@ -27,3 +27,38 @@ on the submit button. Then check the following:
 
 
 // Write your code here
+
+var inputBox = document.querySelector("#message-input")
+var submitButton = document.querySelector("#submit")
+
+submitButton.addEventListener("click", function(){
+ 
+  var postRequestBody = {
+  body: JSON.stringify({content:inputBox.value}),
+  method: "POST",
+  headers: {
+     'content-type': 'application/json'
+  }
+};
+console.log(inputBox.value);
+fetch("https://codeyourfuture.herokuapp.com/api/messages", postRequestBody).then(function(response){
+    inputBox.value = '';
+    const message_list = document.querySelector('#message-list');
+    //setInterval(request,2000);
+//function request(){
+fetch('https://codeyourfuture.herokuapp.com/api/messages').then(function (response) {
+    return response.json();
+}).then(function (msgs) {
+     const len = msgs.length-1;
+    for (let i = 0; i < 2; i++){
+        message_list.innerHTML += `<p>${msgs[len-i].content} : ${msgs[len-i].datetime}</p>`;
+    }
+    // msgs.map(msg => {
+    //     message_list.innerHTML += `<p>${msg.content} : ${msg.datetime}</p>`;
+    // }); 
+});
+//}
+
+});
+})
+
