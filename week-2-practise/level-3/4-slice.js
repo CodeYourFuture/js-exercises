@@ -5,7 +5,7 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return arr.map(function(item, ind) {
+  return arr.map(function (item, ind) {
     if (index === ind) {
       return (item = value);
     } else {
@@ -33,10 +33,5 @@ console.log(newNames);
   [1, 3, 3]
   [1, 2, 3]
   [Irina, Ashleigh, Mozafar]
-<<<<<<< HEAD
-  [Irina, Rares, Mozafar] 
-  
-=======
   [Irina, Ashleigh, Rares]
->>>>>>> upstream/master
 */
