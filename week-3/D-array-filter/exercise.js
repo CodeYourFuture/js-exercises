@@ -7,9 +7,28 @@
 */
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+var arr=[];
+function filteredOut(value) {
+  //for(var i = 0; i < arr.length; i++) {
+  
+    
+  if( value!==null || value!==false || value!==" " && arr.length>2) {
+     return value;
+  }
+}
+//}
+// arr = arr.filter(isEligible);
+//   return arr;
+// }
 
-var pairsByIndex; // Complete this statement
+// function isEligible(value) {
+//   if(value !== false || value !== null || value !== 0 || value !== "") {
+//     return value;
+//   }
+var pairsByIndex = pairsByIndexRaw.filter(filteredOut);
 
+// Complete this statement
+console.log(pairsByIndex);
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
@@ -20,3 +39,4 @@ var pairs = pairsByIndex.map(function(indexes) {
 });
 
 console.log(pairs);
+ 

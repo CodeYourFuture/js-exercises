@@ -14,3 +14,26 @@ Make sure you use words like:
 - etc.
 
 */
+
+var colleagues={
+    collesgue1:{
+        name:"Raj",
+        age: 25,
+        country: "Sirlanka"
+    },
+    colleague2:{
+        name: "Brook",
+        age: "unknown",
+        country: "Eithopia"
+    }
+    
+
+};
+
+var mentor={
+    name: "will",
+    isHeAmerican: true,
+    age:30,
+
+
+};

@@ -9,6 +9,8 @@ var person = {
     age: 25
 };
 
+person.greet= "hello";
+
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

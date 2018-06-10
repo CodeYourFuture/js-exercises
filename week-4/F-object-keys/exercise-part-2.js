@@ -29,20 +29,31 @@ var storeBranches = {
     }
   }
 }
-
-
 // ONLY EDIT BELOW THIS LINE
 
 // # 1
+// var mentorsNames =Object.keys(mentorsAges);
+// function toUpperCase(name) {
+//   return name.toUpperCase();
+// }
+// var mentorsNamedCapitalised= mentorsNames.map(toUpperCase);
+
+var citiesBranches = Object.keys(storeBranches);
 // prints [ 'glasgow', 'edinburgh' ]
-console.log()
+console.log(citiesBranches);
+
 
 // # 2
+
+
+var storeBranchPositions = Object.keys(storeBranches.glasgow);// prints [ 'manager', 'assistant', 'interns' ]
+console.log(storeBranchPositions);
+
 // prints [ 'manager', 'assistant', 'interns' ]
-console.log()
 
 // # 3
+
 // prints [ 'head_intern', 'intern' ]
-console.log()
+ console.log(Object.keys(storeBranches.glasgow.interns));
 
 // ONLY EDIT ABOVE THIS LINE

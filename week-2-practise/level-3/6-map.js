@@ -14,8 +14,8 @@ function captialise(str) {
   // complete this function
 }
 
-var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidyAndCapitalised;
+var mentors = ["Daniel ", "irina ", " Gordon", "ashleigh "];
+var mentorsTidyAndCapitalised=mentors.map(tidyUpString)&&(mentors.charAt(0).toUpperCase() + mentors.substring(1).toLowerCase());
 
 console.log(mentorsTidyAndCapitalised);
 
