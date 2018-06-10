@@ -33,6 +33,10 @@ console.log(newNames);
   [1, 3, 3]
   [1, 2, 3]
   [Irina, Ashleigh, Mozafar]
+<<<<<<< HEAD
   [Irina, Rares, Mozafar] 
   
+=======
+  [Irina, Ashleigh, Rares]
+>>>>>>> upstream/master
 */
