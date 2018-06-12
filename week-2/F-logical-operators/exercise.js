@@ -11,6 +11,10 @@ var cssLevel = 4;
 
 // Finish the statement to check whether HTML, CSS knowledge are above 5
 // (hint: use the comparison operator from before)
+functions satisfiesRequirements(num) {
+  if (num>5) {return true}
+  return false 
+}
 var htmlLevelAbove5;
 var cssLevelAbove5;
 

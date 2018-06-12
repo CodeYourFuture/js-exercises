@@ -1,5 +1,7 @@
 // Write your function here
-
-var greeting = createGreeting("Daniel");
-
-console.log(greeting);
+function greeting (fullGreeting) {
+    return (name + hello);
+}
+var name = ('Lesley')
+var hello = ('hello')
+console.log (fullGreeting)
