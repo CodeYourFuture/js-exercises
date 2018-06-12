@@ -60,16 +60,38 @@ var restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
-    },
-    findRestaurantServingDish: function(dishName) {
-        // Complete here
-    },
-    countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
-    }
-};
-
+            restaurantsAvailableFor5People = restaurants
+              .filter(restaurant => {
+                if (
+                  restaurant.totalSeats - restaurant.numberOfCustomers >=
+                  numberOfPeople
+                ) {
+                  return restaurant.name;
+                }
+              })
+              .map(restaurant => 
+                 restaurant.name
+              );
+            return restaurantsAvailableFor5People; // Complete here
+          },
+          findRestaurantServingDish: function(dishName) {
+            restaurantsServingSalad = restaurants
+              .filter(restaurant => restaurant.menu.includes(dishName))
+              .map(restaurant => 
+                 restaurant.name
+              );
+            return restaurantsServingSalad;// Complete here
+          },
+          countNumberOfRestaurantsInArea: function(area) {
+            numberOfRestaurantsInCityCentre = restaurants
+             .filter(restaurant => restaurant.address.area.includes(area))
+             .map(restaurant => 
+                 restaurant.name
+              );
+            return numberOfRestaurantsInCityCentre.length;// Complete here
+         }
+    };
+         
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
