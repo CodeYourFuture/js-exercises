@@ -6,7 +6,7 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
 var writers = [
   {
@@ -36,9 +36,39 @@ var writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  },
+  }
 ];
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+function greet(arr) {
+  for (var i = 0; i < writers.length; i++) {
+    if (arr[i].alive === true) {
+      console.log(
+        "Hi, my name is " +
+          arr[i].firstName +
+          " " +
+          arr[i].lastName +
+          ". I am " +
+          arr[i].age +
+          " years old, and work as a " +
+          arr[i].occupation +
+          "."
+      );
+    }
+  }
+}
+// greet(writers);
+// writers.forEach(function(writer) {
+//   if (writer.alive == true) {
+//     console.log(`Hi my name is ${writer.firstName}`);
+//   }
+// });
+var livingWriters = writers
+  .filter(function(writer) {
+    return writer.alive;
+  })
+  .map(function(writer) {
+    console.log(`Hi my name is ${writer.firstName}`);
+  });

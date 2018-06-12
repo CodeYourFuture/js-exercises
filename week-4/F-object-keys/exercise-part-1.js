@@ -15,9 +15,17 @@ var mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
-
-var mentorsNamedCapitalised = ;
+var mentorsNames = Object.keys(mentorsAges);
+// console.log(mentorsNames);
+var arr = [];
+var mentorsNamedCapitalised = arr;
+mentorsNames.map((element) =>{
+  for (let i = 0; i < mentorsNames.length; i++) {
+    element = element.toUpperCase();
+  }
+  arr.push(element.toUpperCase());
+  // arr.join(" ");
+});
 
 // ONLY EDIT ABOVE THIS LINE
 

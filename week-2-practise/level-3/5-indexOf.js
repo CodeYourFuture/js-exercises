@@ -6,24 +6,26 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
-  return; // complete this statement
+  //arr.splice(arr.indexOf("valueToReplace"),1);
+  arr.splice(arr.lastIndexOf(valueToReplace),1,newValue)
+  return arr; // complete this statement
 }
 
-/* 
+/*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = replace(arr, 3, 2);
-var newNames = replace(arr, "Ashleigh", "Rares");
+var newNumbers = replace(numbers, 3, 2);
+var newNames = replace(names, "Ashleigh", "Rares");
 
 console.log(numbers);
 console.log(newNumbers);
 console.log(names);
 console.log(newNames);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [1, 3, 3]
