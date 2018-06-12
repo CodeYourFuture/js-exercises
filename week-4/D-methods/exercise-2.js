@@ -7,8 +7,12 @@ Hint: use 'this' keyword to access the name property.
 
 var person = {
     name: "Alice",
-    age: 25
+    age: 25,
+    sayName: function() {
+        return "my name is  "+ this.name;
+    }
 };
+
 
 
 /*

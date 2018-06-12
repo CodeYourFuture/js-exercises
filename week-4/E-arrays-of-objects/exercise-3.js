@@ -59,16 +59,43 @@ var restaurantFinderApplication = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
+
     findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
+        var result = restaurants.filter(
+            (restaurant) =>
+            restaurant.totalSeats - restaurant.numberOfCustomers > numberOfPeople);
+
+        result = result.map((restaurants) => restaurants.name);
+       
+        return result; // Complete here
     },
     findRestaurantServingDish: function(dishName) {
-        // Complete here
+        var servingDish = restaurants.filter((restaurant) =>
+        restaurant.menu.includes(dishName));
+        servingDish = servingDish.map((restaurants) => restaurants.name);
+        return servingDish;
+
+        ; // Complete here
     },
+    
     countNumberOfRestaurantsInArea: function(area) {
+        numberOfRestaurantsInCityCentre = restaurants
+          .filter(restaurant => restaurant.address.area.includes(area))
+          .map(restaurant => 
+             restaurant.name
+          );
+        return numberOfRestaurantsInCityCentre.length;
         // Complete here
-    }
-};
+      }
+    };
+        
+
+
+
+        
+
+    
+
 
 
 /*

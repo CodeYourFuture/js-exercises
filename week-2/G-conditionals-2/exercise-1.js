@@ -7,8 +7,26 @@
 */
 
 function negativeOrPositive(number) {
+<<<<<<< HEAD
+ if (number < 0) {
+  var negative = "negitive";
+   return negative;
+ }else if (number >= 0) {
+   var  positive = "positive";
+  return positive;
+  }
+  }
+=======
+  if (number < 0 ) {
+    var negative = 'negative';
+    return 'negative';
+  }else if (number >= 0) {
+    var positive ='positive';
+      return 'positive';
+    }
+  }
 
-}
+>>>>>>> week2-than
 
 /* 
   DO NOT EDIT BELOW THIS LINE

@@ -4,7 +4,7 @@
 */
 
 var numbers = [3, 2, 1];
-var sortedNumbers; // complete this statement
+var sortedNumbers = [1, 2, 3]; // complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE

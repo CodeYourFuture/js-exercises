@@ -10,6 +10,9 @@ var kitten = {
 
 // YOUR CODE GOES BELOW HERE
 
+Object.keys(kitten).map(item => {
+    console.log(kitten[item]);
+  });
 
 
 
