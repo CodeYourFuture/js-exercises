@@ -11,7 +11,8 @@
   Insert the result of promise1 into the #exercise1 element. Hint: .then()
 */
 function exercise1() {
-  var promise1 = resolvedPromise()
+  var promise1 = resolvedPromise();
+  promise1.then( result => document.querySelector('#exercise1').textContent = result);
 }
 
 /*
@@ -21,7 +22,8 @@ function exercise1() {
   Insert the result of promise2 into the #exercise2 element. Hint: .catch()
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+  var promise2 = rejectedPromise();
+  promise2.catch(result => document.querySelector('#exercise2').textContent = result);
 }
 
 /*
@@ -32,7 +34,8 @@ function exercise2() {
   takes longer than the others to finish
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
+  promise3.then(result => document.querySelector('#exercise3').textContent = result);
 }
 
 /*
@@ -45,6 +48,9 @@ function exercise3() {
 */
 function exercise4() {
   var promise4 = concatPromise()
+  promise4
+  .then(result => result + 'RAJ')
+  .then( conResult => document.querySelector('#exercise4').textContent = conResult);
 }
 
 /*
@@ -57,11 +63,12 @@ function exercise4() {
   Take the result of your promise and insert the it into the #exercise5
   element
 */
-
-function exercise5() {
+const exe5Promise = async () => "Hello Promises!";
+ function exercise5() {
   // Write your implementation here
+   exe5Promise().then(result => 
+    document.querySelector("#exercise5").textContent = result);
 }
-
 /*
   EXERCISE 6 (Stretch Goal)
   =======
@@ -72,8 +79,13 @@ function exercise5() {
   Take the result of your promise and insert the it into the #exercise6
   element
 */
+const exe6Promise = async () => { 
+  throw new Error ("Something went wrong!"); // this will return a promise!
+};
 function exercise6() {
   // Write your implementation here
+  exe6Promise().catch((result) =>
+    document.querySelector("#exercise6").textContent = result);
 }
 
 
