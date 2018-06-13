@@ -4,10 +4,16 @@
   Using .find() (and any other array methods necessary), find the lowest pass score
 */
 
+
+
 var testScores = [90, 50, 100, 25, 81, 66, 80];
+var sortedScores = testScores.sort(function(a, b){
+   return a - b;
+  console.log(sortedScores);
+});
+=======
 var lowestPassScore = findLowestPassScore(testScores);
 
-console.log(lowestPassScore);
-
+ 
 /* EXPECTED OUTPUT */
 // 66

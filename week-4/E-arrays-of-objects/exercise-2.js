@@ -16,7 +16,7 @@ var destination1 = {
 
 var destination2 = {
     destinationName: "London",
-    distanceKms: 650,
+distanceKms: 610,
     transportations: ["car", "bus", "train"]
 };
 
@@ -40,9 +40,12 @@ WRITE YOUR CODE BELOW
 */
 
 
-var destinationNamesWithin500Kms = // Complete here
+var destinationNamesWithin500Kms = travelDestinations.filter(destination => destination.distanceKms<=500)
+    .map((travelDestination => travelDestination.destinationName));// Complete here
 
-var destinationNameReachableByFerry = // Complete here
+var destinationNameReachableByFerry = travelDestinations.filter( 
+travelDestination => travelDestination.transportations.find('ferry'))
+.map((travelDestination => travelDestination.destinationName)); // Complete here
 
 var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 

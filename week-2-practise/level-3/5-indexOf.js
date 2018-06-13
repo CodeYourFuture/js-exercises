@@ -6,7 +6,10 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
-  return; // complete this statement
+  var index = arr.indexOf(valueToReplace);
+  return index >= 0 ? arr
+        .slice(0, index)
+        .concat(newValue, arr.slice(index + 1)) : "Value is not found!"; // complete this statement
 }
 
 /* 

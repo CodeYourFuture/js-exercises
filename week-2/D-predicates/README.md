@@ -1,3 +1,4 @@
+
 **Predicate** is a fancy word for a function that returns a boolean value.
 
 These functions are very useful because they let you test if a value satisifies certain requirements.
