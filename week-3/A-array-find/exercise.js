@@ -11,10 +11,9 @@ var sortedScores = testScores.sort(function(a, b){
    return a - b;
   console.log(sortedScores);
 });
+=======
+var lowestPassScore = findLowestPassScore(testScores);
 
-var lowestPassScore =testScores.find(function(score){
-     return score > 60;
-});
-console.log(lowestPassScore);
+ 
 /* EXPECTED OUTPUT */
 // 66
