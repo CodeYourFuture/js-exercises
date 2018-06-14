@@ -25,6 +25,7 @@ HTTP Verb: GET
 API: https://codeyourfuture.herokuapp.com/api/messages
 
 
+
 ===============
 Expected result
 ===============
@@ -32,6 +33,17 @@ Expected result
 When you open index.html in your browser, it should display the existing messages on the page.
 
 */
+fetch("https://codeyourfuture.herokuapp.com/api/messages")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(chat) {
+    //console.log(chat);
 
+    var chatting = document.querySelector("#message-list");
+    for (var i = 0; i < chat.length; i++) {
+      chatting.innerHTML += "<p>" + chat[i].content + "</p>";
+    }
+  });
 
 // Write your code here
