@@ -76,6 +76,10 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
+  var promise5 = Promise.resolve("Hello Promises");
+  promise5.then(value => {
+    document.body.querySelector("#exercise5").innerHTML = value;
+  });
 }
 
 /*
@@ -90,6 +94,10 @@ function exercise5() {
 */
 function exercise6() {
   // Write your implementation here
+  var promise6 = Promise.reject("Something went wrong!");
+  promise6.catch(value => {
+    document.body.querySelector("#exercise6").innerHTML = value;
+  });
 }
 
 //
