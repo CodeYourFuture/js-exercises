@@ -33,5 +33,16 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
+
+fetch("https://codeyourfuture.herokuapp.com/api/messages")
+    .then(response => response.json())
+    .then(allMessages => {
+        let showMessage = document.getElementById("message-list")
+
+        allMessages.forEach(message => {
+            // console.log(message.content)
+            showMessage.innerText = message.content;
+        })
+    })
+
