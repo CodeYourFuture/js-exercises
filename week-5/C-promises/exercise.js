@@ -11,8 +11,15 @@
   Insert the result of promise1 into the #exercise1 element. Hint: .then()
 */
 function exercise1() {
-  var promise1 = resolvedPromise()
-}
+  var promise1 = resolvedPromise();
+  promise1.then(function (){
+    var promise = document.querySelector('#exercise1');
+    promise.innerText = "promise1";
+
+  }) 
+    
+  };
+
 
 /*
   EXERCISE 2
@@ -21,7 +28,11 @@ function exercise1() {
   Insert the result of promise2 into the #exercise2 element. Hint: .catch()
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+  var promise2 = rejectedPromise();
+  promise2.catch(function () {
+    var insertPromise2 = document.querySelector('#exercise2');
+    insertPromise2.innerText = 'promise2';
+  })
 }
 
 /*
@@ -32,7 +43,12 @@ function exercise2() {
   takes longer than the others to finish
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
+
+  promise3.then(function() {
+    var resultPromise3 = document.querySelector('#exercise3');
+    resultPromise3.innerText = 'promise3'
+  })
 }
 
 /*
@@ -44,7 +60,14 @@ function exercise3() {
   of your promise and insert it into the #exercise4 element
 */
 function exercise4() {
-  var promise4 = concatPromise()
+  var promise4 = concatPromise();
+  
+    promise4.then(result => result + 'Than');
+    promise4.then(newResult => document.querySelector('#exercise4').textContent = newResult).concat(result);
+      
+    
+
+  
 }
 
 /*
@@ -59,6 +82,13 @@ function exercise4() {
 */
 
 function exercise5() {
+  let promise5 = exercisePro();
+  promise5.then(() => {
+     let thePromise = document.querySelector('#exercise5');
+     thePromise.innerText = 'Hello Promise!';
+  })
+
+
   // Write your implementation here
 }
 
@@ -73,6 +103,13 @@ function exercise5() {
   element
 */
 function exercise6() {
+  let promise6 = newPromise();
+  promise6.catch(() => {
+    let resultPromise = document.querySelector('#exercise6');
+    resultPromise.innerText = 'Something went wrong';
+  })
+
+  
   // Write your implementation here
 }
 

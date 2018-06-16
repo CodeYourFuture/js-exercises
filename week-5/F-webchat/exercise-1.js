@@ -35,3 +35,46 @@ When you open index.html in your browser, it should display the existing message
 
 
 // Write your code here
+var requestURL = "https://codeyourfuture.herokuapp.com/api/messages";
+
+ var xhttp = new XMLHttpRequest();
+ xhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+     fetch("https://codeyourfuture.herokuapp.com/api/messages")
+            .then(function(response) {
+         return response.json();
+       })
+      .then(function(chats) {
+        console.log(chats);
+        var displayMessages = document.querySelector("#message-list");
+         for (var i = 0; i < chats.length; i++) {
+           displayMessages.innerHTML += "<p>" + chats[i].content + "</p>";
+         }
+       });
+  }
+ };
+ xhttp.open("GET", requestURL);
+ xhttp.send();
+
+ var request = new XMLHttpRequest();
+ request.open("GET", requestURL);
+ request.responseType = "json";
+ request.send();
+ request.onload = function() {
+   var chatContent = request.response;
+  populateHeader(chatContent);
+   showHeroes(chatContent);
+ };
+ fetch("https://codeyourfuture.herokuapp.com/api/messages")
+  .then(function(response) {
+    return response.json();
+   })
+   .then(function(chats) {
+    console.log(chats);
+   var displayMessages = document.querySelector("#message-list");
+    for (var i = 0; i < chats.length; i++) {
+               displayMessages.innerHTML += "<p>" + chats[i].content + "</p>";
+     }
+   });
+
+

@@ -27,3 +27,32 @@ on the submit button. Then check the following:
 
 
 // Write your code here
+
+var inputBox = document.querySelector("#message-input");
+ var submitButton = document.querySelector("#submit");
+ submitButton.addEventListener("click", function() {
+   var postRequestBody = {
+    body: JSON.stringify({ title: inputBox.value }),
+     method: "POST",
+    Headers: {
+       "content-type": "application/json"
+    }
+   };
+   fetch("https://codeyourfuture.herokuapp.com/api/messages");
+
+ });
+ var inputBox = document.querySelector("#message-input");
+ var submitButton = document.querySelector("#submit");
+
+ submitButton.addEventListener("click", function() {
+  var postRequestBody = {
+    body: JSON.stringify({ content: inputBox.value }),
+    method: "POST",
+     headers: {
+     "content-type": "application/json"
+    }
+  };
+  console.log(inputBox.value);
+   console.log(postRequestBody);
+   fetch("https://codeyourfuture.herokuapp.com/api/messages", postRequestBody);
+ });
