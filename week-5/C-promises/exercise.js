@@ -10,8 +10,13 @@
 
   Insert the result of promise1 into the #exercise1 element. Hint: .then()
 */
+
+var pEx1 = document.querySelector("#exercise1")
 function exercise1() {
   var promise1 = resolvedPromise()
+    .then(function (resolvedPromise) {
+      pEx1.innerText = resolvedPromise;
+    })
 }
 
 /*
@@ -19,9 +24,14 @@ function exercise1() {
   =======
 
   Insert the result of promise2 into the #exercise2 element. Hint: .catch()
-*/
+*/var pEx2 = document.querySelector("#exercise2");
+
 function exercise2() {
   var promise2 = rejectedPromise()
+    .catch(function (rejectedPromise) {
+      pEx2.innerText = rejectedPromise;
+
+    })
 }
 
 /*
@@ -31,8 +41,15 @@ function exercise2() {
   Insert the result of promise3 into the #exercise3 element. Notice how it
   takes longer than the others to finish
 */
+
+var pEx3 = document.querySelector("#exercise3");
 function exercise3() {
   var promise3 = delayedPromise()
+    .then(function (delayedPromise) {
+
+      pEx3.innerText = delayedPromise;
+    })
+
 }
 
 /*
@@ -43,8 +60,14 @@ function exercise3() {
   Then return your concatenated string as a promise. Finally insert the result
   of your promise and insert it into the #exercise4 element
 */
+
+var name = "Behnaz"
+var pEx4 = document.querySelector("#exercise4");
 function exercise4() {
   var promise4 = concatPromise()
+    .then(function (concatPromise) {
+      pEx4.innerText = concatPromise + name
+    })
 }
 
 /*
@@ -58,9 +81,23 @@ function exercise4() {
   element
 */
 
+
+
 function exercise5() {
-  // Write your implementation here
-}
+  var pEx5 = document.querySelector("#exercise5");
+  var promise = new Promise(function (resolve) {
+    resolve("Hello Promise")
+  })
+
+  promise.then(
+    result => {
+      pEx5.innerText = result;
+    }
+  )
+
+
+} // Write your implementation here
+
 
 /*
   EXERCISE 6 (Stretch Goal)
@@ -73,7 +110,16 @@ function exercise5() {
   element
 */
 function exercise6() {
-  // Write your implementation here
+  var pEx6 = document.querySelector("#exercise6");
+  var promise = new Promise(function (reject) {
+    reject("Something went wrong!")
+  })
+
+  promise.then(
+    error => {
+      pEx6.innerText = error;
+    }
+  )
 }
 
 
