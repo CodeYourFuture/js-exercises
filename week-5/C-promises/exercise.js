@@ -9,6 +9,9 @@
   =======
 
   Insert the result of promise1 into the #exercise1 element. Hint: .then()
+
+  EXPECTED RESULT: The #exercise1 element has textContent = "A Promising
+  Promise"
 */
 function exercise1() {
   var promise1 = resolvedPromise()
@@ -19,6 +22,9 @@ function exercise1() {
   =======
 
   Insert the result of promise2 into the #exercise2 element. Hint: .catch()
+
+  EXPECTED RESULT: The #exercise2 element has textContent = "A Unpromising
+  Promise"
 */
 function exercise2() {
   var promise2 = rejectedPromise()
@@ -30,6 +36,8 @@ function exercise2() {
 
   Insert the result of promise3 into the #exercise3 element. Notice how it
   takes longer than the others to finish
+
+  EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
 function exercise3() {
   var promise3 = delayedPromise()
@@ -42,6 +50,9 @@ function exercise3() {
   Take the result of promise4 and concatenate your name onto the end of it.
   Then return your concatenated string as a promise. Finally insert the result
   of your promise and insert it into the #exercise4 element
+
+  EXPECTED RESULT: The #exercise4 element has textContent = "A Promise from:
+  YOUR NAME"
 */
 function exercise4() {
   var promise4 = concatPromise()
@@ -56,6 +67,8 @@ function exercise4() {
   Create a new Promise that resolves with the string "Hello Promises!".
   Take the result of your promise and insert the it into the #exercise5
   element
+
+  EXPECTED RESULT: The #exercise5 element has textContent = "Hello Promises!"
 */
 
 function exercise5() {
@@ -71,6 +84,9 @@ function exercise5() {
   Create a new Promise that rejects with the string "Something went wrong!".
   Take the result of your promise and insert the it into the #exercise6
   element
+
+  EXPECTED RESULT: The #exercise6 element has textContent = "Something went
+  wrong!"
 */
 function exercise6() {
   // Write your implementation here
