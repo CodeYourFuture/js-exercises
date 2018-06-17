@@ -5,7 +5,7 @@ Define a method "makeFriend" to add a new friend to her list.
 
 
 var person = {
-    name: "Alice",
+    name: "Alices",
     friends: ["John", "Nina"],
     makeFriend: function(friends) {
         person.friends.push(friends);

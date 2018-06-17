@@ -26,4 +26,20 @@ on the submit button. Then check the following:
 */
 
 
+
+var content = "myClipboardId";
+var someText = "hello-codebar";
+var requestBody = { title: content, text: someText};
+
+var postRequestParameters = {
+    body: JSON.stringify({
+        "content": "some text" }),
+    method: 'POST',
+    headers: {
+         "content": "some text" }
+};
+
+
+fetch('https://codeyourfuture.herokuapp.com/api/messages', postRequestParameters  );
+
 // Write your code here
