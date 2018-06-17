@@ -8,6 +8,31 @@
 */
 
 var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+arr.forEach(element =>
+  console.log(
+    element % 3 === 0
+      ? element % 5 === 0
+        ? "FizzBuzz"
+        : "Fizz"
+      : element % 5 === 0
+        ? "Buzz"
+        : element
+  )
+);
+
+//---------solved with .map-----
+// var final = arr.map(function(numbers) {
+//   if (numbers % 5 == 0 && numbers % 3 == 0) {
+//     return "fizzbuzz";
+//   } else if (numbers % 5 == 0) {
+//     return "buzz";
+//   } else if (numbers % 3 == 0) {
+//     return "fizz";
+//   } else {
+//     return numbers;
+//   }
+// });
+// console.log(final);
 
 /* EXPECTED OUTPUT */
 
@@ -23,7 +48,7 @@ var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 'Fizz'
 'Buzz'
 11
-'FizzBuzz'
+'Fizz'
 13
 14
 'FizzBuzz'
