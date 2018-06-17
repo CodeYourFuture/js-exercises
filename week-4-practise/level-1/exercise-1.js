@@ -8,6 +8,8 @@ Here is the array:
 
 */ 
 
+
+
 var writers = [
   {
     firstName: "Virginia",
@@ -42,3 +44,7 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+
+for(var i = 0; i < writers.length; i++){
+  console.log("Hi, my name is {" + writers[i].firstName + "} {" + writers[i].lastName + "}. I am {" + writers[i].age + "} years old, and work as a {" +writers[i].occupation+ "}");
+}

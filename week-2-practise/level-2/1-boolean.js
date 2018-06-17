@@ -2,13 +2,21 @@
 // Why doesn't it work?
 // Fix it.
 
-var isHappy = "false";
+var isHappy = true;
+//var isHappy = false;
 
-if (isHappy) {
+
+if (!isHappy) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
 }
+
+/*if (isHappy) {
+  console.log("I am happy");
+} else {
+  console.log("I am not happy");
+}*/
 
 /* 
   EXPECTED RESULT
