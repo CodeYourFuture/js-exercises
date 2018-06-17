@@ -6,13 +6,42 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num == "number") {
+    return isAnum(num);
+  } else return false;
+}
 
-console.log(validate(6));
-console.log(validate(10.5));
-console.log(validate(101));
-console.log(validate(-91));
-console.log(validate("16"));
+function isAnum(num) {
+  if (Number.isInteger(num)) {
+    return isNotInTheList(num);
+  } else return false;
+}
+
+function isNotInTheList(num) {
+  for (var i = 0; i < excludedNums.length; i++) {
+    if (excludedNums[i] == num) {
+      return false;
+    }
+  }
+  return true;
+}
+
+console.log(isNotInTheList(91));
+
+// var excludedNums = [6, 14, 91, 111];
+
+// function isWholenum(num) {
+//   if (excludedNums.includes(num) == num) {
+//     return false;
+//   } else return true;
+// }
+
+// console.log(validate(6));
+// console.log(validate(10.5));
+// console.log(validate(101));
+// console.log(validate(-91));
+// console.log(validate("16"));
 
 /* 
   EXPECTED RESULT
