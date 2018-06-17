@@ -1,4 +1,4 @@
-We learnt about the `.map()` method in the previous week. This week we'll study how it works in more depth.
+fWe learnt about the `.map()` method in the previous week. This week we'll study how it works in more depth.
 
 You might remember this example:
 
@@ -17,7 +17,7 @@ The `map()` method runs the function we provided (`double`) on each item in the 
 
 A function that we provide to a method is commonly called a _callback_ function. The term highlights that although we _provide_ the `double` function, the `.map()` method _calls_ it. (Notice how we never write `double()` to call the function).
 
-We'll see callback functions used a lot more in the coming weeks. 
+We'll see callback functions used a lot more in the coming weeks.
 
 Often, when a function is only needed for a map operation, developers will declare the callback function inside of the method call. Let's try copying and pasting the function declaration inside of the `.map()` method call.
 
@@ -32,17 +32,17 @@ We can make this shorter by removing the function name. We can do this because w
 
 ```js
 var numbers = [1, 2, 3];
-var numbersDoubled = numbers.map(function (number) {
+var numbersDoubled = numbers.map(function(number) {
   return number * 2;
 });
 ```
 
-We can make this code even shorter still. In the latest versions of JavaScript a way of declaring functions was introduced called _arrow functions_. 
+We can make this code even shorter still. In the latest versions of JavaScript a way of declaring functions was introduced called _arrow functions_.
 
 ```js
 var numbers = [1, 2, 3];
 var numbersDoubled = numbers.map(number => {
-  return number * 2
+  return number * 2;
 });
 ```
 

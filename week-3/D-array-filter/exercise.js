@@ -8,7 +8,12 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(
+  newArr => typeof newArr === "object" && (newArr && newArr.length == 2)
+);
+// what this code does is to check if typeof newArr is equal to object.Object here means and array or a null value and also check if newArr && length of newArr is
+// equal == 2 . Whichever index in the pairsByIndexRaw array that satifies two conditions is returned in the new array.
+// Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
