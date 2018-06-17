@@ -63,10 +63,17 @@ function exercise4() {
   Take the result of your promise and insert the it into the #exercise5
   element
 */
-const exe5Promise = async () => "Hello Promises!";
- function exercise5() {
+// const exe5Promise = async () => "Hello Promises!";
+//  function exercise5() {
+//   // Write your implementation here
+//    exe5Promise().then(result => 
+//     document.querySelector("#exercise5").textContent = result);
+// }
+const exe5Promise = () => 
+  new Promise((resolve, reject) => resolve("Hello Promises!"));
+function exercise5() {
   // Write your implementation here
-   exe5Promise().then(result => 
+  exe5Promise().then(result =>
     document.querySelector("#exercise5").textContent = result);
 }
 /*
@@ -79,9 +86,11 @@ const exe5Promise = async () => "Hello Promises!";
   Take the result of your promise and insert the it into the #exercise6
   element
 */
-const exe6Promise = async () => { 
-  throw new Error ("Something went wrong!"); // this will return a promise!
-};
+// const exe6Promise = async () => { 
+//   throw new Error ("Something went wrong!"); // this will return a promise!
+// };
+const exe6Promise = () =>
+  new Promise((resolve, reject) => reject("Something went wrong!")); // this will return a promise!
 function exercise6() {
   // Write your implementation here
   exe6Promise().catch((result) =>

@@ -42,13 +42,14 @@ function exercise2(result) {
   Write a function that calls the callback with the parameter "Hello from the
   callback"
 
-  What happens to the #exercise3 element? Why does this happen? (Hint: look at
+  What happens to the #exercise3 element? 
+  Why does this happen? (Hint: look at
   line 63 below)
 */
 
 function exercise3(callback) {
   // Write your implementation here
-  functionThatCallsBack(callback);
+  callback("Hello from the  callback");
 }
 
 // 
