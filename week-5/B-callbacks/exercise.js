@@ -14,6 +14,13 @@
 document.querySelector('#button1').addEventListener('click', exercise1)
 
 function exercise1() {
+  var paragraph = document.createElement("p")
+
+  paragraph.innerText = "Brook";
+  appendChild(paragraph);
+  // var paragraph = document.createElement("p");
+  // paragraph.innerText = "Brook";
+  // exercise1.parentElement.appendChild(paragraph);
   // Write your implementation here
 }
 
