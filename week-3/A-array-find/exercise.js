@@ -5,9 +5,12 @@
 */
 
 var testScores = [90, 50, 100, 25, 81, 66, 80];
-var lowestPassScore = findLowestPassScore(haystack);
-
+testScores.sort(function(a, b){return a - b});
+var lowestPassScore = testScores.find(
+  function(element) { return element > 60; }
+);
 console.log(lowestPassScore);
 
-/* EXPECTED OUTPUT */
+/*
+EXPECTED OUTPUT */
 // 66

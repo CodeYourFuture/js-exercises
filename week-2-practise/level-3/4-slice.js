@@ -9,13 +9,13 @@ function replace(arr, index, value) {
 }
 
 /* 
-  DO NOT EDIT BELOW THIS LINE
+  DO NOT EDIT BELOW THIS LINE// there a mistake in n*
   --------------------------- */
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = replace(arr, 1, 2);
-var newNames = replace(arr, 2, "Rares");
+var newNumbers = replace(n*, 1, 2);
+var newNames = replace(n*, 2, "Rares");
 
 console.log(numbers);
 console.log(newNumbers);
