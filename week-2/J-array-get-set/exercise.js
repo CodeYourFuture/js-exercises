@@ -4,12 +4,12 @@
   Complete the functions below to get the first and last values from the array
 */
 
-function first(arr) {
-  return; // complete this statement
+function firstdigites(numbers) {
+  return numbers[0]; // complete this statement
 }
 
-function last(arr) {
-  return; // complete this statement
+function last(names) {
+  return names[2]; // complete this statement
 }
 
 /* 
@@ -18,7 +18,7 @@ function last(arr) {
 var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-console.log(first(arr));
+console.log(firstdigites(numbers));
 console.log(last(names));
 
 /* 
