@@ -61,9 +61,10 @@ function exercise3() {
 */
 function exercise4() {
   var promise4 = concatPromise();
-  
-    promise4.then(result => result + 'Than');
-    promise4.then(newResult => document.querySelector('#exercise4').textContent = newResult).concat(result);
+    promise4.then(result => {
+      let newResult = result + 'Than';
+      document.querySelector('#exercise4').textContent = newResult;
+    });
       
     
 
@@ -82,10 +83,10 @@ function exercise4() {
 */
 
 function exercise5() {
-  let promise5 = exercisePro();
-  promise5.then(() => {
+  let promise5 = helloPromise();
+  promise5.then((result) => {
      let thePromise = document.querySelector('#exercise5');
-     thePromise.innerText = 'Hello Promise!';
+     thePromise.textContent = result;
   })
 
 
@@ -103,10 +104,10 @@ function exercise5() {
   element
 */
 function exercise6() {
-  let promise6 = newPromise();
-  promise6.catch(() => {
+  let promise6 = wrongPromise();
+  promise6.catch((result) => {
     let resultPromise = document.querySelector('#exercise6');
-    resultPromise.innerText = 'Something went wrong';
+    resultPromise.textContent =  result;
   })
 
   
@@ -124,10 +125,18 @@ function exercise6() {
 //
 function resolvedPromise() {
   return Promise.resolve('A Promising Promise')
+
+}
+function helloPromise() {
+  return Promise.resolve('Hello Promise!');
 }
 
 function rejectedPromise() {
   return Promise.reject('A Unpromising Promise')
+}
+
+function wrongPromise() {
+  return Promise.reject('Something went wrong!');
 }
 
 function delayedPromise() {
