@@ -1,5 +1,6 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+var mentors = ["Daniel", "Irina","Mimi","Rob","Yohannes"];
+ mentors.forEach(function(mentor) {console.log(`HELLO ${mentor.toUpperCase()}`);});
+
+for ( var mentorIndex =0;mentorIndex < mentors.length;mentorIndex++) {
+    console.log(`Hello ${mentors[mentorIndex].toUpperCase()}`);
+}
