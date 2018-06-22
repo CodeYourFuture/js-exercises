@@ -24,8 +24,9 @@ function exercise1() {
   EXERCISE 2
   =======
 
-  A function is provided for you (functionCallsBack) that will call the first
-  parameter as a callback. The callback receives a result as the first parameter
+  A function is provided for you (functionThatCallsBack) that will call the
+  first parameter as a callback. The callback receives a result as the first
+  parameter
 
   Finish writing the callback function to insert the result into the #exercise2
   element
@@ -45,14 +46,14 @@ function exercise2(result) {
 
   The exercise3 function will be called for you automatically. It is called
   with a callback function as the first parameter. Call this callback function
-  (hint: use () parentheses) with the parameter "Hello from the callback" and
-  it will insert it into the #exercise3 element.
+  (hint: use `()`) with the parameter "Hello from the callback" and it will
+  insert it into the #exercise3 element
 
   EXPECTED RESULT: The #exercise3 element has textContent = "Hello from the
   callback"
 
   Can you explain why we get this result? Write down your explanation in a
-  comment below (Hint: look at line 63 below)
+  comment below (Hint: look below to see where exercise3 is called)
 */
 
 function exercise3(callback) {
