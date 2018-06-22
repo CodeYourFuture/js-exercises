@@ -3,7 +3,7 @@
 ### Part 1
 
 Open `index.html` in your browser. Notice there are 3 buttons: blue, orange and green.
-Edit the file `.js/main.js` and add the following functionality:
+Edit the file `./js/main.js` and add the following functionality:
 
 Clicking on the buttons should change the "theme" of the website:
 
