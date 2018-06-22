@@ -6,18 +6,18 @@ Write JavaScript below that changes the background colour of the page when the '
 */
 
 
-/* var changeColour = document.querySelector("#bgrChangeBtn");
+ var changeColour = document.querySelector("#bgrChangeBtn");
 changeColour.addEventListener("click", function(){
     document.body.style.backgroundColor = "blue";
-});*/
+});
 
-document.getElementById("bgrChangeBtn").onclick = function(){
-    myFunction();
-}
+// document.getElementById("bgrChangeBtn").onclick = function(){
+//     myFunction();
+// }
 
-function myFunction(){
- document.body.style.backgroundColor = "blue";
-}
+// function myFunction(){
+//  document.body.style.backgroundColor = "blue";
+// }
 /*
 Task 2
 ======
@@ -56,8 +56,8 @@ When the 'Larger links!' button is clicked, the text of all links on the page sh
 */
 const largerLinksBtn = document.querySelector("#largerLinksBtn");
 largerLinksBtn.addEventListener("click", function() {
-    bgrChangeBtn.style.fontSize = "3rem";
-    alertBtn.style.fontSize = "3rem";
-    addTextBtn.style.fontSize = "3rem";
+    changeColour.style.fontSize = "3rem";
+    alertTrigger.style.fontSize = "3rem";
+    textAppender.style.fontSize = "3rem";
   
 });

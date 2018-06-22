@@ -11,11 +11,16 @@
   Write a function that inserts your name into the #exercise1 element when
   the button is clicked
 */
-document.querySelector('#button1').addEventListener('click', exercise1)
-
-function exercise1() {
-  // Write your implementation here
+//var name = "hasanein";
+function callEvent(name){
+document.querySelector('#button1').addEventListener('click', (event)=>{
+  var ex1 = document.querySelector("#exercise1");
+  ex1.innerText = name;
+ });
 }
+callEvent("hasanein")
+ 
+  // Write your implementation here
 
 /*
   EXERCISE 2
@@ -27,11 +32,21 @@ function exercise1() {
   Finish writing the callback function to insert the result into the #exercise2
   element
 */
-functionThatCallsBack(exercise2)
+
+// function functionThatCallsBack(exercise2){
+// var r ;
+// r = exercise2("helloworld");
+// return r;
+// }
 
 function exercise2(result) {
-  // Write your implementation here
+  const pName = document.querySelector('#exercise2');
+  pName.innerText = `Hello ${result}`
 }
+functionThatCallsBack(exercise2);
+
+  // Write your implementation here
+
 
 /*
   EXERCISE 3
@@ -46,6 +61,9 @@ function exercise2(result) {
 
 function exercise3(callback) {
   // Write your implementation here
+  callback('Hello from the function caller');
+ //functionThatCallsBack(callback);
+ // exercise2("hello")
 }
 
 // 

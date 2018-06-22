@@ -12,8 +12,10 @@
 */
 function exercise1() {
   var promise1 = resolvedPromise()
+    promise1.then(function(value) {
+    document.querySelector("#exercise1").innerText= `success:  ${value}`;
+ });
 }
-
 /*
   EXERCISE 2
   =======
@@ -21,9 +23,11 @@ function exercise1() {
   Insert the result of promise2 into the #exercise2 element. Hint: .catch()
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+  var promise2 = rejectedPromise();
+  promise2.catch(function(value){
+  document.querySelector("#exercise2").innerText= `fail:  ${value}`;
+ })
 }
-
 /*
   EXERCISE 3
   =======
@@ -32,7 +36,11 @@ function exercise2() {
   takes longer than the others to finish
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
+  
+  promise3.then(function(value){
+    document.querySelector("#exercise3").innerText=`Delay: ${value}`;
+  })
 }
 
 /*
@@ -44,7 +52,10 @@ function exercise3() {
   of your promise and insert it into the #exercise4 element
 */
 function exercise4() {
-  var promise4 = concatPromise()
+  var promise4 = concatPromise();
+  promise4.then(function(value){
+    document.querySelector("#exercise4").innerText=`${value}  Hasanein`;
+  })
 }
 
 /*
@@ -60,6 +71,10 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
+  var promise5 = resolvedPromise();
+  promise5.then(function(value){
+    document.querySelector("#exercise5").innerText=`Hello: ${value}`;
+  })
 }
 
 /*
@@ -74,6 +89,10 @@ function exercise5() {
 */
 function exercise6() {
   // Write your implementation here
+  var promise6 = rejectedPromise();
+  promise6.catch(function(value){
+  document.querySelector("#exercise6").innerText= `Somting Went wrong:  ${value}`;
+ })
 }
 
 
