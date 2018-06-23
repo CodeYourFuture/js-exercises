@@ -11,13 +11,7 @@ changeColour.addEventListener("click", function(){
     document.body.style.backgroundColor = "blue";
 });
 
-// document.getElementById("bgrChangeBtn").onclick = function(){
-//     myFunction();
-// }
 
-// function myFunction(){
-//  document.body.style.backgroundColor = "blue";
-// }
 /*
 Task 2
 ======

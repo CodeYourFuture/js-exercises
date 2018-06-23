@@ -33,11 +33,7 @@ callEvent("hasanein")
   element
 */
 
-// function functionThatCallsBack(exercise2){
-// var r ;
-// r = exercise2("helloworld");
-// return r;
-// }
+
 
 function exercise2(result) {
   const pName = document.querySelector('#exercise2');

@@ -109,11 +109,11 @@ function resolvedPromise() {
 }
 
 function rejectedPromise() {
-  return Promise.reject('A Unpromising Promise')
+  return Promise.reject('A Unpromising Promise') // why we cant use new Promise here 
 }
 
 function delayedPromise() {
-  return new Promise((resolve) => {
+  return new Promise((resolve) => { // why we should create new object here while we cant create one with rejectedPromises
     setTimeout(() => {
       resolve('A Longer Promise')
     }, 2000)
