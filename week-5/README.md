@@ -1,0 +1,1 @@
+See syllabus sections for [DOM](https://codeyourfuture.github.io/syllabus-master/js-core-2/week-08/lesson.html#js-in-the-browser) and [AJAX](https://codeyourfuture.github.io/syllabus-master/js-core-2/week-08/lesson.html#ajax)
