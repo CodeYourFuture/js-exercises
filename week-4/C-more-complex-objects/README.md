@@ -1,18 +1,1 @@
-### More objects!
-
- Object properties can even be assigned other objects or variables too. The example below shows an object with keys that have been assigned a variable, an array, and an object.
-
-```js
-var kittenName = "Feathers";
-
-var kitten = {
-    name: kittenName,
-    toyCollection: ['blue ball', 'green ball', 'hoover box'],
-    favoriteLocation: {
-        roomName: 'Living room',
-        napPlace: 'window',
-        idealTemperatureCelsius: 24
-    }
-};
-```
-
+See syllabus section on [more complex objects](https://codeyourfuture.github.io/syllabus-master/js-core-2/week-07/lesson.html#more-complex-objects)
