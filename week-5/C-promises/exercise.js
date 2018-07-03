@@ -1,6 +1,6 @@
 /*
   Promises
-  ---------------------------------
+  getE
   Open index.html in your browser
 */
 
@@ -11,8 +11,14 @@
   Insert the result of promise1 into the #exercise1 element. Hint: .then()
 */
 function exercise1() {
-  var promise1 = resolvedPromise()
-}
+  var promise1 = resolvedPromise();
+
+  
+resolvedPromise.then(function(resolve, reject) {
+    console.log("success: " + resolve);
+  });
+};
+
 
 /*
   EXERCISE 2
@@ -21,9 +27,14 @@ function exercise1() {
   Insert the result of promise2 into the #exercise2 element. Hint: .catch()
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
-}
+  var promise2 = rejectedPromise();
 
+
+rejectedPromise.catch(function(resolve, reject) {
+  console.log("fail: " + reject);
+  });
+
+};
 /*
   EXERCISE 3
   =======
@@ -32,7 +43,7 @@ function exercise2() {
   takes longer than the others to finish
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
 }
 
 /*
