@@ -35,25 +35,11 @@ When you open index.html in your browser, it should display the existing message
 var displayMessages= document.querySelector('#message-list');
 fetch("https://codeyourfuture.herokuapp.com/api/messages").then(function(response){
     return response.json()
-}).then(function(chats){
+})
+.then(function(chats){
     //console.log(chats)
     for (var i = 0; i <= chats.length; i++) {
         displayMessages.innerHTML+= "<p>" +chats[i].content + "<p>" }
         //       var listItem = document.createElement('#message-list');
-});
-// var myList = document.querySelector(' https://codeyourfuture.herokuapp.com/api/messages');
-
-// var myWebchat = new Webchat('products.json');
-
-// fetch(myWebchat)
-//   .then(function(response) { return response.json(); })
-//   .then(function(message) {
-//     for (var i = 0; i < message.products.length; i++) {
-//       var listItem = document.createElement('#message-list');
-//       listItem.innerHTML = '<strong>' + data.products[i].Name + '</strong> can be found in ' +
-//                            data.products[i].Location +
-//                            '. Cost: <strong>£' + data.products[i].Price + '</strong>';
-//       myList.appendChild(listItem);
-//     }
-//   });
-// Write your code here
+        // Write your code here
+})

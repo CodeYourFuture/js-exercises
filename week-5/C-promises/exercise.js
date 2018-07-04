@@ -11,15 +11,18 @@
   Insert the result of promise1 into the #exercise1 element. Hint: .then()
 */
 function exercise1() {
-  var promise1 = resolvedPromise();
-
-  
-resolvedPromise.then(function(resolve, reject) {
+  var promise1 = resolvedPromise()
+.then(function(resolve, reject) {
     console.log("success: " + resolve);
+    document.getElementById("exercise1").innerHTML= resolve
   });
+  
 };
 
 
+//'A Promising Promise'
+// var targetDiv = document.getElementById("foo").getElementsByClassName("bar")[0];
+// targetDiv.innerHTML = "Goodbye world!";
 /*
   EXERCISE 2
   =======
@@ -27,11 +30,10 @@ resolvedPromise.then(function(resolve, reject) {
   Insert the result of promise2 into the #exercise2 element. Hint: .catch()
 */
 function exercise2() {
-  var promise2 = rejectedPromise();
-
-
-rejectedPromise.catch(function(resolve, reject) {
-  console.log("fail: " + reject);
+  var promise2 = rejectedPromise()
+  .catch(function(reject) {
+  console.log("error:" + reject);
+  document.getElementById("exercise2").innerHTML= reject
   });
 
 };
@@ -43,8 +45,13 @@ rejectedPromise.catch(function(resolve, reject) {
   takes longer than the others to finish
 */
 function exercise3() {
-  var promise3 = delayedPromise();
-}
+  var promise3 = delayedPromise()
+  .then(function(resolve) {
+  console.log(resolve);
+  document.getElementById("exercise3").innerHTML= resolve
+});
+
+};
 
 /*
   EXERCISE 4
@@ -56,7 +63,11 @@ function exercise3() {
 */
 function exercise4() {
   var promise4 = concatPromise()
-}
+  .then(function(resolve) {
+    console.log(resolve + " Elias ");
+    document.getElementById("exercise4").innerHTML= resolve
+  });
+};
 
 /*
   EXERCISE 5 (Stretch Goal)
@@ -71,6 +82,15 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
+  var promise5=aNewPromiseThatResolve()
+  .then(function(resolve){
+    console.log(resolve);
+    document.getElementById("exercise5").innerHTML=resolve
+  });
+}
+
+function aNewPromiseThatResolve() {
+  return Promise.resolve('Hello Promise')
 }
 
 /*
@@ -85,6 +105,15 @@ function exercise5() {
 */
 function exercise6() {
   // Write your implementation here
+  var promise5=aNewPromiseThatReject()
+  .catch(function(reject){
+    console.log(reject);
+    document.getElementById("exercise6").innerHTML= reject
+  });
+};
+
+function aNewPromiseThatReject() {
+  return Promise.reject('Something went wrong!')
 }
 
 
