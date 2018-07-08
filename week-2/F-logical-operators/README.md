@@ -1,2 +1,1 @@
-See syllabus section on [logical operators](https://codeyourfuture.github.io/syllabus-master/js-core/week-05/lesson.html#logical-operators
-)
+See syllabus section on [logical operators](https://codeyourfuture.github.io/syllabus-master/js-core/week-05/lesson.html#logical-operators)
