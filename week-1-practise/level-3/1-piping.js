@@ -7,10 +7,14 @@
   - format
   - assign to the variable `result`
 
-  As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
+  As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code
 */
 
 var startingValue = 5;
+var number = 2;
+var adding = 10;
+
+const result = multiply(startingValue, number) + add(startingValue, startingValue);
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
