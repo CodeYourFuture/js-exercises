@@ -11,6 +11,8 @@
 */
 
 var startingValue = 5;
+var result = add(10, multiply(startingValue, 2)).toFixed(2);
+
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
