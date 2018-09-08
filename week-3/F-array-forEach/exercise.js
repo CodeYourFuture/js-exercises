@@ -8,6 +8,15 @@
 */
 
 var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  var arr2 = [];
+arr.forEach(function ret(item){
+  if (item%3==0){return arr2[arr.indexOf(item)] = "Fizz"}
+  else if (item % 5 == 0){ return (arr2[arr.indexOf(item)] = "Buzz");}
+  else if (item % 15 == 0){ return (arr2[arr.indexOf(item)] = "FizzBuzz");}
+  else return (arr2[arr.indexOf(item)] = item);
+  
+})
+console.log(arr2);
 
 /* EXPECTED OUTPUT */
 

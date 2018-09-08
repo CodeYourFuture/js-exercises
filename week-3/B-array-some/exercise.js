@@ -12,11 +12,11 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
 function isNull(element) {
-   element = null;
+   return element == null;
 }
 var containNull = pairsByIndex.some(isNull);
 
-if (isNull()) {
+if (containNull == true) {
 
   process.exitCode = 1;
 }
