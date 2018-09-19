@@ -9,6 +9,9 @@ var person = {
     friends: ["John", "Nina"]
 };
 
+person.makeFriend = function (friendName){
+   this.friends[this.friends.length] = friendName;
+}
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
