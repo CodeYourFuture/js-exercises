@@ -7,8 +7,15 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToUSD(price) {}
-function convertToBRL(price) {}
+function convertToUSD(price) {
+  return Number.parseFloat(foreignTransaction(price) * 1.4).toFixed(2);
+}
+function convertToBRL(price) {
+  return Number.parseFloat(foreignTransaction(price) * 5).toFixed(2);
+}
+function foreignTransaction(price) {
+  return price * 1.01;
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
