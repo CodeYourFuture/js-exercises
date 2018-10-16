@@ -8,10 +8,10 @@
 */
 
 function convertToUSD(price) {
-  return Number.parseFloat(foreignTransaction(price) * 1.4).toFixed(2);
+  return (foreignTransaction(price) * 1.4).toFixed(2);
 }
 function convertToBRL(price) {
-  return Number.parseFloat(foreignTransaction(price) * 5).toFixed(2);
+  return (foreignTransaction(price) * 5).toFixed(2);
 }
 function foreignTransaction(price) {
   return price * 1.01;

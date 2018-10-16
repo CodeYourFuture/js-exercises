@@ -11,7 +11,10 @@
 */
 
 var startingValue = 5;
-
+function piping(value) {
+  return "£" + (value * 2 + 10).toFixed(2);
+}
+const result = piping(startingValue);
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
