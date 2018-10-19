@@ -11,10 +11,10 @@
 */
 
 var startingValue = 5;
-function piping(value) {
-  return "£" + (value * 2 + 10).toFixed(2);
-}
-const result = piping(startingValue);
+// function piping(value) {
+//   return "£" + (value * 2 + 10).toFixed(2);
+
+let result = format(add(multiply(startingValue, 2), 10));
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
