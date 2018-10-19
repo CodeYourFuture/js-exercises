@@ -11,6 +11,7 @@
 */
 
 var startingValue = 5;
+const result = format(add(multiply(startingValue, 2), 10));
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
