@@ -6,6 +6,9 @@
 */
 
 var codeYourFutureIsGreat = true;
+let mozafarIsCool = false;
+let caluclationCorrect = 1 + 1 === 2;
+let moreThan10Students = 5 > 10;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
