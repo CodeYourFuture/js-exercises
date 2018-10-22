@@ -6,6 +6,9 @@
 */
 
 var codeYourFutureIsGreat = true;
+var mozafarIsCool = false;
+var caluclationCorrect = 1 + 1 === 2;
+var moreThan10Students = 4 > 10;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
