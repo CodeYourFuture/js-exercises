@@ -1,8 +1,8 @@
 // The code is valid but the program does not produce the expected result
-// Why doesn't it work?
+// Why doesn't it work? It must be a boolean not string
 // Fix it.
 
-var isHappy = "false";
+var isHappy = false;
 
 if (isHappy) {
   console.log("I am happy");
