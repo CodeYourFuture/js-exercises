@@ -2,7 +2,7 @@
 // Fix it.
 
 var isHappy = false;
-
+isHappy = true;
 if (isHappy) {
   console.log("I am happy");
 } else {
