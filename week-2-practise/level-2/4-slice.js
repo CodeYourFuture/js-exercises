@@ -5,7 +5,11 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  var cloneArray = arr.slice();
+  cloneArray.splice(index, 1);
+  return cloneArray;
+ 
+ // complete this statement
 }
 
 /* 
@@ -16,9 +20,12 @@ var names = ["Irina", "Ashleigh", "Mozafar"];
 
 var newNumbers = remove(numbers, 2);
 var newNames = remove(names, 1);
-
-console.log(newNumbers);
 console.log(newNames);
+console.log(newNumbers);
+console.log(names);
+console.log(numbers);
+
+
 
 /* 
   EXPECTED RESULT

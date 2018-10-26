@@ -2,12 +2,20 @@ let students= 15
 let mentors= 8
 let sum=students+mentors
 function percentage(count,sum){
-       return Math.round(count/sum*100)
+    if (count===students){
+       return Math.round((students/sum)*100)
     }
     
+else if (count===mentors){
+    return Math.round((mentors/sum)*100)
 }
-function message(text){
-   var text='percenteage student'+ percentage(students,sum)+'%'
-  return message;
 }
-// console.log(message(percentage(students,sum)))
+console.log('percentages student:'+percentage(students,sum)+'%')
+console.log('percentages mentor:'+percentage(mentors,sum)+'%')
+// if  (percentage(students,sum)){
+// console.log('percentages student:'(percentage(students,sum))+'%')
+// }
+// else if (percentage(mentors,sum)) {
+ 
+// console.log("percentages mentors:"(percentage(mentors,sum))+'%')
+// }

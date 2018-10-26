@@ -5,7 +5,9 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  var cloneArray = arr.slice();
+  cloneArray.splice(valueToRemove, 1);
+  return cloneArray; // complete this statement
 }
 
 /* 
@@ -15,7 +17,7 @@ var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
 var newNumbers = remove(numbers, 2);
-var newNames = remove(names, "Ashleigh");
+var newNames = remove(names, 1);
 
 console.log(newNumbers);
 console.log(newNames);
