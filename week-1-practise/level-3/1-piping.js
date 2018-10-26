@@ -11,7 +11,7 @@
 */
 
 var startingValue = 5;
- result = (format( add (multiply (5,2),10)));
+ result = format( add( multiply(5,2), 10));
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
