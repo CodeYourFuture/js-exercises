@@ -3,3 +3,8 @@
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
+
+numbers2=numbers.map(function multiple(item){
+    return item*100
+    })
+    console.log(numbers2)

@@ -8,7 +8,17 @@
 */
 
 var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function multiple(item){
+  if ((item%5===0)&& (item%3===0)){
+return"FizzBuzz"
+  }else if (item%5===0) {
+          return "Buzz"
+  }else if(item%3===0){
+    return "Fizz"
+    }else return item
+  }
 
+console.log(arr.map(multiple))
 /* EXPECTED OUTPUT */
 
 /*

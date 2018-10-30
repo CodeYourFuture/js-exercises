@@ -3,9 +3,16 @@
 */
 
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
-var group = ["Austine", "Dany", "Swathi", "Daniel"];
+var mentors = ["Austine", "Dany", "Swathi", "Daniel"];
 
-var groupIsOnlyStudents; // complete this statement
+function isAMentor(name) {
+  return students.includes(name);
+}
+
+
+; // logs false
+
+var groupIsOnlyStudents=mentors.every(isAMentor); // complete this statement
 
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");

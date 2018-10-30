@@ -5,9 +5,19 @@
 */
 
 var testScores = [90, 50, 100, 25, 81, 66, 80];
-var lowestPassScore = findLowestPassScore(testScores);
+ 
+function isHighScore(score) {
+  return score > 60;
+} 
 
-console.log(lowestPassScore);
+  
+var highTestScores = testScores.filter(isHighScore);
+var sortedTest=highTestScores.sort((a, b) => a - b);
+var finnalTest=sortedTest.find(isHighScore);
+console.log(finnalTest);
 
-/* EXPECTED OUTPUT */
-// 66
+
+
+
+// /* EXPECTED OUTPUT */
+// // 66
