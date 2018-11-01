@@ -8,6 +8,29 @@
 */
 
 var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+function newarr(num) {
+  if (num === 0) {
+    console.log(num);
+  } else if (num % 3 === 0) {
+    console.log("Fizz");
+  } else if (num % 5 === 0) {
+    console.log("Buzz");
+  } else if (num % 15 === 0) {
+    console.log("FizzBuzz");
+  } else {
+    console.log(num);
+  }
+}
+var final = arr.forEach(newarr);
+final;
+
+//new experience
+
+var mah = [1, 3, 5];
+arr.forEach(number => {
+  return (number = mah);
+});
+console.log(arr);
 
 /* EXPECTED OUTPUT */
 

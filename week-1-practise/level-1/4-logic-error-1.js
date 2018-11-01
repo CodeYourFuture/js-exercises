@@ -5,6 +5,8 @@ function trimWord(word) {
 }
 
 var result = trimWord("  CodeYourFuture ");
+var a = typeof result;
+console.log(a);
 console.log(result);
 // Expected result "CodeYourFuture"
 // Run the program and make sure it works
