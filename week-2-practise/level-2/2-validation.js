@@ -27,3 +27,10 @@ console.log(validate("16"));
   false
   false
 */
+// function validate (num){
+//   var isNumber = typeof num === "number";
+//   var isPositive = num > 0;
+//   var isLess100 = num <= 100;
+//   var result = isNumber && isPositive && isLess100
+//   return result
+// }

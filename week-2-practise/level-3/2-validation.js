@@ -29,3 +29,10 @@ console.log(validate("16"));
   true
   false
 */
+function validate(num) {
+  var isNumber = typeof num === "number";
+  var isInteger = Number.isInteger(num);
+  var isExcluded = !excludedNums.includes(num);
+  var result = isNumber && isInteger && isExcluded;
+  return result;
+}
