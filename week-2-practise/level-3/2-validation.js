@@ -6,7 +6,26 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function inArray(num, excludedNums) {
+  for (var i = 0; i <= excludedNums.length; i++) {
+    if (excludedNums[i] === num) {
+      return false;
+    } else return true;
+  }
+}
+function validate(num) {
+  if (
+    typeof num === "number" &&
+    Number.isInteger(num) &&
+    inArray(num, excludedNums)
+  ) {
+    return true;
+  } else return false;
+}
+
+// else if (typeof(num)=== "number" && num.integer()){
+//   return true;
+// }
 
 console.log(validate(6));
 console.log(validate(10.5));
