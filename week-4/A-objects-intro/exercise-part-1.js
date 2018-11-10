@@ -6,4 +6,8 @@ can describe with a JavaScript object
 Assign each of them to a separate variable
 
 */
-
+var myDog = {
+  name: "Rusty",
+  age: 4,
+  breed: "German-Shepard"
+};
