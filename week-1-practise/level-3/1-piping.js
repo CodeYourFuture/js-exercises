@@ -10,7 +10,10 @@
   As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
 */
 
+
 var startingValue = 5;
+var result = function (){return"£"+ (startingValue*2+10).toFixed(2);}
+
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
@@ -28,4 +31,4 @@ function format(num) {
 }
 
 console.log("Expected result: 20.00");
-console.log("Actual result: " + result);
+console.log("Actual result: " + result());
