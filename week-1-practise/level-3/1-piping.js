@@ -11,6 +11,7 @@
 */
 
 var startingValue = 5;
+var result = "£" + (startingValue * 2 + 10).toFixed(2);
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */

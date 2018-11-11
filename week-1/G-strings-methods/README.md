@@ -16,11 +16,13 @@ var nameLowerCase = name.toLowerCase();
 console.log(nameLowerCase); // "daniel"
 ```
 
+.trim is a method to delete spaces
+
 You can find out more about string properties and methods by searching for "JavaScript string methods".
 
 ## Exercise 1
 
-* Log a message that includes the length of your name
+- Log a message that includes the length of your name
 
 ## Expected result
 
@@ -30,8 +32,8 @@ My name is Daniel and my name is 6 characters long
 
 ## Exercise 2
 
-* Log the same message using the variable, `name` provided
-* Use the `.trim` method to remove the extra whitespace
+- Log the same message using the variable, `name` provided
+- Use the `.trim` method to remove the extra whitespace
 
 ## Expected result
 
