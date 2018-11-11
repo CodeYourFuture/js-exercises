@@ -1,3 +1,3 @@
-var name = " Daniel  ";
-
-console.log(message);
+var sirName = "  Abdoulrazack                x";
+sirName.trim();
+console.log(sirName);
