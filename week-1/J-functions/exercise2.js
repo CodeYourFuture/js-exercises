@@ -1,7 +1,6 @@
-function triple(number) {
-  // complete function here
+function showNumber(number) {
+  return number * 2;
 }
 
-var result = triple(12);
-
+var result = showNumber(12);
 console.log(result);
