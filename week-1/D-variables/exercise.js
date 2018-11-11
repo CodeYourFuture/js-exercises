@@ -1,3 +1,3 @@
-// Start by creating a variable `greeting`
+var greeting = "Good MOrning Code your future team";
 
 console.log(greeting);
