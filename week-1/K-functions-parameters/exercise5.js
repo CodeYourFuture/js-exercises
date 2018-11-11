@@ -1,7 +1,7 @@
 // Declare your function here
-function info(name, age) {
-  return "Hi there, my name is " + name + " i am " + age;
+function information(a, b) {
+  return "hello there, i am " + a + " and i am " + b + " year old";
 }
 
-var show = info("Abdoulrazack", 23);
-console.log(show);
+var result = information("Abdoulrazack", 23);
+console.log(result);
