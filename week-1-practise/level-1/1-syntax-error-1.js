@@ -9,5 +9,8 @@ console.log(result); // Expected result 8 - Run the program and make sure it wor
 
 // Answer these questions:
 // 1. How many parameters does the function take?
+// The fonction takes three parameters.
 // 2. What is the function name?
+//The function's name is addNumbers.
 // 3. Where is the function called? with what parameters?
+// The function is called outside of the function e.g. : var result - addNumbers();
