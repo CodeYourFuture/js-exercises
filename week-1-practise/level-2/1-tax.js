@@ -9,7 +9,7 @@ function calculateSalesTax(salesTax) {
   return salesTax * (20 / 100);
 }
 function amoutTax(salesTax) {
-  var TaxAmount = calculateSalesTax(salesTax);
+  var amout = calculateSalesTax(salesTax);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
