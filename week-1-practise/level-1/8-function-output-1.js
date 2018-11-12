@@ -7,7 +7,7 @@ console.log(result);
 
 // Answer these questions:
 // - What does this program do?
-// this program generate a random number whenever it is called between 0 to 1.
+// this program generates a random number whenever it is called between 0 to 1.
 // - How many parameters does the function take?
 // There is no parameters;
 // - What is the function name?
