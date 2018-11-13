@@ -23,6 +23,7 @@ var coffeeMachine = {
     if (this.prices[coffee] > this.insertedAmount) {
       return `Sorry you don't have enough money for a ${coffee}`;
     } else {
+      this.insertedAmount = 0;
       return `Please take your ${coffee}`;
     }
   }
