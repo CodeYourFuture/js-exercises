@@ -14,7 +14,7 @@ function upperCase(name) {
 }
 
 function greeting(name) {
-	return 'Hello ' + name;
+	return 'Hello ' + upperCase(name);
 }
 console.log(greeting(mentor1));
 console.log(greeting(mentor2));
