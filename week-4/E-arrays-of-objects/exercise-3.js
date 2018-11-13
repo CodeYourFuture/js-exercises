@@ -15,36 +15,36 @@ and returns the number of restaurants in this area.
 */
 
 var restaurant1 = {
-    name: "Paesano",
-    totalSeats: 10,
-    numberOfCustomers: 8,
-    address: {
-        city: "Glasgow",
-        area: "center"
-    },
-    menu: ["pizza", "calzone", "salad"]
+  name: "Paesano",
+  totalSeats: 10,
+  numberOfCustomers: 8,
+  address: {
+    city: "Glasgow",
+    area: "center"
+  },
+  menu: ["pizza", "calzone", "salad"]
 };
 
 var restaurant2 = {
-    name: "Ubiquitous Chip",
-    totalSeats: 20,
-    numberOfCustomers: 10,
-    address: {
-        city: "Glasgow",
-        area: "west"
-    },
-    menu: ["salad", "chocolate cake", "roast lamb"]
+  name: "Ubiquitous Chip",
+  totalSeats: 20,
+  numberOfCustomers: 10,
+  address: {
+    city: "Glasgow",
+    area: "west"
+  },
+  menu: ["salad", "chocolate cake", "roast lamb"]
 };
 
 var restaurant3 = {
-    name: "Monkeyz",
-    totalSeats: 15,
-    numberOfCustomers: 8,
-    address: {
-        city: "Glasgow",
-        area: "center"
-    },
-    menu: ["stew", "chocolate cake", "panini"]
+  name: "Monkeyz",
+  totalSeats: 15,
+  numberOfCustomers: 8,
+  address: {
+    city: "Glasgow",
+    area: "center"
+  },
+  menu: ["stew", "chocolate cake", "panini"]
 };
 
 var restaurants = [restaurant1, restaurant2, restaurant3];
@@ -53,33 +53,54 @@ var restaurants = [restaurant1, restaurant2, restaurant3];
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-
-
+const getName = restaurant => restaurant.name;
 var restaurantFinderApplication = {
-    applicationName: "Restaurant Finder",
-    applicationVersion: "1.0",
-    restaurants: restaurants,
-    findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
-    },
-    findRestaurantServingDish: function(dishName) {
-        // Complete here
-    },
-    countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
-    }
+  applicationName: "Restaurant Finder",
+  applicationVersion: "1.0",
+  restaurants: restaurants,
+  findAvailableRestaurants: function(numberOfPeople) {
+    return restaurants
+      .filter(
+        restaurant =>
+          restaurant.totalSeats - restaurant.numberOfCustomers >= numberOfPeople
+      )
+      .map(getName);
+  },
+  findRestaurantServingDish: function(dishName) {
+    return restaurants
+      .filter(restaurant => restaurant.menu.includes(dishName))
+      .map(getName);
+  },
+  countNumberOfRestaurantsInArea: function(area) {
+    return restaurants.filter(restaurant => restaurant.address.area === area)
+      .length;
+  }
 };
-
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-var restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(5);
-console.log("Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: " + restaurantsAvailableFor5People);
+var restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(
+  5
+);
+console.log(
+  "Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: " +
+    restaurantsAvailableFor5People
+);
 
-var restaurantsServingSalad = restaurantFinderApplication.findRestaurantServingDish("salad");
-console.log("Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: " + restaurantsServingSalad);
+var restaurantsServingSalad = restaurantFinderApplication.findRestaurantServingDish(
+  "salad"
+);
+console.log(
+  "Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: " +
+    restaurantsServingSalad
+);
 
-var numberOfRestaurantsInCityCentre = restaurantFinderApplication.countNumberOfRestaurantsInArea("center");
-console.log("Number of restaurants in city centre: Expected result: 2, actual result: " + numberOfRestaurantsInCityCentre);
+var numberOfRestaurantsInCityCentre = restaurantFinderApplication.countNumberOfRestaurantsInArea(
+  "center"
+);
+console.log(
+  "Number of restaurants in city centre: Expected result: 2, actual result: " +
+    numberOfRestaurantsInCityCentre
+);
