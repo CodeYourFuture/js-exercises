@@ -11,7 +11,8 @@
 */
 
 var startingValue = 5;
-
+//var result = format(add(10, multiply(startingValue, 2)));
+var result = format(add(10, multiply(startingValue, 2))).match(/\d+/g);
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
