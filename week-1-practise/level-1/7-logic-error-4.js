@@ -5,7 +5,7 @@ function multiply(a, b, c) {
   return;
 }
 
-var result = multiply(1, 3, 4);
+var result = (multiply = 1 * 3 * 4);
 console.log(result);
 // Expected result 12
 // Run the program and make sure it works

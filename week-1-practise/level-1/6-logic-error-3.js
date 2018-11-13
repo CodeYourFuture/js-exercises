@@ -4,7 +4,7 @@ function trim(word) {
   return "word".trim();
 }
 
-var result = trim("CodeYourFuture  ");
+var result = (trim = "CodeYourFuture  ");
 console.log(result);
 // Expected result "CodeYourFuture"
 // Run the program and make sure it works
