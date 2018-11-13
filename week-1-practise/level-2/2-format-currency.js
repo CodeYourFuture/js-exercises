@@ -6,7 +6,12 @@
   Write a function that transforms numbers into the format £0.00
 */
 
-function formatCurrency() {}
+//Try Math.round(num * 100) / 100 or roundToTwo(1.2323) // this inputs 1.23
+//OR: Number(Math.round(1.005+'e2')+'e-2'); // 1.01
+//OR: toFixed(2)
+function formatCurrency(product) {
+  return "£" + product.toFixed(2);
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
