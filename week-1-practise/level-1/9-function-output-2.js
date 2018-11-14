@@ -1,13 +1,13 @@
-function s(w1, w2) {
-  return w1.concat(w2);
+function s(w1, w2, w3) {
+  return w1.concat(w2, w3);
 }
 
-var result = s("code", "your");
+var result = s("code", "your", "Future");
 console.log(result);
 
-// Answer these questions:
+// Answer these questions.
 // - What does this program do? Run it and see, or Google some of the methods used ot understand them.
-// This program will join together two or more strings.
+// .concat(); chaine (concatenate) the string arguments to the calling strings and returns a new string
 // - How many parameters does the function take?
 // The funtion takes 2 parameters.
 // - What is the function name?
