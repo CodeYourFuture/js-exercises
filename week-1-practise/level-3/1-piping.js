@@ -30,4 +30,4 @@ function format(num) {
 }
 
 console.log("Expected result: 20.00");
-console.log("Actual result: " + result());
+console.log("Actual result: " + result);
