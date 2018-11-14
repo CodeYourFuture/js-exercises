@@ -13,7 +13,7 @@ console.log(result);
 // - What is the function name?
 // the function name is s.
 // - Where is the function called? with what parameters?
-// The function is called at line 5.
+// The function is called at line 5 which is s, and the parameters are called with the following arguments : code, your, future.
 // - What does the function return?
 // the function return "codeyour".
 // - How can this function be improved?
