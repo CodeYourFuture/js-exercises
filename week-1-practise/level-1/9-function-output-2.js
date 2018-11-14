@@ -20,7 +20,7 @@ console.log(result);
 // - How can this function be improved?
 //by giving a more clear names for the functions and the paramters as well as adding a space between both strings
 function s(w1, w2) {
-    return w1.concat(" ",w2);
+    return w1.concat(" ", w2);
 }
 
 var result = s('code', 'your');
