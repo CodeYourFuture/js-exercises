@@ -14,7 +14,7 @@ console.log(result);
 // - What is the function name?
 //s
 // - Where is the function called? with what parameters?
-//line 6, code, your
+//line 5, code, your
 // - What does the function return?
 //a new string with a joined strings codeyour
 // - How can this function be improved?
