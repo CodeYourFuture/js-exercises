@@ -5,8 +5,8 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD(priceInUSD) {
-  return "$" + Math.round(priceInUSD * 1.29631);
+function convertToUSD(price) {
+  return "$" + Math.round(price * 1.29631);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
