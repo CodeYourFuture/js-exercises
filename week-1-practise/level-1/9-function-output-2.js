@@ -17,8 +17,10 @@ console.log(result);
 //line 5, code, your
 // - What does the function return?
 //a new string with a joined strings codeyour
-// - How can this function be improved?
-//by giving a more clear names for the functions and the paramters as well as adding a space between both strings
+/* - How can this function be improved?
+by giving a more clear names for the functions and the paramters as well as adding a space between both strings
+stringJoiner(str1, str2)
+*/
 function s(w1, w2) {
     return w1.concat(" ", w2);
 }
