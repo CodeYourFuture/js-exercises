@@ -7,7 +7,7 @@ console.log(result);
 
 // Answer these questions.
 // - What does this program do? Run it and see, or Google some of the methods used ot understand them.
-// .concat(); chaine (concatenate) the string arguments to the calling strings and returns a new string
+// .concat(); chaines (concatenate) the string arguments to the calling strings and returns a new string
 // - How many parameters does the function take?
 // The funtion takes 2 parameters.
 // - What is the function name?
