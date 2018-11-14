@@ -7,8 +7,13 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToUSD(price) {}
-function convertToBRL(price) {}
+// R$ symbol of the Brazilian Real. Rate of conversion between $ and R$ is 3.80
+function convertToUSD(price) {
+  return "$" + 1.4 * price * 1.01;
+}
+function convertToBRL(price) {
+  return "R$" + 3.8 * price * 1.01;
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
