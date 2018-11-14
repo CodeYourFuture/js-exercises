@@ -13,4 +13,4 @@ console.log(result);
 // - What is the function name?
 // The function's name is getNumber.
 // - Where is the function called? with what parameters?
-// the function is called at line 5. with getNumber. There is no parameters  so there is no agreements.
+// the function is called at line 5. with getNumber. There is no parameters  so there is no arguments.
