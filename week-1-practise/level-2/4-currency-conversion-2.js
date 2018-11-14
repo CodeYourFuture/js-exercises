@@ -7,12 +7,13 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-// R$ symbol of the Brazilian Real. Rate of conversion between $ and R$ is 3.80
+// R$ symbol of the Brazilian Real. Rate of conversion from £ to $ is 1.4
+// the conversion rate from £ to R$ is 4.9165 on the (14.11.18). Assuming that our currency is £
 function convertToUSD(price) {
   return "$" + 1.4 * price * 1.01;
 }
 function convertToBRL(price) {
-  return "R$" + 3.8 * price * 1.01;
+  return "R$" + 4.9165 * price * 1.01;
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
