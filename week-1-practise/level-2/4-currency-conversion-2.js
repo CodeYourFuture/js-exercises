@@ -7,12 +7,15 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
+//As all currency conversions raised by 1%
+//function extra(price){
+  //return 1.01* price}
+
 function convertToUSD(price) {
-  return price *1.3*1.01;
+  return (1.3* extra(price)).toFixed(2);
 }
 function convertToBRL(price) {
-  return convertToUSD(price)*3.73;
-}
+  return (3.81*extra(price)).toFixed(2);}
 
 /* DO NOT EDIT BELOW THIS LINE *
 /* --------------------------- */

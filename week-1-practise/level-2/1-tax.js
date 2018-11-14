@@ -6,7 +6,7 @@
 */
 
 function calculateSalesTax(num) {
-return num * 0.2
+  return num * 0.2
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
@@ -20,3 +20,4 @@ console.log("Product: " + product);
 console.log("Price: £" + price);
 console.log("Sales tax: £" + salesTax);
 console.log("Total: £" + (price + salesTax));
+//I noticed to get use of the prettier function you need to press alt+shift+f. it is not automatical 
