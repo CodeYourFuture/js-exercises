@@ -8,3 +8,4 @@ var result = concatenate("code", "your", "future");
 console.log(result); // expected result = "codeyourfuture"
 
 // Level 1 done
+//ok
