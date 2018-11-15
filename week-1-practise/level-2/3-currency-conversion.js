@@ -6,7 +6,7 @@
 */
 
 function convertToUSD(price) {
-  return "$" + Math.round(price * 1.29631);
+  return price * (1.29631).toFixed(2);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
