@@ -11,9 +11,7 @@
 */
 
 var startingValue = 5;
-var result = function() {
-  return "£" + (startingValue * 2 + 10).toFixed(2);
-};
+var result = format(startingValue * multiply(2) + add(10));
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
