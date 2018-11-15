@@ -7,7 +7,7 @@ console.log(result);
 
 // Answer these questions:
 // - What does this program do?
-// Math.random() returns a number in the range 0 and 1.
+// Math.random() returns a random number in the range 0 and 10.
 // - How many parameters does the function take?
 // There is no parameters;
 // - What is the function name?
