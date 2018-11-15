@@ -8,7 +8,7 @@
 */
 
 function convertToUSD(price) {
-  return price * 1.3 * (1 + 1 / 100);
+  return price * 1.3 * 1.01;
 }
 function convertToBRL(price) {
   return convertToUSD(price) * 3.78;
