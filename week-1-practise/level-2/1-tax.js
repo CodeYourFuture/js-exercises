@@ -20,3 +20,4 @@ console.log('Product: ' + product);
 console.log('Price: £' + price);
 console.log('Sales tax: £' + salesTax);
 console.log('Total: £' + (price + salesTax));
+console.log('Total: £' + (price + salesTax));
