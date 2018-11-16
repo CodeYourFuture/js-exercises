@@ -1,8 +1,8 @@
-function s(w1, w2) {
+function concatenate(string1, string2) {
     return w1.concat(w2);
 }
 
-var result = s('code', 'your');
+var result = concatenate('code', 'your');
 console.log(result);
 
 // Answer these questions:
@@ -12,3 +12,10 @@ console.log(result);
 // - Where is the function called? with what parameters?
 // - What does the function return?
 // - How can this function be improved?
+/*-Response
+the programme concatenate two parameter
+the function take two parameter
+ the name is concatenate
+ the function is called in line 5, code and your
+
+the function return codeyour*/
