@@ -7,9 +7,12 @@
 */
 
 function negativeOrPositive(number) {
-
+  if (number < 0) {
+    return "negative"
+  } else if (number >= 0) {
+    return "positive"
+  }
 }
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -27,4 +30,5 @@ console.log(number3 + " is " + negativeOrPositive(number3));
   5 is positive
   -1 is negative
   0 is positive
-*/
+*//* 
+js has no strict equal or greater sign inside it */

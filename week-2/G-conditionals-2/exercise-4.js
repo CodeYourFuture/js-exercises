@@ -9,8 +9,24 @@
 */
 
 function containsCode(sentence) {
-
+  var word = sentence.search("code");
+  if (word >= 0) {
+    return true
+  } else {
+    return false
+  }
 }
+
+/*
+function containsCode(sentence) {
+  var word = sentence.match("code");
+  if (word == "code") {
+    return true
+  } else {
+    return false
+  }
+}
+*/
 
 /* 
 DO NOT EDIT BELOW THIS LINE
