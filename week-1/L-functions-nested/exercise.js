@@ -3,3 +3,8 @@ var mentor2 = "Irina";
 var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
+console.log("Hello" + mentor1);
+console.log("Hello" + mentor2);
+console.log("Hello" + mentor3);
+console.log("Hello" + mentor4);
+console.log("Hello" + mentor5);
