@@ -6,7 +6,7 @@
 */
 
 var codeYourFutureIsGreat = true;
-var mozafarIsCool = false;
+var mIsCool = false;
 var caluclationCorrect = true;
 var moreThan10Students = false;
 
@@ -15,7 +15,7 @@ var moreThan10Students = false;
   --------------------------- */
 
 console.log("Is Code Your Future great?", codeYourFutureIsGreat);
-console.log("Is Mozafar cool?", mozafarIsCool);
+console.log("Is Mozafar cool?", mIsCool);
 console.log("Does 1 + 1 = 2?", caluclationCorrect);
 console.log("Are there more than 10 students?", moreThan10Students);
 
