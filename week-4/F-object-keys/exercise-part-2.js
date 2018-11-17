@@ -44,3 +44,22 @@ console.log(Object.keys(storeBranches.glasgow));
 console.log(Object.keys(storeBranches.glasgow.interns));
 
 // ONLY EDIT ABOVE THIS LINE
+
+function revrot(str, sz) {
+  let transformedStr = "";
+  if (str.length >= sz && sz > 0) {
+    for (let i = 0; i < Math.floor(str.length / sz); i++) {
+      let newStr = str.slice(i * sz, (i + 1) * sz);
+      let sumOfCubes = 0;
+      for (let j = 0; j < newStr.length; j++) {
+        sumOfCubes += Math.pow(newStr[j], 3);
+      }
+      if (sumOfCubes % 2 === 0) {
+        transformedStr += newStr.substr(1) + newStr.charAt(0);
+      } else {
+        transformedStr += newStr.charAt(newStr.slice(-1));
+      }
+    }
+  }
+  return transformedStr;
+}

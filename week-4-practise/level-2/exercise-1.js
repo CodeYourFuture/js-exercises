@@ -42,3 +42,12 @@ if (!bottle.empty()) {
   console.log("bottles volume = " + bottle.volume);
 }
 console.log("Above volume should be: 70");
+function aliasGen(yourFirstName, yourLastName) {
+  const aliasFirst = yourFirstName[0].toUpperCase();
+  const aliasLast = yourLastName[0].toUpperCase();
+  const aliasFullName = `${firstName[aliasFirst]} ${surname[aliasLast]}`;
+  return firstName.hasOwnProperty(aliasFirst) &&
+    surname.hasOwnProperty(aliasLast)
+    ? aliasFullName
+    : "Your name must start with a letter from A - Z.";
+}
