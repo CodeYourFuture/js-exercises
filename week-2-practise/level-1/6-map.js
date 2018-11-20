@@ -11,7 +11,7 @@ function tidyUpString(str) {
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidy; // ONLY EDIT THIS LINE
+var mentorsTidy = mentors.map(tidyUpString); // ONLY EDIT THIS LINE
 
 console.log(mentorsTidy);
 
@@ -20,3 +20,5 @@ console.log(mentorsTidy);
   ---------------
   ["daniel", "irina", "gordon", "ashleigh"]
 */
+
+//Done

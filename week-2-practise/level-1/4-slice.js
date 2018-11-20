@@ -1,6 +1,12 @@
 // Write a function `first5` that:
 // - returns the first 5 items from a provided array
 
+//options: numbers.slice(),
+
+function first5(numbers) {
+  return numbers.slice(0, 4); //Checked, stick to it
+}
+
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -14,3 +20,5 @@ console.log(first5Numbers);
   ---------------
   [1, 2, 3, 4, 5]
 */
+
+//Done

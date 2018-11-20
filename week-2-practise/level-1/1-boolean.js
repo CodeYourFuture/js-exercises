@@ -1,7 +1,9 @@
 // The code is valid but the program does not produce the expected result
 // Fix it.
 
-var isHappy = false;
+// You may use return
+
+var isHappy = true;
 
 if (isHappy) {
   console.log("I am happy");
@@ -14,3 +16,5 @@ if (isHappy) {
   ---------------
   I am happy
 */
+
+//Done
