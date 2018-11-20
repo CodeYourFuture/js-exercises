@@ -20,11 +20,11 @@ function calculateGrade(mark) {
     return "Go home";
   }
 }
-//Done
+//
 /* 
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */
-var grade1 = 49;
+var grade1 = 49; // These number are linked to the function above
 var grade2 = 90;
 var grade3 = 70;
 var grade4 = 55;
