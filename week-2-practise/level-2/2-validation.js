@@ -2,9 +2,12 @@
 // - is a number
 // - is a positive number
 // - is less than or equal to 100
-// Tip: write other small functions for each requirement
+// Tip: write other small functions for each requirement***
 
-function validate(num) {}
+function validate(num) {
+
+  return num >= 0 && num <= 100 && typeof num == "number";
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
