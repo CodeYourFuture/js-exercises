@@ -20,7 +20,7 @@ function calculateGrade(mark) {
     return "Go home";
   }
 }
-
+//Done
 /* 
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */

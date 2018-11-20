@@ -8,13 +8,20 @@
   Hint: Google how to check if a string contains a word
 */
 
+/*Option to try:
+(sentence = str.includes(code)))
+or you may use the function $sentence.includes(code) *note when you write this in a function, you don't write tthe $ sign
+
+*/
+
 function containsCode(sentence) {
-  if ((sentence = str.includes("code"))) {
+  if (sentence.includes("code")) {
     return true;
   } else {
     return false;
   }
 }
+//G-conditional is done
 
 /* 
 DO NOT EDIT BELOW THIS LINE
