@@ -4,12 +4,13 @@
 
 var nums = [10, 1, 5, 29, 100];
 var nums2 = [11, 6, 3, 29, 12];
-var sortedNums; // complete this statement
+var sortedNums = (nums.concat(nums2)).sort(function (a, b) { return a - b }); // complete this statement
 
 console.log(sortedNums);
 
 // 2. Using code, show that the variables nums and nums2 were not changed
-
+console.log(nums, nums2)
+//or var newNums=nums; and newNums2=nums2; if (newNums ==nums && newNums2==nums2){return "nothing new mate"}
 /* 
   EXPECTED RESULT
   ---------------

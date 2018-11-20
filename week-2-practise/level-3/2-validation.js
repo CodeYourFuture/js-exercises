@@ -6,7 +6,19 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function validate(num) {
+  function number() {
+    return typeof num === "number"
+  }
+  function integer() {
+    return Number.isInteger(num)
+    //another way could be return num%1 === 0
+  }
+  function searchArray() {
+    return !excludedNums.includes(num);
+  }
+  return number() && integer() && searchArray();
+}
 
 console.log(validate(6));
 console.log(validate(10.5));
