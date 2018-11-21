@@ -5,8 +5,18 @@
 // Tip: write other small functions for each requirement
 
 var excludedNums = [6, 14, 91, 111];
-
-function validate(num) {}
+function numType(num) {
+  return typeof num === "number";
+}
+function numInt(num) {
+  return Number.isInteger(num);
+}
+function notEqual(num) {
+  return !excludedNums.includes(num);
+}
+function validate(num) {
+  return numType(num) && notEqual(num) && numInt(num);
+}
 
 console.log(validate(6));
 console.log(validate(10.5));
