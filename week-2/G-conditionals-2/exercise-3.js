@@ -16,7 +16,7 @@ function calculateGrade(grade) {
   } else if (grade < 60 && grade >= 50) {
     return "C";
   } else {
-    return "D";
+    return "F";
   }
 }
 
@@ -31,6 +31,7 @@ var grade4 = 55;
 console.log("'" + grade1 + "': " + calculateGrade(grade1));
 console.log("'" + grade2 + "': " + calculateGrade(grade2));
 console.log("'" + grade3 + "': " + calculateGrade(grade3));
+console.log("'" + grade4 + "': " + calculateGrade(grade4));
 
 /* 
   EXPECTED RESULT
