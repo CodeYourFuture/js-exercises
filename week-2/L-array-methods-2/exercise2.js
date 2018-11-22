@@ -7,7 +7,14 @@
   Tip: use the string method .split() and the array method .join()
 */
 
-function capitalise(str) {}
+function capitalise(str) {
+  return str[0].toUpperCase() + str.substr(1);
+  // .map(function (word) {
+  // console.log("First capital letter: " + word[0]);
+  // console.log("remain letters: " + word.substr(1));
+  // return word[0].toUpperCase() + word.substr(1);
+}
+//.join(' ');
 
 /* 
   DO NOT EDIT BELOW THIS LINE
