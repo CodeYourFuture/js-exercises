@@ -14,6 +14,13 @@ function capitalise(str) {
   word.unshift(letterUp);
   return word.join(" ");
 }
+/*function capitalise(str) {
+  word = str.split(" ");
+  for (var i = 0, x = word.length; i < x; i++) {
+    word[i] = word[i][0].toUpperCase() + word[i].substr(1);
+  }
+  return word.join(" ");
+}*/
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
