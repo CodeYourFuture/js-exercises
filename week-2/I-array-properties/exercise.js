@@ -6,11 +6,11 @@
 */
 
 function isEmpty(arr) {
-  return arr === numbers; // complete this statement
+  return arr <= 0; // complete this statement
 }
 
 function isEmpty(arr) {
-  return arr === names; // complete this statement
+  return arr <= 0; // complete this statement
 }
 
 /* 
