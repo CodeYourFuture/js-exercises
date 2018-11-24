@@ -4,7 +4,9 @@
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
 
-function validate(num) {}
+function validate(num) {
+  return typeof num === "number" && num > 0 && num <= 100;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
