@@ -13,7 +13,8 @@ function findLowestPassScore(nums) {
       return a - b;
     })
     .find(isOver60);
-}
+} // I used  function(a,b) to sort the scores from lowest to largest as numbers
+// then the function .find will return the first value meet the condition in isOver60.
 
 var testScores = [90, 50, 100, 25, 81, 66, 80];
 var lowestPassScore = findLowestPassScore(testScores);
