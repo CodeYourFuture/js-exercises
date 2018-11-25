@@ -8,8 +8,11 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
-
+var pairsByIndex = pairsByIndexRaw.filter(function(pair) {
+  return pair instanceof Array && isNaN(pair) && typeof pair !== "string";
+}); // Complete this statement
+// if we don't add   typeof num !== "string";  it will work but if any
+// of the pairs contain string e.g ([2,"dd"]) it will give undefined for that pair
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
