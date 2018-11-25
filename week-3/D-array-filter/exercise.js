@@ -6,10 +6,12 @@
   - Do not edit any of the existing code
 */
 
-var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
+var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], [1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
-
+var pairsByIndex = pairsByIndexRaw.filter(function(num) {
+  return isNaN(num) && typeof num !== "string"; //typeof num == "number";
+}); // Complete this statement
+console.log(pairsByIndex);
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
