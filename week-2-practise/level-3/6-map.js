@@ -1,5 +1,5 @@
 // 1. Write a function (`captialise`) that capitlises the first letter of a provided string
-// 2. Declare a new array (`mentorsTidy`) containing:
+// 2. Declare a new array (`mentorsTidyAndCapitalised`) containing:
 //    - every item from `mentors` run through the `tidyUpString` function
 //    - every resulting item run through the `captialise` function
 
@@ -11,11 +11,11 @@ function tidyUpString(str) {
 }
 
 function captialise(str) {
-  // complete this function
+  return str[0].toUpperCase() + str.slice(1); // complete this function
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidyAndCapitalised;
+var mentorsTidyAndCapitalised = mentors.map(tidyUpString).map(captialise);
 
 console.log(mentorsTidyAndCapitalised);
 
