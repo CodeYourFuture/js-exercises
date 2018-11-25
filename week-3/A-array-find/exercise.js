@@ -4,6 +4,17 @@
   Using .find() (and any other array methods necessary), find the lowest pass score
 */
 
+function isOver60(score) {
+  return score > 60;
+}
+function findLowestPassScore(nums) {
+  return nums
+    .sort(function(a, b) {
+      return a - b;
+    })
+    .find(isOver60);
+}
+
 var testScores = [90, 50, 100, 25, 81, 66, 80];
 var lowestPassScore = findLowestPassScore(testScores);
 
