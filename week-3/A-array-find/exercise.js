@@ -4,7 +4,7 @@
   Using .find() (and any other array methods necessary), find the lowest pass score
 */
 function overScore(score) {
-  return score >= 60;
+  return score > 60;
 }
 function findLowestPassScore(testScores) {
   testScores.sort(function(a, b) {
