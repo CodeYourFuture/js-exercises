@@ -14,7 +14,10 @@
   Promise"
 */
 function exercise1() {
-  var promise1 = resolvedPromise()
+  var promise1 = resolvedPromise();
+  promise1.then(function(value) {
+    document.querySelector("#exercise1").innerText = value;
+  });
 }
 
 /*
@@ -27,7 +30,10 @@ function exercise1() {
   Promise"
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+  var promise2 = rejectedPromise();
+  promise2.catch(function(value) {
+    document.querySelector("#exercise2").innerText = value;
+  });
 }
 
 /*
@@ -40,7 +46,10 @@ function exercise2() {
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
+  promise3.then(function(value) {
+    document.querySelector("#exercise3").innerText = value;
+  });
 }
 
 /*
@@ -55,7 +64,10 @@ function exercise3() {
   YOUR NAME"
 */
 function exercise4() {
-  var promise4 = concatPromise()
+  var promise4 = concatPromise();
+  promise4.then(function(value) {
+    document.querySelector("#exercise4").innerText = value.concat("Behzad");
+  });
 }
 
 /*
@@ -72,6 +84,10 @@ function exercise4() {
 */
 
 function exercise5() {
+  const promise5 = helloPromise();
+  promise5.then(
+    value => (document.querySelector("#exercise5").innerText = value)
+  );
   // Write your implementation here
 }
 
@@ -89,41 +105,51 @@ function exercise5() {
   wrong!"
 */
 function exercise6() {
+  const promise6 = wrongPromise();
+  promise6.catch(
+    value => (document.querySelector("#exercise6").innerText = value)
+  );
   // Write your implementation here
 }
 
-
-// 
+//
 // -------------------------------------
-// 
+//
 // DON'T EDIT THE FUNCTIONS BELOW!
 // THEY ARE PROVIDED FOR YOU
 //
 // -------------------------------------
 //
 function resolvedPromise() {
-  return Promise.resolve('A Promising Promise')
+  return Promise.resolve("A Promising Promise");
 }
 
 function rejectedPromise() {
-  return Promise.reject('A Unpromising Promise')
+  return Promise.reject("An Unpromising Promise");
 }
 
 function delayedPromise() {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
-      resolve('A Longer Promise')
-    }, 2000)
-  })
+      resolve("A Longer Promise");
+    }, 2000);
+  });
 }
 
 function concatPromise() {
-  return Promise.resolve('A Promise from: ')
+  return Promise.resolve("A Promise from: ");
 }
 
-exercise1()
-exercise2()
-exercise3()
-exercise4()
-exercise5()
-exercise6()
+function helloPromise() {
+  return Promise.resolve("Hello Promises!");
+}
+
+function wrongPromise() {
+  return Promise.reject("Something went wrong!");
+}
+exercise1();
+exercise2();
+exercise3();
+exercise4();
+exercise5();
+exercise6();
