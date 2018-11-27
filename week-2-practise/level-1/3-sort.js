@@ -1,4 +1,4 @@
-// Update the variable `sortedLetters` so that it contains the values of `letters` in ascending order
+// Update the variable `sortedLetters` so that it contains the values of `
 // TIP: use an array method
 
 var letters = ["a", "n", "c", "e", "z", "f"];
