@@ -1,6 +1,6 @@
 /*
   You are given a program that logs pairings between mentors and students
-  It fails because the array `pairsById` can contain null values
+  It fails because the array `pairsByIndex` can contain null values
   It is decided that if there is a null value the program should exit
   - Add a check for null values, and if one exists, exit the program
   - Do not edit any of the existing code

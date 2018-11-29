@@ -2,8 +2,8 @@ Like humans, computer programs make decisions based on information given to them
 
 For example:
 
-* In a game, if the player has 0 lives, then the game is over
-* In a weather app, if rain is forecast, a picture of rain clouds is shown
+- In a game, if the player has 0 lives, then the game is over
+- In a weather app, if rain is forecast, a picture of rain clouds is shown
 
 The most common type of conditional is the **if statement**.
 
@@ -53,7 +53,7 @@ An **if...else statement** also runs code when the condition is _not_ met.
 ```js
 var isHappy = true;
 
-if (isHappy) {
+if (!isHappy) {
   console.log("I am happy 😄");
 } else {
   console.log("I am not happy 😢");
