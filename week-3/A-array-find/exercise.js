@@ -5,7 +5,10 @@
 */
 
 var testScores = [90, 50, 100, 25, 81, 66, 80];
-var lowestPassScore = findLowestPassScore(testScores);
+testScores.sort((a, b) => a - b);
+var lowestPassScore = testScores.find(function(testScores) {
+  return testScores > 60;
+});
 
 console.log(lowestPassScore);
 
