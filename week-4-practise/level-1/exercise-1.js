@@ -6,7 +6,7 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
 var writers = [
   {
@@ -36,9 +36,36 @@ var writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  },
+  }
 ];
-
+var greet = writers.map(
+  writers =>
+    "Hi, my name is " +
+    writers.firstName +
+    " " +
+    writers.lastName +
+    ". I am " +
+    writers.age +
+    " years old, and work as a " +
+    writers.occupation
+);
+console.log(greet);
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+console.log("------------------------------------------------------");
+
+var greetAlive = writers
+  .filter(writers => writers.alive)
+  .map(
+    writers =>
+      "Hi, my name is " +
+      writers.firstName +
+      " " +
+      writers.lastName +
+      ". I am " +
+      writers.age +
+      " years old, and work as a " +
+      writers.occupation
+  );
+console.log(greetAlive);
