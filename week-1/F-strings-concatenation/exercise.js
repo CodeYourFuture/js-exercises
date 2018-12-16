@@ -1,3 +1,5 @@
 // Start by creating a variable `message`
-
-console.log(message);
+var message = "Hello my name is";
+var name = "Bart";
+var myName = message + name;
+console.log(myName);
