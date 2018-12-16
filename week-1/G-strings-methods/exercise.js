@@ -1,3 +1,5 @@
 // Start by creating a variable `message`
-
-console.log(message);
+var myName = "Ivina";
+console.log(
+  " My name is " + myName + " and my name has " + myName.length + " letters"
+);
