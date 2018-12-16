@@ -1,3 +1,5 @@
-// Start by creating a variable `greeting`
-
+var greeting = 'Mehaba';
 console.log(greeting);
+console.log(greeting);
+console.log(greeting);
+
