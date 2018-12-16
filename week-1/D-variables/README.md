@@ -24,3 +24,7 @@ Hello world
 Hello world
 Hello world
 ```
+var var1 = "good Morning";
+console.log(var1);
+console.log(var1);
+console.log(var1);
