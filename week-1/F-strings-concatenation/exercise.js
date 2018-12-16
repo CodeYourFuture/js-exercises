@@ -1,3 +1,4 @@
 // Start by creating a variable `message`
-
-console.log(message);
+message = "Hello, my name is";
+name = "Jack";
+console.log(message + " " + name + ".");

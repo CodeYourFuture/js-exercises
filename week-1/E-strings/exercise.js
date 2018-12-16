@@ -1,3 +1,4 @@
 // Start by creating a variable `message`
-
-console.log(message);
+message = "Hi";
+messageType = typeof message;
+console.log(message+" is a "+messageType);
