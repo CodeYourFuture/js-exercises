@@ -1,3 +1,3 @@
 // Start by creating a variable `message`
-
-console.log(message);
+var message = "My name is clement freeborn, i just started my first week of javascripts"
+console.log(message.length);
