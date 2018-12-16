@@ -1,4 +1,6 @@
 function halve(number) {
+  return number / 2;
+
   // complete the function here
 }
 
