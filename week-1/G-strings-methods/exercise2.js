@@ -1,3 +1,4 @@
-var name = " Daniel  ";
+// Start by creating a variable `message`
+var name = 'Matthew 711';
 
-console.log(message);
+console.log(name.trim());
