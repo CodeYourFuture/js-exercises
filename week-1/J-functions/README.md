@@ -20,8 +20,8 @@ console.log(result); // 4
 
 ## Exercise
 
-* Complete the function in exercise.js so that it halves the input
-* Try calling the function more than once with some different numbers
+- Complete the function in exercise.js so that it halves the input
+- Try calling the function more than once with some different numbers
 
 > Remember to use the return keyword to get a value out of the function
 
@@ -33,7 +33,7 @@ console.log(result); // 4
 
 ## Exercise 2
 
-* Complete the function in exercise2.js so that it triples the input
+- Complete the function in exercise2.js so that it triples the input
 
 ## Expected result
 
