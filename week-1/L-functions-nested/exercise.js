@@ -17,7 +17,7 @@ function printPercentage(percentageOfStudents, percentageOfMentors) {
   console.log("Percentage mentors: " + Math.round(percentageOfMentors) + "%");
 }
 
-//prints the metors greetin
+//prints the metors greeting
 function printGreeting(name) {
   console.log("Hello " + name.toUpperCase());
 }
