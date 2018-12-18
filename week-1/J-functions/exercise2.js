@@ -3,6 +3,6 @@ function triple(number) {
   return 3 * number;
 }
 
-var result = triple(12);
+var result = triple(8);
 
 console.log(result);
