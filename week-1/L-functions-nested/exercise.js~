@@ -1,0 +1,17 @@
+/*
+var mentor1 = "Daniel";
+var mentor2 = "Irina";
+var mentor3 = "Mimi";
+var mentor4 = "Rob";
+var mentor5 = "Yohannes";
+*/
+
+
+function mentorsStudents(ments, studs) {
+  var percentagemen = (ments / studs) * 100;
+  var percentstud = (studs / ments ) * 100;
+  return percentstud
+
+}
+
+console.log(mentorsStudents(9, 26))
