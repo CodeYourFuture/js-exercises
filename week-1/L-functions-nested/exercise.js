@@ -15,12 +15,15 @@ function percentageFinal (percentageStudents, percentageMentors) {
     console.log("Percentage students: " + Math.round(percentageStudents) + "%");
     console.log("Percentage mentors: " + Math.round(percentageMentors) + "%");
 }
+
+percentage(20,11)
+
 // exercise 2
 function printShoutyGreeting (name) {
     console.log("Hello " + name.toUpperCase());
 }
 
-percentage(20,11)
+
 printShoutyGreeting("Daniel");
 printShoutyGreeting("Irina");
 printShoutyGreeting("Mimi");
