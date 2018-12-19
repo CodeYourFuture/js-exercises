@@ -1,7 +1,7 @@
 // Declare your function first
 function add(a, b) {
-    var sum = a + b;
-    return sum;
+
+    return a + b;
 }
 
 // Call the function and assign to a variable `sum`
