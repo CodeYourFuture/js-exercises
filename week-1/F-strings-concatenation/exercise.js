@@ -1,5 +1,5 @@
 // Start by creating a variable `message`
-var name = "Najla"
-Var age = "32"
-var person = (name +age )
-console.log(message);
+var greetingStart = " hi";
+var name = " my name is Najla ";
+var greeting = greetingStart + name;
+console.log(greeting);
