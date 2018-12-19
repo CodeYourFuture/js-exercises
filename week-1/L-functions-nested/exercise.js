@@ -1,5 +1,5 @@
-var students = 30;
-var mentors = 6;
+var students = 104;
+var mentors = 56;
 
 var total = students + mentors;
 
