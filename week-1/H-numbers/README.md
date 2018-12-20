@@ -9,10 +9,10 @@ var age = 30;
 You can use mathematical operators to caclulate numbers:
 
 ```js
-var sum = 10 + 2; // 12
-var product = 10 * 2; // 20
-var quotient = 10 / 2; // 5
-var difference = 10 - 2; // 8
+var numberOfStudents=26;
+var numberOfMentors= 20;
+var total= numberOfStudents + numberOfMentors;
+console.log(total);
 ```
 
 ## Exercise
