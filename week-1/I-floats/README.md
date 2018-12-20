@@ -9,15 +9,20 @@ Floats can be rounded to the nearest whole number using the `Math.round` functio
 ```js
 var preciseAge = 30.612437;
 var roughAge = Math.round(preciseAge); // 30
+var mentors=15;
+var students=26;
+var ratioOfMentorsToStudents= mentors/students;
+var roughROMS=Math.round(ratioOfMentorsToStudents);
+console.log(roughROMS);
+
 ```
 
 ## Exercise
 
-* Using the variables provided in the exercise calculate the percentage of mentors and students in the group
+* Using the variables provided in the exercise calculate the float and math.round
 
 ## Expected result
 
 ```
-Percentage students: 65%
-Percentage mentors: 35%
+1
 ```
