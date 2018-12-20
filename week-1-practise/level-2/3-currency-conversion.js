@@ -5,7 +5,10 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(poundPrice) {
+  return poundPrice * 1.4;
+}
+
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
