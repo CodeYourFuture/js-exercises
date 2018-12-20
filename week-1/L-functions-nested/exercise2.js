@@ -21,5 +21,5 @@ function greeting() {
 }
 
   for (var i = 0; i < upperCase.length; i++) {
-    console.log(greeting(upperCase[i]))
+    console.log(greeting(upperCase))
   }

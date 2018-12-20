@@ -7,9 +7,22 @@
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToUSD(price) {}
-function convertToBRL(price) {}
+function commisionNumber(num) {
+	number = (num/100) + num
+	return number
+}
 
+function convertToUSD(num) {
+	var usconvert = num * 1.4
+	var usadd = commisionNumber(usconvert)
+	return usadd.toFixed(2)
+
+}
+function convertToBRL(num) {
+	var brconvert = num * 4.9
+	var bradd = commisionNumber(brconvert)
+	return bradd.toFixed(2)
+}
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 

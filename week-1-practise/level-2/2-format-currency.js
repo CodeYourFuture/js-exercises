@@ -6,7 +6,11 @@
   Write a function that transforms numbers into the format £0.00
 */
 
-function formatCurrency() {}
+function formatCurrency(num) {
+	var decimalprice = num.toFixed(2)
+	var message = '£' + decimalprice
+	return message
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */

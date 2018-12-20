@@ -5,11 +5,13 @@
 */
 
 function first(arr) {
-  return; // complete this statement
+  var first =  arr[0]
+  return first
 }
 
 function last(arr) {
-  return; // complete this statement
+  var lastValue = arr[arr.length-1]
+  return lastValue
 }
 
 /* 
@@ -18,7 +20,7 @@ function last(arr) {
 var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-console.log(first(arr));
+console.log(first(numbers));
 console.log(last(names));
 
 /* 
