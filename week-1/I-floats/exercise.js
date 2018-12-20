@@ -1,4 +1,4 @@
-function percentage(numberOfMentors, numberOfStudents) {
+function getPercentage(numberOfMentors, numberOfStudents) {
   var total = numberOfMentors + numberOfStudents;
 
   var percentageStudents = Math.round((numberOfStudents * 100) / total);
@@ -8,4 +8,4 @@ function percentage(numberOfMentors, numberOfStudents) {
   console.log("Percentage Mentors: " + percentageMentors + "%");
 }
 
-percentage(8, 15);
+getPercentage(8, 15);
