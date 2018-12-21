@@ -38,5 +38,5 @@ console.log(result); // 4
 ## Expected result
 
 ```
-24
+36
 ```
