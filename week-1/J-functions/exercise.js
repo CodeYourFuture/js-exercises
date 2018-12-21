@@ -1,4 +1,4 @@
-function halve(number) {
+function halve() {
   // complete the function here
 }
 
