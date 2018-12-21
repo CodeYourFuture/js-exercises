@@ -1,4 +1,5 @@
 function halve(number) {
+  return number;
   // complete the function here
 }
 
