@@ -1,14 +1,27 @@
-function createPercentages(ments, studs, totalnum = 23) {
-  var permen = (ments / totalnum) * 100;
-  var perstu = (studs / totalnum) * 100;
-  permen = permen.toFixed(0)
-  perstu = perstu.toFixed(0)
-  return [permen, perstu]
+function createPercentage(value, totalNum = 23) {
+	var generatePercentage = (value / totalNum) * 100
+	return generatePercentage.toFixed(0) + '%'
 }
 
-function displayPercentages(ments, studs, totalnum = 23) {
-  var getpercents = createPercentages(ments, studs, totalnum)
-  var message = 'Percentage Students: ' + getpercents[0] + '%' + '\nPercentage Mentors: ' + getpercents[1] + '%';
-  return message
+
+function displayPercentage(firstPercentage, secondPercentage){
+	console.log('Percentage Students: ' + createPercentage(firstPercentage))
+	console.log('Percentage Mentors: ' + createPercentage(secondPercentage, 23))
+
 }
-console.log(displayPercentages(8, 15))
+
+displayPercentage(15,8)
+
+/* While total number is set to a default value (23) this can be overwritten by adding a second parameter to
+the function call within the console logs. This is shown in the Percentage Mentors console log
+for demonstration purposes.
+
+I have found this exercise rather challenging and I'm not sure if this is anywhere near the 'correct' solution.
+
+This revision has been based on what I have gained from mentors comments on solutions of this exercise
+on mine, and others, PRs. These comments have been very helpful.
+
+I have tried as far as possible to keep the DRY principle in mind when
+producing this code (apart from in this comment, clearly).
+
+Feedback is greatly appreciated! :) */
