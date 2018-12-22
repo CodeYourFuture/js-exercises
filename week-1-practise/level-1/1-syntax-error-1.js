@@ -1,6 +1,6 @@
 // There is a syntax error in this code. Fix it.
 
-function addNumbers(a b c) {
+function addNumbers(a, b, c) {
     return a + b + c;
 }
 
@@ -9,6 +9,9 @@ console.log(result); // Expected result 8 - Run the program and make sure it wor
 
 
 // Answer these questions:
-// 1. How many parameters does the function take?
+// 1. How many parameters does the function take? 
+        //3
 // 2. What is the function name?
+        //addNumbers
 // 3. Where is the function called? with what parameters?
+        //The function is called at the line 7; with 1, 3 and 4 as parameters
