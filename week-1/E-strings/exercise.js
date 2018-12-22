@@ -16,7 +16,3 @@ var messageType = typeof message;
 console.log(message);
 console.log(messageType);
 
-var message = ;
-var messageType = typeof message;
-console.log(message);
-console.log(messageType);
