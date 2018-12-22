@@ -1,4 +1,4 @@
-The next data type we will learn is **number**.
+cd The next data type we will learn is **number**.
 
 Unlike strings, numbers do not need to be wrapped in quotes.
 
