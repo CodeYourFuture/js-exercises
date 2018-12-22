@@ -10,5 +10,5 @@ console.log(result);
 // - How many parameters does the function take? two
 // - What is the function name? s
 // - Where is the function called? with what parameters? the function is called on line number 5 with the following parameters('code', 'your')
-// - What does the function return? the function return s
+// - What does the function return? the function return code your
 // - How can this function be improved? the function can be improved in my view by have a better function name and proper spacing.
