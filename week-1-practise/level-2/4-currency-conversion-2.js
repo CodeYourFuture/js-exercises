@@ -12,11 +12,11 @@ function onePercent (price){
 }
 
 function convertToUSD(price) {
-  return (price * 1.4) + onePercent(price);
+  return ((price * 1.4) + onePercent(price)).toFixed(2);
 }
 
 function convertToBRL(price) {
-  return (price * 4.9) + onePercent(price);
+  return ((price * 4.9) + onePercent(price)).toFixed(2);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
