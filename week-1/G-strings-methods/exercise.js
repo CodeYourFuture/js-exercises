@@ -1,3 +1,5 @@
 // Start by creating a variable `message`
-
-console.log(message);
+var greeting = "Hello";
+var myName = "Sola";
+var nameLength = myName.length;
+console.log(greeting + " My name is "+ myName + " and my name is " +nameLength +" characters long");

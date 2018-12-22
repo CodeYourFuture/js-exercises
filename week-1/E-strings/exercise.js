@@ -1,3 +1,5 @@
 // Start by creating a variable `message`
-
-console.log(message);
+var message = "This is a string";
+var messageType = typeof message;
+console.log(messageType);
+console.log(`The type of the variable is ${messageType}`);

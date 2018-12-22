@@ -1,5 +1,8 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+function createPercentage(sts, mts) {
+var sumT = sts + mts
+var percSts = sts/sumT * 100;
+var percMts = mts/sumT * 100;
+    return percSts, percMts;
+ }
+ function greeting ()= createLongCreeting('Daniel', 30);
+ console.log(greeting);
