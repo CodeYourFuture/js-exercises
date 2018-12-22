@@ -1,12 +1,11 @@
 function percentage(number) {
-  var roughPercentage = Math.round(100 * number);
-  return roughPercentage;
+  return Math.round(number);
 }
 
 function message(numberOfStudents, numberOfMentors) {
   var total = numberOfStudents + numberOfMentors;
-  var studentsPercentage = numberOfStudents / total;
-  var mentorsPercentage = numberOfMentors / total;
+  var studentsPercentage = (100 * numberOfStudents) / total;
+  var mentorsPercentage = (100 * numberOfMentors) / total;
   var roughStudentsPercentage = percentage(studentsPercentage);
   var roughMentorsPercentage = percentage(mentorsPercentage);
   var message =
