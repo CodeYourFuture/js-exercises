@@ -1,0 +1,979 @@
+[33mcommit 1cbe9948745bdfc8f0189fc482c1fdba481cee0e[m
+Author: Joan Yassi <sahiealexandre@hotmail.fr>
+Date:   Sun Dec 16 16:40:56 2018 +0000
+
+    Joan answers to the part G1
+
+[33mcommit 27da2751c8638511d295c4dcfd1710bc6fe04661[m
+Author: Joan Yassi <sahiealexandre@hotmail.fr>
+Date:   Sun Dec 16 16:39:09 2018 +0000
+
+    Joan answers to the part d
+
+[33mcommit 05e4bdbe153153634b54b91b14006f0e1851f98b[m
+Author: Joan Yassi <sahiealexandre@hotmail.fr>
+Date:   Sun Dec 16 16:37:19 2018 +0000
+
+    Joan answers part c
+
+[33mcommit e557a0badb79d4a4d1a0d59d22fef9f1ec8cb57d[m
+Merge: 96c887d 8dbd688
+Author: Alasdair Smith <alasdairsmith100@gmail.com>
+Date:   Sun Jul 1 13:49:43 2018 +0100
+
+    Merge pull request #128 from CodeYourFuture/improve-callbacks-promises-wording
+    
+    Improve wording of callbacks and promises exercises
+
+[33mcommit 8dbd688d9c485e6ea31d9670a9e17a6d6fbbd72a[m
+Author: Alasdair Smith <ali@alasdairsmith.co.uk>
+Date:   Fri Jun 22 21:17:50 2018 +0100
+
+    Fix path
+
+[33mcommit 8c263f4ab389e559c1097c9bb90a564661aef624[m
+Author: Alasdair Smith <ali@alasdairsmith.co.uk>
+Date:   Fri Jun 22 20:12:16 2018 +0100
+
+    Address feedback
+
+[33mcommit 837a081b038d06b31bddc7da835ad87a8e93251c[m
+Author: Alasdair Smith <ali@alasdairsmith.co.uk>
+Date:   Sun Jun 17 21:52:06 2018 +0100
+
+    Improve wording of callbacks and promises exercises
+
+[33mcommit 96c887dbc06a37f2afe4359b83e26b9cd92255b1[m
+Merge: f940e62 1809a09
+Author: Alasdair Smith <alasdairsmith100@gmail.com>
+Date:   Mon Jun 11 21:12:39 2018 +0100
+
+    Merge pull request #123 from CodeYourFuture/add-callbacks-promises
+    
+    Add callbacks and promises exercises
+
+[33mcommit 1809a097630b446638fdb51afe274eba6167a71b[m
+Author: Alasdair Smith <ali@alasdairsmith.co.uk>
+Date:   Mon Jun 11 20:24:54 2018 +0100
+
+    Extract callbacks exercises to separate file and address feedback
+
+[33mcommit ac01db160f10938403bc8a491e3ad5d90715df52[m
+Author: Alasdair Smith <ali@alasdairsmith.co.uk>
+Date:   Mon Jun 11 20:08:51 2018 +0100
+
+    Rename dirs to make room for callbacks dir
+
+[33mcommit 8049b5e5ef5480263e03ae7c76dda6d6203a7cd3[m
+Author: Alasdair Smith <ali@alasdairsmith.co.uk>
+Date:   Sun Jun 10 22:02:43 2018 +0100
+
+    Add callbacks and promises exercises
+
+[33mcommit 57918b67b73211e4da0221fc07425b80811042f7[m
+Author: Alasdair Smith <ali@alasdairsmith.co.uk>
+Date:   Sun Jun 10 22:02:18 2018 +0100
+
+    Increment naming to make space for callbacks/promises
+
+[33mcommit f940e6230ddc4360668e241f0a7558fce7eabdce[m
+Author: Bex B <bexb1@hotmail.com>
+Date:   Sat Jun 2 20:39:30 2018 +0100
+
+    Week 5 DOM manipulation practice added.
+
+[33mcommit 77ec4f5ecc1cc03831fdc3ab4e384154780a17ef[m
+Author: dubchoi <wchoi25@gmail.com>
+Date:   Sun May 13 20:08:52 2018 +0100
+
+    Fix variable name in week-3/A-array-find exercise (#94)
+
+[33mcommit 90341492fb21e9b6fcdf6fa54e66b2e8cf7eb64d[m
+Author: Jonny Schmid <hi@jonathanschmid.de>
+Date:   Fri May 11 08:19:56 2018 +0100
+
+    Fix EXPECTED RESULT section (#90)
+
+[33mcommit 91136b0256b20b680f949817c3915c1efa920251[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Mon Mar 26 16:13:24 2018 +0100
+
+    removed label
+
+[33mcommit 5c1ea7386d867454f15125e31029cebfe1b191f2[m
+Merge: 9590a8c faa18ce
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Mon Mar 26 16:12:15 2018 +0100
+
+    Merge pull request #43 from CodeYourFuture/feature/Object-keys
+    
+    Week 4 - Part F - Object.keys
+
+[33mcommit 9590a8c908acc7ff27b552ac82f969e620e9dc5d[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 24 16:45:39 2018 +0000
+
+    update with input box lookup
+
+[33mcommit b6f4e72200f8b5a3e27a66dafd6edadd80ed2658[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 24 13:59:26 2018 +0000
+
+    remove title
+
+[33mcommit 51f1f3fdf8a68be7e5250981288cf696ecf6ad08[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 24 13:59:01 2018 +0000
+
+    removed AJAX lesson from DOM readme
+
+[33mcommit d3c2fe2c453d325d8963c1dbefbf61107cd2f524[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 24 13:55:29 2018 +0000
+
+    add DOM readme, renamed AJAX readme
+
+[33mcommit 68319a0ab715d2ad98454fb11c2e84fc69cc79d9[m
+Merge: 8f5eac6 b805068
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 24 08:59:39 2018 +0000
+
+    Merge pull request #52 from CodeYourFuture/week-5
+    
+    Week 5 - DOM + AJAX
+
+[33mcommit b805068b9fd194bec479299c6e7b696865d4fb15[m
+Merge: 02a4894 945d1cf
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 24 08:51:49 2018 +0000
+
+    Merge pull request #51 from rarmatei/week-5
+    
+    Week 5 - DOM manipulation
+
+[33mcommit 02a489498f5232b567e2eefb8fcecbff3e48e177[m
+Merge: 8f5eac6 1f70c47
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 24 08:51:32 2018 +0000
+
+    Merge pull request #49 from llh1/week5
+    
+    Week5 - Ajax
+
+[33mcommit 1f70c473b63d2e5d25c57a6d5f396d9f0e39c0ca[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 23 23:19:40 2018 +0000
+
+    Improve exercise and README
+
+[33mcommit 945d1cfd8f8b5619c6e03be9b99e3f0080ccc6c0[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 23 22:20:59 2018 +0000
+
+    changed filenames and improved look of homepage
+
+[33mcommit 4861864a7a81bf86a2522284928130e94a7e72b9[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 23 22:13:45 2018 +0000
+
+    improve class landing page
+
+[33mcommit 7f3aadbea3b60c7615567249d7ded3bcc65421dc[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 23 21:15:52 2018 +0000
+
+    Feedback, split webchat exercise and improve guidelines
+
+[33mcommit 4e8c469368f49b8d639ba280c0a61244bd756190[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 23 20:01:36 2018 +0000
+
+    add dom exercises + homework
+
+[33mcommit ddee50a862bcd02055c7bb43d8799f14c685f506[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 23 00:24:00 2018 +0000
+
+    Add image client server
+
+[33mcommit 9c9fdb22742026e9eee0666bc84012798e44a715[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 23 00:17:37 2018 +0000
+
+    Improve guidelines for exercise 3
+
+[33mcommit c8ccf0fd21d60fa4cbf1b18a612d53c89fee44ff[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 23 00:03:11 2018 +0000
+
+    Add reference to fetch doc
+
+[33mcommit 2a5ea6c62c9113123402714be17939540f234e14[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 23 00:02:56 2018 +0000
+
+    Improve guidelines for exercise 2
+
+[33mcommit 403d5e659a7de30de875f95115ddfdba0d50cdbb[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Thu Mar 22 23:51:28 2018 +0000
+
+    Remove API address to let the student write it
+
+[33mcommit 5ea16e1422c281679ddf35a33471dfe8f1f0fdf0[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Thu Mar 22 00:15:10 2018 +0000
+
+    Update clipboard exercise and add webchat exercise
+
+[33mcommit d46429434bf4354b7e29d8589cbf53aa9035d95f[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Wed Mar 21 23:47:01 2018 +0000
+
+    Move Readme
+
+[33mcommit a3c9a289cb5e6c62fe143923ed3735d8c970f8cd[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Wed Mar 21 23:45:00 2018 +0000
+
+    Add first part A-fetch with hello world exercise
+
+[33mcommit faa18ce76abc2f43e5142996e2c67403b7f31f2a[m
+Author: James Stewart <james.stewart.06@aberdeen.ac.uk>
+Date:   Sat Mar 17 12:46:15 2018 +0000
+
+    few tweaks
+
+[33mcommit 5ca52eeee2282dde4a30a3b84ca55b5c26145f17[m
+Merge: c5e6e50 29e6def
+Author: James Stewart <james.stewart.06@aberdeen.ac.uk>
+Date:   Sat Mar 17 12:18:51 2018 +0000
+
+    Merge branch 'feature/Object-keys' of github.com:CodeYourFuture/js-exercises into feature/Object-keys
+
+[33mcommit c5e6e508c36f7516e7cb2ad096876e37efaef46a[m
+Merge: eb60ab1 8f5eac6
+Author: James Stewart <james.stewart.06@aberdeen.ac.uk>
+Date:   Sat Mar 17 12:17:53 2018 +0000
+
+    Merge branch 'master' of github.com:CodeYourFuture/js-exercises into feature/Object-keys
+
+[33mcommit eb60ab16c88fbeef63859ebcf21a3c1373698128[m
+Author: James Stewart <james.stewart.06@aberdeen.ac.uk>
+Date:   Sat Mar 17 12:17:23 2018 +0000
+
+    some PR's sorted
+
+[33mcommit 8f5eac6403f3e4d8ae4c4a2c13ffc27fdbf53423[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 17 10:58:11 2018 +0000
+
+    deleted homework readme for mentors
+
+[33mcommit d13782d8c160bb3fe9156b3536788532b2aa24d6[m
+Merge: 1c9a58b e5df3d0
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Sat Mar 17 10:52:50 2018 +0000
+
+    Merge pull request #45 from CodeYourFuture/week-4
+    
+    Week 4
+
+[33mcommit e5df3d0a4807d747e8e581e62d1feeacd80569b6[m
+Merge: eccc956 4c9336c
+Author: Loïc <llh1@users.noreply.github.com>
+Date:   Sat Mar 17 01:36:06 2018 +0000
+
+    Merge pull request #44 from llh1/week4-part5
+    
+    Part E: arrays of objects
+
+[33mcommit eccc956d513661d6ef27fc95f7af877b3d2f8e25[m
+Merge: 884cf5d 4b614b2
+Author: Loïc <llh1@users.noreply.github.com>
+Date:   Fri Mar 16 22:11:13 2018 +0000
+
+    Merge pull request #41 from llh1/week4-part4
+    
+    Week 4 Part D: Object methods
+
+[33mcommit 4c9336c1032b55cd9ac3ae006169eed2cec998ff[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 21:54:00 2018 +0000
+
+    Fix
+
+[33mcommit 7dd606b3c9246dd70faca34e4b33416254843c1d[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 21:41:05 2018 +0000
+
+    Add exercises
+
+[33mcommit a3a91dddd4867dfbfcb1449cd853d3127e1abdc2[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 00:33:57 2018 +0000
+
+    Add arrays of objects explanation and first exercise
+
+[33mcommit 4b614b23c2c9c0b1d85250c4e2ab6548a95c3689[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 21:47:10 2018 +0000
+
+    Fix intro
+
+[33mcommit 884cf5d6d757a774cb69a5df7b0fc72829b9abcd[m
+Merge: 988b64a 80814dc
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 16 21:29:41 2018 +0000
+
+    Merge pull request #38 from rarmatei/week4-part3
+    
+    Week 4 - part C - more advanced objects
+
+[33mcommit 80814dca1681bc50007af5e4f8676f876fc0bfa4[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 16 21:25:17 2018 +0000
+
+    PR feedback improvements
+
+[33mcommit 988b64ab993cb81873341589c56cdf16b3f59994[m
+Merge: 97355d4 208c1ff
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 16 21:13:00 2018 +0000
+
+    Merge pull request #36 from rarmatei/week4-part2
+    
+    Week 4 - Part B, Objects get/set
+
+[33mcommit 97355d4c0661e4abed33403a89bc37768396daed[m
+Merge: 6699fcc ef764b8
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 16 21:04:34 2018 +0000
+
+    Merge pull request #39 from rarmatei/week4-homework
+    
+    Week 4 - homework
+
+[33mcommit ef764b89daee6ae40c0d3f74187e2d5b8318d422[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 16 21:01:33 2018 +0000
+
+    improved use of english
+
+[33mcommit 607111f7911c6cddf0bca6dd57130fe7061b1532[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 20:07:44 2018 +0000
+
+    Add method definition
+
+[33mcommit 824b74bb32ec5d34b5f98a0431d1f32ffb62468f[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 20:04:19 2018 +0000
+
+    Improve explanations and exercises for object methods
+
+[33mcommit 29e6def61342a3751eec28e48023be112ae66007[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Fri Mar 16 19:57:35 2018 +0000
+
+    just added a new line to the description
+
+[33mcommit d2c17b72c2da6ae5c7b788a801f28b14dca046bc[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 17:51:09 2018 +0000
+
+    Fix typo
+
+[33mcommit 2c4d3c60270d4cfda9f10142d13f962addb66360[m
+Author: James Stewart <james.stewart.06@aberdeen.ac.uk>
+Date:   Fri Mar 16 16:47:39 2018 +0000
+
+    3/4 exercises done
+
+[33mcommit 2345d838752560df95241dce37cd2e6d02d12190[m
+Author: Loic <loic.lehenaff@gmail.com>
+Date:   Fri Mar 16 00:01:02 2018 +0000
+
+    Add part 4 about object methods with exercises
+
+[33mcommit 347248c1a84bdb16c3a4fd4aee5b28367eadc293[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Thu Mar 15 22:36:19 2018 +0000
+
+    forgot to save files again
+
+[33mcommit 6699fcc0fc0a666e50ac16d4df16a21e1b95c0c1[m
+Merge: 8ef6b28 fca4def
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Thu Mar 15 22:34:14 2018 +0000
+
+    Merge pull request #35 from rarmatei/week4
+    
+    Week 4 - lesson A - Intro to objects
+
+[33mcommit cd274726171de29c1d4e0374fd6185b76661124e[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Thu Mar 15 22:31:50 2018 +0000
+
+    add week4 homework
+
+[33mcommit fca4defc703f2f4c11fdd83b56601df5ca1fc6aa[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Thu Mar 15 21:45:55 2018 +0000
+
+    simplify lesson language
+
+[33mcommit d81e91e9ebe16270d80c05cfa1fc26cfa883d2ee[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Thu Mar 15 21:29:52 2018 +0000
+
+    add week4 part C
+
+[33mcommit 208c1ffde855e746cf906889e0471d713dd7755c[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Wed Mar 14 21:49:01 2018 +0000
+
+    add week4 part B lesson and exercises
+
+[33mcommit f12551e6311c5fd4964285b0e724a3a7f625e78d[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Wed Mar 14 20:45:04 2018 +0000
+
+    actually saved files this time
+
+[33mcommit 26df98ce3a8c36a14a46407e9447f0bb0ae26448[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Wed Mar 14 20:42:49 2018 +0000
+
+    separate exercises into different files
+
+[33mcommit c416f9ac7d1c226a380659da77b5dde63b73f7d6[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Tue Mar 13 20:58:19 2018 +0000
+
+    add week4 lesson A
+
+[33mcommit 8ef6b287648143b4e077e725bdfa5a19d6000cbd[m
+Merge: 1c9a58b cdb5b94
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Tue Mar 13 09:56:06 2018 +0000
+
+    Merge pull request #34 from rarmatei/week4
+    
+    lesson outline for week 4
+
+[33mcommit cdb5b94591043b0b0fff042187d91683d4ad027a[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Mon Mar 12 22:57:46 2018 +0000
+
+    PR feedback
+
+[33mcommit 2cf1a9ae486d3920d0fbc9066cc095f360c7b001[m
+Author: Rares Matei <r.matei.10@aberdeen.ac.uk>
+Date:   Mon Mar 12 21:28:51 2018 +0000
+
+    add week 4 lesson skeleton
+
+[33mcommit 1c9a58b927187ce3e7a37723a399f3985ab93a2b[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Mon Mar 12 01:02:48 2018 +0000
+
+    Add iterable array to fizz buzz exercise
+
+[33mcommit b211045ccc7162dd73a9e498e4a70d5ae1cf5a0c[m
+Merge: 5fbce82 5e43159
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Mar 10 11:14:57 2018 +0000
+
+    Merge pull request #27 from CodeYourFuture/week-3
+    
+    Week 3 class exercises
+
+[33mcommit 5e431598398c3c7db10b1fd3a27d134122a4b28e[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Mar 10 10:27:20 2018 +0000
+
+    Fix typo
+
+[33mcommit 64558f4a005cfadf04249d322ab6cd74ebbe9e46[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Mar 10 09:46:18 2018 +0000
+
+    Add week 3 exercises
+
+[33mcommit 0787eccc017a37056ecf731dfc35242289da2aba[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Mar 10 09:46:06 2018 +0000
+
+    Add map and forEach lessons
+
+[33mcommit 5fbce82c4087da1cb854281959f6f61ac0256c67[m
+Merge: 7f63110 a9c3f00
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 14:46:26 2018 +0000
+
+    Merge pull request #29 from CodeYourFuture/pr-instructions
+    
+    PR instructions for mentors
+
+[33mcommit a9c3f008bef3be91f7a2a4449d81910606b8ecfc[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 11:59:31 2018 +0000
+
+    Add note about tailoring PR reviews
+
+[33mcommit 24d0b438f4ed213d128c39b43fc4936ddc7378d1[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 11:55:37 2018 +0000
+
+    Link to actual review
+
+[33mcommit b1ac05ad52b5d6ac9f2ed567f12304f0db1af50a[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 11:48:32 2018 +0000
+
+    Add mentors file
+
+[33mcommit 7f6311013a855e638f2bcc60586145bf96421277[m
+Merge: f2997b9 4f44e4d
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 11:45:07 2018 +0000
+
+    Merge pull request #28 from CodeYourFuture/pr-instructions
+    
+    PR instructions
+
+[33mcommit 4f44e4db292e595200453fb9d39429d2b6f57fb8[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 10:54:51 2018 +0000
+
+    Add instructions for reviewing and creating PRs
+
+[33mcommit 357303892fe541665b68d708330fe1803f80dd84[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 10:26:11 2018 +0000
+
+    Consistent predicate name
+
+[33mcommit ba6c12ad2458be2c8d5d57a442b58a7dd0977a3c[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 10:09:46 2018 +0000
+
+    Add week 3 exercises
+    
+    Thanks @ShetlandJ for getting this started in https://github.com/ShetlandJ/CodeYourFuture_Array_Methods
+
+[33mcommit f2997b9e61ef2e834494a51f3e29e979732855a3[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 07:24:24 2018 +0000
+
+    Typos
+
+[33mcommit 9bb3d1714f68947cf209282ccdff38aceca36784[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 07:19:04 2018 +0000
+
+    Fixes and typos
+
+[33mcommit 68afb91013b50023d87f6ac07f0ef6c034cec09c[m
+Merge: 0ee4ebb d86a65a
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Thu Mar 1 06:46:30 2018 +0000
+
+    Merge pull request #22 from chmelevskij/patch-1
+    
+    Arrays sorted in lexical order
+
+[33mcommit 0ee4ebbede944910fe2fc9b3446def3e6d3d1877[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 23:40:35 2018 +0000
+
+    Fix mistakes in exercises
+
+[33mcommit c6ecd0c707ca6b37ad8b48750b6c0009147d6ea5[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 20:21:01 2018 +0000
+
+    Fix (break) expected (incorrect) result
+
+[33mcommit b932d050194dc1e5f2fd5a67b4833e69ff677300[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 15:21:14 2018 +0000
+
+    Update 2-validation.js
+
+[33mcommit 1e768dd4d5a7ae1b5769755b76548af1f962bde7[m
+Merge: fa8834f 2804354
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 13:44:20 2018 +0000
+
+    Merge pull request #24 from CodeYourFuture/week-2-practise
+    
+    Week 2 practise exercises
+
+[33mcommit 28043548b010576402f16693143bb17983186a83[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 11:57:53 2018 +0000
+
+    Tidy up
+
+[33mcommit 9211afd35e4651f1b0f11d9145aa1c6228f7692c[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 11:57:47 2018 +0000
+
+    Add slice, indexOf and map exercises
+
+[33mcommit 943e67375d3471f022e26a9a0710a8d9f22f5c2a[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 10:32:03 2018 +0000
+
+    Fix sort docs
+
+[33mcommit 84678ebc30963b304f966ce507ebb61d8c46dc2a[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 10:25:35 2018 +0000
+
+    Add sorting exercises
+
+[33mcommit 1e1ddd7b4e73b4df634ce1cb8225d6061afbfa6b[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 28 10:07:08 2018 +0000
+
+    Add validation exercises
+
+[33mcommit 1570ebacdd397a0035da18f5d46572615ef3c7e9[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Mon Feb 26 19:20:39 2018 +0000
+
+    Add boolean exercises
+
+[33mcommit d86a65ac0cb1ea1967c0a822295f2f638acb64d0[m
+Author: Tomas Chmelevskij <chmelevskij@users.noreply.github.com>
+Date:   Sat Feb 24 16:06:41 2018 +0000
+
+    Arrays sorted in lexical order
+
+[33mcommit fa8834f9972e8c953a32f868b4ee801678925797[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 15:12:06 2018 +0000
+
+    Remove old readme
+
+[33mcommit 722a77be5d3360227707adbe310c5ef7804316ee[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 15:11:59 2018 +0000
+
+    Add array exercises
+
+[33mcommit 4c0c656032ca3cd45bbd7abc12e64e6bcc578241[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 13:52:45 2018 +0000
+
+    Restore array exercises`
+    
+    This reverts commit 55e60c8b7a8780cf16022de590209cb9729c1cfb.
+
+[33mcommit 3b2a2ce7043cd2602fb694d56e709e16fa4222b1[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 12:43:04 2018 +0000
+
+    Update formatting
+
+[33mcommit 900363deef6ebe64b254b2189012e7e733f971f6[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 12:42:27 2018 +0000
+
+    Add new logical operator exercise
+
+[33mcommit a05f7253386220b24e4d1ef8465b86778978949c[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 12:21:42 2018 +0000
+
+    Fix complex languasge
+
+[33mcommit 2c95ac81a6aa3d06b6188f4d7e16408da0c4b3a5[m
+Merge: dcb9276 0248af9
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 11:17:25 2018 +0000
+
+    Merge pull request #9 from CodeYourFuture/week-2-part-1
+    
+    Week 2 part 1
+
+[33mcommit 0248af9664fddcd45998bbdb5b13604a71d45a00[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 11:16:28 2018 +0000
+
+    Simpler language
+
+[33mcommit 55e60c8b7a8780cf16022de590209cb9729c1cfb[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 11:14:38 2018 +0000
+
+    remove
+
+[33mcommit 4a5c4fbd9e28a2419c8bd74a51984ea88cc51d49[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 11:09:36 2018 +0000
+
+    Add map exercise
+
+[33mcommit 800ac92373cb6646327ea75afef05cef5daae593[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 10:23:11 2018 +0000
+
+    Add predicate readme
+
+[33mcommit 9b9a967702c582a31e2a926dd2a0ad095296e0a8[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 10:14:44 2018 +0000
+
+    Add empty exercises
+
+[33mcommit bcdad065c50316f2dd8e3c7214cb81319c569f77[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 10:13:31 2018 +0000
+
+    Sort folders
+
+[33mcommit bdd2c0e25b33b8089906974270756cb1d4a177bb[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 00:32:48 2018 +0000
+
+    Organise folders
+
+[33mcommit 1f632e5a811c176509c760144af3cca4aef42d49[m
+Merge: bb5994e d28a6c4
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 00:27:42 2018 +0000
+
+    Merge pull request #6 from kabaros/week-2
+    
+    conditionals exercises
+
+[33mcommit bb5994ed450c9fc071d9bab7748930db5b904428[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 24 00:26:44 2018 +0000
+
+    Add array READMEs
+
+[33mcommit d28a6c4d4cff718d57bdfb3ce84bdf197d1959bd[m
+Author: Mozafar <kabaros@gmail.com>
+Date:   Fri Feb 23 23:23:46 2018 +0000
+
+    conditionals exercises
+
+[33mcommit 186923c435f821c084851122d599e8f4cdddc339[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 23 21:54:41 2018 +0000
+
+    Add else-if README
+
+[33mcommit 6eb062f5bf384e7314c0a81b269da3c0151cef10[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 23 21:34:37 2018 +0000
+
+    Add if-else readme
+
+[33mcommit b0e2a24bfaba76c9c9c0c50614e74afc70ba791c[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 23 21:27:17 2018 +0000
+
+    More examples
+
+[33mcommit 2ed7d9954095016fab3f73249cae88d7c5887e59[m
+Merge: 8bada83 e85b6ef
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 23 21:21:14 2018 +0000
+
+    Merge pull request #5 from kabaros/week-2
+    
+    exercises for logical operators and predicates
+
+[33mcommit 8bada836614b8a7bc5f69437cc40916450a4f424[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 23 21:19:30 2018 +0000
+
+    Add conditionals introduction
+
+[33mcommit e85b6ef271e7f61e01d16f12d85e3af2ba1e34ac[m
+Author: Mozafar <kabaros@gmail.com>
+Date:   Fri Feb 23 21:14:35 2018 +0000
+
+    exercises for logical operators and predicates
+
+[33mcommit c0665ed8f1d384f3e6d078f60e1bdb31b5220b69[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 23 19:26:11 2018 +0000
+
+    Add next sections
+
+[33mcommit abeec52d1abc40d4f087d7ba3b7226a5e3c67de8[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 23 00:45:47 2018 +0000
+
+    Add boolean exercises
+
+[33mcommit dcb9276109132c0bb337624a313e0eb76405c67b[m
+Merge: b1100a0 43e78a2
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Tue Feb 20 19:22:06 2018 +0000
+
+    Merge pull request #2 from CodeYourFuture/practise-exercises
+    
+    Week 1 practise exercises
+
+[33mcommit 43e78a29d01ccfc018b429c4be86cd0191582dbb[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Tue Feb 20 18:55:09 2018 +0000
+
+    Update readme
+
+[33mcommit a3f8a4f1c7f5feb98a5143970ad4544127899c86[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Tue Feb 20 18:50:30 2018 +0000
+
+    Restructure
+
+[33mcommit 98029e8c5d22216613952717e0ba435748679346[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Tue Feb 20 18:40:02 2018 +0000
+
+    Add currency conversion exercises
+
+[33mcommit 5aeaec5f12916c95f69904326377dfc857fadda1[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Tue Feb 20 18:39:51 2018 +0000
+
+    Fix typos
+
+[33mcommit 1bef361a2a4cc8747540986157e888ea7a882385[m
+Merge: e952f30 366c432
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Tue Feb 20 18:40:42 2018 +0000
+
+    Merge pull request #1 from kabaros/practise-exercises
+    
+    practice exercises: find errors in code
+
+[33mcommit 366c432894febadbb4f492ddf8020f5c9790afd1[m
+Author: Mozafar <kabaros@gmail.com>
+Date:   Mon Feb 19 23:12:46 2018 +0000
+
+    practice exercises: find errors in code
+
+[33mcommit e952f3089016bd7fa6db2e9756eb77e6c97e7a08[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 22:48:25 2018 +0000
+
+    Add initial practise exercises
+
+[33mcommit b1100a0e7f6ce402435d431e9e9106ff2b4099e9[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 14:15:31 2018 +0000
+
+    Fix variable names in example
+
+[33mcommit 8abf7ddd3e9bd3971403f01538da71133dd0587e[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 13:38:45 2018 +0000
+
+    Revert "Remove function exercises for now"
+    
+    This reverts commit 05c3c5f56e5a066024220d30544b1a22ab2210ea.
+
+[33mcommit 95129c859d34a06b82aa42df1251415bacd20cbd[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 11:04:37 2018 +0000
+
+    Include string methods in exercise
+
+[33mcommit ac52f36cc96cd2b15d46167e2811368ab0987192[m
+Author: Mozafar <kabaros@gmail.com>
+Date:   Sat Feb 17 10:58:14 2018 +0000
+
+    update the readme
+
+[33mcommit 05c3c5f56e5a066024220d30544b1a22ab2210ea[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 10:56:40 2018 +0000
+
+    Remove function exercises for now
+
+[33mcommit d8467be990f71cd37479f3d4acb3aa969f17a4cd[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 10:55:40 2018 +0000
+
+    Add more function exercises
+
+[33mcommit 021b0df7efdaf6e8ef00fbe8b8a1f6e3cedb1da9[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 10:30:40 2018 +0000
+
+    Add nested functions exercise
+
+[33mcommit 255e07fd069ca25648de1cf8773e41cef3b5b582[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 10:30:26 2018 +0000
+
+    Add basic instructions to repo readme
+
+[33mcommit 3760fd9945e09629f58868e23145210815880b39[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Sat Feb 17 09:57:05 2018 +0000
+
+    More function param exercises
+
+[33mcommit 1a1649e1c1229c3f536d751381da5c6ef0892dfe[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 16 23:14:22 2018 +0000
+
+    Add function exercises
+
+[33mcommit 74378491ef8592da3a39e91e073909976f481c18[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 16 23:13:38 2018 +0000
+
+    Add function exercises
+
+[33mcommit 0f8475cdcb86ae1e18378a8aa62abb03ce7c3375[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 16 21:34:10 2018 +0000
+
+    Add floats exercise
+
+[33mcommit 55a92c87c2a82e0eb31e426e974e6518a73777f0[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 16 21:14:07 2018 +0000
+
+    Add numbers exercise
+
+[33mcommit 30126de33aef1f60bc5e684d5bf76249413c7f84[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 16 20:34:41 2018 +0000
+
+    Break up string exercises
+
+[33mcommit 0d59bba0c95a2d0475aadf47fd15deb128307060[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 16 20:28:22 2018 +0000
+
+    Tweak format
+
+[33mcommit 2f2416f901ce4110c5159fdf3536c7dbcf648a62[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Fri Feb 16 20:11:55 2018 +0000
+
+    Add string exercises
+
+[33mcommit c09799114021b2db1d1234fbb7a9a6601d6e1fe3[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Wed Feb 14 17:03:06 2018 +0000
+
+    Add first tasks
+
+[33mcommit 5128586c2d0f760e1ec81ead24acbb17f0c56c1f[m
+Author: Daniel Grant <danieljohngrant@gmail.com>
+Date:   Tue Feb 13 13:16:24 2018 +0000
+
+    Initial commit
