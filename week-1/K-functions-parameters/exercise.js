@@ -1,7 +1,10 @@
 // Complete the function so that it takes input parameters
-function multiply(num1,num2){
- return num1*num2;}
- 
- var result = 3*4;
- 
- console.log(result);
+var multiplyTwoNumbers = myFunction(3, 4);   
+
+function myFunction(a, b) {
+  return a * b;             
+}
+console.log(multiplyTwoNumbers);
+
+
+
