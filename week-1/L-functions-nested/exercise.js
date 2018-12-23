@@ -1,5 +1,14 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+function roundPercentage (number) {
+return Math.round (number);
+}
+function message (numberOfStudents, numberOfMentors){
+var totalNumberOfPeople = numberOfStudents + numberOfMentors;
+var percentageOfStudents = roundPercentage(numberOfStudents * 100 / totalNumberOfPeople);
+var percentageOfMentors= roundPercentage(numberOfMentors * 100 / totalNumberOfPeople);
+
+var message1 = "Percentage students: " + percentageOfStudents + "%";
+var message2 = "Percentage mentors: " + percentageOfMentors + "%";
+console.log (message1);
+console.log (message2);
+} 
+message (15, 8);
