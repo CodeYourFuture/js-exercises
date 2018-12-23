@@ -6,9 +6,9 @@ var result = s('code', 'your');
 console.log(result);
 
 // Answer these questions:
-// - What does this program do? Run it and see, or Google some of the methods used ot understand them.
-// - How many parameters does the function take?
-// - What is the function name?
-// - Where is the function called? with what parameters?
-// - What does the function return?
+// - What does this program do? Run it and see, or Google some of the methods used ot understand them. The concat() method was used to join two arrays.
+// - How many parameters does the function take? 2
+// - What is the function name? s
+// - Where is the function called? with what parameters? s, w1 and w2
+// - What does the function return? The concat() method is used to join two or more arrays.
 // - How can this function be improved?
