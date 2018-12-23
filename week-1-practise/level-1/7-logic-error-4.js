@@ -2,7 +2,6 @@
 
 function multiply(a, b, c) {
   return a * b * c;
-  return;
 }
 
 var result = multiply(1, 3, 4);
