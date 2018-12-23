@@ -1,8 +1,18 @@
-// Write your function here
-function createGreeting(){
-return "Hello! my name is"
-
+function createGreeting(str1) {
    
-var greeting = createGreeting + "Daniel";}
+}
+var str1=" Hello, My name is "
+var greeting = createGreeting + "Ermi.";
 
-console.log(greeting);
+console.log(greeting)
+
+
+
+/*
+function (){
+var creatGreeting= "Hello! my name is";
+}
+   
+var greeting = createGreeting + "Ermi";
+
+console.log(greeting);*/

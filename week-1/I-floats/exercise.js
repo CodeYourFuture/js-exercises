@@ -1,3 +1,3 @@
-var numberOfStudents = 15;
+var numberOfStudents = 25;
 var numberOfMentors = 8;
-console.log(15/100, 8/100);
+console.log( 25*100/33 +"%", 8*100/33+"%");
