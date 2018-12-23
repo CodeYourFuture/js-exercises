@@ -11,10 +11,21 @@
 */
 
 var startingValue = 5;
-startingValue = multiply(startingValue, 2);
-startingValue = add(startingValue, 10);
-startingValue = format(startingValue);
-var result = startingValue;
+//Calling all the functions in a one line only.
+var result = format(add(multiply(startingValue, 2), 10));
+
+/*
+  Broke the code into pieces to understand each step :D
+  
+  var startingValue = 5;
+  startingValue = multiply(startingValue, 2);
+  startingValue = add(startingValue, 10);
+  startingValue = format(startingValue);
+  var result = startingValue;
+/*
+
+
+
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
