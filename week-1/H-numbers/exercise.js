@@ -1,4 +1,4 @@
 // Start by creating a variables `numberOfStudents` and `numberOfMentors`
-var numberOfStudents=26;
-var numberOfMentors=15;
+var numberOfStudents=15;
+var numberOfMentors=8;
 console.log(numberOfStudents+numberOfMentors);
