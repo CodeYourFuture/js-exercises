@@ -6,18 +6,15 @@
   They have also decided that they should add a 1% fee to all foreign transactions
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
+function addConversionFee(amount) {
+  return (amount += amount * 0.01);
+}
 
 function convertToUSD(price) {
-  var result = price * 1.4;
-  var conversionFee = result * 0.01;
-  result += conversionFee;
-  return result.toFixed(2);
+  return addConversionFee(price * 1.4).toFixed(2);
 }
 function convertToBRL(price) {
-  var result = price * 4.93;
-  var conversionFee = result * 0.01;
-  result += conversionFee;
-  return result.toFixed(2);
+  return addConversionFee(price * 4.93).toFixed(2);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
