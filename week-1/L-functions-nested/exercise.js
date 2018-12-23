@@ -1,13 +1,16 @@
-function percentage(number) {
+function getRound(number) {
   return Math.round(number);
 }
 
 function message(numberOfStudents, numberOfMentors) {
-  var total = numberOfStudents + numberOfMentors;
-  var studentsPercentage = (100 * numberOfStudents) / total;
-  var mentorsPercentage = (100 * numberOfMentors) / total;
-  var roughStudentsPercentage = percentage(studentsPercentage);
-  var roughMentorsPercentage = percentage(mentorsPercentage);
+  var totalNumberOfPeople = numberOfStudents + numberOfMentors;
+  var roughStudentsPercentage = getRound(
+    (100 * numberOfStudents) / totalNumberOfPeople
+  );
+  var roughMentorsPercentage = getRound(
+    (100 * numberOfMentors) / totalNumberOfPeople
+  );
+
   var message =
     "Percentage students : " +
     roughStudentsPercentage +
@@ -19,4 +22,4 @@ function message(numberOfStudents, numberOfMentors) {
   return message;
 }
 
-console.log(message(15, 25));
+console.log(message(15, 8));
