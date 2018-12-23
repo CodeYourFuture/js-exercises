@@ -1,21 +1,21 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+var class1Mentor = "Daniel";
+var class2Mentor = "Irina";
+var class3Mentor = "Mimi";
+var class4Mentor = "Rob";
+var class5Mentor = "Yohannes";
 
 function mentors(names){
     return names.toUpperCase(names);
 }
 
-function shoutGreetings(names){
+function classMentorGreeting(names){
     return "HELLO "+ mentors(names);
 
 }
-console.log(shoutGreetings(mentor1));
-console.log(shoutGreetings(mentor2));
-console.log(shoutGreetings(mentor3));
-console.log(shoutGreetings(mentor4));
-console.log(shoutGreetings(mentor5));
+console.log(classMentorGreeting(class1Mentor));
+console.log(classMentorGreeting(class2Mentor));
+console.log(classMentorGreeting(class3Mentor));
+console.log(classMentorGreeting(class4Mentor));
+console.log(classMentorGreeting(class5Mentor));
 
 
