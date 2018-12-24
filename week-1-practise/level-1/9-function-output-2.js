@@ -10,5 +10,5 @@ console.log(result);
 // - How many parameters does the function take? 2 parameters
 // - What is the function name? s
 // - Where is the function called? with what parameters? line 5 with parameters "code","your"
-// - What does the function return? "concatenate string"
+// - What does the function return? "a string formed of concatenating two of the function string parameters"
 // - How can this function be improved? give more descriptive name
