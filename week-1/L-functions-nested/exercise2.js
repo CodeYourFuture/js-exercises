@@ -7,7 +7,7 @@ var mentor5 = "Yohannes";
 var mentor;
 
 function greeting (mentor) {
-    return "Hello " + mentor.toUpperCase();
+    return "HELLO " + mentor.toUpperCase();
 }
 console.log( greeting(mentor1) );
 console.log( greeting(mentor2) );

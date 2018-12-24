@@ -7,7 +7,7 @@ console.log(result);
 
 // Answer these questions:
 // - What does this program do?
-        //It takes a random number and ultiply it by 10
+        //This program generate a random number that it multiplies by 10 and then print the result of the operation
 // - How many parameters does the function take?
         //none
 // - What is the function name?
