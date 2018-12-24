@@ -7,9 +7,9 @@
 */
 
 function formatCurrency(num) {
-	var decimalprice = num.toFixed(2)
-	var message = '£' + decimalprice
-	return message
+	var decimalPrice = num.toFixed(2);
+	var message = '£' + decimalPrice;
+	return message;
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
