@@ -5,34 +5,21 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative(number) {if (number < 0) {
-  return true
-}else {return false}}
+function isNegative(number) {
+  return number < 0;
+}
 
 function isBetween5and10(number) {
-  if (number => 5 && number <= 10) {
-    return true
-  } else {
-    return false
-  }
+  return number >= 5 && number <= 10
 }
 
 function isLongName(string) {
-  if(string.length > 5) {
-    return true
-  }else {
-    return false
-  }
+  return string.length > 5
 }
 
 function startsWithD(string) {
-  if(string[0] === 'D') {
-    return true
-  } else {
-    return false
-  }
+  return string[0] === 'D'
 }
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
