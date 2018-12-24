@@ -1,5 +1,5 @@
 // Start by creating a variables `numberOfStudents` and `numberOfMentors`
 var numberOfStudents = 15;
 var numberOfMentors = 8;
-var grandTotal = numberOfStudents + numberOfMentors;
+var studentsAndMentors = numberOfStudents + numberOfMentors;
 console.log(groundTotal);
