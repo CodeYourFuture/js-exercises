@@ -5,5 +5,5 @@
 function add(num1, num2) {
   return num1 + num2;
 }
-var sum = (13, 124);
+var sum = add(13, 124);
 console.log(sum);
