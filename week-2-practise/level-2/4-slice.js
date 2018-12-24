@@ -4,8 +4,7 @@
 // - return a new array with the item removed
 // - remove the item at the specified index
 
-function remove(arr, index) {
-  return; // complete this statement
+function remove(arr, index) {)
 }
 
 /* 

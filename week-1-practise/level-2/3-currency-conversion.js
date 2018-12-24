@@ -7,8 +7,8 @@
 
 function convertToUSD(num) {
 	var convert = num * 1.4
-	var addconcomplete = convert.toFixed(2)
-	return addconcomplete
+	var convertComplete = convert.toFixed(2)
+	return convertComplete
 
 }
 

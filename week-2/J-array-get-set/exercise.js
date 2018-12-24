@@ -5,13 +5,11 @@
 */
 
 function first(arr) {
-  var first =  arr[0]
-  return first
+  return arr[0]
 }
 
 function last(arr) {
-  var lastValue = arr[arr.length-1]
-  return lastValue
+  return arr[arr.length-1]
 }
 
 /* 

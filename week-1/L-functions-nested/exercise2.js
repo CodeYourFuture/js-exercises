@@ -10,9 +10,9 @@ var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
-var array = [mentor1, mentor2, mentor3, mentor4, mentor5]
-var upperCase = array.map(function(arrayobject) {
-  return arrayobject.toUpperCase()
+var mentors = [mentor1, mentor2, mentor3, mentor4, mentor5]
+var upperCase = mentors.map(function(mentorsarray) {
+  return mentorsarray.toUpperCase()
 })
 
 function greeting() {
