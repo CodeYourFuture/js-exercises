@@ -1,3 +1,3 @@
-var name = " Daniel  ";
+var name = " Nina ";
 
 console.log(message);
