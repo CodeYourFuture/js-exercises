@@ -7,8 +7,8 @@ function massage(numberOfStudents, numberOfMentors) {
   var precentageStudents = (numberOfStudents / total) * 100;
   var precentageMentors = (numberOfMentors / total) * 100;
 
-  var massage1 = "Precentage Students = " + precentageStudents + "%";
-  var massage2 = "Precentage Mentors = " + precentageMentors + "%";
+  var massage1 = "Precentage Students: " + precentageStudents + "%";
+  var massage2 = "Precentage Mentors: " + precentageMentors + "%";
 
   console.log(massage1);
   console.log(massage2);
