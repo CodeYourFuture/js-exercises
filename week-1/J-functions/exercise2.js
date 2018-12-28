@@ -1,7 +1,7 @@
 function triple(number) {
-  return number * 3
+  return number * 3;
 }
 
-var result = triple(12);
+const result = triple(8);
 
 console.log(result);

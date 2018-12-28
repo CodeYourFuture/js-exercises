@@ -16,7 +16,7 @@ function convertToBRL(price) {
   return addComission(conversionBRL);
 }
 function addComission(conversion) {
-  return conversion + conversion.toFixed(2) * 0.01; // adding 1% comission to converted price
+  return conversion + conversion/100; // adding 1% comission to converted price
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
