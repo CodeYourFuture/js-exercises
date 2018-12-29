@@ -1,5 +1,4 @@
 var name = " Daniel  ";
 var greeting = "Hello";
-var myName = "Sola";
-var nameLength = myName.length;
-console.log(greeting.trim() + " My name is "+ myName.trim() + " and my name is " +nameLength +" characters long");
+var trimName = name.trim();
+console.log(greeting + " My name is "+ name.trim()+ " and my name is " + trimName.length +" characters long");
