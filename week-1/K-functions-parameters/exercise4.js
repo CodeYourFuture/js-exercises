@@ -1,9 +1,9 @@
 // Declare your function first
 
-function sumfunction(a, b) {
+function sum(a, b) {
   return a + b;
 }
-var sum = sumfunction(13, 124);
+var sum = sum(13, 124);
 
 // Call the function and assign to a variable `sum`
 
