@@ -1,6 +1,6 @@
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
-    return firstWord+secondWord+thirdWord;
+    return firstWord + secondWord + thirdWord;
 
 }
 
