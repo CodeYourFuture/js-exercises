@@ -6,7 +6,8 @@
 */
 
 function convertToUSD(price) {
-  return "$" + price * 1.4;
+  var result = price.toFixed(2) * 1.4;
+  return "$" + result.toFixed(2);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
