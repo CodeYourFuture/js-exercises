@@ -1,20 +1,18 @@
-var mentor1 = "Daniel";
-var mentor2 = "Irina";
-var mentor3 = "Mimi";
-var mentor4 = "Rob";
-var mentor5 = "Yohannes";
+var numberOfStudents = 15;
+var numberOfMentors = 8;
 
-
-function createGreeting(name) {
-    return name.toUpperCase();
+function CalculatePercentage (a, b){
+    return Math.round (a * 100 / (a + b));
 }
-var result = "HELLO " + createGreeting(mentor1);
-console.log(result);
-var result = "HELLO " + createGreeting(mentor2);
-console.log(result);
-var result = "HELLO " + createGreeting(mentor3);
-console.log(result);
-var result = "HELLO " + createGreeting(mentor4);
-console.log(result);
-var result = "HELLO " + createGreeting(mentor5);
-console.log(result);
+
+function message1 () { 
+    return console.log("Percentage students: " + CalculatePercentage (numberOfStudents, numberOfMentors) + "%");
+}
+
+function message2 () {
+    return console.log("Percentage mentors: " + CalculatePercentage (numberOfMentors, numberOfStudents) + "%");
+}
+
+message1 ();
+message2 ();
+
