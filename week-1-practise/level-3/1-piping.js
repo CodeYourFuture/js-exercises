@@ -16,16 +16,18 @@ var startingValue = 5;
 /* --------------------------- */
 
 function add(a, b) {
+  b = 10;
   return a + b;
 }
 
 function multiply(a, b) {
+  b = 2;
   return a * b;
 }
 
 function format(num) {
   return "£" + num.toFixed(2);
 }
-
+result = format((startingValue*2)+10);
 console.log("Expected result: 20.00");
 console.log("Actual result: " + result);

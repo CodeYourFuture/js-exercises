@@ -5,6 +5,6 @@ var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
 function upperCas(name){
-    return capital(name);
+    return name.toUpperCase();
 }
 console.log(upperCas("ali"));
