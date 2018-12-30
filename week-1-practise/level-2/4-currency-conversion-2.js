@@ -8,14 +8,12 @@
 */
 
 function convertToUSD(price) {
-  return price * 1.4 + fee(price) ;
+  result = price * 1.4 * 1.01 ;
+  return result.toFixed(2);
 }
 function convertToBRL(price) {
-  return price * 4.9 + fee(price);
-}
-
-function fee(price) {
-  return price * 0.01;
+  result = price * 4.9 * 1.01;
+  return result.toFixed(2);
 }
 
 /* DO NOT EDIT BELOW THIS LINE */
