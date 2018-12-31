@@ -1,5 +1,5 @@
 // Start by creating a variable `message`
-var name = "Hello";
-var greeting = " my name is deepa";
-var concat = name + greeting;
+var name = "Deepa";
+var greeting = " Hi my name is ";
+var concat = greeting + name;
 console.log(concat);
