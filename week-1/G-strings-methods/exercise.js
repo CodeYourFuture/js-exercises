@@ -2,6 +2,7 @@
 var name = "Deepa";
 //noconsole.log(name);
 
-var namelength = name.length;
-console.log("my name is " + name + " and my name is " + namelength + "  characters long."
+var nameLength = name.length;
+console.log(
+  "my name is " + name + " and my name is " + namelength + "  characters long."
 );
