@@ -1,6 +1,6 @@
 function halve(number) {
   // recomplete the function here
-  return number;
+  return number / 2;
 }
 
 var result = halve(6);
