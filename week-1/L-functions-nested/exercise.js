@@ -24,14 +24,12 @@ var mentor2 = "Irina";
 var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
-function mentors(name) {
-  return name.toUpperCase(name);
+
+function greetings(name) {
+  console.log("Hello  " + name.toUpperCase());
 }
-function greeting(name) {
-  return "HELLO  " + mentors(name);
-}
-console.log(greeting(mentor1));
-console.log(greeting(mentor2));
-console.log(greeting(mentor3));
-console.log(greeting(mentor4));
-console.log(greeting(mentor5));
+greetings("Daniel");
+greetings("Irina");
+greetings("Mimi");
+greetings("Rob");
+greetings("Yohannes");
