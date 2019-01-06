@@ -11,11 +11,16 @@ var role = "mentor";
 var name2 = "Harun";
 var role2 = "student";
 
-
-console.log("Hi, My name is " + name);
-console.log("Hi, My name is " + name2);
-
-
+var rolePlay = (role, name, role1, name1) => {
+  if(role == "student") 
+    return "Hi, My name is " + name;
+    else if (role1 == "student")
+    return "Hi, My name is " + name1;
+  else
+    return "Erorr";
+  
+};
+console.log(rolePlay(role, name, role2, name2));
 
 /* 
 EXPECTED RESULT
