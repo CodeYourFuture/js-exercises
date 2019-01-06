@@ -18,7 +18,7 @@ function last(arr) {
 var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-console.log(first(arr));
+console.log(first(numbers));
 console.log(last(names));
 
 /* 
