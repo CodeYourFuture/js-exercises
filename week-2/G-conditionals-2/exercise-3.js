@@ -9,6 +9,7 @@
 */
 
 function calculateGrade(mark) {
+  return (mark >= 80)?"A":(mark >=60 && mark <80)?"B":(mark >= 50 && mark < 60)?"C":"F";
 
 }
 
@@ -23,7 +24,7 @@ var grade4 = 55;
 console.log("'" + grade1 + "': " + calculateGrade(grade1))
 console.log("'" + grade2 + "': " + calculateGrade(grade2))
 console.log("'" + grade3 + "': " + calculateGrade(grade3))
-
+console.log("'" + grade4 + "': " + calculateGrade(grade4))
   /* 
   EXPECTED RESULT
   ---------------
