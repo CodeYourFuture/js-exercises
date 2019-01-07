@@ -4,21 +4,21 @@
   Complete the functions below to get the first and last values from the array
 */
 
-function first(arr) {
-  return; // complete this statement
+function first(numbers) {
+  return numbers[0]; // complete this statement
 }
 
-function last(arr) {
-  return; // complete this statement
+function last(names) {
+  return names[names.length - 1]; // complete this statement
 }
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 2, 3];
-var names = ["Irina", "Ashleigh", "Mozafar"];
+var names = ["Irina", "Ashleigh", "Mozafar", "Ivina", "Ali"];
 
-console.log(first(arr));
+console.log(first(numbers));
 console.log(last(names));
 
 /* 
