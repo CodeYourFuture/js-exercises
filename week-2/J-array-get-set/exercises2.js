@@ -7,7 +7,9 @@
 */
 
 var numbers = [2, 2, 3]; // Don't change this array literal declaration
-
+numbers.push(4);
+numbers.shift();
+numbers.unshift(1);
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
