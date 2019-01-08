@@ -17,7 +17,7 @@ var numbersDoubled; // complete this statement (use map and the double function)
   --------------------------- */
 console.log(numbersDoubled);
 
-/* 
+/*** 
   EXPECTED RESULT
   ---------------
   [2,4,6,8]
