@@ -9,7 +9,21 @@
 */
 
 function calculateGrade(mark) {
-
+  if(mark <= 49){
+    return "F";
+  }
+  else if (mark >= 90){
+    return "A";
+  }
+  else if (mark >= 70 ){
+    return "B";
+  }
+  else if (mark >= 55){
+    return "C";
+  }
+  else{
+    return "take Examination"
+  }
 }
 
 /* 
@@ -20,10 +34,10 @@ var grade2 = 90;
 var grade3 = 70;
 var grade4 = 55;
 
-console.log("'" + grade1 + "': " + calculateGrade(grade1))
-console.log("'" + grade2 + "': " + calculateGrade(grade2))
-console.log("'" + grade3 + "': " + calculateGrade(grade3))
-
+console.log("'" + grade1 + "': " + calculateGrade(grade1));
+console.log("'" + grade2 + "': " + calculateGrade(grade2));
+console.log("'" + grade3 + "': " + calculateGrade(grade3));
+console.log("'" + grade4 + "': " + calculateGrade(grade4));
   /* 
   EXPECTED RESULT
   ---------------
