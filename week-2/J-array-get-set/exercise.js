@@ -3,13 +3,14 @@
   -------------------------
   Complete the functions below to get the first and last values from the array
 */
+var arr = [1, 2, 3];
 
 function first(arr) {
-  return; // complete this statement
+  return arr[0]; // complete this statement
 }
 
-function last(arr) {
-  return; // complete this statement
+function last(names) {
+  return names[2]; // complete this statement
 }
 
 /* 
