@@ -7,7 +7,21 @@
 */
 
 function negativeOrPositive(number) {
+  if(number > 1){
+    return true;
+  }
+  else{
+    return false;
+  }
 
+}
+function negativeOrPositive(number){
+  if(number1 > 0 && number3 === 0){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 /* 
