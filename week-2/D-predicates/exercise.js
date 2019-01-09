@@ -32,4 +32,3 @@ console.log("Is the number between 0 and 10? " + numberBetweenZeroAnd10);
   Is the number negative? false
   Is the number between 0 and 10? true
 */
-

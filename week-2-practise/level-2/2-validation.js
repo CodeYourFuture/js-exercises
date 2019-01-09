@@ -3,35 +3,37 @@
 // - is a positive number
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
-function isNumber(num){
-	if(typeof num === "number") {
-		return true
-	}else {
-		return false
-	}
+function isNumber(num) {
+  if (typeof num === "number") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isPositive(num) {
-	if(num > 0) {
-		return true
-	} else {
-		return false
-	}
+  if (num > 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isHundred(num) {
-	if(num <= 100) {
-		return true
-	} else{
-		return false
-	}
+  if (num <= 100) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-function validate(num) {if (isNumber(num) && isPositive(num) && isHundred(num)){
-	return true
-}else {
-	return false
-}}
+function validate(num) {
+  if (isNumber(num) && isPositive(num) && isHundred(num)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
