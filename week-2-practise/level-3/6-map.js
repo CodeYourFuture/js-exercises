@@ -19,14 +19,11 @@ function capitalise(str) {
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
 
-var mentorsMapped = mentors.map(tidyUpString);
-
-var mentorsTidyAndCapitalised = [];
-
-mentorsMapped.forEach(function(element) {
-  var change = capitalise(element);
-  mentorsTidyAndCapitalised.push(change);
+var mentorsTidyAndCapitalised = mentors.map(function(str) {
+  var makeTidyAndCaps = tidyUpString(str);
+  return capitalise(makeTidyAndCaps);
 });
+
 console.log(mentorsTidyAndCapitalised);
 /*
   EXPECTED RESULT
