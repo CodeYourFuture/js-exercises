@@ -5,9 +5,21 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
-}
+  var getIndex = 0;
+  if (arr.indexOf(valueToRemove) === -1) {
+    getIndex = arr.indexOf(arr[valueToRemove]);
+  } else {
+    getIndex = arr.indexOf(valueToRemove);
+  }
+  var newArray = [];
+  arr.forEach(function(value, index) {
+    if (index != getIndex) {
+      newArray.push(value);
+    }
+  });
 
+  return newArray;
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
