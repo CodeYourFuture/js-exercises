@@ -6,7 +6,11 @@
 */
 
 function isEmpty(arr) {
-  return; // complete this statement
+  if (arr.length < 1) {
+    return true; // complete this statement
+  } else {
+    return false;
+  }
 }
 
 /* 
@@ -15,7 +19,7 @@ function isEmpty(arr) {
 var numbers = [1, 2, 3];
 var names = [];
 
-console.log(isEmpty(arr));
+console.log(isEmpty(numbers));
 console.log(isEmpty(names));
 
 /* 
