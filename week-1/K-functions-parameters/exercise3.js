@@ -1,10 +1,11 @@
-function createGreeting(str1) {
-   
+function createLongGreeting(){
+    return "my name is";
 }
-var str1=" Hello, My name is "
-var greeting = createGreeting + "Ermi.";
 
-console.log(greeting)
+var greeting = createLongGreeting +"Daniel"+ "i am " + "30";
+
+console.log(greeting);
+    
 
 
 

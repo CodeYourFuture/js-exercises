@@ -4,7 +4,17 @@
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
 
-function validate(num) {}
+function validate(num) {
+  if (num >= 0) {
+    return true;
+  } else if (num === Math.floor()) {
+    return true;
+  } else if (num <= 100) {
+    return false;
+  } else if (num < 0) {
+    return false;
+  }
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
