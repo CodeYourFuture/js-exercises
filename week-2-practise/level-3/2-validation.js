@@ -7,7 +7,7 @@
 var excludedNums = [6, 14, 91, 111];
 
 function validate(num) {
-  if (isNumber(num) && isPositive(num) && isLessThanOrEqualThan100(num)) {
+  if (isNumber(num) ) {
     return true;
   } else {
     return false;
@@ -19,6 +19,9 @@ function isNumber(num) {
   } else {
     return false;
   }
+}
+function isInteger(num){
+  
 }
 
 

@@ -7,7 +7,7 @@
 function remove(arr, valueToRemove) {
   let removedItem = arr.indexOf(valueToRemove);
   arr.splice(removedItem, 1);
-  return arr; // complete this statement
+  return arr;
 }
 
 /* 

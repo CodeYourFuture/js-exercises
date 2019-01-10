@@ -15,4 +15,5 @@ console.log(percentagesFormatted);
   EXPECTED RESULT
   ---------------
   [1%, 23%, 92%, 18%]
+  
 */

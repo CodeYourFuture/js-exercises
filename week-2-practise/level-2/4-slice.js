@@ -5,9 +5,8 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  arr.splice(index, 1); // complete this statement
+  arr.splice(index, 1);
   return arr;
- // complete this statement
 }
 
 /* 
