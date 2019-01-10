@@ -5,8 +5,10 @@
   Add the required variables with the correct boolean values assigned.
 */
 
-var codeYourFutureIsGreat = true;
-
+var codeYourFutureIsGreat = true,
+  mozafarIsCool = false,
+  caluclationCorrect = true,
+  moreThan10Students = false;
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
