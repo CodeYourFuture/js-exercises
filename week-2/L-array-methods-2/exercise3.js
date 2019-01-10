@@ -10,13 +10,12 @@ function isInUK(country) {
   if (ukNations.includes(country)) return true;
   else return false; // complete this statement
 }
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-console.log(isInUk("France"));
-console.log(isInUk("Republic of Ireland"));
-console.log(isInUk("England"));
+console.log(isInUK("France"));
+console.log(isInUK("Republic of Ireland"));
+console.log(isInUK("England"));
 
 /* 
   EXPECTED RESULT
