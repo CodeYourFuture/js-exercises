@@ -1,5 +1,7 @@
 function createGreeting(name, age) {
-  return "Hello my name is " + name + " and I'm " + age + " years old.";
+  var message = "Hello my name is " + name + " and I'm " + age + " years old.";
+  return message;
 }
+var greeting = createGreeting("Mussie", 34);
 
-console.log(createGreeting("Mussie", 34));
+console.log(greeting);

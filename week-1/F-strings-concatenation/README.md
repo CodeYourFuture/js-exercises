@@ -11,7 +11,7 @@ console.log(greeting); // Logs "Hello, my name is Daniel"
 
 ## Exercise
 
-* Write a program that logs a message with a greeting and your name
+- Write a program that logs a message with a greeting and your name
 
 ## Expected result
 
