@@ -5,7 +5,19 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(number) {
+  return number <0 ? true : false;
+}
+function isBetween5and10 (numberRange) {
+  return (numberRange >=5 && numberRange) <= 10 ? true : false;
+}
+
+function isLongName(person){
+  return (person.length > 4) ? true : false
+}
+function startsWithD(person){
+  return (person.charAt(0)==="D") ? true : false ;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
@@ -13,9 +25,9 @@ function isNegative() {}
 
 console.log("Is -10 is a negative number?", isNegative(-10));
 console.log("Is 5 a negative number?", isNegative(5));
-console.log("Is 10 in the range 5-10?" isBetween5and10(10))
-console.log("Is Daniel a short name?" isLongName("Daniel"));
-console.log("Does Daniel start with 'D'?" startsWithD("Daniel"));
+console.log("Is 10 in the range 5-10?", isBetween5and10(10))
+console.log("Is Daniel a long name?", isLongName("Daniel"));
+console.log("Does Daniel start with 'D'?", startsWithD("Daniel"));
 
 /* 
   EXPECTED RESULT
