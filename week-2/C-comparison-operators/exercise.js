@@ -7,14 +7,27 @@
 
 var studentCount = 16;
 var mentorCount = 9;
-var moreStudentsThanMentors; // finish this statement
+if (studentCount>mentorCount) {
+ var moreStudentsThanMentors=true;
+} else {
+  var moreStudentsThanMentors = false;
+}; // finish this statement
 
 var roomMaxCapacity = 25;
-var enoughSpaceInRoom; // finish this statement
+if (studentCount + mentorCount <= roomMaxCapacity){
+  var enoughSpaceInRoom=true; // finish this statement
+} else {
+  var enoughSpaceInRoom = false; 
+}
 
 var personA = "Daniel";
 var personB = "Irina";
-var sameName; // finish this statement
+if (personA==personB){
+  var sameName=true; // finish this statement
+} else {
+  var sameName = false; // finish this statement
+}
+
 
 /* 
   DO NOT EDIT BELOW THIS LINE
