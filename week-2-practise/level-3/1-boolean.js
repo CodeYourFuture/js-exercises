@@ -3,7 +3,7 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
+var isHappy = false; //The value assigned to isHappy is "false" which is string we have to remove the quotation to make it boolean
 
 if (isHappy == true) {
   console.log("I am happy");
