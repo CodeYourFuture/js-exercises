@@ -6,39 +6,20 @@
 */
 
 function isNegative(number) {
-  if(number < 0){
-    return true;
+    return number < 0;
   }
-  else{
-    return false;
-  }
-}
 
-function isBetween5and10(number){
-  if (number <= 10 && number >= 0){
-    return true;
+  function isBetween5and10(number) {
+    return number >= 5 && number <= 10;
   }
-  else{
-    return false;
+
+  function isLongName(name) {
+    return name.length > 5;
   }
-}
-function isLongName(name){
-  if(name.length >= 4){
-return true;
+
+  function startsWithD(name) {
+    return name[0] === "D";
   }
-  else {
-    return false;
-  }
-  
-}
-function startsWithD(name){
-  if(name[0]==="D"){
-  return true
-}
-else{
-  return false;
-}
-}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -56,5 +37,5 @@ console.log("Does Daniel start with 'D'?" ,startsWithD("Daniel"));
   Is 5 a negative number? false
   Is 10 in the range 5-10? true
   Is Daniel a long name? true
-  Does Daniel start with 'D'?
+  Does Daniel start with 'D'? True
 */
