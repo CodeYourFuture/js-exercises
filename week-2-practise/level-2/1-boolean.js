@@ -2,7 +2,7 @@
 // Why doesn't it work?
 // Fix it.
 
-var isHappy = "false";
+var isHappy = false;
 
 if (isHappy) {
   console.log("I am happy");
@@ -15,3 +15,4 @@ if (isHappy) {
   ---------------
   I am not happy
 */
+// isHappy is assigned a string "false" rather than a boolean false
