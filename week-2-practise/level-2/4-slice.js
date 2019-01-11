@@ -3,10 +3,16 @@
 // - NOT change the original array
 // - return a new array with the item removed
 // - remove the item at the specified index
+function firstPartOfArr(arr, index) {
+  return arr.slice(0, index);
+}
+
+function lastPartOfArr(arr, index) {
+  return arr.slice(index + 1, arr.length);
+}
 
 function remove(arr, index) {
-  let newArr = arr.slice(0, index).concat(arr.slice(index + 1, arr.length));
-  return newArr; // complete this statement
+  return firstPartOfArr(arr, index).concat(lastPartOfArr(arr, index)); // complete this statement
 }
 
 /* 

@@ -4,11 +4,19 @@
 // - return a new array with the first item matching `valueToRemove` removed
 // TIP: Use the .indexOf() method
 
+function firstPartOfArr(arr, removedIndex) {
+  return arr.slice(0, removedIndex);
+}
+
+function lastPartOfArr(arr, removedIndex) {
+  return arr.slice(removedIndex + 1, arr.length);
+}
+
 function remove(arr, valueToRemove) {
   let removedIndex = arr.indexOf(valueToRemove);
-  let newArrFirstPart = arr.slice(0, removedIndex);
-  let newArrSecondPart = arr.slice(removedIndex + 1, arr.length);
-  return newArrFirstPart.concat(newArrSecondPart); // complete this statement
+  return firstPartOfArr(arr, removedIndex).concat(
+    lastPartOfArr(arr, removedIndex)
+  ); // complete this statement
 }
 
 /* 

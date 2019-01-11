@@ -3,13 +3,20 @@
 // - NOT change the original array
 // - return a new array with the replacement value inserted
 // - insert the replacement value at the provided index
+function firstPartOfArr(arr, index) {
+  return arr.slice(0, index);
+}
+
+function lastPartOfArr(arr, index) {
+  return arr.slice(index + 1, arr.length);
+}
 
 function replace(arr, index, value) {
   let replacedArr = [];
-  let replacedArrFirstPart = arr.slice(0, index);
+  let replacedArrFirst = firstPartOfArr(arr, index);
   replacedArr[index] = value;
-  let replacedArrLastPart = arr.slice(index + 1, arr.length);
-  return replacedArrFirstPart.concat(replacedArr[index], replacedArrLastPart); // complete this statement
+  let replacedArrLast = lastPartOfArr(arr, index);
+  return replacedArrFirst.concat(replacedArr[index], replacedArrLast); // complete this statement
 }
 
 /* 

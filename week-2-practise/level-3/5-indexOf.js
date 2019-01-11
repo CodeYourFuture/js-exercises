@@ -4,17 +4,21 @@
 // - insert `newValue` at that index
 // - NOT change the original array
 // - return a new array with the replacement value inserted
+function firstPartOfArr(arr, index) {
+  return arr.slice(0, index);
+}
+
+function lastPartOfArr(arr, index) {
+  return arr.slice(index + 1, arr.length);
+}
 
 function replace(arr, valueToReplace, newValue) {
   let replacedArr = [];
   let removedIndex = arr.indexOf(valueToReplace);
-  let replacedArrFirstPart = arr.slice(0, removedIndex);
+  let replacedArrFirst = firstPartOfArr(arr, removedIndex);
   replacedArr[removedIndex] = newValue;
-  let replacedArrLastPart = arr.slice(removedIndex + 1, arr.length);
-  return replacedArrFirstPart.concat(
-    replacedArr[removedIndex],
-    replacedArrLastPart
-  );
+  let replacedArrLast = lastPartOfArr(arr, removedIndex);
+  return replacedArrFirst.concat(replacedArr[removedIndex], replacedArrLast);
 }
 
 /* 
