@@ -3,7 +3,8 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
+// false is passed as string not boolean 
+var isHappy = false;
 
 if (isHappy == true) {
   console.log("I am happy");
