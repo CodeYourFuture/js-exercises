@@ -5,7 +5,10 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  let removedIndex = arr.indexOf(valueToRemove);
+  let newArrFirstPart = arr.slice(0, removedIndex);
+  let newArrSecondPart = arr.slice(removedIndex + 1, arr.length);
+  return newArrFirstPart.concat(newArrSecondPart); // complete this statement
 }
 
 /* 
@@ -14,7 +17,7 @@ function remove(arr, valueToRemove) {
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = remove(numbers, 2);
+var newNumbers = remove(numbers, 3);
 var newNames = remove(names, "Ashleigh");
 
 console.log(newNumbers);
