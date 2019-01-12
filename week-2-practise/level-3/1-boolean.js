@@ -4,8 +4,8 @@
 // Leave comments above your changes to explain
 
 var isHappy = "false";
-
-if (isHappy == true) {
+//the double equal sign checks the value of isHappy. To check the type in addition to the value we us the triple equal
+if (isHappy === true) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
