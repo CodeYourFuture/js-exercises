@@ -5,8 +5,20 @@
 // Tip: write other small functions for each requirement
 
 var excludedNums = [6, 14, 91, 111];
+function validate(num) {
+  return isNumber(num) && isInteger(num) && isExcludeNumber(num);
+}
 
-function validate(num) {}
+function isNumber(num) {
+  return typeof num === "number";
+}
+function isInteger(num) {
+  return Number.isInteger(num);
+}
+
+function isExcludedNumber(num) {
+  return !excludedNums.includes(num);
+}
 
 console.log(validate(6));
 console.log(validate(10.5));
