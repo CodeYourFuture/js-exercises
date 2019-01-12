@@ -5,7 +5,9 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return numbers.indexOf([arr, valueToRemove]); // complete this statement
+  let removeItem = arr.indexOf(valueToRemove);
+  arr.splice(removeItem, 1);
+  return arr; // complete this statement
 }
 
 /* 
