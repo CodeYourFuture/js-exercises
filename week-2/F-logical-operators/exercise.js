@@ -14,7 +14,7 @@ var cssLevel = 4;
 var htmlLevelAbove5;
 var cssLevelAbove5;
 htmlLevelAbove5 = htmlLevel > 5;
-cssLevelAbove5 = cssLevel == 5;
+cssLevelAbove5 = cssLevel > 5;
 
 // Finish the next two statement
 // Use the previous variables and logical operators
@@ -22,8 +22,8 @@ cssLevelAbove5 = cssLevel == 5;
 var cssAndHtmlAbove5;
 var cssOrHtmlAbove5;
 
-cssAndHtmlAbove5 = cssLevel && htmlLevelAbove5 > 5;
-cssOrHtmlAbove5 = (cssLevel || htmlLevel) < 5;
+cssAndHtmlAbove5 = cssLevelAbove5 && htmlLevelAbove5;
+cssOrHtmlAbove5 = cssLevelAbove5 || htmlLevelAbove5;
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
