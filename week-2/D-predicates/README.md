@@ -4,11 +4,11 @@ These functions are very useful because they let you test if a value satisifies 
 
 ```js
 function isNumber(value) {
-  return typeof value === "number";
+	return typeof value === 'number';
 }
 
 isNumber(10); // returns true
-isNumber("hello"); // returns false
+isNumber('hello'); // returns false
 ```
 
 JavaScript programmers often give predicate functions a name that starts with a verb e.g. `isBig`, `isNegative`, `isActive`, `shouldUpdate`,
