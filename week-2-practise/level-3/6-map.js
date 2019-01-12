@@ -11,11 +11,14 @@ function tidyUpString(str) {
 }
 
 function captialise(str) {
+  var myString = str.split("");
+  myString[0] = myString[0].toUpperCase();
+  return myString.join("");
   // complete this function
 }
 
-var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidyAndCapitalised;
+var mentors = ["Daniel ", "irina ", " Gordon", "ashleigh "];
+var mentorsTidyAndCapitalised = mentors.map(captialise);
 
 console.log(mentorsTidyAndCapitalised);
 
