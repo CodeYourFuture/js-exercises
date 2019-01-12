@@ -5,7 +5,10 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(number) {
+  if (num > 0);
+  return true;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
