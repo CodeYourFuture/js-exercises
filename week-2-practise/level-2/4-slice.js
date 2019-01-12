@@ -5,8 +5,13 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  return numbers.slice([arr, index]);
 }
+function remove(arr, index) {
+  return names.slice();
+}
+
+// complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE
