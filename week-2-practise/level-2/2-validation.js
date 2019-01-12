@@ -3,8 +3,19 @@
 // - is a positive number
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
+function isPositiveNum(num) {
+  return num >= 0;
+}
+function lessOrEqual100(num) {
+  return num <= 100;
+}
+function isNumber(num) {
+  return typeof num === "number";
+}
 
-function validate(num) {}
+function validate(num) {
+  return isPositiveNum(num) && lessOrEqual100(num) && isNumber(num);
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
