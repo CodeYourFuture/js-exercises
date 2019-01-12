@@ -1,6 +1,8 @@
 // Write a function `first5` that:
 // - returns the first 5 items from a provided array
-
+function first5(num) {
+  return num.slice(0, 5);
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
