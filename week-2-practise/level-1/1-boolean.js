@@ -4,9 +4,9 @@
 var isHappy = false;
 
 if (isHappy) {
-  console.log("I am happy");
+  return "I am happy";
 } else {
-  console.log("I am not happy");
+  return "I am not happy";
 }
 
 /* 

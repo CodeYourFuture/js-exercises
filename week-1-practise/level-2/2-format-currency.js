@@ -1,12 +1,12 @@
 /*
   CURRENCY FORMATTING
   ===================
-  The business has informed you that prices must have 2 decimal places
+  The business has informed you that prices must have 2 decimal placess
   They must also start with the currency symbol
   Write a function that transforms numbers into the format £0.00
 */
 
-function formatCurrency() {}
+function formatCurrency(price) {}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
