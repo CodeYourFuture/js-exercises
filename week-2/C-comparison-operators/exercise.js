@@ -2,15 +2,18 @@
   BOOLEAN WITH COMPARISON OPERATORS
   ---------------------------------
   Using comparison operators complete the unfinished statements.
-  The variables should have values that match the expected results.
-*/
+  // The variables should have values that match the expected results.
+
+
 
 var studentCount = 16;
 var mentorCount = 9;
-var moreStudentsThanMentors == EXT_texture_filter_anisotropic; // finish this statement
+var moreStudentsThanMentors; // finish this statement
+var moreStudentsThanMentors = studentCount > mentorCount
 
 var roomMaxCapacity = 25;
-var enoughSpaceInRoom == true; // finish this statement
+var enoughSpaceInRoom; // finish this statement
+var enoughSpaceInRoom = studentCount + mentorCount <= roomMaxCapacity;
 
 var personA = "Daniel";
 var personB = "Irina";
