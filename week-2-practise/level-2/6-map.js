@@ -9,7 +9,12 @@ function percentage(number) {
 }
 
 var percentagesFormatted = percentages.map(percentage);
+/*var percentages = [1, 23, 92, 18];
 
+function formatPercentage(number) {
+  return number + "%";
+}
+var percentagesFormatted = percentages.map(formatPercentage);
 console.log(percentagesFormatted);
 
 /* 
@@ -17,3 +22,8 @@ console.log(percentagesFormatted);
   ---------------
   [1%, 23%, 92%, 18%]
 */
+var men = ["bart", "miles", "mussie"];
+var mrMen = men.map(function(string) {
+  return "Mr " + string;
+});
+console.log(mrMen);
