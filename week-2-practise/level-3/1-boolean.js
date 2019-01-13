@@ -3,9 +3,9 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
+var isHappy = false;
 
-if (isHappy == true) {
+if (isHappy === true) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");

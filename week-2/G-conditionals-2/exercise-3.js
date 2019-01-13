@@ -9,11 +9,11 @@
 */
 
 function calculateGrade(mark) {
-  if (mark > 80) {
+  if (mark >= 80) {
     return "A";
-  } else if (80 > mark && mark > 60) {
+  } else if (mark >= 60) {
     return "B";
-  } else if (60 > mark && mark > 50) {
+  } else if (mark >= 50) {
     return "C";
   } else {
     return "F";
