@@ -5,24 +5,35 @@
 // Tip: write other small functions for each requirement
 
 function validate(num) {
-  if (isNumber(num) && isPositive(num) && isLessThanOrEqual_100(num))
+  if (isNumber(num) && isPositive(num) && isLessThanOrEqual_100(num)) {
     return true;
-  else return false;
+  } else {
+    return false;
+  }
 }
 
 function isNumber(num) {
-  if (typeof num == "number") return true;
-  else return false;
+  if (typeof num == "number") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isPositive(num) {
-  if (num >= 0) return true;
-  else return false;
+  if (num >= 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function isLessThanOrEqual_100(num) {
-  if (num <= 100) return true;
-  else return false;
+  if (num <= 100) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 
