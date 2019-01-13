@@ -7,6 +7,6 @@ console.log(result);
 
 // Answer these questions:
 // - What does this program do?
-// - How many parameters does the function take?
+// - How many parameters does the function take? none
 // - What is the function name?
 // - Where is the function called? with what parameters?
