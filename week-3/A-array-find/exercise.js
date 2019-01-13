@@ -3,16 +3,14 @@
   Any result over 60 is a pass. 
   Using .find() (and any other array methods necessary), find the lowest pass score
 */
-
+const findLowestPassScore = arr => {
+  return arr.sort((a, b)=> a-b).find(x => x > 60);
+};
 var testScores = [90, 50, 100, 25, 81, 66, 80];
 var lowestPassScore = findLowestPassScore(testScores);
-const findLowestPassScore = (arr) => {
-  result = arr > 60;
-  sortResult = result.sort();
-  return sortResult[0];
-}
 
 console.log(lowestPassScore);
+console.log(findLowestPassScore(testScores));
 
 /* EXPECTED OUTPUT */
 // 66
