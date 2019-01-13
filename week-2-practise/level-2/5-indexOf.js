@@ -6,6 +6,8 @@
 
 function remove(arr, valueToRemove) {
   return; // complete this statement
+  var removedValue = arr.indexOf(valueToRemove);
+  arr.splice(removedValue, 1);
 }
 
 /* 
