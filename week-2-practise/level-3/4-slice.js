@@ -3,20 +3,19 @@
 // - NOT change the original array
 // - return a new array with the replacement value inserted
 // - insert the replacement value at the provided index
-function firstPartOfArr(arr, index) {
+/*function firstPartOfArr(arr, index) {
   return arr.slice(0, index);
 }
-
 function lastPartOfArr(arr, index) {
   return arr.slice(index + 1, arr.length);
-}
+}*/
+
+var modArr = require("../level-2/4-slice.js");
 
 function replace(arr, index, value) {
-  let replacedArr = [];
-  let replacedArrFirst = firstPartOfArr(arr, index);
-  replacedArr[index] = value;
-  let replacedArrLast = lastPartOfArr(arr, index);
-  return replacedArrFirst.concat(replacedArr[index], replacedArrLast); // complete this statement
+  let replacedArrFirst = modArr.firstPartOfArr(arr, index);
+  let replacedArrLast = modArr.lastPartOfArr(arr, index);
+  return replacedArrFirst.concat(value, replacedArrLast); // complete this statement
 }
 
 /* 
