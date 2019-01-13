@@ -11,16 +11,25 @@ function validate(num) {
   else return false;
 }
 function isNumber(num) {
-  if (typeof num == "number") return true;
-  else return false;
+  if (typeof num == "number") {
+    return true;
+  } else {
+    return false;
+  }
 }
 function isInteger(num) {
-  if (num % 1 === 0) return true;
-  else return false;
+  if (num % 1 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 function notExcludedNums(num) {
-  if (!excludedNums.includes(num)) return true;
-  else return false;
+  if (!excludedNums.includes(num)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 console.log(validate(6));
