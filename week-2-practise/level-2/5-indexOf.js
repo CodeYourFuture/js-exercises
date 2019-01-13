@@ -11,7 +11,7 @@ function remove(arr, valueToRemove) {
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-var numbers = [1, 3, 3];
+var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
 var newNumbers = remove(numbers, 2);
