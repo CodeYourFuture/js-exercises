@@ -6,7 +6,7 @@
 // - return a new array with the replacement value inserted
 
 function replace(arr, valueToReplace, newValue) {
-  return; // complete this statement
+  // complete this statement
 }
 
 /* 

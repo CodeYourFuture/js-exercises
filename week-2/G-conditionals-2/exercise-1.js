@@ -14,7 +14,7 @@ function negativeOrPositive(number) {
     return "negative";
   }
 }
-
+return number < 0;
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
