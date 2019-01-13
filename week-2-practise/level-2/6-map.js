@@ -4,7 +4,7 @@
 //    - each item in `percentages` formatted by your function
 
 function formatPercentage(number){
-  return number+="%";
+  return number+"%";
 }
 var percentages = [1, 23, 92, 18];
 
