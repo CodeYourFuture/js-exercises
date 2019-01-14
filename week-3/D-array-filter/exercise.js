@@ -8,7 +8,7 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 console.log(typeof pairsByIndexRaw[4]);
-var pairsByIndex = pairsByIndexRaw.filter(x => x[1] >= 0 ); // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(x => x != null && typeof x[1] === "number" && typeof x[0] === "number"); // Complete this statement
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
