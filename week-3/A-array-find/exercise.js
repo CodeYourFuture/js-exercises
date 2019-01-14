@@ -4,6 +4,12 @@
   Using .find() (and any other array methods necessary), find the lowest pass score
 */
 
+
+const findLowestPassScore = arr => {
+  return arr.sort((a, b) => a - b).find(x => x > 60);
+};
+
+
 var testScores = [90, 50, 100, 25, 81, 66, 80];
 var lowestPassScore = findLowestPassScore(testScores);
 
