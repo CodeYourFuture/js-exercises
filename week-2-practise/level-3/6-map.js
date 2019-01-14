@@ -16,7 +16,6 @@ function capitalise(str) {
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidyAndCapitalised;
 var mentorsTidy = mentors.map(tidyUpString);
 var mentorsTidyAndCapitalised = mentorsTidy.map(capitalise);
 
