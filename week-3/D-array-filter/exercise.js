@@ -8,7 +8,12 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(function(indexes) {
+  
+  if (indexes !== null || indexes !== "string" || indexes !== "Boolean") {
+    return indexes;
+  }
+});
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
