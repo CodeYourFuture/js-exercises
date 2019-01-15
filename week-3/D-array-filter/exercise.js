@@ -9,11 +9,12 @@
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
 var pairsByIndex = pairsByIndexRaw.filter(function(indexes) {
-  
   if (indexes !== null || indexes !== "string" || indexes !== "Boolean") {
     return indexes;
   }
 });
+
+// Got Undefined result for the last 2 elements in the array **ASK FOR HELP
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
