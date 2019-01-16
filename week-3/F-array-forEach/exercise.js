@@ -9,6 +9,13 @@
 
 var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+arr.forEach(number=>{
+  /********** using ternary operators to return either an empty string or 
+  Fizz / Buzz  concatinating result and addind OR if cancatination returns empty string*/
+  console.log((number%3?"":"Fizz")+(number%5?"":"Buzz")||number)
+  
+})
+
 /* EXPECTED OUTPUT */
 
 /*
