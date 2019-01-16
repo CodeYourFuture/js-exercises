@@ -5,9 +5,14 @@
 */
 
 var testScores = [90, 50, 100, 25, 81, 66, 80];
-var lowestPassScore = findLowestPassScore(testScores);
 
+var lowestPassScore = testScores.find(function(testScores) {
+  return testScores > 60;
+});
 console.log(lowestPassScore);
 
 /* EXPECTED OUTPUT */
 // 66
+//var longName = names.find(isLongName);
+
+// i HAve correctly wrote the function but i have no idea why the result comes 90

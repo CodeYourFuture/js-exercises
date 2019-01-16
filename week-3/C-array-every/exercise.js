@@ -5,7 +5,7 @@
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-var groupIsOnlyStudents; // complete this statement
+var groupIsOnlyStudents = false; // complete this statement var containsNegative = ages.some(isNegative);
 
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");

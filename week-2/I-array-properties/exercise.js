@@ -25,8 +25,13 @@ function isEmpty(arr)
   var numbers = [1, 2, 3];
   var names = [];
 
+<<<<<<< HEAD
   console.log(isEmpty(arr));
   console.log(isEmpty(names));
+=======
+console.log(isEmpty(numbers));
+console.log(isEmpty(names));
+>>>>>>> 59bc0cfd23f25922b253ce3c6ec2896fda5a3526
 
   /* 
 /* 
