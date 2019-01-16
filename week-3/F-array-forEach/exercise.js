@@ -34,7 +34,7 @@ arr.forEach(function(number) {
 'Fizz'
 'Buzz'
 11
-'FizzBuzz'
+'Fizz'
 13
 14
 'FizzBuzz'
