@@ -4,8 +4,12 @@
 
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
+function studentsGroup( element){
+  return students.includes(element);
+}
 
-var groupIsOnlyStudents; // complete this statement
+var groupIsOnlyStudents =group.every(studentsGroup); // complete this statement
+//var studentNameLength = students.every(isAboveThreshold);
 
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");
