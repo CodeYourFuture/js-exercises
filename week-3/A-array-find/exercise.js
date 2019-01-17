@@ -7,7 +7,13 @@
 var testScores = [90, 50, 100, 25, 81, 66, 80];
 var lowestPassScore = findLowestPassScore(testScores);
 
+function checkAboveSixty(testScores) {
+  return testScores > 60;
+}
+
+
 console.log(lowestPassScore);
 
 /* EXPECTED OUTPUT */
 // 66
+
