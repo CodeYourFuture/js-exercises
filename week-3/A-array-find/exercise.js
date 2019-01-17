@@ -4,10 +4,11 @@
   Using .find() (and any other array methods necessary), find the lowest pass score
 */
 
-var testScores = [90, 50, 100, 25, 81, 66, 80];
-var lowestPassScore = findLowestPassScore(testScores);
+var names = ["Rakesh", "Alexandra", "Annam", "Mikey", "Karim", "Ahmed"];
+var longNameThatStartsWithA = names.find(function(name) {
+  return name[0] === "A" && name.length > 7;
+});
 
-console.log(lowestPassScore);
-
+console.log(longNameThatStartsWithA);
 /* EXPECTED OUTPUT */
 // 66
