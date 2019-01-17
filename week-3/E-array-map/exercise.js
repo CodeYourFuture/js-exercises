@@ -3,3 +3,10 @@
 
 var numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
 
+var newArraySolution1= numbers.map(number=>number*2);
+console.log(newArraySolution1);
+
+var newArraySolution2= numbers.map(function(number){
+    return number*2;
+})
+console.log(newArraySolution2);
