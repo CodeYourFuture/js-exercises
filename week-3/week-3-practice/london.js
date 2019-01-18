@@ -12,8 +12,11 @@ var londonLocation = [
   ["Greenwich", "tube", "bus", "river boat"]
 ];
 
-var londonLocationTransport = londonLocation.map(function(item) {
-  return [item[0], item[3]];
+var londonLocationTransport = [];
+londonLocation.forEach(function(item) {
+  if (item.length === 4) {
+    londonLocationTransport.push([item[0], item[3]]);
+  }
 });
 
 console.log(londonLocationTransport);
