@@ -1,13 +1,43 @@
-/* 
-  You are given an array of student marks.
-  If all marks are over 10 the student is graduated, otherwise should try again. 
-  Using .every() (and any other array methods necessary), find out the student is graduated or not.
-  If the student is graduate print "Congratulation, You are graduated", otherwise print "You are nearly there, try again".
+/*
+In this exercise, the generateRandomName function will generate a different array index every time the code
+is executed. Your task is to create a function to use with the .filter() method which will return
+the name that the generateRandomName function came up with. 
+
+
+You should only return one name from the array.
+Do not edit the names array.
+Do not edit the generateRandomName function.
+
 */
 
-var marks = [11, 19, 13, 20, 18, 16, 10];
-var studentResult = student(marks);
+var names = [
+  "Jake",
+  "Diaz",
+  "Terry",
+  "Amy",
+  "Boyle",
+  "Gina",
+  "Holt",
+  "Hitchcock",
+  "Skully",
+  "Cheddar",
+  "Kevin"
+];
 
-console.log(studentResult);
-/* EXPECTED OUTPUT */
-// You are nearly there, try again
+function generateRandomName(arr) {
+  var generateIndex = (Math.random() * 10).toFixed();
+  return arr[generateIndex];
+}
+
+function filterNames(name) { }
+
+var filteredName = generateRandomName(names);
+
+console.log(filteredName);
+/*
+EXPECTED OUTPUT:
+[ 'Gina' ]
+[ 'Diaz' ]
+[ 'Hitchcock' ]
+
+*/
