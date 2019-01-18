@@ -1,9 +1,14 @@
-/* You are working a project in the council to give some benefits to the aged people older than 65. Find out them in a new array in the following list */
-var numbers = [56, 45, 32, 67, 89, 41, 65, 62, 59, 73];
+/* In Turkish Language, some of the words are joined words and 
+they are written together. Create a new function in order to get a 
+new array with the joined words of each items in the array*/
 
-var findTheAgedOnes;
-console.log(findTheAgedOnes);
+var newWords = [
+  { firstword: "Ata", lastword: "turk" },
+  { firstword: "Galata", lastword: "saray" },
+  { firstword: "Eski", lastword: "sehir" }
+];
+
 /* EXPECTED RESULT
  -----------
-67, 89, 73
+Ataturk, Galatasaray, Eskisehir
  */
