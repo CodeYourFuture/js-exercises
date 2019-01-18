@@ -7,10 +7,9 @@ var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
 var groupIsOnlyStudents = group.every(isStudent); // complete this statement
 function isStudent(index) {
-  if (group.includes(students)) {
-    return true;
-  }
+  return group.includes(students);
 }
+
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");
 } else {
