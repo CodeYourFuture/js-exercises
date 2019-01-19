@@ -2,7 +2,8 @@
 var numbers = [56, 45, 32, 67, 89, 41, 65, 62, 59, 73];
 
 var findTheAgedOnes = numbers.filter(number => number > 65);
-console.log(findTheAgedOnes);
+
+console.log(findTheAgedOnes.toString());
 
 /* EXPECTED RESULT
  -----------
