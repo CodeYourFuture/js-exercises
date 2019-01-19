@@ -5,7 +5,7 @@ Mix and ranking each team using .filter() function.
 var championsOrder = [[0, 4], [1, 2], [2, 3], null, [1], [3, 1], [4, 0]];
 
 var premierLeagueTeams = championsOrder.filter(indexPair => {
-  return indexPair !== null && indexPair.length;
+  return indexPair !== null && indexPair.length === 2;
 }); //Complete this statement
 
 //DO NOT EDIT BELOW THIS LINE
