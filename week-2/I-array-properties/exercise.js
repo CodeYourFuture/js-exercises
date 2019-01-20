@@ -6,9 +6,11 @@
 */
 
 function isEmpty(arr) {
-  return; // complete this statement
-}
+  return arr.length;
+} // complete this statement
 
+var names = ["Ali", "Martyna", "Neil", "Lucy"];
+var number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

@@ -13,8 +13,8 @@ var cssLevel = 4;
 // (hint: use the comparison operator from before)
 var htmlLevelAbove5;
 var cssLevelAbove5;
-htmlLevelAbove5 = htmlLevel > 5;
-cssLevelAbove5 = cssLevel > 5;
+htmlLevelAbove5 = htmlLevel >= 5;
+cssLevelAbove5 = cssLevel >= 5;
 
 // Finish the next two statement
 // Use the previous variables and logical operators
