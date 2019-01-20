@@ -1,25 +1,30 @@
-exercise2:
+/*
+Exercise2:
 
-/*Format the payroll payments for a group of worker for the days pay.
-
+Format the payroll payments for a group of worker for the days pay.
 Validate that payments are correct(Above 0).
-
 Format the intergers into floats
-
 Format the floats into currency "£"
-
 Print all corrected payroll payments
 */
+
 var accurateSalary = [34.536, 12.8, 74.48592, 0, 48.84, 30, -4.5];
 
-function interIntoFloat()
+function interIntoFloat(payment){
+    return payment.toFixed(2);
 };
 
-function floatToCurrency() {
+function floatToCurrency(payment) {
+    return payment + "£";
 };
 
-var newPayroll =;
+var newPayroll =accurateSalary.forEach(isPaymentValiD);
 
-console.log(interIntoFloat);
+function isPaymentValiD(payment){
+   if (payment>0) {
+       console.log(floatToCurrency(interIntoFloat(payment)));
+   } else {
+       return;
+   }    
+}
 
-console.log(floatToCurrency);
