@@ -1,6 +1,4 @@
-exercise3:
-
-/*
+/* exercise3:
 A Professional Gamer has collected all their wins and loses of their tornements over the 
 last year.
 Format the wins and loses arrays with the 'winFormat' and 'loseFormat'
