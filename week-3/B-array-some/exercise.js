@@ -15,10 +15,20 @@ var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
-var pairs = pairsByIndex.map(function(indexes) {
-  var student = students[indexes[0]];
-  var mentor = mentors[indexes[1]];
-  return [student, mentor];
-});
+var containsNull = pairsByIndex.some(checkNull);
+function checkNull(containsNull) {
+  if (containsNull) {
+    process.on("exit", function(code) {
+      console.log("Null found , terminating program" + code);
+    });
+    process.exit(1);
+  }
 
-console.log(pairs);
+  var pairs = pairsByIndex.map(function(indexes) {
+    var student = students[indexes[0]];
+    var mentor = mentors[indexes[1]];
+    return [student, mentor];
+  });
+
+  console.log(pairs);
+}
