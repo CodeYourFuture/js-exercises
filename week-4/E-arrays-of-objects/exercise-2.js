@@ -40,11 +40,12 @@ WRITE YOUR CODE BELOW
 */
 
 
-var destinationNamesWithin500Kms = // Complete here
+var destinationNamesWithin500Kms = (travelDestinations.filter(x => x.distanceKms < 500)).map(x => x.destinationName);// Complete here
 
-var destinationNameReachableByFerry = // Complete here
+var destinationNameReachableByFerry = (travelDestinations.filter(x => x.transportations.includes("ferry"))).map(x => x.destinationName);// Complete here
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter
+    (x => (x.distanceKms > 300 && x.transportations.includes("train"))).map(x => x.destinationName); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
