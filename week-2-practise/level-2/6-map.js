@@ -4,10 +4,13 @@
 //    - each item in `percentages` formatted by your function
 
 var percentages = [1, 23, 92, 18];
-
+var percentagesFormatted = percentages.map(function(cat) {
+  return cat + "%";
+});
 console.log(percentagesFormatted);
 
 /* 
+
   EXPECTED RESULT
   ---------------
   [1%, 23%, 92%, 18%]
