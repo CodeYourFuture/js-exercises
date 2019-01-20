@@ -5,18 +5,18 @@
 */
 
 var phone = {
-    brand:'iPhone,
-    model 'iPhone X'
+    brand:'iPhone',
+    model: 'iPhone X',
     launchYear: 2017,
-    is Unlocked: true
-;
+    "is Unlocked": true
+};
 
 var phoneBrand = phone.bbrand;
-var phoneLaunchYear = phone[launchYear];
+var phoneLaunchYear = phone['launchYear'];
 
 // DO NOT MODIFY BELOW THIS LINE
 
-console.log(phoneBrand);
+console.log(phone.brand);
 console.log(phoneLaunchYear);
 
 // it should output:
