@@ -3,16 +3,30 @@
 */
 
 var dog = {
-    name: 'Billy',
-    wantsToPlay: false
+  name: "Billy",
+  wantsToPlay: false
 };
+/*
+var dog = [
+  {
+    name: "Billy",
+    wantsToPlay: false
+  },
+  {
+    name: "Rex",
+    wantsToPlay: true
+  }
+];
+
+console.log(dog[1].name)
+console.log(dog[1].wantsToPlay)
+
+*/
 
 // WRITE CODE BELOW THIS LINE
-
-
-
+dog.name = "Rex";
+dog.wantsToPlay = true;
 // WRITE CODE ABOVE THIS LINE
-
 
 //DO NOT MODIFY BELOW
 console.log(dog.name);
