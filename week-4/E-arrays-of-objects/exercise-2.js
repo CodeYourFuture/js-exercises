@@ -7,50 +7,102 @@ Each destination has a name, a distance from Glasgow, and a list of transportati
 3) Print in the console all the destination names more than 300 kms far away and reachable by train.
 */
 
-
 var destination1 = {
-    destinationName: "Edinburgh",
-    distanceKms: 80,
-    transportations: ["car", "bus", "train"]
+  destinationName: "Edinburgh",
+  distanceKms: 80,
+  transportations: ["car", "bus", "train"]
 };
 
 var destination2 = {
-    destinationName: "London",
-    distanceKms: 650,
-    transportations: ["car", "bus", "train"]
+  destinationName: "London",
+  distanceKms: 650,
+  transportations: ["car", "bus", "train"]
 };
 
 var destination3 = {
-    destinationName: "Paris",
-    distanceKms: 900,
-    transportations: ["train", "plane"]
+  destinationName: "Paris",
+  distanceKms: 900,
+  transportations: ["train", "plane"]
 };
 
 var destination4 = {
-    destinationName: "Dublin",
-    distanceKms: 350,
-    transportations: ["plane", "ferry"]
+  destinationName: "Dublin",
+  distanceKms: 350,
+  transportations: ["plane", "ferry"]
 };
 
-var travelDestinations = [destination1, destination2, destination3, destination4];
+var travelDestinations = [
+  destination1,
+  destination2,
+  destination3,
+  destination4
+];
 
 /* 
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+//Question 1
+// Find retorna só o primeiro que satisfaz a condiçao. Filter retorna mais!
 
+function checkingDistance(travelDestinations) {
+  if (travelDestinations.distanceKms <= 500) {
+    return travelDestinations;
+  }
+}
+function getName(travelDestinations) {
+  return travelDestinations.destinationName;
+}
+var destinationNamesWithin500Kms = travelDestinations
+  .filter(checkingDistance)
+  .map(getName);
 
-var destinationNamesWithin500Kms = // Complete here
+//Question 2
 
-var destinationNameReachableByFerry = // Complete here
+function isItReachableByFerry(travelDestinations) {
+  return travelDestinations.transportations.includes("ferry");
+}
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+function getName1(travelDestinations) {
+  console.log(travelDestinations.destinationName);
+  return travelDestinations.destinationName;
+}
 
+var destinationNameReachableByFerry = travelDestinations
+  .filter(isItReachableByFerry)
+  .map(getName1);
+
+//Question 3
+
+function destinationMoreThan300andByTrain(travelDestinations) {
+  return (
+    travelDestinations.transportations.includes("train") &&
+    travelDestinations.distanceKms > 300
+  );
+}
+
+function getName2(travelDestinations) {
+  console.log(travelDestinations.destinationName);
+  return travelDestinations.destinationName;
+}
+
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .filter(destinationMoreThan300andByTrain)
+  .map(getName2);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log("Question 1) Expected result: Edinburgh,Dublin, actual result: " + destinationNamesWithin500Kms);
-console.log("Question 2) Expected result: Dublin, actual result: " + destinationNameReachableByFerry);
-console.log("Question 3) Expected result: London,Paris, actual result: " + destinationNamesMoreThan300KmsAwayByTrain);
+console.log(
+  "Question 1) Expected result: Edinburgh,Dublin actual result: " +
+    destinationNamesWithin500Kms
+);
+console.log(
+  "Question 2) Expected result: Dublin, actual result: " +
+    destinationNameReachableByFerry
+);
+console.log(
+  "Question 3) Expected result: London,Paris, actual result: " +
+    destinationNamesMoreThan300KmsAwayByTrain
+);
