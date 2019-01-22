@@ -63,14 +63,9 @@ function isItReachableByFerry(travelDestinations) {
   return travelDestinations.transportations.includes("ferry");
 }
 
-function getName1(travelDestinations) {
-  console.log(travelDestinations.destinationName);
-  return travelDestinations.destinationName;
-}
-
 var destinationNameReachableByFerry = travelDestinations
   .filter(isItReachableByFerry)
-  .map(getName1);
+  .map(getName);
 
 //Question 3
 
@@ -81,14 +76,9 @@ function destinationMoreThan300andByTrain(travelDestinations) {
   );
 }
 
-function getName2(travelDestinations) {
-  console.log(travelDestinations.destinationName);
-  return travelDestinations.destinationName;
-}
-
 var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
   .filter(destinationMoreThan300andByTrain)
-  .map(getName2);
+  .map(getName);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
