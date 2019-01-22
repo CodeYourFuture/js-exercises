@@ -55,20 +55,33 @@ WRITE YOUR CODE BELOW
 */
 
 
-var restaurantFinderApplication = {
+var restaurantFinderApplication = {            
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
-    findAvailableRestaurants: function(numberOfPeople) {
+    findAvailableRestaurants: function(numberOfPeople) {return restaurants
+      .filter(
+        restaurant =>
+          restaurant.totalSeats - restaurant.numberOfCustomers >= numberOfPeople
+      )
+      .map(function (restaurant){return restaurant.applicationName});
         // Complete here
     },
     findRestaurantServingDish: function(dishName) {
-        // Complete here
+        return restaurants
+            .filter(restaurant => restaurant.menu.includes(dishName))
+            .map(function (restaurant) { return restaurant.applicationName });
     },
-    countNumberOfRestaurantsInArea: function(area) {
         // Complete here
+  
+    countNumberOfRestaurantsInArea: function(area) {
+        return restaurants.filter(restaurant => restaurant.address.area === area)
+            .length;
     }
 };
+
+        // Complete here
+
 
 
 /*
