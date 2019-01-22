@@ -5,17 +5,25 @@ The objects below have some syntax issues - try and fix them all!
 */
 
 var kitten = {
-    fur colour: "orange",
-    age "23"
+     colour: "orange",
+    age: "23",
 };
+// Note !!! console.log, just for console display
+console.log(kitten);
 
-var laptop = 
-    brand: "Lenovo"
-    ram "5GB"
-}
+var laptop = {
+    brand: "Lenovo",
+    ram: "5GB",
+};
+// Note !!! console.log, just for console display
+console.log(laptop);
 
 var phone = {
-    operating system "iOS",
+    operatingSystem: "iOS",
     hasStylus: true,
-    megapixels 12
-    "batteryLife": "24 hours"
+    megaPixels: 12,
+    batteryLife: "24 hours",
+};
+// Note !!! console.log, just for console display
+console.log(phone);
+
