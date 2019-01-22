@@ -3,6 +3,12 @@
 */
 
 // WRITE CODE BELOW THIS
+var kitten = {
+  name: "Gilbert",
+  nationality: "Mars",
+  Occupation: "Astronaut",
+  Age: 32,
+};
 
 // WRITE CODE ABOVE THIS
 
