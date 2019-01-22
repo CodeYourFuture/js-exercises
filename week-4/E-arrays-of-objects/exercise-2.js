@@ -34,17 +34,27 @@ var destination4 = {
 
 var travelDestinations = [destination1, destination2, destination3, destination4];
 
+
 /* 
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
 
-var destinationNamesWithin500Kms = // Complete here
+var destinationNamesWithin500Kms = travelDestinations.filter(destination=>destination.distanceKms<500)
+.map(destination=>destination.destinationName);
+    
+    
 
-var destinationNameReachableByFerry = // Complete here
+var destinationNameReachableByFerry = travelDestinations.filter(reach=>reach.transportations.includes("ferry"))
+.map(destination=>destination.destinationName);
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+travelDestinations.forEach;
+
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(destination=>destination.distanceKms>300 
+    && destination.transportations.includes("train")).map(destinationName=>destinationName.destinationName);
+   
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*

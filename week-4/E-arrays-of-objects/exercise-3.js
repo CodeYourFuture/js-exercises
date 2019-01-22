@@ -60,14 +60,19 @@ var restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
-    },
+
+        var resAvailable = restaurants.filter(rest=>
+             (rest.totalSeats-rest.numberOfCustomers>numberOfPeople)).map(dest=>dest.name);
+        return resAvailable;
+         },
     findRestaurantServingDish: function(dishName) {
-        // Complete here
+        var dishInResturant = restaurants.filter(dish=>dish.menu.includes(dishName)).map(rest=>rest.name);
+        return dishInResturant;
     },
     countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
-    }
+     var restInGlasgow  = restaurants.filter(gArea=>gArea.address.area === area).length;
+     return restInGlasgow;
+      }
 };
 
 

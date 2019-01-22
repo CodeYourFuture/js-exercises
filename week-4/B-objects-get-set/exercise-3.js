@@ -3,6 +3,10 @@
 */
 
 // WRITE CODE BELOW THIS
+var kitten = {
+    name : "Gilbert",
+    furr : "white"
+}
 
 // WRITE CODE ABOVE THIS
 

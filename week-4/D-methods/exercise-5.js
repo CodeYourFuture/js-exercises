@@ -17,13 +17,15 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
+        this.insertedAmount = amount;
+        
     },
     getCoffee: function(coffee) {
-
-    }
+      return this.insertedAmount >= this.prices[coffee] ? "Please take your "+ coffee : "sorry you do not have enough money for a "+coffee
+        }
+    
 };
-
+console.log(coffeeMachine.insertedAmount);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
