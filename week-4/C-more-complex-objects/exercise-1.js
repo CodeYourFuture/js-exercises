@@ -10,8 +10,22 @@ var house = {
     currentOwner: {
       firstName: "Margaret",
       lastName: "Conway"
+    },
+    newAddress: function(newAddress){
+      this.address = newAddress;
+    },
+    NewPreviousOwners: function(newOwner){
+    this.previousOwners = newOwner;
+    },
+    newcurrentLastName: function(newcurrentOwnerLastName){
+      this.currentOwner.lastName = newcurrentOwnerLastName;
     }
 };
+house.newcurrentLastName("Montgomery");
+house.NewPreviousOwners(["Brian M.", "Fiona S."]);
+house.newAddress("51 Berkley Road");
+
+//house.currentOwner.lastName = "Clement";
 
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
