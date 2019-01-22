@@ -55,25 +55,46 @@ WRITE YOUR CODE BELOW
 */
 
 
+
+function getResturantRestName(rest) {
+    return rest.name;
+}
 var restaurantFinderApplication = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
+
     findAvailableRestaurants: function(numberOfPeople) {
+        var findAvRests = restaurants.filter(function (rest) {
+            return rest.totalSeats - rest.numberOfCustomers >= numberOfPeople;
+        });
+        return findAvRests.map(getResturantRestName);
         // Complete here
     },
     findRestaurantServingDish: function(dishName) {
+        var findDishes = restaurants.filter(function (rest) {
+            return rest.menu.includes(dishName);
+        });
+
+        return findDishes.map(getResturantRestName);
         // Complete here
     },
     countNumberOfRestaurantsInArea: function(area) {
-        // Complete here
+        var findArea = restaurants.filter(function (rest) {
+            return rest.address.area === area;
+        });
+        return findArea.length;
     }
-};
+        // Complete here
+    };
+
 
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
+
+
 
 var restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(5);
 console.log("Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: " + restaurantsAvailableFor5People);
