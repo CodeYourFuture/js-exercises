@@ -1,24 +1,16 @@
 /*
   Conditionals
   ---------------------------------
-  Add an if statement to only show the name if the role is student
+  Add an if statement to check Daniel's role in a CYF class.
+  If Daniel is a mentor, print out "Hi, I'm Daniel, I'm a mentor."
+  If Daniel is a student, print out "Hi, I'm Daniel, I'm a student."
 */
 
-
 var name = "Daniel";
-var role = "mentor";
-
-var name2 = "Harun";
-var role2 = "student";
-
-
-console.log("Hi, My name is " + name);
-console.log("Hi, My name is " + name2);
-
-
+var danielsRole = "mentor";
 
 /* 
 EXPECTED RESULT
 ---------------
-My name is Harun
+Hi, I'm Daniel, I'm a mentor.
 */

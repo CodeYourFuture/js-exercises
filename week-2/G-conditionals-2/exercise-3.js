@@ -3,8 +3,8 @@
   ---------------------------------
   Write a function that checks if a student has passed
   - if the mark is 80 or higher then the grade is "A"
-  - if the mark is between 60 and 80 then the grade is "B"
-  - if the mark is between 50 and 60 then the grade is "C"
+  - if the mark is lower than 80 and greater than 60 then the grade is "B"
+  - if the mark is 60 or lower but no lower than 50 then the grade is "C"
   - Otherwise the grade is "F"
 */
 
