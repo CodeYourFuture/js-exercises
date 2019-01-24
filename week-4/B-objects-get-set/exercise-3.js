@@ -3,6 +3,11 @@
 */
 
 // WRITE CODE BELOW THIS
+kitten = {
+  name: "Gilbert",
+  age: 3,
+  furColour: "brown"
+};
 
 // WRITE CODE ABOVE THIS
 
