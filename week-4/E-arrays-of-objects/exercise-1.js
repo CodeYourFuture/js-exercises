@@ -25,11 +25,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-var persons = // Complete here
+var persons = [person1, person2, person3]; // Complete here
 
-var personNames = // Complete here
+var personNames = person.map() // Complete here
 
-var personsYoungerThan28YearsOld = // Complete here
+var personsYoungerThan28YearsOld = person.filter(person.age < 28)// Complete here
 
 
 /*
