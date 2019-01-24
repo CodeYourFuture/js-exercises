@@ -39,12 +39,39 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+var destinationNamesWithin500Kms = travelDestinations.filter(getNamesin500).map(getName);
 
-var destinationNamesWithin500Kms = // Complete here
+function getNamesin500(destination){
+    return (destination.distanceKms<500);
+}
 
-var destinationNameReachableByFerry = // Complete here
+function getName(destination){
+    return destination.destinationName;
+}    
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+// Complete here
+
+var destinationNameReachableByFerry = travelDestinations.filter(getNamebyFerry).map(getName);
+
+function getNamebyFerry(destination){
+    return (destination.transportations.includes("ferry"));
+}
+
+// Complete here
+
+var destinationNamesMoreThan300KmsAwayByTrain = [];
+
+travelDestinations.filter(get300awaybytrain).forEach(get300awaybytrainPush);
+
+function get300awaybytrain(destination) {
+    return (destination.distanceKms > 300) && (destination.transportations.includes("train"));
+}
+
+function get300awaybytrainPush(destination) {
+   destinationNamesMoreThan300KmsAwayByTrain.push(destination.destinationName);
+}
+
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
