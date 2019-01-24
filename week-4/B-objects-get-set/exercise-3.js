@@ -3,6 +3,12 @@
 */
 
 // WRITE CODE BELOW THIS
+var kitten = {
+  name: "Gilbert",
+  ageMonths: 3,
+  isFemale: true,
+  furColour: "brown"
+};
 
 // WRITE CODE ABOVE THIS
 
