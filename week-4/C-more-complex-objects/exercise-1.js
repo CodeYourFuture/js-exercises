@@ -11,7 +11,7 @@ var house = {
       firstName: "Margaret",
       lastName: "Conway"
     },
-    newAddress: function(newAddress){
+    newOwnerAddress: function(newAddress){
       this.address = newAddress;
     },
     NewPreviousOwners: function(newOwner){
@@ -23,7 +23,7 @@ var house = {
 };
 house.newcurrentLastName("Montgomery");
 house.NewPreviousOwners(["Brian M.", "Fiona S."]);
-house.newAddress("51 Berkley Road");
+house.newOwnerAddress("51 Berkley Road");
 
 //house.currentOwner.lastName = "Clement";
 
