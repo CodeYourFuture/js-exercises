@@ -14,10 +14,10 @@ var mentorsAges = {
 };
 
 // ONLY EDIT BELOW THIS LINE
-
-var mentorsNames = ;
-
-var mentorsNamedCapitalised = ;
+var mentorsNames = Object.keys(mentorsAges);
+console.log(mentorsNames);
+var mentorsNamedCapitalised = mentorsNames.map(name => name.toUpperCase());
+console.log(mentorsNamedCapitalised);
 
 // ONLY EDIT ABOVE THIS LINE
 
