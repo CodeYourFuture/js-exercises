@@ -8,11 +8,13 @@ var person = {
     name: "Alice",
     age: 25,
     currentAddress: "Glasgow",
-    changeAddress: function (newAddress) {
-        currentAddress = newAddress;
+
+    changeAddress(newAddress) {
+        return (this.currentAddress = newAddress);
     },
-    celebrateBirthday: function() {
-        this.age = this.age + 1;
+
+    celebrateBirthday() {
+        return (this.age = this.age + 1);
     }
 };
 
