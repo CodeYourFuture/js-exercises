@@ -45,36 +45,29 @@ WRITE YOUR CODE BELOW
 
 // Complete here
 
+function mapNames(dest) {
+  return dest.destinationName
+}
+
 //Declare variables
-var destinationNamesWithin500Kms = [];
-var destinationNameReachableByFerry = [];
-var destinationNamesMoreThan300KmsAwayByTrain = [];
+var destinationNamesWithin500Kms = travelDestinations.filter(filterDestWithin500).map(mapNames)
+var destinationNameReachableByFerry = travelDestinations.filter(filterFerry).map(mapNames)
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(filter300Plus).map(mapNames)
 
 //Callback functions
 function filterDestWithin500(dest) {
-  if (dest.distanceKms <= 500) {
-    return destinationNamesWithin500Kms.push(dest.destinationName);
-  }
-}
+  return (dest.distanceKms <= 500)
+};
 
 function filterFerry(dest) {
-  if (dest.transportations.includes("ferry")) {
-    return destinationNameReachableByFerry.push(dest.destinationName);
-  }
-}
+  return (dest.transportations.includes("ferry"))
+};
 
 function filter300Plus(dest) {
-  if (dest.distanceKms > 300 && dest.transportations.includes("train")) {
-    return destinationNamesMoreThan300KmsAwayByTrain.push(dest.destinationName);
-  }
-}
+  return (dest.distanceKms > 300 && dest.transportations.includes("train"))
+};
 
 //Push to variables
-var pushDestinationsWithin500Kms = travelDestinations.forEach(
-  filterDestWithin500
-);
-var pushDestinationFerry = travelDestinations.forEach(filterFerry);
-var pushDestination300Plus = travelDestinations.forEach(filter300Plus);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
@@ -82,13 +75,13 @@ DO NOT EDIT ANYTHING BELOW THIS LINE
 
 console.log(
   "Question 1) Expected result: Edinburgh,Dublin, actual result: " +
-    destinationNamesWithin500Kms
+  destinationNamesWithin500Kms
 );
 console.log(
   "Question 2) Expected result: Dublin, actual result: " +
-    destinationNameReachableByFerry
+  destinationNameReachableByFerry
 );
 console.log(
   "Question 3) Expected result: London,Paris, actual result: " +
-    destinationNamesMoreThan300KmsAwayByTrain
+  destinationNamesMoreThan300KmsAwayByTrain
 );
