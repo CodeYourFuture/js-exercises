@@ -37,13 +37,25 @@ var travelDestinations = [
   destination3,
   destination4
 ];
+//I tried to create new Array Method which covers both .filter() and .map() methods.
 
-var destinationNamesWithin500Kms = [];
-travelDestinations
-  .filter(destination => destination.distanceKms <= 500)
-  .forEach(destination =>
-    destinationNamesWithin500Kms.push(destination.destinationName)
-  ); // Complete here
+Array.prototype.filterPlus = function(callback, propertyName) {
+  var output = [];
+  for (var element of this) {
+    if (callback(element)) {
+      output.push(element[propertyName]);
+    }
+  }
+  return output;
+};
+
+var destinationNamesWithin500Kms = travelDestinations.filterPlus(
+  inside500,
+  "destinationName"
+);
+function inside500(destination) {
+  return destination.distanceKms < 500;
+} // Complete here
 
 var destinationNameReachableByFerry = travelDestinations.find(destination =>
   destination.transportations.includes("ferry")
@@ -59,7 +71,6 @@ travelDestinations
   .forEach(destination =>
     destinationNamesMoreThan300KmsAwayByTrain.push(destination.destinationName)
   );
-
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
