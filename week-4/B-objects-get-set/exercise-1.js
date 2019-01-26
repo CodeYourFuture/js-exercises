@@ -3,16 +3,12 @@
 */
 
 var kitten = {
-    ageMonths: 3,
-    isFemale: true,
-    furColour: "brown"
+  ageMonths: 3,
+  isFemale: true,
+  furColour: "brown"
 };
+console.log();
 
 // YOUR CODE GOES BELOW HERE
-
-
-
-
-
 
 // YOUR CODE GOES ABOVE HERE
