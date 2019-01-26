@@ -3,6 +3,9 @@
 */
 
 // WRITE CODE BELOW THIS
+var kitten = {
+  name: "gilbert"
+};
 
 // WRITE CODE ABOVE THIS
 
