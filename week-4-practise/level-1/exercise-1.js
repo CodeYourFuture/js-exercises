@@ -6,10 +6,9 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
-var writers = [
-  {
+var writers = [{
     firstName: "Virginia",
     lastName: "Woolf",
     occupation: "writer",
@@ -38,6 +37,12 @@ var writers = [
     alive: true
   },
 ];
+
+writers.forEach(function (writer) {
+  return console.log("Hi, my name is " + writer.firstName + " " + writer.lastName + ". I am " + writer.age + " years old, and work as a " + writer.occupation + ".");
+});
+
+
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
