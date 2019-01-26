@@ -19,17 +19,24 @@ var person3 = {
     age: 20
 };
 
-/* 
+/* {
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+function isName(person){
+    return person.name;
+}
 
+function isUnder28(person){
+    if(person.age < 28){
+     return person;   
+    }
+};
+var persons = [person1, person2, person3]// Complete here
 
-var persons = // Complete here
+var personNames = persons.map(isName)// Complete here
 
-var personNames = // Complete here
-
-var personsYoungerThan28YearsOld = // Complete here
+var personsYoungerThan28YearsOld = persons.filter(isUnder28) // Complete here
 
 
 /*

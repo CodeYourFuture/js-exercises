@@ -60,7 +60,9 @@ var restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function(numberOfPeople) {
-        // Complete here
+        if(numberOfPeople < this.restaurants.totalSeats){
+            return this.restaurants.name;
+        }// Complete here
     },
     findRestaurantServingDish: function(dishName) {
         // Complete here

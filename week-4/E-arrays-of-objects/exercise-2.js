@@ -39,12 +39,35 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+// function within500Kms(location){
+// if(location.distanceKms < 500){
+//     return location.destinationName;
+//     }
+// };
+// I have no idea why this code does not work while the on 2 smaller separate codes do work.
 
-var destinationNamesWithin500Kms = // Complete here
+function within500Kms(location){
+        return location.distanceKms < 500;
+    };
 
-var destinationNameReachableByFerry = // Complete here
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+function reachableByFerry(location){
+        return location.transportations.includes("ferry");
+};
+
+function moreThan300kmByTrain(location){
+        return location.distanceKms > 300 && location.transportations.includes("train");
+};
+
+function getName(location){
+    return location.destinationName;
+}
+
+var destinationNamesWithin500Kms = travelDestinations.filter(within500Kms).map(getName);// Complete here
+
+var destinationNameReachableByFerry = travelDestinations.filter(reachableByFerry).map(getName);// Complete here
+
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(moreThan300kmByTrain).map(getName);// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
