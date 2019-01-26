@@ -16,11 +16,15 @@ var coffeeMachine = {
         flatWhite: 3.00
     },
     insertedAmount: 0,
-    insertMoney: function(amount) {
-
+    insertMoney: function (amount) {
+        this.insertedAmount = amount;
     },
-    getCoffee: function(coffee) {
-
+    getCoffee: function (coffee) {
+        if (this.insertedAmount >= this.prices[coffee]) {
+            return "Please take your " + coffee;
+        } else {
+            return "Sorry you don't have enough money for a flatWhite";
+        }
     }
 };
 
@@ -40,4 +44,3 @@ console.log("Expected result: 'Please take your flatWhite'. Actual result: " + c
 
 coffeeMachine.insertMoney(2.40);
 console.log("Expected result: 'Sorry you don't have enough money for a flatWhite'. Actual result: " + coffeeMachine.getCoffee('flatWhite'));
-
