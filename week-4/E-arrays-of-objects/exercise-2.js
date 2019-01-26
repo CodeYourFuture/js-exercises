@@ -43,31 +43,25 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
-var destinationNamesWithin500Kms = travelDestinations.filter(namesWithin); // Complete here
+var destinationNamesWithin500Kms = travelDestinations
+  .filter(namesWithin => namesWithin.distanceKms > 500)
+  .map(destinations => destinations.destinationsName); // Complete here
 
-function namesWithin(travelDestinations) {
-  return travelDestinations.distanceKms >= 500;
-}
-console.log(destinationNamesWithin500Kms);
+var destinationNameReachableByFerry = travelDestinations
+  .filter(reachByFerry => reachByFerry.transportations.includes("ferry"))
+  .map(destinations => destinations.destinationsName);
 
-var destinationNameReachableByFerry = travelDestinations.find(reachByFerry); // Complete here
+// Complete here
 
-function reachByFerry(travelDestinations) {
-  return travelDestinations.transportations.includes("ferry");
-}
-console.log(destinationNameReachableByFerry);
-
-var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(
-  kmsByTrain
-);
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .filter(
+    kmsByTrain =>
+      kmsByTrain.distanceKms > 300 &&
+      kmsByTrain.transportations.includes("train")
+  )
+  .map(destinations => destinations.destinationName);
 // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
-function kmsByTrain(travelDestinations) {
-  return (
-    travelDestinations.distanceKms >= 300
-  ).travelDestinations.transportations.includes("train");
-}
-console.log.forEach(destinationNamesMoreThan300KmsAwayByTrain);
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
