@@ -6,12 +6,11 @@ Write JavaScript below that changes the background colour of the page when the '
 */
 
 var changeButton = document.querySelector("#bgrChangeBtn");
-console.log (changeButton);
+
 changeButton.addEventListener("click", changeColour);
 
-
 function changeColour() {
-    document.body.style.backgroundColor ="red";
+    document.body.style.backgroundColor = "green";
 }
 
 
