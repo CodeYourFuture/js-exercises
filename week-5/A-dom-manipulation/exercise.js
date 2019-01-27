@@ -38,15 +38,14 @@ When a user clicks the 'Add some text' button, a new paragraph should be added b
 
 var addSomeTextButton = document.querySelector("#addTextBtn");
 addSomeTextButton.addEventListener("click", addSomeTextFunction);
-var paragraph = document.createElement("p"); 
-paragraph.innerText = "Read more below.";
+
+var placeToAdd = document.querySelector(".jumbotron");
 
 function addSomeTextFunction() {
-    var paragraph = document.createElement("p"); 
-    addSomeTextButton.appendChild(paragraph);
-    paragraph.innerText = "...........";
+    var paragraph = document.createElement("p");
+    paragraph.innerText = "Read more below.";
+    placeToAdd.appendChild(paragraph);
 }
-
 
 /*
 Task 4
@@ -54,3 +53,10 @@ Task 4
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+
+var largerLinksBtn = document.querySelector("#largerLinksBtn");
+largerLinksBtn.addEventListener("click", largerLinksBtnFunction);
+
+function largerLinksBtnFunction() {
+    document.querySelectorAll('a').forEach(aStyle => aStyle.style.fontSize = "2em");
+}
