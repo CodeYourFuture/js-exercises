@@ -1,4 +1,4 @@
-gi/*
+/*
 
 Think of 5 different real world "things" that you 
 can describe with a JavaScript object
