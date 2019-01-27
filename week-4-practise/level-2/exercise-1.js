@@ -11,10 +11,10 @@ We made a start on this for you here:
 var bottle = {
   volume: 0,
   fill: function() {
-    return (this.volume = 100);
+    this.volume = 100;
   },
   drink: function() {
-    return (this.volume = this.volume - 10);
+    this.volume = this.volume - 10;
   },
   empty: function() {
     if (this.volume <= 0) {
