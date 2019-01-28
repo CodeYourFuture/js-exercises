@@ -22,3 +22,42 @@ greenButton.addEventListener("click", function() {
   donateAndVolunteerButtons[0].style.backgroundColor = "black";
   donateAndVolunteerButtons[1].style.backgroundColor = "#8c9c08";
 });
+
+//Part 2 solution :
+var submitButton = document.querySelectorAll(".btn-primary")[5];
+var nameTextField = document.querySelector("#example-text-input");
+var emailTextField = document.querySelector("#exampleInputEmail1");
+var descYourselfTextField = document.querySelector("#exampleTextarea");
+
+submitButton.addEventListener("click", submitButtonFunction, false);
+
+//submit button  event Listener function
+function submitButtonFunction() {
+  if (areValidElements()) {
+    alert("Thank you for filling the form");
+  }
+
+  event.preventDefault();
+}
+
+//This function to  check if the elments are valid or not
+function areValidElements() {
+  let isvalid = true;
+  if (nameTextField.value.length < 1) {
+    nameTextField.style.backgroundColor = "red";
+    isvalid = false;
+  }
+  if (
+    emailTextField.value.indexOf("@") === -1 ||
+    emailTextField.value.length < 1
+  ) {
+    emailTextField.style.backgroundColor = "red";
+    isvalid = false;
+  }
+  if (descYourselfTextField.value.length < 1) {
+    descYourselfTextField.style.backgroundColor = "red";
+    isvalid = false;
+  }
+
+  return isvalid;
+}
