@@ -19,6 +19,8 @@ var bottle = {
   empty: function() {
     if (this.volume <= 0) {
       return true;
+    } else {
+      return false;
     }
   }
 };

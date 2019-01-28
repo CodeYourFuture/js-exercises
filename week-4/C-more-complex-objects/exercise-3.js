@@ -33,27 +33,27 @@ var parkAvenueHouse = {
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
   return (
-    kinningParkHouse.currentOwner.firstName +
+    house.currentOwner.firstName +
     " " +
-    kinningParkHouse.currentOwner.lastName
+    house.currentOwner.lastName
   );
 }
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
   return (
-    kinningParkHouse.currentOwner.email +
+    house1.currentOwner.email +
     ", " +
-    parkAvenueHouse.currentOwner.email
+    house2.currentOwner.email
   );
 }
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
-  if (kinningParkHouse.price < parkAvenueHouse.price) {
-    return kinningParkHouse.address;
+  if (house1.price < house2.price) {
+    return house1.address;
   } else {
-    return parkAvenueHouse.address;
+    return house2.address;
   }
 }
 
