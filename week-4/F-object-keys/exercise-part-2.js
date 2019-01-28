@@ -9,40 +9,52 @@ Use the provided console.log statements below and follow the instructions above 
 */
 
 var storeBranches = {
-
   glasgow: {
-    manager: 'Andrew',
-    assistant: 'Laura',
+    manager: "Andrew",
+    assistant: "Laura",
     interns: {
-      head_intern: 'Mozafar',
-      intern: 'James'
+      head_intern: "Mozafar",
+      intern: "James"
     }
   },
 
   edinburgh: {
-    director: 'Kelly',
-    manager: 'Sally',
-    assistant: 'Derek',
+    director: "Kelly",
+    manager: "Sally",
+    assistant: "Derek",
     interns: {
-      head_intern: 'John',
-      intern: 'Sarah'
+      head_intern: "John",
+      intern: "Sarah"
     }
   }
-}
-
+};
 
 // ONLY EDIT BELOW THIS LINE
-
+glasgow = {
+  glasgow: "glasgow"
+};
+edinburgh = {
+  edinburgh: "edinburgh"
+};
 // # 1
 // prints [ 'glasgow', 'edinburgh' ]
-console.log()
+console.log(glasgow.glasgow, edinburgh.edinburgh);
 
 // # 2
 // prints [ 'manager', 'assistant', 'interns' ]
-console.log()
+glasgow = {
+  assistant: "laura"
+};
+edinburgh = {
+  assistant: "Derek"
+};
+console.log(
+  glasgow.manager.assistant.interns,
+  edinburgh.manager.assistant.interns
+);
 
 // # 3
 // prints [ 'head_intern', 'intern' ]
-console.log()
+console.log(glasgow.interns, edinburgh.intern);
 
 // ONLY EDIT ABOVE THIS LINE

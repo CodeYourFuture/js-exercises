@@ -15,10 +15,18 @@ var mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
+var mentorsNames = {
+  name: "james",
+  name: "JOSH",
+  name: "JAMIE",
+  name: "Mozfar"
+};
+var mentorsNamedCapitalised = mentorsNames;
 
-var mentorsNamedCapitalised = ;
-
+function capitalized() {
+  mentorsNamedCapitalised.toUppercase(mentorsNames);
+  return mentorsNamedCapitalised;
+}
 // ONLY EDIT ABOVE THIS LINE
 
 console.log(mentorsNamedCapitalised);
