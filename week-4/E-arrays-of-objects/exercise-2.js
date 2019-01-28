@@ -45,40 +45,40 @@ WRITE YOUR CODE BELOW
 //Question 1
 // Find retorna só o primeiro que satisfaz a condiçao. Filter retorna mais!
 
-function checkingDistance(travelDestinations) {
-  if (travelDestinations.distanceKms <= 500) {
-    return travelDestinations;
+function checkingDistance(travelDestination) {
+  if (travelDestination.distanceKms <= 500) {
+    return travelDestination;
   }
 }
-function getName(travelDestinations) {
-  return travelDestinations.destinationName;
+function getDestinationName(name) {
+  return name.destinationName;
 }
 var destinationNamesWithin500Kms = travelDestinations
   .filter(checkingDistance)
-  .map(getName);
+  .map(getDestinationName);
 
 //Question 2
 
-function isItReachableByFerry(travelDestinations) {
-  return travelDestinations.transportations.includes("ferry");
+function isItReachableByFerry(travelDestination) {
+  return travelDestination.transportations.includes("ferry");
 }
 
 var destinationNameReachableByFerry = travelDestinations
   .filter(isItReachableByFerry)
-  .map(getName);
+  .map(getDestinationName);
 
 //Question 3
 
-function destinationMoreThan300andByTrain(travelDestinations) {
+function destinationMoreThan300andByTrain(travelDestination) {
   return (
-    travelDestinations.transportations.includes("train") &&
-    travelDestinations.distanceKms > 300
+    travelDestination.transportations.includes("train") &&
+    travelDestination.distanceKms > 300
   );
 }
 
 var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
   .filter(destinationMoreThan300andByTrain)
-  .map(getName);
+  .map(getDestinationName);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

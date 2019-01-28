@@ -37,7 +37,7 @@ function getName(persons) {
 var personsYoungerThan28YearsOld = persons.filter(checkingAge); // Complete here
 
 function checkingAge(persons) {
-  return persons.age <= 28;
+  return persons.age < 28;
 }
 
 /*
