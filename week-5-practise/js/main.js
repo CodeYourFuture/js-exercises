@@ -20,6 +20,7 @@ orangeBtn.addEventListener("click", function() {
   volunteerBtn.style.backgroundColor = "#31b0d5";
   volunteerBtn.style.color = "white";
 });
+//
 greenBtn.addEventListener("click", function() {
   jumbotronBackground.style.backgroundColor = "#87ca8a";
   donateBtn.style.backgroundColor = "#5751fd";
