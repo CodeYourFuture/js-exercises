@@ -47,10 +47,8 @@ var destinationNamesWithin500Kms = travelDestinations
   .map(destination => destination.destinationName);
 
 var destinationNameReachableByFerry = travelDestinations
-  .filter(reach => reach.transportations.includes("ferry"))
+  .filter(destination => destination.transportations.includes("ferry"))
   .map(destination => destination.destinationName);
-
-travelDestinations.forEach;
 
 var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
   .filter(
@@ -58,7 +56,7 @@ var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
       destination.distanceKms > 300 &&
       destination.transportations.includes("train")
   )
-  .map(destinationName => destinationName.destinationName);
+  .map(destination => destination.destinationName);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

@@ -26,13 +26,11 @@ WRITE YOUR CODE BELOW
 var persons = [person1, person2, person3];
 console.log(persons);
 
-var personNames = persons.map(namesOf => {
-  return namesOf.name;
+var personNames = persons.map(person => {
+  return person.name;
 });
 
-var personsYoungerThan28YearsOld = persons.filter(ages => {
-  return ages.age < 28;
-});
+var personsYoungerThan28YearsOld = persons.filter(person => person.age < 28);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

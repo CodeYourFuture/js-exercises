@@ -67,7 +67,7 @@ var restaurantFinderApplication = {
   },
   findRestaurantServingDish: function(dishName) {
     return restaurants
-      .filter(restaurant => restaurant["menu"].includes(dishName))
+      .filter(restaurant => restaurant.menu.includes(dishName))
       .map(displayName);
   },
   countNumberOfRestaurantsInArea: function(area) {
