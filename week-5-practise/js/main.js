@@ -60,12 +60,14 @@ function areValidElements() {
     isvalid = false;
   }
   if (
-    emailTextField.value.indexOf("@") === "@" || emailTextField.value.length < 1 ) {
+    emailTextField.value.indexOf("@") !== -1 ||
+    emailTextField.value.length < 1
+  ) {
     emailTextField.style.backgroundColor = "red";
     isvalid = false;
   }
   if (describeYourselfTextField.value.length < 1) {
-       describeYourselfTextField.style.backgroundColor = "red";
+    describeYourselfTextField.style.backgroundColor = "red";
     isvalid = false;
   }
 
@@ -80,7 +82,8 @@ submitButton.addEventListener("click", submitButtonFunction, false);
 function submitButtonFunction() {
   if (areValidElements()) {
     alert("Thank you for filling the form");
+  } else {
+    alert("Information is not valid, please try again");
   }
-
   event.preventDefault();
 }
