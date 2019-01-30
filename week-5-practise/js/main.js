@@ -1,3 +1,4 @@
+/*-------------------------------Part 1------------------------- */
 //Defining buttons
 var blueBtn = document.querySelector("#blueBtn");
 var orangeBtn = document.querySelector("#orangeBtn");
@@ -25,4 +26,47 @@ greenBtn.addEventListener("click", function() {
   jumbotronBackground.style.backgroundColor = "#87ca8a";
   donateBtn.style.backgroundColor = "#5751fd";
   volunteerBtn.style.backgroundColor = " black ";
+});
+
+/*-------------------------------Part 2------------------------- */
+
+var emailInput = document.querySelector("#exampleInputEmail1");
+var submitBtn = document.querySelector("#submitBtn");
+var nameInput = document.querySelector("#name-input");
+var textInput = document.querySelector("#exampleTextarea");
+
+function validateNonEmpty(value) {
+  return value.length > 0;
+}
+
+function validateEmail(email) {
+  return email.includes("@");
+}
+
+submitBtn.addEventListener("click", function(event) {
+  if (validateEmail(emailInput.value) === false) {
+    emailInput.style.backgroundColor = "red";
+  } else {
+    nameInput.style.backgroundColor = "white";
+  }
+  if (validateNonEmpty(textInput.value) === false) {
+    textInput.style.backgroundColor = " red";
+  } else {
+    textInput.style.backgroundColor = "white";
+  }
+
+  if (validateNonEmpty(nameInput.value) === false) {
+    nameInput.style.backgroundColor = "red";
+  } else {
+    nameInput.style.backgroundColor = "white";
+  }
+  if (
+    validateEmail(emailInput.value) &&
+    validateNonEmpty(textInput.value) &&
+    validateNonEmpty(nameInput.value)
+  ) {
+    alert("Thank you for filling this form!");
+    window.location.reload();
+  }
+  event.preventDefault();
 });
