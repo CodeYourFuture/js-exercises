@@ -37,3 +37,40 @@ blueBtnClass.style.backgroundColor = "#87ca8a";
 divBtn.firstElementChild.style.backgroundColor = "black";
 divBtn.lastElementChild.style.backgroundColor = "#8c9c08";
 }
+
+
+/////// When Submit is Clicked ////////
+var formTag = document.querySelector("form");
+    formTag.lastElementChild.addEventListener("click",validateForm); //getting submit button
+    
+    function validateForm() {
+        var emailInput = document.querySelector("#exampleInputEmail1");
+        var nameInput = document.querySelector("#example-text-input");
+        var describeMe = document.querySelector("#exampleTextarea");
+        event.preventDefault();
+        if (emailInput.value.length === 0){
+            emailInput.style.backgroundColor = "red"
+        }
+        else if (nameInput.value.length === 0){
+            nameInput.style.backgroundColor = "red";
+        }
+        else if (describeMe.value.length === 0){
+            describeMe.style.backgroundColor = "red";
+
+        }
+         else if (!emailInput.value.includes("@")){
+            emailInput.style.backgroundColor = "red";
+         }
+            
+        else{
+            
+            alert("Thank you for filling out the form");
+            emailInput.value = "";
+            nameInput.value = "";
+            describeMe.value = "";
+            describeMe.style.backgroundColor = "white";
+            emailInput.style.backgroundColor = "white"
+            nameInput.style.backgroundColor = "white";
+
+        }
+    }
