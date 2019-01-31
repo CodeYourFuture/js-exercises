@@ -5,132 +5,92 @@ var donateBikeBtn = document.querySelector(".buttons").firstElementChild;
 var volunteerBtn = document.querySelector(".buttons").lastElementChild;
 var colorButtons = document.querySelectorAll(".colorButton");
 
-//function handling the events when click buttons
-function colorButtonEvent(
-  jumboBackGrColor,
-  donateBikeBtnBackGrColor,
-  volunteerBtnBackGrColor,
-  volunteerBtnColor
-) {
-  jumbotronDiv.style.backgroundColor = jumboBackGrColor;
-  donateBikeBtn.style.backgroundColor = donateBikeBtnBackGrColor;
-  volunteerBtn.style.backgroundColor = volunteerBtnBackGrColor;
-  volunteerBtn.style.color = volunteerBtnColor;
-}
-
-//object creator `factory function` defining the changes for each color event
-function ButtonCreator(
+function addOnClickToButton(
   button,
   jumboBackGrColor,
   donateBikeBtnBackGrColor,
   volunteerBtnBackGrColor,
   volunteerBtnColor
 ) {
-  this.button = button;
-  this.jumboBackGrColor = jumboBackGrColor;
-  this.donateBikeBtnBackGrColor = donateBikeBtnBackGrColor;
-  this.volunteerBtnBackGrColor = volunteerBtnBackGrColor;
-  this.volunteerBtnColor = volunteerBtnColor;
-  this.colorEventStarter = function() {
-    return colorButtonEvent(
-      jumboBackGrColor,
-      donateBikeBtnBackGrColor,
-      volunteerBtnBackGrColor,
-      volunteerBtnColor
-    );
+  //event listener function doing the changes when clicking the buttons
+  button.onclick = function() {
+    jumbotronDiv.style.backgroundColor = jumboBackGrColor;
+    donateBikeBtn.style.backgroundColor = donateBikeBtnBackGrColor;
+    volunteerBtn.style.backgroundColor = volunteerBtnBackGrColor;
+    volunteerBtn.style.color = volunteerBtnColor;
   };
 }
-//instantiation of factory function
-var blueBtn = new ButtonCreator(
-  colorButtons[0],
-  `#588fbd`,
-  `#ffa500`,
-  "black",
-  "white"
-);
-var orangeBtn = new ButtonCreator(
-  colorButtons[1],
-  `#f0ad4e`,
-  `#5751fd`,
-  "#31b0d5",
-  "white"
-);
-var greenBtn = new ButtonCreator(
-  colorButtons[2],
-  `#87ca8a`,
-  `black`,
-  "#8c9c08",
-  "white"
-);
+//calling the function for blue button events
+addOnClickToButton(colorButtons[0], `#588fbd`, `#ffa500`, "black", "white");
+//calling the function for blue button events
+addOnClickToButton(colorButtons[1], `#f0ad4e`, `#5751fd`, "#31b0d5", "white");
+//calling the function for blue button events
+addOnClickToButton(colorButtons[2], `#87ca8a`, `black`, "#8c9c08", "white");
 
-colorEvents = [blueBtn, orangeBtn, greenBtn];
-
-//button click events
-function bond007() {
-  colorEvents.forEach(
-    colorEvt => (colorEvt.button.onclick = colorEvt.colorEventStarter)
-  );
-}
-bond007();
-
-/*
-//clicking blue button events
-colorButtons[0].onclick = function colorEventStarter() {
-  return colorButtonEvent(`#588fbd`, `#ffa500`, "black", "white");
-};
-
-//clicking orange button events
-colorButtons[1].onclick = function orangeEventStarter() {
-  return colorButtonEvent(`#f0ad4e`, `#5751fd`, "#31b0d5", "white");
-};
-
-//clicking green button events
-colorButtons[2].onclick = function greenEventStarter() {
-  return colorButtonEvent(`#87ca8a`, `black`, "#8c9c08", "white");
-};
-*/
 //-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-//
 //Part-2
 
+//accessing the input form fields
 var inputs = document.querySelectorAll(".form-control");
+//accessing the form
 var form = document.querySelectorAll("form");
-
+//accessing the "submit" button
 document
   .querySelector("form")
-  .querySelector(".btn-primary")
-  .addEventListener("click", checkForm);
-
+  .lastElementChild.addEventListener("click", checkForm);
+//constructor function with the parameters of form input field, validity check function and the warning message
+function FormField(formField, isValid, errorMsg) {
+  this.formField = formField;
+  this.errorMsg = errorMsg;
+  this.isValid = function() {
+    return isValid(this.formField.value);
+  };
+}
+//warning messages
+var emailErrMsg = "Incorrect or empty email address";
+var nameErrMsg = "Your name is missing!";
+var describeErrMsg = "Describe yourself area must be filled out!";
+//instantination of constructor function for email input
+const emailFormField = new FormField(
+  inputs[0],
+  isMailAddressValid,
+  emailErrMsg
+);
+//instantination of constructor function for "you name" and "describe yourself" inputs
+const name = new FormField(inputs[1], isTextValid, nameErrMsg);
+const describeYourSelf = new FormField(inputs[2], isTextValid, describeErrMsg);
+//checking the form validity
+var formFields = [emailFormField, name, describeYourSelf];
 function checkForm(event) {
-  var invalidInputCounter = 0;
-  isMailAddressValid = checkMailAddressValidity(inputs[0].value);
-
-  if (!isMailAddressValid) {
-    inputs[0].style.backgroundColor = "red";
-    invalidInputCounter++;
-    inputs[0].onmouseout = function() {
-      alert("All areas must be filled out!");
-    };
-  }
-
-  for (var i = 1; i < inputs.length; i++) {
-    if (inputs[i].value.length === 0) {
-      inputs[i].style.backgroundColor = "red";
-      invalidInputCounter++;
-      inputs[i].onmouseout = function() {
-        alert("All areas must be filled out!");
-      };
+  event.preventDefault();
+  var errorMsgs = [];
+  formFields.forEach(field => {
+    if (!field.isValid()) {
+      field.formField.style.backgroundColor = "red";
+      errorMsgs.push(field.errorMsg);
+    } else {
+      field.formField.style.backgroundColor = "white";
     }
-  }
+  });
 
-  if (invalidInputCounter === 0) {
-    alert("Thank you for filling out the form!");
+  var checkResult = formFields.every(field => {
+    return field.isValid();
+  });
+
+  if (checkResult) {
+    alert("Thanks for filling out the form");
     form[0].reset();
   } else {
-    event.preventDefault();
+    var msg = errorMsgs.join("\n");
+    alert(msg);
   }
 }
 
-function checkMailAddressValidity(mailAddress) {
+function isMailAddressValid(mailAddress) {
   mailAddress = mailAddress.split("");
   return mailAddress.length > 0 && mailAddress.includes("@");
+}
+
+function isTextValid(value) {
+  return value.length > 0;
 }
