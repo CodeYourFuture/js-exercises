@@ -11,9 +11,20 @@ var role = "mentor";
 var name2 = "Harun";
 var role2 = "student";
 
+//test for person 1
+if(role2) {
+  console.log("Hi, My name is " + name2);
+} 
 
-console.log("Hi, My name is " + name);
-console.log("Hi, My name is " + name2);
+//test for person 2
+if(role === role2) {
+  console.log("Hi, My name is " + name2);
+}
+// else {
+
+// console.log("Hi, My name is " + name);
+// //console.log("Hi, My name is " + name2);
+// }
 
 
 

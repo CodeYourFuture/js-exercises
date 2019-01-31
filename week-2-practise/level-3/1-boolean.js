@@ -3,8 +3,9 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
-
+// the variable name isHappy should be change to isNotHappy and the equal to true without quotation marks
+var isHappy = false;
+//var isNotHappy = true;
 if (isHappy == true) {
   console.log("I am happy");
 } else {

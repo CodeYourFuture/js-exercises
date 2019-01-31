@@ -15,7 +15,7 @@ function isNegative(number) {
 
 // Finish the predicate function to test if the passed number is between 0 and 10
 function isBetweenZeroAnd10(number) {
-    return number > 0 && number < 10;
+  return number > 0 && number < 10;
   // if(number < 0 && number > 10){
   //   return true;
   // } else {
@@ -41,4 +41,3 @@ console.log("Is the number between 0 and 10? " + numberBetweenZeroAnd10);
   Is the number negative? false
   Is the number between 0 and 10? true
 */
-

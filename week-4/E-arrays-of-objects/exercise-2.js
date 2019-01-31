@@ -7,50 +7,77 @@ Each destination has a name, a distance from Glasgow, and a list of transportati
 3) Print in the console all the destination names more than 300 kms far away and reachable by train.
 */
 
-
 var destination1 = {
-    destinationName: "Edinburgh",
-    distanceKms: 80,
-    transportations: ["car", "bus", "train"]
+  destinationName: "Edinburgh",
+  distanceKms: 80,
+  transportations: ["car", "bus", "train"]
 };
 
 var destination2 = {
-    destinationName: "London",
-    distanceKms: 650,
-    transportations: ["car", "bus", "train"]
+  destinationName: "London",
+  distanceKms: 650,
+  transportations: ["car", "bus", "train"]
 };
 
 var destination3 = {
-    destinationName: "Paris",
-    distanceKms: 900,
-    transportations: ["train", "plane"]
+  destinationName: "Paris",
+  distanceKms: 900,
+  transportations: ["train", "plane"]
 };
 
 var destination4 = {
-    destinationName: "Dublin",
-    distanceKms: 350,
-    transportations: ["plane", "ferry"]
+  destinationName: "Dublin",
+  distanceKms: 350,
+  transportations: ["plane", "ferry"]
 };
 
-var travelDestinations = [destination1, destination2, destination3, destination4];
+var travelDestinations = [
+  destination1,
+  destination2,
+  destination3,
+  destination4
+];
 
 /* 
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+//1) Filter the travelDestinations array to return all destination names reachable within 500 kms.
+function getDestination(destination) {
+  if (destination.distanceKms <= 500) {
+    return destination.destinationName;
+  }
+}
+var destinationNamesWithin500Kms = travelDestinations.filter(getDestination); // Complete here
 
+console.log(travelDestinations.map(getDestination));
+//2) Find a destination name reachable by ferry. reachableByFerry
+function getDestinationByFerry(destByFerry) {
+  return destByFerry.transportations == "ferry";
+}
+var destinationNameReachableByFerry = travelDestinations.find(
+  getDestinationByFerry
+); // Complete here
 
-var destinationNamesWithin500Kms = // Complete here
-
-var destinationNameReachableByFerry = // Complete here
-
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
-
+//3) Print in the console all the destination names more than 300 kms far away and reachable by train.
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.forEach(
+  // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+  function() {}
+);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log("Question 1) Expected result: Edinburgh,Dublin, actual result: " + destinationNamesWithin500Kms);
-console.log("Question 2) Expected result: Dublin, actual result: " + destinationNameReachableByFerry);
-console.log("Question 3) Expected result: London,Paris, actual result: " + destinationNamesMoreThan300KmsAwayByTrain);
+console.log(
+  "Question 1) Expected result: Edinburgh,Dublin, actual result: " +
+    destinationNamesWithin500Kms
+);
+console.log(
+  "Question 2) Expected result: Dublin, actual result: " +
+    destinationNameReachableByFerry
+);
+console.log(
+  "Question 3) Expected result: London,Paris, actual result: " +
+    destinationNamesMoreThan300KmsAwayByTrain
+);

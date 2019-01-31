@@ -3,12 +3,22 @@
   It fails because the array `pairsById` can contain different values that break the program
   It is decided that array items which are not pairs should be filtered out
   - Finish the statement on line 11 to produce an array with valid content
-  - Do not edit any of the existing code
+  - Do not edit any of the existing code 
 */
 
+// var pairsByIndex; Complete this statement
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(function(item) {
+  return (
+    item !== null &&
+    typeof item !== "string" &&
+    typeof item !== "boolean" &&
+    item.length > 1
+  );
+});
+
+//console.log(pairsByIndex);
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];

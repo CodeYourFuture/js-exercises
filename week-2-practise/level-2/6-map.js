@@ -3,7 +3,14 @@
 // 2. Declare a new array, `percentagesFormatted`, containing
 //    - each item in `percentages` formatted by your function
 
+function numToString(arr) {
+  return arr + "%";
+  // var percentagesFormatted = arr.map(numToString);
+}
+//var percentagesFormatted = numToString;
+
 var percentages = [1, 23, 92, 18];
+var percentagesFormatted = percentages.map(numToString);
 
 console.log(percentagesFormatted);
 

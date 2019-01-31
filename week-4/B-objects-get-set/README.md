@@ -4,9 +4,9 @@ Let's take one of the objects we looked at earlier..
 
 ```js
 var laptop = {
-    brand: "Lenovo",
-    screenSize: 13,
-    isTouchscreen: true
+  brand: "Lenovo",
+  screenSize: 13,
+  isTouchscreen: true
 };
 ```
 
@@ -21,7 +21,7 @@ console.log(laptop.brand);
 You can also use the bracket notation (although this is rarely used, it's good to know):
 
 ```js
-console.log(laptop['brand']);
+console.log(laptop["brand"]);
 ```
 
 ### Setting the value of a property
@@ -36,9 +36,9 @@ It's strongly recommended you always use the same **type** when re-assigning an 
 
 ```js
 var laptop = {
-    brand: "Lenovo",
-    screenSize: 13,
-    isTouchscreen: true
+  brand: "Lenovo",
+  screenSize: 13,
+  isTouchscreen: true
 };
 
 // DON'T DO THIS
@@ -47,6 +47,3 @@ laptop.screenSize = "15 inch";
 // OK TO DO
 laptop.screenSize = 15;
 ```
-
-
-

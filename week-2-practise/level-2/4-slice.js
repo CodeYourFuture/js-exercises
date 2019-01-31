@@ -7,8 +7,7 @@
 function remove(arr, index) {
   //return arr.splice(arr, index); // complete this statement
   // return arr.slice(0, index).concat(arr);
-  return arr.slice(0, index).concat(arr.slice(index+1));
-
+  return arr.slice(0, index).concat(arr.slice(index + 1));
 }
 
 /* 

@@ -15,11 +15,22 @@ var mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
+var mentorsNames = Object.keys(mentorsAges);
 
-var mentorsNamedCapitalised = ;
+function captialise(str) {
+  var newStr = str.split("");
+  newStr[0] = newStr[0].toUpperCase();
+  return newStr.join("");
+}
+
+var capMen = mentorsNames.forEach(function(item) {
+  return captialise(item);
+});
+
+var mentorsNamedCapitalised = capMen;
 
 // ONLY EDIT ABOVE THIS LINE
 
-console.log(mentorsNamedCapitalised);
+console.log(capMen);
+//console.log(mentorsNamedCapitalised);
 // prints [ 'JAMES', 'JOSH', 'JAMIE', 'MOZAFAR' ]
