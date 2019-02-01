@@ -5,7 +5,7 @@ The objects below have some syntax issues - try and fix them all!
 */
 
 var kitten = {
-  "fur colour": "orange",
+  furColour: "orange",
   age: 23
 };
 
@@ -15,7 +15,7 @@ var laptop = {
 };
 
 var phone = {
-  "operating system": "iOS",
+  operatingSystem: "iOS",
   hasStylus: true,
   megapixels: 12,
   batteryLife: "24 hours"
