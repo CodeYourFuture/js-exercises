@@ -41,7 +41,7 @@ function addingText() {
 Task 4
 ======
 
-When the 'Larger links!' button is clicked, the text of all links on the page should increase.
+When the 'Larger links!' button is clicked, the text of all links on the page should increase..
 */
 var largLinks = document.querySelector("#largerLinksBtn");
 largLinks.addEventListener("click", larger);

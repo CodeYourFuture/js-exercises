@@ -32,3 +32,4 @@ function applyChange3() {
   secondChangeColor.children[0].style.backgroundColor = "#black";
   secondChangeColor.children[1].style.backgroundColor = "#8c9c08";
 }
+//
