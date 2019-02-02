@@ -4,12 +4,12 @@
 var blueButton = document.querySelector("#blueBtn");
 var jumbotron = document.querySelector(".jumbotron");
 var donateAndVolunteerButtons = document.querySelectorAll(".btn-lrg");
-blueButton.addEventListener("click", donateAndVolunteersBlueButton);
+blueButton.addEventListener("click", changeJumbotronBckgrdColorElsBlueBtn);
 
 //this function will change the  jumbotron class background color  and the class
 //button background / style colors
 
-function donateAndVolunteersBlueButton() {
+function changeJumbotronBckgrdColorElsBlueBtn() {
   jumbotron.style.backgroundColor = "#588fbd";
   donateAndVolunteerButtons[0].style.backgroundColor = "#ffa500";
   donateAndVolunteerButtons[1].style.backgroundColor = "black";
@@ -19,12 +19,12 @@ function donateAndVolunteersBlueButton() {
 //[<div> jumbotron class elements ] in dom Html
 
 var orangeButton = document.querySelector("#orangeBtn");
-orangeButton.addEventListener("click", donateAndVolunteerOrangeButton);
+orangeButton.addEventListener("click", changeJumbotronBckgrdColorElsOrangeBtn);
 
 //this function will change the  jumbotron class background color  and the class
 //button background / style colors
 
-function donateAndVolunteerOrangeButton() {
+function changeJumbotronBckgrdColorElsOrangeBtn() {
   jumbotron.style.backgroundColor = "#f0ad4e";
   donateAndVolunteerButtons[0].style.backgroundColor = "#5751fd";
   donateAndVolunteerButtons[1].style.backgroundColor = "#31b0d5";
@@ -35,12 +35,12 @@ function donateAndVolunteerOrangeButton() {
 //[<div> jumbotron class elements ] in dom Html
 
 var greenButton = document.querySelector("#greenBtn");
-greenButton.addEventListener("click", donateAndVolunteerGreenButton);
+greenButton.addEventListener("click", changeJumbotronBckgrdColorElsGreenBtn);
 
 //this function will change the  jumbotron class background color  and the class
 //button background / style colors
 
-function donateAndVolunteerGreenButton() {
+function changeJumbotronBckgrdColorElsGreenBtn() {
   jumbotron.style.backgroundColor = "#87ca8a";
   donateAndVolunteerButtons[0].style.backgroundColor = "black";
   donateAndVolunteerButtons[1].style.backgroundColor = "#8c9c08";
@@ -54,24 +54,27 @@ var describeYourselfTextField = document.querySelector("#exampleTextarea");
 
 //This function is to check if the elements are valid or not
 function areValidElements() {
-  let isvalid = true;
+  let isValid = true;
   if (nameTextField.value.length < 1) {
     nameTextField.style.backgroundColor = "red";
-    isvalid = false;
+    isValid = false;
   }
+
   if (
-    emailTextField.value.indexOf("@") !== -1 ||
+    emailTextField.value.indexOf("@") === -1 ||
     emailTextField.value.length < 1
   ) {
     emailTextField.style.backgroundColor = "red";
-    isvalid = false;
+    isValid = false;
   }
+  
   if (describeYourselfTextField.value.length < 1) {
     describeYourselfTextField.style.backgroundColor = "red";
-    isvalid = false;
+    isValid = false;
   }
+  
 
-  return isvalid;
+  return isValid;
 }
 
 // this variable  only execute class btn-primary in index[5] of the html dom element
