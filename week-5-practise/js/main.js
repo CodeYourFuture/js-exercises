@@ -57,4 +57,4 @@ document.getElementById('submit').addEventListener('click', function (e) {
         email.focus();
         email.style.backgroundColor = 'red';
     }
-});
+}, false);
