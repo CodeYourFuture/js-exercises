@@ -10,9 +10,9 @@ var btn = document.getElementById("bgrChangeBtn");
 btn.addEventListener("click", changeBackground);
 
 function changeBackground() {
-  var randomColour = ["blue", "purple", "yellow", "green", "white"];
-  var generateColour = randomColour[Math.floor(Math.random() * 4)];
-  document.body.style.backgroundColor = generateColour;
+  var randomColorsArray = ["blue", "purple", "yellow", "green", "white"];
+  var generateRandomColor = randomColorsArray[Math.floor(Math.random() * 4)];
+  document.body.style.backgroundColor = generateRandomColor;
 }
 
 /*
@@ -41,12 +41,27 @@ var addText = document.querySelector("#addTextBtn");
 addText.addEventListener("click", addMoreText);
 
 function addMoreText() {
-  var JumboElement = document.querySelector(".jumbotron");
+  var jumboElement = document.querySelector(".jumbotron");
   var addParagraph = document.createElement("p");
 
-  addParagraph.innerHTML = `<p>Read more below.</p>`;
-  JumboElement.appendChild(addParagraph);
+  addParagraph.textContent = `Read more below.`;
+  jumboElement.appendChild(addParagraph);
 }
+
+/* Alternative based on Ali's Suggestion-
+
+  var createElement = document.createElement("p")
+  var readMoreText = document.createTextNode('Read More');
+  var jumboElement = document.querySelector(".jumbotron");
+
+  createElement.appendChild(readMoreText);
+  jumboElement.appendChild(createElement);
+
+*/
+
+
+
+
 /*
 Task 4
 ======

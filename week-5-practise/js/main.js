@@ -54,11 +54,12 @@ function describeValid() {
   return describeInput.value.length > 0;
 }
 
-
+/*
 //Button Event Listener
 submitBtn.addEventListener(
   "click",
   function(event) {
+    event.preventDefault();
     if (!emailValid()) {
       emailInput.style.border = "1px solid red";
       //emailInput.style.backgroundColor = "red";
@@ -75,7 +76,32 @@ submitBtn.addEventListener(
       alert("Thank you for filling out the form (:");
       setFormDefaults();
     }
+  },
+  false
+);
+*/
+var formEl = document.getElementById('form')
+//Form Event Listener
+formEl.addEventListener(
+  "submit",
+  function(event) {
     event.preventDefault();
+    if (!emailValid()) {
+      emailInput.style.border = "1px solid red";
+      //emailInput.style.backgroundColor = "red";
+    }
+    if (!nameValid()) {
+      nameInput.style.border = "1px solid red";
+      //nameInput.style.backgroundColor = "red"
+    }
+    if (!describeValid()) {
+      describeInput.style.border = "1px solid red";
+      //describeInput.style.backgroundColor = "red";
+    }
+    if (emailValid() && nameValid() && describeValid()) {
+      alert("Thank you for filling out the form (:");
+      setFormDefaults();
+    }
   },
   false
 );
@@ -86,3 +112,13 @@ function setFormDefaults() {
   nameInput.value = "";
   describeInput.value = "";
 }
+
+/*
+addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        submitBtn.click();
+    }
+});
+
+*/
