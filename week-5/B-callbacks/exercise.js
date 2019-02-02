@@ -17,6 +17,7 @@
 document.querySelector('#button1').addEventListener('click', exercise1)
 
 function exercise1() {
+  document.querySelector('#exercise1').innerText = 'Alex Redbull';
   // Write your implementation here
 }
 
@@ -37,6 +38,8 @@ function exercise1() {
 functionThatCallsBack(exercise2)
 
 function exercise2(result) {
+  document.querySelector('#exercise2').innerText = 'Hello from the function caller'
+ return result;
   // Write your implementation here
 }
 
@@ -58,7 +61,6 @@ function exercise2(result) {
 
 function exercise3(callback) {
   // Write your implementation here
-
   // Write your explanation here
 }
 
