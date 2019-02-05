@@ -4,11 +4,13 @@ Task 1
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
-var updateTitleBtn = document.querySelector("#bgrChangeBtn");
-updateTitleBtn.addEventListener("click", function() {
-  var myElement = document.querySelector("#bgrChangeBtn");
-  myElement.style.backgroundColor = "red";
-});
+document
+  .querySelector("#bgrChangeBtn")
+  .addEventListener("click", changeBackgroundColor);
+
+function changeBackgroundColor() {
+  document.body.style.backgroundColor = "pink";
+}
 
 /*
 Task 2
@@ -29,8 +31,8 @@ var updateTitleBtn = document.querySelector("#addTextBtn");
 updateTitleBtn.addEventListener("click", function() {
   var myElement = document.querySelector(".buttons");
   var myParagraph = document.createElement("p");
-  document.querySelector("#mainArticles").appendChild(myParagraph);
   myParagraph.innerText = "Read more below.";
+  document.querySelector("#mainArticles").appendChild(myParagraph);
 });
 /*
 Task 4
