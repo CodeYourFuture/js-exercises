@@ -14,9 +14,10 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "YOUR NAME" when
   the button is clicked
 */
-document.querySelector('#button1').addEventListener('click', exercise1)
+document.querySelector("#button1").addEventListener("click", exercise1);
 
 function exercise1() {
+  document.getElementById("exercise1").textContent = "Ahmed";
   // Write your implementation here
 }
 
@@ -34,12 +35,15 @@ function exercise1() {
   EXPECTED RESULT: The #exercise2 element has textContent = "Hello from the
   function caller"
 */
-functionThatCallsBack(exercise2)
+functionThatCallsBack(exercise2);
 
 function exercise2(result) {
+  document.getElementById("exercise2").textContent = result;
   // Write your implementation here
 }
-
+function functionThatCallsBack(callback) {
+  callback("Hello from the function caller");
+}
 /*
   EXERCISE 3
   =======
@@ -57,23 +61,20 @@ function exercise2(result) {
 */
 
 function exercise3(callback) {
+  callback("Hello from the callback");
   // Write your implementation here
-
   // Write your explanation here
 }
 
-// 
+//The exercice3 function receives a result of callback function as a parameter
 // -------------------------------------
-// 
+//
 // DON'T EDIT THE FUNCTIONS BELOW!
 // THEY ARE PROVIDED FOR YOU
 //
 // -------------------------------------
 //
-function functionThatCallsBack(callback) {
-  callback('Hello from the function caller')
-}
 
-exercise3((text) => {
-  document.querySelector('#exercise3').innerText = text
-})
+exercise3(text => {
+  document.querySelector("#exercise3").textContent = text;
+});
