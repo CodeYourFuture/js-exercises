@@ -100,4 +100,7 @@ function confirmFilled() {
     describe.value = "";
   }
 }
+//im still unsure how this last bit just
+//converts to blank? its says value 0 but where the actual function to convert it?
+
 //confirmFilled();

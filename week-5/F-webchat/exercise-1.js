@@ -6,7 +6,7 @@ The requirements of a basic webchat are:
 - After clicking on the submit button, the input should be empty.
 - The user can read the existing messages in the message list.
 - The message list is refreshed automatically every few seconds so 
-the user can keep reading the incoming messages without refreshing the page.
+the user can keep reading the incoming messages without refreshing the page. //fetch inside setInterval .
 
 
 ========
@@ -32,6 +32,5 @@ Expected result
 When you open index.html in your browser, it should display the existing messages on the page.
 
 */
-
 
 // Write your code here

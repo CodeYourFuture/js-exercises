@@ -3,7 +3,7 @@
 ========
 Task 2
 ========
-
+input msgs and send em. 
 Your second task is to send a new message to the server.
 
 After writing a message in the input and clicking on the submit button,
@@ -24,6 +24,5 @@ on the submit button. Then check the following:
 1) The input field should be empty.
 2) When you refresh the page in your browser, you should be able to see your new message in the message list.
 */
-
 
 // Write your code here
