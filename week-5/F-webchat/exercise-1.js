@@ -41,11 +41,9 @@ function displayMessage() {
     })
     .then(messages => {
       var messageList = [];
-      messages.forEach((message, i) => {
-        if (i > messages.length - 20) {
-          messageList.push(message.datetime + " : " + message.content + "\n");
-        } //if
-        messageListEl.innerText = messageList.join("");
+      messages.slice(-20).forEach(message => {
+        messageList.push(message.datetime + " : " + message.content);
+        messageListEl.innerText = messageList.join("\n");
       }); //foreach
     }); //then
 }
