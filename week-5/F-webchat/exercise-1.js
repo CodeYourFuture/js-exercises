@@ -10,7 +10,7 @@ the user can keep reading the incoming messages without refreshing the page.
 
 
 ========
-Task 1
+Task 1 
 ========
 
 Your task is to build the webchat frontend. 
@@ -31,7 +31,59 @@ Expected result
 
 When you open index.html in your browser, it should display the existing messages on the page.
 
+            
 */
 
-
 // Write your code here
+
+var addToPage = document.querySelector("#message-list");
+var postedDateTime = [];
+var postedContent = [];
+
+function filterAllMessages(arr) {
+  var newArray = [];
+  var latestMessages = arr.length - 30;
+  for (var i = latestMessages; i < arr.length; i++) {
+    newArray.push(arr[i]);
+  }
+  return newArray;
+}
+
+function checkPostedContent(content) {
+  return !postedContent.includes(content);
+}
+
+function checkPostedDateTime(datetime) {
+  return !postedDateTime.includes(datetime);
+}
+
+function getMessages() {
+  var url = "https://codeyourfuture.herokuapp.com/api/messages";
+  fetch(url, {
+    method: "GET"
+  })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(messages) {
+      var filterMessages = filterAllMessages(messages);
+      filterMessages.forEach(function(singleMessage) {
+        if (
+          singleMessage.content.length >= 1 &&
+          checkPostedContent(singleMessage.content) &&
+          checkPostedDateTime(singleMessage.datetime)
+        ) {
+          var messageContent = `${singleMessage.datetime} ${
+            singleMessage.content
+          } <br/>`;
+          var addNewMessage = document.createElement("p");
+          addNewMessage.innerHTML = messageContent;
+          addToPage.appendChild(addNewMessage);
+          postedContent.push(singleMessage.content);
+          postedDateTime.push(singleMessage.datetime);
+        }
+      });
+    });
+}
+
+setInterval(getMessages, 2000);
