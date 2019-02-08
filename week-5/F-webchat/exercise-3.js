@@ -33,6 +33,11 @@ For example, print your name every 2 seconds.
 
 // Write your code here
 
+function sayHello(name){
+    name = "clement"
+    console.log(name);
+}
+setInterval(sayHello,2000)
 
 /*
 ========
