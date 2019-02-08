@@ -42,7 +42,7 @@ function getMessages() {
       return response.json();
     })
     .then(function(messages) {
-      messages.slice(-20).forEach(message => {
+      messages.slice(-25).forEach(message => {
         var messageContainer = document.createElement("div");
         var timestampSpan = document.createElement("span");
         var messageSpan = document.createElement("span");
