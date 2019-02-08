@@ -13,10 +13,14 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "A Promising
   Promise"
 */
-function exercise1() {
-  var promise1 = resolvedPromise()
-}
 
+
+function exercise1() {
+  var promise1 = resolvedPromise();
+  promise1.then(value =>{
+    document.getElementById("exercise1").textContent = value;
+  });
+};
 /*
   EXERCISE 2
   =======
@@ -26,9 +30,14 @@ function exercise1() {
   EXPECTED RESULT: The #exercise2 element has textContent = "A Unpromising
   Promise"
 */
+
+
 function exercise2() {
   var promise2 = rejectedPromise()
-}
+  promise2.catch(value =>{
+    document.getElementById("exercise2").textContent = value;
+  });
+};
 
 /*
   EXERCISE 3
@@ -39,9 +48,14 @@ function exercise2() {
 
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
+
+
 function exercise3() {
   var promise3 = delayedPromise()
-}
+  promise3.then(value => {
+    document.getElementById("exercise3").textContent =value;
+  });
+};
 
 /*
   EXERCISE 4
@@ -54,9 +68,20 @@ function exercise3() {
   EXPECTED RESULT: The #exercise4 element has textContent = "A Promise from:
   YOUR NAME"
 */
+
+function concatPromise() {
+  return Promise.resolve("A Promise from: ");
+}
+
+
 function exercise4() {
   var promise4 = concatPromise()
-}
+  promise4.then(value => {
+return Promise.resolve(value.concat("Clement Freeborn"));
+  }).then(value => {
+    document.getElementById("exercise4").textContent = value;
+  });
+};
 
 /*
   EXERCISE 5 (Stretch Goal)
@@ -73,8 +98,15 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
-}
+  var Promise = newPromiseResolves();
+  Promise.then(value => {
+    document.getElementById("exercise5").textContent = value;
+  })
+};
 
+function newPromiseResolves(){
+  return Promise.resolve("Hello Promises!")
+}
 /*
   EXERCISE 6 (Stretch Goal)
   =======
@@ -90,9 +122,16 @@ function exercise5() {
 */
 function exercise6() {
   // Write your implementation here
-}
+  var Promise = newPromiseRejected();
+  Promise.catch(value => {
+    document.getElementById("exercise6").textContent = value;
+  });
+};
 
 
+function newPromiseRejected(){
+  return Promise.reject("Something went wrong!");
+};
 // 
 // -------------------------------------
 // 
