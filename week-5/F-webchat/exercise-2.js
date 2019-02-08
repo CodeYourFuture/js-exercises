@@ -29,7 +29,7 @@ on the submit button. Then check the following:
 // Write your code here
 var form = document.getElementById("message-input")
 
-document.getElementById("submit").addEventListener("click", function () {
+document.getElementById("submit").addEventListener("click", function() {
     var message = form.value;
 
     fetch("https://codeyourfuture.herokuapp.com/api/messages", {
