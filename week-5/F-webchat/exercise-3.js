@@ -37,7 +37,7 @@ function sayHello(name){
     name = "clement"
     console.log(name);
 }
-setInterval(sayHello, 2000)
+setInterval(sayHello,2000)
 /*
 ========
 Task 4
