@@ -53,7 +53,7 @@ function exercise2() {
 function exercise3() {
   var promise3 = delayedPromise()
   promise3.then(value => {
-    document.getElementById("exercise3").textContent =value;
+    document.getElementById("exercise3").textContent = value;
   });
 };
 
