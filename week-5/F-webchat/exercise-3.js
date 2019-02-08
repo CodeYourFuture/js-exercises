@@ -30,9 +30,11 @@ Use the above example to get familiar with setInterval function.
 For example, print your name every 2 seconds.
 */
 
-
+function myName() {
+  console.log("Ahmed");
+}
+setInterval(myName, 2000);
 // Write your code here
-
 
 /*
 ========
@@ -43,3 +45,12 @@ Use the setInterval function to reload automatically the messages of your webcha
 The code responsible to show the messages in the page is in exercise-1.js, so you will need to write your code there :-)
 */
 
+setInterval(
+  fetch("https://codeyourfuture.herokuapp.com/api/messages")
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(messages) {
+      document.getElementById("message-list").textContent = messages;
+    }, 2000)
+);
