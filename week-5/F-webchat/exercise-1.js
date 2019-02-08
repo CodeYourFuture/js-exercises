@@ -32,6 +32,17 @@ Expected result
 When you open index.html in your browser, it should display the existing messages on the page.
 
 */
-
-
+function getMessages(){
+    document.getElementById("message-list").innerHTML = "";
+    fetch('https://codeyourfuture.herokuapp.com/api/messages').then(function(response) {
+        return response.text();
+        }).then((mytext)=>{
+            var messages = JSON.parse(mytext);
+            for (var i= messages.length-10; i< messages.length; i++){
+             console.log(i);
+            document.getElementById("message-list").innerHTML += messages[i].datetime + " - " + messages[i].content + "<br>";
+            }
+    });
+}
+getMessages();
 // Write your code here

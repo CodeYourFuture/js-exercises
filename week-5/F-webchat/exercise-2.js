@@ -27,3 +27,40 @@ on the submit button. Then check the following:
 
 
 // Write your code here
+function getDateTime(){
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+    return dateTime;
+}
+function sendMessage(){
+     var messageDate = getDateTime(); // date created when submit is clicked ;
+    // getting value of input box from user
+    var userMessage = document.getElementById("message-input").value ;
+    console.log(messageDate) ;
+    var requestBody = { content: userMessage, datetime: messageDate };
+    var postRequestParameters = {
+    body: JSON.stringify(requestBody),
+    method: 'POST',
+    headers: {
+        'content-type': 'application/json'
+    }
+    }
+    fetch('https://codeyourfuture.herokuapp.com/api/messages',postRequestParameters);
+    document.getElementById("message-input").value = "";
+    document.getElementById("message-list").innerHTML = "";
+
+    getMessages();
+}
+//// on click event of submit get the value of input box POST it via fetch 
+///// clear the input box and use set interval function to fetch the messages via GET request 
+//fetch('https://codeyourfuture.herokuapp.com/api/clipboard', postRequestParameters)
+
+
+
+//// on click event of submit get the value of input box POST it via fetch 
+///// clear the input box and use set interval function to fetch the messages via GET request 
+//fetch('https://codeyourfuture.herokuapp.com/api/clipboard', postRequestParameters)
+
+document.getElementById("submit").addEventListener("click",sendMessage);
