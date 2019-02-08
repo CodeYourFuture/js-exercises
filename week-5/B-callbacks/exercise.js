@@ -14,9 +14,11 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "YOUR NAME" when
   the button is clicked
 */
-document.querySelector('#button1').addEventListener('click', exercise1)
+document.querySelector('#button1').addEventListener('click', exercise1);
 
 function exercise1() {
+  document.querySelector('#exercise1').textContent = "Ahmet";
+ 
   // Write your implementation here
 }
 
@@ -36,7 +38,13 @@ function exercise1() {
 */
 functionThatCallsBack(exercise2)
 
+function functionThatCallsBack(callback){
+  var result = "Hello from the function caller";
+  callback(result);
+}
+
 function exercise2(result) {
+  document.querySelector('#exercise2').textContent = result;
   // Write your implementation here
 }
 
@@ -58,7 +66,7 @@ function exercise2(result) {
 
 function exercise3(callback) {
   // Write your implementation here
-
+  callback("Hello from the callback"); 
   // Write your explanation here
 }
 
@@ -71,9 +79,9 @@ function exercise3(callback) {
 // -------------------------------------
 //
 function functionThatCallsBack(callback) {
-  callback('Hello from the function caller')
+  callback('Hello from the function caller');
 }
 
 exercise3((text) => {
-  document.querySelector('#exercise3').innerText = text
+  document.querySelector('#exercise3').innerText = text;
 })
