@@ -27,3 +27,28 @@ on the submit button. Then check the following:
 
 
 // Write your code here
+var form = document.getElementById("message-input")
+
+document.getElementById("submit").addEventListener("click", function () {
+    var message = form.value;
+
+    fetch("https://codeyourfuture.herokuapp.com/api/messages", {
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            content: message
+        })
+    })
+        .then(function (data) {
+            console.log("Request success: ", data);
+        })
+
+        .catch(function (error) {
+            console.log("Request failure: ", error);
+        });
+
+});
+
+
