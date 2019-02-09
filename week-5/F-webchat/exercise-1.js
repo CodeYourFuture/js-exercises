@@ -33,5 +33,28 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
+var messageList = document.getElementById("message-list");
 
 // Write your code here
+function getMessages() {
+    fetch("https://codeyourfuture.herokuapp.com/api/messages")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (messages) {
+            messages.slice(-25).forEach(message => {
+                var messageContainer = document.createElement("div");
+                var timestampSpan = document.createElement("span");
+                var messageSpan = document.createElement("span");
+                timestampSpan.textContent = message.datetime;
+                messageSpan.textContent = message.content;
+                messageSpan.classList.add("message");
+                messageContainer.appendChild(timestampSpan);
+                messageContainer.appendChild(messageSpan);
+                messageList.appendChild(messageContainer);
+            });
+        });
+}
+
+getMessages();
+
