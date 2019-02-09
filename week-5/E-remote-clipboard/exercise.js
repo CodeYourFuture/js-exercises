@@ -44,5 +44,5 @@ fetch("https://codeyourfuture.herokuapp.com/api/clipboard?title=myClipboardId")
     return response.text();
   })
   .then(function(text) {
-    console.log(text);
+    document.getElementById("greeting-text").textContent = text;
   });
