@@ -84,6 +84,6 @@ function functionThatCallsBack(callback) {
   callback('Hello from the function caller')
 }
 
-exercise3((text) => {
+exercise3((text)  => {
   document.querySelector('#exercise3').innerText = text
 })
