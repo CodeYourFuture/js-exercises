@@ -18,6 +18,7 @@ document.querySelector('#button1').addEventListener('click', exercise1)
 
 function exercise1() {
   // Write your implementation here
+  document.getElementById("exercise1").textContent = "Clement Freeborn";
 }
 
 /*
@@ -38,6 +39,7 @@ functionThatCallsBack(exercise2)
 
 function exercise2(result) {
   // Write your implementation here
+  document.getElementById("exercise2").textContent = result;
 }
 
 /*
@@ -58,8 +60,15 @@ function exercise2(result) {
 
 function exercise3(callback) {
   // Write your implementation here
+  callback("Hello from the callback");
 
   // Write your explanation here
+  // the reason we are getting this result is  because when the function "exercise3()" is called 
+  // it was give an anonymous function
+  //  as the argument and that anonymous function has a parameter called result, when the 
+  // anonymous function is invoked inside the body argument "Hello from the callback"
+  // that argument will be assigned to the parameter result which is going to be assigned to the
+  // #exercise3 element innerText.
 }
 
 // 
