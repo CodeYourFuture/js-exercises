@@ -30,7 +30,7 @@ Use the above example to get familiar with setInterval function.
 For example, print your name every 2 seconds.
 */
 
-setInterval(writeMyName, 5000);
+setInterval(writeMyName, 2000);
 
 function writeMyName(){
     console.log("Ahmet");
