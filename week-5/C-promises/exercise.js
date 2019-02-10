@@ -15,7 +15,11 @@
 */
 function exercise1() {
   var promise1 = resolvedPromise()
+  promise1.then(result => {
+    document.getElementById("exercise1").textContent = result;
+  });
 }
+
 
 /*
   EXERCISE 2
@@ -28,6 +32,9 @@ function exercise1() {
 */
 function exercise2() {
   var promise2 = rejectedPromise()
+  promise2.catch(result => {
+    document.getElementById("exercise2").textContent = result;
+  });
 }
 
 /*
@@ -41,6 +48,9 @@ function exercise2() {
 */
 function exercise3() {
   var promise3 = delayedPromise()
+  promise3.then(result => {
+    document.getElementById("exercise3").textContent = result;
+  });
 }
 
 /*
@@ -56,6 +66,13 @@ function exercise3() {
 */
 function exercise4() {
   var promise4 = concatPromise()
+  promise4
+    .then(prom4Result => {
+      return Promise.resolve(prom4Result + " Elamin");
+    })
+    .then(newPromResult => {
+      document.getElementById("exercise4").textContent = newPromResult;
+    });
 }
 
 /*
@@ -73,6 +90,10 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
+  let promise = Promise.resolve("Hello Promises!");
+  promise.then(result => {
+    document.getElementById("exercise5").textContent = result;
+  });
 }
 
 /*
@@ -90,6 +111,10 @@ function exercise5() {
 */
 function exercise6() {
   // Write your implementation here
+  let promise = Promise.reject("Something went wrong!");
+  promise.catch(result => {
+    document.getElementById("exercise6").textContent = result;
+  });
 }
 
 
