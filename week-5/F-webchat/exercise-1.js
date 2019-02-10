@@ -29,9 +29,17 @@ API: https://codeyourfuture.herokuapp.com/api/messages
 Expected result
 ===============
 
-When you open index.html in your browser, it should display the existing messages on the page.
+When you open index.html in your browser,
+ it should display the existing messages on the page.
 
 */
 
-
 // Write your code here
+fetch("https://codeyourfuture.herokuapp.com/api/messages")
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(messages) {
+    // Write the code to display the greeting text here
+    document.getElementById("message-list").textContent = messages;
+  });
