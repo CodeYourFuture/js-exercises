@@ -26,4 +26,25 @@ on the submit button. Then check the following:
 */
 
 
+document.getElementById("submit").addEventListener("click", sendAMessage);
+
+function sendAMessage(){
+    var messageInput=document.getElementById("message-input").value;
+    var requestBody = { content: messageInput };
+    var postRequestParameters = {
+        body: JSON.stringify(requestBody),
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        }
+    };
+      
+    fetch("https://codeyourfuture.herokuapp.com/api/messages", postRequestParameters);
+    document.getElementById("message-input").value = "";
+    document.getElementById("message-list").innerHTML ="";
+    displayMessages();
+}
+
+
+
 // Write your code here
