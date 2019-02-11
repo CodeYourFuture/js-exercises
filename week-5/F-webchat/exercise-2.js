@@ -27,3 +27,38 @@ on the submit button. Then check the following:
 
 
 // Write your code here
+//call the function when the submit button is clicked on
+document.getElementById("submit").addEventListener("click", sendMessage);
+
+//I am creating a function that returns a promise, i ensure that the text area is not empty
+// before i proceed onto the actual sending of the text message
+function sendMessage() {
+    return new Promise((resolve, reject) => {
+            if (document.getElementById("message-input").value !== "") {
+                resolve();
+            } else {
+                reject("Error !!! write something");
+            }
+        }).then(createMessage) //act only if the textarea is not empty
+        .catch(err => {
+            console.log(err);
+            alert("Come on write something"); //pop up if the area is empty
+        });
+}
+
+function createMessage() {
+    var messageBody = {
+        content: document.getElementById("message-input").value
+    };
+    var myMessageInits = { //The options to pass on to fetch
+        method: 'POST',
+        body: JSON.stringify(messageBody), //convert into string
+        headers: {
+            'content-type': 'application/json'
+        }
+    }
+    fetch('https://codeyourfuture.herokuapp.com/api/messages', myMessageInits);
+    document.getElementById("message-input").value = ""; //emptying the text input arrea
+    document.getElementById("message-list").innerHTML = ""; // emptying so i keep the message list at 15 at everytime
+    getMessageList();
+}

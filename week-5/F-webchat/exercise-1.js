@@ -35,3 +35,25 @@ When you open index.html in your browser, it should display the existing message
 
 
 // Write your code here
+var output = document.getElementById("message-list");
+
+
+function getMessageList() {
+
+    fetch("https://codeyourfuture.herokuapp.com/api/messages")
+        .then((res) => res.text()) ///res.json()  gave me a massive array of object type 
+        .then((data) => {
+            // JSON.parse(data).length = 20 447              
+            // JSON.stringify(data).length = 1 265 332      the whole array was made of strings
+            var dataParse = JSON.parse(data);
+            ////i am going to print only the 15 last messages of the chat at everytime so i am using a for 
+
+            // console.log(dataParse);
+            for (var i = dataParse.length - 15; i < dataParse.length; i++) {
+                output.innerHTML += "<li>" + "<b>" + dataParse[i].datetime + "</b>" + " - " + dataParse[i].content + "</li>";
+            };
+
+        })
+        .catch((error) => console.log(error));
+}
+setInterval(getMessageList(), 2000);
