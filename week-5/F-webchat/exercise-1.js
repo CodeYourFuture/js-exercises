@@ -35,7 +35,7 @@ When you open index.html in your browser, it should display the existing message
 
 
 // Write your code here
-//setInterval(() => {
+setInterval(() => {
     fetch('https://codeyourfuture.herokuapp.com/api/messages')
         .then(x => x.json())
         .then(x => x.slice(-50).forEach(message => document.getElementById('message-list')
