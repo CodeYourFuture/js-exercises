@@ -14,8 +14,10 @@
   Promise"
 */
 function exercise1() {
-  var promise1 = resolvedPromise()
+  var promise1 = resolvedPromise();
+  promise1.then(x => document.getElementById('exercise1').textContent = x);
 }
+
 
 /*
   EXERCISE 2
@@ -27,7 +29,8 @@ function exercise1() {
   Promise"
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+  var promise2 = rejectedPromise();
+  promise2.catch(x => document.getElementById('exercise2').innerHTML = x);
 }
 
 /*
@@ -40,7 +43,8 @@ function exercise2() {
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
+  promise3.then(x => document.getElementById('exercise3').innerHTML = x);
 }
 
 /*
@@ -56,6 +60,9 @@ function exercise3() {
 */
 function exercise4() {
   var promise4 = concatPromise()
+  promise4
+    .then(x => x.concat('Alex Jaghool'))
+  .then(x => document.getElementById('exercise4').innerText = x);
 }
 
 /*
@@ -73,7 +80,9 @@ function exercise4() {
 
 function exercise5() {
   // Write your implementation here
+  return Promise.resolve('Hello Promises!');
 }
+exercise5().then(x => document.getElementById('exercise5').textContent = x);
 
 /*
   EXERCISE 6 (Stretch Goal)
@@ -90,8 +99,9 @@ function exercise5() {
 */
 function exercise6() {
   // Write your implementation here
+  return Promise.reject('Something went wrong!');
 }
-
+exercise6().catch(x => document.getElementById('exercise6').innerHTML = x);
 
 // 
 // -------------------------------------

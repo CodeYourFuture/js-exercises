@@ -59,8 +59,9 @@ function exercise2(result) {
   comment below (Hint: look below to see where exercise3 is called)
 */
 
-function exercise3(callback) {
+function exercise3(c) {
   // Write your implementation here
+  c('Hello from the callback');
   // Write your explanation here
 }
 
@@ -76,6 +77,5 @@ function functionThatCallsBack(callback) {
   callback('Hello from the function caller')
 }
 
-exercise3((text) => {
-  document.querySelector('#exercise3').innerText = text
-})
+const f = (text) => { document.querySelector('#exercise3').innerText = text }
+exercise3(f)

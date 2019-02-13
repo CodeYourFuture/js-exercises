@@ -27,3 +27,11 @@ on the submit button. Then check the following:
 
 
 // Write your code here
+document.getElementById('submit').addEventListener('click', () =>{
+    const xhr = new XMLHttpRequest()
+    xhr.open('POST', 'https://codeyourfuture.herokuapp.com/api/messages', true)
+    xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8')
+    xhr.send(JSON.stringify({ content: document.getElementById('message-input').value }))
+    document.getElementById('message-input').value = '';
+})
+
