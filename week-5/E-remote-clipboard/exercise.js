@@ -20,7 +20,7 @@ var requestBody = {
   title: clipboardTitle, //this is the new clipboad that we want to get back(body).
   text: clipboardText
 };
-//the things we have changed in change is what will be posted to that api.
+//the things we have changed in 'change me' is what will be posted to that api.
 
 var postRequestParameters = {
   body: JSON.stringify(requestBody),

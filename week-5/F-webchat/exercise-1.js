@@ -34,3 +34,37 @@ When you open index.html in your browser, it should display the existing message
 */
 
 // Write your code here
+fetch("https://codeyourfuture.herokuapp.com/api/messages")
+  .then(function(response) {
+    //we are getting the messages from that api and recieving a response to see if the api works.
+    console.log(response);
+    return response.json();
+    //Here we are fetching a JSON file across the network and print it to the console.
+  })
+  // then we are converting the response to an array of objects using json.
+  .then(function(messages) {
+    console.log(messages);
+    // so this function then gets the message which fufils the promise we made that we would respond.
+    var messageBox = document.querySelector("#message-list");
+
+    //this div contains the ul that we created below. which targets the box where our message should go.
+
+    /* for (var i = 0; i < message.length; i++) {
+      var node = document.createElement("LI");
+      var textnode = document.createTextNode(message[i].datetime);
+      node.appendChild(textnode);
+      document.getElementById("myList").appendChild(node);
+    } */
+    messages.map(message => {
+      //here we want to grab one msg from all the msg's, by using map to loop the array (in the api)and grab the objects inside of it.
+      var node = document.createElement("LI");
+      //here i have created a list to pass in the response msg's.
+      node.innerHTML = message.content;
+      //here i am adding a new message to the list i have created.
+      document.getElementById("myList").appendChild(node);
+      //getiin the list element and pushing to the list.
+    });
+    //appendchild feeds the message into ul.
+  });
+
+//get data, then select where u want to put it and put the data in that.
