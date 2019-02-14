@@ -33,5 +33,17 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
+fetch("https://codeyourfuture.herokuapp.com/api/messages").then(function(
+  response
+) {
+  return response.json().then(function(messageList) {
+    var storeMessages = document.getElementById("message-list");
+    messageList.forEach(listItem => {
+      var listPointer = document.createElement("div");
+      listPointer.innerText = listItem.content;
+      storeMessages.appendChild(listPointer);
+    });
+    // Write the code to display the greeting text here
+  });
+});
