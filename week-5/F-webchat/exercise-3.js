@@ -30,9 +30,11 @@ Use the above example to get familiar with setInterval function.
 For example, print your name every 2 seconds.
 */
 
-
 // Write your code here
-
+function updateMsg() {
+  console.log("ABZ");
+}
+setInterval(updateMsg, 2000);
 
 /*
 ========
@@ -42,4 +44,3 @@ Task 4
 Use the setInterval function to reload automatically the messages of your webchat every 2 seconds.
 The code responsible to show the messages in the page is in exercise-1.js, so you will need to write your code there :-)
 */
-
