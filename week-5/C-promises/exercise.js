@@ -14,7 +14,10 @@
   Promise"
 */
 function exercise1() {
-  var promise1 = resolvedPromise()
+  var promise1 = resolvedPromise();
+  promise1.then(value => {
+    document.getElementById("exercise1").textContent = value;
+  });
 }
 
 /*
@@ -27,7 +30,10 @@ function exercise1() {
   Promise"
 */
 function exercise2() {
-  var promise2 = rejectedPromise()
+  var promise2 = rejectedPromise();
+  promise2.catch(value => {
+    document.getElementById("exercise2").textContent = value;
+  });
 }
 
 /*
@@ -40,7 +46,10 @@ function exercise2() {
   EXPECTED RESULT: The #exercise3 element has textContent = "A Longer Promise"
 */
 function exercise3() {
-  var promise3 = delayedPromise()
+  var promise3 = delayedPromise();
+  promise3.then(value => {
+    document.getElementById("exercise3").textContent = value;
+  });
 }
 
 /*
@@ -55,7 +64,7 @@ function exercise3() {
   YOUR NAME"
 */
 function exercise4() {
-  var promise4 = concatPromise()
+  var promise4 = concatPromise();
 }
 
 /*
@@ -92,38 +101,37 @@ function exercise6() {
   // Write your implementation here
 }
 
-
-// 
+//
 // -------------------------------------
-// 
+//
 // DON'T EDIT THE FUNCTIONS BELOW!
 // THEY ARE PROVIDED FOR YOU
 //
 // -------------------------------------
 //
 function resolvedPromise() {
-  return Promise.resolve('A Promising Promise')
+  return Promise.resolve("A Promising Promise");
 }
 
 function rejectedPromise() {
-  return Promise.reject('A Unpromising Promise')
+  return Promise.reject("A Unpromising Promise");
 }
 
 function delayedPromise() {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
-      resolve('A Longer Promise')
-    }, 2000)
-  })
+      resolve("A Longer Promise");
+    }, 2000);
+  });
 }
 
 function concatPromise() {
-  return Promise.resolve('A Promise from: ')
+  return Promise.resolve("A Promise from: ");
 }
 
-exercise1()
-exercise2()
-exercise3()
-exercise4()
-exercise5()
-exercise6()
+exercise1();
+exercise2();
+exercise3();
+exercise4();
+exercise5();
+exercise6();
