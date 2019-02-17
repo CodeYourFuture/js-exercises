@@ -17,6 +17,12 @@ console.log("Hi, My name is " + name2);
 
 
 
+if (role === "student") {
+  console.log("Hi, My name is " + name2);
+}
+
+
+
 /* 
 EXPECTED RESULT
 ---------------
