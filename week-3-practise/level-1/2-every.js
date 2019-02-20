@@ -1,5 +1,3 @@
-//Author: github.com/samiachi
-
 /*
   Following on from exercise level-1/1-find.js
   The travellers have safely landed and are foraging for food in the natural wildlife.

@@ -1,5 +1,3 @@
-//Author: github.com/Ahmet-K
-
 /* Password Validation
    This program should check if each passwords in the array ("password[]") 
    contains valid Password (see below for password criterias) and return 

@@ -1,5 +1,3 @@
-//Author: github.com/samiachi
-
 /*
   Many years into the future, a team of Space Voyagers find their ship is low on Oxygen and need to dock 
   somewhere safe while they call home for help.

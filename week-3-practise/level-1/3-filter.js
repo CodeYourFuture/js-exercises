@@ -1,5 +1,3 @@
-//Author: github.com/ivinapontes
-
 /*
 You are given a list of some London street names.
 We would like to know all of the names which contain 'Lane' their name.

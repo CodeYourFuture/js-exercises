@@ -1,5 +1,3 @@
-//Author: github.com/aldeez988
-
 /*
 Only students who have attended enough classes are eligible to sit an exam.
 You have an array named "attendanceCounts"  which contains all the students' names and their attendance counts.

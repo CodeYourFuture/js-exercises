@@ -1,5 +1,3 @@
-//Author: github.com/samiachi
-
 /*
   Continuing on from exercise level-1/2-every.js
   The voyagers decide that they quite like this planet, and some of them want to settle there and colonise it.

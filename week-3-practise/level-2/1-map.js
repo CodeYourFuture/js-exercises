@@ -1,5 +1,3 @@
-//Author: github.com/Atayo
-
 /*
 I am new to London and would like to know what transport I can take to different famous locations.
 An array with London locations have been provided.
