@@ -9,7 +9,7 @@
  */
 
 var reversed;
-const capitilised;
+let capitilised;
 
 // Function that reverses and capitlises text
 exports function reverseAndCaptilise(text) 
@@ -19,10 +19,10 @@ exports function reverseAndCaptilise(text)
   return reversed
   }
 
-// Function that returns text with every other case capitlised
-export function wackyCase(text) {
+// Function that returns text with every other letter capitlised
+export function everyOtherLetterCapitilised(text) {
   for (i==0; i++; i<text.length) {
-      if (i%2==0) {
+      if (i/2==0) {
        text[i] = text[i].toUpperCase() 
     }    
   } 
