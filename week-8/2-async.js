@@ -2,6 +2,8 @@
 // - getFlightDetails()
 // - selectFlight(..)
 // - bookFlight(..)
+//
+// Hint: use the `async` keyword to create an async function
 
 function getFlightDetails() {
   setTimeout(() => {}, 300)
