@@ -1,4 +1,4 @@
-// Turn getFlights() into an async function and use the .then(..) method to implement the following functions in order
+// Turn getFlightDetails() into an async function and use the .then(..) method to implement the following functions in order
 // - getFlightDetails()
 // - selectFlight(..)
 // - bookFlight(..)

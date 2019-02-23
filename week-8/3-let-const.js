@@ -1,3 +1,5 @@
+// Refactor this code to make appropriate use of `let` and `const`
+
 function getCircleArea(radius) {
   var pi = Math.PI;
   var rSquared = Math.pow(radius, 2);

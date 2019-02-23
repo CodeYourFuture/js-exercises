@@ -7,7 +7,7 @@
  *  - location 
  *
  * 3.b 
- * A method has already been created which determines the energy cost based on the number of windows
+ * A method has already been created which computes the energy cost based on the number of windows
  *
  * The House class should also have a method which computes the price of the house based on the location and number of rooms
  *  - The price should have a base value of 50,000GBP, with an addition of 10,000GBP for each room it has (if it's a 
@@ -21,7 +21,7 @@
  *
  * 3.d
  * Using your newly created class
- *  - Instantiate a brown house with 3 windows and 2 bedrooms that is based in Woking
+ *  - Instantiate (hint: new House())a brown house with 3 windows and 2 bedrooms that is based in Woking
  *  - Instantiate another blue house with 5 windwos and 2 bedrooms that is based in London
  *  - Return and compare the price of the two houses
  *  - Return and compare the energy bill of the two houses
