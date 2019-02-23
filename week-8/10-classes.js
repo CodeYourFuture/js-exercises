@@ -12,3 +12,22 @@ class Cat {
     /* Write properties */
   }
 }
+
+/* DO NOT EDIT BELOW THIS LINE */
+
+let myCat = new Cat('male', 'tabby', 3)
+
+// Expected output: 'male'
+console.log(myCat.gender)
+
+// Expected output: 'tabby'
+console.log(myCat.coat)
+
+// Expected output: '3'
+console.log(myCat.age)
+
+// Expected output: 'meow'
+console.log(myCat.greeting())
+
+// Expected output: 'hiss'
+console.log(myCat.angry())

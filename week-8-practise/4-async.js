@@ -23,9 +23,10 @@
  *  Bonus points for using arrow functionsn correctly in the .then(..) method
  *
  * 4.c
- * Can you explain what line 42 does?
+ * Can you explain what the line `return (await response.json()).slice(0,3)` in the getPosts() function does?
+ * Please write this as a comment above the line.
  *
- * Hint: you are encouraged to use Google or have a discussion on Slack to find out what .slice(0,3) does
+ * Hint: you are encouraged to use Google or have a discussion on Slack
  *
  * 4.d
  * Can you reformat toString(..) to be an arrow function?

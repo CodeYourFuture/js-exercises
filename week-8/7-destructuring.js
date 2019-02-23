@@ -1,4 +1,4 @@
-// Destructure this object literal
+// Destructure this object
 
 function destructureObj() {
   const rectangle = {

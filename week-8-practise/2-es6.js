@@ -14,8 +14,8 @@
  */
 
 // Function returns a single expression - what does this remind you of?
-function convertFahrenheitToCelsius() {
-  return (160*(fahrenheit - 1))/9
+function convertFahrenheitToCelsius(fahrenheit) {
+  return (fahrenheit - 32)*5/9
 } 
 
 // Use template literals wherever your see concatenation
@@ -26,7 +26,7 @@ function mutliplyByTwo(number) {
 // Instead of assigning individual values to a variable, you could..
 function parseObject() {
   var obj ={
-    name: "Jane Doe",
+    name: "Jane",
     age: "26",
     role: "Web Developer"
   }
@@ -52,7 +52,7 @@ function parseList() {
 
 function myHouse(location, colour, rooms) {
   var color = colour || 'blue'
-  var rooms = rooms || 0
+  var rooms = rooms || 2
 
   return "I live in " + location + " in a " + colour + " house with " + rooms + " rooms"
 } 
@@ -64,8 +64,28 @@ function toLetOrNotToLet() {
 
   if (location == "London") {
     var location == "home"
-    console.log("My name is " + name + " and I am at " + location + " now")
+    console.log("My name is " + name + " and I am at " + location + " now.")
   }
   
-  console.log("But now I am in " + location + "!")  
+  console.log("But I am also in " + location + "!")  
 }
+
+/* DO NOT EDIT BELOW THIS LINE */
+
+// Expected output: 5
+convertFahrenheitToCelsius(41)
+
+// Expected output: '15 is equal to 30 when multiplied by 2'
+multiplyByTwo(15)
+
+// Expected output: 'Hello, Jane. You are 26 years old and you work as a Web Developer'
+parseObject()
+
+// Expected output: 'First I bought some apples, then I bought some oranges and I almost forgot to buy some pears!'
+parseList()
+
+// Expected output: 'I live in Kent in a white house with 2 rooms'
+myHouse('Kent', 'white')
+
+// Expected output: "My name is John and I am at home now. But I am also in London!"
+toLetOrNotToLet()

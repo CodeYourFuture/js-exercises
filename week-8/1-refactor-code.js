@@ -1,3 +1,17 @@
+// Refactor the following code using the good coding practices discussed
+//
+// Add comments where you believe the code could be improved
+//
+// Make sure to consider if it has/is
+// - Good naming
+// - Good commenting
+// - Clear logic
+// - Concise
+// - Good formatting
+// - DRY
+// - Single responsibility
+// - Avoiding unnecessary specific number
+
 function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
   var totalIncomeTax = incomeTax1 + incomeTax2;
   var studentLoan = (salary - 17775) * 0.09;
