@@ -11,6 +11,16 @@ function readFile(path) {
   });
 }
 
+function importSourceAndRead(req, path, res) {
+  beforeAll(() => {
+    req(path);
+    const pathToExercise = req.resolve(path);
+    return readFile(pathToExercise).then(
+      fileContents => (res.contents = fileContents)
+    );
+  });
+}
+
 module.exports = {
-  readFile
+  importSourceAndRead
 };

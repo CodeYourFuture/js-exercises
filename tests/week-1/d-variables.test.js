@@ -1,16 +1,15 @@
-var { readFile } = require("../helpers");
+var { importSourceAndRead } = require("../helpers");
 
-let encodedFile = "";
-beforeAll(() => {
-  require("../../week-1/D-variables/exercise.js");
-  const pathToExercise = require.resolve(
-    "../../week-1/D-variables/exercise.js"
-  );
-  return readFile(pathToExercise).then(res => (encodedFile = res));
-});
+let fileContentsContainer = { contents: "" };
+
+importSourceAndRead(
+  require,
+  "../../week-1/D-variables/exercise.js",
+  fileContentsContainer
+);
 
 test("created 'greeting' variable", () => {
-  expect(encodedFile).toMatch(/var greeting =/);
+  expect(fileContentsContainer.contents).toMatch(/var greeting =/);
 });
 
 test("logged the value of 'greeting' 3 times", () => {
