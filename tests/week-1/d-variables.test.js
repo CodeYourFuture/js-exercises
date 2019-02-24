@@ -1,15 +1,13 @@
 var { importSourceAndRead } = require("../helpers");
 
-let fileContentsContainer = { contents: "" };
+let contents = "";
 
-importSourceAndRead(
-  require,
-  "../../week-1/D-variables/exercise.js",
-  fileContentsContainer
+importSourceAndRead(require, "../../week-1/D-variables/exercise.js").then(
+  res => (contents = res)
 );
 
 test("created 'greeting' variable", () => {
-  expect(fileContentsContainer.contents).toMatch(/var greeting =/);
+  expect(contents).toMatch(/var greeting =/);
 });
 
 test("logged the value of 'greeting' 3 times", () => {
