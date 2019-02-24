@@ -12,33 +12,13 @@
 // - Single responsibility
 // - Avoiding unnecessary specific number
 
-function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
-  var totalIncomeTax = incomeTax1 + incomeTax2;
-  var studentLoan = (salary - 17775) * 0.09;
-  var originalSalary = salary;
-  var nationalInsurance = null;
+personIncome = (salary, taxCode, incomeTax1, incomeTax2) => {
+  var studentLoan = (salary - 17775) * 0.09, originalSalary = salary;
+  (taxCode === "1150L") ? nationalInsurance = salary * 0.1 : (taxCode === "ST") ? nationalInsurance = salary * 0.05 : nationalInsurance = salary * 0.08
+  var deductions = nationalInsurance + incomeTax1 + incomeTax2 + studentLoan;
+  salary -= deductions;
 
-  if (taxCode === "1150L") {
-    nationalInsurance = salary * 0.1;
-  } else if (taxCode === "ST") {
-    nationalInsurance = salary * 0.05;
-  } else {
-    nationalInsurance = salary * 0.08;
-  }
-
-  var deductions = [nationalInsurance, totalIncomeTax, studentLoan];
-
-  salary = salary - deductions[0];
-  salary = salary - deductions[1];
-  salary = salary - deductions[2];
-
-  return (
-    "Your gross income is £" +
-    originalSalary.toString() +
-    " and your net income is £" +
-    salary.toString() +
-    "."
-  );
+  return `Your gross income is Â£${originalSalary} and your net income is Â£${salary}.`
 }
 
-console.log(myFunction(28000, "1150L", 1000, 580, false));
+console.log(personIncome(28000, "1150L", 1000, 580));
