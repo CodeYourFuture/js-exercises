@@ -13,12 +13,12 @@
 // - Avoiding unnecessary specific number
 
 personIncome = (salary, taxCode, incomeTax1, incomeTax2) => {
-  var studentLoan = (salary - 17775) * 0.09, originalSalary = salary;
+  var studentLoan = (salary - 17775) * 0.09, grossIncome = salary;
   (taxCode === "1150L") ? nationalInsurance = salary * 0.1 : (taxCode === "ST") ? nationalInsurance = salary * 0.05 : nationalInsurance = salary * 0.08
   var deductions = nationalInsurance + incomeTax1 + incomeTax2 + studentLoan;
   salary -= deductions;
 
-  return `Your gross income is £${originalSalary} and your net income is £${salary}.`
+  return `Your gross income is £${grossIncome} and your net income is £${salary}.`
 }
 
 console.log(personIncome(28000, "1150L", 1000, 580));
