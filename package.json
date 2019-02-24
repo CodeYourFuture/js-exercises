@@ -4,7 +4,7 @@
   "description": "JavaScript exercises for Code Your Future students",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch --silent --noStackTrace"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/CodeYourFuture/js-exercises#readme",
   "devDependencies": {
-    "jest": "^24.1.0"
+    "jest": "^24.1.0",
+    "jest-dot-reporter": "^1.0.7"
   }
 }
