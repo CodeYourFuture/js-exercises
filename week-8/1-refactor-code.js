@@ -15,8 +15,7 @@
 personIncome = (salary, taxCode, incomeTax1, incomeTax2) => {
   var studentLoan = (salary - 17775) * 0.09, grossIncome = salary;
   (taxCode === "1150L") ? nationalInsurance = salary * 0.1 : (taxCode === "ST") ? nationalInsurance = salary * 0.05 : nationalInsurance = salary * 0.08
-  var deductions = nationalInsurance + incomeTax1 + incomeTax2 + studentLoan;
-  salary -= deductions;
+  salary -= nationalInsurance + incomeTax1 + incomeTax2 + studentLoan;
 
   return `Your gross income is £${grossIncome} and your net income is £${salary}.`
 }
