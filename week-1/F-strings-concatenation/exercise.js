@@ -1,3 +1,3 @@
-// Start by creating a variable `message`
+// Start by creating a variable `name`
 
-console.log(message);
+console.log(name);
