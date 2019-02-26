@@ -1,5 +1,5 @@
 const path = "../../../week-1/K-functions-parameters/exercise4";
-const { add } = require(path);
+const { add } = require("../../../week-1/K-functions-parameters/exercise4");
 var { importSourceAndRead } = require("../../helpers");
 
 let contents = "";
