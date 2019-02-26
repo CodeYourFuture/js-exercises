@@ -6,8 +6,8 @@ let contents = "";
 
 importSourceAndRead(require, path).then(res => (contents = res));
 
-test("declared variable 'sum'", () => {
-  expect(contents).toMatch(/var sum =/);
+test("declared a variable 'sum' and assigned to it the return value of 'add'", () => {
+  expect(contents).toMatch(/var sum = add\(/);
 });
 
 test("adds two numbers together", () => {
