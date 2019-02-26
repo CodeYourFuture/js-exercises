@@ -1,3 +1,4 @@
+require("../../week-1/C-hello-world/exercise.js");
 beforeAll(() => {
   require("../../week-1/C-hello-world/exercise.js");
 });
