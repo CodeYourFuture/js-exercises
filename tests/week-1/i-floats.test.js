@@ -1,4 +1,5 @@
 var { importSourceAndRead } = require("../helpers");
+require("../../week-1/I-floats/exercise.js");
 
 let contents = "";
 

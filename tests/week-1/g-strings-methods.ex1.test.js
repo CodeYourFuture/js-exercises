@@ -1,4 +1,5 @@
 var { importSourceAndRead } = require("../helpers");
+require("../../week-1/G-strings-methods/exercise.js");
 
 let contents = "";
 

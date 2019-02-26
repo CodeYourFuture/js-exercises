@@ -1,4 +1,5 @@
 var { importSourceAndRead } = require("../helpers");
+require("../../week-1/F-strings-concatenation/exercise.js");
 
 let contents = "";
 

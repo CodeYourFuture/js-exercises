@@ -1,4 +1,5 @@
 var { importSourceAndRead } = require("../helpers");
+require("../../week-1/E-strings/exercise.js");
 
 let contents = "";
 

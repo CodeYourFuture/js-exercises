@@ -1,4 +1,5 @@
 var { importSourceAndRead } = require("../helpers");
+require("../../week-1/H-numbers/exercise.js");
 
 let contents = "";
 
