@@ -12,7 +12,7 @@
 
 var startingValue = 5;
 
-/* DO NOT EDIT BELOW THIS LINE */
+var result = format(add(10, multiply(startingValue, 2)));
 /* --------------------------- */
 
 function add(a, b) {
