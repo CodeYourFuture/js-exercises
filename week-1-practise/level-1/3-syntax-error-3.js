@@ -1,6 +1,6 @@
 // There is a syntax error with this code. Fix it.
 
-function(a, b, c) {
+function addNumbers(a, b, c) {
     return a + b + c;
 }
 
