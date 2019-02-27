@@ -33,12 +33,59 @@ function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
   salary = salary - deductions[2];
 
   return (
-    "Your gross income is £" +
+    "Your gross income is ï¿½" +
     originalSalary.toString() +
-    " and your net income is £" +
+    " and your net income is ï¿½" +
     salary.toString() +
     "."
   );
 }
 
 console.log(myFunction(28000, "1150L", 1000, 580, false));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Refactored code
+
+function calculateTaxReduction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
+  //we are not using the owns car argument
+
+  var totalIncomeTax = incomeTax1 + incomeTax2;
+  var studentLoan = (salary - 17775) * 0.09;
+  var originalSalary = salary;
+  var netIncome = salary;
+  var nationalInsurance = 0;
+
+  if (taxCode === "1150L") {
+    nationalInsurance = salary * 0.1;
+  } else if (taxCode === "ST") {
+    nationalInsurance = salary * 0.05;
+  } else {
+    nationalInsurance = salary * 0.08;
+  }
+
+  //Chenged the salary deductions and put all on the same line
+  netIncome = salary - (nationalInsurance + totalIncomeTax + studentLoan)
+
+  return (
+    "Your gross income is Â£" +
+    originalSalary.toString() +
+    " and your net income is Â£" +
+    netIncome.toString() +
+    "."
+  );
+}
+
+console.log(calculateTaxReduction(28000, "1150L", 1000, 580, false));
