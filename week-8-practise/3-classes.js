@@ -29,14 +29,92 @@
  */
 
 class House {
-  constructor(windows, colour) {
-    this.windows = windows
+  constructor(windows, colour = "blue", numberOfRooms, location) {
+    this.windows = windows;
+    this.colour = colour;
+    this.numberOfRooms = numberOfRooms;
+    this.location = location;
   }
 
   monthlyEnergyBill(windows) {
-    let base = 40 // base energy bill without windows
-    let multiplier = 1.2 // energy bill expected to go up 20% for each additional window
-    
-    return base + windows*multiplier
+    let base = 40; // base energy bill without windows
+    let multiplier = 1.2; // energy bill expected to go up 20% for each additional window
+
+    return base + windows * multiplier;
+  }
+
+  housePrice() {
+    let baseValue = 50000;
+    let roomsAddedPrice = 10000 * this.numberOfRooms;
+    let totalValue = baseValue + roomsAddedPrice;
+    return this.location === "London" ? (totalValue *= 1.8) : totalValue;
+  }
+
+  static feetIntoMetersSquar(feet) {
+    const oneMetInFootSq = 0.092903;
+    return feet * oneMetInFootSq;
   }
 }
+
+//comparePrice function receives the houses in an array  as a parameter and compare the price for the two houses
+function comparePrice(houses) {
+  if (houses[0].housePrice() > houses[1].housePrice()) {
+    console.log(
+      `The ${houses[0].colour.toUpperCase()} house is £${houses[0].housePrice() -
+      houses[1].housePrice()} more expensive than ${houses[1].colour.toUpperCase()} House`
+    );
+  } else if (houses[0].housePrice() < houses[1].housePrice()) {
+    console.log(
+      `The ${houses[1].colour.toUpperCase()} house is  £${houses[1].housePrice() -
+      houses[0].housePrice()} more expensive than ${houses[0].colour.toUpperCase()} House`
+    );
+  } else {
+    console.log("Both houses are equally priced");
+  }
+}
+
+//compareEnergy function receives the houses in array as a parameter and compare the energy for the two houses
+function compareEnergy(houses) {
+  if (
+    houses[0].monthlyEnergyBill(houses[0].windows) >
+    houses[1].monthlyEnergyBill(houses[1].windows)
+  ) {
+    console.log(
+      `The ${houses[0].colour.toUpperCase()} house energy bill is  ${houses[0].monthlyEnergyBill(
+        houses[0].windows
+      ) -
+      houses[1].monthlyEnergyBill(
+        houses[1].windows
+      )} more expensive than ${houses[1].colour.toUpperCase()} House`
+    );
+  } else if (
+    houses[0].monthlyEnergyBill(houses[0].windows) <
+    houses[1].monthlyEnergyBill(houses[1].windows)
+  ) {
+    console.log(
+      `The ${houses[1].colour.toUpperCase()} house energy bill is  ${houses[1].monthlyEnergyBill(
+        houses[1].windows
+      ) -
+      houses[0].monthlyEnergyBill(
+        houses[0].windows
+      )} more expensive than ${houses[0].colour.toUpperCase()} House`
+    );
+  } else {
+    console.log("Both house's energy bills are equally priced");
+  }
+}
+
+//Declaring two House instances
+var brownHouse = new House(3, "brown", 2, "Woking");
+var blueHouse = new House(5, "blue", 2, "London");
+comparePrice([brownHouse, blueHouse]);
+compareEnergy([brownHouse, blueHouse]);
+
+console.log(
+  `There is ${House.feetIntoMetersSquar(950)} meter square in 950 foot square`
+);
+
+/*When we declare a method as static it's not called on the instances instead they are called on 
+the class itself, we don't need to create an instance of 
+that class to access  the method we can access it directly use class name and the dot notation 
+*/
