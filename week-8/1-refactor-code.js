@@ -12,30 +12,32 @@
 // - Single responsibility
 // - Avoiding unnecessary specific number
 
-function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
+function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) { // Not good naming and ownsCar's value is never read
   var totalIncomeTax = incomeTax1 + incomeTax2;
-  var studentLoan = (salary - 17775) * 0.09;
-  var originalSalary = salary;
-  var nationalInsurance = null;
+  var studentLoan = (salary - 17775) * 0.09;    // Avoiding unnecessary specific number
+  var originalSalary = salary; // No need to use originalSalary that is the same as salary.
+  var nationalInsurance = null; //Not clear and not logic
+
+// Need to apply good formating
 
   if (taxCode === "1150L") {
     nationalInsurance = salary * 0.1;
-  } else if (taxCode === "ST") {
+  } else if (taxCode === "ST") {      //It should be "else"
     nationalInsurance = salary * 0.05;
-  } else {
+  } else {                             //It should be "eUnnecessarylse if"
     nationalInsurance = salary * 0.08;
   }
 
   var deductions = [nationalInsurance, totalIncomeTax, studentLoan];
 
-  salary = salary - deductions[0];
-  salary = salary - deductions[1];
-  salary = salary - deductions[2];
+  salary = salary - deductions[0]; 
+  salary = salary - deductions[1];  // Unnecessary repeating. It should be done in one line as salary =- (deductions[0]+deductions[1]+deductions[2])
+  salary = salary - deductions[2];  // Unnecessary repeating.
 
   return (
-    "Your gross income is £" +
+    "Your gross income is ï¿½" +
     originalSalary.toString() +
-    " and your net income is £" +
+    " and your net income is ï¿½" +
     salary.toString() +
     "."
   );
