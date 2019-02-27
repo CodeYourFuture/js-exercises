@@ -36,17 +36,25 @@
  */
 
 const fetch = require('node-fetch')
-
-function getPosts() {
-  const response = fetch('https://jsonplaceholder.typicode.com/posts')
-
-  return (await response.json()).slice(0,3)
+// first retrieve the `posts` from source url as `response`
+// convert the `posts` to array of objects format and return first three objects of the array 
+async function getPosts() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+  // As `response.json()` produces a new promise, `await` keyword waits for this promise to be resolved by pausing the code. After response.json() resolved as an array of objects, the first three elements of response array, by the use of `.slice()` method, return as output of getPosts() function.
+  return (await response.json()).slice(0, 3)
 }
 
+// returns the `title` and `body` properties of the `posts` array of objects 
 function printBody(posts) {
-  return posts.map(x => x.body)
+  return posts.map(post =>
+    post.title.toUpperCase() + '\n' + post.body)
 }
 
+// returns the array elements to a single string and insert two new line between each element 
 function toString(posts) {
   return posts.join("\n\n")
 }
+
+getPosts().then(printBody).then(toString).then(result => {
+  console.log(result);
+})
