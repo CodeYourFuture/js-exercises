@@ -6,7 +6,7 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
 var writers = [
   {
@@ -36,7 +36,7 @@ var writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  },
+  }
 ];
 
 /*

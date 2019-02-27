@@ -4,15 +4,15 @@ Add a method "sayName" so this person can say their own name.
 Hint: use 'this' keyword to access the name property.
 */
 
-
 var person = {
-    name: "Alice",
-    age: 25
+  name: "Alice",
+  age: 25
 };
-
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log("Expected result: 'My name is Alice'. Actual result: " + person.sayName());
+console.log(
+  "Expected result: 'My name is Alice'. Actual result: " + person.sayName()
+);

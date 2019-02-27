@@ -8,9 +8,7 @@
   - Otherwise the grade is "F"
 */
 
-function calculateGrade(mark) {
-
-}
+function calculateGrade(mark) {}
 
 /* 
 DO NOT EDIT BELOW THIS LINE
@@ -25,7 +23,7 @@ console.log("'" + grade2 + "': " + calculateGrade(grade2));
 console.log("'" + grade3 + "': " + calculateGrade(grade3));
 console.log("'" + grade4 + "': " + calculateGrade(grade4));
 
-  /* 
+/* 
   EXPECTED RESULT
   ---------------
   '49': F

@@ -25,5 +25,4 @@ on the submit button. Then check the following:
 2) When you refresh the page in your browser, you should be able to see your new message in the message list.
 */
 
-
 // Write your code here

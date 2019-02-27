@@ -3,16 +3,13 @@
 */
 
 var dog = {
-    name: 'Billy',
-    wantsToPlay: false
+  name: "Billy",
+  wantsToPlay: false
 };
 
 // WRITE CODE BELOW THIS LINE
 
-
-
 // WRITE CODE ABOVE THIS LINE
-
 
 //DO NOT MODIFY BELOW
 console.log(dog.name);

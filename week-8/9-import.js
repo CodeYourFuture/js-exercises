@@ -5,4 +5,4 @@
 
 /* Write import statement here */
 
-a()
+a();

@@ -1,16 +1,16 @@
 /* EXERCISE 3 - Classes
- * 3.a 
+ * 3.a
  * An incomplete House class is defined below. The House class should accept the following parameters:
  *  - windows
  *  - colour (must default to white - you can use ES6 default parameters syntax)
  *  - number of rooms
- *  - location 
+ *  - location
  *
- * 3.b 
+ * 3.b
  * A method has already been created which computes the energy cost based on the number of windows
  *
  * The House class should also have a method which computes the price of the house based on the location and number of rooms
- *  - The price should have a base value of 50,000GBP, with an addition of 10,000GBP for each room it has (if it's a 
+ *  - The price should have a base value of 50,000GBP, with an addition of 10,000GBP for each room it has (if it's a
  *  studio flat, the room number should be 0)
  *  - If the house is based in London, the value of the house should increase by 80%
  *
@@ -30,13 +30,13 @@
 
 class House {
   constructor(windows, colour) {
-    this.windows = windows
+    this.windows = windows;
   }
 
   monthlyEnergyBill(windows) {
-    let base = 40 // base energy bill without windows
-    let multiplier = 1.2 // energy bill expected to go up 20% for each additional window
-    
-    return base + windows*multiplier
+    let base = 40; // base energy bill without windows
+    let multiplier = 1.2; // energy bill expected to go up 20% for each additional window
+
+    return base + windows * multiplier;
   }
 }

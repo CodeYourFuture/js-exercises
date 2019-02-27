@@ -33,5 +33,4 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
