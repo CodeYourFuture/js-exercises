@@ -40,7 +40,7 @@ const fetch = require('node-fetch')
 // convert the `posts` to array of objects format and return first three objects of the array 
 async function getPosts() {
   const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-  // As `response.json()` produces a new promise, `await` keyword waits for this promise to be resolved by pausing the code. After response.json() resolved as an array of objects, the first three elements of response array, by the use of `.slice()` method, return as output of getPosts() function.
+  /* As `response.json()` produces a new promise, `await` keyword waits for this promise to be resolved by pausing the code. After response.json() resolved as an array of objects, the first three elements of response array, by the use of `.slice()` method, return as output of getPosts() function.*/
   return (await response.json()).slice(0, 3)
 }
 
@@ -51,7 +51,7 @@ function printBody(posts) {
 }
 
 // returns the array elements to a single string and insert two new line between each element 
-function toString(posts) {
+const toString = posts => {
   return posts.join("\n\n")
 }
 
