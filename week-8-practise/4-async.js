@@ -6,20 +6,20 @@
  *
  * 4.a
  * getPosts() is a partially implemented async function. To see the format of the fetch response, go to the request URL.
- * 
+ *
  * Refactor this function so that
  *  - The function is asynchronous
  *  - It resolves the output of the fetch request to https://jsonplaceholder.typicode.com/posts
  *  - It returns a JSON object of the response
  *
- * Hint: there is one extra `await` and `async` keyword missing 
+ * Hint: there is one extra `await` and `async` keyword missing
  *
  * 4.b
  * Call the functions so that the order of operations are as follows:
  *  - First call the getPosts() function
  *  - Then run printBody(..) on the output of getPosts()
  *  - Then run toString(..) on the output of printBody(..)
- *  
+ *
  *  Bonus points for using arrow functionsn correctly in the .then(..) method
  *
  * 4.c
@@ -35,18 +35,27 @@
  * Can you appropriately comment each function to explain what each does?
  */
 
-const fetch = require('node-fetch')
+const fetch = require("node-fetch");
 
-function getPosts() {
-  const response = fetch('https://jsonplaceholder.typicode.com/posts')
-
-  return (await response.json()).slice(0,3)
+async function getPosts(url) {
+  const response = await fetch(url);
+  //awaits the json data, stores it in a pseudo-variable. It then slices the data and returns from index 0
+  // to index 3
+  return (await response.json()).slice(0, 3);
 }
 
 function printBody(posts) {
-  return posts.map(x => x.body)
+  return posts.map(p => p.body);
 }
 
-function toString(posts) {
-  return posts.join("\n\n")
-}
+const toString = posts => posts.join("\n\n");
+
+getPosts("https://jsonplaceholder.typicode.com/posts")
+  .then(printBody)
+  .then(toString)
+  .then(stuff => {
+    console.log(stuff);
+  });
+
+// Sources for helping me understand this: Tutorial on Scrimba @ https://scrimba.com/p/p4Mrt9/cKLyeuy
+// Also looking at Elemin's wonderfully written code.
