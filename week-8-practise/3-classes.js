@@ -48,8 +48,8 @@ class House {
   monthlyEnergyBill(windows) {
     let base = 40; // base energy bill without windows
     let multiplier = 1.2; // energy bill expected to go up 20% for each additional window
-
-    return base + windows * multiplier;
+    let total = base + windows * multiplier;
+    return total;
   }
 
   static calculateSquareFeet(squareFeet) {
@@ -59,20 +59,43 @@ class House {
 }
 
 function comparePrices(house1, house2) {
-  //console.log(house1.getPrice());
-  //console.log(house2.getPrice());
   if (house1.getPrice() > house2.getPrice()) {
-    return `${house1.colour} in ${house1.location} is more expensive`;
+    return `${house1.colour} house in ${house1.location} is more expensive`;
   } else if (house2.getPrice() > house1.getPrice()) {
-    return `${house2.colour} in ${house2.location} is more expensive`;
+    return `${house2.colour} house in ${house2.location} is more expensive`;
   } else {
     return "They are the same price";
   }
 }
-const brownHouse = new House(1, "Brown", 6, "Woking");
-const blueHouse = new House(4, "Blue", 1, "London");
-//console.log(blueHouse)
-console.log(comparePrices(brownHouse, blueHouse));
+function compareEnergyBills(house1, house2) {
+  if (
+    house1.monthlyEnergyBill(house1.windows) >
+    house2.monthlyEnergyBill(house2.windows)
+  ) {
+    return `${house1.colour} house  in ${
+      house1.location
+    } energy bills is the highest and has a cost of ${house1.monthlyEnergyBill(
+      house1.window
+    )} pounds`;
+  }
+  else if (
+    house2.monthlyEnergyBill(house2.windows) >
+    house1.monthlyEnergyBill(house1.windows)
+  ) {
+    return `${house2.colour} house in ${
+      house2.location
+    } energy bills is the highest and has a cost of ${house2.monthlyEnergyBill(
+      house2.windows
+    )} pounds`;
+  } else {
+    return "same";
+  }
+}
 
-//console.log(brownHouse.getPrice())
-//console.log(blueHouse.getPrice())
+const brownHouse = new House(3, "Brown", 6, "Woking");
+const blueHouse = new House(5, "Blue", 1, "London");
+const calculateSquareFeet = House.calculateSquareFeet(950);
+
+console.log(comparePrices(brownHouse, blueHouse));
+console.log(compareEnergyBills(brownHouse, blueHouse));
+console.log(calculateSquareFeet);
