@@ -10,7 +10,8 @@
 
 
 // this function handle the split the reverse ad the join method
-export function reverseAndCaptilise(text) {
+//export
+ function reverseAndCaptilise(text) {
   return text
     .split("")
     .reverse()
@@ -19,17 +20,25 @@ export function reverseAndCaptilise(text) {
 }
 
 //this function will transform all text to upperCase,
-export function everyOtherLetterCapitilised(text) {
-  return text.toUpperCase();
+//export
+
+function transformSecondLetterToUppercase(text) {
+  var response = "";
+  for (i = 0; i < text.length; i++) {
+    response += i % 2 == 0 ? text.charAt(i).toUpperCase() : text.charAt(i);
+  }
+  return response;
 }
 
+
 //this function will tranform all the text to lowerCase;
-export function lowerCase(text) {
+//export
+ function lowerCase(text) {
   return text.toLowerCase();
 }
 
 // please note the function call  below is just  to test that the function are working accordingly,
 // to test this function call  remove the  word export from all the functions. and this line of code will run.
 console.log(reverseAndCaptilise("clement"));
-console.log(everyOtherLetterCapitilised("mildred"));
+console.log(transformSecondLetterToUppercase("mildred"));
 console.log(lowerCase("MARY"));
