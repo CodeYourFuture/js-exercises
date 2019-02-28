@@ -29,11 +29,11 @@
  */
 
 class House {
-  constructor(windows, colour = "blue", numberOfRooms, location) {
+  constructor(windows, numberOfRooms, location, colour = "blue") {
     this.windows = windows;
-    this.colour = colour;
     this.numberOfRooms = numberOfRooms;
     this.location = location;
+    this.colour = colour;
   }
 
   monthlyEnergyBill(windows) {
