@@ -12,24 +12,23 @@ var reversed;
 let capitilised;
 
 // Function that reverses and capitlises text
-exports function reverseAndCaptilise(text) 
-  var capitlised = text.toUpper()
-  reversed = capitilised.split('').reverse().join('') 
-
-  return reversed
+function reverseAndCapitilise(text){ 
+  return text.toUpper().split('').reverse().join('');
   }
 
-// Function that returns text with every other letter capitlised
-export function everyOtherLetterCapitilised(text) {
-  for (i==0; i++; i<text.length) {
-      if (i/2==0) {
-       text[i] = text[i].toUpperCase() 
+// Function that returns text with every other letter capitilised
+function otherLetterCapitilise(text) {
+  text = text.split('');
+  for (i = 0; i < text.length; i++) {
+    if (i % 2 === 0) {
+       text[i] = text[i].toUpperCase(); 
     }    
   } 
+  return text.join("");
 }
 
-export  function lowerCase(text) {
-  let text = text.toLowerCase()
-
-  return text
+function lowerCase(text) {
+  return text.toLowerCase();
 }
+
+module.exports = reverseAndCapitilise, otherLetterCapitilise, lowerCase;
