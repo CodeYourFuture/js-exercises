@@ -29,9 +29,9 @@
  */
 
 class House {
-  constructor(windows, colour = "white", numberOfRooms, location) {
+  constructor(windows, colour, numberOfRooms, location) {
     this.windows = windows;
-    this.colour = colour;
+    this.colour = colour || "white";
     this.numberOfRooms = numberOfRooms;
     this.location = location;
   }

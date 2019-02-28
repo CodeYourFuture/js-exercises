@@ -19,9 +19,16 @@ export function reverseAndCaptilise(text) {
 
 // Function that returns text with every other letter capitlised
 export function everyOtherLetterCapitilised(text) {
-  return text.toUpperCase();
+  text = text.split("");
+  for (i = 0; i < text.length; i++) {
+    if (i % 2 === 0) {
+      text[i] = text[i].toUpperCase();
+    }
+  }
+  return text.join("");
 }
 
+//Faucntion that returns text with every other letter in small case
 export function lowerCase(text) {
   return text.toLowerCase();
 }
