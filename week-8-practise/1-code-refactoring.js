@@ -8,28 +8,31 @@
  * There may be both syntax and logical errors present.
  */
 
-var reversed;
-let capitilised;
 
 // Function that reverses and capitlises text
-exports function reverseAndCaptilise(text) 
-  var capitlised = text.toUpper()
-  reversed = capitilised.split('').reverse().join('') 
 
-  return reversed
-  }
-
-// Function that returns text with every other letter capitlised
-export function everyOtherLetterCapitilised(text) {
-  for (i==0; i++; i<text.length) {
-      if (i/2==0) {
-       text[i] = text[i].toUpperCase() 
-    }    
-  } 
+export function reversesAndCaptilises(text) {
+  return text
+    .split("")
+    .reverse()
+    .join("")
+    .toUpperCase();
 }
 
-export  function lowerCase(text) {
-  let text = text.toLowerCase()
+// Function that returns text with every other letter capitlised
 
-  return text
+export function everyOtherLetterCapitilised(text) {
+  text = text.split("");
+  for (i = 0; i < text.length; i++) {
+    if (i % 2 === 0) {
+      text[i] = text[i].toUpperCase();
+    }
+  }
+  return text.join("");
+}
+
+//Faucntion that returns text with every other letter in small case
+
+export function everyOtherLetterTolowerCase(text) {
+  return text.toLowerCase();
 }

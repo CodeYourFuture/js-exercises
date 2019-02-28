@@ -29,14 +29,96 @@
  */
 
 class House {
-  constructor(windows, colour) {
-    this.windows = windows
+  constructor(windows, colour , numberOfRooms, location) {
+    this.windows = windows;
+    this.colour = colour||"white";
+    this.numberOfRooms = numberOfRooms;
+    this.location = location;
   }
-
   monthlyEnergyBill(windows) {
-    let base = 40 // base energy bill without windows
-    let multiplier = 1.2 // energy bill expected to go up 20% for each additional window
+    let base = 40; // base energy bill without windows
+    let multiplier = 1.2; // energy bill expected to go up 20% for each additional window
+    return base + windows * multiplier;
+  }
+  housePrice() {
+    var baseValue = 50000;
+       
+    var valueOfadditionRooms  = 10000 * this.numberOfRooms;
     
-    return base + windows*multiplier
+    var totalValue = baseValue + valueOfadditionRooms;
+    if (this.location === "London") {
+      return (totalValue *= 1.8);
+    } else {
+      return totalValue;
+    }
+  }
+  static convertSqrFeetToSqrmeter(feet) {
+    const sqrFeet = 0.092903  //square feet =  0.092903 square meter
+    return feet * 0.092903;
   }
 }
+
+// Instantiate new houses
+
+var brownHouse = new House(3, "brown", 2, "Woking");
+var blueHouse = new House(5, "blue", 2, "London");
+
+// compare  houses prices 
+function comparePrice() {
+  if (brownHouse.housePrice() > blueHouse.housePrice()) {
+    console.log(
+      "Brown house is " +  (brownHouse.housePrice -
+      blueHouse.housePrice) + " more expensive than Blue House"
+    );
+  } else if (brownHouse.housePrice() < blueHouse.housePrice()) {
+    console.log(
+      "Blue house is " + (blueHouse.housePrice() -
+      brownHouse.housePrice())+ " more expensive than Brown House"
+    );
+  } else {
+    console.log("Both houses are equally priced");
+  }
+}
+//compare houses energy bill
+function compareEnergy() {
+  if (
+    brownHouse.monthlyEnergyBill(brownHouse.windows) >
+    blueHouse.monthlyEnergyBill(blueHouse.windows)
+  ) {
+    console.log(
+      "Brown house energy bill is " + (brownHouse.monthlyEnergyBill(
+        brownHouse.windows
+      ) -
+      blueHouse.monthlyEnergyBill(
+        blueHouse.windows
+        )).toFixed(2)+ "more expensive than Blue House"
+    );
+  } else if (
+    brownHouse.monthlyEnergyBill(brownHouse.windows) <
+    blueHouse.monthlyEnergyBill(blueHouse.windows)
+  ) {
+    console.log(
+      "Blue house energy bill is " + "£"+(( blueHouse.monthlyEnergyBill(
+        blueHouse.windows
+      ) -
+      brownHouse.monthlyEnergyBill(
+        brownHouse.windows
+      )).toFixed(2)+" more expensive than Brown House"
+    ));
+  } else {
+    console.log("Both house's energy bills are equally priced");
+  }
+}
+comparePrice();
+compareEnergy();
+console.log((House.convertSqrFeetToSqrmeter(950).toFixed(2))//convert 950 squarefeet to sguare meter
+  
+);
+/*
+
+The static method in this exercise is the method that convert square feet to square
+meter. Static methods are called without instantiating their class and cannot be called through a class instance.
+ Static methods are often used to create utility functions for an application.
+That means we can't call static like this (newhouse.convertSqrFeetToSqrmeter()).
+
+*/
