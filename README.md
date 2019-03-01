@@ -10,12 +10,14 @@
 - `origin` pointing to your github repo, and
 - `upstream` pointing to RARMATEI
 
-6. Run the command `npm run test`.
+6. Run the command `npm install`.
+
+7. Run the command `npm run test`.
 
 This won't do anything in the beginning, but as we work through the exercises you will start seeing some RED messages pop-up which you will have to turn GREEN.
 
-7. Keep this terminal window open, and launch a second terminal.
-8. Navigate to the `js-exercises` folder.
+8. Keep this terminal window open, and launch a second terminal.
+9. Navigate to the `js-exercises` folder.
 
 During the class (and for homework), we will go through each folder, reading the README and completing the exercises.
 
