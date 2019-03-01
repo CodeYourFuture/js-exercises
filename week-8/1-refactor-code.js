@@ -12,33 +12,29 @@
 // - Single responsibility
 // - Avoiding unnecessary specific number
 
-function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
-  var totalIncomeTax = incomeTax1 + incomeTax2;
-  var studentLoan = (salary - 17775) * 0.09;
-  var originalSalary = salary;
-  var nationalInsurance = null;
-
-  if (taxCode === "1150L") {
-    nationalInsurance = salary * 0.1;
-  } else if (taxCode === "ST") {
-    nationalInsurance = salary * 0.05;
+function calculateNetSalary (salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
+  var totalIncomeTax = incomeTax1 + incomeTax2
+  var studentLoan = (salary - 17775) * 0.09
+  var originalSalary = salary
+  var nationalInsurance = null
+  /// calculationg National Insurance based on tax code
+  if (taxCode === '1150L') {
+    nationalInsurance = salary * 0.1
+  } else if (taxCode === 'ST') {
+    nationalInsurance = salary * 0.05
   } else {
-    nationalInsurance = salary * 0.08;
+    nationalInsurance = salary * 0.08
   }
-
-  var deductions = [nationalInsurance, totalIncomeTax, studentLoan];
-
-  salary = salary - deductions[0];
-  salary = salary - deductions[1];
-  salary = salary - deductions[2];
+  // Aplying deductions
+  salary = salary - nationalInsurance - totalIncomeTax - studentLoan
 
   return (
-    "Your gross income is £" +
+    'Your gross income is Â£' +
     originalSalary.toString() +
-    " and your net income is £" +
+    ' and your net income is Â£' +
     salary.toString() +
-    "."
-  );
+    '.'
+  )
 }
 
-console.log(myFunction(28000, "1150L", 1000, 580, false));
+console.log(calculateNetSalary(28000, '1150L', 1000, 580, false))
