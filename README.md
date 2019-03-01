@@ -15,7 +15,7 @@
 This won't do anything in the beginning, but as we work through the exercises you will start seeing some RED messages pop-up which you will have to turn GREEN.
 
 7. Keep this terminal window open, and launch a second terminal.
-8. Navigate back to the `js-exercises` folder.
+8. Navigate to the `js-exercises` folder.
 
 During the class (and for homework), we will go through each folder, reading the README and completing the exercises.
 
