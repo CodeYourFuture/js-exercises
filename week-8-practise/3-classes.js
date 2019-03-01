@@ -1,16 +1,16 @@
 /* EXERCISE 3 - Classes
- * 3.a 
+ * 3.a
  * An incomplete House class is defined below. The House class should accept the following parameters:
  *  - windows
  *  - colour (must default to white - you can use ES6 default parameters syntax)
  *  - number of rooms
- *  - location 
+ *  - location
  *
- * 3.b 
+ * 3.b
  * A method has already been created which computes the energy cost based on the number of windows
  *
  * The House class should also have a method which computes the price of the house based on the location and number of rooms
- *  - The price should have a base value of 50,000GBP, with an addition of 10,000GBP for each room it has (if it's a 
+ *  - The price should have a base value of 50,000GBP, with an addition of 10,000GBP for each room it has (if it's a
  *  studio flat, the room number should be 0)
  *  - If the house is based in London, the value of the house should increase by 80%
  *
@@ -29,14 +29,87 @@
  */
 
 class House {
-  constructor(windows, colour) {
-    this.windows = windows
+  constructor(windows, colour = "white", numberOfRooms, location) {
+    this.windows = windows;
+    this.colour = colour;
+    this.numberOfRooms = numberOfRooms;
+    this.location = location;
   }
 
   monthlyEnergyBill(windows) {
-    let base = 40 // base energy bill without windows
-    let multiplier = 1.2 // energy bill expected to go up 20% for each additional window
-    
-    return base + windows*multiplier
+    let base = 40; // base energy bill without windows
+    let multiplier = 1.2; // energy bill expected to go up 20% for each additional window
+
+    return base + windows * multiplier;
+  }
+  housePrice() {
+    var baseValue = 50000;
+
+    var roomExcess = 10000 * this.numberOfRooms;
+
+    var totalValue = baseValue + roomExcess;
+    if (this.location === "London") {
+      return (totalValue *= 1.8);
+    } else {
+      return totalValue;
+    }
+  }
+  static feetIntoMeters(feet) {
+    return feet * 0.092903;
   }
 }
+
+var brownHouse = new House(3, "brown", 2, "Woking");
+var blueHouse = new House(5, "blue", 2, "London");
+
+function comparePrice() {
+  if (brownHouse.housePrice() > blueHouse.housePrice()) {
+    console.log(
+      `Brown house is  ${brownHouse.housePrice -
+        blueHouse.housePrice} more expensive than Blue House`
+    );
+  } else if (brownHouse.housePrice() < blueHouse.housePrice()) {
+    console.log(
+      `Blue house is  ${blueHouse.housePrice() -
+        brownHouse.housePrice()} more expensive than Brown House`
+    );
+  } else {
+    console.log("Both houses are equally priced");
+  }
+}
+
+function compareEnergy() {
+  if (
+    brownHouse.monthlyEnergyBill(brownHouse.windows) >
+    blueHouse.monthlyEnergyBill(blueHouse.windows)
+  ) {
+    console.log(
+      `Brown house energy bill is  ${brownHouse.monthlyEnergyBill(
+        brownHouse.windows
+      ) -
+        blueHouse.monthlyEnergyBill(
+          blueHouse.windows
+        )} more expensive than Blue House`
+    );
+  } else if (
+    brownHouse.monthlyEnergyBill(brownHouse.windows) <
+    blueHouse.monthlyEnergyBill(blueHouse.windows)
+  ) {
+    console.log(
+      `Blue house energy bill is  ${blueHouse.monthlyEnergyBill(
+        blueHouse.windows
+      ) -
+        brownHouse.monthlyEnergyBill(
+          brownHouse.windows
+        )} more expensive than Brown House`
+    );
+  } else {
+    console.log("Both house's energy bills are equally priced");
+  }
+}
+comparePrice();
+compareEnergy();
+console.log(House.feetIntoMeters(950));
+
+//Static methods are called without instantiating their classs and are also not callable when the class is instantiated.
+//Static methods have no access to data stored in specific objects.
