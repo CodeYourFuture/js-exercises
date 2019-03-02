@@ -37,16 +37,18 @@
 
 const fetch = require('node-fetch')
 
-function getPosts() {
-  const response = fetch('https://jsonplaceholder.typicode.com/posts')
+async function getPosts() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
 
-  return (await response.json()).slice(0,3)
+  return (await response.json()).slice(0,3);
 }
 
 function printBody(posts) {
   return posts.map(x => x.body)
 }
 
-function toString(posts) {
-  return posts.join("\n\n")
-}
+const toString = posts => posts.join("\n\n");
+
+getPosts().then(printBody).then(toString)
+.then(posts=> {console.log(posts)});
+

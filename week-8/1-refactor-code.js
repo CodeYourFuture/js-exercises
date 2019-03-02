@@ -8,10 +8,12 @@
 // - Clear logic
 // - Concise
 // - Good formatting
-// - DRY
 // - Single responsibility
 // - Avoiding unnecessary specific number
+// - DRY
 
+
+    
 function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
   var totalIncomeTax = incomeTax1 + incomeTax2;
   var studentLoan = (salary - 17775) * 0.09;
@@ -33,9 +35,9 @@ function myFunction(salary, taxCode, incomeTax1, incomeTax2, ownsCar) {
   salary = salary - deductions[2];
 
   return (
-    "Your gross income is £" +
+    "Your gross income is ï¿½" +
     originalSalary.toString() +
-    " and your net income is £" +
+    " and your net income is ï¿½" +
     salary.toString() +
     "."
   );
