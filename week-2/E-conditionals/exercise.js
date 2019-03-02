@@ -9,6 +9,11 @@
 var name = "Daniel";
 var danielsRole = "mentor";
 
+//Check Daniel's role
+if (danielsRole === "mentor" || danielsRole === "student") {
+  console.log("Hi, I'\m " + name + ", I'\m a " + danielsRole + ".");
+}
+
 /* 
 EXPECTED RESULT
 ---------------
