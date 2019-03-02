@@ -37,37 +37,33 @@ class House {
   }
   monthlyEnergyBill (windows) {
     let base = 40 // base energy bill without windows
-    let multiplier = windows * 1.2 // energy bill expected to go up 20% for each additional window
+    let multiplier = windows * (base * 1.2) // energy bill expected to go up 20% for each additional window
     return base + multiplier
   }
   housePrice () {
     var baseValue = 50000
-    // if (this.numberOfRooms > 0)
-    // {
     var roomExcess = 10000 * this.numberOfRooms
     // }
     var totalValue = baseValue + roomExcess
-    if (this.location === 'London') {
-      return (totalValue *= 1.8)
-    } else {
-      return totalValue
-    }
+    return this.location === 'London' ? (totalValue *= 1.8) : totalValue
   }
   static feetIntoMeters (feet) {
     return feet * 0.092903
   }
 }
+
 var brownHouse = new House(3, 'brown', 2, 'Woking')
 var blueHouse = new House(5, 'blue', 2, 'London')
+
 function comparePrice () {
   if (brownHouse.housePrice() > blueHouse.housePrice()) {
     console.log(
-      `Brown house is  ${brownHouse.housePrice -
+      `Brown house is £${brownHouse.housePrice -
         blueHouse.housePrice} more expensive than Blue House`
     )
   } else if (brownHouse.housePrice() < blueHouse.housePrice()) {
     console.log(
-      `Blue house is  ${blueHouse.housePrice() -
+      `Blue house is  £${blueHouse.housePrice() -
         brownHouse.housePrice()} more expensive than Brown House`
     )
   } else {
@@ -80,28 +76,40 @@ function compareEnergy () {
     blueHouse.monthlyEnergyBill(blueHouse.windows)
   ) {
     console.log(
-      `Brown house energy bill is  ${brownHouse.monthlyEnergyBill(
+      `Brown house energy bill is £${brownHouse.monthlyEnergyBill(
         brownHouse.windows
-      ) -
-        blueHouse.monthlyEnergyBill(
-          blueHouse.windows
-        )} more expensive than Blue House`
+      ) - blueHouse.monthlyEnergyBill(blueHouse.windows)} more than Blue House`
     )
   } else if (
     brownHouse.monthlyEnergyBill(brownHouse.windows) <
     blueHouse.monthlyEnergyBill(blueHouse.windows)
   ) {
     console.log(
-      `Blue house energy bill is  ${blueHouse.monthlyEnergyBill(
+      `Blue house energy bill is £${blueHouse.monthlyEnergyBill(
         blueHouse.windows
       ) -
-        brownHouse.monthlyEnergyBill(
-          brownHouse.windows
-        )} more expensive than Brown House`
+        brownHouse.monthlyEnergyBill(brownHouse.windows)} more than Brown House`
     )
   } else {
     console.log("Both house's energy bills are equally priced")
   }
 }
+
 comparePrice()
 compareEnergy()
+console.log(House.feetIntoMeters(950))
+/**
+ * Static methods
+ * Static methods are called without instantiating their class and are also not
+ * callable when the class is instantiated. Static methods are often used to create
+ * utility functions for an application.” In other words, static methods have no
+ * access to data stored in specific objects.
+Since these methods operate on the class instead of instances of the class,
+they are called on the class. There are two ways to call static methods:
+
+ClassName.methodName()
+// calling it explicitly on the Class name
+this.constructor.methodName()
+// calling it on the constructor property of the class
+//
+ */
