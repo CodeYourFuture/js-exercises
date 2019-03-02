@@ -29,14 +29,58 @@
  */
 
 class House {
-  constructor(windows, colour) {
-    this.windows = windows
+  constructor(windows, colour, numberOfRooms, location) {
+    this.windows = windows;
+    this.colour = colour || "white";
+    this.numberOfRooms = numberOfRooms || 0;
+    this.location = location;
   }
 
-  monthlyEnergyBill(windows) {
+  calculateMonthlyEnergyBill(windows) {
     let base = 40 // base energy bill without windows
     let multiplier = 1.2 // energy bill expected to go up 20% for each additional window
-    
-    return base + windows*multiplier
+    return base + this.windows*multiplier
+  }
+
+  get monthlyEnergyBill() {
+    return this.calculateMonthlyEnergyBill();
+  }
+
+  calculateHousePrice(numberOfRomms, location){
+    let base = 50000;
+    let factorOfLondon = 1;
+    if (this.location === "London") { 
+      return factorOfLondon=1.8;
+    }
+    return (base + this.numberOfRomms*10000)*factorOfLondon;
+  }
+
+  get housePrice(){
+    return this.calculateHousePrice();
+  }
+
+  static convertSqrfeetToSqrmeters(sqrfeetValue) {
+    let sqrmetersValue = (sqrfeetValue / 10.764).toFixed(1)
+    return `${sqrfeetValue} square feet = ${sqrmetersValue} square meters.`
+  } 
+}
+
+function compare(firstHouse, secondHouse, compareUnit) {
+  if (firstHouse[compareUnit] > secondHouse[compareUnit]) {
+    return `${firstHouse.colour} house's amount of ${compareUnit} is bigger than ${secondHouse.colour} house's amount of ${compareUnit}.`
+  } else if (firstHouse[compareUnit] < secondHouse[compareUnit]) {
+    return `${secondHouse.colour} house's amount of ${compareUnit} is bigger than ${firstHouse.colour} house's amount of ${compareUnit}.`
+  } else {
+    return `${secondHouse.colour} house's amount of ${compareUnit} is the equal with ${firstHouse.colour} house's amount of ${compareUnit}.`
   }
 }
+
+const blueHouse = new House(5, "blue", 2, "London");
+
+const brownHouse = new House(3, "brown", 2, "Woking");
+
+console.log(compare(blueHouse, brownHouse, "housePrice"));
+
+console.log(compare(blueHouse, brownHouse, "monthlyEnergyBill"));
+
+console.log(House.convertSqrfeetToSqrmeters(950));
