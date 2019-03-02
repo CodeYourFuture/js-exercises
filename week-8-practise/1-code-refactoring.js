@@ -42,4 +42,4 @@ console.log(reverseAndCaptilise('Mussie'));
 
 console.log(everyOtherLetterCapitilised('clement'));
 
-console.log(lowerCase('MILDRED'));
+console.log(lowerCase('MILDRED')) ;
