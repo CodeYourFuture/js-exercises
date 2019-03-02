@@ -50,5 +50,5 @@ function printBody(posts) {
 const toString = posts => posts.join("\n\n");
 
 getPosts().then(printBody).then(toString)
-.then(posts=> {console.log(posts)});
+.then(posts=> {console.log(posts)}) ;
 
