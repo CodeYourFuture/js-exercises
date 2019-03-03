@@ -6,8 +6,19 @@
   - if 50 or higher then return "pass"
 
 */
+function isNagative(negativeNumber) {
+  return negativeNumber < 0;
+}
 
 function studentPassed(grade) {
+  if (isNagative(grade)) {
+    return "please enter a valid grade";
+  } else if (grade >= 50) {
+    return "passed";
+  } else {
+    return "failed";
+  }
+
 
 }
 
@@ -17,10 +28,12 @@ DO NOT EDIT BELOW THIS LINE
 var grade1 = 49;
 var grade2 = 50;
 var grade3 = 100;
+//var grade4 = -2;
 
-console.log("'" + grade1 + "': " + studentPassed(grade1))
-console.log("'" + grade2 + "': " + studentPassed(grade2))
-console.log("'" + grade3 + "': " + studentPassed(grade3))
+console.log("'" + grade1 + "': " + studentPassed(grade1));
+console.log("'" + grade2 + "': " + studentPassed(grade2));
+console.log("'" + grade3 + "': " + studentPassed(grade3));
+//console.log("'" + grade4 + "': " + studentPassed(grade4));
 
 /* 
 EXPECTED RESULT
