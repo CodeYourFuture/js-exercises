@@ -36,7 +36,7 @@
  */
 
  
-/*
+
 const fetch = require('node-fetch')
 
 async function getPosts() {
@@ -45,7 +45,7 @@ async function getPosts() {
 }
 
 function printBody(posts) {
-  return posts.map(x => x.body);
+  return posts.map(post => post.body);
 }
 
 const toString = posts => posts.join("\n\n");
@@ -57,29 +57,3 @@ getPosts()
     console.log(posts);
   });
 
-
-*/
-
-
-
-/* 
-const fetch = require('node-fetch')
-
-async function getPosts() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-  return (await response.json()).slice(0,3)
-}
-
-function printBody(posts) {
-  return posts.map(post =>
-    post.title.toUpperCase() + '\n' + post.body)
-}
-
-const toString = posts => {
-  return posts.join("\n\n")
-}
-
-getPosts().then(printBody).then(toString).then(result => {
-  console.log(result);
-}) 
-*/
