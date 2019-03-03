@@ -10,10 +10,11 @@ function getCircleArea(radius) {
 function getCircleAreas(radiusArr) {
   var areasArr = [];
 
-  for (var i = 0; i < radiusArr.length; i++) {
+  for (i in radiusArr) {
     var circleArea = getCircleArea(radiusArr[i]);
     areasArr.push(circleArea);
   }
 
   return areasArr;
 }
+console.log(getCircleArea(10))
