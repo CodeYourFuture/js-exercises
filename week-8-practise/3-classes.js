@@ -84,3 +84,10 @@ console.log(compare(blueHouse, brownHouse, "housePrice"));
 console.log(compare(blueHouse, brownHouse, "monthlyEnergyBill"));
 
 console.log(House.convertSqrfeetToSqrmeters(950));
+
+/*
+The static keyword defines a static method for a class. 
+Static methods aren't called on instances of the class. Instead, they're called on the class itself.
+In this exercises, we can only access convertSqrfeetToSqrmeters() by appending it to the `House` class.
+So, static method calls are made directly on the class and are not callable on instances of the class.
+*/
