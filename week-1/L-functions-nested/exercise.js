@@ -1,31 +1,19 @@
 //Exercise-1
+var st = 15;
+var men = 8;
+var total = st + men;
 
-function calculatePercentage(percentFor, percentof) {
-    return Math.floor((percentFor / percentof * 100));
+function calcPerc(num, total) {
+    return Math.floor(num * 100 / total) + '%';
 }
 
-function createMessage(mentNumber, StudNumber) {
-    var message = 'Percentage of mentors ' + mentNumber + '%' + '\n' + 'Percentage of students ' + StudNumber + '%';
-    return message;
-
+function messsage() {
+    return "Percentage students: " + calcPerc(st, total) +
+        '\n' + "Percentage mentors: " + calcPerc(men, total);
 }
 
-function total(mentor, student) {
-    return mentor + student;
-}
+console.log(messsage());
 
-
-
-var mentors = 8;
-var student = 15;
-var total = mentors + student;
-var numberOfMentors, numberOfStudents, mes;
-console.log('===========//Exercise-1==============');
-numberOfStudents = calculatePercentage(student, total);
-numberOfMentors = calculatePercentage(mentors, total);
-
-mes = createMessage(numberOfStudents, numberOfMentors);
-console.log(mes);
 
 console.log('===========//Exercise-2==============');
 
