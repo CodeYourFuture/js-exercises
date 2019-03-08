@@ -4,8 +4,8 @@ var numberOfStudents = 15;
 var students = "Number of students: ";
 var numberOfMentors = 8;
 var mentors = "Number of mentors: ";
-var number = 15 + 8;
+var sum = numberOfStudents + numberOfMentors;
 
 console.log(students + numberOfStudents);
 console.log(mentors + numberOfMentors);
-console.log(message + number);
+console.log(message + sum);
