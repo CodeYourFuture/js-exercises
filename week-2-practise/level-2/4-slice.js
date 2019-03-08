@@ -5,7 +5,13 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  /*
+  The splice method can be used to add or remove elements from an array. The first argument specifies the location at which to begin adding or removing elements. 
+  The second argument specifies the number of elements to remove. 
+  */
+  var newArray = arr.slice();
+  newArray.splice(index, 1);
+  return newArray; // complete this statement
 }
 
 /* 

@@ -4,7 +4,6 @@
 //    - each item in `percentages` formatted by your function
 
 var percentages = [1, 23, 92, 18];
-
 console.log(percentagesFormatted);
 
 /* 
