@@ -17,6 +17,7 @@ var personB = "Irina";
 var sameName; // finish this statement
 
 /* 
+  PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 console.log("Are there more students than mentors?", moreStudentsThanMentors);

@@ -8,6 +8,7 @@
 var codeYourFutureIsGreat = true;
 
 /* 
+  PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 
@@ -15,6 +16,12 @@ console.log("Is Code Your Future great?", codeYourFutureIsGreat);
 console.log("Is Mozafar cool?", mozafarIsCool);
 console.log("Does 1 + 1 = 2?", calculationCorrect);
 console.log("Are there more than 10 students?", moreThan10Students);
+
+module.exports = {
+  mozafarIsCool,
+  calculationCorrect,
+  moreThan10Students
+};
 
 /* 
   EXPECTED RESULT
