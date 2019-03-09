@@ -10,10 +10,17 @@ var students = ["Rukmini", "Abdul", "Austine", "Swathi"];
 var everyone; // complete this statement
 
 /* 
+  PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 
 console.log(everyone);
+
+module.exports = {
+  mentors,
+  students,
+  everyone
+};
 
 /* 
   EXPECTED RESULT

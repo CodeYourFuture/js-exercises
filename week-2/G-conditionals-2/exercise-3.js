@@ -11,8 +11,9 @@
 function calculateGrade(mark) {}
 
 /* 
-DO NOT EDIT BELOW THIS LINE
---------------------------- */
+  PLEASE IGNORE LINES BELOW
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
 var grade1 = 49;
 var grade2 = 90;
 var grade3 = 70;
@@ -22,6 +23,10 @@ console.log("'" + grade1 + "': " + calculateGrade(grade1));
 console.log("'" + grade2 + "': " + calculateGrade(grade2));
 console.log("'" + grade3 + "': " + calculateGrade(grade3));
 console.log("'" + grade4 + "': " + calculateGrade(grade4));
+
+module.exports = {
+  calculateGrade
+};
 
 /* 
   EXPECTED RESULT
