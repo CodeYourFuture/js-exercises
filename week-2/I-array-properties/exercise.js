@@ -23,7 +23,7 @@ module.exports = {
   isEmpty
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   false

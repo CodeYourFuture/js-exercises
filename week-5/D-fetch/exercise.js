@@ -1,5 +1,5 @@
 /*
-Use fetch to load a greeting from the API and display it 
+Use fetch to load a greeting from the API and display it
 in the HTML element with the id "greeting-text".
 
 API: https://codeyourfuture.herokuapp.com/api/greetings

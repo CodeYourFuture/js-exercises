@@ -10,7 +10,7 @@
 
 function containsCode(sentence) {}
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -26,7 +26,7 @@ module.exports = {
   containsCode
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   'code your future': true

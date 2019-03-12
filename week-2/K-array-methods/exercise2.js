@@ -9,7 +9,7 @@ var students = ["Rukmini", "Abdul", "Austine", "Swathi"];
 
 var everyone; // complete this statement
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -22,7 +22,7 @@ module.exports = {
   everyone
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   ["Daniel", "Irina", "Rares", "Rukmini", "Abdul", "Austine", "Swathi"]

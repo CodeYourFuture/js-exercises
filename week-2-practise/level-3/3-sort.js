@@ -10,7 +10,7 @@ console.log(sortedNums);
 
 // 2. Using code, show that the variables nums and nums2 were not changed
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [ 1, 3, 5, 6, 10, 11, 12, 29, 29, 100 ]

@@ -1,4 +1,4 @@
-/* 
+/*
 An array of travel destinations is defined below.
 Each destination has a name, a distance from Glasgow, and a list of transportations available to go there.
 
@@ -34,7 +34,7 @@ var destination4 = {
 
 var travelDestinations = [destination1, destination2, destination3, destination4];
 
-/* 
+/*
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */

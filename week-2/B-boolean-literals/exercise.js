@@ -7,7 +7,7 @@
 
 var codeYourFutureIsGreat = true;
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -23,7 +23,7 @@ module.exports = {
   moreThan10Students
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   Is Code Your Future great? true

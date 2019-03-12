@@ -9,7 +9,7 @@ if (isHappy) {
   console.log("I am not happy");
 }
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   I am happy

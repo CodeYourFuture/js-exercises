@@ -18,7 +18,7 @@ var everyone = [
 var firstFive; // complete this statement
 var lastFive; // complete this statement
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -32,7 +32,7 @@ module.exports = {
   lastFive
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   ["Daniel", "Irina", "Rares", "Rukmini", "Abdul"]

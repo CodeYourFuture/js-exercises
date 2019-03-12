@@ -7,7 +7,7 @@ var percentages = [1, 23, 92, 18];
 
 console.log(percentagesFormatted);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [1%, 23%, 92%, 18%]

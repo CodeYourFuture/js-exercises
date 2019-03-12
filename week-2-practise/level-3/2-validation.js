@@ -14,7 +14,7 @@ console.log(validate(101));
 console.log(validate(-91));
 console.log(validate("16"));
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   false

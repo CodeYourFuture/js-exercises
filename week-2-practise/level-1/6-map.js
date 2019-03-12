@@ -15,7 +15,7 @@ var mentorsTidy; // ONLY EDIT THIS LINE
 
 console.log(mentorsTidy);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   ["daniel", "irina", "gordon", "ashleigh"]

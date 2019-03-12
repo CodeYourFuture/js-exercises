@@ -11,7 +11,7 @@ function isNegative(number) {}
 // Finish the predicate function to test if the passed number is below 9
 function isBelow9(number) {}
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -27,7 +27,7 @@ module.exports = {
   isBelow9
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   The number in test is 5
