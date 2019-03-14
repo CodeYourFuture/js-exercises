@@ -1,4 +1,5 @@
 function triple(number) {
+  return number * 2;
   // complete function here
 }
 
