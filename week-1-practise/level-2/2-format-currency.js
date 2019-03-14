@@ -14,12 +14,15 @@ function formatCurrency() {}
 function calculateSalesTax(price) {
   return price * 0.2;
 }
+function formatCurrency(price) {
+  return price.toFixed(2);
+}
 
 var product = "The life and times of Mozafar Haider";
 var price = 12.5;
 var salesTax = calculateSalesTax(price);
 
 console.log("Product: " + product);
-console.log("Price: " + formatCurrency(price));
-console.log("Sales tax: " + formatCurrency(salesTax));
-console.log("Total: " + formatCurrency(price + salesTax));
+console.log("Price: £ " + formatCurrency(price));
+console.log("Sales tax: £ " + formatCurrency(salesTax));
+console.log("Total: £ " + formatCurrency(price + salesTax));
