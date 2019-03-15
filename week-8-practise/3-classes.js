@@ -30,13 +30,38 @@
 
 class House {
   constructor(windows, colour) {
-    this.windows = windows
+    constructor(windows, colour, numberOfRooms, location) {
+      this.windows = windows
+      this.windows = windows;
+      this.colour = colour || "white";
+      this.numberOfRooms = numberOfRooms || 0;
+      this.location = location;
+    }
   }
-
-  monthlyEnergyBill(windows) {
-    let base = 40 // base energy bill without windows
-    let multiplier = 1.2 // energy bill expected to go up 20% for each additional window
-    
-    return base + windows*multiplier
+  static convertSqrfeetToSqrmeters(sqrfeetValue) {
+    let sqrmetersValue = (sqrfeetValue / 10.764).toFixed(2)
+    return `${sqrfeetValue} square feet = ${sqrmetersValue} square meters.`
+  }
+  calculateMonthlyEnergyBill() {
+    let base = 40; // base energy bill without windows
+    let multiplier = 1.2; // energy bill expected to go up 20% for each additional window
+    return base * Math.pow(multiplier, this.windows);
+  }
+  //getter that return calcalculateMonthlyEnergyBill() output,
+  get monthlyEnergyBill() {
+    return this.calculateMonthlyEnergyBill();
+  }
+  calculateHousePrice() {
+    let base = 50000; // base haouse price outside London
+    let londonFactor = 1.8; //the value of the houses based in London is expected to increase by 80%
+    let price = base + (10000 * this.numberOfRooms) // house prices out of London
+    if (this.location === "London") {
+      price = price * londonFactor; // house prices in London increases by london factor
+    }
+    return price;
+  }
+  // getter that return calculateHousePrice() output
+  get housePrice() {
+    return this.calculateHousePrice();
   }
 }
