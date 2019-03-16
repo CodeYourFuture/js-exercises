@@ -16,7 +16,7 @@
 // Function returns a single expression - what does this remind you of?
 function convertFahrenheitToCelsius(fahrenheit) {
   return (fahrenheit - 32)*5/9
-} 
+}
 
 // Use template literals wherever your see concatenation
 function mutliplyByTwo(number) {
@@ -55,7 +55,7 @@ function myHouse(location, colour, rooms) {
   var rooms = rooms || 2
 
   return "I live in " + location + " in a " + colour + " house with " + rooms + " rooms"
-} 
+}
 
 // This function should ensure that the name variable can never be overwritten, but that the location variable can only be overwritten inside the `if` block
 function toLetOrNotToLet() {
@@ -66,8 +66,8 @@ function toLetOrNotToLet() {
     var location == "home"
     console.log("My name is " + name + " and I am at " + location + " now.")
   }
-  
-  console.log("But I am also in " + location + "!")  
+
+  console.log("But I am also in " + location + "!")
 }
 
 /* DO NOT EDIT BELOW THIS LINE */

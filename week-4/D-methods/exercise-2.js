@@ -1,6 +1,6 @@
-/* 
-A person named Alice is defined below. 
-Add a method "sayName" so this person can say their own name. 
+/*
+A person named Alice is defined below.
+Add a method "sayName" so this person can say their own name.
 Hint: use 'this' keyword to access the name property.
 */
 

@@ -1,4 +1,4 @@
-/* 
+/*
 The following code contains syntax errors - try and fix them!
 Once you fix them, run this file, it should output the correct values!
 */
@@ -17,7 +17,7 @@ var person = {
 };
 
 
-/* 
+/*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 

@@ -10,7 +10,7 @@ if (isBigEnough) {
   console.log("num is not big enough");
 }
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   num is bigger than or equal to 10

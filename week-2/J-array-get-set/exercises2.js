@@ -8,7 +8,7 @@
 
 var numbers = [2, 2, 3]; // Don't change this array literal declaration
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -18,7 +18,7 @@ module.exports = {
   numbers
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [1, 2, 3, 4]

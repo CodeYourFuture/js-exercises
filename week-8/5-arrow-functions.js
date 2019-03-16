@@ -12,7 +12,7 @@ const oneVar = /*..*/ => { return `You entered ${param}` }
 const twoVar = /*..*/ => { return `You have ${amount} ${fruit}` }
 
 // This arrow function should return the object literal:
-// {fruit: "apple", colour: "red} 
+// {fruit: "apple", colour: "red}
 
 const objLiteral = /*..*/ => /*..*/
 

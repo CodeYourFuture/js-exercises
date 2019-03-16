@@ -1,5 +1,5 @@
-/* 
-Alice has a list of good friends. 
+/*
+Alice has a list of good friends.
 Define a method "makeFriend" to add a new friend to her list.
 */
 

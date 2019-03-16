@@ -11,7 +11,7 @@ if (isHappy == true) {
   console.log("I am not happy");
 }
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   I am not happy

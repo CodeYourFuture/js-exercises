@@ -8,7 +8,7 @@ function replace(arr, index, value) {
   return; // complete this statement
 }
 
-/* 
+/*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 3, 3];
@@ -22,7 +22,7 @@ console.log(newNumbers);
 console.log(names);
 console.log(newNames);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [1, 3, 3]

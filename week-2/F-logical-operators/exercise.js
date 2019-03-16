@@ -20,7 +20,7 @@ var cssLevelAbove5;
 var cssAndHtmlAbove5;
 var cssOrHtmlAbove5;
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -35,7 +35,7 @@ module.exports = {
   cssOrHtmlAbove5
 };
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   Is Html knowledge above 5? true

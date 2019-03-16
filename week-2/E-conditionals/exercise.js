@@ -11,7 +11,7 @@ var danielsRole = "mentor";
 
 // Write your code here
 
-/* 
+/*
   PLEASE IGNORE LINES BELOW
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -19,7 +19,7 @@ module.exports = {
   danielsRole
 };
 
-/* 
+/*
 EXPECTED RESULT
 ---------------
 Hi, I'm Daniel, I'm a mentor.
