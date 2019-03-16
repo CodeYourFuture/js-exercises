@@ -14,7 +14,14 @@ function isLongName(name) {
 }
 ```
 
-To find the first item that satisfies the predicate you would have to go through each array item, and pass it into `isLongName`. Once it returns true, we can stop going through the array and grab the item that passed the predicate's test. Sounds complicated! Thankfully there is an array method that does just this!
+To find the first item that satisfies the predicate you would have to:
+
+- go through array, getting each array item one by one
+- at every iteration, pass the array item into `isLongName`
+- once `isLongName` returns true stop going through the array
+- and finally grab the item that passed the predicate's test
+
+That sounds like a lot of work! Thankfully there is a much easier way to achieve this using an array method!
 
 ## `.find()`
 
