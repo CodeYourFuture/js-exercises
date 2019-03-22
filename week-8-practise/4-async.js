@@ -51,9 +51,8 @@ function toString(posts) {
   return posts.join("\n\n")
 }
 
-var toStirng = posts => posts.join('\n\n')
 
 getPosts()
   .then(printBody)
-  .then(toStirng)
+  .then(toString)
 .then(posts => console.log(posts))
