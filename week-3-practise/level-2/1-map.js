@@ -13,7 +13,12 @@ var londonLocations = [
 ];
 
 var locationsByBoat;
-
+function check(arr) {
+  if (arr.includes("river boat")) {
+    return arr[0];
+  }
+}
+var locationsByBoat = londonLocations.filter(check).map(name => name[0]);
 console.log(locationsByBoat);
 
 /* EXPECTED OUTPUT
