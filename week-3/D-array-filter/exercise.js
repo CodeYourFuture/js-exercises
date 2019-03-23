@@ -5,9 +5,14 @@
   - Finish the statement on line 10 to produce an array with valid content
   - Do not edit any of the other existing code
 */
+function checkForArrayLength(element) {
+  if (element === null) return false;
+  if (element.length === 2) return true;
+}
 
 function findPairs(students, mentors, pairsByIndex) {
-  var pairsByIndexFiltered; // <-- Complete this statement
+  var pairsByIndexFiltered = pairsByIndex.filter(checkForArrayLength);
+  // <-- Complete this statement
 
   var pairs = pairsByIndexFiltered.map(function(indexes) {
     var student = students[indexes[0]];
