@@ -1,5 +1,5 @@
-var numberOfStudents = 15;
-var numberOfMentors = 8;
+var numberOfStudents = 21;
+var numberOfMentors = 4;
 
 var lowerPercentage =
   (numberOfMentors / (numberOfStudents + numberOfMentors)) * 100;

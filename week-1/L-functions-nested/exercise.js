@@ -4,6 +4,20 @@ var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
+var mentorArray = [mentor1, mentor2, mentor3, mentor4, mentor5];
+
+function toUpCase(string) {
+  return string.toUpperCase();
+}
+function createGreeting(string) {
+  return "HELLO " + toUpCase(string);
+}
+
+for (var i = 0; i < 5; i++) {
+  mentorArray[i] = createGreeting(mentorArray[i]);
+  console.log(mentorArray[i]);
+}
+
 function calculatePercentage(num1, num2) {
   // check if the first number is bigger than the second.
   // If true switch the numbers.
