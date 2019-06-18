@@ -14,3 +14,10 @@ Make sure you use words like:
 - etc.
 
 */
+
+var mySchool = {
+  teacher: "Marco",
+  secondTeacher: "Valerio",
+  numberStudent: 24,
+  areVoluntares: true
+};

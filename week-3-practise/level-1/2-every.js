@@ -11,17 +11,21 @@
 var bush1BerryColours = ["pink", "pink", "pink", "neon", "pink", "transparent"];
 var bush2BerryColours = ["pink", "pink", "pink", "pink"];
 
-var bush1SafeToEat; //Complete this statement
-var bush2SafeToEat; //Complete this statement
+var bush1SafeToEat = bush1BerryColours.every(function(index) {
+  return index === "pink";
+}); //Complete this statement
+var bush2SafeToEat = bush2BerryColours.every(function(index2) {
+  return index2 === "pink";
+}); //Complete this statement
 
-if (bush1SafeToEat) {
+if (bush1SafeToEat === true) {
   console.log("Bush 1 is safe to eat from");
 } else {
   console.log("Toxic! Leave bush 1 alone");
 }
 
-if (bush2SafeToEat) {
-  console.log("Bush 2 is safe to eat");
+if (bush2SafeToEat === true) {
+  console.log("Bush 2 is safe to eat from");
 } else {
   console.log("Toxic! Leave bush 2 alone");
 }

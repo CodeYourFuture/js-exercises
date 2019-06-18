@@ -6,7 +6,9 @@
   Write a function that transforms numbers into the format £0.00
 */
 
-function formatCurrency() {}
+function formatCurrency(price) {
+  return price.toFixed(2);
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
@@ -20,6 +22,6 @@ var price = 12.5;
 var salesTax = calculateSalesTax(price);
 
 console.log("Product: " + product);
-console.log("Price: " + formatCurrency(price));
-console.log("Sales tax: " + formatCurrency(salesTax));
-console.log("Total: " + formatCurrency(price + salesTax));
+console.log("Price: £" + formatCurrency(price));
+console.log("Sales tax: £" + formatCurrency(salesTax));
+console.log("Total: £" + formatCurrency(price + salesTax));

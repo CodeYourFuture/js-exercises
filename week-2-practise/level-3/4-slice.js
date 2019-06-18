@@ -4,8 +4,17 @@
 // - return a new array with the replacement value inserted
 // - insert the replacement value at the provided index
 
+var arr = new Array();
 function replace(arr, index, value) {
-  return; // complete this statement
+  if (typeof value === "number") {
+    arr = new Array().concat(numbers);
+    arr[index] = value;
+    return arr;
+  } else if (typeof value === "string") {
+    arr = new Array().concat(names);
+    arr[index] = value;
+    return arr;
+  }
 }
 
 /* 

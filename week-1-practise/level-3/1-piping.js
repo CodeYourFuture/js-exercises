@@ -11,7 +11,10 @@
 */
 
 var startingValue = 5;
-
+function myCode() {
+  return startingValue * 2 + 10;
+}
+var result = myCode().toFixed(2);
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 

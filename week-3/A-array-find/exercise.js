@@ -5,11 +5,34 @@
 
 // write your code here
 
-var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
+var names = [
+  "Rakesh",
+  "Antonio",
+  "Alexandra",
+  "Andronicus",
+  "Annam",
+  "Mikey",
+  "Anastasia",
+  "Karim",
+  "Ahmed"
+];
 
 var longNameThatStartsWithA = findLongNameThatStartsWithA(names);
 
-console.log(longNameThatStartsWithA);
+function findLongNameThatStartsWithA(n) {
+  return n.length > 7;
+}
+
+var longName = names.find(findLongNameThatStartsWithA);
+
+function myC() {
+  if (longName[0] === "A") {
+    return "the name is: " + longName;
+  } else {
+    return "No";
+  }
+}
+console.log(myC());
 
 /* EXPECTED OUTPUT */
 // "Alexandra"

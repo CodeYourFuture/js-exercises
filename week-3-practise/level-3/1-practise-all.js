@@ -12,7 +12,7 @@ Passwords must
 - Have numbers (0-9).
 
 Expected Result:
-PasswordValidationResult= [false, false, frue, true, true]
+PasswordValidationResult= [false, false, true, true, true]
 
 LEVEL 2:
 
@@ -45,4 +45,15 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 
-console.log(PasswordValidationResult)
+function myPassword(input) {
+  return (
+    input.length >= 5 &&
+    /[A-Z]/.test(input) &&
+    /[a-z]/.test(input) &&
+    /[0-9]/.test(input) &&
+    /["!", "#", "$", "%", "."]/.test(input)
+  );
+}
+
+var PasswordValidationResult = password.map(myPassword);
+console.log(PasswordValidationResult);
