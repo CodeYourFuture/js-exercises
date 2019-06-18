@@ -12,8 +12,16 @@ var londonLocations = [
   ["Greenwich", "tube", "bus", "river boat"]
 ];
 
-var locationsByBoat;
-
+var locationsByBoat1 = londonLocations.filter(teresa(names));
+var locationsByBoat = locationsByBoat1.map(firstnames(names));
+function teresa(names) {
+  if (names.includes("river boat")) {
+    return names;
+  }
+}
+function firstnames(names) {
+  return names[0];
+}
 console.log(locationsByBoat);
 
 /* EXPECTED OUTPUT

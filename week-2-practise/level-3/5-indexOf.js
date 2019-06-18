@@ -5,8 +5,9 @@
 // - NOT change the original array
 // - return a new array with the replacement value inserted
 
-function replace(arr, valueToReplace, newValue) {
-  return; // complete this statement
+function replace(numbers, valueToReplace, newValue) {
+  numbers.splice(numbers.indexOf(valueToReplace), 1, newValue);
+  return numbers; // complete this statement
 }
 
 /* 
@@ -15,8 +16,8 @@ function replace(arr, valueToReplace, newValue) {
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = replace(arr, 3, 2);
-var newNames = replace(arr, "Ashleigh", "Rares");
+var newNumbers = replace(numbers, 3, 2);
+var newNames = replace(numbers, "Ashleigh", "Rares");
 
 console.log(numbers);
 console.log(newNumbers);

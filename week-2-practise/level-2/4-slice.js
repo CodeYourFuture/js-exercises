@@ -5,7 +5,11 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  if (typeof arr[arr.length - 1] == "string") {
+    return arr.slice(0, index).concat(arr[arr.length - 1]);
+  }
+  return arr.slice(0, index);
+  // complete this statement
 }
 
 /* 

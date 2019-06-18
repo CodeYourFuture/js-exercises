@@ -4,7 +4,11 @@
 //    - each item in `percentages` formatted by your function
 
 var percentages = [1, 23, 92, 18];
-
+function stringPercentage(num) {
+  typeof num === "strings";
+  return num + "%";
+}
+var percentagesFormatted = percentages.map(stringPercentage);
 console.log(percentagesFormatted);
 
 /* 

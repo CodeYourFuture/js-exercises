@@ -9,7 +9,19 @@
 */
 
 function calculateGrade(mark) {
-
+  if (mark >= 80) {
+    return "A";
+  }
+  if ((mark < 80) & (mark > 60)) {
+    // mark<80 could be deleted
+    return "B";
+  }
+  if ((mark <= 60) & (mark >= 50)) {
+    // mark<=60 could be deleted
+    return "C";
+  } else {
+    return "F";
+  }
 }
 
 /* 
@@ -25,7 +37,7 @@ console.log("'" + grade2 + "': " + calculateGrade(grade2));
 console.log("'" + grade3 + "': " + calculateGrade(grade3));
 console.log("'" + grade4 + "': " + calculateGrade(grade4));
 
-  /* 
+/* 
   EXPECTED RESULT
   ---------------
   '49': F

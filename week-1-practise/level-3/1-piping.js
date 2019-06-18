@@ -9,8 +9,11 @@
 
   As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
 */
-
 var startingValue = 5;
+function solution() {
+  return startingValue * 2 + 10;
+}
+var result = solution().toFixed(2);
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
