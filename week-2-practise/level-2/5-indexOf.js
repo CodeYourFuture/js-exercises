@@ -5,7 +5,10 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  var newArr = arr; // i'm going to copy the array
+  var index = newArr.indexOf(valueToRemove); // i'm searching for index to element of array that should be delete.
+  newArr.splice(index, 1); // i'm passing the index and how many elements we should remove.
+  return newArr; //i'm returning the new array with the element removed.
 }
 
 /* 

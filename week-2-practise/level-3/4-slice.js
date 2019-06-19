@@ -4,10 +4,13 @@
 // - return a new array with the replacement value inserted
 // - insert the replacement value at the provided index
 
-function replace(arr, index, value) {
-  return; // complete this statement
-}
 
+function replace(arr, index, value) {
+  var newArr = arr.slice(); // copy new array
+  newArr.splice(index, 1, value); // complete this statement
+  //newArr[index] = value;
+  return newArr;
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
