@@ -13,9 +13,9 @@ var oxygenLevels = [24.2, 11.3, 19.9, 23.1, 29.3, 20.2];
 
 var safePlanetOL; //Complete this statement
 
-console.log(safePlanetOxygenLevel + "%");
+console.log(safePlanetOL + "%");
 
 /*
 EXPECTED OUTPUT
-19.95%
+19.9%
 */
