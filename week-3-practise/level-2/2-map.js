@@ -14,7 +14,12 @@ var attendances = [
   ["Nina", 10]
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+var eligibleStudentNames = attendances.map(check); // TODO: Complete this line.
+function check(value) {
+  if (value[1] >= 8) {
+    return value[0];
+  }
+}
 
 console.log(eligibleStudentNames);
 

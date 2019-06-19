@@ -12,7 +12,12 @@ var londonLocations = [
   ["Greenwich", "tube", "bus", "river boat"]
 ];
 
-var locationsByBoat;
+var locationsByBoat = londonLocations.map(prova);
+function prova(elem) {
+  if (elem.includes("river boat")) {
+    return elem[0];
+  }
+}
 
 console.log(locationsByBoat);
 
