@@ -6,6 +6,9 @@
 */
 
 var codeYourFutureIsGreat = true;
+var mozafarIsCool = false; // new line
+var calculationCorrect = true; // new line
+var moreThan10Students = false; // new line
 
 /* 
   DO NOT EDIT BELOW THIS LINE
