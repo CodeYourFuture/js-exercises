@@ -12,7 +12,7 @@ Passwords must
 - Have numbers (0-9).
 
 Expected Result:
-PasswordValidationResult= [false, false, frue, true, true]
+PasswordValidationResult= [false, false, true, true, true]
 
 LEVEL 2:
 
