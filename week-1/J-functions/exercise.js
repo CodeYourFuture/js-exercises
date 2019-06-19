@@ -10,3 +10,6 @@ console.log(result);
 var result = halve(20);
 
 console.log(result);
+
+var result = halve(10);
+console.log(result);
