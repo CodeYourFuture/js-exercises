@@ -9,6 +9,18 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+arr.forEach(multi);
+
+function multi(value) {
+  if (value % 3 == 0 && value % 5 == 0) {
+    return console.log("FizzBuzz");
+  } else if (value % 3 == 0) {
+    return console.log("Fizz");
+  } else if (value % 5 == 0) {
+    return console.log("Buzz");
+  } else return console.log(value);
+}
+
 /* EXPECTED OUTPUT */
 
 /*
