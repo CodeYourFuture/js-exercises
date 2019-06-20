@@ -32,17 +32,17 @@ var parkAvenueHouse = {
 
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
-  this.firstName;
+  return house.currentOwner.firstName;
 }
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
-  return this.email;
+  return house1.currentOwner.email + " " + house2.currentOwner.email;
 }
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
-  return this.address;
+  return house1.address + " " + house2.address;
 }
 
 /*
