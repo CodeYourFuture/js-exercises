@@ -39,6 +39,14 @@ var writers = [
   },
 ];
 
+var firstnames = writers.map(function (writers) {
+  return writers.firstname;
+}).join(", ");
+
+console.log("Hi, my name is + {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
+console.log("Hi, my name is + {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
+console.log("Hi, my name is + {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
+console.log("Hi, my name is + {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
