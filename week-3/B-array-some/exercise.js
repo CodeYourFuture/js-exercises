@@ -6,7 +6,16 @@
   - Do not edit any of the existing code
 */
 
+function isNull(array) {
+  return array == null;
+}
+
 var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
+var bool = pairsByIndex.some(isNull);
+
+if (bool) {
+  process.exit(1);
+}
 
 // If there is a null value in the array exit the program with the error code
 // https://nodejs.org/api/process.html#process_process_exit_code
@@ -20,5 +29,4 @@ var pairs = pairsByIndex.map(function(indexes) {
   var mentor = mentors[indexes[1]];
   return [student, mentor];
 });
-
 console.log(pairs);
