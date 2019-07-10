@@ -2,8 +2,8 @@
   Conditionals
   ---------------------------------
   Write a function that checks if a student has passed
-  - if the grade is less than 50 then return "fail"
-  - if 50 or higher then return "pass"
+  - if the grade is less than 50 then return "failed"
+  - if 50 or higher then return "passed"
 
 */
 

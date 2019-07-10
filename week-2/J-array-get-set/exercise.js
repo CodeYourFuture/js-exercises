@@ -16,14 +16,16 @@ function last(arr) {
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 2, 3];
-var names = ["Irina", "Ashleigh", "Mozafar"];
+var names = ["Irina", "Ashleigh", "Mozafar", "Joe"];
 
 console.log(first(numbers));
+console.log(last(numbers));
 console.log(last(names));
 
 /* 
   EXPECTED RESULT
   ---------------
   1
-  Mozafar
+  3
+  Joe
 */

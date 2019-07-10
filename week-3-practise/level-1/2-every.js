@@ -31,8 +31,3 @@ if (bush2SafeToEat) {
  Toxic! Leave bush 1 alone"
  Bush 2 is safe to eat from"
 */
-
-/* Hint:
-"Hfr gur rirel shapgvba"
-(decode this at https://rot13.com)
-*/

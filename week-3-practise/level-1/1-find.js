@@ -15,7 +15,8 @@ var safePlanetOL = oxygenLevels.find(perc => perc > 19.5 && perc < 23.5); //Comp
 
 console.log(safePlanetOL + "%");
 
+
 /*
 EXPECTED OUTPUT
-19.95%
+19.9%
 */

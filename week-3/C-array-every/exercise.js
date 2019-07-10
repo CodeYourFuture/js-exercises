@@ -19,4 +19,4 @@ if (groupIsOnlyStudents) {
 
 /* EXPECTED RESULT */
 
-// The group does not contain only studnets
+// The group does not contain only students
