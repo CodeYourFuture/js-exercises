@@ -1,8 +1,11 @@
 /*
 
-You have an object of mentors and their ages below, but the keys are inconsistent. JOSH and JAMIE are uppercase, while james and Mozafar are not. You want to return an array of mentors with the names in uppercase.
+You have an object of mentors and their ages below, but the keys are inconsistent. 
+JOSH and JAMIE are uppercase, while james and Mozafar are not. 
+You want to return an array of mentors with the names in uppercase.
 
-You're going to have to used what we learned at the start of this lesson, and some other JavaScript methods to accomplish this task.
+You're going to have to used what we learned at the start of this lesson, 
+and some other JavaScript methods to accomplish this task.
 
 */
 
@@ -15,9 +18,11 @@ var mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
+var mentorsNames = Object.keys(mentorsAges);
 
-var mentorsNamedCapitalised = ;
+var mentorsNamedCapitalised = mentorsNames.map(elemento =>
+  elemento.toUpperCase()
+);
 
 // ONLY EDIT ABOVE THIS LINE
 
