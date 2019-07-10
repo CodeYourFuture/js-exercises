@@ -1,6 +1,6 @@
 /*
 You are given a list of some London street names.
-We would like to know all of the names which contain 'Lane' their name.
+We would like to know all of the names which contain 'Lane' in their name.
 */
 
 var streetNames = [

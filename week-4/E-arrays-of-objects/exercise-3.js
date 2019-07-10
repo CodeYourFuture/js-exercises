@@ -10,7 +10,7 @@ all the restaurant names which have the required number of seats available at th
 2) Define a method findRestaurantServingDish which takes a dish name in parameter and returns
 all the restaurant names serving this dish.
 
-3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (centre, west),
+3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west),
 and returns the number of restaurants in this area.
 */
 
