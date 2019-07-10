@@ -42,13 +42,55 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-
+var PreviousPassword = [
+  "fhD8!yrjj",
+  "ttkTu.wer3",
+  "dvyyeyY!5",
+  "qwbfj76%",
+  "tytT3729."
+];
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 
-var PasswordValidationResult;
+function controllLevell1(arr) {
+  var reg = /(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])/;
+  var z = arr.map(elem => {
+    if (elem.length >= 5 && reg.test(elem)) {
+      return true;
+    }
+    return false;
+  });
+  return z;
+}
+var PasswordValidationResult = controllLevell1(password);
+console.log(PasswordValidationResult);
 
-var takeOneElem = password.forEach(function(string1) {
-  string1.includes;
-});
+function controllLevell2(arr) {
+  var reg = /(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[!$%#.])/;
 
+  var z = arr.map(elem => {
+    if (elem.length >= 5 && reg.test(elem)) {
+      return true;
+    }
+    return false;
+  });
+  return z;
+}
+var PasswordValidationResult = controllLevell2(password);
+console.log(PasswordValidationResult);
+
+function controllLevell3(arr) {
+  var reg = /(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[!$%#.])/;
+  var z = arr.map(elem => {
+    if (
+      elem.length >= 5 &&
+      reg.test(elem) &&
+      !PreviousPassword.includes(elem)
+    ) {
+      return true;
+    }
+    return false;
+  });
+  return z;
+}
+var PasswordValidationResult = controllLevell3(password);
 console.log(PasswordValidationResult);
