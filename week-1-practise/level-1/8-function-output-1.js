@@ -6,7 +6,7 @@ var result = getNumber();
 console.log(result);
 
 // Answer these questions:
-// - What does this program do?
-// - How many parameters does the function take?
-// - What is the function name?
-// - Where is the function called? with what parameters?
+// - What does this program do? Math.random () * 10 calls a random number between 0 and 9 
+// - How many parameters does the function take? 1
+// - What is the function name? getNumber
+// - Where is the function called? with what parameters? getNUmber, no parameters

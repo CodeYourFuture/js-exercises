@@ -11,7 +11,11 @@
 */
 
 var startingValue = 5;
+function allInOne(num) {
+  return parseFloat(num * 2 + 10).toFixed(2);
+}
 
+var result = allInOne(startingValue);
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 

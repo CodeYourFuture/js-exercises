@@ -8,7 +8,15 @@
 
 var name = "Daniel";
 var danielsRole = "mentor";
+function result(str, str1) {
+  if (str1 == "mentor") {
+    return "Hi, I'm " + str + ", I'm a " + str1 + ".";
+  } else {
+    return "Hi, I'm" + name + ", I'm a student.";
+  }
+}
 
+console.log(result(name, danielsRole));
 /* 
 EXPECTED RESULT
 ---------------

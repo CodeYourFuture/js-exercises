@@ -32,11 +32,11 @@ There are some other different types of statements that we will learn in the com
 
 You quickly find out the result of an expression by running node in a terminal window.
 
-* Open a terminal window
-* Run the command `node`
-* _You have now opened a node console (also called a REPL)_
-* Type an expression and press enter
-* To exit the console type Ctrl+C or type the command `.exit`
+- Open a terminal window
+- Run the command `node`
+- _You have now opened a node console (also called a REPL)_
+- Type an expression and press enter
+- To exit the console type Ctrl+C or type the command `.exit`
 
 Example from inside a terminal window:
 
@@ -59,8 +59,8 @@ $
 
 > Notice how when we execute an expression the value it produces is printed below it. When we execute a statement, we see `undefined` printed below. This is because statements don't produce values like expressions, they _do something_.
 
-* Write some more expressions in the node console
-* Assign some expressions to variables
-* Check the value of the variables
+- Write some more expressions in the node console
+- Assign some expressions to variables
+- Check the value of the variables
 
 Further reading on using the node console: https://hackernoon.com/know-node-repl-better-dbd15bca0af6
