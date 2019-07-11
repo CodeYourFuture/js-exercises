@@ -33,5 +33,18 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
+function displayMess() {
+  fetch("https://codeyourfuture.herokuapp.com/api/messages")
+    .then(response => {
+      return response.json();
+    })
+    .then(res => {
+      var arr = [];
+      res.forEach(t => {
+        arr.push(t.content);
+      });
+      document.getElementById("message-list").textContent = arr.join(" ");
+    });
+}
+setInterval(displayMess, 2000);

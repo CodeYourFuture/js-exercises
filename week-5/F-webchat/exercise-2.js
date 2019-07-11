@@ -25,5 +25,31 @@ on the submit button. Then check the following:
 2) When you refresh the page in your browser, you should be able to see your new message in the message list.
 */
 
-
 // Write your code here
+
+function createMess(mess) {
+  fetch("https://codeyourfuture.herokuapp.com/api/messages", {
+    body: JSON.stringify(mess),
+    method: "POST",
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+    .then(response => {
+      return response.json();
+    })
+    .then(result => {
+      // alert("Added message!");
+    });
+}
+
+function submitMess() {
+  var mess = document.querySelector("#message-input").value;
+  if (mess) {
+    createMess({ content: mess });
+    document.querySelector("#message-input").value = "";
+  }
+}
+
+var submitBtn = document.querySelector("#submit");
+submitBtn.addEventListener("click", submitMess);
