@@ -12,7 +12,16 @@ var londonLocations = [
   ["Greenwich", "tube", "bus", "river boat"]
 ];
 
-var locationsByBoat;
+function findLoc(string) {
+  return string[0];
+}
+
+function filterLoc(string) {
+  return string.includes("river boat");
+}
+
+var filteredLocations = londonLocations.filter(filterLoc);
+var locationsByBoat = filteredLocations.map(findLoc);
 
 console.log(locationsByBoat);
 
