@@ -42,6 +42,6 @@ var writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
-writers.forEach(key => {
-  return key.alive == true ? console.log(key.firstName) : "no";
+writers.map(keyNew => {
+  return keyNew.alive == true ? console.log(writers[0].firstName) : "no";
 });
