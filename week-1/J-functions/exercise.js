@@ -1,7 +1,7 @@
-function halve(number) {
-  // complete the function here
+function halve(num) {
+  return num / a;
 }
+var a = 2;
+var totalHalve = halve(12);
 
-var result = halve(12);
-
-console.log(result);
+console.log(totalHalve);

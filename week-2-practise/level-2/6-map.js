@@ -5,7 +5,10 @@
 
 var percentages = [1, 23, 92, 18];
 
-console.log(percentagesFormatted);
+percentages.forEach(a => console.log(a + "%"));
+
+//percentagesFormatted = percentages(percentages);
+//console.log(percentagesFormatted);
 
 /* 
   EXPECTED RESULT

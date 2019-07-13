@@ -5,7 +5,7 @@
   The variable `lastFive` should contain the last five items of `everyone`
 */
 
-var everyone = [
+var everyOne = [
   "Daniel",
   "Irina",
   "Rares",
@@ -15,15 +15,15 @@ var everyone = [
   "Swathi"
 ];
 
-var firstFive; // complete this statement
-var lastFive; // complete this statement
+var firstFive = everyOne.slice(0, 5); // complete this statement
+var lastFive = everyOne.slice(2); // complete this statement
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-
 console.log(firstFive);
 console.log(lastFive);
+//console.log(lastFive.slice());
 
 /* 
   EXPECTED RESULT

@@ -11,8 +11,11 @@ var londonLocations = [
   ["Tower bridge", "tube", "bus"],
   ["Greenwich", "tube", "bus", "river boat"]
 ];
-
-var locationsByBoat;
+var locationsByBoat = londonLocations
+  .map(function(area) {
+    if (area.includes("river boat")) return area[0];
+  })
+  .filter(area => area !== undefined);
 
 console.log(locationsByBoat);
 

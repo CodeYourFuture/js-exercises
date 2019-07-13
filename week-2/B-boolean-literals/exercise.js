@@ -7,6 +7,13 @@
 
 var codeYourFutureIsGreat = true;
 
+var mozafarIsCool = false;
+
+var add = 1 + 1;
+var sum = true;
+var calculationCorrect = sum;
+var moreThan10Students = false;
+
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

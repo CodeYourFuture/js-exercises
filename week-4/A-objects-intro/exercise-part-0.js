@@ -1,4 +1,5 @@
-/*
+/*1.my computer is mini.
+2. my computer has a black keyboard.
 
 Describe your own laptop as a JavaScript object
 

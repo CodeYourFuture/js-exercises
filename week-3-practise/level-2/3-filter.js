@@ -25,7 +25,11 @@ var voyagers = [
   "Archer family"
 ];
 
-var colonisers; // Complete this statement
+var colonisers = voyagers.filter(function(a) {
+  return a.charAt(0) === "A";
+});
+
+//var colonisers = voyagers.filter(a => a.charAt(0) === "A"); // Complete this statement
 
 console.log(colonisers);
 

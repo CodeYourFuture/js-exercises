@@ -6,9 +6,16 @@
   They have also decided that they should add a 1% fee to all foreign transactions
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
-
-function convertToUSD(price) {}
-function convertToBRL(price) {}
+function addTax(price) {
+  var percentage = price * 0.01;
+  return price + percentage;
+}
+function convertToUSD(price) {
+  return addTax(price * 1.4).toFixed(2);
+}
+function convertToBRL(price) {
+  return addTax(price * 4.9).toFixed(2);
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
@@ -19,5 +26,5 @@ var priceInUSD = convertToUSD(price);
 var priceInBRL = convertToBRL(price);
 
 console.log("Product: " + product);
-console.log("Price in USD: " + priceInUSD);
-console.log("Price in BRL: " + priceInBRL);
+console.log("Price in USD $: " + priceInUSD);
+console.log("Price in BRL R$: " + priceInBRL);

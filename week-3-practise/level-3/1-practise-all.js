@@ -5,11 +5,13 @@
 
 LEVEL 1: 
 
+
 Passwords must 
 - Have at least 5 characters, 
 - Have English uppercase letters (A-Z),
 - Have English lowercase letters (a-z),
 - Have numbers (0-9).
+
 
 Expected Result:
 PasswordValidationResult= [false, false, frue, true, true]
@@ -45,4 +47,14 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 
-console.log(PasswordValidationResult)
+var PasswordValidationResult = password.map(passkey =>
+  passkey.length >= 5 &&
+  passkey.match(/[A-Z]/g) &&
+  passkey.match(/[a-z]/g) &&
+  passkey.match(/[0-9]/g) &&
+  passkey !== password
+    ? true
+    : false
+);
+
+console.log(PasswordValidationResult);
