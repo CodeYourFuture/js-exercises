@@ -1,4 +1,6 @@
-// Write your function here
+function createGreeting(bb) {
+  return "Hello " + bb;
+} // Write your function here
 
 var greeting = createGreeting("Daniel");
 

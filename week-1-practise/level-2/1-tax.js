@@ -2,10 +2,12 @@
   SALES TAX
   =========
   A business requires a program that calculates how much sales tax to charge
-  Sales tax is 20% of the price of the product
+  Sales tax is 20% of the price of the product // given = 0.2,,,,price  required=sales tax // solution =
 */
 
-function calculateSalesTax() {}
+calculateSalesTax = price =>
+  // bdmas
+  (price * 20) / 100;
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */

@@ -1,3 +1,3 @@
-// Start by creating a variable `greeting`
+var greeting = "Hello Everybody!!!!"; // Start by creating a variable `greeting`
 
 console.log(greeting);

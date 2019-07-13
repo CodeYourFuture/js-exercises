@@ -1,6 +1,5 @@
-function concatenate(firstWord, secondWord, thirdWord) {
-    // Write the body of this function to concatenate three words together
-}
+concatenate = (firstWord, secondWord, thirdWord, four, five) =>
+  firstWord.concat(secondWord.concat(thirdWord.concat(four.concat(five))));
 
-var result = concatenate('code', 'your', 'future');
-console.log(result); // expected result = "codeyourfuture"
+var result = concatenate("code ", "your ", "future ", "by milley ", "from cyf");
+console.log(result); // expected result = "code your future by milley from cyf"
