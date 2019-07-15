@@ -5,11 +5,12 @@
 */
 
 function first(arr) {
-  return; // complete this statement
+  //var milley = arr[0];
+  return arr[0]; // complete this statement
 }
 
 function last(arr) {
-  return; // complete this statement
+  return arr[arr.length - 1]; // complete this statement
 }
 
 /* 
