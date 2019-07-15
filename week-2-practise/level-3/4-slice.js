@@ -3,19 +3,19 @@
 // - NOT change the original array
 // - return a new array with the replacement value inserted
 // - insert the replacement value at the provided index
-
-function replace(arr, index, value) {
-  return; // complete this statement
-}
-
-/* 
+function replace1(arr, index, value) {
+  var r = arr.slice(0, index);
+  r.push(value);
+  var y = arr.slice(index + 1);
+  return r.concat(y);
+} /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 3, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-var newNumbers = replace(arr, 1, 2);
-var newNames = replace(arr, 2, "Rares");
+var newNumbers = replace1(numbers, 1, 2);
+var newNames = replace1(names, 2, "Rares");
 
 console.log(numbers);
 console.log(newNumbers);

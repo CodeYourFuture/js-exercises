@@ -1,4 +1,6 @@
-// An array of mentor names has been provided to you, as well as a function to tidy up strings.
+/* An array of mentor names has been provided to you,
+ as well as a function to tidy up strings.
+ */
 // Declare a  new array (`mentorsTidy`) containing:
 // - every item from `mentors` run through the `tidyUpString` function
 // TIP: Use the .map() method
@@ -11,7 +13,7 @@ function tidyUpString(str) {
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidy; // ONLY EDIT THIS LINE
+var mentorsTidy = mentors.map(tidyUpString);
 
 console.log(mentorsTidy);
 
