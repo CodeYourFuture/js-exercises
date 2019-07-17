@@ -14,10 +14,11 @@
   EXPECTED RESULT: The #exercise1 element has textContent = "YOUR NAME" when
   the button is clicked
 */
-document.querySelector('#button1').addEventListener('click', exercise1)
+document.querySelector("#button1").addEventListener("click", exercise1);
 
 function exercise1() {
   // Write your implementation here
+  document.querySelector("#exercise1").innerText = "Saeen";
 }
 
 /*
@@ -34,10 +35,11 @@ function exercise1() {
   EXPECTED RESULT: The #exercise2 element has textContent = "Hello from the
   function caller"
 */
-functionThatCallsBack(exercise2)
+functionThatCallsBack(exercise2);
 
 function exercise2(result) {
   // Write your implementation here
+  document.querySelector("#exercise2").innerText = result;
 }
 
 /*
@@ -58,22 +60,27 @@ function exercise2(result) {
 
 function exercise3(callback) {
   // Write your implementation here
-
+  callback("Hello from the callback");
   // Write your explanation here
+  // ANSWER: The exercise3 function is defined with a parameter that could be anything and it called
+  // with a callback function which has a text as parameter. In the body of exercise function, it
+  // calls the callback function with a specific text (Hello from the callback). So according to the
+  // the callback function, it gets the element with id exercise3 and according to the body of exercise3
+  // function, it put the specific text as innerText of the element that is got before.
 }
 
-// 
+//
 // -------------------------------------
-// 
+//
 // DON'T EDIT THE FUNCTIONS BELOW!
 // THEY ARE PROVIDED FOR YOU
 //
 // -------------------------------------
 //
 function functionThatCallsBack(callback) {
-  callback('Hello from the function caller')
+  callback("Hello from the function caller");
 }
 
-exercise3((text) => {
-  document.querySelector('#exercise3').innerText = text
-})
+exercise3(text => {
+  document.querySelector("#exercise3").innerText = text;
+});
