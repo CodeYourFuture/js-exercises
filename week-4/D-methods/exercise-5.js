@@ -17,10 +17,37 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
+        this.insertedAmount = amount;
     },
     getCoffee: function(coffee) {
-
+        switch(coffee){
+            case "cappuccino":
+                if(this.insertedAmount >= this.prices.cappuccino){
+                    return 'Please take your cappuccino';
+                }
+                else{
+                    return "Sorry you don't have enough money for a cappuccino";
+                }
+                break;
+            case "blackCoffee":
+                if(this.insertedAmount >= this.prices.blackCoffee){
+                    return 'Please take your blackCoffee';
+                }
+                else{
+                    return "Sorry you don't have enough money for a blackCoffee";
+                }
+                break;
+            case "flatWhite":
+                if(this.insertedAmount >= this.prices.flatWhite){
+                    return 'Please take your flatWhite';
+                }
+                else{
+                    return "Sorry you don't have enough money for a flatWhite";
+                }
+                break;
+            default:
+                break;
+        }
     }
 };
 

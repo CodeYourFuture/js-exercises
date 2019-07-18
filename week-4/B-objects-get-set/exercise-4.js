@@ -11,7 +11,8 @@ var dog = {
 
 
 
-// WRITE CODE ABOVE THIS LINE
+dog.name = 'Rex';
+dog.wantsToPlay = true;
 
 
 //DO NOT MODIFY BELOW

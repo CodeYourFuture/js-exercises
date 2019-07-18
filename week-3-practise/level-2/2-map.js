@@ -14,7 +14,9 @@ var attendances = [
   ["Nina", 10]
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+var eligibleStudentNames = attendances.map(function aprueban(arr){if(arr[1]>=8){return arr[0];}}).filter(dato => dato != undefined);; // TODO: Complete this line.
+
+eligibleStudentNames;
 
 console.log(eligibleStudentNames);
 

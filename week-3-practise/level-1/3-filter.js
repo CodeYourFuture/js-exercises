@@ -140,7 +140,7 @@ var streetNames = [
     "Widegate Street", "Willoughby Highwalk", "Wilson Street", "Wine Office Court",
     "Wood Street", "Wormwood Street", "Wrestler's Court"];
 
-var laneNames;  // Complete this line
+var laneNames = streetNames.filter(word => word.search("Lane")>0);  // Complete this line
 
 console.log(laneNames);
 console.log(laneNames.length);

@@ -4,13 +4,14 @@
 //    - every resulting item run through the `captialise` function
 
 function tidyUpString(str) {
-  return str
-    .trim()
-    .toLowerCase()
-    .replace("/", "");
+    str = str.trim();
+    str = str.toLowerCase();
+    str = str.replace("/", "");
+  return str;
 }
 
 function captialise(str) {
+  str = tidyUpString(str).slic
   // complete this function
 }
 

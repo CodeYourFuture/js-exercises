@@ -4,11 +4,13 @@
 // - return a new array with the item removed
 // - remove the item at the specified index
 
-function remove(arr, index) {
-  return; // complete this statement
+function remove(arr, index){
+  var arr_copy = arr.slice();
+  arr_copy.splice( index, 1);
+  return arr_copy; // complete this statement
 }
 
-/* 
+/*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 2, 3];
@@ -20,7 +22,7 @@ var newNames = remove(names, 1);
 console.log(newNumbers);
 console.log(newNames);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [1, 2]

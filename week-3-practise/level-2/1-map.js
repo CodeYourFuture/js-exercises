@@ -12,7 +12,14 @@ var londonLocations = [
   ["Greenwich", "tube", "bus", "river boat"]
 ];
 
-var locationsByBoat;
+function buscar(arr){
+  if(arr.search("Lane")>0){
+	return arr[0];
+  }
+} 
+
+var locationsByBoat = londonLocations.map(element => element).filter(element => element.indexOf("river boat") > -1);
+locationsByBoat = locationsByBoat.map(element => element[0]);
 
 console.log(locationsByBoat);
 

@@ -4,13 +4,16 @@
 
 var nums = [10, 1, 5, 29, 100];
 var nums2 = [11, 6, 3, 29, 12];
-var sortedNums; // complete this statement
+var sortedNums = nums.concat(nums2); // complete this statement
+
+sortedNums = sortedNums.sort((a,b) => a-b);
 
 console.log(sortedNums);
 
 // 2. Using code, show that the variables nums and nums2 were not changed
-
-/* 
+console.log(nums);
+console.log(nums2);
+/*
   EXPECTED RESULT
   ---------------
   [ 1, 3, 5, 6, 10, 11, 12, 29, 29, 100 ]

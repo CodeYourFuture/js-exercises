@@ -6,7 +6,40 @@
 
 var excludedNums = [6, 14, 91, 111];
 
-function validate(num) {}
+function isNumber(num){
+   if(typeof num === 'number'){
+      return true;
+   }
+   else{
+      return false;
+   }
+}
+
+function isInteger(num){
+  return Number.isInteger(num);
+}
+
+function numArray(num){
+  var indice = excludedNums.indexOf(num);
+  if(indice === -1){
+     return true;
+   }
+   else{ return false;
+   }
+}
+
+function validate(num) {
+  var valor1 = isNumber(num);
+  var valor2 = isInteger(num);
+  var valor3 = numArray(num);
+
+   if(valor1 === true && valor2 === true && valor3 === true){
+	return true;
+   }
+   else{
+      return false;
+   }
+}
 
 console.log(validate(6));
 console.log(validate(10.5));

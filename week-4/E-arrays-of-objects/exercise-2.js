@@ -39,18 +39,32 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+function findCityWhithFerry(desti){
+    for(let i=0; i < desti.transportations.length; i++){
+        if(desti.transportations[i] === "ferry"){
+            return desti.transportations;
+        }
+    }
+}
 
-var destinationNamesWithin500Kms = // Complete here
+function findCityWhithTrain(desti){
+    for(let i=0; i < desti.transportations.length; i++){
+        if(desti.transportations[i] === "train" && desti.distanceKms > 300){
+            return desti.transportations;
+        }
+    }
+}
 
-var destinationNameReachableByFerry = // Complete here
+var destinationNamesWithin500Kms = travelDestinations.filter(name => name.distanceKms < 500).map(obj => obj.destinationName);// Complete here 
 
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+var destinationNameReachableByFerry = travelDestinations.filter(findCityWhithFerry).map(obj => obj.destinationName);// Complete here
+
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(findCityWhithTrain).map(obj => obj.destinationName) ;// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
-
 console.log("Question 1) Expected result: Edinburgh,Dublin, actual result: " + destinationNamesWithin500Kms);
 console.log("Question 2) Expected result: Dublin, actual result: " + destinationNameReachableByFerry);
 console.log("Question 3) Expected result: London,Paris, actual result: " + destinationNamesMoreThan300KmsAwayByTrain);

@@ -25,7 +25,7 @@ var voyagers = [
   "Archer family"
 ];
 
-var colonisers; // Complete this statement
+var colonisers = voyagers.filter(word => word.search("family")>0).filter(word => word[0] === 'A'); // Complete this statement
 
 console.log(colonisers);
 
