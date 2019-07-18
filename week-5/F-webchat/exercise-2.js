@@ -25,5 +25,16 @@ on the submit button. Then check the following:
 2) When you refresh the page in your browser, you should be able to see your new message in the message list.
 */
 
-
 // Write your code here
+
+document.getElementById("submit").addEventListener("click", grabText);
+function grabText() {
+  var testoMessaggio = document.getElementById("message-input").value;
+  //   alert("testo: " + testoMessaggio);
+
+  fetch("https://codeyourfuture.herokuapp.com/api/messages", {
+    method: "post",
+    headers: new Headers({ "Content-Type": "application/json" }),
+    body: JSON.stringify({ content: testoMessaggio })
+  });
+}

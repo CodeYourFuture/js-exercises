@@ -33,5 +33,19 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
+setInterval(() => {
+  fetch("https://codeyourfuture.herokuapp.com/api/messages") // take json
+    .then(objResponse => objResponse.json()) // if success transform json in JS object
+    .then(mess => {
+      var messaggi = mess.map(
+        ele => ele.content + " &nbsp&nbsp" + ele.datetime
+      ); // take new array with formated text mess + space + data
+      var testo = "";
+      for (i = 0; i < messaggi.length; i++) {
+        // cycling new array
+        testo += messaggi[i] + "<br>"; // take every element in a string
+      }
+      document.getElementById("message-list").innerHTML = testo; // inject text in to div
+    });
+}, 2000);
