@@ -33,5 +33,25 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
+// let myButton = document.querySelector("#submit");
+// myButton.addEventListener("click", sumbit);
+
+// function sumbit() {
+//   let reply =
+// }
 
 // Write your code here
+function displayMessage() {
+  fetch("https://codeyourfuture.herokuapp.com/api/messages")
+    .then(responds => {
+      return responds.text();
+    })
+    .then(data => {
+      document.querySelector("#message-list").innerHTML = data;
+    })
+    .catch(error => {
+      console.log("Error found:", error);
+    });
+}
+
+setInterval(displayMessage, 2000);

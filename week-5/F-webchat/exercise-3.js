@@ -11,6 +11,7 @@ The first parameter is a callback function, the second parameter T is a time in 
 For more details, check the doc: https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 
 
+
 =====================
 setInterval example
 =====================
@@ -30,10 +31,11 @@ Use the above example to get familiar with setInterval function.
 For example, print your name every 2 seconds.
 */
 
-
 // Write your code here
-
-
+function alertName() {
+  alert("Ezekiel Matomi");
+}
+//setInterval(alertName, 2000);
 /*
 ========
 Task 4
@@ -42,4 +44,3 @@ Task 4
 Use the setInterval function to reload automatically the messages of your webchat every 2 seconds.
 The code responsible to show the messages in the page is in exercise-1.js, so you will need to write your code there :-)
 */
-

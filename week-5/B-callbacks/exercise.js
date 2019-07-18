@@ -13,10 +13,16 @@
 
   EXPECTED RESULT: The #exercise1 element has textContent = "YOUR NAME" when
   the button is clicked
-*/
-document.querySelector('#button1').addEventListener('click', exercise1)
+// */
+let myButton = document.querySelector("#button1");
+myButton.addEventListener("click", exercise1);
+let h3 = document.querySelectorAll("h3");
 
 function exercise1() {
+  let addText = (document.querySelector("#exercise1").innerText =
+    "Ezekiel Matomi");
+
+  h3[0].appendChild(addText);
   // Write your implementation here
 }
 
@@ -32,14 +38,24 @@ function exercise1() {
   element
 
   EXPECTED RESULT: The #exercise2 element has textContent = "Hello from the
-  function caller"
-*/
-functionThatCallsBack(exercise2)
+  function caller" */
+// let myButton2 = document.querySelector("#button2");
+// myButton2.addEventListener("click", functionThatCallsBack);
+// let addContent = document.querySelectorAll("h3");
+
+functionThatCallsBack(exercise2);
 
 function exercise2(result) {
+  let text = "Hello from the function caller";
+  result = text;
+
+  document.querySelector("#exercise2").innerHTML = result;
+
+  // addContent[1].appendChild(result);
   // Write your implementation here
 }
 
+// Write your implementation here
 /*
   EXERCISE 3
   =======
@@ -55,25 +71,26 @@ function exercise2(result) {
   Can you explain why we get this result? Write down your explanation in a
   comment below (Hint: look below to see where exercise3 is called)
 */
+//let myButton3 = document.querySelector("#exercise3");
+//myButton3.addEventListener("click", functionThatCallBack);
 
+// Write your implementation here
+// Write your explanation here
 function exercise3(callback) {
-  // Write your implementation here
-
-  // Write your explanation here
+  callback("Hello from the callback");
 }
-
-// 
+//
 // -------------------------------------
-// 
+//
 // DON'T EDIT THE FUNCTIONS BELOW!
 // THEY ARE PROVIDED FOR YOU
 //
 // -------------------------------------
 //
 function functionThatCallsBack(callback) {
-  callback('Hello from the function caller')
+  callback("Hello from the function caller");
 }
 
-exercise3((text) => {
-  document.querySelector('#exercise3').innerText = text
-})
+exercise3(text => {
+  document.querySelector("#exercise3").innerText = text;
+});
