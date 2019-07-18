@@ -20,7 +20,7 @@ var coffeeMachine = {
     this.insertedAmount = amount;
   },
   getCoffee: function(coffee) {
-    if (coffeeMachine.prices[coffee] <= coffeeMachine.insertedAmount) {
+    if (coffeeMachine.insertedAmount - coffeeMachine.prices[coffee] >= 0) {
       return "Please take your " + coffee;
     } else {
       return "Sorry you don't have enough money for a " + coffee;

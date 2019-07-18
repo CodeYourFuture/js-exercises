@@ -14,24 +14,6 @@ API: https://codeyourfuture.herokuapp.com/api/messages
 Request Body: { "content": "some text" }
 */
 
-document.getElementById("submit").addEventListener("click", () => {
-  var requestBody = {
-    content: document.getElementById("message-input").value
-  };
-
-  fetch("https://codeyourfuture.herokuapp.com/api/messages", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(requestBody)
-  })
-    .then(res => {
-      return res.json();
-    })
-    .then(() => {
-      document.querySelector("#message-input").value = "";
-    });
-});
-
 // /*
 // ===============
 // Expected result
@@ -45,3 +27,21 @@ document.getElementById("submit").addEventListener("click", () => {
 // */
 
 // // Write your code here
+
+document.getElementById("submit").addEventListener("click", () => {
+  var requestBody = {
+    content: document.getElementById("message-input").value
+  };
+
+  fetch("https://codeyourfuture.herokuapp.com/api/messages", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(requestBody)
+  })
+    .then(res => {
+      return res.text();
+    })
+    .then(() => {
+      document.querySelector("#message-input").value = "";
+    });
+});
