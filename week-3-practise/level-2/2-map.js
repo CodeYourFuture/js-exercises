@@ -14,7 +14,18 @@ var attendances = [
   ["Nina", 10]
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+var eligibleStudentNames = attendances.filter(milley).map(ferhan);
+//var eligibleStudentNames1 = eligibleStudentNames.map(ferhan);
+
+function milley(name) {
+  if (name[1] >= 8) {
+    return name;
+  }
+}
+// TODO: Complete this line.
+function ferhan(name) {
+  return name[0];
+}
 
 console.log(eligibleStudentNames);
 

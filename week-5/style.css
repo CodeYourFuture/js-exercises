@@ -1,0 +1,11 @@
+div.container h1 {
+  color: red;
+}
+
+div.container > div.card {
+  border: 1px solid blue;
+}
+
+div.container > div.card > img {
+  width: 100px;
+}

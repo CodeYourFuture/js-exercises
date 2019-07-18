@@ -2,8 +2,24 @@
    This program should check if each passwords in the array ("password[]") 
    contains valid Password (see below for password criterias) and return 
    new array ("PasswordValidationResult[]") with True/False booleans.
+*/
+var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
+var password1 = password.map(pass => pass);
+function milley(pass) {
+  if (
+    pass.length >= 5 &&
+    /[A-Z]/.test(pass) && // if has uppercase
+    /[a-z]/.test(pass) && //if has lowercase
+    /\d/.test(pass) //if has number 0-9
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-LEVEL 1: 
+//console.log(password1);
+/*LEVEL 1: 
 
 Passwords must 
 - Have at least 5 characters, 
@@ -12,9 +28,26 @@ Passwords must
 - Have numbers (0-9).
 
 Expected Result:
-PasswordValidationResult= [false, false, frue, true, true]
+PasswordValidationResult= [false, false, true, true, true]
+*/
+var password1 = password.map(milley);
+function milley(pass) {
+  if (
+    /[!#$%\.]/.test(pass) &&
+    pass.length >= 5 &&
+    /[A-Z]/.test(pass) && // if has uppercase
+    /[a-z]/.test(pass) && //if has lowercase
+    /\d/.test(pass)
+  ) {
+    return true;
+  } else {
+    return false; //if has number 0-9
+  }
+}
 
-LEVEL 2:
+console.log(password1);
+
+/*LEVEL 2:
 
 Passwords must 
 - Have at least 5 characters.
@@ -42,7 +75,3 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-
-var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
-
-console.log(PasswordValidationResult)

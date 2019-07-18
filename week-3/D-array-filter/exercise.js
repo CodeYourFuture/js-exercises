@@ -8,10 +8,15 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(bibi);
+function bibi(arr) {
+  return typeof arr == Array && arr.length == 2;
 
-var students = ["Islam", "Lesley", "Harun", "Rukmini"];
-var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+  // Complete this statement
+}
+
+var students = ["Islam", "Lesley", "Harun"]; //, "Rukmini"
+var mentors = ["Daniel", "Irina", "Mozafar"]; //"Luke"
 
 var pairs = pairsByIndex.map(function(indexes) {
   var student = students[indexes[0]];

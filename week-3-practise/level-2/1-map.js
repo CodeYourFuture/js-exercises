@@ -11,11 +11,18 @@ var londonLocations = [
   ["Tower bridge", "tube", "bus"],
   ["Greenwich", "tube", "bus", "river boat"]
 ];
+var locationsByBoat1 = londonLocations
+  .filter(ter => ter.includes("river boat"))
+  .map(riv => riv[0]);
+//var locationsByBoat = locationsByBoat1.map(river);
+// function te(febeney) {
+//   if (febeney.includes("river boat")) {
+//     return febeney;
+//   }
+// }
 
-var locationsByBoat;
-
-console.log(locationsByBoat);
-
+console.log(locationsByBoat1);
+//console.log(locationsByBoat1[0]);
 /* EXPECTED OUTPUT
 ["London bridge", "Greenwich"]
 */

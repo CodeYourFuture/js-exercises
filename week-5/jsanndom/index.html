@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>JavaScript and the Document Object Model</title>
+  </head>
+
+  <body>
+    <div id="page">
+      <div id="header">
+        <h1 id="title">Page title</h1>
+      </div>
+      <div id="content">
+        <h2>Content title</h2>
+        <p>Some copy goes here</p>
+        <p>More copy goes here</p>
+      </div>
+    </div>
+    <script>
+      var firstChi = document.getElementById("content").firstChild;
+      var lastChi = document.getElementById("content").lastChild;
+      var nextSibli = document.getElementById("header").nextSibling;
+      var previousSibli = document.getElementById("content").previousSibling;
+      var parentNo = document.getElementById("title").parentNode;
+      var childNo = document.body.childNodes;
+    </script>
+  </body>
+</html>

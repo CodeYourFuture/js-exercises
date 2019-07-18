@@ -23,8 +23,9 @@ in the HTML element with the id "message-list". Use the following API to get the
 
 HTTP Verb: GET
 API: https://codeyourfuture.herokuapp.com/api/messages
+*/
 
-
+/*
 ===============
 Expected result
 ===============
@@ -33,5 +34,11 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
+
+fetch("https://codeyourfuture.herokuapp.com/api/messages")
+  .then(response => response.text())
+  .then(function(mes) {
+    document.querySelector("#message-list").innerHTML = mes;
+  })
+  .catch(er => console.log(er));

@@ -9,6 +9,19 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+var milley = arr.map(fun);
+function fun(g) {
+  if (g % 3 == 0 && g % 5 == 0) {
+    return "FizzBuzz";
+  } else if (g % 3 == 0) {
+    return "Fizz";
+  } else if (g % 5 == 0) {
+    return "Buzz";
+  } else {
+    return g;
+  }
+}
+console.log(milley);
 /* EXPECTED OUTPUT */
 
 /*

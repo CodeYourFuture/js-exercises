@@ -6,7 +6,7 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+
 
 var writers = [
   {
@@ -36,9 +36,78 @@ var writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  },
+  }
 ];
+("Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}.");
 
-/*
-If you want an extra challenge, only `console.log()` the writers that are alive.
+var milley = writers.map(
+  obj =>
+    "Hi, my name is " +
+    obj.firstName +
+    " " +
+    obj.lastName +
+    ". I am " +
+    obj.age +
+    " years old,and work as a " +
+    obj.occupation
+);
+console.log(milley);
+
+//If you want an extra challenge, only `console.log()` the writers that are alive.
+
+//var live = writers.filter(obj => obj.alive === true).map(obj => obj.firstName);
+console.log(
+  writers.filter(obj => obj.alive === true).map(obj => obj.firstName)
+);
+
+function aliasGen(firstname, lastname) {
+  var milley = firstname.charAt(0);
+  var jibran = lastname.charAt(0);
+
+  if (/[A-Z]/.test(milley) && /[A-Z]/.test(jibran)) {
+    return firstName.milley + " " + surName.jibran;
+  } else if (/[a-z]/.test(milley) && /[a-z]/.test(jibran)) {
+    milley = milley.toUpperCase();
+    jibran = jibran.toUpperCase();
+    return firstName.milley + " " + surName.jibran;
+  } else {
+    return "Your name must start with a letter from A - Z.";
+  }
+}
+var firstName = {
+  A: "Alpha",
+  B: "Beta",
+  C: "Cache",
+  D: "millgh",
+  E: "hiii",
+  M: "Malware"
+};
+var surName = { A: "Analogue", B: "Bomb", C: "Catalyst", M: "Mountain" };
+var millleyeye = aliasGen("Mike", "Millington");
+console.log(millleyeye);
 */
+function aliasGen(firstname, lastname) {
+  var milley = firstname.charAt(0);
+  var jibran = lastname.charAt(0);
+
+  if (/[A-Z]/.test(milley) && /[A-Z]/.test(jibran)) {
+    return firstName[milley] + " " + surName[jibran];
+  } else if (/[a-z]/.test(milley) && /[a-z]/.test(jibran)) {
+    milley = milley.toUpperCase();
+    jibran = jibran.toUpperCase();
+    return firstName[milley] + " " + surName[jibran];
+  } else {
+    return "Your name must start with a letter from A - Z.";
+  }
+}
+var firstName = {
+  A: "Alpha",
+  B: "Beta",
+  C: "Cache",
+  D: "millgh",
+  E: "hiii",
+  M: "Malware"
+};
+var surName = { A: "Analogue", B: "Bomb", C: "Catalyst", M: "Mountain" };
+var millleyeye = aliasGen("mike", "mcllington");
+console.log(millleyeye);

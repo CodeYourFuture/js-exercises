@@ -7,3 +7,11 @@ Assign each of them to a separate variable
 
 */
 
+var humanBeing = {
+  color: ["black", "white"],
+  legs: 2
+};
+var car = {};
+var house = {};
+var animals = {};
+var school = {};
