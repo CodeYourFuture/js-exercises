@@ -41,17 +41,28 @@ When you open index.html in your browser, it should display the existing message
 // }
 
 // Write your code here
-function displayMessage() {
-  fetch("https://codeyourfuture.herokuapp.com/api/messages")
-    .then(responds => {
-      return responds.text();
-    })
-    .then(data => {
-      document.querySelector("#message-list").innerHTML = data;
-    })
-    .catch(error => {
-      console.log("Error found:", error);
-    });
-}
+// function displayMessage() {
+//   fetch("https://codeyourfuture.herokuapp.com/api/messages")
+//     .then(responds => {
+//       return responds.text();
+//     })
+//     .then(data => {
+//       document.querySelector("#message-list").innerHTML = data;
+//     })
+//     .catch(error => {
+//       console.log("Error found:", error);
+//     });
+// }
 
-setInterval(displayMessage, 2000);
+// setInterval(displayMessage, 2000);
+
+fetch("https://codeyourfuture.herokuapp.com/api/messages")
+  .then(responds => {
+    return responds.text();
+  })
+  .then(data => {
+    document.querySelector("#message-list").innerHTML = data;
+  })
+  .catch(error => {
+    document.querySelector("#message-list").innerHTML = error;
+  });
