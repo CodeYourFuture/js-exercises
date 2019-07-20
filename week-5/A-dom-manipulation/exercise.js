@@ -61,7 +61,7 @@ let display = document.querySelectorAll("a");
 function clickMessage() {
   //let allLink = document.querySelectorAll("a");
   for (allLink of display) {
-    allLink.style.color = "red";
+    allLink.style.fontSize = "56";
     //allLink.innerHTML = "<h3>hello</h2>";
 
     //display.appendChild(allLink);
