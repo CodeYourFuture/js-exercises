@@ -17,7 +17,7 @@
 document.querySelector("#button1").addEventListener("click", exercise1);
 
 function exercise1() {
-  return (document.getElementById("exercise-1").innerHTML = Milley); // Write your implementation here
+  return (document.getElementById("exercise-1").innerHTML = "milley"); // Write your implementation here
 }
 
 /*

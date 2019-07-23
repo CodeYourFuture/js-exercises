@@ -35,12 +35,16 @@ When you open index.html in your browser, it should display the existing message
 */
 
 // Write your code here
-const milley = () => {
+setInterval(() => {
   fetch("https://codeyourfuture.herokuapp.com/api/messages")
-    .then(response => response.text())
-    .then(function(mes) {
-      document.querySelector("#message-list").innerHTML = mes;
+    .then(response => response.json())
+    .then(mes => {
+      var data1 = mes.map(ele => ele.content + ", " + ele.datetime);
+      var data11 = "";
+      for (var i = 0; i < data1.length; i++) {
+        data11 += data1[i] + "<br>";
+      }
+      document.getElementById("message-list").innerHTML = data11;
     })
     .catch(er => console.log(er));
-};
-setInterval(milley, 2000);
+}, 2000);

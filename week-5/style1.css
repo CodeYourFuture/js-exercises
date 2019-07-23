@@ -1,0 +1,42 @@
+#image {
+  width: 100%;
+  height: 80%;
+}
+​ img {
+  width: 100%;
+  height: 20%;
+}
+#search-container {
+  background-color: #fff;
+  position: relative;
+  border-radius: 30px;
+  padding: 3px 50px 3px 10px;
+}
+#search-box {
+  background-color: transparent;
+  height: 40px;
+  font-family: sans-serif;
+  font-size: 20px;
+  border-radius: 7px;
+  border: solid 2px black;
+  width: 20%;
+}
+#searchItBtn {
+  background-color: blue;
+  border-radius: 60%;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 20px;
+  border: solid 2px black;
+  width: 70px;
+  height: 70px;
+}
+​ .searchResult {
+  background-color: transparent;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+​ p {
+  font-family: sans-serif;
+  padding: 10px;
+}

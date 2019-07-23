@@ -14,13 +14,8 @@
         <p>More copy goes here</p>
       </div>
     </div>
-    <script>
-      var firstChi = document.getElementById("content").firstChild;
-      var lastChi = document.getElementById("content").lastChild;
-      var nextSibli = document.getElementById("header").nextSibling;
-      var previousSibli = document.getElementById("content").previousSibling;
-      var parentNo = document.getElementById("title").parentNode;
-      var childNo = document.body.childNodes;
+    <script type="text/javascript">
+      alert(document.getElementById("header")[0].nodeValue);
     </script>
   </body>
 </html>

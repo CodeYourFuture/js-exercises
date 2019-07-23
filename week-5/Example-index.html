@@ -1,30 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hello!</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Search engine for Indian cities</title>
+    <link rel="stylesheet" href="style1.css" />
   </head>
 
   <body>
-    <h1>Millions Gallery</h1>
-    <button id="myButton">Click me!!</button>
-
-    <p>Introduction to <strong>my works</strong></p>
-    <div class="container">
-      <div class="card">
-        <h1>
-          Card Title
-        </h1>
-        <button id="myButton1">Click me!!</button>
-        <img src="http://lorempixel.com/640/480/abstract/1" />
-      </div>
-      <div class="card">
-        <h1>
-          Card Title 2
-        </h1>
-        <img src="http://lorempixel.com/640/480/abstract/2" />
-      </div>
+    <div id="image">
+      <img src="India3.png" alt="Geographical map of Indian Sub-continent" />
     </div>
-    <script src="js.js"></script>
+    <div id="search-container">
+      <input type="text" id="search-box" placeholder="Search For a City.." />
+      <button id="searchItBtn">Find it!</button>
+    </div>
+    <p>
+      A very useful tool to explore India and the beauty of its cities. India is
+      very extended and multicultural country. This tool aims at helping you
+      navigate through its major cities, and finding state and district.
+    </p>
+    <p>
+      For further information please go
+      <a href="https://www.india.gov.in">here</a>
+    </p>
+    <script>
+      //indian-cities-api-nocbegfhqg.now.sh/
+      var searchBtn = document.querySelector("#searchItBtn");
+      searchBtn.addEventListener("click", getInput);
+
+      function getInput() {
+        var userInput = document.querySelector("#search-box").value;
+
+        document.querySelector("#search-box").value = "";
+
+        fetch("https://indian-cities-api-nocbegfhqg.now.sh/cities") // take json
+          .then(response => response.json()) // if success transform json in JS object
+          .then(data => {
+            //console.log(data);
+            for (var i = 0; i < data.length; i++) {
+              var city = "";
+              if (data[i].City === userInput) {
+                //console.log(data[0]);
+                city +=
+                  "City name: " +
+                  data[i].City +
+                  "<br>" +
+                  "District: " +
+                  data[i].District +
+                  "<br>" +
+                  "State: " +
+                  data[i].State;
+
+                var ouData = document.createElement("p");
+
+                ouData.setAttribute("class", "searchResult");
+                ouData.innerHTML = city;
+                document.body.appendChild(ouData);
+              }
+            }
+            var ouData = document.createElement("p");
+            ouData.setAttribute("class", "searchResult");
+            ouData.innerHTML = "Sorry";
+            document.body.appendChild(ouData);
+          });
+      }
+    </script>
   </body>
 </html>
