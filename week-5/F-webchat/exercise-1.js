@@ -32,12 +32,27 @@ Expected result
 When you open index.html in your browser, it should display the existing messages on the page.
 
 */
-fetch("https://codeyourfuture.herokuapp.com/api/messages")
-  .then(response => {
-    return response.text();
-  })
-  .then(texts => {
-    document.getElementById("message-list").innerHTML = texts;
+async function fetchFunc() {
+  let response = await fetch(
+    "https://codeyourfuture.herokuapp.com/api/messages"
+  );
+  let json = await response.json();
+  json.forEach(msg => {
+    document.querySelector("#message-list").innerHTML += JSON.stringify(msg);
+    document.querySelector("#message-list").innerHTML += "<br>";
   });
-
+}
+fetchFunc();
 // Write your code here
+
+// fetch("https://codeyourfuture.herokuapp.com/api/messages")
+//   .then(response => {
+//     return response.json();
+//   })
+//   .then(arrayOfMessage => {
+//     arrayOfMessage.forEach(msg => {
+//       document.querySelector("#message-list").innerHTML += JSON.stringify(msg);
+//       document.querySelector("#message-list").innerHTML += "<br>";
+// });
+//document.getElementById("message-list").innerHTML = texts;
+// });
