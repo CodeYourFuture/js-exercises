@@ -1,3 +1,5 @@
+import { get } from "https";
+
 /*
 Let's build a webchat to communicate with each other!
 
@@ -33,5 +35,15 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
+
+fetch("https://codeyourfuture.herokuapp.com/api/messages", {
+  method: "GET",
+  headers: { "Content-Type": "application/json" }
+})
+  .then(res => {
+    return res.json();
+  })
+  .then(text => {
+    document.getElementById("message-list").innerHTML = JSON.stringify(text);
+  });
