@@ -15,7 +15,10 @@
       </div>
     </div>
     <script type="text/javascript">
-      alert(document.getElementById("header")[0].nodeValue);
+      var j = document.getElementById("header");
+      var g = document.createElement("p");
+      g.innerHTML = j.nodeName + j.nodeValue + j.nodeType + " hello world";
+      j.append(g);
     </script>
   </body>
 </html>

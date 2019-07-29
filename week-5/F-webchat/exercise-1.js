@@ -35,6 +35,21 @@ When you open index.html in your browser, it should display the existing message
 */
 
 // Write your code here
+
+// setInterval(() => {
+//   fetch("https://codeyourfuture.herokuapp.com/api/messages") // take json
+//     .then(response => response.json()) // if success transform json in JS object
+//     .then(mes => {
+//       var message1 = mes.map(ele => ele.content + " " + ele.datetime);
+//       var tereza = "";
+//       for (i = 0; i < message1.length; i++) {
+//         // cycling new array
+//         tereza += message1[i] + "<br>"; // take every element in a string
+//       }
+//       document.getElementById("message-list").innerHTML = tereza; // insert text in to div
+//     });
+// }, 2000);
+
 setInterval(() => {
   fetch("https://codeyourfuture.herokuapp.com/api/messages")
     .then(response => response.json())
