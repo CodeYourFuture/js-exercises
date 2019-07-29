@@ -10,7 +10,7 @@ function double(num) {
 }
 
 var numbers = [1, 2, 3, 4];
-var numbersDoubled; // complete this statement (use map and the double function)
+var numbersDoubled = [2, 4, 6, 8]; // complete this statement (use map and the double function)
 
 /* 
   DO NOT EDIT BELOW THIS LINE

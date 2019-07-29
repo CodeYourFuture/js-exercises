@@ -3,8 +3,15 @@
 // - is a positive number
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
-
-function validate(num) {}
+var num = 10;
+var num1 = 10.5;
+function validate(num) {
+  if (num <= 100);
+  return true;
+}
+function validate(num1) {
+  if ((num1 = positive)) return true;
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE

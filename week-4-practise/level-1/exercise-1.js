@@ -6,7 +6,7 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
 var writers = [
   {
@@ -36,9 +36,17 @@ var writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  },
+  }
 ];
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+
+writers.map(x =>
+  console.log(
+    `Hi, my name is ${x.firstName} ${x.lastName}. I am ${
+      x.age
+    } years old, and work as a ${x.occupation}.`
+  )
+);

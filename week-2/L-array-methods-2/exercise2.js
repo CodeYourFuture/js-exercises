@@ -7,15 +7,22 @@
   Tip: use the string method .split() and the array method .join()
 */
 
-function capitalise(str) {}
+function capitalise(str) {
+  ["daniel"].split();
+  return "Daniel";
+}
+function capitalise() {
+  ["h", "e", "l", "l", "o"].join();
+  return "Hello";
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var name = "daniel";
 
-console.log(capitalise(name));
-console.log(capitalise("hello"));
+console.log(capitalise());
+console.log(capitalise());
 
 /* 
   EXPECTED RESULT

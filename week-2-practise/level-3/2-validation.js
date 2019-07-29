@@ -5,8 +5,28 @@
 // Tip: write other small functions for each requirement
 
 var excludedNums = [6, 14, 91, 111];
+var milley = excludedNums.some(number1);//91
 
-function validate(num) {}
+
+
+
+console.log(milley);
+/*
+function validate(num) {
+  if (num === Number){
+    if(){
+      if(){
+      return true;
+      }else{
+        return false;
+      }
+    }else{
+      return false;
+    }
+  }else {
+    return false;
+  }
+}
 
 console.log(validate(6));
 console.log(validate(10.5));

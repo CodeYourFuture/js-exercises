@@ -5,9 +5,9 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  var milley = arr.indexOf(valueToRemove);
+  return arr.slice(0, milley).concat(arr.slice(milley + 1));
 }
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

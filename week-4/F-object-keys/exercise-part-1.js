@@ -20,6 +20,6 @@ var mentorsNames = ;
 var mentorsNamedCapitalised = ;
 
 // ONLY EDIT ABOVE THIS LINE
-
+ 
 console.log(mentorsNamedCapitalised);
 // prints [ 'JAMES', 'JOSH', 'JAMIE', 'MOZAFAR' ]

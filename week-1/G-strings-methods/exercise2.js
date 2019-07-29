@@ -1,3 +1,3 @@
 var name = " Daniel  ";
-
-console.log(message);
+var action = "plays football!";
+console.log(name.trim(action));
