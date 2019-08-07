@@ -6,7 +6,7 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
 var writers = [
   {
@@ -36,9 +36,20 @@ var writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  },
+  }
 ];
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+var printIt =
+  "Hi, my name is " +
+  writers[0].firstName +
+  " " +
+  writers[0].lastName +
+  ". I am " +
+  writers[0].age +
+  " years old, and work as a " +
+  writers[0].occupation +
+  ".";
+console.log(printIt);

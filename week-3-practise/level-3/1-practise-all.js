@@ -44,5 +44,33 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
+var PreviousPassword = [
+  "fhD8!yrjj",
+  "ttkTu.wer3",
+  "dvyyeyY!5",
+  "qwbfj76%",
+  "tytT3729."
+];
+var PasswordValidationResult = password.map(password1Validation);
+// .find(previousPass);
 
-console.log(PasswordValidationResult)
+function password1Validation(string) {
+  if (
+    string.length >= 5 &&
+    string.match(/[a-z]/) &&
+    string.match(/[A-Z]/) &&
+    string.match(/[0-9]/) &&
+    string.match(/[^a-zA-Z0-9]/)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function previousPass(e) {
+  ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."].find(
+    c => c == e
+  ) != e;
+}
+console.log(PasswordValidationResult);
