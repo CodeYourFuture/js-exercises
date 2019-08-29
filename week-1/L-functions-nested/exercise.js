@@ -4,19 +4,19 @@ var mentor3 = "Mimi";
 var mentor4 = "Rob";
 var mentor5 = "Yohannes";
 
-function uppermentors(mentor) {
+function upperMentors(mentor) {
   return mentor.toUpperCase();
 }
-function shoutygreeting(mentor) {
-  var upper = uppermentors(mentor);
+function shoutyGreeting(mentor) {
+  var upper = upperMentors(mentor);
   return "HELLO " + upper;
 }
 
-var shoutygreeting1 = shoutygreeting(mentor1);
-var shoutygreeting2 = shoutygreeting(mentor2);
-var shoutygreeting3 = shoutygreeting(mentor3);
-var shoutygreeting4 = shoutygreeting(mentor4);
-var shoutygreeting5 = shoutygreeting(mentor5);
+var shoutygreeting1 = shoutyGreeting(mentor1);
+var shoutygreeting2 = shoutyGreeting(mentor2);
+var shoutygreeting3 = shoutyGreeting(mentor3);
+var shoutygreeting4 = shoutyGreeting(mentor4);
+var shoutygreeting5 = shoutyGreeting(mentor5);
 
 console.log(shoutygreeting1);
 console.log(shoutygreeting2);
