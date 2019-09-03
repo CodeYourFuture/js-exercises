@@ -25,6 +25,7 @@ HTTP Verb: GET
 API: https://codeyourfuture.herokuapp.com/api/messages
 
 
+
 ===============
 Expected result
 ===============
@@ -33,5 +34,21 @@ When you open index.html in your browser, it should display the existing message
 
 */
 
-
 // Write your code here
+function getAllMessages() {
+  var request = {
+    method: "GET"
+  };
+
+  fetch("https://codeyourfuture.herokuapp.com/api/messages", request)
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(message) {
+      var webChat = (document.getElementById(
+        "message-list"
+      ).innerText = message);
+    });
+}
+
+setInterval(getAllMessages, 2000);
