@@ -3,7 +3,6 @@
 function trimWord(word) {
   return wordtrim();
 }
-
 var result = trimWord("  CodeYourFuture ");
 console.log(result);
 // Expected result "CodeYourFuture"
