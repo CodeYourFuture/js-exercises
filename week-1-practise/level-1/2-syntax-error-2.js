@@ -1,7 +1,9 @@
 // There is a syntax error in this code. Fix it.
 
-function calculate(a, b, c)
-return a + b + c;
+function calculate(a, b, c){
+    return a + b + c;
+}
+
 
 
 var result = calculate(1, 3, 4);
