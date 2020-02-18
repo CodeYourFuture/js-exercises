@@ -1,11 +1,10 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
-function multiply(a, b, c) {
-  a * b * c;
-  return;
+function trimWord(word) {
+  return word.trim;
 }
 
-var result = multiply(1, 3, 4);
+const result = trimWord("  CodeYourFuture ");
 console.log(result);
-// Expected result 12
+// Expected result "CodeYourFuture"
 // Run the program and make sure it works

@@ -10,9 +10,9 @@ function calculateSalesTax() {}
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
-var product = "The life and times of Mozafar Haider";
-var price = 12.5;
-var salesTax = calculateSalesTax(price);
+const product = "The life and times of Mozafar Haider";
+const price = 12.5;
+const salesTax = calculateSalesTax(price);
 
 console.log("Product: " + product);
 console.log("Price: £" + price);

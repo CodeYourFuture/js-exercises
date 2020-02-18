@@ -2,7 +2,7 @@ function getNumber() {
     return Math.random() * 10;
 }
 
-var result = getNumber();
+const result = getNumber();
 console.log(result);
 
 // Answer these questions:
