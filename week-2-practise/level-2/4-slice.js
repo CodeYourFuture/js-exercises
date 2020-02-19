@@ -5,7 +5,9 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  var sliced = arr.slice(index, index + 1); // complete this statement
+  arr = arr.filter(item => !sliced.includes(item));
+  return arr;
 }
 
 /* 

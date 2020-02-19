@@ -6,7 +6,11 @@
 */
 
 function isEmpty(arr) {
-  return; // complete this statement
+  if (arr.length === 0) {
+    return true;
+  } else {
+    return false; // complete this statement
+  }
 }
 
 /* 

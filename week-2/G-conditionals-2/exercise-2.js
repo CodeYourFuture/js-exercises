@@ -8,7 +8,11 @@
 */
 
 function studentPassed(grade) {
-
+  if (grade >= 50) {
+    return "passed";
+  } else if (grade < 50) {
+    return "failed";
+  }
 }
 
 /* 
@@ -18,9 +22,9 @@ var grade1 = 49;
 var grade2 = 50;
 var grade3 = 100;
 
-console.log("'" + grade1 + "': " + studentPassed(grade1))
-console.log("'" + grade2 + "': " + studentPassed(grade2))
-console.log("'" + grade3 + "': " + studentPassed(grade3))
+console.log("'" + grade1 + "': " + studentPassed(grade1));
+console.log("'" + grade2 + "': " + studentPassed(grade2));
+console.log("'" + grade3 + "': " + studentPassed(grade3));
 
 /* 
 EXPECTED RESULT
