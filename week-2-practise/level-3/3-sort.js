@@ -4,11 +4,23 @@
 
 var nums = [10, 1, 5, 29, 100];
 var nums2 = [11, 6, 3, 29, 12];
-var sortedNums; // complete this statement
+
+//nums.sort((a,b) => a-b);
+//var newNums2 = nums.sort();
+
+
+function compareNumbers(a, b) {
+  return a - b;
+}
+var Allnum = nums.concat(nums2)
+
+var sortedNums = Allnum.sort(compareNumbers); // complete this statement
 
 console.log(sortedNums);
 
 // 2. Using code, show that the variables nums and nums2 were not changed
+console.log(nums);
+console.log(nums2);
 
 /* 
   EXPECTED RESULT

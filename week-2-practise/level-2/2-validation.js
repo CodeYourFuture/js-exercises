@@ -4,8 +4,30 @@
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
 
-function validate(num) {}
+function validate(num){
+  if(isNaN(num)){
+    return false;
+  }else{
+    return true;
+  }
 
+function IsPositive(num){
+  var positivenum =validate(num);
+  if(positivenum >= 0){
+    return true
+  }else{
+    return false;
+  }
+}
+function isLessthan100(num){
+  var lessnum = validate(num)
+  if(lessnum <= 100){
+    return true;
+  }else{
+    return false;
+  }
+}
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
