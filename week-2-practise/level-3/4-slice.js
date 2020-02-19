@@ -3,12 +3,12 @@
 // - NOT change the original array
 // - return a new array with the replacement value inserted
 // - insert the replacement value at the provided index
-
 function replace(arr, index, value) {
-  var rr = arr[(index, value)];
-  return rr; // complete this statement
+  return arr
+    .slice(0, index)
+    .concat([value])
+    .concat(arr.slice(index + 1)); // complete this statement
 }
-
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

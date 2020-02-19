@@ -5,12 +5,7 @@
 // Tip: write other small functions for each requirement
 
 function validate(num) {
-
-  if (100 >= num && num > 0) return true;
-  else if (typeof num === "number") return true;
-  else {
-    return false;
-  }
+  return typeof num === "number" && num > 0 && num <= 100;
 }
 
 /* 
