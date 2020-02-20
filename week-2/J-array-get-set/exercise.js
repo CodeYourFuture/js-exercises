@@ -5,11 +5,11 @@
 */
 
 function first(arr) {
-  return; // complete this statement
+  return names[0]; // complete this statement
 }
 
 function last(arr) {
-  return; // complete this statement
+  return na mes[3]; // complete this statement
 }
 
 /* 
