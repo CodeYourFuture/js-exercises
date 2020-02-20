@@ -5,8 +5,13 @@
 // - NOT change the original array
 // - return a new array with the replacement value inserted
 
+
+
 function replace(arr, valueToReplace, newValue) {
-  return; // complete this statement
+  return arr
+    .slice(0, arr.indexOf(valueToReplace))
+    .concat([newValue])
+    .concat(arr.slice(arr.indexOf(valueToReplace) + 1)); // complete this statement
 }
 
 /* 
