@@ -6,6 +6,9 @@
 */
 
 var codeYourFutureIsGreat = true;
+let mozafarIsCool = true;
+let calculationCorrect = true;
+let moreThan10Students = true;
 
 /* 
   DO NOT EDIT BELOW THIS LINE
