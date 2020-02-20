@@ -9,7 +9,7 @@
 */
 
 function containsCode(sentence) {
-
+  return sentence.indexOf("code") != -1;
 }
 
 /* 
