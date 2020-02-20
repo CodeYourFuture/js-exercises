@@ -11,6 +11,10 @@ function tidyUpString(str) {
 }
 
 function captialise(str) {
+  return str
+    .trim()
+    .toLowerCase()
+    .replace("/", "");
   // complete this function
 }
 
