@@ -9,20 +9,20 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-var updatedArr = arr.map(value => {
+arr.forEach(value => {
+  var result = '';
   if (value % 5 == 0 && value % 3 == 0){
-    return 'FizzBuzz'
+    result = 'FizzBuzz';
   } else if (value%5 == 0){
-    return 'Buzz'
+    result = 'Buzz';
   } else if (value % 3 == 0) {
-    return 'Fizz'
+    result = 'Fizz';
   } else {
-    return value.toString();
-  } 
+    result = value;
+  }
+  console.log(result);
+  return result;
 })
-
-console.log(updatedArr);
-
 /* EXPECTED OUTPUT */
 
 /*
