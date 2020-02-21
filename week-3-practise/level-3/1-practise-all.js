@@ -43,6 +43,24 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+function passwordValidation(collection){
+   if(collection.length > 5 && collection.match(/[A-Z]+/) && collection.match(/[a-z]+/) && collection.match(/[0-9]+/) && collection.match(/[!#$%.]+/)
+   && !PreviousPassword.includes(collection)){
+      return true;
+   }
+  /* }else if(collection.length > 5 && collection.match(/[A-Z]+/) && collection.match(/[a-z]+/) && collection.match(/[0-9]+/))
+   {
+      return true;
+}*/
+else{
+   return false;
+}
+}
+
 var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
+PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
+
+var PasswordValidationResult = password.map(passwordValidation);
+//var PasswordValidationResult2 = password.map(passwordValidationLevel2);
 
 console.log(PasswordValidationResult)

@@ -5,29 +5,27 @@
 // Tip: write other small functions for each requirement
 
 function validate(num){
-  if(isNaN(num)){
-    return false;
-  }else{
-    return true;
-  }
-
+ // if(IsPositive() && isLessthan100()){
+    
+    return (typeof num === "number" && num > 0 && num <= 100);
+ 
+}/*
 function IsPositive(num){
-  var positivenum =validate(num);
-  if(positivenum >= 0){
+  //var positivenum = validate(num);
+  if(num >= 0){
     return true
   }else{
     return false;
   }
 }
 function isLessthan100(num){
-  var lessnum = validate(num)
-  if(lessnum <= 100){
+  //var lessnum = validate(num)
+  if(num <= 100){
     return true;
   }else{
     return false;
   }
-}
-}
+} 
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

@@ -140,7 +140,12 @@ var streetNames = [
     "Widegate Street", "Willoughby Highwalk", "Wilson Street", "Wine Office Court",
     "Wood Street", "Wormwood Street", "Wrestler's Court"];
 
-var laneNames;  // Complete this line
+    function cityFilter(city){
+       return city.includes("Lane");
+
+    }
+
+var laneNames = streetNames.filter(cityFilter);  // Complete this line
 
 console.log(laneNames);
 console.log(laneNames.length);

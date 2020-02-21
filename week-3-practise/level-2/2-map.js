@@ -13,8 +13,15 @@ var attendances = [
   ["Tayoa", 11],
   ["Nina", 10]
 ];
+ function eligibleList(name, count){
+   if(count > 8){
+     return true;
+   }
 
-var eligibleStudentNames; // TODO: Complete this line.
+ }
+
+
+var eligibleStudentNames = attendances.map(eligibleList); // TODO: Complete this line.
 
 console.log(eligibleStudentNames);
 

@@ -24,8 +24,14 @@ var voyagers = [
   "Avery family",
   "Archer family"
 ];
+function familiesAlha(Fname){
+  if(Fname.startsWith("A") && Fname.includes("family")){
+    return Fname;
 
-var colonisers; // Complete this statement
+  }
+}
+
+var colonisers = voyagers.filter(familiesAlha); // Complete this statement
 
 console.log(colonisers);
 

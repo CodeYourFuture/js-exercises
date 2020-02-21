@@ -10,8 +10,14 @@
 
 var bush1BerryColours = ["pink", "pink", "pink", "neon", "pink", "transparent"];
 var bush2BerryColours = ["pink", "pink", "pink", "pink"];
+ function safeP(color){
+   if(color !== "Pink"){
+     return true;
+   }
+ }
 
-var bush1SafeToEat; //Complete this statement
+
+var bush1SafeToEat=bush1BerryColours.map(safeP); //Complete this statement
 var bush2SafeToEat; //Complete this statement
 
 if (bush1SafeToEat) {
