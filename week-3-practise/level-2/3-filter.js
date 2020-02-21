@@ -25,7 +25,7 @@ var voyagers = [
   "Archer family"
 ];
 
-var colonisers; // Complete this statement
+var colonisers = voyagers.filter(x => x.includes('family')).filter(x => x.charAt(0).toUpperCase() === 'A'); // Complete this statement
 
 console.log(colonisers);
 
