@@ -11,8 +11,8 @@
 var bush1BerryColours = ["pink", "pink", "pink", "neon", "pink", "transparent"];
 var bush2BerryColours = ["pink", "pink", "pink", "pink"];
 
-var bush1SafeToEat; //Complete this statement
-var bush2SafeToEat; //Complete this statement
+var bush1SafeToEat = bush1BerryColours.every(x => x==='pink'); //Complete this statement
+var bush2SafeToEat = bush2BerryColours.every(x => x === 'pink'); //Complete this statement
 
 if (bush1SafeToEat) {
   console.log("Bush 1 is safe to eat from");
