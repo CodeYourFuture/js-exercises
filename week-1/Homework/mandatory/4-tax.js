@@ -7,14 +7,35 @@
 
 function calculateSalesTax() {}
 
-/* DO NOT EDIT BELOW THIS LINE */
-/* --------------------------- */
+/*
+  CURRENCY FORMATTING
+  ===================
+  The business has informed you that prices must have 2 decimal places
+  They must also start with the currency symbol
+  Write a function that transforms numbers into the format £0.00
 
-const product = "The life and times of Mozafar Haider";
-const price = 12.5;
-const salesTax = calculateSalesTax(price);
+  Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
+*/
 
-console.log("Product: " + product);
-console.log("Price: £" + price);
-console.log("Sales tax: £" + salesTax);
-console.log("Total: £" + (price + salesTax));
+function formatCurrency() {}
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+function test(test_name, expr) {
+  let status;
+  if (expr) {
+      status = "PASSED"
+  } else {
+      status = "FAILED"
+  }
+
+  console.log(`${test_name}: ${status}`)
+}
+
+test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18)
+test("calculateSalesTax function - case 2 works", calculateSalesTax(16.8) === 21)
+test("calculateSalesTax function - case 3 works", calculateSalesTax(32.64) === 40.8)
+
+test("formatCurrency function - case 1 works", formatCurrency(15) === "£18")
+test("formatCurrency function - case 2 works", formatCurrency(16.8) === "£21")
+test("formatCurrency function - case 3 works", formatCurrency(32.64) === "£40.8")
