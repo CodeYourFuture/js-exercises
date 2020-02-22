@@ -10,9 +10,9 @@ function convertToUSD() {}
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
-var product = "The life and times of Mozafar Haider";
-var price = 12.5;
-var priceInUSD = convertToUSD(price);
+const product = "The life and times of Mozafar Haider";
+const price = 12.5;
+const priceInUSD = convertToUSD(price);
 
 console.log("Product: " + product);
 console.log("Price in USD: " + priceInUSD);
