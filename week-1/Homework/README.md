@@ -10,5 +10,12 @@ For your homework, we'll be using **test driven development** to check your answ
 2. Run the script to check the results against the tests - all tests should read PASSED if you completed the challenges correctly. If a test reads FAILED, find the associated test to identify which function failed and fix it.
 3. Raise a PR once you're happy with the quality of your code
 
-## Reading list 
-Remember to use Slack to engage with your peers abou
+## Reading List
+
+To challenge yourself even further, you can get ahead for next week's class by reading some of the below documentation:
+
+- [ ] Loops in JS: https://javascript.info/while-for
+- [ ] Switch statements: https://javascript.info/switch
+- [ ] Comparisons in JS: https://javascript.info/comparison
+- [ ] Logical operators in JS: https://javascript.info/logical-operators
+- [ ] More on operators: https://javascript.info/operators
