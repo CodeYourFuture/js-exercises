@@ -1,3 +1,4 @@
 const name = " Daniel  ";
 
-console.log(message);
+const removeTheExtraWhitespace = name.trim()
+console.log(removeTheExtraWhitespace);
