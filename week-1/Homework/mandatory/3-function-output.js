@@ -1,16 +1,19 @@
 // Add comments to explain what this function does. You're meant to use Google!
 function getNumber() {
     return Math.random() * 10;
+    //function returns a floating-point, pseudo-random number in the range 0 to less than 10 (inclusive of 0, but not 10) with approximately uniform distribution over that range.
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
 function s(w1, w2) {
     return w1.concat(w2);
+    //The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
+    return firstWord.concat(" ").concat(secondWord).concat(" ").concat( thirdWord).toString();
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

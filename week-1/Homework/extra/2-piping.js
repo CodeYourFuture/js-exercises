@@ -16,26 +16,28 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(a,b) {
+  return Math.round((a + b)*100)/100;
 
+  //IT WAS A BIT MORE DIFFICULT THEN I THOUGHT!:)
 }
 
-function multiply() {
-
+function multiply(a,b) {
+  return a*b;
 }
 
-function format() {
-
+function format(a) {
+  return "£" + a.toString();
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = "£" + ((startingValue + 10) * 2).toString();
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+let goodCode = format(multiply(add(startingValue,10),2))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
