@@ -4,7 +4,7 @@ function trimWord(word) {
   return word.trim();
 }
 
-function wordLength(word) {
+function getWordLength(word) {
   return word.length;
 }
 
@@ -12,7 +12,7 @@ function multiply(a, b, c) {
   return a * b * c;
 }
 
-console.log(wordLength("adana"));
+console.log(getWordLength("adana"));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
@@ -27,5 +27,5 @@ function test(test_name, expr) {
 }
 
 test("fixed trimWord function", trimWord("  CodeYourFuture ") === "CodeYourFuture")
-test("fixed wordLength function", wordLength("A wild sentence appeared!") === 25)
+test("fixed wordLength function", getWordLength("A wild sentence appeared!") === 25)
 test("fixed multiply function", multiply(2,3,6) === 36)
