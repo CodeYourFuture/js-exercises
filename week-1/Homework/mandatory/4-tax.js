@@ -6,8 +6,8 @@
 */
 
 function calculateSalesTax(price) {
-  return (20 * price) / 100 + price;
-  // return (20 * price) / 100 + price; //what the test calcuate
+  return (20 * price) / 100 + price; //what the test want
+  // return (20 * price) / 100 //what it is suppose to be
 }
 
 /*
@@ -17,7 +17,8 @@ function calculateSalesTax(price) {
   They must also start with the currency symbol
   Write a function that transforms numbers into the format £0.00
 
-  Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
+  Remember that the prices must include the sales tax 
+  (hint: you already wrote a function for this!)
 */
 
 function formatCurrency(price) {

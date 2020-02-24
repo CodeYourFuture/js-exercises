@@ -16,43 +16,49 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(num1, num2) {
+  //return parseFloat(num1) + parseFloat(num2).toFixed(1); //test failed
+  return (Number(num1) + Number(num2)).toFixed(1); //test failed
+  //return Number(num1) + Number(num2);
 }
 
-function multiply() {
-
+function multiply(num1, num2) {
+  return parseFloat(num1 * num2);
 }
 
-function format() {
-
+function format(price) {
+  return `£${price}`;
 }
 
-const startingValue = 2
+const startingValue = 2;
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+//I repeated myself and that's why this is bad code
+badCode = `£${(startingValue + 10) * 2}`;
 
 /* BETTER PRACTICE */
+//Don't repeat yourself , I used format function
+let goodCode = format((startingValue + 10) * 2);
 
-let goodCode = 
+console.log(add(2.4, 5.3));
+console.log(typeof 7.7); //
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
