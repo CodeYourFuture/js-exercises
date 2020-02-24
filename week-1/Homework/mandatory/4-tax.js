@@ -22,7 +22,7 @@ function calculateSalesTax(Price) {
 
 function formatCurrency(amount) {
   let totalAmount = amount + amount * 0.2;
-  return `£ ${totalAmount}`;
+  return `£${totalAmount}`;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
