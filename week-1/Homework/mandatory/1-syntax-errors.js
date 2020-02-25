@@ -11,7 +11,7 @@ return `Hello, my name is ${name} and I am ${age} years old`;
 function getRemainder(a, b) {
     remainder = a % b;
 
-    // Use string interpolation here
+    // Use string interpolation here.
     return `The remainder is ${remainder}`;
 }
 
