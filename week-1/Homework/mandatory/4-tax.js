@@ -28,7 +28,9 @@ function formatCurrency(productPrice) {
 
   let SalesPrice = calculateSalesTax(productPrice);
 
-  return "£" + SalesPrice;
+  let setCurrency = "£";
+
+  return setCurrency + SalesPrice;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
