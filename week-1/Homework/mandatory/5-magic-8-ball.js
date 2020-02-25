@@ -45,17 +45,79 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+
+function shakeBall(answer) {
+  console.log("The ball has shaken!");
+  return `${answer}`;
+  /*return (answer = [
+    'It is certain.',
+    'It is decidedly so.',
+    'Without a doubt.',
+    'Yes - definitely.',
+    'You may rely on it.',
+    'As I see it, yes.',
+    'Most likely.',
+    'Outlook good.',
+    'Yes.',
+    'Signs point to yes.',
+    'Reply hazy, try again.',
+    'Ask again later.',
+    'Better not tell you now.',
+    'Cannot predict now.',
+    'Concentrate and ask again.',
+    'Dont count on it',
+    'My reply is no.',
+    'My sources say no.''
+    'Outlook not so good.'
+    'Very doubtful.'
+  ]);*/
+}
 
 // The answer should come from shaking the ball
 let answer;
+/*switch (answer) {
+  case 0:
+    "It is certain.",
+      "It is decidedly so.",
+      "Without a doubt.",
+      "Yes - definitely.",
+      "You may rely on it.",
+      console.log("very positive");
+    break;
+  case 1:
+    "As I see it, yes.",
+      "Most likely.",
+      "Outlook good.",
+      "Yes.",
+      "Signs point to yes.",
+      console.log("positive");
+    break;
+  case 2:
+    "Reply hazy, try again.",
+      "Ask again later.",
+      "Better not tell you now.",
+      "Cannot predict now.",
+      "Concentrate and ask again.",
+      console.log("negative");
+    break;
+  case 3:
+    "Don't count on it",
+      "My reply is no.",
+      "My sources say no.",
+      "Outlook not so good.",
+      "Very doubtful.",
+      console.log("very negative");
+    break;
+}*/
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  return `"very positive", "positive", "negative", "very negative"`;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;

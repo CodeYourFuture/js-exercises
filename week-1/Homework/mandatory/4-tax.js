@@ -6,8 +6,7 @@
 */
 
 function calculateSalesTax(Price) {
-  let TotalPrice = Price + Price * 0.2;
-  return TotalPrice;
+  return Price + Price * 0.2;
 }
 
 /*
