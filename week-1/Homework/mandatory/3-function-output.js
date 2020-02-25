@@ -1,6 +1,6 @@
 // Add comments to explain what this function does. You're meant to use Google!
 function getNumber() {
-    return Math.random() * 10;
+    return Math.random() * 11;
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
@@ -22,10 +22,10 @@ function test(test_name, expr) {
     } else {
         status = "FAILED"
     }
-  
+
     console.log(`${test_name}: ${status}`)
 }
-  
+
 test("concatenate function - case 1 works", concatenate('code', 'your', 'future') === "code your future")
 test("concatenate function - case 2 works", concatenate('I', 'like', 'pizza') === "I like pizza")
 test("concatenate function - case 3 works", concatenate('I', 'am', 13) === "I am 13")
