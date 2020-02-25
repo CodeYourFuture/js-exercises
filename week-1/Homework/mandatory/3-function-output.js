@@ -1,14 +1,19 @@
 // Add comments to explain what this function does. You're meant to use Google!
+// The getNumber function i returning rundom numbers multiplide by 10. in the curly bracket you can asigne the max number of the random numbers.
 function getNumber() {
-    return Math.random() * 11;
+    return Math.random() * 10;
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
+// concat is a method to join to parametar choosen in the function
 function s(w1, w2) {
     return w1.concat(w2);
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
+
+    const concatenateWords = firstWord.concat(' ', secondWord, ' ', thirdWord)
+    return concatenateWords
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
 }
