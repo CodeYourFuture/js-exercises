@@ -45,8 +45,13 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
-
+let veryPositive = ["It is certain", "It is decidedly so", "Without a doubt", "You may rely on it"];
+let positive = ["As I see it, yes","Most likely", "Outlook good, Yes", "Signs point to yes"];
+  
+function shakeBall() {
+  const log = `The ball has shaken!`
+  return log;
+}
 // The answer should come from shaking the ball
 let answer;
 
