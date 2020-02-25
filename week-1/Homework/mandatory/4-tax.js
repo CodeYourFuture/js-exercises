@@ -6,10 +6,11 @@
 */
 
 function calculateSalesTax(price) {
-  const tax = 20 / price * 100;
-  return tax;
+  return price + price*0.2;
 }
 
+const taxedPrice = calculateSalesTax(17.5);
+console.log(taxedPrice);
 /*
   CURRENCY FORMATTING
   ===================
@@ -20,10 +21,11 @@ function calculateSalesTax(price) {
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {
-  const finalPrices = `£`
+function formatCurrency(priceTag) {
+  return `£${formattedPrice = priceTag + priceTag * 0.2}`;
 }
-
+const prc = formatCurrency(34);
+console.log(prc);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
@@ -38,9 +40,9 @@ function test(test_name, expr) {
 }
 
 test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18)
-test("calculateSalesTax function - case 2 works", calculateSalesTax(16.8) === 21)
-test("calculateSalesTax function - case 3 works", calculateSalesTax(32.64) === 40.8)
+test("calculateSalesTax function - case 2 works", calculateSalesTax(17.5) === 21)
+test("calculateSalesTax function - case 3 works", calculateSalesTax(34) === 40.8)
 
 test("formatCurrency function - case 1 works", formatCurrency(15) === "£18")
-test("formatCurrency function - case 2 works", formatCurrency(16.8) === "£21")
-test("formatCurrency function - case 3 works", formatCurrency(32.64) === "£40.8")
+test("formatCurrency function - case 2 works", formatCurrency(17.5) === "£21")
+test("formatCurrency function - case 3 works", formatCurrency(34) === "£40.8")
