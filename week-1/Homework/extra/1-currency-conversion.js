@@ -4,8 +4,11 @@
   The business is breaking out into a new market and need to convert prices to USD
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
+const comission = 0.01;
 
-function convertToUSD() {}
+function convertToUSD(amount) {
+  return amount * 1.4;
+}
 
 /*
   CURRENCY FORMATTING
@@ -16,20 +19,24 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(amount) {
+  let exchangeRate = amount * 5.7;
+  let add_comission = (exchangeRate * comission) + exchangeRate;
+  return add_comission;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('convertToUSD function works', convertToUSD(32) === 44.8)
-test('convertToBRL function works', convertToBRL(30) === 172.71)
+test("convertToUSD function works", convertToUSD(32) === 44.8);
+test("convertToBRL function works", convertToBRL(30) === 172.71);
