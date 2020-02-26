@@ -6,7 +6,8 @@
 */
 
 function calculateSalesTax(price) {
-   let tax = (price *20) /100;// calcutates tax
+  let taxRate = (price * 20) / 100;//calculate tax rate
+   const tax = taxRate;//stored the tax into the variables so it can be change easier
    const priceIncludesText = price +tax; //adds tax to the price
    return priceIncludesText;// returns final price 
 }
