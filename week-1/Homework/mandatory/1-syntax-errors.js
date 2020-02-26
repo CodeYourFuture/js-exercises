@@ -4,21 +4,15 @@ function addNumbers(a, b, c) {
   return a + b + c;
 }
 
-Console.log(addNumbers(1, 2, 3));
 function introduceMe(name, age) {
   return "Hello, my name is " + name + "and I am " + age + "years old";
 }
 
-Console.log(introduceMe(JREO, 18));
-
 function getRemainder(a, b) {
-  remainder = a % b;
-
+  let remainder = a % b;
   // Use string interpolation here
-  return "The remainder is + %{getRemainder}";
+  return `The remainder is  ${remainder}`;
 }
-
-console.log(getRemainder(4, 2));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
