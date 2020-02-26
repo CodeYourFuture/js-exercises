@@ -45,7 +45,29 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall(ask) {
+  let veryPositive = [
+    "It is certain.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Yes - definitely.",
+    "You may rely on it."
+  ];
+  let positive = [
+    "As I see it, yes.",
+    "Most likely.",
+    "Outlook good.",
+    "Yes.",
+    "Signs point to yes."
+  ];
+  let question = ask;
+  let answer = veryPositive[Math.floor(Math.random() * veryPositive.length)];
+
+  console.log("I'm good at JavaScript?");
+  console.log("The ball has shaken!");
+  console.log(answer);
+  return answer;
+}
 
 // The answer should come from shaking the ball
 let answer;
