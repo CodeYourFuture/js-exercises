@@ -1,17 +1,20 @@
 // There are syntax errors in this code - can you fix it to pass the tests?
 
-function addNumbers(a b c) {
+/*Add Comma to the function parameter*/
+function addNumbers(a,b,c) {
     return a + b + c;
 }
+/*Add a brackets to the function and concat symbol for name and age ad space between quotes*/
+function introduceMe(name, age){
+    return "Hello, my name is " + name +" and I am " +age + " years old";
 
-function introduceMe(name, age)
-return "Hello, my name is " + name "and I am " age + "years old";
-
+}
+/*One Modular is enough also interpolation is with dollar sign and backticks*/
 function getRemainder(a, b) {
-    remainder = a %% b;
+    remainder = a % b;
 
     // Use string interpolation here
-    return "The remainder is %{remainder}"
+    return `The remainder is ${remainder}`;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

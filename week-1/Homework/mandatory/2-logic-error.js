@@ -1,16 +1,16 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
+/* trim is a function so have to use dot to make it work */
 function trimWord(word) {
-  return wordtrim();
+  return word.trim();
 }
-
+/*.length is not a function is a Method so removed the parenthesis and added a semicolon at the end  */
 function getWordLength(word) {
-  return "word".length()
+  return word.length;
 }
-
+/* "a * b * c;"  should be front of the return  */
 function multiply(a, b, c) {
-  a * b * c;
-  return;
+  return a * b * c;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
