@@ -43,19 +43,73 @@ Outlook not so good.
 Very doubtful.
 */
 
+let array = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes - definitely",
+  "You may rely on it",
+  // ];
+  // let positive = [
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
+  // ];
+  // let negative = [
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again.",
+  // ];
+  // let veryNegative = [
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful."
+];
+
+function randomAnswer(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}
+
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  const answer = randomAnswer(array);
+  console.log("The ball has shaken!");
+  return answer;
+}
 
 // The answer should come from shaking the ball
-let answer;
+// let answer;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+
+let answerType;
+
+function checkAnswer(answer) {
+  if (array.indexOf(randomAnswer(array)) < 5) {
+    answerType = "very positive";
+  } else if (array.indexOf(randomAnswer(array)) < 10) {
+    answerType = "positive";
+  } else if (array.indexOf(randomAnswer(array)) < 15) {
+    answerType = "negative";
+  } else if (array.indexOf(randomAnswer(array)) < 20) {
+    answerType = "very negative";
+  } else {
+    answerType = "Doesn't exist";
+  }
+  console.log(answerType);
+  return answerType;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
