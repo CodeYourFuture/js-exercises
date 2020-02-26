@@ -20,6 +20,7 @@ function add(a,b) {
   return Math.round((a + b)*100)/100;
 
   //IT WAS A BIT MORE DIFFICULT THEN I THOUGHT!:)
+  // Simple answer gives 7.699999 (CLASSICAL JS WAT) in the test so I found this soulution to get the correct answer.
 }
 
 function multiply(a,b) {
@@ -35,9 +36,13 @@ const startingValue = 2
 // Why can this code be seen as bad practice? Comment your answer.
 let badCode = "£" + ((startingValue + 10) * 2).toString();
 
+//Spaghetti code, banch of numbers, hard to understand what is happening. 
+
 /* BETTER PRACTICE */
 
 let goodCode = format(multiply(add(startingValue,10),2))
+
+//using functions with proper names helps to understand what is happening and when
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

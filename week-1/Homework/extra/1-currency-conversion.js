@@ -5,8 +5,8 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD(dollar) {
- return dollar * 1.4
+function convertToUSD(price) {
+ return price * 1.4
 }
 
 /*
@@ -17,9 +17,13 @@ function convertToUSD(dollar) {
   They have also decided that they should add a 1% fee to all foreign transactions
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
+function addFee(currency){
+  return currency*1.01;
+}
 
 function convertToBRL(pound) {
-  return pound*5.7*1.01
+
+  return addFee(pound)*5.7;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
