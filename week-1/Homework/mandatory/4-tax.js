@@ -22,14 +22,14 @@ function calculateSalesTax(price) {
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency(currencySymbol,price) {
+function formatCurrency(price) {
   let priceSetByBusiness = calculateSalesTax(price);//calls a previous function
   let convertion= Math.round(priceSetByBusiness*100)/100;// rounds a previous function up to decimal
-  let finalPrice = currencySymbol+ convertion; // adds currency symbol to to 
+  let finalPrice = '£'+ convertion; // adds currency symbol to to 
   return finalPrice;
 }
-
-let priceFormat = formatCurrency('£',34);
+ 
+let priceFormat = formatCurrency(34);
 console.log(priceFormat);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
