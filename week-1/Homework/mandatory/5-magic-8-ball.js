@@ -45,78 +45,84 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
+//I am defining all possible answers into ane answers array
+const answers = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes - definitely",
+  "You may rely on it",
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful"
+];
 
-function shakeBall(answer) {
+//Then create different arrays according to their levels
+const veryPositive = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes - definitely",
+  "You may rely on it"
+];
+const positive = [
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes"
+];
+const negative = [
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again"
+];
+const veryNegative = [
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful"
+];
+
+function shakeBall() {
   console.log("The ball has shaken!");
-  return `${answer}`;
-  /*return (answer = [
-    'It is certain.',
-    'It is decidedly so.',
-    'Without a doubt.',
-    'Yes - definitely.',
-    'You may rely on it.',
-    'As I see it, yes.',
-    'Most likely.',
-    'Outlook good.',
-    'Yes.',
-    'Signs point to yes.',
-    'Reply hazy, try again.',
-    'Ask again later.',
-    'Better not tell you now.',
-    'Cannot predict now.',
-    'Concentrate and ask again.',
-    'Dont count on it',
-    'My reply is no.',
-    'My sources say no.''
-    'Outlook not so good.'
-    'Very doubtful.'
-  ]);*/
+  let i = Math.floor(Math.random() * answers.length);
+  return answers[i];
 }
 
 // The answer should come from shaking the ball
-let answer;
-/*switch (answer) {
-  case 0:
-    "It is certain.",
-      "It is decidedly so.",
-      "Without a doubt.",
-      "Yes - definitely.",
-      "You may rely on it.",
-      console.log("very positive");
-    break;
-  case 1:
-    "As I see it, yes.",
-      "Most likely.",
-      "Outlook good.",
-      "Yes.",
-      "Signs point to yes.",
-      console.log("positive");
-    break;
-  case 2:
-    "Reply hazy, try again.",
-      "Ask again later.",
-      "Better not tell you now.",
-      "Cannot predict now.",
-      "Concentrate and ask again.",
-      console.log("negative");
-    break;
-  case 3:
-    "Don't count on it",
-      "My reply is no.",
-      "My sources say no.",
-      "Outlook not so good.",
-      "Very doubtful.",
-      console.log("very negative");
-    break;
-}*/
+const result = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer(answer) {
-  return `"very positive", "positive", "negative", "very negative"`;
+function checkAnswer() {
+  if (veryPositive.includes(result)) {
+    return "very positive";
+  } else if (positive.includes(result)) {
+    return "positive";
+  } else if (negative.includes(result)) {
+    return "negative";
+  } else {
+    return "very negative";
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
