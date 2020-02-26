@@ -8,7 +8,7 @@ function getNumber() {
 function s(w1, w2) {
   return w1.concat(w2);
 }
-// concatenates the string arguments to the calling string and returns a new string.
+// It concatenates the string arguments to the calling string and returns a new string.
 
 function concatenate(firstWord, secondWord, thirdWord) {
   // Write the body of this function to concatenate three words together
