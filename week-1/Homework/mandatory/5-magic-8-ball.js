@@ -46,7 +46,7 @@ Very doubtful.
 // This should log "The ball has shaken!"
 // and return the answer.
 //I am defining all possible answers into ane answers array
-const answers = [
+const choiseOfanswer = [
   "It is certain",
   "It is decidedly so",
   "Without a doubt",
@@ -101,8 +101,8 @@ const veryNegative = [
 
 function shakeBall() {
   console.log("The ball has shaken!");
-  let i = Math.floor(Math.random() * answers.length);
-  return answers[i];
+  let i = Math.floor(Math.random() * choiseOfanswer.length);
+  return choiseOfanswer[i];
 }
 
 // The answer should come from shaking the ball
