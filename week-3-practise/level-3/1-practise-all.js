@@ -112,8 +112,3 @@ function validateValidations(arr1, arr2){
    return result;
 }
 
-//console.log(password.map(haveNonAlphanumericSymbols));
-//console.log(password.map(atLeast5Char));
-//console.log(password.map(isAllUpperCase));
-//console.log(password.map(isAllLowerCase));
-//console.log(password.map(haveAnyNumbers));
