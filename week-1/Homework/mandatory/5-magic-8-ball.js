@@ -45,17 +45,53 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall(answer) {
+   console.log ("This is Magic 8 Ball . Ask Question ?");
+   console.log ("The ball has shaken!");
+   const ask = Math.floor((Math.random() * 4 ) + 1);
+  if (ask === 1 ){
+    answer = ("Very positive");
+  }
+  if (ask === 2 ){
+    answer = ("positive");
+  }
+  if (ask === 3 ){
+    answer = ("negative");
+  }
+  if (ask === 4 ){
+    answer = ("Very negative");
+  }
+  console.log (answer);
+  return answer;
 
-// The answer should come from shaking the ball
+}
+
+    // The answer should come from shaking the ball
 let answer;
+shakeBall(answer);
+checkAnswer(answer);
+
+// data 
+const {Verypositive = ["It is certain." , " It is decidedly so. " , " Without a doubt. " , " Yes - definitely. " , " You may rely on it."];
+const Positive = [" As I see it, yes." , " Most likely. " , " Outlook good. " , "Yes. " , "Signs point to yes. "];
+const Negative = [" Reply hazy, try again. " , " Ask again later. " , "Better not tell you now. " , "Cannot predict now. " , " Concentrate and ask again."];
+const Verynegative = [" Don't count on it. " , " My reply is no. " , " My sources say no. " , " Outlook not so good. " , "Very doubtful. "];
+
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer){
+  const comment = Math.floor((Math.random() * 4 ) + 1);
+  console.log (answer);
+  console.log (ask);
+   
+}
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;

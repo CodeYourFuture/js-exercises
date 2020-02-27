@@ -5,8 +5,12 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
-
+function calculateSalesTax(sales) {
+  const TaxSell = (sales / 100) * 20 ;
+  const TXT = sales + TaxSell
+  console.log (TXT);
+  return TXT;
+}
 /*
   CURRENCY FORMATTING
   ===================
@@ -17,7 +21,11 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(TaxSell) {
+  const message = "£" + calculateSalesTax(TaxSell).toFixed(2);
+  console.log (message);
+  return message;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -33,9 +41,9 @@ function test(test_name, expr) {
 }
 
 test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18)
-test("calculateSalesTax function - case 2 works", calculateSalesTax(16.8) === 21)
-test("calculateSalesTax function - case 3 works", calculateSalesTax(32.64) === 40.8)
+test("calculateSalesTax function - case 2 works", calculateSalesTax(17.5) === 21)
+test("calculateSalesTax function - case 3 works", calculateSalesTax(34) === 40.8)
 
-test("formatCurrency function - case 1 works", formatCurrency(15) === "£18")
-test("formatCurrency function - case 2 works", formatCurrency(16.8) === "£21")
-test("formatCurrency function - case 3 works", formatCurrency(32.64) === "£40.8")
+test("formatCurrency function - case 1 works", formatCurrency(15) === "£18.00")
+test("formatCurrency function - case 2 works", formatCurrency(17.5) === "£21.00")
+test("formatCurrency function - case 3 works", formatCurrency(34) === "£40.80")
