@@ -6,7 +6,8 @@
 */
 
 function calculateSalesTax(productPrice) {
-  
+  let tax = (productPrice * 0.2) + productPrice
+  return tax;
 }
 
 /*
@@ -19,7 +20,10 @@ function calculateSalesTax(productPrice) {
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(productPrice) {
+  let totalPrice = calculateSalesTax(productPrice);
+  return ("£" + totalPrice);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
