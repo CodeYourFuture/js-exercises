@@ -17,36 +17,33 @@
 */
 
 function add(a, b) {
-  let decimal = a + b;
-  let precision = decimal.toFixed(1);
-return precision;
+  let decimal_allowed = a + b;
+  let precision = decimal_allowed.toFixed(1) / 1;
+  return precision;
 }
 
 function multiply(a, b) {
   return a * b;
-
 }
 
 function format(number) {
   return `£${number}`;
-
 }
 
-const startingValue = 2
+const startingValue = 2;
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = format(multiply(2,add(startingValue,10)));
+// Because it is difficult to understand whether it is function call or not and which parameters are for which function.
+let badCode = format(multiply(2, add(startingValue, 10)));
 
-  /* BETTER PRACTICE */
-  let addition = add(startingValue,10);
-  let multiplication = multiply(addition,2);
-  let formation = format(multiplication);
+/* BETTER PRACTICE */
+let addition = add(startingValue, 10);
+let multiplication = multiply(addition, 2);
+let formation = format(multiplication);
 
- let goodCode = formation;
-
+let goodCode = formation;
 console.log(badCode);
-console.log(`GoodCode is ${goodCode} and Best Practice :)`)
-
+console.log(`GoodCode is ${goodCode} and Best Practice :)`);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
