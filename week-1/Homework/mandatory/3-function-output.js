@@ -19,6 +19,8 @@ function concatenate(firstWord, secondWord, thirdWord) {
     // Look at the test case below to understand what to expect in return 
 }
 
+console.log(concatenate("tayfun", "loves", "coding"));
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
