@@ -45,17 +45,100 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+let producedAnswer ;
+function shakeBall() {
+  let answerNumber  =  Math.floor(Math.random() * 20) + 1 ;
+  switch(answerNumber){
+    case 1:
+      producedAnswer = "It is certain.";
+      break;
+    case 2:
+      producedAnswer = "It is decidedly so.";
+      break;
+    case 3:
+      producedAnswer = "Without a doubt.";
+      break;
+    case 4:
+      producedAnswer = "Yes - definitely.";
+      break;
+    case 5:
+      producedAnswer = "You may rely on it.";
+      break;
+    case 6:
+      producedAnswer = "As I see it, yes.";
+      break;
+    case 7:
+      producedAnswer = "Most likely.";
+      break;
+    case 8:
+      producedAnswer = "Outlook good.";
+      break;
+    case 9:
+      producedAnswer = "Yes";
+      break;
+    case 10:
+      producedAnswer = "Signs point to yes.";
+      break;
+    case 11:
+      producedAnswer = "Reply hazy, try again.";
+      break;
+    case 12:
+      producedAnswer = "Ask again later.";
+      break;
+    case 13:
+      producedAnswer = "Better not tell you now.";
+      break;
+    case 14:
+      producedAnswer = "Cannot predict now.";
+      break;
+    case 15:
+      producedAnswer = "Concentrate and ask again.";
+      break;
+    case 16:
+      producedAnswer = "Don't count on it.";
+      break;
+    case 17:
+      producedAnswer = "My reply is no.";
+      break;
+    case 18:
+      producedAnswer = "My sources say no.";
+      break;
+    case 19:
+      producedAnswer = "Outlook not so good.";
+      break;
+    case 20:
+      producedAnswer = "Very doubtful.";
+      break;
+  }
+  return answerNumber;
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = producedAnswer;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answerNumber) {
+  let answerState;
+  switch(answerNumber){
+    case 1 - 5:
+      answerState = "very positive";
+      break;
+    case 6 - 10:
+      answerState = "positive";
+      break;
+    case 11 - 15:
+      answerState = "negative";
+      break;
+    case 16 - 20:
+      answerState = "very negative";
+      break;
+  }
+  return answerState;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;

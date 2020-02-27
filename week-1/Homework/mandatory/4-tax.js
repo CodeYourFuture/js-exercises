@@ -20,11 +20,6 @@ function calculateSalesTax(price) {
 
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
-
-
-
-
-
 function formatCurrency(perfectPrice) {
   const priceSign = calculateSalesTax(perfectPrice); 
   const priceWithDecimal = "£" + priceSign.toFixed(2);
