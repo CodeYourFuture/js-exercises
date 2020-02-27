@@ -5,7 +5,11 @@ function trimWord(word) {
 }
 
 function getWordLength(word) {
+<<<<<<< Updated upstream
   return word.length;
+=======
+  return word.length();
+>>>>>>> Stashed changes
 }
 
 function multiply(a, b, c) {

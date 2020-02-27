@@ -85,18 +85,22 @@ console.log(answer)
 // - negative
 // - very negative
 function checkAnswer(answer) {
-  if (answer <= 4) {
+  let getIndexNum = possibleAnswers.indexOf(answer);
+  if (getIndexNum <= 4) {
     return `very positive`;
-  } else if (answer > 4 && answer < 9) {
+  } else if (getIndexNum > 4 && getIndexNum <= 9) {
     return `positive`;
-  } else if (answer > 9 && answer < 14) {
+  } else if (getIndexNum > 9 && getIndexNum <= 14) {
     return `negative`;
   } else {
     return "very negative";
   }
  
 }
-console.log(checkAnswer());
+
+let cS = checkAnswer(answer);
+console.log(cS);
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
