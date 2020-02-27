@@ -3,7 +3,8 @@ function getNumber() {
     return Math.random() * 10;
 }
 
-/*expected return: The Math.random() function returns a floating-point, pseudo-random number in the range 0 to less than 1 (inclusive of 0, but not 1) with approximately uniform distribution over that range — which you can then scale to your desired range. The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user.
+/*expected return: The Math.random() function returns a floating-point, pseudo-random number in the range 0 to less than 1 (inclusive of 0, but not 1 in decimal form) and then multiplying by 10. 
+
 -source - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random */
 
 /* Add comments to explain what this function does. You're meant to use Google!*/
@@ -17,7 +18,12 @@ function s(w1, w2) {
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
-return firstWord.concat(`${secondWord} ${thirdWord}`);
+
+//return firstWord + " " + secondWord + " " + thirdWord;
+
+// return `${firstWord} ${secondWord} ${thirdWord}`;  
+
+return firstWord.concat(" ", secondWord, " ", thirdWord);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

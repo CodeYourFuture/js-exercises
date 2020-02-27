@@ -42,15 +42,9 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
+//const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
 
-// This should log "The ball has shaken!"
-// and return the answer.
-function shakeBall() {}
-
-// The answer should come from shaking the ball
-let answer;
-
-let veryPositive [
+const veryPositive = [
   "It is certain",
   "It is decidedly so",
   "Without a doubt",
@@ -58,7 +52,7 @@ let veryPositive [
   "You may rely on it"
 ]
 
-let positive [
+const positive = [
   "As I see it, yes",
   "Most likely",
   "Outlook good",
@@ -66,7 +60,7 @@ let positive [
   "Signs point to yes"
 ]
 
-let negative [
+const negative = [
   "Reply hazy, try again",
   "Ask again later",
   "Better not tell you now",
@@ -74,13 +68,35 @@ let negative [
   "Concentrate and ask again"
 ]
 
-let veryNegative [
+const veryNegative = [
   "Don't count on it",
   "My reply is no",
   "My sources say no",
   "Outlook not so good",
   "Very doubtful"
 ]
+
+//const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
+
+const allAnswers = veryPositive.concat(positive, negative, veryNegative)
+// This should log "The ball has shaken!"
+// and return the answer.
+function shakeBall() {
+
+  const maxAnswerIndex = allAnswers.length -1;
+
+  const randomAnswerIndex = Math.round(Math.random() * maxAnswerIndex);
+
+  console.log("The ball has shaken!");
+
+  return allAnswers[randomAnswerIndex];
+}
+
+// The answer should come from shaking the ball
+let answer = shakeBall();
+
+//const means that cant reassigned
+
   
 
 // When checking the answer, we should tell someone if the answer is
@@ -88,8 +104,20 @@ let veryNegative [
 // - positive
 // - negative
 // - very negative
-function checkAnswer(veryPositive, positive, negative, veryNegative) {
 
+function checkAnswer() {
+  if(veryPositive.includes(answer)) {
+    return "very positive"
+  } 
+  else if (positive.includes(answer)){ 
+    return "positive"
+  }
+  else if (negative.includes(answer)){ 
+    return "negative"
+  }
+  else if (veryNegative.includes(answer)){ 
+    return "very negative"
+  }
 }
   /* parameters are checking answers against the array*/ 
 /* ======= TESTS - DO NOT MODIFY ===== */
