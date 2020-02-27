@@ -45,17 +45,44 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
 
+const allAnswers = ["It is certain", "It is decidedly so", "Without a doubt", "Yes - definitely", "You may rely on it",
+"As I see it, yes","Most likely", "Outlook good", "Yes", "Signs point to yes",
+"Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again",
+"Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"];
+
+const veryPositive = ["It is certain", "It is decidedly so", "Without a doubt", "Yes - definitely", "You may rely on it"];
+const positive = ["As I see it, yes","Most likely", "Outlook good", "Yes", "Signs point to yes"];
+const negative = ["Reply hazy, try again", "Ask again later", "Better not tell you now", "Cannot predict now", "Concentrate and ask again"];
+const veryNegative = ["Don't count on it", "My reply is no", "My sources say no", "Outlook not so good", "Very doubtful"];
+
+function shakeBall() {
+  console.log("The ball has shaken!");
+  let i = Math.floor(Math.random() * allAnswers.length);
+  return allAnswers[i];
+}
+const result = shakeBall();
+
+console.log(result);
 // The answer should come from shaking the ball
-let answer;
-
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+  if (veryPositive.includes(result)) {
+    return "very positive"
+  } else if (positive.includes(result)) {
+    return "positive"
+  } else if (negative.includes(result)) {
+    return "negative"
+  } else if (veryNegative.includes(result)) {
+    return "very negative"
+  }
+}
+
+console.log(checkAnswer());
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
