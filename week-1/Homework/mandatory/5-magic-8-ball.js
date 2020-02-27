@@ -78,7 +78,7 @@ function checkAnswer() {
   } else if (negative.includes(result)) {
     return "negative"
   } else if (veryNegative.includes(result)) {
-    return "very negative"
+    return "very negative "
   }
 }
 
