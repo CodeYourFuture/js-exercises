@@ -5,7 +5,10 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(price){
+  let convertPrice = price * 1.4;
+  return convertPrice; 
+}
 
 /*
   CURRENCY FORMATTING
@@ -16,7 +19,11 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(Price) {
+ let convertPrice = Price * 5.7;
+ let finalPrice = 0.01 * convertPrice + convertPrice;
+ return finalPrice;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
