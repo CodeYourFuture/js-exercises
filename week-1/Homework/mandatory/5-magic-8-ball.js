@@ -60,8 +60,10 @@ function shakeBall(ask) {
     "Yes.",
     "Signs point to yes."
   ];
+  //concatenate the arrays?
+  let answers = veryPositive.concat(positive);
   let question = ask;
-  let answer = veryPositive[Math.floor(Math.random() * veryPositive.length)];
+  let answer = answers[Math.floor(Math.random() * answers.length)];
 
   console.log("I'm good at JavaScript?");
   console.log("The ball has shaken!");
