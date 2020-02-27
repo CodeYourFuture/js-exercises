@@ -36,7 +36,7 @@ function formatCurrency(productPrice) {
   return setCurrency + salesPrice;
 }
 
-console.log (formatCurrency(241));
+console.log (formatCurrency(productPrice));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
