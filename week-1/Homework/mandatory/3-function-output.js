@@ -12,9 +12,9 @@ function s(w1, w2) {
 
 function concatenate(firstWord, secondWord, thirdWord) {
 
-    return firstWord.concat(` ${secondWord} ${thirdWord}`);
-
-    //return firstWord.concat(" " + secondWord + " " + thirdWord);
+    return firstWord.concat(" " + secondWord + " " + thirdWord);
+    
+    //return firstWord.concat(` ${secondWord} ${thirdWord}`);
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
 }
