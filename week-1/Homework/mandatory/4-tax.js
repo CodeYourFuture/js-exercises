@@ -6,7 +6,7 @@
 */
 
 
-//Calculates the amount of the tax and adds to the product price. Returns with two decimal places with (.toFixed(2))
+//Calculates the amount of the tax (0.20 of the product price) and adds to the product price. Returns with two decimal places with (.toFixed(2))
 function calculateSalesTax(productPrice) {
 
   let salesWithTax = (0.20 * productPrice) + productPrice;
