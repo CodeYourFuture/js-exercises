@@ -6,14 +6,12 @@
 */
 
 
-//Calculates the amount of the tax (0.20 of the product price) and adds to the product price. Returns with two decimal places with (.toFixed(2))
+//Calculates the amount of the tax (0.20 of the product price) and adds to the product price. 
 function calculateSalesTax(productPrice) {
 
   let salesWithTax = (0.20 * productPrice) + productPrice;
 
-  let decimalValued = salesWithTax.toFixed(2);
-  
-  return decimalValued;
+  return salesWithTax;
 };
 
 /*
@@ -33,10 +31,10 @@ function formatCurrency(productPrice) {
 
   let setCurrency = "£";
 
-  return setCurrency + salesPrice;
+  return setCurrency + salesPrice.toFixed(2); //Returns with the currency symbol and with two decimal places to the product price (.toFixed(2))
 }
 
-console.log (formatCurrency(productPrice));
+//console.log (formatCurrency(435));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
