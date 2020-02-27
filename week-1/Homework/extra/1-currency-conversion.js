@@ -21,9 +21,11 @@ function convertToUSD(pricePoundS) {
 
 function convertToBRL(pricePoundS) {
   let priceBRL = pricePoundS * 5.7;
-  const priceTax = priceBRL * 0.1;
+  const priceTax = priceBRL * 0.01;
   const finalPrice = priceBRL + priceTax;
-  
+
+  return finalPrice;
+
 }
 
 

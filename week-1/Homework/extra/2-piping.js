@@ -17,26 +17,40 @@
 */
 
 function add(a, b) {
-  return a+b;
+
+  let adding = a + b;
+
+  // console.log(adding);
+  return  parseFloat(adding.toFixed(1));
 }
+
+
 
 function multiply(a, b) {
   return a * b;
 }
 
-function format(a, b) {
-  let number = a || b; 
+function format(number) {
+
   return "£" + number; 
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = format(multiply(add(startingValue, 10), 2));
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+function calculation () {
+   let addNew = add(startingValue, 10);
+    let multiplyNew = multiply(addNew, 2);
+    let formatFinal = format(multiplyNew);
+
+    return formatFinal;
+}
+
+let goodCode = calculation();
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
