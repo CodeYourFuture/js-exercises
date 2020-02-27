@@ -71,18 +71,32 @@ let possibleAnswers = ["It is certain",
 
 
 function shakeBall() {
-  return `The ball has shaken!`
+  
+  console.log(`The ball has shaken!`);
+  return answer;
 }
 
 // The answer should come from shaking the ball
-let answer ;
-
+let answer = possibleAnswers[Math.floor(Math.random()* possibleAnswers.length)] ;
+console.log(answer)
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  if (answer <= 4) {
+    return `very positive`;
+  } else if (answer > 4 && answer < 9) {
+    return `positive`;
+  } else if (answer > 9 && answer < 14) {
+    return `negative`;
+  } else {
+    return "very negative";
+  }
+ 
+}
+console.log(checkAnswer());
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
