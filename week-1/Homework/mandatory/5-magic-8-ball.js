@@ -45,9 +45,12 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
+let answerNumber;
 let producedAnswer ;
 function shakeBall() {
-  let answerNumber  =  Math.floor(Math.random() * 20) + 1 ;
+  answerNumber  =  Math.floor(Math.random() * 20) + 1 ;
+  // producedAnswer = answerNumber;
+  console.log("The ball has shaken!");
   switch(answerNumber){
     case 1:
       producedAnswer = "It is certain.";
@@ -110,35 +113,54 @@ function shakeBall() {
       producedAnswer = "Very doubtful.";
       break;
   }
-  return answerNumber;
-}
+    
+    return producedAnswer;
+  }
+  
 
 // The answer should come from shaking the ball
-let answer = producedAnswer;
+let answer = answerNumber;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer(answerNumber) {
-  let answerState;
+
+function checkAnswer(answer) {
+  console.log(answer);
   switch(answerNumber){
-    case 1 - 5:
-      answerState = "very positive";
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+      return `very positive`;
       break;
-    case 6 - 10:
-      answerState = "positive";
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+    case 10:
+      return `positive`;
       break;
-    case 11 - 15:
-      answerState = "negative";
+    case 11:
+    case 12:
+    case 13:
+    case 14:
+    case 15:
+      return `negative`;
       break;
-    case 16 - 20:
-      answerState = "very negative";
+    case 16:
+    case 17:
+    case 18:
+    case 19:
+    case 20:
+      return `very negative`;
       break;
   }
-  return answerState;
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
