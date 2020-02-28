@@ -28,7 +28,7 @@ function multiply(a,b) {
 }
 
 function format(a) {
-  return "£" + a.toString();
+  return `£${a}`;
 }
 
 const startingValue = 2

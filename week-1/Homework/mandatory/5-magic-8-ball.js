@@ -78,8 +78,9 @@ function shakeBall() {
 
   const answers = veryPositive.concat(positive).concat(negative).concat(veryNegative);
 
-  let answer = answers[Math.floor(Math.random() * Math.floor(19))]
+  let answer = answers[Math.floor(Math.random() * Math.floor(answers.length-1))]
 
+  //array answers got 20 elements 0 ... 19
 
   return answer
 
