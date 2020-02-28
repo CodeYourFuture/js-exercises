@@ -2,7 +2,7 @@
 function getNumber() {
   return Math.random() * 10;
 }
-// will return a number between 0 and 1 and it will multiply by 10
+// will return a number between 0 and 1 but not 1
 
 // Add comments to explain what this function does. You're meant to use Google!
 function s(w1, w2) {
