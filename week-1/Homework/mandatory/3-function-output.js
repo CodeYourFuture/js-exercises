@@ -1,14 +1,17 @@
 // Add comments to explain what this function does. You're meant to use Google!
+// returns a random integer from 0 to 9
 function getNumber() {
     return Math.random() * 10;
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
+// returns concatenation W1 + W2  for example >>> w1="Afshin" and w2="Karamifar"  >> returns AfshinKaramifar
 function s(w1, w2) {
     return w1.concat(w2);
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
+    return `${firstWord} ${secondWord} ${thirdWord}`;
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
 }
