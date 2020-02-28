@@ -16,43 +16,53 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(a, b) {
+  const total = a + b;
+  return total;
 }
 
-function multiply() {
-
+function multiply(a, b) {
+  const total = a * b;
+  return total;
 }
 
-function format() {
-
+function format(a) {
+  const formated = "£" + a;
+  return formated;
 }
 
-const startingValue = 2
+const startingValue = 2;
+
+let finalResult = format(multiply(add(startingValue, 10), 2));
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+// All the code is written on one line, more difficult to read and modify.
+
+let badCode = finalResult;
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+const stepOne = add(startingValue, 10);
+const stepTwo = multiply(stepOne, 2);
+const stepThree = format(stepTwo);
 
+let goodCode = stepThree;
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
