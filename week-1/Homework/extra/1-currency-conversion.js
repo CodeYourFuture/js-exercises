@@ -4,8 +4,10 @@
   The business is breaking out into a new market and need to convert prices to USD
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
-
-function convertToUSD() {}
+console.clear();
+function convertToUSD(dollar) {
+  return dollar * 1.4;
+}
 
 /*
   CURRENCY FORMATTING
@@ -16,7 +18,10 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(price) {
+  let UKMoney = price * 5.7;
+  return UKMoney + (0.01 * UKMoney);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
