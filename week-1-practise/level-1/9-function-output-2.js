@@ -1,4 +1,5 @@
-// this function generates a random number between 0 and 1(excluded) and multiply the generated number by 10
+// this function generates a random number between 0 and 10(excluded)
+
 function getNumber() {
   return Math.random() * 10
 }
