@@ -14,6 +14,12 @@ function getRemainder(a, b) {
     return "The remainder is %{remainder}"
 }
 
+
+function getRemainder (a,b) {
+    remainder = a % b;
+
+    return `The remainder is ${remainder}`
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
