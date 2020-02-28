@@ -1,18 +1,29 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
-function trimWord(word) {
-  return wordtrim();
+   function trimWord(word) {
+      return wordtrim();
 }
+    function trimWord(word) {
+      return word.trim();
+    }
+
 
 function getWordLength(word) {
   return "word".length()
 }
+function getWordLength(word) {
+   return word.length;
+}
+
+
 
 function multiply(a, b, c) {
   a * b * c;
   return;
 }
-
+function multiply(a, b, c) {
+  return a * b * c;
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
