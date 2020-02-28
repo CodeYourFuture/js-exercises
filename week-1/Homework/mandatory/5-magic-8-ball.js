@@ -45,84 +45,88 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
+let randomNumber = Math.floor(Math.random() * 20);
+
+let allAnswers = [
+	'It is certain.',
+	'It is decidedly so.',
+	'Without a doubt.',
+	'Yes - definitely.',
+	'You may rely on it.',
+	'As I see it, yes.',
+	'Most likely.',
+	'Outlook good.',
+	'Yes.',
+	'Signs point to yes.',
+	'Reply hazy, try again.',
+	'Ask again later.',
+	'Better not tell you now.',
+	'Cannot predict now.',
+	'Concentrate and ask again.',
+	"Don't count on it.",
+	'My reply is no.',
+	'My sources say no.',
+	'Outlook not so good.',
+	'Very doubtful.'
+];
+
 function shakeBall() {
+	console.log('The ball has shaken!');
 
-  let randomNumber = Math.floor(Math.random() * 20);
-
-  console.log("The ball has shaken!");
-
-  let allAnswers = [
-    "It is certain.",
-    "It is decidedly so.",
-    "Without a doubt.",
-    "Yes - definitely.",
-    "You may rely on it.",
-    "As I see it, yes.",
-    "Most likely.",
-    "Outlook good.",
-    "Yes.",
-    "Signs point to yes.",
-    "Reply hazy, try again.",
-    "Ask again later.",
-    "Better not tell you now.",
-    "Cannot predict now.",
-    "Concentrate and ask again.",
-    "Don't count on it.",
-    "My reply is no.",
-    "My sources say no.",
-    "Outlook not so good.",
-    "Very doubtful.",
-  ];
-
-  return allAnswers[randomNumber];
+	return allAnswers[randomNumber];
 }
 
 // The answer should come from shaking the ball
-let answer = function generateAnswer (){
- 
-}
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() { }
+function checkAnswer(answer) {
+	if (randomNumber < 5) {
+		return `Very positive`;
+	}
+	if (randomNumber > 4 && randomNumber < 10) {
+		return `positive`;
+	}
+	if (randomNumber > 9 && randomNumber < 15) {
+		return `negative`;
+	} else {
+		return `very negative`;
+	}
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function () {
-  log(...arguments);
-  logged = arguments[0];
+console.log = function() {
+	log(...arguments);
+	logged = arguments[0];
 };
 
 function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+	let status;
+	if (expr) {
+		status = 'PASSED';
+	} else {
+		status = 'FAILED';
+	}
 
-  logged = undefined;
-  console.log(`${test_name}: ${status}`);
+	logged = undefined;
+	console.log(`${test_name}: ${status}`);
 }
 
 const validAnswers = [];
 function testAll() {
-  const answer = shakeBall();
-  test(
-    `shakeBall logs "The ball has shaken!"`,
-    logged === "The ball has shaken!"
-  );
-  test(`shakeBall returns an string answer"`, typeof answer === "string");
-  test(
-    `checkAnswer returns the level of positivity"`,
-    ["very positive", "positive", "negative", "very negative"].includes(
-      checkAnswer(answer)
-    )
-  );
+	const answer = shakeBall();
+	test(`shakeBall logs "The ball has shaken!"`, logged === 'The ball has shaken!');
+	test(`shakeBall returns an string answer"`, typeof answer === 'string');
+	test(
+		`checkAnswer returns the level of positivity"`,
+		[ 'very positive', 'positive', 'negative', 'very negative' ].includes(checkAnswer(answer))
+	);
 }
 
 testAll();
