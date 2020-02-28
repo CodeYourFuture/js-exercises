@@ -67,7 +67,7 @@ let outlook = [
     ]
   },
   {
-    category: "Positive",
+    category: "negative",
     phrases: [
       "Reply hazy, try again.",
       "Ask again later.",
@@ -77,7 +77,7 @@ let outlook = [
     ]
   },
   {
-    category: "Positive",
+    category: "very negative",
     phrases: [
       "Don't count on it.",
       "My reply is no.",
@@ -134,7 +134,7 @@ function checkAnswer(check) {
     case "My sources say no.":
     case "Outlook not so good.":
     case "Very doubtful.":
-      answerCheck = "very Negative";
+      answerCheck = "very negative";
       break;
   }
   console.log(answerCheck);
