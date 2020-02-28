@@ -44,27 +44,25 @@ Very doubtful.
 */
 
 let array = [
+  // Very Positive
   "It is certain",
   "It is decidedly so",
   "Without a doubt",
   "Yes - definitely",
   "You may rely on it",
-  // ];
-  // let positive = [
+  // Positive:
   "As I see it, yes",
   "Most likely",
   "Outlook good",
   "Yes",
   "Signs point to yes",
-  // ];
-  // let negative = [
+  // Negative:
   "Reply hazy, try again",
   "Ask again later",
   "Better not tell you now",
   "Cannot predict now",
   "Concentrate and ask again.",
-  // ];
-  // let veryNegative = [
+  // very Negative
   "Don't count on it",
   "My reply is no",
   "My sources say no",
@@ -92,7 +90,6 @@ function shakeBall() {
 // - positive
 // - negative
 // - very negative
-
 let answerType;
 
 function checkAnswer(answer) {
