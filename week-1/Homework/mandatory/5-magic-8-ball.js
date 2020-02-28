@@ -46,7 +46,7 @@ Very doubtful.
 //used const instead of let as none of my variables will change or values I reassigned 
 
 const veryPositive = [
-  "It is certain",
+  "It is certain", 
   "It is decidedly so",
   "Without a doubt",
   "Yes - definitely",
@@ -77,8 +77,9 @@ const veryNegative = [
   "Very doubtful"
 ]
 
+//concat is used as a string combines all arrays thus making it all into a new variable array
 const allAnswers = veryPositive.concat(positive, negative, veryNegative)
-//const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
+//const new_array = old_array.concat([value0[, value1[, ...[, value19]]]])
 
 // This should log "The ball has shaken!"
 // and return the answer.
@@ -97,8 +98,6 @@ function shakeBall() {
 let answer = shakeBall();
 
 //const means that cant reassigned
-
-  
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
@@ -121,6 +120,7 @@ function checkAnswer() {
   }
 }
   /* parameters are checking answers against the array*/ 
+  
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
