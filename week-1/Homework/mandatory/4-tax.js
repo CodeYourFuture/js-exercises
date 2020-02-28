@@ -18,12 +18,14 @@ function calculateSalesTax(productPrice) {
   Write a function that transforms numbers into the format £0.00
 
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
-*/
+  */
 
 function formatCurrency(productPrice) {
   let totalPrice = calculateSalesTax(productPrice);
   return ("£" + totalPrice);
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

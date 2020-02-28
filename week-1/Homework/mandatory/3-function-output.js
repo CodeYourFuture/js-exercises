@@ -21,7 +21,7 @@ function concatenate(firstWord, secondWord, thirdWord) {
 
 //return firstWord + " " + secondWord + " " + thirdWord;
 
-// return `${firstWord} ${secondWord} ${thirdWord}`;  
+// return `${firstWord} ${secondWord} ${thirdWord}`;  - "String" ${Interpolation}
 
 return firstWord.concat(" ", secondWord, " ", thirdWord);
 }

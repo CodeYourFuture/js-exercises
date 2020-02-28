@@ -42,7 +42,8 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
-//const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
+
+//used const instead of let as none of my variables will change or values I reassigned 
 
 const veryPositive = [
   "It is certain",
@@ -76,9 +77,9 @@ const veryNegative = [
   "Very doubtful"
 ]
 
+const allAnswers = veryPositive.concat(positive, negative, veryNegative)
 //const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
 
-const allAnswers = veryPositive.concat(positive, negative, veryNegative)
 // This should log "The ball has shaken!"
 // and return the answer.
 function shakeBall() {
