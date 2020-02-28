@@ -65,31 +65,81 @@ let outlook = [
       "Yes.",
       "Signs point to yes."
     ]
+  },
+  {
+    category: "Positive",
+    phrases: [
+      "Reply hazy, try again.",
+      "Ask again later.",
+      "Better not tell you now.",
+      "Cannot predict now.",
+      "Concentrate and ask again."
+    ]
+  },
+  {
+    category: "Positive",
+    phrases: [
+      "Don't count on it.",
+      "My reply is no.",
+      "My sources say no.",
+      "Outlook not so good.",
+      "Very doubtful."
+    ]
   }
 ];
 function shakeBall() {
   let index = Math.floor(Math.random() * Math.floor(outlook.length));
-  let outlookIndex = outlook[index];
-  let phrases = outlookIndex.phrases;
+  let category = outlook[index];
+  let phrases = category.phrases;
   let phrasesIndex = Math.floor(Math.random() * Math.floor(phrases.length));
   let answer = phrases[phrasesIndex];
-  console.log(answer);
+  // let checkAnswer = category.category;
   console.log("The ball has shaken!");
   return answer;
 }
 
 // The answer should come from shaking the ball
-let answer;
-
+let answer = shakeBall();
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {
-  let check = shakeBall(answer);
-  let level = 
- 
+function checkAnswer(check) {
+  let answerCheck = "";
+  switch (check) {
+    case "It is certain.":
+    case "It is decidedly so.":
+    case "Without a doubt.":
+    case "Yes - definitely.":
+    case "You may rely on it.":
+      answerCheck = "very positive";
+      break;
+    case "As I see it, yes.":
+    case "Most likely.":
+    case "Outlook good.":
+    case "Yes.":
+    case "Signs point to yes.":
+      answerCheck = "positive";
+      break;
+    case "Reply hazy, try again.":
+    case "Ask again later.":
+    case "Better not tell you now.":
+    case "Cannot predict now.":
+    case "Concentrate and ask again.":
+      answerCheck = "negative";
+      break;
+    case "Don't count on it.":
+    case "My reply is no.":
+    case "My sources say no.":
+    case "Outlook not so good.":
+    case "Very doubtful.":
+      answerCheck = "very Negative";
+      break;
+  }
+  console.log(answerCheck);
+  console.log(answer);
+  return answerCheck;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
