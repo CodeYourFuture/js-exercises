@@ -4,8 +4,16 @@
   A business requires a program that calculates how much sales tax to charge
   Sales tax is 20% of the price of the product
 */
-
+/* to calculate the sales tax that is included in a company's receipt, divide the total amount received
+(for the items that are subject to sales tax) by " 1 + the sales tax rate " (in this case 1+.2=1.2) */
 function calculateSalesTax() {}
+
+function calculateSalesTax(priceOfTheProduct) {
+    let tax = 1.2 * priceOfTheProduct;
+    return tax; 
+}
+ 
+ 
 
 /*
   CURRENCY FORMATTING
@@ -17,7 +25,13 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
+//toFixed method
+
 function formatCurrency() {}
+
+function formatCurrency(priceOfTheProduct) {
+   let total = calculateSalesTax(priceOfTheProduct).toFixed(2);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
