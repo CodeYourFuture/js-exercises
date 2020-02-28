@@ -38,3 +38,4 @@ test(
   "fixed getRemainder function",
   getRemainder(23, 5) === "The remainder is 3"
 );
+console.log(introduceMe("sdhasd", 23));

@@ -45,29 +45,36 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall(ask) {
-  let veryPositive = [
-    "It is certain.",
-    "It is decidedly so.",
-    "Without a doubt.",
-    "Yes - definitely.",
-    "You may rely on it."
-  ];
-  let positive = [
-    "As I see it, yes.",
-    "Most likely.",
-    "Outlook good.",
-    "Yes.",
-    "Signs point to yes."
-  ];
-  //concatenate the arrays?
-  let answers = veryPositive.concat(positive);
-  let question = ask;
-  let answer = answers[Math.floor(Math.random() * answers.length)];
-
-  console.log("I'm good at JavaScript?");
-  console.log("The ball has shaken!");
+let outlook = [
+  {
+    category: "veryPositive",
+    phrases: [
+      "It is It is certain.",
+      "It is decidedly so.",
+      "Without a doubt.",
+      "Yes - definitely.",
+      "You may rely on it."
+    ]
+  },
+  {
+    category: "Positive",
+    phrases: [
+      "As I see it, yes.",
+      "Most likely.",
+      "Outlook good.",
+      "Yes.",
+      "Signs point to yes."
+    ]
+  }
+];
+function shakeBall() {
+  let index = Math.floor(Math.random() * Math.floor(outlook.length));
+  let outlookIndex = outlook[index];
+  let phrases = outlookIndex.phrases;
+  let phrasesIndex = Math.floor(Math.random() * Math.floor(phrases.length));
+  let answer = phrases[phrasesIndex];
   console.log(answer);
+  console.log("The ball has shaken!");
   return answer;
 }
 
@@ -79,7 +86,11 @@ let answer;
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+  let check = shakeBall(answer);
+  let level = 
+ 
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
