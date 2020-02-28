@@ -15,27 +15,33 @@
   3. Write a more readable version of what you wrote in step 2 under the BETTER PRACTICE comment. Assign
   the final result to the variable goodCode
 */
-
-function add() {
-
+console.clear();
+function add( a, b) {
+  let sum = a + b; // 2.4 + 5.3 = 7.69999999
+  let roundNumber = Math.round(sum * 10)/10; // 7.6999999 * 10 = 76.99999  >>  round (76.99999) = 77  >> 77 / 10 = 7.7
+  return roundNumber;
 }
 
-function multiply() {
-
+function multiply( a, b) {
+  let multiple = a * b;
+  return multiple;
 }
 
-function format() {
-
+function format(number) {
+  let poundFormat = `£${number}`;
+  return poundFormat;
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+// I think this code is too complexe becuse it  used nested functions and it's too hard for others and it's not readable 
+let badCode = format(multiply(add(startingValue,10),2)); 
 
 /* BETTER PRACTICE */
-
-let goodCode = 
+let addNumber = add(startingValue,10);
+let multipleNumber = multiply(addNumber,2);
+let goodCode = format(multipleNumber);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
