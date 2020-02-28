@@ -1,14 +1,40 @@
-// There is a syntax error in this code. Fix it.
+// There are syntax errors in this code - can you fix it to pass the tests?
 
-function addNumbers(a b c) {
-    return a + b + c;
+function addNumbers(a, b, c) {
+  return a + b + c
 }
 
-var result = addNumbers(1, 3, 4);
-console.log(result); // Expected result 8 - Run the program and make sure it works
+function introduceMe(name, age) {
+  return 'Hello, my name is ' + name + ' and I am ' + age + ' years old'
+}
 
+function getRemainder(a, b) {
+  let remainder = a % b
 
-// Answer these questions:
-// 1. How many parameters does the function take?
-// 2. What is the function name?
-// 3. Where is the function called? with what parameters?
+  // Use string interpolation here
+  return `The remainder is ${remainder}`
+}
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+function test(test_name, expr) {
+  let status
+  if (expr) {
+    status = 'PASSED'
+  } else {
+    status = 'FAILED'
+  }
+
+  console.log(`${test_name}: ${status}`)
+}
+
+test('fixed addNumbers function - case 1', addNumbers(3, 4, 6) === 13)
+test(
+  'fixed introduceMe function',
+  introduceMe('Sonjide', 27) ===
+    'Hello, my name is Sonjide and I am 27 years old',
+)
+test(
+  'fixed getRemainder function',
+  getRemainder(23, 5) === 'The remainder is 3',
+)

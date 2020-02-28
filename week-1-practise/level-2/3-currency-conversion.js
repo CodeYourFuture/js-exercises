@@ -5,14 +5,16 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(number) {
+  return number * 1.4
+}
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
-var product = "The life and times of Mozafar Haider";
-var price = 12.5;
-var priceInUSD = convertToUSD(price);
+let product = 'The life and times of Mozafar Haider'
+let price = 12.5
+let priceInUSD = convertToUSD(price)
 
-console.log("Product: " + product);
-console.log("Price in USD: " + priceInUSD);
+console.log('Product: ' + product)
+console.log('Price in USD: ' + priceInUSD)

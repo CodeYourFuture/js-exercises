@@ -10,22 +10,25 @@
   As a learning exercise (you wouldn't do this normally), do all of the above in 1 line of code 
 */
 
-var startingValue = 5;
+let startingValue = 5
+let result = multiply(startingValue, 2)
+result = add(result, 10)
+result = format(result)
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */
 
 function add(a, b) {
-  return a + b;
+  return a + b
 }
 
 function multiply(a, b) {
-  return a * b;
+  return a * b
 }
 
 function format(num) {
-  return "£" + num.toFixed(2);
+  return '£' + num.toFixed(2)
 }
 
-console.log("Expected result: 20.00");
-console.log("Actual result: " + result);
+console.log('Expected result: 20.00')
+console.log('Actual result: ' + result)
