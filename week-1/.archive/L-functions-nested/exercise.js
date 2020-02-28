@@ -1,14 +1,19 @@
-function studentsAndMentors(numberOfStudents, numberOfMentors) {
-    let studentsInProcent = Math.round(numberOfStudents * 100 / 23)
-    let mentorsInProcent = Math.round(numberOfMentors * 100 / 23)
-    return [studentsInProcent, mentorsInProcent]
+const numberOfStudents = 150;
+const numberOfMentors = 9;
+const totalPeople = numberOfStudents + numberOfMentors;
+
+
+function getPercentage(numberInGroup) {
+    let percentage = Math.round(numberInGroup * 100 / totalPeople)
+    return percentage
 }
 
 // console.log(studentsAndMentors(15, 8))
 
 
 function createMessage(nameOfSchool) {
-    const message = `At ${nameOfSchool} the are ${studentsAndMentors(15,null)[0]}% of the students and ${studentsAndMentors(null,8)[1]} %`
+
+    const message = `At ${nameOfSchool} the are ${getPercentage(numberOfStudents)}% of the students and ${getPercentage(numberOfMentors)}% mentors`
     return message
 }
 
