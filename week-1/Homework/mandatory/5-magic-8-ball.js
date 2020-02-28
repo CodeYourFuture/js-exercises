@@ -105,9 +105,9 @@ let answer = shakeBall();
 // - positive
 // - negative
 // - very negative
-function checkAnswer(check) {
+function checkAnswer(answer) {
   let answerCheck = "";
-  switch (check) {
+  switch (answer) {
     case "It is certain.":
     case "It is decidedly so.":
     case "Without a doubt.":
