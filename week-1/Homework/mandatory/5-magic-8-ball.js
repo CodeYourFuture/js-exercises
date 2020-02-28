@@ -45,17 +45,102 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+console.clear();
+let shakingBallAnswer;
+
+function shakeBall() {
+  let shakingBall = Math.round(Math.random() * 20);
+  switch (shakingBall) {
+    case 1:
+      shakingBallAnswer = "It is certain.";
+      break;
+    case 2:
+      shakingBallAnswer = "It is decidedly so.";
+      break;
+    case 3:
+      shakingBallAnswer = "Without a doubt.";
+      break;
+    case 4:
+      shakingBallAnswer = "Yes - definitely.";
+      break;
+    case 5:
+      shakingBallAnswer = "You may rely on it.";
+      break;
+    case 6:
+      shakingBallAnswer = "As I see it, yes.";
+      break;
+    case 7:
+      shakingBallAnswer = "Most likely.";
+      break;
+    case 8:
+      shakingBallAnswer = "Outlook good.";
+      break;
+    case 9:
+      shakingBallAnswer = "Yes.";
+      break;
+    case 10:
+      shakingBallAnswer = "Signs point to yes.";
+      break;
+    case 11:
+      shakingBallAnswer = "Reply hazy, try again.";
+      break;
+    case 12:
+      shakingBallAnswer = "Ask again later.";
+      break;
+    case 13:
+      shakingBallAnswer = "Better not tell you now.";
+      break;
+    case 14:
+      shakingBallAnswer = "Cannot predict now.";
+      break;
+    case 15:
+      shakingBallAnswer = "Concentrate and ask again.";
+      break;
+    case 16:
+      shakingBallAnswer = "Don't count on it.";
+      break;
+    case 17:
+      shakingBallAnswer = "My reply is no.";
+      break;
+    case 18:
+      shakingBallAnswer = "My sources say no.";
+      break;
+    case 19:
+      shakingBallAnswer = "Outlook not so good.";
+      break;
+    case 20:
+      shakingBallAnswer = "Very doubtful.";
+      break;
+  }
+  console.log("The ball has shaken!");
+  return `${shakingBall}`;  
+}
 
 // The answer should come from shaking the ball
-let answer;
-
+let answer = shakingBallAnswer;
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  let levelOfPositivity;
+  switch (true) {
+    case answer <= 5:
+      levelOfPositivity = "very positive";
+      break;
+    case answer <= 10:
+      levelOfPositivity = "positive";
+      break;
+    case answer <= 15:
+      levelOfPositivity = "negative";
+      break;
+    case answer <= 20:
+      levelOfPositivity = "very negative";
+      break;
+  } 
+  return `${levelOfPositivity}`;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
@@ -78,6 +163,7 @@ function test(test_name, expr) {
 }
 
 const validAnswers = [];
+
 function testAll() {
   const answer = shakeBall();
   test(
