@@ -4,11 +4,13 @@
   A business requires a program that calculates how much sales tax to charge
   Sales tax is 20% of the price of the product
 */
+const salesTax = 20 / 100;
+const amount = productPrice;
 
-function calculateSalesTax(sTax, product) {
-  return sTax * product;
+function calculateSalesTax(amount) {
+  return amount * salesTax;
 }
-calculateSalesTax(0.2, 1000);
+calculateSalesTax(1000);
 
 /*
   CURRENCY FORMATTING
