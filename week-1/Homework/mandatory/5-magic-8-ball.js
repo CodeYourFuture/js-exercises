@@ -60,7 +60,7 @@ let checkAnswer = function (answer){
   if ( answer === "Yes."){
     return "positive"
   }if ( answer === "It is certain."){
-    return " very positive"
+    return "very positive"
   }
   if ( answer === "Ask again later."){
     return "negative"
