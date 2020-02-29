@@ -87,9 +87,10 @@ let outlook = [
     ]
   }
 ];
+let index = Math.floor(Math.random() * Math.floor(outlook.length));
+let category = outlook[index];
+
 function shakeBall() {
-  let index = Math.floor(Math.random() * Math.floor(outlook.length));
-  let category = outlook[index];
   let phrases = category.phrases;
   let phrasesIndex = Math.floor(Math.random() * Math.floor(phrases.length));
   let answer = phrases[phrasesIndex];
@@ -100,46 +101,18 @@ function shakeBall() {
 
 // The answer should come from shaking the ball
 let answer = shakeBall();
+
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer(check) {
-  let answerCheck = "";
-  switch (check) {
-    case "It is certain.":
-    case "It is decidedly so.":
-    case "Without a doubt.":
-    case "Yes - definitely.":
-    case "You may rely on it.":
-      answerCheck = "very positive";
-      break;
-    case "As I see it, yes.":
-    case "Most likely.":
-    case "Outlook good.":
-    case "Yes.":
-    case "Signs point to yes.":
-      answerCheck = "positive";
-      break;
-    case "Reply hazy, try again.":
-    case "Ask again later.":
-    case "Better not tell you now.":
-    case "Cannot predict now.":
-    case "Concentrate and ask again.":
-      answerCheck = "negative";
-      break;
-    case "Don't count on it.":
-    case "My reply is no.":
-    case "My sources say no.":
-    case "Outlook not so good.":
-    case "Very doubtful.":
-      answerCheck = "very negative";
-      break;
-  }
-  console.log(answerCheck);
+function checkAnswer() {
+  shakeBall();
   console.log(answer);
-  return answerCheck;
+  let checkingAnswer = category.category;
+  console.log(checkingAnswer);
+  return checkingAnswer;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

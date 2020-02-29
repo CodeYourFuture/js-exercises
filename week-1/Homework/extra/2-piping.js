@@ -18,7 +18,7 @@
 
 function add(a, b) {
   let sum = a + b;
-  return sum;
+  return Number(sum.toFixed(2));
 }
 
 function multiply(c, d) {
