@@ -45,11 +45,43 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
+
+const answears = [
+  ['It is certain',
+    'It is decidedly so',
+    'Without a doubt',
+    'Yes - definitely',
+    'You may rely on it'
+  ],
+  ['As I see it, yes',
+    'Most likely',
+    'Outlook good',
+    'Yes',
+    'Signs point to yes'
+  ],
+  ['Reply hazy',
+    'try again',
+    'Ask again later',
+    'Better not tell you now',
+    'Cannot predict now',
+    'Concentrate and ask again'
+  ],
+  ['Don\'t count on it',
+    'My reply is no',
+    'My sources say no',
+    'Outlook not so good',
+    'Very doubtful'
+  ]
+]
+
+let randomArray = answears[Math.floor(Math.random() * answears.length)]
+let randomAnswear = randomArray[Math.floor(Math.random() * randomArray.length)]
+
 function shakeBall() {
   console.log("The ball has shaken!")
-
+  return randomAnswear
 }
-
+console.log('first function', shakeBall())
 // The answer should come from shaking the ball
 let answer;
 
@@ -58,7 +90,22 @@ let answer;
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(randomArray) {
+  console.log('second function', randomAnswear)
+  if (randomArray === answears[0]) {
+    console.log('Very positive')
+    return 'Very positive'
+  } else if (randomArray === answears[1]) {
+    console.log('positivee')
+    return 'positive'
+  } else if (randomArray === answears[2]) {
+    console.log('negative')
+    return 'negative'
+  } else {
+    console.log('very negative')
+    return 'very negative'
+  }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
