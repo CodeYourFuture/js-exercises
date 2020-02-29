@@ -43,7 +43,16 @@ Outlook not so good.
 Very doubtful.
 */
 
-//used const instead of let as none of my variables will change or values I reassigned 
+/*
+sonjide's notes - pre-planning idea - abstract - 
+Create arrays which includes all the values. 
+Create 2 functions - 
+Function 1 - this will call 4 variables and include the values randomly - note use - Math.round+Math.random() function.  
+Function 2 - this is my if ..else if statement that gets the answers (values inside the arrays)
+*/
+
+
+//Created an ARRAY - used const instead of let as none of my variables will change or reassigned 
 
 const veryPositive = [
   "It is certain", 
@@ -77,12 +86,15 @@ const veryNegative = [
   "Very doubtful"
 ]
 
+//created a new string using the concat() method concatenates the string arguments to the calling string and returns a new string.
 //concat is used as a string combines all arrays thus making it all into a new variable array
 const allAnswers = veryPositive.concat(positive, negative, veryNegative)
 //const new_array = old_array.concat([value0[, value1[, ...[, value19]]]])
 
-// This should log "The ball has shaken!"
+// This should log "The ball has shaken!" - the console.log but must before returning an answer
 // and return the answer.
+
+//second function which will call all the values inside the arrays
 function shakeBall() {
 
   const maxAnswerIndex = allAnswers.length -1;
@@ -104,7 +116,7 @@ let answer = shakeBall();
 // - positive
 // - negative
 // - very negative
-
+//this function checks all the options using an if else if statement, by checking the parameters
 function checkAnswer() {
   if(veryPositive.includes(answer)) {
     return "very positive"
@@ -120,7 +132,7 @@ function checkAnswer() {
   }
 }
   /* parameters are checking answers against the array*/ 
-  
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
