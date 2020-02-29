@@ -13,11 +13,14 @@ function s(w1, w2) {
 // concat() joins two or more strings and returns a new joined string
 //(if w1,w2 are arrays it will merge them)
 
-)
+
 
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
+}
+function concatenate(firstWord, secondWord, thirdWord) {
+    return 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
