@@ -47,7 +47,7 @@ Very doubtful.
 // and return the answer.
 let outlook = [
   {
-    category: "veryPositive",
+    category: "very positive",
     phrases: [
       "It is It is certain.",
       "It is decidedly so.",
@@ -57,7 +57,7 @@ let outlook = [
     ]
   },
   {
-    category: "Positive",
+    category: "positive",
     phrases: [
       "As I see it, yes.",
       "Most likely.",
@@ -87,14 +87,14 @@ let outlook = [
     ]
   }
 ];
-let index = Math.floor(Math.random() * Math.floor(outlook.length));
-let category = outlook[index];
+
+let index = Math.floor(Math.random() * outlook.length); //I search in the
+let indexCategory = outlook[index]; // I store the index
 
 function shakeBall() {
-  let phrases = category.phrases;
-  let phrasesIndex = Math.floor(Math.random() * Math.floor(phrases.length));
-  let answer = phrases[phrasesIndex];
-  // let checkAnswer = category.category;
+  let phrases = indexCategory.phrases; // I enter in phareses
+  let phrasesIndex = Math.floor(Math.random() * phrases.length); //I search in phrases
+  let answer = phrases[phrasesIndex]; // I store the answer
   console.log("The ball has shaken!");
   return answer;
 }
@@ -108,9 +108,8 @@ let answer = shakeBall();
 // - negative
 // - very negative
 function checkAnswer() {
-  shakeBall();
   console.log(answer);
-  let checkingAnswer = category.category;
+  let checkingAnswer = indexCategory.category;
   console.log(checkingAnswer);
   return checkingAnswer;
 }
