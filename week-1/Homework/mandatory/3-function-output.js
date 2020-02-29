@@ -1,6 +1,6 @@
 // Add comments to explain what this function does. You're meant to use Google!
 function getNumber() {
-    return Math.random() * 10; //get the number and returns a random number from 0 to 9
+    return Math.floot(Math.random()) * 10; //get the number and returns a random number from 0 to 9
 }
 
 // Add comments to explain what this function does. You're meant to use Google!
