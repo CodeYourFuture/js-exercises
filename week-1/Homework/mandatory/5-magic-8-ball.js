@@ -48,12 +48,13 @@ Very doubtful.
 function shakeBall(answer) {
    console.log ("This is Magic 8 Ball . Ask Question ?");
    console.log ("The ball has shaken!");
-   const ask = Math.floor((Math.random() * 4 ) + 1);
-  if (ask === 1 ){
+   const ask = Math.floor((Math.random() * 4 ));
+  if (ask === 0 ){
     answer = ("Very positive");
   }
-  if (ask === 2 ){
-    answer = ("positive");
+  if (ask === 1 ){
+    answer = areMyData[1];
+    //answer = ("positive");
   }
   if (ask === 3 ){
     answer = ("negative");
@@ -62,20 +63,38 @@ function shakeBall(answer) {
     answer = ("Very negative");
   }
   console.log (answer);
-  return answer;
+  return ask;
 
 }
 
     // The answer should come from shaking the ball
 let answer;
+let ask = 0 ;
 shakeBall(answer);
 checkAnswer(answer);
 
 // data 
-const {Verypositive = ["It is certain." , " It is decidedly so. " , " Without a doubt. " , " Yes - definitely. " , " You may rely on it."];
-const Positive = [" As I see it, yes." , " Most likely. " , " Outlook good. " , "Yes. " , "Signs point to yes. "];
-const Negative = [" Reply hazy, try again. " , " Ask again later. " , "Better not tell you now. " , "Cannot predict now. " , " Concentrate and ask again."];
-const Verynegative = [" Don't count on it. " , " My reply is no. " , " My sources say no. " , " Outlook not so good. " , "Very doubtful. "];
+const areMyData = [ {Verypositive : ["It is certain." ,
+                                  " It is decidedly so. " ,
+                                  " Without a doubt. " , 
+                                  " Yes - definitely. " , 
+                                  " You may rely on it."] } , 
+                    { Positive : [" As I see it, yes." , 
+                                  " Most likely. " , 
+                                  " Outlook good. " , 
+                                  "Yes. " , 
+                                  "Signs point to yes. "] } ,  
+                    { Negative : [" Reply hazy, try again. " , 
+                                  " Ask again later. " , 
+                                  "Better not tell you now. " , 
+                                  "Cannot predict now. " , 
+                                  " Concentrate and ask again."] } ,
+                    { Verynegative : [" Don't count on it. " , 
+                                  " My reply is no. " , 
+                                  " My sources say no. " , 
+                                  " Outlook not so good. " , 
+                                  "Very doubtful. "] } ];
+
 
 
 // When checking the answer, we should tell someone if the answer is
@@ -83,10 +102,9 @@ const Verynegative = [" Don't count on it. " , " My reply is no. " , " My source
 // - positive
 // - negative
 // - very negative
-function checkAnswer(answer){
-  const comment = Math.floor((Math.random() * 4 ) + 1);
-  console.log (answer);
-  console.log (ask);
+function checkAnswer(ask){
+
+  return areMyData.indexOf[Math.floor(Math.random()* 4 .length)];
    
 }
 
