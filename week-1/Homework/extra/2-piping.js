@@ -16,26 +16,35 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(a, b) {
+  let sum = a + b;
+  return sum;
 }
 
-function multiply() {
- 
+function multiply(c, d) {
+  let result = c * d;
+  return result;
 }
 
 function format(f) {
-
+  return "£" + f;
 }
 
-const startingValue;
+const startingValue = `${format("")}${add(1, 3) + 10 * multiply(1, 2)}`;
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+// Because this const just do the interpolation of multiple functions.
+let badCode = startingValue;
 
 /* BETTER PRACTICE */
+function calcAll() {
+  let curency = format("");
+  let sum = add(1, 3) + 10 * multiply(1, 2);
+  let result = curency + sum;
+  return result;
+}
+let goodCode = calcAll();
 
-let goodCode = 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
