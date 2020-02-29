@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = false;
+  let isHappy = true;
 
   if (isHappy) {
     return "I am happy";
@@ -59,7 +59,7 @@ function test(test_name, expr) {
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
-  greaterThanTen() === "num is greater than or equal to 10"
+  greaterThan10() === "num is greater than or equal to 10"
 );
 test(
   "sortArray function works",
