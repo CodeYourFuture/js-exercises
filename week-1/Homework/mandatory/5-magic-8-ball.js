@@ -78,6 +78,7 @@ const myFuture = [
 ];
 let a = Math.floor(Math.random() * Math.floor(4));
 let b = Math.floor(Math.random() * Math.floor(5));
+console.log(a);
 function shakeBall() {
   console.log("The ball has shaken!");
 
@@ -92,21 +93,35 @@ function shakeBall() {
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
-switch (a) {
-  case 1:
-    text = "very positive";
-    break;
-  case 2:
-    text = "positive";
-    break;
-  case 3:
-    text = "negative";
-    break;
-  case 4:
-    text = "very negative";
-    break;
+function checkAnswer() {
+  
+//switch (a) {
+  //case 0:
+    //return  "Very positive";
+    //break;
+  //case 1:
+    //return "Positive";
+    //break;
+  //case 2:
+    //return "Negative";
+    //break;
+  //case 3:
+    //return "Very negative";
+    //break;
+//}
+//}
+if( myFuture[0].includes(answer)){
+  return "very positive";
 }
+if( myFuture[1].includes(answer)){
+  return "positive";
+}
+if( myFuture[2].includes(answer)){
+  return "negative";
+}
+if( myFuture[3].includes(answer)){
+  return "very negative";
+}}
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
