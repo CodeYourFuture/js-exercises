@@ -44,7 +44,7 @@ Very doubtful.
 */
 
 let array = [
-  // Very Positive
+  // Very Positive:
   "It is certain",
   "It is decidedly so",
   "Without a doubt",
@@ -62,7 +62,7 @@ let array = [
   "Better not tell you now",
   "Cannot predict now",
   "Concentrate and ask again.",
-  // very Negative
+  // very Negative:
   "Don't count on it",
   "My reply is no",
   "My sources say no",
@@ -73,6 +73,7 @@ let array = [
 function randomAnswer(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
+console.log(randomAnswer(array));
 
 // This should log "The ball has shaken!"
 // and return the answer.
@@ -99,10 +100,8 @@ function checkAnswer(answer) {
     answerType = "positive";
   } else if (array.indexOf(randomAnswer(array)) < 15) {
     answerType = "negative";
-  } else if (array.indexOf(randomAnswer(array)) < 20) {
-    answerType = "very negative";
   } else {
-    answerType = "Doesn't exist";
+    answerType = "very negative";
   }
   console.log(answerType);
   return answerType;
