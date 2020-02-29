@@ -26,7 +26,6 @@ function formatCurrency(productPrice) {
 }
 
 
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
