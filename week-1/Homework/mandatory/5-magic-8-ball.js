@@ -42,12 +42,37 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
+function getNumber() {
+  let pick_random = Math.floor(Math.random() * 4) + 1;
+  return pick_random;
+}
+console.log(getNumber());
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  
+  switch (randomNumber) {
+    case 1:
+      answer = "It is certain.";
+      break;
+    case 2:
+      answer = "As I see it, yes.";
+      break;
+    case 3:
+      answer = "Don't count on it.";
+      break;
+    case 4:
+      answer = "Reply hazy, try again.";
+      break;
+  }
+  console.log("The ball has shaken!");
+
+  return answer;
+}
 
 // The answer should come from shaking the ball
+let randomNumber = getNumber();
 let answer;
 
 // When checking the answer, we should tell someone if the answer is
@@ -55,7 +80,37 @@ let answer;
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  switch (answer) {
+    case "It is certain.":
+    case "It is decidedly so.":
+    case "Without a doubt.":
+    case "Yes - definitely.":
+    case "You may rely on it.":
+      return "very positive";
+
+    case "As I see it, yes.":
+      return "positive";
+
+    case "Reply hazy,try again.":
+    case "Ask again later.":
+    case "Better not tell you now.":
+    case "Cannot predict now.":
+    case "Concentrate and ask again.":
+      return "negative";
+
+    case "Don't count on it.":
+    case "My reply is no.":
+    case "My sources say no.":
+    case "Outlook not so good.":
+    case "Very doubtful.":
+      return "very negative";
+  }
+}
+
+shakeBall();
+let passed = checkAnswer(answer);
+console.log(passed);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
