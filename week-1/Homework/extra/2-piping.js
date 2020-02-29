@@ -42,11 +42,11 @@ let badCode = finalResult;
 
 /* BETTER PRACTICE */
 
-const stepOne = add(startingValue, 10);
-const stepTwo = multiply(stepOne, 2);
-const stepThree = format(stepTwo);
+const addition = add(startingValue, 10);
+const multiplication = multiply(addition, 2);
+const formated = format(multiplication);
 
-let goodCode = stepThree;
+let goodCode = formated;
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
