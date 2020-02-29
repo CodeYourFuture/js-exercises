@@ -45,17 +45,90 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+//function shakeBall() {}
 
 // The answer should come from shaking the ball
-let answer;
+//let answer;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+
+let checkAnswer = function (answer){
+  if ( answer === "Yes."){
+    return "positive"
+  }if ( answer === "It is certain."){
+    return " very positive"
+  }
+  if ( answer === "Ask again later."){
+    return "negative"
+  }
+  if ( answer === "My reply is no."){
+    return "very negative"
+  }
+}
+
+function shakeBall() {
+  
+  let number = Math.floor(Math.random()*20);
+
+  let answer;
+
+  if (number === 0) {
+    answer= 'It is certain.';
+
+  }
+  else if (number === 1) {
+     answer='It is decidedly so.';
+  }
+  else if (number=== 2) {
+     answer='Without a doubt.';
+  }
+  else if (number === 3) {
+    answer= 'Yes - definitely.';
+  }else if (number === 4) {
+    answer= 'You may rely on it';
+  }else if (number === 5) {
+    answer= 'As I see it, yes.';
+  }else if (number === 6) {
+    answer= 'Most likely';
+  }else if (number === 7) {
+    answer= 'Outlook good.';
+  }else if (number === 8) {
+    answer= 'Yes.';
+  }else if (number === 9) {
+    answer= 'Signs point to yes.';
+  }else if (number === 10) {
+    answer= 'Reply hazy, try again.';
+  }else if (number === 11) {
+    answer= 'Ask again later.';
+  }else if (number === 12) {
+    answer= 'Better not tell you now.';
+  }else if (number === 13) {
+    answer= 'Concentrate and ask again.';
+  }else if (number === 14) {
+    answer= 'Don\'t count on it.';
+  }else if (number === 15) {
+    answer= 'My reply is no.';
+  }else if (number === 16) {
+    answer= 'My sources say no.';
+  }else if (number === 17) {
+    answer= 'Outlook not so good.';
+  }else if (number === 18) {
+    answer= 'Very doubtful.';
+  }else if (number === 19) {
+    answer= 'very negative';
+  }
+console.log ("The ball has shaken!");
+
+  return answer;
+
+}
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
