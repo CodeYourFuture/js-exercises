@@ -3,8 +3,11 @@
 function trimWord(word) {
   return word.trim();
 }
-// trim - mdn
+// trim - mdn  - The trim() method returns the string stripped of whitespace from both ends. trim() does not affect the value of the string itself.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
 
+
+//
 function getWordLength(word) {
   return word.length;
 }
