@@ -27,14 +27,19 @@ function calculateSalesTax(productPrice) {
 //gets the tax added product price from function calculateSales and puts in a right currency format.
 function formatCurrency(productPrice) {
 
-  let salesPrice = calculateSalesTax(productPrice);
+  let salesPrice = productPrice + productPrice*0.20;
 
-  let setCurrency = "£";
+  //let setCurrency = "£";
 
-  return setCurrency + salesPrice.toFixed(2); //Returns with the currency symbol and with two decimal places to the product price (.toFixed(2))
+  return "£" + salesPrice; //Returns with the currency symbol and with decimal places to the product price (.toFixed(2))
+
+  // return "£" + salesPrice.toFixed(2); "THIS IS GENERATING THE REQUESTED OUTCOME BUT THE TEST FAILS"
 }
 
-//console.log (formatCurrency(435));
+const lastPrice = formatCurrency(61);
+console.log(lastPrice);
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
