@@ -1,4 +1,4 @@
-// Add comments to explain what this function does. You're meant to use Google!
+// Add comments to explain what this function does. You're meant to use Google! 
 function getNumber() {
     return Math.random() * 10;
 }
