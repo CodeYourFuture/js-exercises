@@ -18,12 +18,12 @@
 
 function add(a, b) {
   const total = a + b;
-  return total;
+  return Number(total.toFixed(2));
 }
 
 function multiply(a, b) {
   const total = a * b;
-  return total;
+  return Number(total.toFixed(2));
 }
 
 function format(a) {
