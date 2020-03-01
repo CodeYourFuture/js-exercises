@@ -4,8 +4,8 @@ function trimWord(word) {
   return word.trim();
 }
 
-function getWordLength(words) {
-  return words.length();
+function wordLength(words) {
+  return words.length;
 }
 
 function multiply(a, b, c) {
