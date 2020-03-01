@@ -9,7 +9,7 @@ function wordLength(word) {
 }
 
 function multiply(a, b, c) {
-  let  total = a * b * c;
+  let total = a * b * c;
   return total
 }
 
