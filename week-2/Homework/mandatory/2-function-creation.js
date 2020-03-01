@@ -37,18 +37,10 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  
+}
 
-/*
-Inside the array ages we have mix of data, use this data to write your sort function using what
- you have learnt from the sorting game the function should:
-- takes an array of mixed data types as input
-- remove the unwanted data without using the built-in javascript filter method
-- returns an array of sorted ages in ascending order without using the built-in javascript sort method 😎
-*/
-
-const ages = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']
-function sortAges(arr) {}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
@@ -121,9 +113,4 @@ test(
     "100%",
     "0.37%"
   ])
-);
-
-test(
-  "sortAges function works - case 1",
-  arraysEqual(sortAges(ages), [23, 45, 55, 66, 100])
 );
