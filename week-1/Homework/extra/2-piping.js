@@ -18,41 +18,41 @@
 
 function add(num1, num2) {
 
-  const total = num1 + num2;
+  let total = num1 + num2;
 
-  return total;
+  let oneDecimal = total.toFixed(1);
+
+  return oneDecimal;
 
 }
 
 function multiply(num1, num2) {
 
-  const crushNumbers = num1 * num2;
+  const multNumbers = num1 * num2;
 
-  return crushNumbers;
+  return multNumbers;
 }
 
 function format(num) {
 
-  return "£" + num;
+  return `£${num}`;
 
 }
 
-function lastResult(){
-  const startingValue = 2;
-  
-  const lastResult = format(multiply(add(startingValue, 10), 2));
-  
-  return lastResult;
-  }
 
 // Why can this code be seen as bad practice? Comment your answer.
 
 
-let badCode = lastResult;
+let badCode = format(multiply(add(startingValue, 10), 2)); //Hard to understand by another developer. What function does what?
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+const addition = add(startingValue, 10);
+const multiplation = multiply(addition, 2);
+const formattting = format(multiplation);
+
+
+let goodCode = formattting;
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
