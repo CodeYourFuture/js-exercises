@@ -36,12 +36,13 @@
  */
 // `searchRadioWaves` goes here
 
-/* ======= TESTS - DO NOT MODIFY ===== */
+/* ======= TESTS - DO NOT MODIFY ======= */
 
 function isRadioStation(frequency) {
-  // This is just a way of caching the random array internally
-  // so it's not available outside of this funtion
-  // Not best practise
+  // This is a way of storing the random frequency array inside a 
+  // function as storing it outside is bad practice. Don't worry if you
+  // don't understand some bits! You're more than welcome to ask questions
+  // at any time. :)
   if (!this.stations) {
     const stationCount = 4;
     const availableStations = new Array(stationCount)
