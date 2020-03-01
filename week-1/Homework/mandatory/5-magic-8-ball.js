@@ -103,7 +103,7 @@ function checkAnswer(answer) {
   } else {
     answerType = "very negative";
   }
-  console.log(answerType);
+  // console.log(answerType);
   return answerType;
 }
 
