@@ -5,8 +5,12 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
-
+function calculateSalesTax(_prices) {
+  return (_prices * 120) / 100;
+}
+console.log(calculateSalesTax(15));
+console.log(calculateSalesTax(17.5));
+console.log(calculateSalesTax(34));
 /*
   CURRENCY FORMATTING
   ===================
@@ -17,25 +21,39 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
-
+function formatCurrency(_prices) {
+  let price = calculateSalesTax(_prices);
+  return `£${price.toFixed(2)}`;
+}
+console.log(formatCurrency(18));
+console.log(formatCurrency(21));
+console.log(formatCurrency(40.8));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18)
-test("calculateSalesTax function - case 2 works", calculateSalesTax(16.8) === 21)
-test("calculateSalesTax function - case 3 works", calculateSalesTax(32.64) === 40.8)
+test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18);
+test(
+  "calculateSalesTax function - case 2 works",
+  calculateSalesTax(17.5) === 21
+);
+test(
+  "calculateSalesTax function - case 3 works",
+  calculateSalesTax(34) === 40.8
+);
 
-test("formatCurrency function - case 1 works", formatCurrency(15) === "£18")
-test("formatCurrency function - case 2 works", formatCurrency(16.8) === "£21")
-test("formatCurrency function - case 3 works", formatCurrency(32.64) === "£40.8")
+test("formatCurrency function - case 1 works", formatCurrency(15) === "£18.00");
+test(
+  "formatCurrency function - case 2 works",
+  formatCurrency(17.5) === "£21.00"
+);
+test("formatCurrency function - case 3 works", formatCurrency(34) === "£40.80");
