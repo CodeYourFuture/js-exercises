@@ -45,10 +45,100 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+let answer = "Positive";
+function shakeBall(answer) {
+  switch (answer) {
+    case "It is certain":
+      alert("Very Positive");
+      break;
+
+    case "It is decidedly so.":
+      alert("Very Positive");
+      break;
+
+    case "Without a doubt.":
+      alert("Very Positive");
+      break;
+
+    case "Yes - definitely.":
+      alert("Very Positive");
+      break;
+
+    case "You may rely on it.":
+      alert("Very Positive");
+      break;
+
+    case "As I see it, yes.":
+      alert("Positive");
+      break;
+
+    case "You may rely on it.":
+      alert("Positive");
+      break;
+
+    case "Most likely.":
+      alert("Positive");
+      break;
+
+    case "Outlook good.":
+      alert("Positive");
+      break;
+
+    case "Yes.":
+      alert("Positive");
+      break;
+
+    case "Signs point to yes.":
+      alert("Positive");
+      break;
+
+    case "Reply hazy, try again.":
+      alert("Negative");
+      break;
+
+    case "Ask again later.":
+      alert("Negative");
+      break;
+
+    case "Better not tell you now.":
+      alert("Negative");
+      break;
+
+    case "Cannot predict now.":
+      alert("Negative");
+      break;
+
+    case "Concentrate and ask again.":
+      alert("Negative");
+      break;
+
+    case "Don't count on it.":
+      alert("Very Negative");
+      break;
+
+    case "My reply is no.":
+      alert("Very Negative");
+      break;
+
+    case "My sources say no.":
+      alert("Very Negative");
+      break;
+
+    case "Outlook not so good.":
+      alert("Very Negative");
+      break;
+
+    case "Very doubtful.":
+      alert("Very Negative");
+      break;
+
+    default:
+      alert("Try again");
+  }
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = positive;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
