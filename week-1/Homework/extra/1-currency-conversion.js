@@ -7,6 +7,8 @@
 
 function convertToUSD(price) {
 let rate = price * 1.4;
+return rate;
+}
 console.log(convertToUSD(15.5))
 
 /*
