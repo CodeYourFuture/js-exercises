@@ -20,25 +20,20 @@ function add(num1, num2) {
 
   let total = num1 + num2;
 
-  let oneDecimal = total.toFixed(1);
-
-  return oneDecimal;
-
+  return total;
 }
 
 function multiply(num1, num2) {
 
-  const multNumbers = num1 * num2;
-
-  return multNumbers;
+  return num1 * num2;
 }
 
 function format(num) {
 
   return `£${num}`;
-
 }
 
+const startingValue = 2;
 
 // Why can this code be seen as bad practice? Comment your answer.
 
@@ -49,10 +44,10 @@ let badCode = format(multiply(add(startingValue, 10), 2)); //Hard to understand 
 
 const addition = add(startingValue, 10);
 const multiplation = multiply(addition, 2);
-const formattting = format(multiplation);
+const formatting = format(multiplation);
 
 
-let goodCode = formattting;
+let goodCode = formatting;
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
