@@ -36,6 +36,8 @@ function first5() {
   return sliced;
 }
 
+console.log(first5());
+
 function get3rdIndex(arr) {
   let index = 3;
   let element = arr[3];
@@ -65,7 +67,7 @@ test(
   "sortArray function works",
   sortArray().toString === ["a", "c", "e", "f", "n", "z"].toString
 );
-test("first5 function works", first5() == [1, 2, 3, 4, 5]);
+test("first5 function works", first5() === [1, 2, 3, 4, 5]);
 
 test(
   "get3rdIndex function works - case 1",
