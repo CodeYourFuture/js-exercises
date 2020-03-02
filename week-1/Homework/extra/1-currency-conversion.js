@@ -5,7 +5,10 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(euro) {
+  let usd = euro * 1.4;
+  return usd;
+}
 
 /*
   CURRENCY FORMATTING
@@ -16,20 +19,25 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(euro) {
+  let brl = euro * 5.7;
+  let brlPercent = (1 / 100) * brl;
+  let brlFinal = brl + brlPercent;
+  return brlFinal;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('convertToUSD function works', convertToUSD(32) === 44.8)
-test('convertToBRL function works', convertToBRL(30) === 172.71)
+test("convertToUSD function works", convertToUSD(32) === 44.8);
+test("convertToBRL function works", convertToBRL(30) === 172.71);

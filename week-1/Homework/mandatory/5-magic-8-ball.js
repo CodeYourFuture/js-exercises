@@ -45,17 +45,74 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+let outlook = [
+  {
+    category: "very positive",
+    phrases: [
+      "It is It is certain.",
+      "It is decidedly so.",
+      "Without a doubt.",
+      "Yes - definitely.",
+      "You may rely on it."
+    ]
+  },
+  {
+    category: "positive",
+    phrases: [
+      "As I see it, yes.",
+      "Most likely.",
+      "Outlook good.",
+      "Yes.",
+      "Signs point to yes."
+    ]
+  },
+  {
+    category: "negative",
+    phrases: [
+      "Reply hazy, try again.",
+      "Ask again later.",
+      "Better not tell you now.",
+      "Cannot predict now.",
+      "Concentrate and ask again."
+    ]
+  },
+  {
+    category: "very negative",
+    phrases: [
+      "Don't count on it.",
+      "My reply is no.",
+      "My sources say no.",
+      "Outlook not so good.",
+      "Very doubtful."
+    ]
+  }
+];
+
+let index = Math.floor(Math.random() * outlook.length); //I search in the
+let indexCategory = outlook[index]; // I store the index
+
+function shakeBall() {
+  let phrases = indexCategory.phrases; // I enter in phareses
+  let phrasesIndex = Math.floor(Math.random() * phrases.length); //I search in phrases
+  let answer = phrases[phrasesIndex]; // I store the answer
+  console.log("The ball has shaken!");
+  return answer;
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+  console.log(answer);
+  let checkingAnswer = indexCategory.category;
+  console.log(checkingAnswer);
+  return checkingAnswer;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;

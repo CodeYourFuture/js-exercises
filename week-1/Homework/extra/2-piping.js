@@ -16,43 +16,51 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(a, b) {
+  let sum = a + b;
+  return Number(sum.toFixed(2));
 }
 
-function multiply() {
-
+function multiply(c, d) {
+  let result = c * d;
+  return result;
 }
 
-function format() {
-
+function format(f) {
+  return "£" + f;
 }
 
-const startingValue = 2
+const startingValue = `${format("")}${add(1, 3) + 10 * multiply(1, 2)}`;
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+// Because this const just do the interpolation of multiple functions.
+let badCode = startingValue;
 
 /* BETTER PRACTICE */
-
-let goodCode = 
+function calcAll() {
+  let curency = format("");
+  let sum = add(1, 3) + 10 * multiply(1, 2);
+  let result = curency + sum;
+  return result;
+}
+let goodCode = calcAll();
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
