@@ -13,13 +13,19 @@ function mood() {
 
 function greaterThan10() {
   let num = 12;
-  let isBigEnough = function;
-
+  let isBigEnough = function() {
+    if (num > 10) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   if (isBigEnough) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
+  5;
 }
 
 function sortArray() {
