@@ -7,7 +7,7 @@
 
 // Finish the predicate function to test if the passed number is negative (less than zero)
 function isNegative(number) {
-
+return 
 }
 
 // Finish the predicate function to test if the passed number is between 0 and 10
