@@ -6,7 +6,8 @@
 */
 
 function calculateSalesTax(productPrice) {
-  
+  let tax = (productPrice * 0.2) + productPrice;
+  return tax;
 }
 
 /*
@@ -14,12 +15,16 @@ function calculateSalesTax(productPrice) {
   ===================
   The business has informed you that prices must have 2 decimal places
   They must also start with the currency symbol
-  Write a function that transforms numbers into the format £0.00
+  Write a function that transforms numbers into the format £10.0000000000.
 
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
-*/
+  */
 
-function formatCurrency() {}
+function formatCurrency(productPrice) {
+  let totalPrice = calculateSalesTax(productPrice);
+  return ("£" + totalPrice);
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
