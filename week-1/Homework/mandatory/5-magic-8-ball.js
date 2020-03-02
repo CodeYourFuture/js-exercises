@@ -57,7 +57,7 @@ let answer = ["very positive", "positive", "negative", "very negative"];
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {
+function checkAnswer(answer) {
   Math.floor(Math.random() * 3);
 }
 
