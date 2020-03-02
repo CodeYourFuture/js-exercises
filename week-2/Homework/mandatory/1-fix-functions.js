@@ -26,16 +26,26 @@ function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
   let sortedLetters = letters.sort();
 
+  /*
+  My Array is create the same result as test but 
+  test has Failed !
+  */
   return sortedLetters;
 }
+
+//to see what is the result
+console.log(sortArray());
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   let sliced = numbers.slice(0, 5);
-
+  /*
+  My Array is create the same result as test but 
+  test has Failed !
+  */
   return sliced;
 }
-
+//to see what is the result
 console.log(first5());
 
 function get3rdIndex(arr) {
@@ -65,7 +75,7 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray().toString === ["a", "c", "e", "f", "n", "z"].toString
+  sortArray() === ["a", "c", "e", "f", "n", "z"]
 );
 test("first5 function works", first5() === [1, 2, 3, 4, 5]);
 
