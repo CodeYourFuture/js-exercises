@@ -5,7 +5,19 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  let arr1 = [];
+  let strArrItem = "";
+
+  for (let i = 0; i < strArr.length; i++) {
+    strArrItem = strArr[i].trim();
+    if (strArrItem.charAt(0) == "/") {
+      strArrItem = strArrItem.substr(1);
+    }
+    arr1.push(strArrItem.toLowerCase());
+  }
+  return arr1;
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +27,9 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  return typeof num == "number" && num % 2 == 0 && num <= 100;
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,7 +40,13 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  arr1 = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (i != index) {
+      arr1.push(arr[i]);
+    }
+  }
+  return arr1;
 }
 
 /*
@@ -38,8 +58,27 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+  arr1 = [];
+
+  /* Math.Ceil of any positive float between 0 and 1 is 1
+      and I target those numbers such as 0.434 or 0.3
+      and I have added 2 digit in fractional part
+      but the number is not one 
+  */
+
+  for (i = 0; i < arr.length; i++) {
+    newnum = arr[i] > 100 ? 100 : arr[i];
+    newnum =
+      Math.ceil(newnum) === 1 && !(newnum === 1)
+        ? `${newnum.toFixed(2)}%`
+        : `${newnum}%`;
+    arr1.push(newnum);
+  }
+
+  return arr1;
 }
+
+console.log(formatPercentage([23, 18, 187.2, 0.372]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
