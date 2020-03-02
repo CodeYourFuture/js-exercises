@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
@@ -12,8 +12,9 @@ function mood() {
 }
 
 function greaterThan10() {
-  let num = 10;
-  let isBigEnough;
+  let num = 12;
+  let isBigEnough (){
+  
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -24,7 +25,7 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
