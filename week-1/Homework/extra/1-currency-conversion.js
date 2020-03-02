@@ -5,8 +5,12 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(price) {// price as input
+     let gbpToUSD = price * 1.4; // converts pounds to dollar
+     return gbpToUSD;// returns the conversion
 
+    } 
+   console.log(convertToUSD(32));// calls the function 
 /*
   CURRENCY FORMATTING
   ===================
@@ -16,7 +20,12 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(price) {// price as input
+  let onePercentOfPrice = (price*1)/100 // calculates transaction fee of 1%;
+   let exchangeFee = price + onePercentOfPrice; // adds the fee to the price.
+  let gbpToBRL = exchangeFee * 5.7;// converts pounds included fee to Brasilian Real
+   return gbpToBRL; // return the converted currency
+  }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

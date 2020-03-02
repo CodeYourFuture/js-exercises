@@ -16,26 +16,47 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(firstNum ,secondNum) {
+  const addition = firstNum +secondNum;// adds to number
+  const roundify = Math.round(addition*100)/100;// rounds the result
+   console.log(roundify);// checks the answer
+  return roundify;// returns the rounded answer
+    
+}
+ 
+function multiply(num1,num2) {// input 2 number
+  let multipication = num1 * num2;// multiplays them
+  return multipication;// returns the result
 }
 
-function multiply() {
-
-}
-
-function format() {
-
+function format(number) {// inputs a number 
+ const stringify = number.toString(); // converts number to string 
+ const formater = "£"+stringify; // adds GBP symbol to to the stringified number.
+ return formater; // returns the final result
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+
+ /*guys at Capgemini showed me this please explain this part onwards to me*/
+let badCode = format(multiply(add(10, startingValue), 2));
+
+ 
+//add(10,startingValue)
+//multiply(add(10,startingValue),2)
+//format(multiply(add(10,startingValue),2))
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+/*this was my attempts but its not right*/
+//let goodCode = new obj();
+  //goodCode.add(10,startingValue);
+  //goodCode.multiply(2);
+  //goodCode.format();
+  
+  
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
