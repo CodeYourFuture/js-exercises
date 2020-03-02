@@ -17,9 +17,9 @@ var mentorsAges = {
 
 var mentorsNames = ;
 
-var mentorsNamedCapitalised = ;
+var mentorsNamedUppercased = ;
 
 // ONLY EDIT ABOVE THIS LINE
 
-console.log(mentorsNamedCapitalised);
+console.log(mentorsNamedUppercased);
 // prints [ 'JAMES', 'JOSH', 'JAMIE', 'MOZAFAR' ]
