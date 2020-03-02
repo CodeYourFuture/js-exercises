@@ -1,3 +1,5 @@
+# babak-class6-week1
+
 # JavaScript exercises
 
 1. Fork this repo
@@ -7,8 +9,8 @@
    `git remote add upstream git@github.com:CodeYourFuture/js-exercises.git`
 5. Run the command `git remote -v`. You should have two remotes:
 
-* `origin` pointing to your github repo, and
-* `upstream` pointing to CodeYourFuture
+- `origin` pointing to your github repo, and
+- `upstream` pointing to CodeYourFuture
 
 During the class (and for homework), we will go through each folder, reading the README and completing the exercises.
 
