@@ -11,7 +11,7 @@ function calculateSalesTax(price) {
     
 }
 
-console.log(15);
+console.log(calculateSalesTax(15));
 
 /*
   CURRENCY FORMATTING
@@ -24,7 +24,7 @@ console.log(15);
 */
 function formatCurrency(number) {
 
-  let x = calculateSalesTax;
+  let calculateSalesTax = x;
   return `£${x}.toFixed(2)`;
 
 }
