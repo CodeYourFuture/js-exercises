@@ -11,7 +11,14 @@ function s(w1, w2) {
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
+
+    return `${firstWord} ${secondWord} ${thirdWord}`;
 }
+
+concatenate('code', 'your', 'future');
+concatenate ('I', 'like', 'pizza')
+concatenate('I', 'am', 13);
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
