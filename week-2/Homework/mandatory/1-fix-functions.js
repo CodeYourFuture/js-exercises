@@ -4,7 +4,7 @@
 function mood() {
   let isHappy = true;
 
-  if (isHappy) {
+  if (isHappy === "I'm not happy") {
     return "I am happy";
   } else {
     return "I am not happy";
