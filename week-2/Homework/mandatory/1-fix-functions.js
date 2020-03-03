@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
@@ -13,7 +13,8 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
+  let isBigEnough = num;
+  //I wasnt sure i am allowed to remove num or not,because we can remove num and give 10 to isbigenough
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -24,22 +25,21 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
-
+  let sortedLetters = letters.sort();
   return sortedLetters;
 }
+console.log(JSON.stringify(["a", "c", "e", "f", "n", "z"]));
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
+  let sliced = numbers.slice(0,5);
   return sliced;
 }
 
+let arr = ["fruit", "banana", "apple", "strawberry", "raspberry"];
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
-
+  let element = arr[index];
   return element;
 }
 
@@ -63,9 +63,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+ JSON.stringify(sortArray()) === JSON.stringify(["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", JSON.stringify(first5()) === JSON.stringify([1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
