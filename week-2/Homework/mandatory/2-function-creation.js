@@ -5,7 +5,12 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  for (let i = 0; (i = strArr.length - 1); i++) {
+    strArr[i].trim();
+    return strArr;
+  }
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -37,9 +42,7 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
-}
+function formatPercentage(arr) {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
