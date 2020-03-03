@@ -45,7 +45,9 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  
+}
 
 // The answer should come from shaking the ball
 let answer;

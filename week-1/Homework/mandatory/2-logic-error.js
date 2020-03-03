@@ -2,15 +2,18 @@
 
 function trimWord(word) {
   return wordtrim();
+  return word.trim();
 }
 
 function getWordLength(word) {
   return "word".length()
+  return word.length;
 }
 
 function multiply(a, b, c) {
-  a * b * c;
-  return;
+  
+  return a * b * c;
+  
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
