@@ -5,7 +5,20 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(stringArr) {
+
+ // let arrayTidy = ["   /Daniel ", "  irina/ ", "     Gordon", "ashleigh "];
+  
+  for (i = 0; i<stringArr.length; i = i+1){
+  
+  stringArr[i] = stringArr[i].trim();
+  stringArr[i] = stringArr[i].replace('/','');
+  stringArr[i] = stringArr[i].toLowerCase();
+  }
+    return stringArr; 
+  }
+
+
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +28,16 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num ==='number'&&
+      num%2 == 0 &&
+      num <=100){
+        return true;
+      }
+      else {
+        return false;
+      }
+}
 
 /* 
 Write a function that removes an element from an array
@@ -25,8 +47,12 @@ The function must:
 - remove the item at the specified index
 */
 
-function remove(arr, index) {
-  return; // complete this statement
+
+function remove(arr,index){
+  const beforeIndex=arr.slice(0, index) // Removes the first element of the array
+  const afterIndex=arr.slice(index+1)
+  const newArray = beforeIndex.concat(afterIndex)
+  return newArray; // complete this statement
 }
 
 /*
@@ -38,7 +64,17 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
+  for (i=0; i<arr.length; i++){
+    if (arr[i] > 100){
+      arr[i] = 100;
+    }
+    if (!Number.isInteger(arr[i])){
+      arr[i] = arr[i].toFixed(2)
+    }
+  arr[i] = `${arr[i]}%`;
+  }
   
+  return arr
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

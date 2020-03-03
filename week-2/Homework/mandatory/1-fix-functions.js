@@ -25,8 +25,9 @@ function greaterThan10(num) {
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
   let sortedLetters = letters.sort();
+  lastSorted = sortedLetters.toString();
 
-  return sortedLetters;
+  return lastSorted;
 }
 
 function first5() {
@@ -43,7 +44,7 @@ function get3rdIndex() {
   return element;
 }
 
-function get3rdIndex() {
+function get3rdIndex1() {
   let index = [11, 37, 62, 18, 19, 3, 30];
   let element = index[3];
 
@@ -81,5 +82,5 @@ test(
 );
 test(
   "get3rdIndex function works - case 2",
-  get3rdIndex([11, 37, 62, 18, 19, 3, 30]) === 18
+  get3rdIndex1([11, 37, 62, 18, 19, 3, 30]) === 18
 );
