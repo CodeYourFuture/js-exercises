@@ -13,7 +13,13 @@
  * - Should return this array to use in other functions
  */
 
-// `getAllFrequencies` goes here
+function getAllFrequencies() {
+  let freqArr = [];
+  for (let freq = 87; freq < 109; freq++) {
+    freqArr.push(freq);
+  }
+  return freqArr;
+}
 
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
@@ -25,7 +31,31 @@
  * - Sort the stations by low - high e.g. 1,2,3,4,5
  * - Return only the frequencies that are radio stations.
  */
-// `getStations` goes here
+function getStations() {
+  let allFreq = getAllFrequencies();
+  let radioStations = [];
+  let i = 0;
+  while (allFreq[i]) {
+    if (isRadioFrequency(allFreq[i]) === true) {
+      radioStations.push(allFreq[i]);
+    }
+    i++;
+  }
+  //https://www.w3schools.com/js/js_array_sort.asp  sort number array tips
+  return radioStations.sort(function(a, b) {
+    return a - b;
+  });
+}
+
+function isRadioFrequency(frequency) {
+  radioFreq = [89, 95, 97, 105, 106, 108];
+  let i = 0;
+  while (radioFreq[i]) {
+    if (radioFreq[i] === frequency) return true;
+    i++;
+  }
+  return false;
+}
 
 /**
  * Lastly, let's make a function for people to use.
@@ -35,11 +65,14 @@
  * - "No station found at ${frequency}, moving on"
  */
 // `searchRadioWaves` goes here
+function searchRadioWaves() {}
+
+//I did not undrestand this question well !
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function isRadioStation(frequency) {
-  // This is a way of storing the random frequency array inside a 
+  // This is a way of storing the random frequency array inside a
   // function as storing it outside is bad practice. Don't worry if you
   // don't understand some bits! You're more than welcome to ask questions
   // at any time. :)
