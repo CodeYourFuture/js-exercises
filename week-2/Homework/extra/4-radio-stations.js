@@ -41,6 +41,7 @@ function getStations() {
     }
     i++;
   }
+
   //https://www.w3schools.com/js/js_array_sort.asp  sort number array tips
   return radioStations.sort(function(a, b) {
     return a - b;
