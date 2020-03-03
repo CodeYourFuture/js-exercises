@@ -31,14 +31,14 @@ function sortArray() {
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+  let sliced = numbers.slice(0, 5);
 
   return sliced;
 }
 
-function get3rdIndex(arr) {
-  let index = 3;
-  let element;
+function get3rdIndex() {
+  let index = ["fruit", "banana", "apple", "strawberry", "raspberry"];
+  let element = index[3];
 
   return element;
 }

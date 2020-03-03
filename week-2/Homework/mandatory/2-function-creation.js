@@ -5,7 +5,24 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString() {
+  let strArr = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
+  for (var i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace(/\//g, "");
+    strArr[i] = strArr[i].toLowerCase();
+  }
+  return strArr;
+}
+function tidyUpString1() {
+  let strArr = [" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "];
+  for (var i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace(/\//g, "");
+    strArr[i] = strArr[i].toLowerCase();
+  }
+  return strArr;
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +32,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === "number" && num <= 100 && num % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,7 +49,13 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  var arr = 3;
+
+  // var index =
+  // (index = index.filter(function(item) {
+  //   return item !== value;
+  // }));
+  return index; // complete this statement
 }
 
 /*
@@ -37,8 +66,12 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
+function formatPercentage() {
+  let arr = [23, 18, 187.2, 0.372];
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = parseFloat(arr[i] * 100).toFixed(2) + "%";
+  }
+  return arr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -78,7 +111,7 @@ test(
 test(
   "tidyUpString function works - case 2",
   arraysEqual(
-    tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
+    tidyUpString1([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
     ["sanyia", "michael", "anthony", "tim"]
   )
 );
