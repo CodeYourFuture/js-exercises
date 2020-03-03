@@ -56,6 +56,10 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
+function deepEquals(a, b) {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
@@ -63,9 +67,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  deepEquals(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", deepEquals(first5(), [1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
