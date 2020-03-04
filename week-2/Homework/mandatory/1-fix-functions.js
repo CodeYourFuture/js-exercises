@@ -4,7 +4,7 @@
 function mood() {
   let isHappy = true;
 
-  if (isHappy) {
+  if (!isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
@@ -13,9 +13,9 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
+  let isBigEnough = 100;
 
-  if (isBigEnough) {
+  if (isBigEnough >= 10) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
@@ -25,7 +25,6 @@ function greaterThan10() {
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
   let sortedLetters;
-test
   return sortedLetters;
 }
 
