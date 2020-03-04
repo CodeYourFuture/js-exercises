@@ -15,6 +15,14 @@
 
 // `getAllFrequencies` goes here
 
+let arr=[];
+
+function getAllFrequencies(){
+  for (i=87; i<=108; i++){
+    arr.push(i);
+  }
+  return arr
+}
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -22,11 +30,16 @@
  * This function should:
  * - Get the available frequencies from `getAllFrequencies`
  * - There is a helper function called isRadioFrequency that takes an integer as an argument and returns a boolean.
+ * //// MAYBE isRadioStation?  I cant understand this task. 
+ * 
  * - Sort the stations by low - high e.g. 1,2,3,4,5
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
 
+function getStations(arr){
+
+}
 /**
  * Lastly, let's make a function for people to use.
  * When this runs, it should use the above two functions to log to the `console`
