@@ -7,10 +7,9 @@ Write a function that:
 */
 function tidyUpString(strArr) {
   let trimArray = []
-  trimArray[0] = strArr[0].replace('/', ' ')
   for (let i = 0; i < strArr.length; ++i) {
-    // trimArray[i] = strArr[i]
     trimArray[i] = strArr[i].trim()
+    trimArray[i] = strArr[i].replace('/', '')
     trimArray[i] = strArr[i].toLowerCase()
   }
 
