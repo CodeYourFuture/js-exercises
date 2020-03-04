@@ -32,15 +32,14 @@ function sortArray() {
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
+  numbers.length = 5;
+  let sliced = numbers;
   return sliced;
 }
 
 function get3rdIndex(arr) {
-  let index = 3;
-  let element;
-
+  let index = arr[3];
+  let element = index;
   return element;
 }
 
