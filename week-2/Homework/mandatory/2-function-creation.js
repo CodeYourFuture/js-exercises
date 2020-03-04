@@ -5,7 +5,22 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+
+let namesFriends = [];
+
+function tidyUpString(namesFriends) {
+  for (i = 0; i < namesFriends.length; i++) {
+    namesFriends[i] = namesFriends[i]
+      .replace(/\//g, "")
+      .replace(/\s\s*/, "")
+      .replace(/\s\s*$/, "");
+      .toLowerCase();
+  }
+  // let newArray = namesFriends.map(function(x) {
+  //   return x.toLowerCase();
+  // });
+  return newArray;
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,8 +30,17 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
-
+function validate(num) {
+  let nums;
+  nums = Number.isInteger(num);
+  if (nums % 2 == 0 && nums <= 100) {
+    return nums;
+  } else {
+    return nums;
+  }
+  return nums;
+}
+console.log(validate(17));
 /* 
 Write a function that removes an element from an array
 The function must:
@@ -37,9 +61,7 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
-}
+function formatPercentage(arr) {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
