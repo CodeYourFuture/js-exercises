@@ -1,5 +1,6 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
 
 function mood() {
   let isHappy = true;
@@ -13,7 +14,7 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough = 100;
+  let isBigEnough = 11;
 
   if (isBigEnough >= 10) {
     return "num is greater than or equal to 10";
@@ -22,17 +23,36 @@ function greaterThan10() {
   }
 }
 
+//https://www.w3schools.com/jsref/jsref_sort.asp
+//Sort numbers in an array in ascending order:
+/*test(
+  "sortArray function works",
+  sortArray() === ["a", "c", "e", "f", "n", "z"]
+);*/
+//Sort numbers in an array in ascending order:
+//http://www.asciitable.com/ 
+
+// if ("b" > "a") {
+//   console.log("right");
+// }
+// else {
+//   console.log("wrong");
+// }
+ 
 function sortArray() {
-  let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
-  return sortedLetters;
-}
-
-function first5() {
+ let letters = ["a", "n", "c", "e", "z", "f"];
+ let sortedLetters = letters.sort();  
+ return sortedLetters;
+  } 
+  /* test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+  
+  fruits.slice(1, 3); slice is 
+  */
+function first5() { 
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
+  let sliced = numbers.slice(0, 5);
   return sliced;
+
 }
 
 function get3rdIndex(arr) {
@@ -41,6 +61,7 @@ function get3rdIndex(arr) {
 
   return element;
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -55,6 +76,18 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
+function arraysEqual(a, b) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
+}
+
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
@@ -62,9 +95,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
