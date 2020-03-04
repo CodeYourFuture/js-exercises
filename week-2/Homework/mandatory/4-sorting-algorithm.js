@@ -15,7 +15,17 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
+  let newArr = [];
+  for (i = 0; i < arr.length; i++) {
 
+    if (typeof arr[i] === "number") {
+      newArr.push(arr[i]);
+
+    }
+  }
+  return newArr.sort(function(a, b){ //found on the net but not sure 100% how this works, will investigate further 
+    return a - b;
+})
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
