@@ -1,7 +1,3 @@
-// todo: reviewSource button
-// todo: rearrange files & dirs in list.  separate lists? clearer labeling?
-
-
 const fs = require("fs")
 const path = require("path")
 
