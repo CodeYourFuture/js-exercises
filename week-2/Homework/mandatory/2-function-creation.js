@@ -12,14 +12,10 @@ function tidyUpString(namesFriends) {
   for (i = 0; i < namesFriends.length; i++) {
     namesFriends[i] = namesFriends[i]
       .replace(/\//g, "")
-      .replace(/\s\s*/, "")
-      .replace(/\s\s*$/, "");
+      .trim()
       .toLowerCase();
   }
-  // let newArray = namesFriends.map(function(x) {
-  //   return x.toLowerCase();
-  // });
-  return newArray;
+  return namesFriends;
 }
 
 /*
@@ -31,16 +27,14 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  let nums;
-  nums = Number.isInteger(num);
+  let nums = num;
   if (nums % 2 == 0 && nums <= 100) {
-    return nums;
+    return true;
   } else {
-    return nums;
+    return false;
   }
-  return nums;
 }
-console.log(validate(17));
+
 /* 
 Write a function that removes an element from an array
 The function must:
