@@ -231,17 +231,21 @@ const generateFileSectionMd = (fileReport) => {
     })
     .reduce((all, next) => all + next + '\n', '');
 
-  const report = '```txt\n' + renderedReport + '```';
+  const report = renderedReport
+    ? '```txt\n' + renderedReport + '```\n\n'
+    : '';
 
-  const source = '```js\n' + fileReport.source + '\n```';
+  const source = fileReport.source
+    ? '```js\n' + fileReport.source + '\n```\n\n'
+    : '';
 
   const topLink = '[TOP](#readme)';
 
   return divider + '\n\n'
     + header + '\n\n'
     // + jsTutorLink + '\n\n'
-    + report + '\n\n'
-    + source + '\n\n'
+    + report
+    + source
     + topLink + '\n';
 }
 
@@ -295,7 +299,7 @@ const generateREVIEWs = (report) => {
     : '';
 
 
-  const index = '* [../REVIEW.md](../REVIEW.md)\n'
+  const index = '* [../REVIEW.md](../REVIEW.md)\n\n'
     + exerciseIndex
     + subDirIndex;
 
@@ -306,7 +310,7 @@ const generateREVIEWs = (report) => {
       .reduce((body, section) => body + section + '\n', '');
 
   const newREVIEW = top + '\n\n'
-    + index + '\n'
+    + index
     + fileSections;
 
   fs.writeFileSync(
