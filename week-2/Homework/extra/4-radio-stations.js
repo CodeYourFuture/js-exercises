@@ -13,7 +13,16 @@
  * - Should return this array to use in other functions
  */
 
-// `getAllFrequencies` goes here
+function getAllFrequencies() {
+  let frequencies = []
+  frequencies[0] = 87
+  frequencies[21] = 108
+  for (let i = 1; i < 21; ++i) {
+    frequencies[i] = Math.floor(Math.random() * 22 + 87)
+  }
+  console.log(frequencies)
+  return frequencies
+}
 
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
@@ -25,7 +34,17 @@
  * - Sort the stations by low - high e.g. 1,2,3,4,5
  * - Return only the frequencies that are radio stations.
  */
-// `getStations` goes here
+
+function getStations(arrFreq) {
+  let stations = []
+  for (let i = 0; i < arrFreq.length; ++i)
+    if (isInteger(arrFreq[i])) {
+      stations.push(arrFreq[i])
+    }
+  stations.sort((x, y) => x - y)
+  console.log(stations)
+  return stations
+}
 
 /**
  * Lastly, let's make a function for people to use.
@@ -34,48 +53,58 @@
  * - "🎶 station found at ${frequency}, enjoy!"
  * - "No station found at ${frequency}, moving on"
  */
-// `searchRadioWaves` goes here
+function searchRadioWaves() {
+  let frequenciesArray = getAllFrequencies()
+  let stationsArray = getStations(frequenciesArray)
+  for (let y = 0; y < frequenciesArray.length; ++y) {
+    if (stationsArray.includes(frequenciesArray[y])) {
+      console.log(`🎶 station found at ${frequenciesArray[y]}, enjoy!`)
+    } else {
+      console.log(`No station found at ${frequenciesArray[y]}, moving on`)
+    }
+  }
+}
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function isRadioStation(frequency) {
-  // This is a way of storing the random frequency array inside a 
+  // This is a way of storing the random frequency array inside a
   // function as storing it outside is bad practice. Don't worry if you
   // don't understand some bits! You're more than welcome to ask questions
   // at any time. :)
   if (!this.stations) {
-    const stationCount = 4;
+    const stationCount = 4
     const availableStations = new Array(stationCount)
       .fill(undefined)
       .map((_, i) => {
-        return Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100;
-      });
+        return Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100
+      })
 
-    this.stations = availableStations;
+    this.stations = availableStations
   }
 
-  return this.stations.includes(frequency);
+  return this.stations.includes(frequency)
 }
 
-const assert = require("assert");
+const assert = require('assert')
 
 function test(testName, fn) {
   try {
-    fn();
-    console.log(`${testName}: PASS`);
+    fn()
+    console.log(`${testName}: PASS`)
   } catch (e) {
-    console.log(`${testName}: FAIL`);
+    console.log(`${testName}: FAIL`)
   }
 }
 
-test("getAllFrequencies", () => {
-  const freqs = getAllFrequencies();
-  assert((freqs.length = 22 && freqs[0] === 87 && freqs[21] === 108));
-});
+test('getAllFrequencies', () => {
+  const freqs = getAllFrequencies()
+  assert((freqs.length = 22 && freqs[0] === 87 && freqs[21] === 108))
+})
 
-test("getStations", () => {
-  const stations = getStations();
+test('getStations', () => {
+  const stations = getStations()
   assert(
-    JSON.stringify(stations) === JSON.stringify(isRadioStation.stations.sort())
-  );
-});
+    JSON.stringify(stations) === JSON.stringify(isRadioStation.stations.sort()),
+  )
+})
