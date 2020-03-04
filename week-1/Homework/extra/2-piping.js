@@ -33,12 +33,10 @@ function format(a) {
 
 const startingValue = 2;
 
-let finalResult = format(multiply(add(startingValue, 10), 2));
-
 // Why can this code be seen as bad practice? Comment your answer.
 // All the code is written on one line, more difficult to read and modify.
 
-let badCode = finalResult;
+let badCode = format(multiply(add(startingValue, 10), 2));
 
 /* BETTER PRACTICE */
 

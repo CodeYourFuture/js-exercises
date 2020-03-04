@@ -73,7 +73,6 @@ let array = [
 function randomAnswer(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
-console.log(randomAnswer(array));
 
 // This should log "The ball has shaken!"
 // and return the answer.
@@ -84,16 +83,16 @@ function shakeBall() {
 }
 
 // The answer should come from shaking the ball
-// let answer;
+let answer;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-let answerType;
 
 function checkAnswer(answer) {
+  let answerType;
   if (array.indexOf(randomAnswer(array)) < 5) {
     answerType = "very positive";
   } else if (array.indexOf(randomAnswer(array)) < 10) {
@@ -103,7 +102,6 @@ function checkAnswer(answer) {
   } else {
     answerType = "very negative";
   }
-  // console.log(answerType);
   return answerType;
 }
 
