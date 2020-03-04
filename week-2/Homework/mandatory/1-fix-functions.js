@@ -22,12 +22,9 @@ function greaterThan10(num) {
   }
 }
 
-function sortArray() {
-  let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters = letters.sort();
-  lastSorted = sortedLetters.toString();
-
-  return lastSorted;
+function sortArray(arr) {
+  arr = arr.sort();
+  return arr;
 }
 
 function first5() {
@@ -64,6 +61,18 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
+function arraysEqual(a, b) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
+}
+
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
@@ -71,9 +80,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
@@ -82,5 +91,5 @@ test(
 );
 test(
   "get3rdIndex function works - case 2",
-  get3rdIndex1([11, 37, 62, 18, 19, 3, 30]) === 18
+  get3rdIndex([11, 37, 62, 18, 19, 3, 30]) === 18
 );
