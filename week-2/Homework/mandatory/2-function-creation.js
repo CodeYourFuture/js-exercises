@@ -66,10 +66,15 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage() {
-  let arr = [23, 18, 187.2, 0.372];
+function formatPercentage(arr) {
   for (var i = 0; i < arr.length; i++) {
-    arr[i] = parseFloat(arr[i] * 100).toFixed(2) + "%";
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    if (!Number.isInteger(arr[i])) {
+      arr[i] = arr[i].toFixed(2);
+    }
+    arr[i] = `${arr[i]}%`;
   }
   return arr;
 }
