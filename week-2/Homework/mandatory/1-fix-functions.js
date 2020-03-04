@@ -25,17 +25,36 @@ function greaterThan10() {
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
   let sortedLetters = letters.sort();
+  /*
+  let i = 0;
 
+  //strSL = strSL.replace("'", '"');
+  while (sortedLetters[i]) {
+    sortedLetters[i] = ` \'${sortedLetters[i]}\'`;
+
+    if (i === sortedLetters.length - 1) {
+      let str1 = sortedLetters[i].toString;
+      sortedLetters[i] = str1.replace("'", "");
+      sortedLetters[i] = ` \'${sortedLetters[i]}\' `;
+    }
+
+    i++;
+  }
+
+  let strSL = sortedLetters.toString();
+*/
   /*
   My Array is create the same result as test but 
   test has Failed !
   */
   return sortedLetters;
+
+  // return `[${strSL}]`;
 }
 
 //to see what is the result
 console.log(sortArray());
-
+console.log(["a", "c", "e", "f", "n", "z"]);
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   let sliced = numbers.slice(0, 5);
