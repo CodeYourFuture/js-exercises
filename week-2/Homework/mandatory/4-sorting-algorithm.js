@@ -13,11 +13,30 @@ sort method 😎)
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
+const agesCase = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']
+
+// function sortAges(arr) {
+//   for (i = 0; i < arr.length; i++) {
+//     if (!(typeof arr[i].is === "number")) {
+//       arr.splice(i,1)
+//     }
+//   }
+//   return arr
+// }
+console.log(sortAges(agesCase))
 
 function sortAges(arr) {
-
+  let newArr = []
+  for (i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr.sort(function(a, b){
+    return a - b;
+})
 }
-
+  console.log(sortAges(agesCase))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']

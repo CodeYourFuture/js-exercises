@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
@@ -10,38 +10,46 @@ function mood() {
     return "I am not happy";
   }
 }
+console.log(mood());
 
-function greaterThan10() {
-  let num = 10;
-  let isBigEnough;
+function greaterThan10(num) {
 
-  if (isBigEnough) {
-    return "num is greater than or equal to 10";
+  if (num >= 10) {
+    return console.log("num is greater than or equal to 10");
   } else {
-    return "num is not big enough";
+    return console.log("num is not big enough");
   }
 }
+greaterThan10(11);
 
-function sortArray() {
-  let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+// function sortArray(arr) {
+// //   let arr = ["a", "n", "c", "e", "z", "f"];
+//   arr = arr.sort();
+//   return arr
+// }
 
-  return sortedLetters;
-}
+// console.log(sortArray())
+
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
-  return sliced;
+  //numbers = numbers.slice(0,5);
+  return numbers.slice(0,5);
 }
 
-function get3rdIndex(arr) {
+console.log(first5())
+
+
+function get3rdIndex(element) {
   let index = 3;
-  let element;
+  let numElement = [11, 37, 62, 18, 19, 3, 30];
+  let strElement = ["fruit", "banana", "apple", "strawberry", "raspberry"];
 
-  return element;
+  return numElement[index], strElement[index];
 }
+//console.log(get3rdIndex(numElement[index]))
+//console.log(get3rdIndex(stringElement[index]))
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -63,7 +71,7 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  sortArray() == ["a", "c", "e", "f", "n", "z"]
 );
 test("first5 function works", first5() === [1, 2, 3, 4, 5]);
 
