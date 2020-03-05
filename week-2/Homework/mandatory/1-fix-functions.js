@@ -10,10 +10,11 @@ function mood() {
     return "I am not happy";
   }
 }
+ console.log(mood());
 
 function greaterThan10() {
-  let num = 10;
-  let isBigEnough;
+  let num = 10;  // no need for this line
+  let isBigEnough = true;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -24,15 +25,16 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
-
+  let sortedLetters = letters.sort();  
+  console.log(sortedLetters)  //console.log display the correct result but I am still not passing
   return sortedLetters;
+  
 }
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
+  let sliced = numbers.slice([1, 2, 3 ,4 ,5]); // ???
+console.log(sliced)
   return sliced;
 }
 

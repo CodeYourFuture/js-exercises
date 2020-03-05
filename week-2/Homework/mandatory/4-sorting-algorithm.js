@@ -14,14 +14,46 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {
 
+function removeNoneNumbers(arr){
+  
+  const onlyNumbers = [];
+  for(index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    // console.log(element, 'is a number', isNaN)
+    if(!isNaN(element)){     // isNaN returns a boolean, the function checks if the element passed in "is NOT a Number"
+      // console.log(element)
+      onlyNumbers.push(element)
+    }
+  }
+
+  return onlyNumbers;
+
+}
+
+function sortNumbers(arr) {
+   // write some code that will sort the elements in arr, then return it
+
+
+
+    return arr;
+}
+
+
+function sortAges(arr) {
+  const arrayWithNoNoneNumbers = removeNoneNumbers(arr)
+  const sortedArray = sortNumbers(arrayWithNoNoneNumbers)
+  console.log(sortedArray)
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']
 const agesCase2 = ['28', 100, 60, 55, '75', '🍕', 'Elamin']
+
+
+
+// TESTS
 
 function arraysEqual(a, b) {
     if (a === b) return true;
