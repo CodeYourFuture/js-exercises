@@ -69,7 +69,7 @@ function formatPercentage(arr) {
   for (i = 0; i < arr.length; i++) {
     newnum = arr[i] > 100 ? 100 : arr[i];
 
-    /*newnum =
+    /*newnum =f
       Math.ceil(newnum) === 1 && !(newnum === 1)
         ? `${newnum.toFixed(2)}%`
         : `${newnum}%`;
