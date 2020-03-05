@@ -32,9 +32,9 @@ const f2 = function(a, b) {
   return a + b + x;
 };
 
-console.log(x);
-console.log(a);
-// console.log(b);
+console.log(x); //2
+console.log(a); //6
+console.log(b);
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
