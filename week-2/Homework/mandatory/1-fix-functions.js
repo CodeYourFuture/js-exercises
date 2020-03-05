@@ -10,25 +10,32 @@ function mood() {
     return "I am not happy";
   }
 }
-console.log(mood());
 
 function greaterThan10(num) {
 
-  if (num >= 10) {
-    return console.log("num is greater than or equal to 10");
+  if (num => 10) {
+    return "num is greater than or equal to 10";
   } else {
-    return console.log("num is not big enough");
+    return "num is not big enough";
   }
 }
-greaterThan10(11);
 
-// function sortArray(arr) {
-// //   let arr = ["a", "n", "c", "e", "z", "f"];
-//   arr = arr.sort();
-//   return arr
+// function sortArray() {
+//   let arrayN = ["c", "a", "e", "f", "n", "z"];
+//   let newArr = arrayN.sort();
+//   return newArr;
 // }
 
-// console.log(sortArray())
+let strArr = ["a", "n", "c", "e", "z", "f"];
+
+function sortArray(arr) {
+  let newArr = strArr.sort(function(a, b){
+    return a - b;
+});
+  return newArr;
+}
+
+console.log(sortArray(strArr))
 
 
 function first5() {
