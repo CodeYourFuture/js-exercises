@@ -36,6 +36,16 @@ console.log(getAllFrequencies());
  */
 // `getStations` goes here
 
+function getStations() {
+  getAllFrequencies();
+  for (i = 0; i < frequencies.length; i++) {
+    if (isRadioFrequency(frequencies[i])) {
+      
+    }  
+  }
+
+}
+
 /**
  * Lastly, let's make a function for people to use.
  * When this runs, it should use the above two functions to log to the `console`

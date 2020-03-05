@@ -13,11 +13,7 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-<<<<<<< Updated upstream
   let isBigEnough = true;
-=======
-  let isBigEnough = 17;
->>>>>>> Stashed changes
 
   if (isBigEnough >= num) {
     return "num is greater than or equal to 10";

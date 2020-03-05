@@ -40,14 +40,8 @@ The function must:
 */
 
 function remove(arr, index) {
-<<<<<<< Updated upstream
   arr.splice(index, 1);
   return arr;
-=======
-  let newArr = [arr.slice(index, 1)];
-  // console.log(removedArr);
-  return newArr;
->>>>>>> Stashed changes
 }
 // console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 6));
 
@@ -67,22 +61,14 @@ function formatPercentage(arr) {
     if (arr[i] > 100) {
       arr[i] = 100;
     }
-<<<<<<< Updated upstream
     if (Math.ceil(arr[i]) === Math.floor(arr[i]) + 1) {
-=======
-    if (Math.floor(arr[i]) === Math.ceil(arr[i]) - 1) {
->>>>>>> Stashed changes
       arr[i] = arr[i].toFixed(2);
     }
     newArr.push(`${arr[i]}%`);
   }
   return newArr;
 }
-<<<<<<< Updated upstream
 // console.log(formatPercentage([23, 18, 187.2, 0.372, 1.555, 12.5678]));
-=======
-console.log(formatPercentage([23, 18, 187.2, 0.372, 1.555]));
->>>>>>> Stashed changes
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
