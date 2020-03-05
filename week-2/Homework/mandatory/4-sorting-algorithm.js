@@ -21,7 +21,21 @@ function sortAges(arr) {
       clearArr.push(arr[item])
     }
   }
-  clearArr.sort((x, y) => x - y)
+  //clearArr.sort((x, y) => x - y)
+  // Applying bubble Sort algorithm
+  //Number of passes
+  for (var i = 0; i < clearArr.length; i++) {
+    //Notice that j < (length - i)
+    for (var j = 0; j < clearArr.length - i - 1; j++) {
+      //Compare the adjacent positions
+      if (clearArr[j] > clearArr[j + 1]) {
+        //Swap the numbers
+        var tmp = clearArr[j] //Temporary variable to hold the current number
+        clearArr[j] = clearArr[j + 1] //Replace current number with adjacent number
+        clearArr[j + 1] = tmp //Replace adjacent number with current number
+      }
+    }
+  }
   //console.log(clearArr)
   return clearArr
 }

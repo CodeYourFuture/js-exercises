@@ -14,7 +14,7 @@ function mood() {
 function greaterThan10() {
   let num = 10
   let isBigEnough = true
-
+  //
   if (isBigEnough) {
     return 'num is greater than or equal to 10'
   } else {
@@ -25,22 +25,18 @@ function greaterThan10() {
 function sortArray() {
   let letters = ['a', 'n', 'c', 'e', 'z', 'f']
   let sortedLetters = letters.sort()
-  //console.log(sortedLetters)
   return sortedLetters
 }
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8]
   let sliced = numbers.slice(0, 5)
-  //console.log(sliced)
   return sliced
 }
 
 function get3rdIndex(arr) {
   let index = 3
   let element = arr[index]
-  // let element = arr.slice(3, 4)
-  //console.log(element)
   return element
 }
 

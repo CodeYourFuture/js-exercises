@@ -6,15 +6,15 @@ Write a function that:
 - makes the string all lowercase
 */
 function tidyUpString(strArr) {
-  let trimArray = []
   for (let i = 0; i < strArr.length; ++i) {
-    trimArray[i] = strArr[i].trim()
-    trimArray[i] = strArr[i].replace('/', '')
-    trimArray[i] = strArr[i].toLowerCase()
+    //removes any forward slashes (/) in the strings
+    strArr[i] = strArr[i].replace('/', '')
+    //removes any spaces in the beginning or end of the strings
+    strArr[i] = strArr[i].trim()
+    //makes the string all lowercase
+    strArr[i] = strArr[i].toLowerCase()
   }
-
-  console.log(trimArray)
-  return trimArray
+  return strArr
 }
 
 /*
@@ -26,22 +26,10 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  let isValidated = true
-  if (typeof num === 'number') {
-    if (num % 2 === 0) {
-      if (num <= 100) {
-        return isValidated
-      } else {
-        isValidated = false
-        return isValidated
-      }
-    } else {
-      isValidated = false
-      return isValidated
-    }
+  if (typeof num === 'number' && num % 2 === 0 && num <= 100) {
+    return true
   } else {
-    isValidated = false
-    return isValidated
+    return false
   }
 }
 
@@ -54,14 +42,15 @@ The function must:
 */
 
 function remove(arr, index) {
-  let clearArr = []
+  let clearArr = [] //a new  empty array
   for (let item = 0; item < arr.length; ++item) {
+    // for loop for checking the whole array
     if (item !== index) {
-      clearArr.push(arr[item])
+      //if the index is not equal to the element to be removed
+      clearArr.push(arr[item]) // add the array element to the new array "push"
     }
   }
-  // console.log(clearArr)
-  return clearArr
+  return clearArr // return the new array with the item been removed
 }
 
 /*
@@ -73,16 +62,14 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  let clearArr = []
   for (let item = 0; item < arr.length; ++item) {
     if (arr[item] > 100) {
-      clearArr[item] = '100%'
+      arr[item] = '100%'
     } else {
-      clearArr[item] = arr[item].toPrecision(2) + '%'
+      arr[item] = arr[item].toPrecision(2) + '%'
     }
   }
-  // console.log(clearArr)
-  return clearArr
+  return arr
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
