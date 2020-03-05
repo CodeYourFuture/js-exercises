@@ -49,13 +49,11 @@ The function must:
 */
 
 function remove(arr, index) {
-  var arr = 3;
+  let first = arr.slice(0, index);
+  let rest = arr.slice(index + 1);
+  newArr = first.concat(rest);
 
-  // var index =
-  // (index = index.filter(function(item) {
-  //   return item !== value;
-  // }));
-  return index; // complete this statement
+  return newArr; // complete this statement
 }
 
 /*
