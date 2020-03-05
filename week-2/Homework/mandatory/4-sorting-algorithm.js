@@ -13,19 +13,23 @@ sort method 😎)
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
+function filterArrays(arr) {
+  let filterArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      filterArray.push(arr[i]);
+    }
+  }
+  console.log(filterArray);
+  return filterArray;
+}
 
 function sortAges(arr) {
-  let mixArray = arr;
-  for (let i = 0; i < mixArray.length; i++) {
-    // if (isNaN(mixArray[i])) {
-    //   mixArray[i] = 100;
-    // }
+  let filerArray = filterArrays(arr);
 
-    if (mixArray[i] == "   ") {
-      mixArray[i] == 1000;
-    }
-    console.log(mixArray);
-    return mixArray;
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] < arr[i + 1];
   }
 }
 
