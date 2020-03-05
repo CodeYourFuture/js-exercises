@@ -30,3 +30,4 @@ function test(test_name, expr) {
 test("fixed addNumbers function - case 1", addNumbers(3,4,6) === 13)
 test("fixed introduceMe function", introduceMe("Sonjide",27) === "Hello, my name is Sonjide and I am 27 years old")
 test("fixed getRemainder function", getRemainder(23,5) === "The remainder is 3")
+console.log("hi");
