@@ -16,7 +16,7 @@
   5. How many times is "f2" called?
   //Two times
   6. What value does the "a" parameter take in the first "f1" call?
-  // 7
+  // 7 and then 7 + 1 and then 8 % 2 = 4
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
   // 6
 */
