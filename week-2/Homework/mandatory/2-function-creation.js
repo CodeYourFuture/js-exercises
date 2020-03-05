@@ -42,7 +42,7 @@ The function must:
 function remove(arr, index) {
   arr1 = [];
   for (let i = 0; i < arr.length; i++) {
-    if (i != index) {
+    if (i !== index) {
       arr1.push(arr[i]);
     }
   }
@@ -68,17 +68,23 @@ function formatPercentage(arr) {
 
   for (i = 0; i < arr.length; i++) {
     newnum = arr[i] > 100 ? 100 : arr[i];
-    newnum =
+
+    /*newnum =
       Math.ceil(newnum) === 1 && !(newnum === 1)
         ? `${newnum.toFixed(2)}%`
         : `${newnum}%`;
+*/
+    //(n - Math.floor(n)) !== 0    //check the number has decimal part or not
+
+    newnum / Math.trunc(newnum) !== 1 ? (newnum = `${newnum.toFixed(2)}`) : "";
+    newnum = `${newnum}%`;
     arr1.push(newnum);
   }
 
   return arr1;
 }
 
-console.log(formatPercentage([23, 18, 187.2, 0.372]));
+console.log(formatPercentage([23, 18, 187.2, 0.372, 54.14767, 28.908]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
