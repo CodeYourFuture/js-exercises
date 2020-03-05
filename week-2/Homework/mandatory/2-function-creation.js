@@ -5,14 +5,15 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-let i = 0;
+
 function tidyUpString(strArr) {
+  let i = 0;
   for (i = 0; i < strArr.length; i++) {
     strArr[i] = strArr[i].trim();
     strArr[i] = strArr[i].replace("/", "");
     strArr[i] = strArr[i].toLowerCase();
-    console.log(strArr[i]);
   }
+  console.log(strArr);
 }
 
 /*
@@ -23,7 +24,11 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === "number" && num % 2 === 0 && num <= 0) {
+    return true;
+  }
+}
 
 /* 
 Write a function that removes an element from an array
@@ -34,8 +39,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  //let newArr = arr.splice(index, 1);
-  return; // complete this statement
+  let newArr = arr.splice(index, 1);
+  return newArr; // complete this statement
+  console.log(newArr);
 }
 
 /*
@@ -45,9 +51,20 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
-
-function formatPercentage(arr) {}
-
+function formatPercentage(arr) {
+  let strArr = [];
+  let numRound = [];
+  for (let i = 0; i < arr.length; i++) {
+    numRound[i] = Math.round(arr[i]);
+    if (numRound[i] > 100) {
+      numRound[i] = 100;
+    }
+    strArr[i] = `${numRound[i].toString()}%`;
+  }
+  return strArr;
+  console.log(strArr);
+}
+console.log(formatPercentage([120, 13, 4.367, 60.49, 160.6]));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
