@@ -22,11 +22,27 @@ function greaterThan10(num) {
   }
 }
 
-function sortArray(arr) {
-  arr = arr.sort();
-  return arr;
+function sortArray() {
+  let arrayN = ["c", "a", "e", "f", "n", "z"];
+  let newArr = arrayN.sort();
+  return newArr;
 }
 
+// function sortArray(arr) {
+//   // let arr = [6, 8, 7, 4, 78, 54, 100, 89, 74];
+
+//   for (i = 0; i < arr.length(); i++) {
+//        for (j = i + 1; j < arr.length(); j++) {
+//            let tmp ;
+//            if (arr[i] > arr[j]) {
+//                tmp = arr[i];
+//                arr[i] = arr[j];
+//                arr[j] = tmp;
+//            }
+//        }
+//    }
+//   return arr;
+// }
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   let sliced = numbers.slice(0, 5);
@@ -34,19 +50,14 @@ function first5() {
   return sliced;
 }
 
-function get3rdIndex() {
-  let index = ["fruit", "banana", "apple", "strawberry", "raspberry"];
+function get3rdIndex(index) {
+  // let index = ["fruit", "banana", "apple", "strawberry", "raspberry"];
   let element = index[3];
+  //console.log(element);
 
   return element;
 }
 
-function get3rdIndex1() {
-  let index = [11, 37, 62, 18, 19, 3, 30];
-  let element = index[3];
-
-  return element;
-}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

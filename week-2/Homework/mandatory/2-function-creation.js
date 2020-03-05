@@ -48,12 +48,34 @@ The function must:
 */
 
 
+// function remove(arr, index){
+//   const beforeIndex=arr.slice(0, index) // Removes the first element of the array
+//   const afterIndex=arr.slice(index+1)
+//   const neweArray = beforeIndex.concat(afterIndex)
+//   console.log(neweArray)
+//   return neweArray; // complete this statement
+
+// }
+
 function remove(arr,index){
-  const beforeIndex=arr.slice(0, index) // Removes the first element of the array
-  const afterIndex=arr.slice(index+1)
-  const newArray = beforeIndex.concat(afterIndex)
-  return newArray; // complete this statement
+
+  newArray = [];
+
+   for (i = 0 ; i<arr.length; i++){
+      if (i !== index){
+        newArray.push(arr[i])
+      }
+   }
+    return newArray;
 }
+
+
+
+  // const beforeIndex=arr.slice(0, index) // Removes the first element of the array
+  // const afterIndex=arr.slice(index+1)
+  // const newArray = beforeIndex.concat(afterIndex)
+  // return newArray; // complete this statement
+// }
 
 /*
 Write a function that:
