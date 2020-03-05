@@ -27,6 +27,7 @@ Tip: use logical operators
 function validate(num) {
   if (typeof num === "number" && num % 2 === 0 && num <= 0) {
     return true;
+    console.log(validate);
   }
 }
 
