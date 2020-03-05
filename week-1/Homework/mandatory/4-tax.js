@@ -6,9 +6,9 @@
 */
 const salesTax = 20 / 100;
 function calculateSalesTax(ProductPrice) {
-  return `${salesTax}` * ProductPrice;
+  return `${salesTax}` * ProductPrice + ProductPrice;
 }
-calculateSalesTax(34);
+calculateSalesTax(15);
 
 /*
   CURRENCY FORMATTING
@@ -20,7 +20,10 @@ calculateSalesTax(34);
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency() {
+
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

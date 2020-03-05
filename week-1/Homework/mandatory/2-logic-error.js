@@ -1,9 +1,9 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
 function trimWord(word) {
-  return word;
+  return word.trim();
 }
-trimWord("CodeYourFuture");
+trimWord("  CodeYourFuture ");
 
 function getWordLength(word) {
   return word.length;
