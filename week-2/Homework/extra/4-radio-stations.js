@@ -40,10 +40,8 @@ function getStations() {
   getAllFrequencies();
   for (i = 0; i < frequencies.length; i++) {
     if (isRadioFrequency(frequencies[i])) {
-      
-    }  
+    }
   }
-
 }
 
 /**

@@ -13,23 +13,6 @@ sort method 😎)
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
-const ages1 = [
-  "🎹",
-  100,
-  "💩",
-  55,
-  "🥵",
-  "🙈",
-  45,
-  "🍕",
-  "Sanyia",
-  66,
-  "James",
-  23,
-  "🎖",
-  "Ismeal"
-];
-const ages2 = ["28", 100, 60, 55, "75", "🍕", "Elamin"];
 
 function filterNumsOnly(arr) {
   for (i = 0; i < arr.length; i++) {
@@ -56,9 +39,6 @@ function sortAges(arr) {
   }
   return arr;
 }
-
-console.log(sortAges(ages1));
-console.log(sortAges(ages2));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

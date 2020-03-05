@@ -5,16 +5,16 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
+
 function tidyUpString(strArr) {
   for (i = 0; i < strArr.length; i++) {
-    let str = strArr[i];
-    str.trim();
-    str.replace("/", "");
-    str.toLowerCase();
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", "");
+    strArr[i] = strArr[i].toLowerCase();
   }
   return strArr;
 }
-console.log(tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]));
+
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -43,7 +43,6 @@ function remove(arr, index) {
   arr.splice(index, 1);
   return arr;
 }
-// console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 6));
 
 /*
 Write a function that:
@@ -52,7 +51,6 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
-[23, 18, 187.2, 0.372];
 
 function formatPercentage(arr) {
   let newArr = [];
@@ -68,7 +66,6 @@ function formatPercentage(arr) {
   }
   return newArr;
 }
-// console.log(formatPercentage([23, 18, 187.2, 0.372, 1.555, 12.5678]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
