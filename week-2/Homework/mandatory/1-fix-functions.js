@@ -13,7 +13,7 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough = true;
+  let isBigEnough = 1;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -21,6 +21,8 @@ function greaterThan10() {
     return "num is not big enough";
   }
 }
+
+console.log(greaterThan10());
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
