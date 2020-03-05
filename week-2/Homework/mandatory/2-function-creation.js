@@ -25,9 +25,11 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (typeof num === "number" && num % 2 === 0 && num <= 0) {
+  if (typeof num === "number" && num % 2 === 0 && num <= 100) {
     return true;
     console.log(validate);
+  } else {
+    return false;
   }
 }
 
@@ -56,7 +58,7 @@ function formatPercentage(arr) {
   let strArr = [];
   let numRound = [];
   for (let i = 0; i < arr.length; i++) {
-    numRound[i] = Math.round(arr[i]);
+    numRound[i] = Math.round(arr[i] * 100) / 100;
     if (numRound[i] > 100) {
       numRound[i] = 100;
     }
@@ -65,7 +67,7 @@ function formatPercentage(arr) {
   return strArr;
   console.log(strArr);
 }
-console.log(formatPercentage([120, 13, 4.367, 60.49, 160.6]));
+console.log(formatPercentage([23, 18, 187.2, 0.372]));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
