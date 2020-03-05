@@ -15,6 +15,15 @@
 
 // `getAllFrequencies` goes here
 
+function getAllFrequencies() {
+  let frequencies = [];
+  for (i = 87; i < 109; i++) {
+    frequencies.push(i);
+  }
+  return frequencies;
+}
+console.log(getAllFrequencies());
+
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -39,7 +48,7 @@
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function isRadioStation(frequency) {
-  // This is a way of storing the random frequency array inside a 
+  // This is a way of storing the random frequency array inside a
   // function as storing it outside is bad practice. Don't worry if you
   // don't understand some bits! You're more than welcome to ask questions
   // at any time. :)

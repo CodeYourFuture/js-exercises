@@ -5,8 +5,16 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
-
+function tidyUpString(strArr) {
+  for (i = 0; i < strArr.length; i++) {
+    let str = strArr[i];
+    str.trim();
+    str.replace("/", "");
+    str.toLowerCase();
+  }
+  return strArr;
+}
+console.log(tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]));
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -15,7 +23,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num == "number" && num % 2 === 0 && num <= 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,8 +40,10 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  arr.splice(index, 1);
+  return arr;
 }
+// console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 6));
 
 /*
 Write a function that:
@@ -38,8 +54,20 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i];
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    if (Math.ceil(arr[i]) === Math.floor(arr[i]) + 1) {
+      arr[i] = arr[i].toFixed(2);
+    }
+    newArr.push(`${arr[i]}%`);
+  }
+  return newArr;
 }
+// console.log(formatPercentage([23, 18, 187.2, 0.372, 1.555, 12.5678]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
