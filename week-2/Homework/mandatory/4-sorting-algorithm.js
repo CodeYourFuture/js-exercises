@@ -15,18 +15,32 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
+  
   let newArr = [];
   for (i = 0; i < arr.length; i++) {
 
     if (typeof arr[i] === "number") {
-      newArr.push(arr[i]);
-
-    }
+      newArr.push(arr[i])
+      }
   }
-  return newArr.sort(function(a, b){ //found on the net but not sure 100% how this works, will investigate further 
-    return a - b;
-})
-}
+  
+   for (let b = 0; b < newArr.length ; b++) {
+    for(let j = 0 ; j < newArr.length; j++){ // this nested loop let the function to check the condition for all the elements of the array 
+    if (newArr[j] > newArr[j + 1]) {
+  //     // swap
+      var temp = newArr[j];
+      newArr[j] = newArr[j+1];
+      newArr[j + 1] = temp;
+    }
+   }
+  }
+  return newArr
+  // console.log(newArr)
+  // return newArr;
+  // return newArr.sort(function(a, b){ //found on the net but not sure 100% how this works, will investigate further 
+  //   return a - b;
+
+ }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
