@@ -63,9 +63,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
