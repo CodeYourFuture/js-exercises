@@ -7,6 +7,7 @@
   Answer the following questions:
 
   1. This program throws an error. Why? (If you can't find it, try executing it).
+  // b it.s not defined
   2. Remove the line that throws the error.
   // The line 31 throws the error because we don't have a defined variable b.
   3. What is printed to the console?
