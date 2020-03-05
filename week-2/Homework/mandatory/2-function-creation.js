@@ -13,6 +13,7 @@ function tidyUpString(strArr) {
     strArr[i] = strArr[i].replace("/", "");
     strArr[i] = strArr[i].toLowerCase();
   }
+  return strArr;
   console.log(strArr);
 }
 
@@ -42,7 +43,7 @@ The function must:
 */
 
 function remove(arr, index) {
-  let newArr = arr.splice(index, 1);
+  let newArr = arr.slice(0, index).concat(arr.slice(index + 1, arr.length));
   return newArr; // complete this statement
   console.log(newArr);
 }
