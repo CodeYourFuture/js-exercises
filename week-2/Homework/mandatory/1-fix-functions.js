@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (!isHappy) {
     return "I am happy";
@@ -13,9 +13,13 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
+<<<<<<< Updated upstream
   let isBigEnough = true;
+=======
+  let isBigEnough = 17;
+>>>>>>> Stashed changes
 
-  if (isBigEnough) {
+  if (isBigEnough >= num) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
