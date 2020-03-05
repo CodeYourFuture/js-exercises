@@ -8,11 +8,11 @@ Write a function that:
 let i = 0;
 function tidyUpString(strArr) {
   for (i = 0; i < strArr.length; i++) {
-    strArr[i].trim();
-    strArr[i].replace("/", "");
-    strArr[i].toLowerCase();
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", "");
+    strArr[i] = strArr[i].toLowerCase();
+    console.log(strArr[i]);
   }
-  console.log(strArr[i]);
 }
 
 /*
@@ -34,10 +34,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  let newArr = arr.splice(index, 1);
-  return newArr; // complete this statement
+  //let newArr = arr.splice(index, 1);
+  return; // complete this statement
 }
-console.log(newArr);
 
 /*
 Write a function that:
