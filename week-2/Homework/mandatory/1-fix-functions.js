@@ -25,7 +25,6 @@ function greaterThan10() {
   } else {
     return "num is not big enough";
   }
-  5;
 }
 
 function sortArray() {
@@ -37,7 +36,7 @@ function sortArray() {
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced = numbers.slice(0, 5);
+  let sliced = numbers.slice(0, 6);
 
   return sliced;
 }

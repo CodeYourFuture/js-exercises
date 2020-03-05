@@ -5,7 +5,15 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+let i = 0;
+function tidyUpString(strArr) {
+  for (i = 0; i < strArr.length; i++) {
+    strArr[i].trim();
+    strArr[i].replace("/", "");
+    strArr[i].toLowerCase();
+  }
+  console.log(strArr[i]);
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -26,8 +34,10 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let newArr = arr.splice(index, 1);
+  return newArr; // complete this statement
 }
+console.log(newArr);
 
 /*
 Write a function that:
@@ -37,9 +47,7 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
-}
+function formatPercentage(arr) {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
