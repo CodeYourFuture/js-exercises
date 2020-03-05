@@ -1,19 +1,18 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
-
+let isHappy = true;
 function mood() {
-  let isHappy = true;
-
-  if (isHappy) {
+  if (mood === isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
 }
+console.log(mood(isHappy));
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
+  let isBigEnough = num >= 10;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -24,27 +23,27 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
+console.log(sortArray());
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+  let sliced = numbers.slice(0, 5);
 
   return sliced;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element = arr[index];
 
   return element;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
-
 function test(test_name, expr) {
   let status;
   if (expr) {
@@ -56,6 +55,18 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
+function arraysEqual(a, b) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
+}
+
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
@@ -63,9 +74,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
