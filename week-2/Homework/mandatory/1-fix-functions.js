@@ -28,10 +28,14 @@ function sortArray() {
   return letters.sort();
 }
 
-function first5() {
+function first5(array) {
+  //const stringSecund = array.toString();
+  //console.log (stringSecund);
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   let length = numbers.length = 5;
   console.log(numbers);
+  const stringFirst = numbers.toString();
+  console.log (stringFirst);
   return numbers;
 }
 
