@@ -17,18 +17,28 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 function sortAges(arr) {
  let maxarray = [];
  for ( let i = 0 ; i <= arr.length ; i ++ ){
-   if (typeof arr[i] != `number` || typeof arr[i] !== `boolean`){
+   if (typeof arr[i] !== `number` ||
+       typeof arr[i] === `boolean`||
+       typeof arr[i] === `object` ||
+       typeof arr[i] === `string` ||
+       typeof arr[i] !== `string` ||
+       typeof arr[i] === `symbol` ||
+       typeof arr[i] !== `symbol` ||
+       typeof arr[i] === `undefined`
+   ){
     maxarray = arr.splice(i , 1);
-    console.log (maxarray);
    }
  }
+ arr.sort((a, b) => a - b);
  console.log (arr);
- return arr;
+ console.log (arr.sort());
+ return arr.sort();
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismail', `meisam`]
+const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 2, 222, 'Sanyia', 66, 'James', 23, '🎖','Ismail', `meisam`]
 const agesCase2 = ['28', 100, 60, 55, '75', '🍕', 'Elamin']
 
 function arraysEqual(a, b) {
