@@ -25,26 +25,25 @@ function greaterThan10(isBigEnough) {
   }
 }
 
-let letters = ["a", "n", "c", "e", "z", "f"];
-let sortedLetters;
 
-function sortArray(sortedLetters) {
-  
+
+function sortArray() {
+  let letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters = letters.sort();
   return sortedLetters;
 }
 
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-let sliced;
-
 function first5() {
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let sliced = numbers.slice(0, 5);
   return sliced;
 }
 
-let index = 3;
-let element;
 
 function get3rdIndex(arr) {
+  let index = 3;
+  let element = arr[index];
   return element;
 }
 
@@ -68,9 +67,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+   JSON.stringify(sortArray()) === JSON.stringify(["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", JSON.stringify(first5()) === JSON.stringify([1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
