@@ -19,7 +19,6 @@ function sortAges(arr) {
   let newArr = [];
   for(let i = 0; i < arr.length; i++ ){
     dataType = typeof(arr[i]);
-    // console.log(dataType);
     if (dataType === "number"){
       newArr.push(arr[i]);
       
@@ -34,8 +33,6 @@ function sortAges(arr) {
       newArr[j] = store;
       }      
     }
-    
-    
   }
 return newArr;
 }
