@@ -11,8 +11,8 @@
   3. What is printed to the console? 2 6 4 9 6 13 8
   4. How many times is "f1" called? 2 times
   5. How many times is "f2" called? 3 times
-  6. What value does the "a" parameter take in the first "f1" call? 8
-  7. What is the value of the "a" outer variable when "f1" is called for the first time? 8
+  6. What value does the "a" parameter take in the first "f1" call? if your mean is "i" in line 40 that asigned to "a" in line 22 so is "1", if your mean is "a" in line 40 that asigned to "b" in line 22 so is 8
+  7. What is the value of the "a" outer variable when "f1" is called for the first time? if your mean is "a" in line 40 so answer is "8", if your mean is "a" in line 22 so answer is "1"
 */
 console.clear(); // clean all outputs in console and when you run the code you'll see only last output
 
