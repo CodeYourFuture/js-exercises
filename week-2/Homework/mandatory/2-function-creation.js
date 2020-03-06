@@ -9,14 +9,17 @@ function tidyUpString(strArr) {
   let removeSpaces = [];
   let removeSlashes = [];
   let result = [];
+  let arrayElement = "";
   for(let i = 0; i < strArr.length; i++){
     removeSpaces[i] = strArr[i].trim();
     for(let j = 0; j < removeSpaces[i].length; j++){
       removeSlashes = removeSpaces[i].charAt(j);
       if(removeSlashes !== "/"){
-        result[i] += removeSlashes.toLowerCase();     
+        arrayElement += removeSlashes.toLowerCase();     
       }
-    }   
+    } 
+    result[i] = arrayElement; 
+    arrayElement = ""; 
   }
   return result;
 }
