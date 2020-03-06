@@ -21,16 +21,25 @@ function filterArrays(arr) {
       filterArray.push(arr[i]);
     }
   }
-  console.log(filterArray);
   return filterArray;
 }
 
 function sortAges(arr) {
-  let filerArray = filterArrays(arr);
-
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] < arr[i + 1];
-  }
+  let filterArray = filterArrays(arr);
+  let swamp;
+  do {
+    swamp = false;
+    for (let i = 0; i < arr.length - 1; i++) {
+      if (arr[i] > arr[i + 1]) {
+        //swamp
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+        swamp = true;
+      }
+    }
+  } while (swamp);
+  return arr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
