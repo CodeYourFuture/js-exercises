@@ -25,7 +25,7 @@ function sortAges(arr) {
   }
   
    for (let b = 0; b < newArr.length ; b++) {
-    for(let j = 0 ; j < newArr.length; j++){ // this nested loop let the function to check the condition for all the elements of the array 
+    for(let j = 0 ; j < newArr.length-1-b; j++){ // this nested loop let the function to check the condition for all the elements of the array 
     if (newArr[j] > newArr[j + 1]) {
   //     // swap
       var temp = newArr[j];
