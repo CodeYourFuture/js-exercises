@@ -26,20 +26,21 @@ function filterArrays(arr) {
 
 function sortAges(arr) {
   let filterArray = filterArrays(arr);
+  let sortedArray = filterArray;
   let swamp;
   do {
     swamp = false;
-    for (let i = 0; i < arr.length - 1; i++) {
-      if (arr[i] > arr[i + 1]) {
+    for (let i = 0; i < sortedArray.length - 1; i++) {
+      if (sortedArray[i] > sortedArray[i + 1]) {
         //swamp
-        let temp = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = temp;
+        let temp = sortedArray[i];
+        sortedArray[i] = sortedArray[i + 1];
+        sortedArray[i + 1] = temp;
         swamp = true;
       }
     }
   } while (swamp);
-  return arr;
+  return sortedArray;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
