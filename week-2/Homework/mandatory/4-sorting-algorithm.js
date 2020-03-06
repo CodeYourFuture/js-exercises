@@ -15,9 +15,23 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-
+  for(var i=0;i<arr.length;i++){
+    if(typeof arr[i] !== "number"){
+        arr.splice(i,1);
+        i--;
+    }
+  }
+  for(var i=0;i<arr.length-1;i++){
+    for(var j=0;j<arr.length-1;j++){
+      if(arr[j] > arr[j+1]){
+        let x = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = x;
+      }
+  }
 }
-
+  return arr;
+};
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']
