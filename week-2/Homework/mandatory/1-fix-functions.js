@@ -36,7 +36,7 @@ function sortArray() {
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced = numbers.slice(0, 6);
+  let sliced = numbers.slice(0, 5);
 
   return sliced;
   console.log(sliced);
