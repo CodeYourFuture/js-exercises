@@ -14,7 +14,16 @@
  */
 
 // `getAllFrequencies` goes here
+function getAllFrequencies() {
+  let frequencies = [];
 
+  for (let i = 87; i < 109; i++) {
+    frequencies.push(i);
+  }
+
+  return frequencies;
+}
+console.log(getAllFrequencies());
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -26,6 +35,14 @@
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
+function getStations() {
+  let F = getAllFrequencies();
+  
+  let availableFs = F.filter(isRadioStation);
+  console.log(availableFs);
+
+  return availableFs;
+}
 
 /**
  * Lastly, let's make a function for people to use.
@@ -35,11 +52,17 @@
  * - "No station found at ${frequency}, moving on"
  */
 // `searchRadioWaves` goes here
+function searchRadioWaves() {
+  let gF = getStations();
+
+  console.log(`🎶 station found at ${gF}, enjoy!`);
+}
+searchRadioWaves();
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function isRadioStation(frequency) {
-  // This is a way of storing the random frequency array inside a 
+  // This is a way of storing the random frequency array inside a
   // function as storing it outside is bad practice. Don't worry if you
   // don't understand some bits! You're more than welcome to ask questions
   // at any time. :)
@@ -48,10 +71,11 @@ function isRadioStation(frequency) {
     const availableStations = new Array(stationCount)
       .fill(undefined)
       .map((_, i) => {
-        return Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100;
+        return Math.floor(Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100);
       });
 
     this.stations = availableStations;
+    console.log(availableStations);
   }
 
   return this.stations.includes(frequency);
