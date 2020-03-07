@@ -10,7 +10,7 @@ Continuing on from exercise level-1/2-every.js
   Hint: Use .includes() on the strings, to find families.
 */
 
-var voyagers = [
+let voyagers = [
   "Adam family",
   "Potter family",
   "Eric",
@@ -25,7 +25,7 @@ var voyagers = [
   "Archer family"
 ];
 
-var colonisers; // Complete this statement
+let colonisers; // Complete this statement
 
 console.log(colonisers);
 

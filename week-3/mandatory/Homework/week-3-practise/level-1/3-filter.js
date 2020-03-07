@@ -3,7 +3,7 @@ You are given a list of some London street names.
 We would like to know all of the names which contain 'Lane' in their name.
 */
 
-var streetNames = [
+let streetNames = [
     "Abchurch Lane", "Adam's Court", "Addle Hill", "Addle Street",
     "Alban Highwalk", "Albion Place", "Albion Way", "Aldermanbury",
     "Alderman's Walk", "Aldersgate Court", "Aldgate", "Allhallows Lane",
@@ -140,7 +140,7 @@ var streetNames = [
     "Widegate Street", "Willoughby Highwalk", "Wilson Street", "Wine Office Court",
     "Wood Street", "Wormwood Street", "Wrestler's Court"];
 
-var laneNames;  // Complete this line
+let laneNames;  // Complete this line
 
 console.log(laneNames);
 console.log(laneNames.length);

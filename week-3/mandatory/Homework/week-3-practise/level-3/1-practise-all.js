@@ -43,6 +43,6 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-var password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
+let password = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 
 console.log(PasswordValidationResult)

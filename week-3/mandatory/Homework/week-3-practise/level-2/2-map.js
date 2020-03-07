@@ -5,7 +5,7 @@ Produce a new array named "eligibleStudentNames" containing only the NAMES
 of the students who have attended AT LEAST 8 classes.
 */
 
-var attendances = [
+let attendances = [
   ["Ahmed", 8],
   ["Clement", 10],
   ["Elamin", 6],
@@ -14,7 +14,7 @@ var attendances = [
   ["Nina", 10]
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+let eligibleStudentNames; // TODO: Complete this line.
 
 console.log(eligibleStudentNames);
 

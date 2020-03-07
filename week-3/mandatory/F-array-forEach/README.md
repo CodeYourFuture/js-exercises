@@ -19,7 +19,7 @@ These are all example of _side effects_. Of course, from time to time, we will n
 Say we want to log to the console a list of names.
 
 ```js
-var names = ["Daniel", "mozafar", "irina"];
+let names = ["Daniel", "mozafar", "irina"];
 ```
 
 We can use `.forEach()` to go through the array, item by item, and call a function we provide.
@@ -53,7 +53,7 @@ You can call `.forEach()` after `.map()` because `.map()` returns a new array.
 Consider this code:
 
 ```js
-var namesFormatted = names.map(format);
+let namesFormatted = names.map(format);
 namesFormatted.forEach(log);
 ```
 

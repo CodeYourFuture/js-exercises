@@ -1,7 +1,7 @@
 Imagine you have an array of names:
 
 ```js
-var names = ["Daniel", "James", "Irina", "Mozafar", "Ashleigh"];
+let names = ["Daniel", "James", "Irina", "Mozafar", "Ashleigh"];
 ```
 
 How would you find the first name that's longer than 6 characters?
@@ -21,7 +21,7 @@ To find the first item that satisfies the predicate you would have to go through
 _Searches through the array and returns the value of the first item that satisfies a predicate function._
 
 ```js
-var longName = names.find(isLongName);
+let longName = names.find(isLongName);
 
 console.log(longName); // logs Mozafar
 ```
