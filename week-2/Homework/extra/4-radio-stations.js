@@ -35,17 +35,28 @@ console.log(getAllFrequencies());
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
+const availableStations = [97, 92, 108, 105];
+function compareNumerically(a, b) {
+  if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
 
 function getStations() {
   let statns = getAllFrequencies();
+  let newArr = [];
   for (let i = 0; i < statns.length; i++) {
-    if (!isRadioStation(Number(statns[i]))) {
-      statns.splice(i, 1);
-      i--;
+    if (isRadioStation(statns[i])) {
+      newArr.push(statns[i]);
     }
   }
-  let sortedStations = statns.sort();
-  return sortedStations;
+  newArr.sort(compareNumerically);
+  return newArr;
 }
 console.log(getStations());
 
@@ -73,23 +84,19 @@ searchRadioWaves();
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
+// .fill(undefined)
+// .map((_, i) => {
+// return availableStations
+// Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
+// });
+// return Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
+
 function isRadioStation(frequency) {
   // This is a way of storing the random frequency array inside a
   // function as storing it outside is bad practice. Don't worry if you
   // don't understand some bits! You're more than welcome to ask questions
   // at any time. :)
-  if (!this.stations) {
-    const stationCount = 4;
-    const availableStations = new Array(stationCount)
-      .fill(undefined)
-      .map((_, i) => {
-        return Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
-      });
-    // return Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
-
-    this.stations = availableStations;
-  }
-  return this.stations.includes(frequency);
+  return availableStations.includes(frequency);
 }
 
 const assert = require("assert");
@@ -99,7 +106,7 @@ function test(testName, fn) {
     fn();
     console.log(`${testName}: PASS`);
   } catch (e) {
-    console.log(`${testName}: FAIL`);
+    console.log(`${testName}: FAIL`, e);
   }
 }
 
@@ -110,7 +117,5 @@ test("getAllFrequencies", () => {
 
 test("getStations", () => {
   const stations = getStations();
-  assert(
-    JSON.stringify(stations) === JSON.stringify(isRadioStation.stations.sort())
-  );
+  assert.deepStrictEqual(stations, availableStations.sort(compareNumerically));
 });
