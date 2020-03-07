@@ -5,12 +5,15 @@
 */
 
 function first(arr) {
-  return; // complete this statement
+  return arr[0]
 }
 
 function last(arr) {
-  return; // complete this statement
+  for (let i = 0; i < arr.length; i++) {
+    return arr[arr.length - 1]
+  }
 }
+
 
 /* 
   DO NOT EDIT BELOW THIS LINE
