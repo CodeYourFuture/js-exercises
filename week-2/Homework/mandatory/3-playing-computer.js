@@ -8,7 +8,7 @@
 
   1. This program throws an error. Why? //b is not defined
   2. Remove the line that throws the error. //removed (coomented out) line 31 : console.log(b);
-  3. What is printed to the console? // 2 and 6
+  3. What is printed to the console? // 2 6 4 9 6 13 8
   4. How many times is "f1" called?  // two times
   5. How many times is "f2" called?   // three times
   6. What value does the "a" parameter take in the first "f1" call? // a=1

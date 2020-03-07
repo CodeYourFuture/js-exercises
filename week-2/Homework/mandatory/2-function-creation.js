@@ -7,12 +7,15 @@ Write a function that:
 */
 function tidyUpString(strArr) {
   for (let i = 0; i < strArr.length; ++i) {
-    //removes any forward slashes (/) in the strings
-    strArr[i] = strArr[i].replace('/', '')
-    //removes any spaces in the beginning or end of the strings
-    strArr[i] = strArr[i].trim()
-    //makes the string all lowercase
-    strArr[i] = strArr[i].toLowerCase()
+    /*replacing any forward slashes (/) in the strings 
+    and replace it with an empty space 
+    and then trimming the paces and 
+    after changing all to lower case.
+    */
+    strArr[i] = strArr[i]
+      .replace('/', '')
+      .trim()
+      .toLowerCase()
   }
   return strArr
 }
@@ -26,11 +29,9 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (typeof num === 'number' && num % 2 === 0 && num <= 100) {
-    return true
-  } else {
-    return false
-  }
+  // returns the boolean value of the expression
+  return typeof num === 'number' && num % 2 === 0 && num <= 100
+
 }
 
 /* 
