@@ -29,11 +29,10 @@ function sortAges(arr) {
   let sortCode = newArr
   do {
       swapp = false;
-      for (let i=0; i < sortCode.length-1; i++)
-      {
+      for (let i=0; i < sortCode.length-1; i++) {
 
-          if (sortCode[i] > sortCode[i+1])
-          {
+          if (sortCode[i] > sortCode[i+1]) {
+
              let temp = sortCode[i];
              sortCode[i] = sortCode[i+1]; 
              sortCode[i+1] = temp;
