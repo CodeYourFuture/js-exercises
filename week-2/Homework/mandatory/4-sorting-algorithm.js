@@ -18,21 +18,21 @@ function sortAges(arr) {
   for (i = 0; i < arr.length; i++) {
     if (typeof arr[i] !== "number") {
       arr.splice(i, 1);
-      i = i - 1;
+      i--;
     }
-    console.log(arr); // complete this statement
-    let len = arr.length;
-    for (let x = 0; x < len; x++) {
-      for (let y = 0; y < len; y++) {
-        if (arr[y] > arr[y + 1]) {
-          let tmp = arr[y];
-          arr[y] = arr[y + 1];
-          arr[y + 1] = tmp;
-        }
+  }
+  console.log(arr); // complete this statement
+  let len = arr.length;
+  for (let x = 0; x < len; x++) {
+    for (let y = 0; y < len; y++) {
+      if (arr[y] > arr[y + 1]) {
+        let tmp = arr[y];
+        arr[y] = arr[y + 1];
+        arr[y + 1] = tmp;
       }
     }
-    return arr;
   }
+  return arr;
   console.log(arr);
 }
 
