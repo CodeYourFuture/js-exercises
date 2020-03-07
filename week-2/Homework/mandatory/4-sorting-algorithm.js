@@ -20,8 +20,8 @@ function removeNoneNumbers(arr){
   const onlyNumbers = [];
   for(index = 0; index < arr.length; index++) {
     const element = arr[index];
-    // console.log(element, 'is a number', isNaN)
-    if(!isNaN(element)){     // isNaN returns a boolean, the function checks if the element passed in "is NOT a Number"
+      // console.log(element, 'is a number', isNaN)
+     if(!isNaN(element)){     // isNaN returns a boolean, the function checks if the element passed in "is NOT a Number"
       // console.log(element)
       onlyNumbers.push(element)
     }
@@ -34,8 +34,22 @@ function removeNoneNumbers(arr){
 function sortNumbers(arr) {
    // write some code that will sort the elements in arr, then return it
 
+   function bubbleSort(items){
+    var len = items.length,
+        i, j;
 
+    for (i=len-1; i >= 0; i--){
+        for (j=len-i; j >= 0; j--){
+            if (items[j] < items[j-1]){
+                swap(items, j, j-1);
+            }
+        }
+    }
 
+    return items;
+}
+
+// end here
     return arr;
 }
 

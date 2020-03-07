@@ -5,9 +5,9 @@ function mood() {
   let isHappy = true;
 
   if (isHappy) {
-    return "I am happy";
-  } else {
     return "I am not happy";
+  } else {
+    return "I am happy";
   }
 }
  console.log(mood());
@@ -32,10 +32,10 @@ function sortArray() {
 }
 
 function first5() {
-  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced = numbers.slice([1, 2, 3 ,4 ,5]); // ???
-console.log(sliced)
-  return sliced;
+  let numbers = ["1", "2", "3", "4", "5", "6", "7", "8"];
+  let first5Index = numbers.slice(0, 5); // ???
+console.log(first5Index)
+  return first5Index;
 }
 
 function get3rdIndex(arr) {

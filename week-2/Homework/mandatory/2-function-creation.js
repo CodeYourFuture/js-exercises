@@ -5,8 +5,9 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
+let  unTidyString = ["/Daniel ", "irina ", " Gordon", "ashleigh "]
 function tidyUpString(strArr) {
-  
+  console.debug(unTidyString.length());
 }
 
 /*

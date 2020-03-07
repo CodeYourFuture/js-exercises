@@ -22,13 +22,16 @@ const f1 = function(a, b) {
   return a + b;
 };
 
+
 const f2 = function(a, b) {
   return a + b + x;
 };
-
 console.log(x);
 console.log(a);
-// console.log(b);
+// console.log(b);    this line has to be removed
+// the conaole printing an integer 2 6 4 9 6 13 8
+//"a" parameter take in the first "f1" call = 6
+// wandering!! I don't know why b can't be console??
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
