@@ -52,8 +52,31 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    arr[i] = Math.round(arr[i] * 100) / 100;
+    arr[i] = arr[i].toString();
+    arr[i] = arr[i].concat("%");
+  }
+  return arr;
+}
+console.log(formatPercentage([23, 18, 187.2, 0.372]));
 
+/*{
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let greaterThan100 = arr[i] > 100;
+    let checkDecimalNum = arr[i] % 1 == 0;
+    newArr.push(
+      `${greaterThan100 ? 100 : checkDecimalNum ? arr[i] : arr[i].toFixed(2)}`
+    );
+  }
+  return newArr;
+}
+*/
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
