@@ -35,7 +35,9 @@ console.log(getAllFrequencies());
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
+
 const availableStations = [97, 92, 108, 105];
+
 function compareNumerically(a, b) {
   if (a < b) {
     return -1;
@@ -84,18 +86,7 @@ searchRadioWaves();
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
-// .fill(undefined)
-// .map((_, i) => {
-// return availableStations
-// Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
-// });
-// return Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
-
 function isRadioStation(frequency) {
-  // This is a way of storing the random frequency array inside a
-  // function as storing it outside is bad practice. Don't worry if you
-  // don't understand some bits! You're more than welcome to ask questions
-  // at any time. :)
   return availableStations.includes(frequency);
 }
 
