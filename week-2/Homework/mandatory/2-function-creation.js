@@ -1,21 +1,38 @@
 /*
 Write a function that:
 - takes an array of strings as input
-- removes any spaces in the beginning or end of the strings
-- removes any forward slashes (/) in the strings
+- removes any spaces in the beginning or end of the strings 
+  .trim
+- removes any forward slashes (/) in the strings 
+  .replace
 - makes the string all lowercase
+  .toLowerCase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  for (let i=0; i < strArr.length; i++){
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", "");
+    strArr[i] = strArr[i].toLowerCase();
+  }
+  return strArr;
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
-- is a number
+- is a number typeof
 - is even
 - is less than or equal to 100
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === `number` && num % 2 === 0 && num <= 100) {
+    return true 
+  }
+  else {
+    return false
+  }
+}
 
 /* 
 Write a function that removes an element from an array
@@ -24,9 +41,12 @@ The function must:
 - return a new array with the item removed
 - remove the item at the specified index
 */
+  // let deleted = arr.splice (2, 1)
 
 function remove(arr, index) {
-  return; // complete this statement
+let newArray = arr.slice()
+newArray.splice(index, 1)
+  return newArray; 
 }
 
 /*
@@ -39,6 +59,13 @@ Write a function that:
 
 function formatPercentage(arr) {
   
+  for (let i=0; i < arr.length; i++){
+    if (arr[i] > 100){arr[i] = 100}
+
+    arr[i] = Math.ceil(arr[i]*100)/100
+    arr[i] = arr[i].toString()
+    arr[i] = arr[i].concat("%")
+    return arr
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -112,5 +139,6 @@ test(
     "18%",
     "100%",
     "0.37%"
-  ])
-);
+  ]
+  ))
+}
