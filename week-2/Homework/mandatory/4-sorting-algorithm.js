@@ -13,20 +13,43 @@ sort method 😎)
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
-
-
-
-
 function sortAges(arr) {
-  let newArr=[]
-for (let i = 0; i < arr.length; i++) {
-    if ( typeof arr[i] === "number" ){
-        newArr.push (arr[i]);
+
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      newArray.push(arr[i]);
     }
   }
-   return newArr;
+  
+  let newSortArray = newArray
+  let swap;
+  do{
+    swap = false;
+
+    for(let e = 0; e < newSortArray.length-1 ; e++){
+
+      if(newSortArray[e] > newSortArray[e+1]){
+  
+        let temp = newSortArray[e]
+  
+        newSortArray[e]=newSortArray[e+1]
+      
+        newSortArray[e+1]= temp
+
+        swap=true;
+      }
+    }
+  }while(swap)
+  return newSortArray
+
 
 }
+
+console.log(sortAges(['28', 100, 60, 55, '75', '🍕', 'Elamin']))
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
