@@ -70,9 +70,33 @@ function test(testName, fn) {
   }
 }
 
-test("getAllFrequencies", () => {
-  const freqs = getAllFrequencies();
-  assert((freqs.length = 22 && freqs[0] === 87 && freqs[21] === 108));
+const frequencies = getAllFrequencies();
+
+test("getAllFrequencies() returns all frequencies between 87 and 108", function() {
+  assert.deepStrictEqual(frequencies, [
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ]);
 });
 
 test("getStations", () => {
