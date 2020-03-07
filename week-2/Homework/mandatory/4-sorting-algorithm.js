@@ -15,8 +15,38 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
+  var swapp;
+  var n = arr.length;
+  var x=arr;
+  newArr = []
+  for (var i=0; i < n; i++)
+      {
+  if (typeof(x[i]) === "number")
+   {
 
-}
+      newArr.push(x[i]);
+  }
+  }
+  do {
+      swapp = false;
+      for (var i=0; i < n; i++)
+      {
+
+          if (x[i] < x[i+1])
+          {
+             var temp = x[i];
+             x[i] = x[i+1]; 
+             x[i+1] = temp;
+             swapp = true;
+          }   
+      }
+      
+  } while (swapp);
+return  newArr
+
+  }
+  
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

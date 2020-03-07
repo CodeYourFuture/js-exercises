@@ -5,7 +5,19 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+
+function tidyUpString(strArr) {
+
+for (let i=0; i < strArr.length; i++) {
+strArr[i] = strArr[i].trim();
+strArr[i] = strArr[i].toLowerCase();
+strArr[i] = strArr[i].replace("/", "");
+  
+
+  }  
+  console.log(strArr)
+  return strArr
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +27,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+
+  let  checkNumber = typeof num === "number" && num % 2 === 0 && num <= 100;
+
+  return checkNumber
+
+}
 
 /* 
 Write a function that removes an element from an array
@@ -26,20 +44,47 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let newArr = arr;
+
+    newArr.splice(index, 1)
+
+     return newArr
+
 }
+
 
 /*
 Write a function that:
 - takes an array of numbers as input
 - returns an array of strings formatted as percentages (e.g. 10 => "10%")
-- the numbers must be rounded to 2 decimal places
-- numbers greater 100 must be replaced with 100
+parseFloat + "%"
+- the numbers must be rounded to 2 decimal places to fixed
+- numbers greater 100 must be replaced with 100 
 */
 
 function formatPercentage(arr) {
-  
+
+ let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i];
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    else {
+      arr[i] = parseFloat(arr[i].toFixed(2));
+    }
+    newArr.push(`${arr[i]}%`);
+   
+    
+  }
+  return newArr 
+
 }
+console.log(formatPercentage([23, 18, 187.2, 0.372]))
+
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
