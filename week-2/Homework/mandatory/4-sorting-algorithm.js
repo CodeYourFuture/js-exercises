@@ -14,9 +14,35 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {
 
-}
+function sortAges(arr) {
+  
+  let arr2 = []; //blank array
+  for (i = 0; i < arr.length; i++) {
+
+    if (typeof arr[i] === "number") {
+      arr2.push(arr[i]) //only numbers are pushed into arr2
+      }
+  }
+
+   for (let b = 0; b < arr2.length ; b++) {
+    for(let j = 0 ; j < arr2.length-1-b; j++){  //Compare the adjacent positions
+    if (arr2[j] > arr2[j + 1]) { //Swap the numbers
+
+      var tmp = arr2[j]; //tmporary variable to hold the current number
+      arr2[j] = arr2[j+1]; //Replace current number with adjacent number
+      arr2[j + 1] = tmp;//Replace adjacent number with current number
+    }
+   }
+  }
+  return arr2
+console.log(arr2)
+ }
+
+
+ 
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
