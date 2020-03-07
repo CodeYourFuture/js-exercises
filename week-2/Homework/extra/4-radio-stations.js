@@ -1,40 +1,40 @@
-/**
- * Finding a radio station, and a good one, can be hard manually.
- * Let's use some code to help us build a program that helps us scan
- * the radio waves for some good music.
- */
-
-/**
- * First, let's create a function that creates a list of all the frequencies.
- * Call this function `getAllFrequencies`.
- *
- * This function should:
- * - Create an array  starting at 87 and ending in 108
- * - Should return this array to use in other functions
- */
-
 // `getAllFrequencies` goes here
-
-/**
- * Next, let's write a function that gives us only the frequencies that are radio stations.
- * Call this function `getStations`.
- *
- * This function should:
- * - Get the available frequencies from `getAllFrequencies`
- * - There is a helper function called isRadioFrequency that takes an integer as an argument and returns a boolean.
- * - Sort the stations by low - high e.g. 1,2,3,4,5
- * - Return only the frequencies that are radio stations.
- */
+function getAllFrequencies() {
+  let frequencies = [];
+  let a = 87;
+  for(var i=0;i<22;i++){
+      frequencies.push(a);
+      a = a+1;
+  }
+  return frequencies;
+}
 // `getStations` goes here
+ function getStations() {
+      let stations=[];
+      let allStations = getAllFrequencies();
+       for (let i=0;i<allStations.length;i++) {
+         let newFreq = isRadioStation(allStations[i]);
+         if (newFreq === true){ 
+            stations.push(allStations[i]);
+         }
+   }
+  return stations.sort();
+ }
+console.log(getStations());
 
-/**
- * Lastly, let's make a function for people to use.
- * When this runs, it should use the above two functions to log to the `console`
- * Call this function `searchRadioWaves`.
- * - "🎶 station found at ${frequency}, enjoy!"
- * - "No station found at ${frequency}, moving on"
- */
 // `searchRadioWaves` goes here
+
+function searchRadioWaves(){
+  let callStations = getStations();
+  if (callStations.length > 0) {
+    console.log("🎶 station found at ${frequency}, enjoy!");
+  }
+  else {
+    console.log("No station found at ${frequency}, moving on");
+  }
+};
+searchRadioWaves();
+
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -48,12 +48,11 @@ function isRadioStation(frequency) {
     const availableStations = new Array(stationCount)
       .fill(undefined)
       .map((_, i) => {
-        return Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100;
+        return Math.floor(Math.random() * ((10800 - 8700 + 1) + 8700) / 100);
       });
 
     this.stations = availableStations;
   }
-
   return this.stations.includes(frequency);
 }
 
