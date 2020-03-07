@@ -17,7 +17,7 @@
 
 function getAllFrequencies() {
   let frequencies = [];
-  for (i = 87; i < 109; i++) {
+  for (let i = 87; i < 109; i++) {
     frequencies.push(i);
   }
   return frequencies;
@@ -37,12 +37,17 @@ console.log(getAllFrequencies());
 // `getStations` goes here
 
 function getStations() {
-  getAllFrequencies();
-  for (i = 0; i < frequencies.length; i++) {
-    if (isRadioFrequency(frequencies[i])) {
+  let statns = getAllFrequencies();
+  for (let i = 0; i < statns.length; i++) {
+    if (!isRadioStation(Number(statns[i]))) {
+      statns.splice(i, 1);
+      i--;
     }
   }
+  let sortedStations = statns.sort();
+  return sortedStations;
 }
+console.log(getStations());
 
 /**
  * Lastly, let's make a function for people to use.
@@ -52,6 +57,19 @@ function getStations() {
  * - "No station found at ${frequency}, moving on"
  */
 // `searchRadioWaves` goes here
+
+function searchRadioWaves() {
+  let lastArr = getStations();
+  if (lastArr.length > 0) {
+    for (let i = 0; i < lastArr.length; i++) {
+      console.log(`🎶 station found at ${lastArr[i]}, enjoy!`);
+    }
+  } else {
+    console.log(`No station found at ${lastArr[0]}, moving on`);
+  }
+}
+
+searchRadioWaves();
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -65,12 +83,12 @@ function isRadioStation(frequency) {
     const availableStations = new Array(stationCount)
       .fill(undefined)
       .map((_, i) => {
-        return Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100;
+        return Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
       });
+    // return Math.floor((Math.random() * (10800 - 8700 + 1 + 8700)) / 100);
 
     this.stations = availableStations;
   }
-
   return this.stations.includes(frequency);
 }
 

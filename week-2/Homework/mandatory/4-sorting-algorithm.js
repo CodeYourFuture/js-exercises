@@ -15,10 +15,10 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function filterNumsOnly(arr) {
-  for (i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (typeof arr[i] !== "number") {
       arr.splice(i, 1);
-      i = i - 1;
+      i--;
     }
   }
   return arr;
@@ -29,7 +29,7 @@ function sortAges(arr) {
 
   let temp;
   for (let i = 0; i < arr.length; i++) {
-    for (j = 0; j < arr.length; j++) {
+    for (let j = 0; j < arr.length; j++) {
       if (arr[j] > arr[j + 1]) {
         temp = arr[j];
         arr[j] = arr[j + 1];
