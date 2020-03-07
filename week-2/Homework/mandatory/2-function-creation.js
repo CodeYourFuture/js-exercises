@@ -5,7 +5,20 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+
+function newString(strr) {
+  return strr
+    .trim()
+    .replace("/", "")
+    .toLowerCase();
+}
+
+function tidyUpString(strarr) {
+  let newArr = strarr.map(newString);
+  return newArr;
+}
+
+
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -14,8 +27,16 @@ Complete the function to check if the variable `num` satisfies the following req
 - is less than or equal to 100
 Tip: use logical operators
 */
+function validate(num) {
+  let isEven = num % 2 === 0;
 
-function validate(num) {}
+  if (typeof num === "number" && isEven && (num < 100 || num === 100)) {
+
+              return true;
+            }
+          return false;
+}
+console.log(validate(10))
 
 /* 
 Write a function that removes an element from an array
@@ -25,10 +46,20 @@ The function must:
 - remove the item at the specified index
 */
 
+// function remove(arr, index) {
+//   return; // complete this statement
+// }
 function remove(arr, index) {
-  return; // complete this statement
-}
 
+
+  let newArry = arr.slice()
+                newArry.splice(index,1)
+
+      
+
+  return newArry
+
+}   
 /*
 Write a function that:
 - takes an array of numbers as input
@@ -37,8 +68,18 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-  
+function createNewStr(newString) {
+  newString = Math.round(newString * 100) / 100;
+
+  if (newString > 100) {
+    newString = 100;
+  }
+
+  return (newString = `${newString.toString()}%`);
+}
+
+function formatPercentage(arr1) {
+  return arr1.map(createNewStr);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

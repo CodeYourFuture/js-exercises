@@ -4,44 +4,49 @@
 function mood() {
   let isHappy = true;
 
-  if (isHappy) {
+  if (!isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
 }
+console.log(mood())
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
+  let isBigEnough =10;
 
-  if (isBigEnough) {
+  if (num >= isBigEnough) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
 }
+console.log(greaterThan10())
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let sortedLetters= letters.sort();
 
   return sortedLetters;
 }
+console.log(sortArray())
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+  let sliced= numbers.slice(0,5);
 
   return sliced;
 }
+console.log(first5())
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element = arr[index];
 
   return element;
 }
+console.log(get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
