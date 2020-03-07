@@ -14,7 +14,8 @@ function mood(isHappy) {
 
 
 let num = 10;
-let isBigEnough;
+let isBigEnough = num;
+
 
 function greaterThan10(isBigEnough) {
   
@@ -40,12 +41,17 @@ function first5() {
   return sliced;
 }
 
+first5(1,2,3,4,5,6,7,8);
 
 function get3rdIndex(arr) {
   let index = 3;
   let element = arr[index];
   return element;
 }
+
+get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]);
+
+get3rdIndex([11, 37, 62, 18, 19, 3, 30]);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

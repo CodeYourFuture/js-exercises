@@ -5,7 +5,13 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  let str = ["   This is JavaScript  "];
+
+  return str.trim();
+}
+
+tidyUpString();
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +21,11 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+let 
+
+
+}
 
 /* 
 Write a function that removes an element from an array
