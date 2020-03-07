@@ -5,13 +5,13 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {
-    for(let i =0;i<strArr.length;i++){
-        strArr[i] =strArr[i].trim();
-        strArr[i] = strArr[i].replace(/\//,'');
-        strArr[i] = strArr[i].toLowerCase();
+function tidyUpString(strArr) {// takes an arr
+    for(let i =0;i<strArr.length;i++){// loops through an Arr 
+        strArr[i] =strArr[i].trim();// trims arr elements
+        strArr[i] = strArr[i].replace(/\//,'');// removes the fowardslash
+        strArr[i] = strArr[i].toLowerCase();// makes array elements lovercase
       }
-     return strArr;
+     return strArr;// returns a final revised array.
     }
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -23,14 +23,14 @@ Tip: use logical operators
 
 function validate(num) {
   
-  if(typeof num !== 'number'){
-    return false;
-   }else if(num%2 !== 0){
+  if(typeof num !== 'number'){// checks type of number is string returns false
+    return false; 
+   }else if(num%2 !== 0){ // if number is odd returns false
      return false;
-   }else if(num > 100){
+   }else if(num > 100){// if num is greater than 100 returns false
       return false;
     }else{
-       return true;
+       return true;// returns true if all the above conditions are false
     }
       
     }
@@ -47,11 +47,11 @@ The function must:
 */
 
 function remove(arr, indexToRemove) {
-   let newArr = arr.filter(function(element,index){
-      return indexToRemove !==index ;
+   let newArr = arr.filter(function(element,index){// creates new array and filters  the array
+      return indexToRemove !==index ; // returns the array excluding the specific index 
    })
   
-  console.log(newArr)
+  console.log(newArr);// console logs array
    return  newArr; // complete this statement
 }
 
@@ -63,10 +63,10 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
-    let stringArr = arr.map(function(number){
-      const finalNumber = number >100 ? 100: number;
-      return `${Math.round(finalNumber*100)/100}%`;
+function formatPercentage(arr) {// takes  arr
+    let stringArr = arr.map(function(number){ // loops through the numb arr using map
+      const finalNumber = number >100 ? 100: number; // if number greater than returns 100 else return a number.
+      return `${Math.round(finalNumber*100)/100}%`; // rounds 2 desimal and stringfys it
     })
     console.log(stringArr)
     return stringArr;

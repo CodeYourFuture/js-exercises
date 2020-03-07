@@ -15,8 +15,27 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-
-}
+   let numberArr =[];// new array to store numbera
+  for(let i = 0; i < arr.length;i++){ // loops throw the length of an array
+        if(typeof arr[i]!== typeof'string'){// checks if array elements are number
+           numberArr.push(arr[i]);// push the numbers into new array
+        }
+      }
+      let swapped; // variable to hold a swap
+      for(let j= numberArr.length; j > 0;j--){// loops though the array desending order
+        for(let k = 0; k < j;k++){ // loops through the array assending order
+             if(numberArr[k] > numberArr[k + 1]){//as it loops checks two neibouring elements if its greater  swaps them around 
+                swapped =  numberArr[k]; // element is assigned to swapped
+                numberArr[k] = numberArr[k + 1]; // element assinged to next element 
+                numberArr[k + 1] = swapped; // next goes to the swap  loop continus until every elements be sorted
+              }
+            }
+          
+          }
+          console.log(numberArr);// checks the array value  
+          return numberArr; // returns the sorted value.
+      
+    }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
