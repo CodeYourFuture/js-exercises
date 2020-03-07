@@ -27,7 +27,7 @@ function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
   let sortedLetters = letters.sort();  
   console.log(sortedLetters)  //console.log display the correct result but I am still not passing
-  return sortedLetters;
+  return sortedLetters;      // also I jsut realized there is an error in the test syntax,and \i didn't update the respo even though I did on tuesday  
   
 }
 
