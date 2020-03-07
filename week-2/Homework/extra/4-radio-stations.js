@@ -97,7 +97,5 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
 
 test("getStations", () => {
   const stations = getStations();
-  assert(
-    JSON.stringify(stations) === JSON.stringify(availableStations.sort())
-  );
+  assert.deepStrictEqual(stations, availableStations.sort());
 });
