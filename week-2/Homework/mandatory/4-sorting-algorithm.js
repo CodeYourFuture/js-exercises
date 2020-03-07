@@ -16,10 +16,9 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 
 function sortAges(arr) {
   var swapp;
-  var x=arr;
   newArr = []
 
-  for (var i=0; i < arr.length; i++)  {
+  for (let i=0; i < arr.length; i++)  {
 
       if (typeof(arr[i]) === "number") {
 
@@ -30,12 +29,12 @@ function sortAges(arr) {
   let sortCode = newArr
   do {
       swapp = false;
-      for (var i=0; i < sortCode.length-1; i++)
+      for (let i=0; i < sortCode.length-1; i++)
       {
 
           if (sortCode[i] > sortCode[i+1])
           {
-             var temp = sortCode[i];
+             let temp = sortCode[i];
              sortCode[i] = sortCode[i+1]; 
              sortCode[i+1] = temp;
              swapp = true;
