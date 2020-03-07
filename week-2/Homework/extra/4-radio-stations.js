@@ -38,23 +38,19 @@
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
+let availableStations;
+
 function isRadioStation(frequency) {
-  // This is a way of storing the random frequency array inside a 
-  // function as storing it outside is bad practice. Don't worry if you
-  // don't understand some bits! You're more than welcome to ask questions
-  // at any time. :)
-  if (!this.stations) {
+  if (!availableStations) {
     const stationCount = 4;
-    const availableStations = new Array(stationCount)
+    availableStations = new Array(stationCount)
       .fill(undefined)
       .map((_, i) => {
         return Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100;
       });
-
-    this.stations = availableStations;
   }
 
-  return this.stations.includes(frequency);
+  return availableStations.includes(frequency);
 }
 
 const assert = require("assert");
@@ -102,6 +98,6 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
 test("getStations", () => {
   const stations = getStations();
   assert(
-    JSON.stringify(stations) === JSON.stringify(isRadioStation.stations.sort())
+    JSON.stringify(stations) === JSON.stringify(availableStations.sort())
   );
 });
