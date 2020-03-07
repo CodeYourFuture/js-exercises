@@ -59,6 +59,21 @@ function searchRadioWaves() {
 }
 searchRadioWaves();
 
+// function getStationsTest() {
+//   let avaStats = getAllFrequencies();
+//   let stations = [];
+//   for (let i = 0; i < avaStats.length; i++) {
+//     if (isRadioStation(avaStats[i])) {
+//       stations.push(avaStats[i]);
+//       stations.sort();
+//     }
+//     console.log(isRadioStation(avaStats[i]));
+//   }
+//   console.log (stations);
+//   return stations;
+  
+// }
+// getStationsTest();
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function isRadioStation(frequency) {
@@ -75,11 +90,12 @@ function isRadioStation(frequency) {
       });
 
     this.stations = availableStations;
-    console.log(availableStations);
+    console.log(availableStations.sort(function(a,b) {return a-b}));
   }
-
+  
   return this.stations.includes(frequency);
 }
+
 
 const assert = require("assert");
 
@@ -99,7 +115,9 @@ test("getAllFrequencies", () => {
 
 test("getStations", () => {
   const stations = getStations();
-  assert(
+    assert(
     JSON.stringify(stations) === JSON.stringify(isRadioStation.stations.sort())
   );
+  
+ // assert.deepStrictEqual(stations, getStations());
 });
