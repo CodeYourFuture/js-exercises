@@ -7,8 +7,16 @@ Write a function that:
 */
 let  unTidyString = ["/Daniel ", "irina ", " Gordon", "ashleigh "]
 function tidyUpString(strArr) {
-  console.debug(unTidyString.length());
+  for(i=0; i<strArr.length; i++){
+    let tidyString = strArr[i].trim()
+     let withOutSlash = tidyString.replace("/","")
+     let lowerCaseString = withOutSlash.toLowerCase()
+     strArr[i] = lowerCaseString
+    console.log(lowerCaseString)
+  }
+  return strArr;
 }
+tidyUpString(unTidyString);
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -18,7 +26,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+if(typeof num === "number" && num % 2 === 0 && num <= 100){ 
+  return true
+}else { return false};
+
+}
+
 
 /* 
 Write a function that removes an element from an array
@@ -39,7 +53,7 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
-
+arrayOfNumber = [23, 18, 187.2, 0.372]; 
 function formatPercentage(arr) {
   
 }

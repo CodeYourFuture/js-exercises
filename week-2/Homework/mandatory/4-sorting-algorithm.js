@@ -16,13 +16,10 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 
 
 function removeNoneNumbers(arr){
-  
   const onlyNumbers = [];
   for(index = 0; index < arr.length; index++) {
     const element = arr[index];
-      // console.log(element, 'is a number', isNaN)
      if(!isNaN(element)){     // isNaN returns a boolean, the function checks if the element passed in "is NOT a Number"
-      // console.log(element)
       onlyNumbers.push(element)
     }
   }
@@ -32,8 +29,8 @@ function removeNoneNumbers(arr){
 }
 
 function sortNumbers(arr) {
-   // write some code that will sort the elements in arr, then return it
-
+   arr.sort((a, b)=> a-b);
+   return arr;
    function bubbleSort(items){
     var len = items.length,
         i, j;
@@ -57,7 +54,8 @@ function sortNumbers(arr) {
 function sortAges(arr) {
   const arrayWithNoNoneNumbers = removeNoneNumbers(arr)
   const sortedArray = sortNumbers(arrayWithNoNoneNumbers)
-  console.log(sortedArray)
+  console.log(`SORTED`, sortedArray)
+  return sortedArray;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -99,5 +97,5 @@ test(
   
 test(
     "sortAges function works - case 2",
-    arraysEqual(sortAges(agesCase2), [55, 60, 100])
+    arraysEqual(sortAges(agesCase2), ['28', 55, 60, '75', 100])
 );

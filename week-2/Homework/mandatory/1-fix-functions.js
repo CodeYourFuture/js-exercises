@@ -33,7 +33,7 @@ function sortArray() {
 
 function first5() {
   let numbers = ["1", "2", "3", "4", "5", "6", "7", "8"];
-  let first5Index = numbers.slice(0, 5); // ???
+  let first5Index = numbers.slice(0, 5);
 console.log(first5Index)
   return first5Index;
 }
@@ -65,9 +65,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  sortArray().join()=== ["a", "c", "e", "f", "n", "z"].join()
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", first5().join()=== [1, 2, 3, 4, 5].join());
 
 test(
   "get3rdIndex function works - case 1",
