@@ -2,7 +2,7 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = false;
+  let isHappy = true;
 
   if (isHappy) {
     return "I am happy";
@@ -56,16 +56,28 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
+function arraysEqual(a, b) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
+}
+
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
-  greaterThanTen() === "num is greater than or equal to 10"
+  greaterThan10() === "num is greater than or equal to 10"
 );
 test(
   "sortArray function works",
-  sortArray() === ["a", "c", "e", "f", "n", "z"]
+  arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",

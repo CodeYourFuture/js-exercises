@@ -37,7 +37,9 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
