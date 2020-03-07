@@ -33,28 +33,24 @@ function tidyUpString(strArr) {
 // console.log(tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]))
 
 /*
-Complete the function to check if the variable `num` satisfies the following requirements:
-- is a number
-- is even
-- is less than or equal to 100
-
-Tip: use logical operators
 https://www.w3schools.com/js/js_comparisons.asp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
 
-
-Sonjide Hussain  Today at 13:47
 if (condition) {
   //  block of code to be executed if the condition is true
 } else {
   //  block of code to be executed if the condition is false
 }
 https://www.w3schools.com/js/js_if_else.asp
+
+Complete the function to check if the variable `num` satisfies the following requirements:
+- is a number
+- is even
+- is less than or equal to 100
+Tip: use logical operators
 */
 
-
 function validate(num) {
-
   if (typeof num === 'number' && num % 2 === 0 && num <= 100){
     return true
   } else{
@@ -62,10 +58,15 @@ function validate(num) {
   }
 }
 
-
-
 /* 
-Write a function that removes an element from an array
+
+test(
+  "remove function works - case 1",
+  arraysEqual(remove([10, 293, 292, 176, 29], 3), [10, 293, 292, 29])
+);
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
+Write a function that removes an element from an array [after index 6]
 The function must:
 - NOT change the original array
 - return a new array with the item removed
@@ -73,9 +74,11 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
-
+  let newArr = arr.slice()
+    newArr.splice(index, 1)
+    return newArr
 }
+//console.log(remove([10, 293, 292, 176, 29], 3))
 
 /*
 Write a function that:
@@ -83,12 +86,27 @@ Write a function that:
 - returns an array of strings formatted as percentages (e.g. 10 => "10%")
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
-["/Daniel ", "irina ", " Gordon", "ashleigh "]
+
+
+  arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
+    "23%",
+    "18%",
+    "100%",
+    "0.37%"
 */
 
 function formatPercentage(arr) {
   
+  for (let i = 0; i < arr.length; i++) {
+
+    if (arr[i]> 100) {arr[i] = 100}
+    arr[i] = Math.round(arr[i]*100) / 100;
+    arr[i] = arr[i].toString();
+    arr[i] = arr[i].concat("%");
+  }
+ return arr
 }
+  console.log(formatPercentage([23, 18, 187.2, 0.372]))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
