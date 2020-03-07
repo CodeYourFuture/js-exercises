@@ -74,7 +74,6 @@ function formatPercentage(arr) {
       arr[i] = parseFloat(arr[i].toFixed(2));
     }
     newArr.push(`${arr[i]}%`);
-   
     
   }
   return newArr 
