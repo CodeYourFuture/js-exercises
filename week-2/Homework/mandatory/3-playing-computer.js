@@ -14,6 +14,15 @@
   6. What value does the "a" parameter take in the first "f1" call?
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
 */
+/*This program throws an error because "b" is not defined as a function argument before
+ So it shoul be defined before execution.
+ Console is printing value of x, a, b 
+ "f2" is called one time
+ "f1" is called one time
+ "a" takes 7 in the first "f1" call
+ it is 6 (outer variable)
+
+  */
 
 let x = 2;
 let a = 6;
