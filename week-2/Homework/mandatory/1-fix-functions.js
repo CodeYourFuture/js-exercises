@@ -1,9 +1,9 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-function mood() {
-  let isHappy = true;
 
+function mood() {
+  let isHappy = false; //when we checked test output we need to change true to false
   if (isHappy) {
     return "I am happy";
   } else {
@@ -13,7 +13,7 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
+  let isBigEnough = 9;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -57,14 +57,21 @@ function test(test_name, expr) {
 }
 
 test("mood function works", mood() === "I am not happy");
+
+
 test(
   "greaterThanTen function works",
   greaterThan10() === "num is greater than or equal to 10"
 );
+
+
+
 test(
   "sortArray function works",
   sortArray() === ["a", "c", "e", "f", "n", "z"]
 );
+
+
 test("first5 function works", first5() === [1, 2, 3, 4, 5]);
 
 test(
@@ -72,6 +79,9 @@ test(
   get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]) ===
     "strawberry"
 );
+
+
+
 test(
   "get3rdIndex function works - case 2",
   get3rdIndex([11, 37, 62, 18, 19, 3, 30]) === 18
