@@ -25,16 +25,17 @@ function mood() {
 
 ); */
 
+
 function greaterThan10() {
   let num = 10;
   let isBigEnough = num;
-
   if (isBigEnough >= num) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
 }
+// where do i put the console.log(greaterThan10) in this task;
 
 //https://www.w3schools.com/jsref/jsref_sort.asp
 //Sort numbers in an array in ascending order:
@@ -55,8 +56,10 @@ function greaterThan10() {
 function sortArray() {
  let letters = ["a", "n", "c", "e", "z", "f"];
  let sortedLetters = letters.sort();  
+ // console.log(sortedLetters);
  return sortedLetters;
   } 
+ 
   
   /* test("first5 function works", first5() === [1, 2, 3, 4, 5]);
     fruits.slice(1, 3); slice is 
@@ -73,7 +76,7 @@ function get3rdIndex(arr) {
   let element = arr[index];
   return element;
 }
-
+// why did that work when index starts at 0
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

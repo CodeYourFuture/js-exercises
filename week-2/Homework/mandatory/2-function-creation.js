@@ -1,23 +1,68 @@
 /*
+reading list
+- https://github.com/thejsway/thejsway
+- https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99
+
 Write a function that:
 - takes an array of strings as input
+
 - removes any spaces in the beginning or end of the strings
+// something.trim()
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+
 - removes any forward slashes (/) in the strings
+// something.replace()
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
 - makes the string all lowercase
+// something.toLowerCase()
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+
 */
-function tidyUpString(strArr) {
-  
+ 
+//Input: string, output: string
+function tidyUpString(strArr) { 
+
+  for (let i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", "");
+    strArr[i] = strArr[i].toLowerCase();
 }
+ return strArr;
+}
+// console.log(tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]))
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
 - is even
 - is less than or equal to 100
+
 Tip: use logical operators
+https://www.w3schools.com/js/js_comparisons.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+
+
+Sonjide Hussain  Today at 13:47
+if (condition) {
+  //  block of code to be executed if the condition is true
+} else {
+  //  block of code to be executed if the condition is false
+}
+https://www.w3schools.com/js/js_if_else.asp
 */
 
-function validate(num) {}
+
+function validate(num) {
+
+  if (typeof num === 'number' && num % 2 === 0 && num <= 100){
+    return true
+  } else{
+    return false
+  }
+}
+
+
 
 /* 
 Write a function that removes an element from an array
@@ -29,6 +74,7 @@ The function must:
 
 function remove(arr, index) {
   return; // complete this statement
+
 }
 
 /*
@@ -37,6 +83,7 @@ Write a function that:
 - returns an array of strings formatted as percentages (e.g. 10 => "10%")
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
+["/Daniel ", "irina ", " Gordon", "ashleigh "]
 */
 
 function formatPercentage(arr) {
@@ -79,8 +126,7 @@ test(
 );
 test(
   "tidyUpString function works - case 2",
-  arraysEqual(
-    tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
+  arraysEqual(tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
     ["sanyia", "michael", "anthony", "tim"]
   )
 );
