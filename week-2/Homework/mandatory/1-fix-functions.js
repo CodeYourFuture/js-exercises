@@ -1,29 +1,26 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
-/* function mood(mymood) {
+function mood(mymood) {
   let isHappy = true;
   if (isHappy === mymood) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
-} */
-
-
-function mood() {
-  let isHappy = true;
-  if (!isHappy) {
-    return "I am happy";
-  } else {
-    return "I am not happy";
-  }
 }
 
+// let isHappy = true;
+// function mood() {
+//   if (!isHappy) {
+//     return "I am happy";
+//   } else {
+//     return "I am not happy";
+//   }
+// }
 // function greaterThan10(isBigEnough) {
 //   let num = 10;
 //   let isBigEnough;
-
 //   if (isBigEnough) {
 //     return "num is greater than or equal to 10";
 //   } else {
@@ -34,19 +31,17 @@ function mood() {
 function greaterThan10() {
   let num = 10;
   let isBigEnough = true;
-
   if (isBigEnough) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
 }
-// greaterThan10(10);
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
   let sortedLetters;
-  sortedLetters = letters.sort(function (a, b) { return a - b });
+  sortedLetters = letters.sort();
 
   return sortedLetters;
 }
@@ -55,15 +50,13 @@ function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   let sliced;
   sliced = numbers.slice(0, 5);
-  console.log(sliced);
-
-
+  // console.log(sliced);
   return sliced;
 }
 
 function get3rdIndex(arr) {
-  let index = ["fruit", "banana", "apple", "strawberry", "raspberry"];
-  let element = index[3];
+  let index = 3 //["fruit", "banana", "apple", "strawberry", "raspberry"];
+  let element = arr[index];
 
   return element;
 }

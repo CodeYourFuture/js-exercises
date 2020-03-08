@@ -1,5 +1,5 @@
 // Add comments to explain what this function does. You're meant to use Google!
-//It returns random decimal number between 0 and one
+//It returns random decimal number between 0 and 9
 function getNumber(num) {
   return Math.random() * 10;
 }

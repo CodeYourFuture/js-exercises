@@ -6,7 +6,7 @@
 */
 const salesTax = 20 / 100;
 function calculateSalesTax(ProductPrice) {
-  return `${salesTax}` * ProductPrice + ProductPrice;
+  return salesTax * ProductPrice + ProductPrice;
 }
 calculateSalesTax(15);
 
@@ -21,6 +21,9 @@ calculateSalesTax(15);
 */
 
 function formatCurrency() {
+  var num = calculateSalesTax;
+  var num = num.toFixed(2)
+
 
 }
 

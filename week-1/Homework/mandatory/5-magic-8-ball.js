@@ -42,115 +42,103 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
+let eightballValid = 
+['It is certain',
+  'It is decidedly so',
+  'Without a doubt',
+  'Yes - definitely',
+  'You may rely on it',
+  'As I see it, yes',
+  'Most likely',
+  'Outlook good',
+  'Yes',
+  'Signs point to yes',
+  'Reply hazy, try again',
+  'Ask again later',
+  'Better not tell you now',
+  'Cannot predict now',
+  'Concentrate and ask again',
+  "Don't count on it",
+  'My reply is no',
+  'My sources say no',
+  'Outlook not so good',
+  'Very doubtful',
+]
 
-// This should log "The ball has shaken!"
-// and return the answer.
-let answer = "Positive";
-function shakeBall(answer) {
-  switch (answer) {
-    case "It is certain":
-      alert("Very Positive");
-      break;
-
-    case "It is decidedly so.":
-      alert("Very Positive");
-      break;
-
-    case "Without a doubt.":
-      alert("Very Positive");
-      break;
-
-    case "Yes - definitely.":
-      alert("Very Positive");
-      break;
-
-    case "You may rely on it.":
-      alert("Very Positive");
-      break;
-
-    case "As I see it, yes.":
-      alert("Positive");
-      break;
-
-    case "You may rely on it.":
-      alert("Positive");
-      break;
-
-    case "Most likely.":
-      alert("Positive");
-      break;
-
-    case "Outlook good.":
-      alert("Positive");
-      break;
-
-    case "Yes.":
-      alert("Positive");
-      break;
-
-    case "Signs point to yes.":
-      alert("Positive");
-      break;
-
-    case "Reply hazy, try again.":
-      alert("Negative");
-      break;
-
-    case "Ask again later.":
-      alert("Negative");
-      break;
-
-    case "Better not tell you now.":
-      alert("Negative");
-      break;
-
-    case "Cannot predict now.":
-      alert("Negative");
-      break;
-
-    case "Concentrate and ask again.":
-      alert("Negative");
-      break;
-
-    case "Don't count on it.":
-      alert("Very Negative");
-      break;
-
-    case "My reply is no.":
-      alert("Very Negative");
-      break;
-
-    case "My sources say no.":
-      alert("Very Negative");
-      break;
-
-    case "Outlook not so good.":
-      alert("Very Negative");
-      break;
-
-    case "Very doubtful.":
-      alert("Very Negative");
-      break;
-
-    default:
-      alert("Try again");
+function shakeBall() {
+  console.log('The ball has shaken!')
+  randomNumber = Math.floor(Math.random() * 20)
+  let eightBall = ''
+  switch (randomNumber) {
+    case 0:
+      eightBall = 'It is certain'
+      break
+    case 1:
+      eightBall = 'It is decidedly so'
+      break
+    case 2:
+      eightBall = 'Without a doubt'
+      break
+    case 3:
+      eightBall = 'Yes - definitely'
+      break
+    case 4:
+      eightBall = 'You may rely on it'
+      break
+    case 5:
+      eightBall = 'As I see it, yes'
+      break
+    case 6:
+      eightBall = 'Most likely'
+      break
+    case 7:
+      eightBall = 'Outlook good'
+      break
+    case 8:
+      eightBall = 'Yes'
+      break
+    case 9:
+      eightBall = 'Signs point to yes'
+      break
+    case 10:
+      eightBall = 'Reply hazy, try again'
+      break
+    case 11:
+      eightBall = 'Ask again later'
+      break
+    case 12:
+      eightBall = 'Better not tell you now'
+      break
+    case 13:
+      eightBall = 'Cannot predict now'
+      break
+    case 14:
+      eightBall = 'Concentrate and ask again'
+      break
+    case 15:
+      eightBall = "Don't count on it"
+      break
+    case 16:
+      eightBall = 'My reply is no'
+      break
+    case 17:
+      eightBall = 'My sources say no'
+      break
+    case 18:
+      eightBall = 'Outlook not so good'
+      break
+    case 19:
+      eightBall = 'Very doubtful'
+      break
   }
+  return eightBall
 }
-
-// The answer should come from shaking the ball
-let answer = positive;
-
-// When checking the answer, we should tell someone if the answer is
-// - very positive
-// - positive
-// - negative
-// - very negative
-function checkAnswer() {}
+let answer
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };
