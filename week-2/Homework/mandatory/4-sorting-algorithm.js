@@ -21,7 +21,6 @@ function sortAges(arr) {
     dataType = typeof(arr[i]);
     if (dataType === "number"){
       newArr.push(arr[i]);
-      
     }
   }
   let store;
@@ -36,7 +35,7 @@ function sortAges(arr) {
   }
 return newArr;
 }
-console.log(sortAges([12, "nana", 23, "$$",[12],43, 11]));
+console.log(sortAges([12, "nana", 23, "$$",[12],43, 11, 1,"@", 7]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
