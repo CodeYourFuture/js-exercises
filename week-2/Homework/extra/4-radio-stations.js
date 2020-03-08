@@ -45,8 +45,8 @@ function isRadioStation(frequency) {
     const stationCount = 4;
     availableStations = new Array(stationCount)
       .fill(undefined)
-      .map((_, i) => {
-        return Math.floor(Math.random() * (10800 - 8700 + 1) + 8700) / 100;
+      .map(function() {
+        return Math.floor(Math.random() * (108 - 87 + 1) + 87);
       });
   }
 
