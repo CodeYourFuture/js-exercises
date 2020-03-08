@@ -47,6 +47,9 @@ function isRadioStation(frequency) {
       .fill(undefined)
       .map(function() {
         return Math.floor(Math.random() * (108 - 87 + 1) + 87);
+      })
+      .sort(function(frequencyA, frequencyB) {
+        return frequencyA - frequencyB;
       });
   }
 
@@ -97,5 +100,5 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
 
 test("getStations", () => {
   const stations = getStations();
-  assert.deepStrictEqual(stations, availableStations.sort());
+  assert.deepStrictEqual(stations, availableStations);
 });
