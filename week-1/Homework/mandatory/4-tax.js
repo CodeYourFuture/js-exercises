@@ -20,9 +20,10 @@ calculateSalesTax(15);
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {
-  var num = calculateSalesTax;
+function formatCurrency(price) {
+  var num = calculateSalesTax(price);
   var num = num.toFixed(2)
+  return "£" + num;
 
 
 }
