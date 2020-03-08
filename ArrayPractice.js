@@ -23,7 +23,7 @@ let x  = alphabet.slice(0,3);
 console.log(x);
 
 for(var i = 0; i < alphabet.length; i++){
-    if[i] === "M";
+    //if[i] === "M";
   return true;
 }
 /*

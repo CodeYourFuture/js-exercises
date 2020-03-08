@@ -9,7 +9,7 @@ function mood() { //creating a function called mood
       return "I am happy";
     } 
     else { //other posibility is not true
-      return "I am not happy";
+      return "I am not hapipy";
     }
   }
 
