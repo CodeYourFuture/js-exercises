@@ -15,7 +15,21 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-
+  let ageSorted = [];   // create an array of numbers
+  for(i = 0; i < arr.length; i++) {
+    if(typeof(arr[i] == 'number')) {
+      ageSorted.push(arr[i]);
+    }
+  }
+  for(k = 0; k < ageSorted.length; k++) {
+    for(l = 0; l < ageSorted.length; l++) {
+      if(ageSorted[k] > ageSorted[l]) {
+        let temp = ageSorted[k];
+        ageSorted[k] = ageSorted[l];
+        ageSorted[l] = temp;
+      }
+    }
+    return ageSorted;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -6,9 +6,9 @@ Write a function that:
 - makes the string all lowercase
 */
 function tidyUpString(strArr) {
-  for(i = 0; i < strArr.length; i++) {
+  for(i = 0; i < strArr; i++) {
     strArr[i].trim();
-    strArr[i].;
+    strArr[i].
     strArr[i].toLowerCase();
   }
 }
@@ -22,8 +22,9 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if(typeof num === Numbe)
-  typeof num;
+  if(typeof(num) === 'number' && num % 2 === 0 && num <= 100) {
+    return num;
+  }
 }
 
 /* 
@@ -35,7 +36,8 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  arr.splice(index, 1)
+  return arr; // complete this statement
 }
 
 /*
@@ -47,9 +49,16 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
-}
-
+  persentageArray = [];
+  for(i = 0; i < arr.lenght; i++) {
+     checkArray = arr[i] > 100;
+     checkDecimal = arr[i] % 1 == 0;
+     if(checkArray || checkDecimal) {
+       persentageArray.push(arr[i].toFixed(2))
+     }
+    }
+    return persentageArray;
+  }
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
