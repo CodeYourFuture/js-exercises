@@ -5,19 +5,14 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
+// ["/Daniel ", "irina ", " Gordon", "ashleigh "]
 function tidyUpString(strArr) {
     for (let i = 0; i < strArr.length; i++) {
-        var removeEmptySpaceAndDoLowerCase = strArr[i].trim().toLowerCase()
-        var splitStringIntoArray = removeEmptySpaceAndDoLowerCase.split("")
-        var newArr = splitStringIntoArray
-        if (newArr[i] === "/") {
-            newArr.splice(i, 1);
-        }
-        return newArr.join('')
+        strArr[i] = strArr[i].trim().toLowerCase()
+        strArr[i] = strArr[i].replace("/", "")
     }
+    return strArr
 }
-
-
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
@@ -26,8 +21,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
-
+function validate(num) {
+    if (typeof num == "number" && num % 2 == 0 && num <= 100) {
+        return true
+    } else {
+        return false
+    }
+}
 /* 
 Write a function that removes an element from an array
 The function must:
@@ -35,11 +35,15 @@ The function must:
 - return a new array with the item removed
 - remove the item at the specified index
 */
+// let arr = [10, 293, 292, 176, 29]
 
 function remove(arr, index) {
-    return; // complete this statement
+    arr.splice(index, 1)
+    return arr
 }
 
+// console.log(remove(arr1, 3))
+// console.log(arr1)
 /*
 Write a function that:
 - takes an array of numbers as input
@@ -47,11 +51,25 @@ Write a function that:
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
+const arr = [23, 18, 187.2, 0.372]
 
 function formatPercentage(arr) {
+    let procentArr;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > 100) {
+            arr[i] = 100
+        }
+        if (Math.floor(arr[i]) !== Math.ceil(arr[i])) {
+            arr[i] = arr[i].toFixed(2)
+        }
+        arr[i] = arr[i] + "%"
 
+    }
+    // console.log(arr)
+    return arr
 }
 
+console.log(formatPercentage(arr))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
