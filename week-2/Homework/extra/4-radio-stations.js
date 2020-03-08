@@ -22,7 +22,6 @@
  * This function should:
  * - Get the available frequencies from `getAllFrequencies`
  * - There is a helper function called isRadioFrequency that takes an integer as an argument and returns a boolean.
- * - Sort the stations by low - high e.g. 1,2,3,4,5
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
