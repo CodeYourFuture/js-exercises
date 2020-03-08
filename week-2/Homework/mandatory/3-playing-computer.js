@@ -6,37 +6,44 @@
 
   Answer the following questions:
 
-  1. This program throws an error. Why? (If you can't find it, try executing it).
-  2. Remove the line that throws the error.
-  3. What is printed to the console?
-  4. How many times is "f1" called?
-  5. How many times is "f2" called?
-  6. What value does the "a" parameter take in the first "f1" call?
-  7. What is the value of the "a" outer variable when "f1" is called for the first time?
+  1. This program throws an error. Why? (If you can't find it, try executing it). //because of missing variable b
+  2. Remove the line that throws the error. //by adding b I did it
+  3. What is printed to the console?  //2
+6
+1
+4
+9
+6
+13
+8
+  4. How many times is "f1" called? //2times
+  5. How many times is "f2" called? //3times
+  6. What value does the "a" parameter take in the first "f1" call? //7
+  7. What is the value of the "a" outer variable when "f1" is called for the first time? //7 
 */
 
-let x = 2;
-let a = 6;
-
-const f1 = function(a, b) {
-  return a + b;
+let x = 2; //variable x
+let a = 6; //variable a
+let b = 1; // variable b (defiend by me.)
+const f1 = function(a, b) { //let b is not defined, so it shows an error
+  return a + b; //add a and b
 };
 
 const f2 = function(a, b) {
-  return a + b + x;
+  return a + b + x; // add a and b and x
 };
 
-console.log(x);
-console.log(a);
-console.log(b);
+console.log(x); //log x
+console.log(a); //log a
+console.log(b); // log b
 
-for (let i = 0; i < 5; ++i) {
-  a = a + 1;
-  if (i % 2 === 0) {
-    const d = f2(i, x);
-    console.log(d);
-  } else {
-    const e = f1(i, a);
-    console.log(e);
+for (let i = 0; i < 5; ++i) { //loops for i=1 & i=2 & i=3 & i=4
+  a = a + 1; //change the value of a
+  if (i % 2 === 0) { // if i is an even number or 0
+    const d = f2(i, x); // add i and b and x(2)
+    console.log(d); // log d
+  } else { // if i is an odd number
+    const e = f1(i, a); //add i and a(new a which is 7 (a+1))
+    console.log(e); //log e
   }
 }
