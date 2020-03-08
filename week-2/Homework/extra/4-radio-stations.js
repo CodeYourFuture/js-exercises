@@ -39,7 +39,7 @@
 
 let availableStations;
 
-function isRadioStation(frequency) {
+function getAvailableStations() {
   if (!availableStations) {
     const stationCount = 4;
     availableStations = new Array(stationCount)
@@ -52,7 +52,11 @@ function isRadioStation(frequency) {
       });
   }
 
-  return availableStations.includes(frequency);
+  return availableStations;
+}
+
+function isRadioStation(frequency) {
+  return getAvailableStations().includes(frequency);
 }
 
 const assert = require("assert");
@@ -99,5 +103,5 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
 
 test("getStations", () => {
   const stations = getStations();
-  assert.deepStrictEqual(stations, availableStations);
+  assert.deepStrictEqual(stations, getAvailableStations());
 });
