@@ -26,14 +26,6 @@
  */
 // `getStations` goes here
 
-/**
- * Lastly, let's make a function for people to use.
- * When this runs, it should use the above two functions to log to the `console`
- * Call this function `searchRadioWaves`.
- * - "🎶 station found at ${frequency}, enjoy!"
- * - "No station found at ${frequency}, moving on"
- */
-// `searchRadioWaves` goes here
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
