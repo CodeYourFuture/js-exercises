@@ -2,7 +2,12 @@
 // TIP: use an array method
 
 var letters = ["a", "n", "c", "e", "z", "f"];
-var sortedLetters; // ONLY EDIT THIS LINE
+const num = [5, 3, 4, 2, 1];
+var sortedLetters = letters.sort();
+// var sortedLetters = num.sort((a,b)=>{
+//   return b-a
+// });
+// ONLY EDIT THIS LINE
 
 console.log(sortedLetters);
 
