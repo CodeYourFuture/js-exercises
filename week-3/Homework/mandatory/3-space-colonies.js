@@ -7,11 +7,30 @@
 
   NOTE: don't include any element that is not a "family".
 */
+const letVoyagers = [
+  "Adam family",
+  "Potter family",
+  "Eric",
+  "Aldous",
+  "Button family",
+  "Jude",
+  "Carmichael",
+  "Bunny",
+  "Asimov",
+  "Oscar family",
+  "Avery family",
+  "Archer family"
+];
 
-function colonisers() {
-
+function isFamily(surname) {
+  return surname.includes("family");
 }
 
+function colonisers(arr) {
+  stayFamilies = arr.filter(isFamily).filter(x => x.startsWith("A"))
+  return stayFamilies
+}
+console.log(colonisers(letVoyagers))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [

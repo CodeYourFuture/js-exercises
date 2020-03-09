@@ -10,8 +10,22 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
+function isBerryPink() {
+  return "pink";
+}
 
+function isBushSafe(array) {
+  bushSafe = array.map(isBerryPink)
+  return bushSafe.length = array.length 
+}
+
+function bushChecker(arr) {
+  if (arr.isBushSafe) {
+    console.log("Bush is safe to eat from")
+  }
+  else {
+    console.log("Toxic! Leave bush alone!")
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
