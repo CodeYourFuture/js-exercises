@@ -18,11 +18,18 @@
 let arr=[];
 
 function getAllFrequencies(){
-  for (i=87; i<=108; i++){
+  for (let i=87; i<=108; i++){
     arr.push(i);
+
   }
+
   return arr
 }
+
+getAllFrequencies();
+
+
+
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -37,9 +44,27 @@ function getAllFrequencies(){
  */
 // `getStations` goes here
 
+let newArr= [];
+console.log(arr);
+
+
 function getStations(arr){
+  for (let i=0; i<arr.length; i++){
+   
+    
+    if(isRadioStation(arr[i])){
+      newArr.push(arr[i])
+      console.log('works');
+      
+    }
+  }
 
 }
+
+getStations(arr);
+
+console.log(newArr);
+
 /**
  * Lastly, let's make a function for people to use.
  * When this runs, it should use the above two functions to log to the `console`
@@ -48,6 +73,8 @@ function getStations(arr){
  * - "No station found at ${frequency}, moving on"
  */
 // `searchRadioWaves` goes here
+
+
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -92,3 +119,6 @@ test("getStations", () => {
     JSON.stringify(stations) === JSON.stringify(isRadioStation.stations.sort())
   );
 });
+
+
+

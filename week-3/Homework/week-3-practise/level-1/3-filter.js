@@ -142,6 +142,9 @@ var streetNames = [
 
 var laneNames;  // Complete this line
 
+
+laneNames  = streetNames.filter(name => name.includes('Lane'))
+
 console.log(laneNames);
 console.log(laneNames.length);
 
