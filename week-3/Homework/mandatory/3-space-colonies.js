@@ -8,8 +8,10 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(arr) {
+  let famArr = arr.filter(x => x.includes("family"));
+  let colonisers = famArr.filter(i => i[0] === "A");
+  return colonisers;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -52,6 +54,11 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("colonisers function works",
-  arraysEqual(colonisers(voyagers), ["Adam family", "Avery family", "Archer family"])
-)
+test(
+  "colonisers function works",
+  arraysEqual(colonisers(voyagers), [
+    "Adam family",
+    "Avery family",
+    "Archer family"
+  ])
+);
