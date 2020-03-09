@@ -8,10 +8,36 @@ To be safe, they need to land on the first unamed planet that has Oxygen levels 
 
 Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
 */
+//  const arr = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
 
-function safeLevels() {
+function safeLevels(ox) {
+
+  let safeOxygenLevel = [];
+
+  for (let i = 0; i < ox.length ; i++){
+
+    if ("19.5%" < ox[i] && ox[i] < "23.5"){
+
+    safeOxygenLevel = ox[i];
+
+    break;
+    }
+  }  
+  
+  return safeOxygenLevel;
 
 }
+
+// let safeOxygenLevel = safeOxygenLevel.find(element => "19.5%" < element && element < "23.5%" );
+
+
+
+
+
+
+
+// var safeOxygenLevel = oxygenLevels.find(safeLevels(ox));
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
