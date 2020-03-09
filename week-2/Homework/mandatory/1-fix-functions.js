@@ -10,7 +10,7 @@ function mood() {
     return "I am not happy";
   }
 }
-
+//
 function greaterThan10() {
   let num = 10;
   let isBigEnough;
