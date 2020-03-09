@@ -17,8 +17,13 @@
 
 let x = 2;
 let a = 6;
+<<<<<<< Updated upstream
 
 const f1 = function(a, b) {
+=======
+let b = 3;
+const f1 = function(a, b) { //variable b is missing. Otherwise the function is adding up two variables
+>>>>>>> Stashed changes
   return a + b;
 };
 
