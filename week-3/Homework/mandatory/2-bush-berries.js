@@ -10,21 +10,18 @@
   Use the tests to confirm which message to return
 */
 
-function isBerryPink() {
-  return "pink";
-}
 
 function isBushSafe(array) {
-  bushSafe = array.map(isBerryPink)
+  bushSafe = array.filter(x => x === "pink")
   return bushSafe.length = array.length 
 }
 
-function bushChecker(arr) {
-  if (arr.isBushSafe) {
-    console.log("Bush is safe to eat from")
+function bushChecker(array) {
+  if (array.isBushSafe) {
+    return "Bush is safe to eat from"
   }
   else {
-    console.log("Toxic! Leave bush alone!")
+    return "Toxic! Leave bush alone!"
   }
 }
 
@@ -45,4 +42,4 @@ function test(test_name, expr) {
 }
 
 test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
+test("bushChecker funtion works - case 2", bushChecker(bushBerryColours2) === "Bush is safe to eat from")

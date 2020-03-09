@@ -7,8 +7,11 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents(array, name,attendance) {
-  exam = arr.map((a,b) => ) // her bir index'in ikinici elemeanini test edicez
+
+function eligibleStudents(arr) {
+  exam = arr.filter(x => x[1] >=8).map(x=> x = x[0])
+  console.log(exam)
+  return exam
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
