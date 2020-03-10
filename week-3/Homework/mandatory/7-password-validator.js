@@ -17,19 +17,24 @@ Passwords must not be any previous password in the passwords array.
 Example 1:
 PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
 
+// dvyyeyY!5  is passing the test - length, uppercase, lowercase, numbers, symbols, why is it false?
+
+
 Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
 function validatePasswords(passwords) {
-
+  
+return   passwords.map(password => password.length >=5 && /[A-Z]/g.test(password)  && /[a-z]/g.test(password)  && /[0-9]/g.test(password)  && /[^a-zA-Z\d\s:]/g.test(password) )
+ 
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
+const passwords2 = ["StUFf27", "PlEnty", "Jai.33", "shajsaUA**&&", "PlEnty"]
 
 function arraysEqual(a, b) {
     if (a === b) return true;

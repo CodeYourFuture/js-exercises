@@ -8,7 +8,9 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function colonisers(families) {
+
+  return families.filter(familie => familie.includes("family")).filter(familie => familie.startsWith("A"))
 
 }
 

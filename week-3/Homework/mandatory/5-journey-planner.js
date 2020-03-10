@@ -7,8 +7,10 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(londonLocations, transport) {
+return londonLocations.filter(location => location.includes(transport)).map(location => location = location[0]);
+   
+  
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -43,23 +45,23 @@ function test(test_name, expr) {
     console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
+test("journeyPlanner function works - case 1",
   arraysEqual(
     journeyPlanner(londonLocations, "river boat"),
     ["London Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 2".
+test("journeyPlanner function works - case 2",
   arraysEqual(
     journeyPlanner(londonLocations, "bus"),
-    ["Angle", "Tower Bridge", "Greenwich"]
+    [ 'Angel', 'Tower bridge', 'Greenwich' ]
   )
 )
 
-test("journeyPlanner function works - case 3".
+test("journeyPlanner function works - case 3",
   arraysEqual(
     journeyPlanner(londonLocations, "tube"),
-    ["Angle", "London Bridge", "Tower Bridge"]
+    ['Angel', 'London Bridge', 'Tower bridge']
   )
 )
