@@ -7,8 +7,9 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(locs, via) {
+  return locs.filter(l => l.includes(via)).map(l => l[0]);
+  // return locs.filter(l => l.includes(via)).map(l => (l = l[0]));
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -18,7 +19,17 @@ const londonLocations = [
   ["London Bridge", "tube", "river boat"],
   ["Tower bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
-]
+];
+console.log();
+console.log("--- River Boat ---");
+console.log(journeyPlanner(londonLocations, "river boat"));
+console.log();
+console.log("--- BUS --- ");
+console.log(journeyPlanner(londonLocations, "bus"));
+console.log();
+console.log("--- TUBE --- ");
+console.log(journeyPlanner(londonLocations, "tube"));
+console.log();
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -33,33 +44,38 @@ function arraysEqual(a, b) {
 }
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
-  arraysEqual(
-    journeyPlanner(londonLocations, "river boat"),
-    ["London Bridge", "Greenwich"]
-  )
-)
+test(
+  "journeyPlanner function works - case 1",
+  arraysEqual(journeyPlanner(londonLocations, "river boat"), [
+    "London Bridge",
+    "Greenwich"
+  ])
+);
 
-test("journeyPlanner function works - case 2".
-  arraysEqual(
-    journeyPlanner(londonLocations, "bus"),
-    ["Angle", "Tower Bridge", "Greenwich"]
-  )
-)
+test(
+  "journeyPlanner function works - case 2",
+  arraysEqual(journeyPlanner(londonLocations, "bus"), [
+    "Angle",
+    "Tower Bridge",
+    "Greenwich"
+  ])
+);
 
-test("journeyPlanner function works - case 3".
-  arraysEqual(
-    journeyPlanner(londonLocations, "tube"),
-    ["Angle", "London Bridge", "Tower Bridge"]
-  )
-)
+test(
+  "journeyPlanner function works - case 3",
+  arraysEqual(journeyPlanner(londonLocations, "tube"), [
+    "Angle",
+    "London Bridge",
+    "Tower Bridge"
+  ])
+);
