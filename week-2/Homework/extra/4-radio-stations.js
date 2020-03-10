@@ -29,12 +29,12 @@
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
-let availableStations;
-
 function getAvailableStations() {
-  if (!availableStations) {
+  // Using `stations` as a property as defining it as a global variable wouldn't
+  // always make it initialized before the function is called
+  if (!getAvailableStations.stations) {
     const stationCount = 4;
-    availableStations = new Array(stationCount)
+    getAvailableStations.stations = new Array(stationCount)
       .fill(undefined)
       .map(function() {
         return Math.floor(Math.random() * (108 - 87 + 1) + 87);
@@ -44,7 +44,7 @@ function getAvailableStations() {
       });
   }
 
-  return availableStations;
+  return getAvailableStations.stations;
 }
 
 function isRadioStation(frequency) {
