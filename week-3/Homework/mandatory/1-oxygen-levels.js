@@ -12,14 +12,10 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 function between(x) {
   return x > "19.5%" && x < "23.5%";
 }
-let planet = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
-
 function safeLevels(planet) {
   let oxyPlanet = planet.find(between);
   return oxyPlanet;
 }
-
-console.log(safeLevels(planet));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
