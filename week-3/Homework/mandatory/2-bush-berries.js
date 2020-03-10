@@ -11,7 +11,6 @@
 */
 
 function bushChecker() {
-
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
