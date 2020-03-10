@@ -15,27 +15,39 @@
   3. Write a more readable version of what you wrote in step 2 under the BETTER PRACTICE comment. Assign
   the final result to the variable goodCode
 */
+function roundToOneDecimalPlace(num){
+  return Math.round(num * 10)/10;  
+} 
 
-function add() {
-
+function add(num1,num2) {
+  let addNum = roundToOneDecimalPlace(num1 + num2) ;
+  // console.log(addNum);
+  return addNum;
 }
 
-function multiply() {
 
+function multiply(num1,num2) {
+  let multiplyNum = num1 * num2 ;
+  return multiplyNum;
 }
 
-function format() {
-
+function format(num) {
+  return `£${num}`;
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = format(multiply(add(startingValue,10),2));
+// console.log(badCode);
+// This is a bad code because others cant understand it easily and it is not readable
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+let addNumbers = add(startingValue,10);
+let multiplyNumbers = multiply(addNumbers,2);
+let goodCode = format(multiplyNumbers);
+//This is a good code because it is easier to read it and it is understandable and it is easier to read. 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
