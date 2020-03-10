@@ -76,3 +76,4 @@ test(
   "get3rdIndex function works - case 2",
   get3rdIndex([11, 37, 62, 18, 19, 3, 30]) === 18
 );
+
