@@ -64,9 +64,8 @@ function test(testName, fn) {
   }
 }
 
-const frequencies = getAllFrequencies();
-
 test("getAllFrequencies() returns all frequencies between 87 and 108", function() {
+  const frequencies = getAllFrequencies();
   assert.deepStrictEqual(frequencies, [
     87,
     88,
