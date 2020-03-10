@@ -6,18 +6,27 @@
 
   NOTE: only the names should be returned, not the means of transport.
 */
+// function journeyPlanner(select, vehicle) {
+//   let common = [];
+//   for (let i = 0; i < select.length; i++) {
+//     if (select[i].includes(vehicle)) {
+//       common.push(select[i][0]);
+//     }
+//   }
+//   return common;
+// }
 
-function journeyPlanner() {
-
+function journeyPlanner(arr, mean) {
+  return arr.filter(x=> x.includes(mean)).map(x => x= x[0])
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
-  ["Angel", "tube", "bus"],
-  ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
-  ["Greenwich", "bus", "river boat"]
+  ["Angle", "tube", "bus"], //1. item
+  ["London Bridge", "tube", "river boat"], // 2. item
+  ["Tower Bridge", "tube", "bus"], // 3. item
+  ["Greenwich", "bus", "river boat"] // 4. item
 ]
 
 function arraysEqual(a, b) {
@@ -43,21 +52,21 @@ function test(test_name, expr) {
     console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
+test("journeyPlanner function works - case 1",
   arraysEqual(
     journeyPlanner(londonLocations, "river boat"),
     ["London Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 2".
+test("journeyPlanner function works - case 2",
   arraysEqual(
     journeyPlanner(londonLocations, "bus"),
     ["Angle", "Tower Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 3".
+test("journeyPlanner function works - case 3",
   arraysEqual(
     journeyPlanner(londonLocations, "tube"),
     ["Angle", "London Bridge", "Tower Bridge"]

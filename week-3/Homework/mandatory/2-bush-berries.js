@@ -11,13 +11,14 @@
 */
 
 
+
 function isBushSafe(array) {
   bushSafe = array.filter(x => x === "pink")
-  return bushSafe.length = array.length 
+  return bushSafe.length === array.length 
 }
 
 function bushChecker(array) {
-  if (array.isBushSafe) {
+  if (isBushSafe(array)) {
     return "Bush is safe to eat from"
   }
   else {

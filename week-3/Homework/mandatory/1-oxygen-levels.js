@@ -11,11 +11,9 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 //const found = arr.find(element => "19.5%" < element && element < "23.5%" );
 
 function safeLevels(arr) {
-  let safeOxygenLevel = arr.find(x => x > "19.5%" && x < "23.5%");
-  console.log(safeOxygenLevel)
-  return safeOxygenLevel
+  return arr.find(x => x > "19.5%" && x < "23.5%");
 }
-//safeLevels(oxygenLevels1)
+
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */

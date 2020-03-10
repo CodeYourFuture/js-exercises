@@ -22,12 +22,8 @@ const letVoyagers = [
   "Archer family"
 ];
 
-function isFamily(surname) {
-  return surname.includes("family");
-}
-
 function colonisers(arr) {
-  stayFamilies = arr.filter(isFamily).filter(x => x.startsWith("A"))
+  stayFamilies = arr.filter(x => x.startsWith("A") && x.includes("family"))
   return stayFamilies
 }
 console.log(colonisers(letVoyagers))

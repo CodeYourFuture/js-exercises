@@ -16,20 +16,30 @@ Passwords must not be any previous password in the passwords array.
 
 Example 1:
 PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
-
+const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
 Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
 
 function validatePasswords(passwords) {
 
+  const upperCaseLetters = /[A-Z]/g;
+  const lowerCaseLetters = /[a-z]/g;
+  const numbers = /[0-9]/g;
+  const symbols = /["!", "#", "$", "%", "."]/g;
+  
+  validPassword = passwords.filter(x=> ((x.length > 4) && (upperCaseLetters.test(x)) && (lowerCaseLetters.test(x)) && (numbers.test(x)) && (symbols.test(x))))
+
+  console.log(validPassword)
+  return validPassword
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
+const passwords2 = ["StUFf27", "PlEnty", "Jai.33", "shajsaUA**&&", "PlEnty"]
 
 function arraysEqual(a, b) {
     if (a === b) return true;
