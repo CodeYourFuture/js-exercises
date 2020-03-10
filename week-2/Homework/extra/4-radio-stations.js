@@ -92,7 +92,7 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
   ]);
 });
 
-test("getStations", () => {
+test("getStations() returns all the available stations", () => {
   const stations = getStations();
   assert.deepStrictEqual(stations, getAvailableStations());
 });
