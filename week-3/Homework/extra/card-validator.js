@@ -42,12 +42,12 @@ const validateCreditCard = function(cardNumber){
 
 
 
-function cardValidator(validateCreditCard) {
-    const cardNumbers1 = [ "9999777788880000", "6666666666661666", "a92332119c011112", "4444444444444444", "1111111111111110", "6666666666666661"]
+function cardValidator(cardNumbers ) {
 
-    const validate = validateCreditCard(cardNumbers1)
+
+
   
-    return   console.log(cardNumbers.map( cardNumber => validate(cardNumber)));
+    return   console.log(cardNumbers.map( cardNumber => validateCreditCard(cardNumber)));
     // 
    
     }
