@@ -8,10 +8,20 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(voyagers) {
+  let result = voyagers.filter(Element => Element.indexOf("family") >= 0 && Element.charAt(0) === "A");
+  return result;
 }
-
+console.log(colonisers(["Adam family", "Potter family", "Eric", "Aldous",
+  "Button family",
+  "Jude",
+  "Carmichael",
+  "Bunny",
+  "Asimov",
+  "Oscar family",
+  "Avery family",
+  "Archer family"
+]))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
