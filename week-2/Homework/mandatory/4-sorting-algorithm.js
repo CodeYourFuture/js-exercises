@@ -35,8 +35,9 @@ function sortAges(arr) {
     }
    }
   }
-  return arr2
 console.log(arr2)
+
+  return arr2
  }
 
 
