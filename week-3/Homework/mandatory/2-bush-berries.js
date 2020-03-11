@@ -9,9 +9,10 @@
 
   Use the tests to confirm which message to return
 */
+function funcMap(index)
 
-function bushChecker() {
-
+function bushChecker(paramArr) {
+  paramArr.map();
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
