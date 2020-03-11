@@ -22,27 +22,30 @@ Task 2 - for loop exercise -
   // f1 is called 2 times (1st time f1 is called is when console.log(e) =[ 9 ], last time f1 is called the console.log(e) returns = [ 13 ]  
 
   5. How many times is "f2" called?  
-  // f2 is called 3 times (1st call of f2 is when console.log(d) = [ 4 ], second time is when console.log(d) = [ 6 ], financial time time f2 is called console.log(d) returns = [ 8 ]
+  // f2 is called 3 times (1st call of f2 is when console.log(d) = [ 4 ], second time is when console.log(d) = [ 6 ], final time time f2 is called console.log(d) returns = [ 8 ]
 
   6. What value does the "a" parameter take in the first "f1" call?        
   // a parameter =  value [ 8 ] 
 
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
- // I don't understand the question???  Do you mean variable "let a = 6"???
+ // I don't understand the question???  Global variable "let a = 6" which is outside of the function, line 53???
 
 //Final table result of playing computer task 
 
 //                 Table of values
-//-------------------------------------------------------
-//   i   |   a   |   d   |   e   |   f1   |   f2   |
-//-------------------------------------------------------
-//   0   |   7   |   4   |   -   |   --   | 1 time |
-//   1   |   8   |       |   9   | 1 time |   --   |
-//   2   |   9   |   6   |   -   |   --   | 1 time |
-//   3   |   10  |       |   13  | 1 time |   --   |
-//   4   |   11  |   8   |   -   |   --   | 1 time |
-//--------------------------------------------------------
-//   5   |   11  |   8   |   13  | 2 times| 3 times|
+//-------------------------------------------------------------
+//   x      |       |   a   |       |       |        |        |
+//-------------------------------------------------------------
+//   2      |   -   |   6   |   -   |   -   |   --   |        |
+/--------------------------------------------------------------
+//  x = b   |   i   |   a   |   d   |   e   |   f1   |   f2   |
+//   2      |   0   |   7   |   4   |   -   |   --   | 1 time |
+//   -      |   1   |   8   |   -   |   9   | 1 time |   --   |
+//   2      |   2   |   9   |   6   |   -   |   --   | 1 time |
+//   -      |   3   |   10  |   -   |   13  | 1 time |   --   |
+//   2      |   4   |   11  |   8   |   -   |   --   | 1 time |
+//-------------------------------------------------------------
+//          |   5   |   11  |   8   |   13  | 2 times| 3 times|
 
 */
     
@@ -58,8 +61,8 @@ const f2 = function(a, b) {
   //  a = i, b = x from the "if" statement dealing with [even numbers].   
   // 1st time f2 is called (a = 0 , b = 2)  // 2nd time f2 is called (a = 2, b = 2)  //3rd time f2 is called (a = 4, b = 2)
   return a + b + x;   
-  // 1st f2 result (a = 0) + (b = 2) + (x = 2) = [ 4 ]  // 2nd f2 result (a = 2) + (b = 2) + (x = 2) = [ 6 ]   
-  // 3rd f2 result (a = 4) + (b = 2) + (x = 2) = [ 8 ]    
+  // 1st f2 result "((a = 0) + (b = 2) + (x = 2)) = [ 4 ]"  // 2nd f2 result "((a = 2) + (b = 2) + (x = 2)) = [ 6 ]"   
+  // 3rd f2 result "((a = 4) + (b = 2) + (x = 2)) = [ 8 ]"    
 }
 console.log(x); 
 console.log(a); 
@@ -67,7 +70,7 @@ console.log(a);
 
 //Task 2 - 
 for (let i = 0; i < 5; ++i) {   
-// for loop result of [let i ] = 0,1,2,3,4 is less then 5 and then the loop ends. 
+// for loop result of [let i ] = 0, 1, 2, 3, 4 is less then 5, once it reaches loop 4 it will stop before it reaches 5, ending at line 88.  
   a = a + 1;   
 //  a is a new variable = old variable + 1 = answer new variable 
 // new variable a = 7, 8, 9, 10, 11           
@@ -76,6 +79,7 @@ for (let i = 0; i < 5; ++i) {
     const d = f2(i, x);    
 //  (i = 0, x = 2)     //  (i = 2, x = 2)   // (i = 4, x = 2) 
     console.log(d); 
+
   } else {                
 // if [ i ] is an odd number resulting from the for loop, then enter the "else" statement   
     const e = f1(i, a);    
