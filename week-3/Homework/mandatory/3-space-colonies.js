@@ -9,7 +9,11 @@
 */
 
 function colonisers() {
-
+  let colonisersName = voyagers
+    .filter(n => n[0] == "A")
+    .filter(name => name.includes("family"));
+  console.log(colonisersName);
+  return colonisersName;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -52,6 +56,11 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("colonisers function works",
-  arraysEqual(colonisers(voyagers), ["Adam family", "Avery family", "Archer family"])
-)
+test(
+  "colonisers function works",
+  arraysEqual(colonisers(voyagers), [
+    "Adam family",
+    "Avery family",
+    "Archer family"
+  ])
+);
