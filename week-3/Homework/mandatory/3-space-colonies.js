@@ -8,9 +8,14 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(names) {
+  const newNames = names.filter(
+    name => name.startsWith("A") && name.includes("family")
+  );
+  return newNames;
 }
+  
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -9,10 +9,22 @@
 
   Use the tests to confirm which message to return
 */
+//RESULTING BUT FAILING
+function bushChecker(arr) { 
 
-function bushChecker() {
+    let arrItem = "pink";
+    let message;
 
+    if (arr.every(x => x === arrItem)) { 
+      message = "Bush is safe to eat from";
+    }
+    else{
+      message = "Toxic! Leave bush alone!"
+    }
+
+    return message;
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -30,5 +42,5 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
+test("bushChecker function works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
+test("bushChecker function works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
