@@ -32,20 +32,28 @@ Task 2 - for loop exercise -
 
 //Final table result of playing computer task 
 
-//                 Table of values
-//-------------------------------------------------------------
-//   x      |       |   a   |       |       |        |        |
-//-------------------------------------------------------------
-//   2      |   -   |   6   |   -   |   -   |   --   |        |
-/--------------------------------------------------------------
-//  x = b   |   i   |   a   |   d   |   e   |   f1   |   f2   |
-//   2      |   0   |   7   |   4   |   -   |   --   | 1 time |
-//   -      |   1   |   8   |   -   |   9   | 1 time |   --   |
-//   2      |   2   |   9   |   6   |   -   |   --   | 1 time |
-//   -      |   3   |   10  |   -   |   13  | 1 time |   --   |
-//   2      |   4   |   11  |   8   |   -   |   --   | 1 time |
-//-------------------------------------------------------------
-//          |   5   |   11  |   8   |   13  | 2 times| 3 times|
+//                                  Table of values
+/---------------------------------------------------------------------------
+//   x   |   -  |    a    |    -     |   -   |   -   |   -    |   -   |   -    |
+//--------------------------------------------------------------------------
+//   2   |   -  |    6    |    -     |   -   |   -   |   -    |   -   |   -    |
+/---------------------------------------------------------------------------
+//   -   |   -  | old = a | new = a  |   f2  |  f1   |   -   |   -    |   -   |   -    |
+/---------------------------------------------------------------------------
+//   x   |   i  |  a + 1  |    a     | b = x | b = a |   d   |   e   |   *f1   |  **f2 |
+/---------------------------------------------------------------------------
+//   2   |   0  |    6    |    7     |   2   |   -   |   4   |   -   |   --   | 1 time |
+//   -   |   1  |    7    |    8     |   -   |   8   |   -   |   9   | 1 time |   --   |
+//   2   |   2  |    8    |    9     |   2   |   -   |   6   |   -   |   --   | 1 time |
+//   -   |   3  |    9    |    10    |   -   |   10  |   -   |   13  | 1 time |   --   |
+//   2   |   4  |   10    |    11    |   2   |   -   |   8   |   -   |   --   | 1 time |
+//--------------------------------------------------------------------------
+//   2   |   5  |    -    |    11    |   2   |   10  |   8   |   13  | 2 times| 3 times|
+
+console.log(x);   2, -, 2, -, 2
+console.log(a);  7, 8, 9, 10, 11
+console.log(d);  4, -, 6, -, 8
+console.log(e);  -, 9, -, 13, -,
 
 */
     
@@ -64,26 +72,28 @@ const f2 = function(a, b) {
   // 1st f2 result "((a = 0) + (b = 2) + (x = 2)) = [ 4 ]"  // 2nd f2 result "((a = 2) + (b = 2) + (x = 2)) = [ 6 ]"   
   // 3rd f2 result "((a = 4) + (b = 2) + (x = 2)) = [ 8 ]"    
 }
-console.log(x); 
-console.log(a); 
+
+console.log(x); // console.log(x) result;   2, -, 2, -, 2 
+console.log(a); //console.log(a) result;  7, 8, 9, 10, 11
 //console.log(b); == Task 1 - answer - error - no variable / no value assigned
 
 //Task 2 - 
 for (let i = 0; i < 5; ++i) {   
 // for loop result of [let i ] = 0, 1, 2, 3, 4 is less then 5, once it reaches loop 4 it will stop before it reaches 5, ending at line 88.  
-  a = a + 1;   
-//  a is a new variable = old variable + 1 = answer new variable 
-// new variable a = 7, 8, 9, 10, 11           
+  a = a + 1;  //  a is a new variable = old variable starting at 6 + 1 = results in the new variable 
+// the result of the new variable a = 7, 8, 9, 10, 11           
   if (i % 2 === 0) {       
 // if [ i ] is an even number resulting from the for loop, then divide by number % 2 with zero remainder, then enter the "if" statement   
-    const d = f2(i, x);    
-//  (i = 0, x = 2)     //  (i = 2, x = 2)   // (i = 4, x = 2) 
+    const d = f2(i, x); // variable [i] from the for loop, x = 2 global variable on line 60,    
+//  (i = 0, x = 2)     //  (i = 2, x = 2)   // (i = 4, x = 2) // x = global variable on line 60
     console.log(d); 
+    //console.log(d) result;  4, -, 6, -, 8
 
   } else {                
-// if [ i ] is an odd number resulting from the for loop, then enter the "else" statement   
+// if [ i ] is an odd number resulting from the for loop and the odd number from the new variable a on line 82, then enter the "else" statement   
     const e = f1(i, a);    
 // (i = 1, a = 7 + 1 = 8) // (i = 3, a = 9 + 1 = 10) 
-    console.log(e);                       
+    console.log(e);         
+    // console.log(e) result;  -, 9, -, 13, -,             
   }
 }
