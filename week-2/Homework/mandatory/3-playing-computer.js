@@ -56,9 +56,10 @@ console.log(d);  4, -, 6, -, 8
 console.log(e);  -, 9, -, 13, -,
 
 */
-    
+// global variables
 let x = 2;
 let a = 6;
+//beginning of f1 and f2 function - this function is a for loop with an if else statement - sorting even and odd numbers
 const f1 = function(a, b) {   
   // a = i, b = a from the "else" statement dealing [odd numbers]. 
   // 1st time f1 is called the argument is (a = 1 , b = 8)  //  2nd time f1 is called the argument is (a = 3, b = 10)                   
