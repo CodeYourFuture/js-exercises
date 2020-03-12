@@ -31,10 +31,10 @@ console.log(getAllFrequencies());
  * This function should:
  * - Get the available frequencies from `getAllFrequencies`
  * - There is a helper function called isRadioFrequency that takes an integer as an argument and returns a boolean.
- * - Sort the stations by low - high e.g. 1,2,3,4,5
  * - Return only the frequencies that are radio stations.
  */
 // `getStations` goes here
+
 
 const availableStations = [97, 92, 108, 105];
 
@@ -71,6 +71,7 @@ console.log(getStations());
  */
 // `searchRadioWaves` goes here
 
+
 function searchRadioWaves() {
   let lastArr = getStations();
   if (lastArr.length > 0) {
@@ -86,8 +87,27 @@ searchRadioWaves();
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
+function getAvailableStations() {
+  // Using `stations` as a property as defining it as a global variable wouldn't
+  // always make it initialized before the function is called
+  if (!getAvailableStations.stations) {
+    const stationCount = 4;
+    getAvailableStations.stations = new Array(stationCount)
+      .fill(undefined)
+      .map(function() {
+        return Math.floor(Math.random() * (108 - 87 + 1) + 87);
+      })
+      .sort(function(frequencyA, frequencyB) {
+        return frequencyA - frequencyB;
+      });
+  }
+
+  return getAvailableStations.stations;
+}
+
 function isRadioStation(frequency) {
-  return availableStations.includes(frequency);
+  return getAvailableStations().includes(frequency);
+
 }
 
 const assert = require("assert");
@@ -95,18 +115,45 @@ const assert = require("assert");
 function test(testName, fn) {
   try {
     fn();
-    console.log(`${testName}: PASS`);
-  } catch (e) {
-    console.log(`${testName}: FAIL`, e);
+    console.log(`\n✅ ${testName}: PASS`);
+  } catch (error) {
+    console.log(
+      `\n❌ ${testName}: FAIL (see details below)\n\n${error.message}`
+    );
+
   }
 }
 
-test("getAllFrequencies", () => {
-  const freqs = getAllFrequencies();
-  assert((freqs.length = 22 && freqs[0] === 87 && freqs[21] === 108));
+test("getAllFrequencies() returns all frequencies between 87 and 108", function() {
+  const frequencies = getAllFrequencies();
+  assert.deepStrictEqual(frequencies, [
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108
+  ]);
 });
 
-test("getStations", () => {
+test("getStations() returns all the available stations", () => {
   const stations = getStations();
-  assert.deepStrictEqual(stations, availableStations.sort(compareNumerically));
+  assert.deepStrictEqual(stations, getAvailableStations());
+
 });
