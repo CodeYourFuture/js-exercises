@@ -9,9 +9,9 @@
 
 function journeyPlanner(location, mode) {
   let mo = location.map(x => x.includes(mode));
-  let me = location.map(x => x[0]);
-  console.log(me);
-  return me;
+
+  console.log(mo);
+  return mo;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
