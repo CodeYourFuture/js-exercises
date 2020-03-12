@@ -24,11 +24,9 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
   let PasswordValidationResult = [];
-  passwords.forEach(element => { element.length >= 5 && 
-    
+  passwords.forEach(element => {
+    element.length >= 5;
   });
-    
-  }
   return PasswordValidationResult;
 }
 
