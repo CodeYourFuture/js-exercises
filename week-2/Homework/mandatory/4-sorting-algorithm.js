@@ -13,8 +13,46 @@ sort method 😎)
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
+function bubbleSort(array) {
+  var done = false;
+  while (!done) {
+    done = true;
+    for (var i = 1; i < array.length; i += 1) {
+      if (array[i - 1] > array[i]) {
+        done = false;
+        var tmp = array[i - 1];
+        array[i - 1] = array[i];
+        array[i] = tmp;
+      }
+    }
+  }
+
+  return array;
+}
+
+// function sortArr(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     [narr[i - 1], narr[i]] = [narr[i], narr[i - 1]]
+//     for (let j = 0; j < array.length; i++) {
+//       if (array[i] < array[i + 1]) {
+
+//       }
+//     }
+//   }
+//   return array
+// }
+
 
 function sortAges(arr) {
+  const arrNumbers = []
+  for (let index = 0; index < arr.length; index++) {
+    if (typeof arr[index] === "number") {
+      arrNumbers.push(arr[index])
+    }
+  }
+  console.log(bubbleSort(arrNumbers))
+  return bubbleSort(arrNumbers)
+
 
 }
 
