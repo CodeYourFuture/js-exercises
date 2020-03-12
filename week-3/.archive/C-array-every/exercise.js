@@ -9,8 +9,6 @@ var groupIsOnlyStudents = function(students, group) {
   return group.every(element => students.includes(element));
 }; // complete this statement
 
-console.log(groupIsOnlyStudents(students, group));
-
 if (groupIsOnlyStudents(students, group)) {
   console.log("The group contains only students");
 } else {
