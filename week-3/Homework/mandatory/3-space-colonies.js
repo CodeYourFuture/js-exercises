@@ -8,7 +8,7 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function colonisers(voyagers) {
   let colonisersName = voyagers
     .filter(n => n[0] == "A")
     .filter(name => name.includes("family"));
