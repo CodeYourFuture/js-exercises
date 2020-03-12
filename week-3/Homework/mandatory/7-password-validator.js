@@ -32,8 +32,9 @@ function validatePasswords(passwords) {
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33", "shajsaUA**&&", "PlEnty"];
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -59,11 +60,17 @@ function test(test_name, expr) {
 }
 
 test(
-  "validatePasswords function works - case 1",
-  arraysEqual(validatePasswords(passwords1), [false, false, true, false, false])
-);
 
-test(
-  "validatePasswords function works - case 2",
-  arraysEqual(validatePasswords(passwords2), [true, true, false, false, false])
-);
+   "validatePasswords function works - case 1",
+   arraysEqual(
+      validatePasswords(passwords1), [false, false, true, false, false]
+   )
+ );
+
+ test(
+   "validatePasswords function works - case 2",
+   arraysEqual(
+      validatePasswords(passwords2), [true, true, false, false, false]
+   )
+ );
+
