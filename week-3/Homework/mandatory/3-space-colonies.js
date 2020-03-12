@@ -13,7 +13,7 @@ function funcMap(index) {
 
 function colonisers(arr) {
   let newArr = arr.filter(funcMap);
-  console.log(newArr);
+  //console.log(newArr);
   return newArr;
 }
 
