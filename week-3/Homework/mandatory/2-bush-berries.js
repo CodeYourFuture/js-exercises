@@ -11,7 +11,6 @@
 */
 
 function bushChecker(bushes) {
-// clearImmediate;
   let bushBerryColours = bushes.every(Element => Element === "pink");
   let message;
   if(bushBerryColours){

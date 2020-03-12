@@ -4,10 +4,11 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
+function getLanes(streetNames) {
+    return streetNames.filter(Element => Element.indexOf("L") >= 0);
 
 }
-
+console.log(["Abchurch Lane", "Adam's Court", "Addle Hill", "Addle Lane", "Alban Highwalk"])
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const streetNames = [
