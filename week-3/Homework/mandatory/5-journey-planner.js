@@ -7,8 +7,11 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(location, mode) {
+  let mo = location.map(x => x.includes(mode));
+  let me = location.map(x => x[0]);
+  console.log(me);
+  return me;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -16,9 +19,9 @@ function journeyPlanner() {
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
+  ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
-]
+];
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -33,33 +36,38 @@ function arraysEqual(a, b) {
 }
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
-  arraysEqual(
-    journeyPlanner(londonLocations, "river boat"),
-    ["London Bridge", "Greenwich"]
-  )
-)
+test(
+  "journeyPlanner function works - case 1",
+  arraysEqual(journeyPlanner(londonLocations, "river boat"), [
+    "London Bridge",
+    "Greenwich"
+  ])
+);
 
-test("journeyPlanner function works - case 2".
-  arraysEqual(
-    journeyPlanner(londonLocations, "bus"),
-    ["Angle", "Tower Bridge", "Greenwich"]
-  )
-)
+test(
+  "journeyPlanner function works - case 2",
+  arraysEqual(journeyPlanner(londonLocations, "bus"), [
+    "Angel",
+    "Tower Bridge",
+    "Greenwich"
+  ])
+);
 
-test("journeyPlanner function works - case 3".
-  arraysEqual(
-    journeyPlanner(londonLocations, "tube"),
-    ["Angle", "London Bridge", "Tower Bridge"]
-  )
-)
+test(
+  "journeyPlanner function works - case 3",
+  arraysEqual(journeyPlanner(londonLocations, "tube"), [
+    "Angel",
+    "London Bridge",
+    "Tower Bridge"
+  ])
+);
