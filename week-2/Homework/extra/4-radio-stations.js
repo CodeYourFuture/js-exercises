@@ -15,6 +15,15 @@
 
 // `getAllFrequencies` goes here
 
+function getAllFrequencies() {
+  let frequencies = [];
+  for (let i = 87; i < 109; i++) {
+    frequencies.push(i);
+  }
+  return frequencies;
+}
+console.log(getAllFrequencies());
+
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -26,6 +35,55 @@
  */
 // `getStations` goes here
 
+
+const availableStations = [97, 92, 108, 105];
+
+function compareNumerically(a, b) {
+  if (a < b) {
+    return -1;
+  }
+  if (a > b) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+}
+
+function getStations() {
+  let statns = getAllFrequencies();
+  let newArr = [];
+  for (let i = 0; i < statns.length; i++) {
+    if (isRadioStation(statns[i])) {
+      newArr.push(statns[i]);
+    }
+  }
+  newArr.sort(compareNumerically);
+  return newArr;
+}
+console.log(getStations());
+
+/**
+ * Lastly, let's make a function for people to use.
+ * When this runs, it should use the above two functions to log to the `console`
+ * Call this function `searchRadioWaves`.
+ * - "🎶 station found at ${frequency}, enjoy!"
+ * - "No station found at ${frequency}, moving on"
+ */
+// `searchRadioWaves` goes here
+
+
+function searchRadioWaves() {
+  let lastArr = getStations();
+  if (lastArr.length > 0) {
+    for (let i = 0; i < lastArr.length; i++) {
+      console.log(`🎶 station found at ${lastArr[i]}, enjoy!`);
+    }
+  } else {
+    console.log(`No station found at ${lastArr[0]}, moving on`);
+  }
+}
+
+searchRadioWaves();
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
@@ -49,6 +107,7 @@ function getAvailableStations() {
 
 function isRadioStation(frequency) {
   return getAvailableStations().includes(frequency);
+
 }
 
 const assert = require("assert");
@@ -61,6 +120,7 @@ function test(testName, fn) {
     console.log(
       `\n❌ ${testName}: FAIL (see details below)\n\n${error.message}`
     );
+
   }
 }
 
@@ -95,4 +155,5 @@ test("getAllFrequencies() returns all frequencies between 87 and 108", function(
 test("getStations() returns all the available stations", () => {
   const stations = getStations();
   assert.deepStrictEqual(stations, getAvailableStations());
+
 });
