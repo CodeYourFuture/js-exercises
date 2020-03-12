@@ -8,10 +8,11 @@
 */
 
 function journeyPlanner(location, mode) {
-  let mo = location.map(x => x.includes(mode));
+  let mo = location.filter(x => x.includes(mode));
+  let ola = mo.map(x => x[0]);
 
-  console.log(mo);
-  return mo;
+  console.log(ola);
+  return ola;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
