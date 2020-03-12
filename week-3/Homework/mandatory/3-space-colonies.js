@@ -7,26 +7,31 @@
 
   NOTE: don't include any element that is not a "family".
 */
+function funcMap(index) {
+  return index.indexOf(' ') !== -1 && index[0] === 'A';
+}
 
-function colonisers() {
-
+function colonisers(arr) {
+  let newArr = arr.filter(funcMap);
+  console.log(newArr);
+  return newArr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
-  "Adam family",
-  "Potter family",
-  "Eric",
-  "Aldous",
-  "Button family",
-  "Jude",
-  "Carmichael",
-  "Bunny",
-  "Asimov",
-  "Oscar family",
-  "Avery family",
-  "Archer family"
+  'Adam family',
+  'Potter family',
+  'Eric',
+  'Aldous',
+  'Button family',
+  'Jude',
+  'Carmichael',
+  'Bunny',
+  'Asimov',
+  'Oscar family',
+  'Avery family',
+  'Archer family',
 ];
 
 function arraysEqual(a, b) {
@@ -44,14 +49,19 @@ function arraysEqual(a, b) {
 function test(test_name, expr) {
   let status;
   if (expr) {
-    status = "PASSED";
+    status = 'PASSED';
   } else {
-    status = "FAILED";
+    status = 'FAILED';
   }
 
   console.log(`${test_name}: ${status}`);
 }
 
-test("colonisers function works",
-  arraysEqual(colonisers(voyagers), ["Adam family", "Avery family", "Archer family"])
-)
+test(
+  'colonisers function works',
+  arraysEqual(colonisers(voyagers), [
+    'Adam family',
+    'Avery family',
+    'Archer family',
+  ])
+);
