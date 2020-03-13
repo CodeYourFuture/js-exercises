@@ -64,6 +64,6 @@ test(
  test(
    "validatePasswords function works - case 2",
    arraysEqual(
-      validatePasswords(passwords2), [true, true, false, false, false]
+      validatePasswords(passwords2), [true, true, false, false, true]
    )
  );
