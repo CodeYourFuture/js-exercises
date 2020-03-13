@@ -25,10 +25,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 function validatePasswords(passwords) {
   //var result = passwords.filter(item => item.includes("Lane"));
   passwords = passwords.filter(x => x.length > 4);
-  passwords = passwords.filter(x => x.some !== x.toUpperCase());
+  passwords = passwords.filter(x => x !== x.toUpperCase());
   passwords = passwords.filter(x => x !== x.toLowerCase());
-
-  passwords = passwords.filter(x => x.includes([a - zA - Z]));
   console.log(passwords);
 }
 
