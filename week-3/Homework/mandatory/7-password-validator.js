@@ -22,14 +22,31 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+function validatePassword(pass) {
   //var result = passwords.filter(item => item.includes("Lane"));
-  passwords = passwords.filter(x => x.length > 4);
-  passwords = passwords.filter(x => x !== x.toUpperCase());
-  passwords = passwords.filter(x => x !== x.toLowerCase());
-  console.log(passwords);
-}
+  // passwords = passwords.filter(x => x.length > 4);
+  // passwords = passwords.filter(x => x !== x.toUpperCase());
+  // passwords = passwords.filter(x => x !== x.toLowerCase());
+  // console.log(passwords);
+  let regexUpper = /[A-Z]/;
+  let regexLower = /[a-z]/;
+  let regexNum = /[0-9]/;
+  let regexSymbol = /[! # $ % .]/;
+  if (
+    pass.length >= 5 &&
+    regexUpper.test(pass) &&
+    regexLower.test(pass) &&
+    regexNum.test(pass) &&
+    regexSymbol.test(pass)
+  ) {
+    return true;
+  }
 
+  return false;
+}
+function validatePasswords(passwords) {
+  return passwords.map(validatePassword);
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
