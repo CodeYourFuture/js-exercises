@@ -22,7 +22,17 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {}
+function validatePasswords(passwords) {
+  let allPasswords = passwords;
+  allPasswords.map(function(password) {
+    if (password.length >= 5 && ) {
+      console.log(password);
+      return new Array();
+    }
+  });
+
+  return allPasswords;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
