@@ -7,9 +7,9 @@
 
 var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
 
-var longNameThatStartsWithA = findLongNameThatStartsWithA(names);
 
-console.log(longNameThatStartsWithA);
+// const array1 = [5, 12, 8, 130, 44];
+
 
 /* EXPECTED OUTPUT */
 // "Alexandra"
