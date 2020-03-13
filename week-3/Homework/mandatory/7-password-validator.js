@@ -21,20 +21,29 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+function validatePassword(pass) {
+  let regexUpper = /[A-Z]/;
+  let regexLower = /[a-z]/;
+  let regexNum = /[0-9]/;
+  let regexSymbol = /[!#$%.]/;
+
+  return (
+    pass.length >= 5 &&
+    regexUpper.test(pass) &&
+    regexLower.test(pass) &&
+    regexNum.test(pass) &&
+    regexSymbol.test(pass)
+  );
+}
 
 function validatePasswords(passwords) {
-  let PasswordValidationResult = [];
-  passwords.forEach(element => {
-    element.length >= 5;
-  });
-  return PasswordValidationResult;
+  return passwords.map(password => validatePassword(password));
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
-
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -60,17 +69,11 @@ function test(test_name, expr) {
 }
 
 test(
+  "validatePasswords function works - case 1",
+  arraysEqual(validatePasswords(passwords1), [false, false, true, false, false])
+);
 
-   "validatePasswords function works - case 1",
-   arraysEqual(
-      validatePasswords(passwords1), [false, false, true, false, false]
-   )
- );
-
- test(
-   "validatePasswords function works - case 2",
-   arraysEqual(
-      validatePasswords(passwords2), [true, true, false, false, false]
-   )
- );
-
+test(
+  "validatePasswords function works - case 2",
+  arraysEqual(validatePasswords(passwords2), [true, true, false, false, true])
+);
