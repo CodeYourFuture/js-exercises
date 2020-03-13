@@ -20,7 +20,6 @@ function calculateSalesTax(sales) {
 
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
-
 function formatCurrency(TaxSell) {
   const message = "£" + calculateSalesTax(TaxSell).toFixed(2);
   console.log (message);
