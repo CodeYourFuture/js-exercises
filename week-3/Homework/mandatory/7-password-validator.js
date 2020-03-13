@@ -22,19 +22,47 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+const PreviousPassword = [
+  "fhD8!yrjj",
+  "ttkTu.wer3",
+  "dvyyeyY!5",
+  "qwbfj76%",
+  "tytT3729."
+];
+
 function validatePasswords(passwords) {
-  return passwords.map(function(p) {
-    while (name) {}
-    return p.length > 5;
+  return passwords.map(function(password) {
+    let lenValidate = false;
+    let strnumValidate = false;
+    let symbValidate = false;
+    let IsPrevPassValidate = false;
+    let chr = "";
+
+    lenValidate = password.length > 5;
+    IsPrevPassValidate = !PreviousPassword.includes(password);
+    strnumValidate =
+      /[a-z]/g.test(password) &&
+      /[A-Z]/g.test(password) &&
+      /[0-9]/g.test(password);
+
+    for (let cc in password) {
+      chr = password.charAt(cc);
+      if (hasSymbols(chr) == true) symbValidate = true;
+    }
+
+    return lenValidate && strnumValidate && symbValidate && IsPrevPassValidate;
   });
+
+  function hasSymbols(chr1) {
+    if (chr1 == "!" || chr1 == "#" || chr1 == "$" || chr1 == "%" || chr1 == ".")
+      return true;
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 const passwords2 = ["StUFf27", "PlEnty", "Jai.33", "shajsaUA**&&", "PlEnty"];
-
-console.log(validatePasswords(passwords1));
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -57,6 +85,7 @@ function test(test_name, expr) {
   }
 
   console.log(`${test_name}: ${status}`);
+  console.log(validatePasswords(passwords1));
 }
 
 test(
