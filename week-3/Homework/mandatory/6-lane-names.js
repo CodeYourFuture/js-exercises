@@ -5,10 +5,10 @@
 */
 
 function getLanes(streetNames) {
-    return streetNames.filter(Element => Element.indexOf("L") >= 0);
+    return streetNames.filter(Element => Element.indexOf("Lane") >=0);
 
 }
-console.log(["Abchurch Lane", "Adam's Court", "Addle Hill", "Addle Lane", "Alban Highwalk"])
+console.log(getLanes(["Abchurch Lane", "Adam's Court", "Addle Hill", "Addle Lane", "Alban Highwalk"]));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const streetNames = [
