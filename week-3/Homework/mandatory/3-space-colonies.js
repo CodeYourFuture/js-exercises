@@ -9,8 +9,9 @@
 */
 
 function colonisers(arr) {
-  let familyArr = arr.filter(element => element.includes("family"));
-  let willStay = familyArr.filter(element => element[0] === "A");
+  let willStay = arr
+    .filter(element => element.includes("family"))
+    .filter(element => element[0] === "A");
   return willStay;
 }
 
