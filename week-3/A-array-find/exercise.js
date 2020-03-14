@@ -5,10 +5,18 @@
 
 // write your code here
 
-var names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
+
+const names = ["Rakesh", "Antonio", "Alexandra", "Andronicus", "Annam", "Mikey", "Anastasia", "Karim", "Ahmed"];
+function longNameThatStartsWithA(word) {
+  return word.length > 7 && word.charAt(0) === "A"
+}
+// let found = names.find(word => word.length > 7 && word.charAt(0) === "A")
+// return found
+console.log(names.find(longNameThatStartsWithA))
 
 
-// const array1 = [5, 12, 8, 130, 44];
+
+
 
 
 /* EXPECTED OUTPUT */
