@@ -11,7 +11,6 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 
 function safeLevels(planet) {
   let oxyPlanet = planet.find(x => x > "19.5%" && x < "23.5%");
-  console.log(oxyPlanet);
   return oxyPlanet;
 }
 

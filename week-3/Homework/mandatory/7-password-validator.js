@@ -1,43 +1,48 @@
 /* 
 Password Validation
-
 Write a program that should check if each password in an array 
 contains a valid password (see below for password criterias) and return 
 new array with true or false booleans.
-
 Passwords must 
 - Have at least 5 characters.
 - Have English uppercase letters (A-Z)
 - Have English lowercase letters (a-z)
 - Have numbers (0-9)
 - Have non-alphanumeric symbols ("!", "#", "$", "%", ".")
-
 Passwords must not be any previous password in the passwords array. 
-
 Example 1:
 PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
-
 Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
-
 */
 
+let allUpper = /[A-Z]/;
+let allLower = /[a-z]/;
+let allNumbers = /[0-9]/;
+let allSymbols = /[!#$%.]/;
+
 function validatePasswords(passwords) {
-  let allPasswords = passwords;
-  allPasswords.map(function(password) {
-    if (password.length >= 5 && ) {
-      console.log(password);
-      return new Array();
+  let filterPasswords = passwords.map(function(checkPassword) {
+    if (
+      checkPassword.length >= 5 &&
+      allUpper.test(checkPassword) &&
+      allLower.test(checkPassword) &&
+      allNumbers.test(checkPassword) &&
+      allSymbols.test(checkPassword)
+    ) {
+      return true;
+    } else {
+      return false;
     }
   });
-
-  return allPasswords;
+  console.log(filterPasswords);
+  return filterPasswords;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33", "shajsaUA**&&", "PlEnty"];
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -69,5 +74,5 @@ test(
 
 test(
   "validatePasswords function works - case 2",
-  arraysEqual(validatePasswords(passwords2), [true, true, false, false, false])
+  arraysEqual(validatePasswords(passwords2), [true, true, false, false, true])
 );
