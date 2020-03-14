@@ -37,13 +37,12 @@ function validatePassword(pass) {
 }
 
 function validatePasswords(passwords) {
-  let validationResult = passwords.map(function(password) {
-    // let currentPassword = passwords.slice(password, password + 1);
+  let PasswordValidationResults = passwords.map(function(password) {
     let subArray = passwords.slice(0, passwords.indexOf(password));
     console.log(subArray);
     return validatePassword(password) && !subArray.includes(password);
   });
-  return validationResult;
+  return PasswordValidationResults;
 }
 
 console.log(
