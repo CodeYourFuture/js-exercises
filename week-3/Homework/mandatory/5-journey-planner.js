@@ -7,10 +7,27 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr, commuteType) {
+  const solution = []
+  arr.forEach(element => {
+    const el = element[0]
+    console.log(el)
+  })
 
 }
 
+// if (element.includes("bus")) {
+//   solution.push(element[0])
+// } else if (element.includes("tube")) {
+//   solution.push(element[0])
+// } else if (element.includes("river boat")) {
+//   solution.push(element[0])
+// }
+// check each array of the main array
+// if the array includes "bus" -> return first element of the array
+// if the array includes "river boat" -> return first element of the array
+// if the array includes "tube" -> return first element of the array
+// console.log();
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
@@ -33,33 +50,27 @@ function arraysEqual(a, b) {
 }
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
-  arraysEqual(
-    journeyPlanner(londonLocations, "river boat"),
-    ["London Bridge", "Greenwich"]
-  )
-)
+test("journeyPlanner function works - case 1".arraysEqual(
+  journeyPlanner(londonLocations, "river boat"),
+  ["London Bridge", "Greenwich"]
+))
 
-test("journeyPlanner function works - case 2".
-  arraysEqual(
-    journeyPlanner(londonLocations, "bus"),
-    ["Angle", "Tower Bridge", "Greenwich"]
-  )
-)
+test("journeyPlanner function works - case 2".arraysEqual(
+  journeyPlanner(londonLocations, "bus"),
+  ["Angle", "Tower Bridge", "Greenwich"]
+))
 
-test("journeyPlanner function works - case 3".
-  arraysEqual(
-    journeyPlanner(londonLocations, "tube"),
-    ["Angle", "London Bridge", "Tower Bridge"]
-  )
-)
+test("journeyPlanner function works - case 3".arraysEqual(
+  journeyPlanner(londonLocations, "tube"),
+  ["Angle", "London Bridge", "Tower Bridge"]
+))

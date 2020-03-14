@@ -8,10 +8,13 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(arr) {
+  return arr.filter(element => element.includes("family") && element[0] === "A")
 }
 
+// check each element and choose the one including "family"
+// choose the elements with the "family" if starts with a letter "A"
+// return the array of of strings starts with "A" elements
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
