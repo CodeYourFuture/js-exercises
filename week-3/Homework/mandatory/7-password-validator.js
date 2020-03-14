@@ -62,8 +62,6 @@ function validatePasswords(arr) {
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
 const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
 
-console.log(validateOnePasswordFully("Pl3nty!", 1, passwords2));
-
 function arraysEqual(a, b) {
   if (a === b) return true;
   if (a == null || b == null) return false;
