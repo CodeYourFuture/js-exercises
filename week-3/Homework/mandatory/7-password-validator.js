@@ -37,8 +37,22 @@ function validatePassword(pass) {
 }
 
 function validatePasswords(passwords) {
-  return passwords.map(password => validatePassword(password));
+  let validationResult = passwords.map(function(password) {
+    // let currentPassword = passwords.slice(password, password + 1);
+    let subArray = passwords.slice(0, passwords.indexOf(password));
+    console.log(subArray);
+    return validatePassword(password) && !subArray.includes(password);
+  });
+  return validationResult;
 }
+
+console.log(
+  validatePasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"])
+);
+
+console.log(
+  validatePasswords(["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"])
+);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -75,5 +89,5 @@ test(
 
 test(
   "validatePasswords function works - case 2",
-  arraysEqual(validatePasswords(passwords2), [true, true, false, false, true])
+  arraysEqual(validatePasswords(passwords2), [true, true, false, false, false])
 );

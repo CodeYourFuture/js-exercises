@@ -14,9 +14,8 @@ function bushChecker(arr) {
   let safeBerries = arr.every(element => element === "pink");
   if (safeBerries) {
     return "Bush is safe to eat from";
-  } else {
-    return "Toxic! Leave bush alone!";
   }
+  return "Toxic! Leave bush alone!";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
