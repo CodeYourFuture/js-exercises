@@ -11,7 +11,9 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 
 function safeLevels(oxlevels) {
   //19.5 - 23
-  return oxlevels.sort().find(el => parseFloat(el) > 19.5);
+  return oxlevels
+    .sort()
+    .find(el => parseFloat(el) > 19.5 && parseFloat(el) < 23.5);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
