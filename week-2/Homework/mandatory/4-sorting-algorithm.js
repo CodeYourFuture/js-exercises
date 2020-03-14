@@ -14,6 +14,16 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
+// function sortAges(arr) { - another way of only keeping numbers within a string
+//   let dataType;
+//   let newArray = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     dataType = typeof (arr[i]);
+//     if (dataType === "number") {
+//       newArray.push(arr[i]);
+//     }
+//   }
+
 function sortAges(arr) { //new arr - typeof - push
 let newArr = [] // only keeps numbers within a string
 for (let index = 0; index < arr.length; index++) {
