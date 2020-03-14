@@ -26,12 +26,10 @@
 // }
 function eligibleStudents(arr) {
   const namesMinimumEight = []
-
   arr.forEach(function (element) {
-    console.log(element)
-    // if (element[1] >= 8) {
-    //   namesMinimumEight.push(element[0])
-    // }
+    if (element[1] >= 8) {
+      namesMinimumEight.push(element[0])
+    }
   })
   return namesMinimumEight
 }

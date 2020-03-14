@@ -7,14 +7,16 @@
 /**
  * First, let's create a function that creates a list of all the frequencies.
  * Call this function `getAllFrequencies`.
- *
+
  * This function should:
  * - Create an array  starting at 87 and ending in 108
  * - Should return this array to use in other functions
  */
-
-// `getAllFrequencies` goes here
-
+//sort
+function getAllFrequencies(frequencies) {
+  return frequencies = [87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108]
+}
+console.log(getAllFrequencies())
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -25,7 +27,9 @@
  * - Sort the stations by low - high e.g. 1,2,3,4,5
  * - Return only the frequencies that are radio stations.
  */
-// `getStations` goes here
+function getStations() {
+
+}
 
 /**
  * Lastly, let's make a function for people to use.

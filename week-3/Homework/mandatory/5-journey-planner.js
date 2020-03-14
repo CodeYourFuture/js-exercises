@@ -8,32 +8,23 @@
 */
 
 function journeyPlanner(arr, commuteType) {
-  const solution = []
-  arr.forEach(element => {
-    const el = element[0]
-    console.log(el)
-  })
-
+  const solution = arr.filter(element => element.includes(commuteType))
+  const stations = solution.map(element => element[0])
+  console.log(stations)
+  return stations
 }
 
-// if (element.includes("bus")) {
-//   solution.push(element[0])
-// } else if (element.includes("tube")) {
-//   solution.push(element[0])
-// } else if (element.includes("river boat")) {
-//   solution.push(element[0])
-// }
 // check each array of the main array
-// if the array includes "bus" -> return first element of the array
-// if the array includes "river boat" -> return first element of the array
-// if the array includes "tube" -> return first element of the array
+// if each of the array includes "bus" -> return first element of the array
+//  if each of the array includes "river boat" -> return first element of the array
+//  if each of the array includes "tube" -> return first element of the array
 // console.log();
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
+  ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
 ]
 
@@ -60,17 +51,17 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".arraysEqual(
+test("journeyPlanner function works - case 1", arraysEqual(
   journeyPlanner(londonLocations, "river boat"),
   ["London Bridge", "Greenwich"]
 ))
 
-test("journeyPlanner function works - case 2".arraysEqual(
+test("journeyPlanner function works - case 2", arraysEqual(
   journeyPlanner(londonLocations, "bus"),
-  ["Angle", "Tower Bridge", "Greenwich"]
+  ["Angel", "Tower Bridge", "Greenwich"]
 ))
 
-test("journeyPlanner function works - case 3".arraysEqual(
+test("journeyPlanner function works - case 3", arraysEqual(
   journeyPlanner(londonLocations, "tube"),
-  ["Angle", "London Bridge", "Tower Bridge"]
+  ["Angel", "London Bridge", "Tower Bridge"]
 ))
