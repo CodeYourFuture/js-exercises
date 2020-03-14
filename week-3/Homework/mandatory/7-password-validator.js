@@ -21,7 +21,7 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-function validatePasswordSimple(pass) {
+function validateOnePasswordSimple(pass) {
   let regexUpper = /[A-Z]/;
   let regexLower = /[a-z]/;
   let regexNum = /[0-9]/;
@@ -37,42 +37,32 @@ function validatePasswordSimple(pass) {
 }
 
 function validatePasswordsSimple(arr) {
-  let results = arr.map(password => validatePasswordSimple(password));
-  return results;
+  return arr.map(password => validateOnePasswordSimple(password));
 }
 
-function validatePasswords(passwords) {
-  let PasswordValidationResults = passwords.map(function(password) {
-    let subArray = passwords.slice(0, passwords.indexOf(password));
-    return validatePasswordSimple(password) && !subArray.includes(password);
-  });
-  return PasswordValidationResults;
+function validateOnePasswordFully(password, index, arr) {
+  let prevElems = arr.slice(0, index);
+  return validateOnePasswordSimple(password) && !prevElems.includes(password);
 }
 
-console.log(
-  validatePasswordsSimple([
-    "Se%5",
-    "TktE.TJTU",
-    "384#HsHF",
-    "dvyyeyy!5",
-    "tryT3729"
-  ])
-);
+function validatePasswordsGood(arr) {
+  return arr.map(validateOnePasswordFully);
+}
 
-console.log(
-  validatePasswordsSimple([
-    "StUFf27%",
-    "Pl3nty!",
-    "Jai33",
-    "shajsaUA**&&",
-    "Pl3nty!"
-  ])
-);
+function validatePasswords(arr) {
+  return arr.map(
+    (password, index, arr) =>
+      validateOnePasswordSimple(password) &&
+      !arr.slice(0, index).includes(password)
+  );
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
 const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
+
+console.log(validateOnePasswordFully("Pl3nty!", 1, passwords2));
 
 function arraysEqual(a, b) {
   if (a === b) return true;
