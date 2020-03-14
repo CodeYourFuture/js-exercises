@@ -1,8 +1,8 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
+
 function mood(isHappy) {
-  //let isHappy = true;
 
   if (isHappy === "happy") {
     return "I am happy";
@@ -12,41 +12,31 @@ function mood(isHappy) {
 }
 
 function greaterThan10(num) {
-  //let num = 10;
+
   let isBigEnough = num => 10;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
-  } else {
-    return "num is not big enough";
   }
 }
+  function sortArray() {
+   
+    let arrayN = ["c", "a", "e", "f", "n", "z"];
+    let newArr = arrayN.sort();
+    return newArr;
+  }
 
-function sortArray() {
-  let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters = letters.sort();
+  function first5() {
+    
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+    let sliced = numbers.slice(0, 5);
+  
+    return sliced;
+  }
 
-  return sortedLetters;
-}
 
-function first5() {
-  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced = numbers.slice(0, 5);
-
-  return sliced;
-}
-
-function get3rdIndex() {
-  let index = ["fruit", "banana", "apple", "strawberry", "raspberry"];
+function get3rdIndex(index) {
   let element = index[3];
-
-  return element;
-}
-
-function get3rdIndex() {
-  let index = [11, 37, 62, 18, 19, 3, 30];
-  let element = index[3];
-
   return element;
 }
 
