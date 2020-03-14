@@ -21,7 +21,7 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-function validatePassword(pass) {
+function validatePasswordSimple(pass) {
   let regexUpper = /[A-Z]/;
   let regexLower = /[a-z]/;
   let regexNum = /[0-9]/;
@@ -36,21 +36,37 @@ function validatePassword(pass) {
   );
 }
 
+function validatePasswordsSimple(arr) {
+  let results = arr.map(password => validatePasswordSimple(password));
+  return results;
+}
+
 function validatePasswords(passwords) {
   let PasswordValidationResults = passwords.map(function(password) {
     let subArray = passwords.slice(0, passwords.indexOf(password));
-    console.log(subArray);
-    return validatePassword(password) && !subArray.includes(password);
+    return validatePasswordSimple(password) && !subArray.includes(password);
   });
   return PasswordValidationResults;
 }
 
 console.log(
-  validatePasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"])
+  validatePasswordsSimple([
+    "Se%5",
+    "TktE.TJTU",
+    "384#HsHF",
+    "dvyyeyy!5",
+    "tryT3729"
+  ])
 );
 
 console.log(
-  validatePasswords(["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"])
+  validatePasswordsSimple([
+    "StUFf27%",
+    "Pl3nty!",
+    "Jai33",
+    "shajsaUA**&&",
+    "Pl3nty!"
+  ])
 );
 
 /* ======= TESTS - DO NOT MODIFY ===== */
