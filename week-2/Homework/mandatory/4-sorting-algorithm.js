@@ -14,10 +14,50 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {
+// function sortAges(arr) {
 
+// }
+
+
+
+function sorteAges(arr){
+  const onlyNumbers = [];
+  for(index = 0; index < arr.length; index++) {
+    const element = arr[index];
+      // console.log(element, 'is a number', isNaN)
+     if(!isNaN(element)){     // isNaN returns a boolean, the function checks if the element passed in "is NOT a Number"
+      // console.log(element)
+      onlyNumbers.push(element)
+    }
+  }
+  return onlyNumbers;
 }
 
+
+function sortNumbers(arr) {
+ 
+  var len = arr.length,
+      i, j;
+  let current, previous;
+  for (i=len-1; i >= 0; i--){
+      for (j=len-i; j >= 0; j--){
+          if (arr[j] < arr[j-1]){
+            previous = arr[j-1];
+            current = arr[j];  
+            arr[j-1] = current;
+            arr[j] = previous; 
+          }
+      }
+  }
+return arr;
+}
+// end here
+
+function sortAges(arr) {
+  const arrayWithNoNoneNumbers = sorteAges(arr)
+  const sortedArray = sortNumbers(arrayWithNoNoneNumbers)
+    console.log('SORTED', sortedArray)
+    return sortedArray;
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']

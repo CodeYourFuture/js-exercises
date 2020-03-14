@@ -11,6 +11,11 @@
 */
 
 function bushChecker() {
+  let bush = bushBerryColours1.includes( v = "yel")
+  let bush2 = bushBerryColours2.includes( v = "pink")
+   console.log(bush)
+   console.log(bush2)
+  
 
 }
 
