@@ -14,10 +14,25 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {
-
+function sortAges(arr) { //new arr - typeof - push
+let newArr = [] // only keeps numbers within a string
+for (let index = 0; index < arr.length; index++) {
+  if (typeof arr[index] === "number" ) {
+    newArr.push(arr[index])
+  }
 }
-
+  let swap; //sort in ascending order
+for(let i = 0; i < newArr.length; i++) {
+  for (let j= i+1; j < newArr.length; j++) {
+    if(newArr[i] > newArr[j]) {
+      swap = newArr[i];
+      newArr[i] = newArr[j];
+      newArr[j] = swap;
+    }
+  }
+}
+return newArr
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']

@@ -10,9 +10,9 @@
   2. Remove the line that throws the error.
   3. What is printed to the console? 2 6 4 9 6 13 8
   4. How many times is "f1" called? 2 times
-  5. How many times is "f2" called?
-  6. What value does the "a" parameter take in the first "f1" call? 
-  7. What is the value of the "a" outer variable when "f1" is called for the first time?
+  5. How many times is "f2" called? 3 times
+  6. What value does the "a" parameter take in the first "f1" call? 0
+  7. What is the value of the "a" outer variable when "f1" is called for the first time? 6
 */
 
 let x = 2;
@@ -40,3 +40,16 @@ for (let i = 0; i < 5; ++i) {
     console.log(e);
   }
 }
+
+
+//                    Values
+//-------------------------------------------------------
+//   i   |   a   |   d   |   e   |   f1   |   f2   |
+//-------------------------------------------------------
+//   0   |   7   |   4   |   -   |   --   | 1 time |
+//   1   |   8   |       |   9   | 1 time |   --   |
+//   2   |   9   |   6   |   -   |   --   | 1 time |
+//   3   |   10  |       |   13  | 1 time |   --   |
+//   4   |   11  |   8   |   -   |   --   | 1 time |
+//--------------------------------------------------------
+//   5   |   11  |   8   |   13  | 2 times| 3 times|
