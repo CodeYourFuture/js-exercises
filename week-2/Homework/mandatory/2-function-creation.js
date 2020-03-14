@@ -30,6 +30,7 @@ function tidyUpString(strArr) {
 }
  return strArr;
 }
+
 // console.log(tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]))
 
 /*
@@ -59,7 +60,6 @@ function validate(num) {
 }
 
 /* 
-
 test(
   "remove function works - case 1",
   arraysEqual(remove([10, 293, 292, 176, 29], 3), [10, 293, 292, 29])
@@ -94,7 +94,7 @@ Write a function that:
     "100%",
     "0.37%"
 */
-
+//forEach
 function formatPercentage(arr) {
   
   for (let i = 0; i < arr.length; i++) {

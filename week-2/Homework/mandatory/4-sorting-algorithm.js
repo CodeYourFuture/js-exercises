@@ -13,10 +13,34 @@ sort method 😎)
 
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
+research: https://stackoverflow.com/questions/7502489/bubble-sort-algorithm-javascript
+-https://dev.to/ryan_dunton/bubble-sorting-for-beginners-in-js-2opp
+-https://www.w3resource.com/javascript-exercises/javascript-function-exercise-24.php
 */
 
+//step1 - created a function will filter the datatype and select all the numbers in the array
 function sortAges(arr) {
-
+  //let dataType;
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    //dataType = typeof (arr[i]); 
+    //if (dataType === "number") {
+      if (typeof arr[i] === "number") {
+      newArray.push(arr[i]);
+    }
+  }
+//Step2 - This section swaps numbers in ascending order
+  let swap;
+  for (let i = 0; i < newArray.length; i++) {
+    for (let j = i + 1; j < newArray.length; j++) {
+      if (newArray[i] > newArray[j]) {
+        swap = newArray[i];
+        newArray[i] = newArray[j];
+        newArray[j] = swap;
+      }
+    }
+  }
+   return newArray;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
