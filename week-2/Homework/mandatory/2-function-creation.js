@@ -1,13 +1,49 @@
 /*
+reading list
+- https://github.com/thejsway/thejsway
+- https://codeburst.io/javascript-functions-understanding-the-basics-207dbf42ed99
+
 Write a function that:
 - takes an array of strings as input
+
 - removes any spaces in the beginning or end of the strings
+// something.trim()
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
+
 - removes any forward slashes (/) in the strings
+// something.replace()
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
 - makes the string all lowercase
+// something.toLowerCase()
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
+
 */
-function tidyUpString(strArr) {}
+ 
+//Input: string, output: string
+function tidyUpString(strArr) { 
+
+  for (let i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", "");
+    strArr[i] = strArr[i].toLowerCase();
+}
+ return strArr;
+}
+
+// console.log(tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]))
 
 /*
+https://www.w3schools.com/js/js_comparisons.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+
+if (condition) {
+  //  block of code to be executed if the condition is true
+} else {
+  //  block of code to be executed if the condition is false
+}
+https://www.w3schools.com/js/js_if_else.asp
+
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
 - is even
@@ -15,10 +51,22 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === 'number' && num % 2 === 0 && num <= 100){
+    return true
+  } else{
+    return false
+  }
+}
 
 /* 
-Write a function that removes an element from an array
+test(
+  "remove function works - case 1",
+  arraysEqual(remove([10, 293, 292, 176, 29], 3), [10, 293, 292, 29])
+);
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
+Write a function that removes an element from an array [after index 6]
 The function must:
 - NOT change the original array
 - return a new array with the item removed
@@ -26,8 +74,11 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let newArr = arr.slice()
+    newArr.splice(index, 1)
+    return newArr
 }
+//console.log(remove([10, 293, 292, 176, 29], 3))
 
 /*
 Write a function that:
@@ -35,11 +86,27 @@ Write a function that:
 - returns an array of strings formatted as percentages (e.g. 10 => "10%")
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
-*/
 
+
+  arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
+    "23%",
+    "18%",
+    "100%",
+    "0.37%"
+*/
+//forEach
 function formatPercentage(arr) {
   
+  for (let i = 0; i < arr.length; i++) {
+
+    if (arr[i]> 100) {arr[i] = 100}
+    arr[i] = Math.round(arr[i]*100) / 100;
+    arr[i] = arr[i].toString();
+    arr[i] = arr[i].concat("%");
+  }
+ return arr
 }
+  console.log(formatPercentage([23, 18, 187.2, 0.372]))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -77,8 +144,7 @@ test(
 );
 test(
   "tidyUpString function works - case 2",
-  arraysEqual(
-    tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
+  arraysEqual(tidyUpString([" /Sanyia ", " Michael ", "AnTHonY ", "   Tim   "]),
     ["sanyia", "michael", "anthony", "tim"]
   )
 );

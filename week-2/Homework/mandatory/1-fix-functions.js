@@ -1,47 +1,82 @@
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
 
+//main source - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators
+//https://www.w3schools.com/js/js_comparisons.asp
+
+//expected test("mood function works", mood() === "I am not happy");
+
 function mood() {
   let isHappy = true;
-
-  if (isHappy) {
+  if (!isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
 }
 
+/* expected test(
+  "greaterThanTen function works",
+  greaterThan10() === "num is greater than or equal to 10"
+
+-https://www.w3schools.com/nodejs/nodejs_get_started.asp
+
+-https://www.w3schools.com/js/js_arrays.asp
+
+); */
+
+
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
-
-  if (isBigEnough) {
+  let isBigEnough = num;
+  if (isBigEnough >= num) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
 }
+// where do i put the console.log(greaterThan10) in this task;
 
+//https://www.w3schools.com/jsref/jsref_sort.asp
+//Sort numbers in an array in ascending order:
+/*expected test(
+  "sortArray function works",
+  sortArray() === ["a", "c", "e", "f", "n", "z"]
+);*/
+//Sort numbers in an array in ascending order:
+//http://www.asciitable.com/ 
+
+// if ("b" > "a") {
+//   console.log("right");
+// }
+// else {
+//   console.log("wrong");
+// }
+ 
 function sortArray() {
-  let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
-
-  return sortedLetters;
-}
-
-function first5() {
+ let letters = ["a", "n", "c", "e", "z", "f"];
+ let sortedLetters = letters.sort();  
+ // console.log(sortedLetters);
+ return sortedLetters;
+  } 
+ 
+  
+  /* test("first5 function works", first5() === [1, 2, 3, 4, 5]);
+    fruits.slice(1, 3); slice is 
+  */
+function first5() { 
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
+  let sliced = numbers.slice(0, 5);
   return sliced;
 }
 
+//generic function for finding out the 3rdIndex of an array
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
-
+  let element = arr[index];
   return element;
 }
+// why did that work when index starts at 0
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
