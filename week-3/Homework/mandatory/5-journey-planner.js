@@ -24,7 +24,7 @@ function journeyPlanner(arr, transport) {
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
+  ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
 ];
 
@@ -52,22 +52,27 @@ function test(test_name, expr) {
 }
 
 test(
-  "journeyPlanner function works - case 1".arraysEqual(
-    journeyPlanner(londonLocations, "river boat"),
-    ["London Bridge", "Greenwich"]
-  )
+  "journeyPlanner function works - case 1",
+  arraysEqual(journeyPlanner(londonLocations, "river boat"), [
+    "London Bridge",
+    "Greenwich"
+  ])
 );
 
 test(
-  "journeyPlanner function works - case 2".arraysEqual(
-    journeyPlanner(londonLocations, "bus"),
-    ["Angel", "Tower Bridge", "Greenwich"]
-  )
+  "journeyPlanner function works - case 2",
+  arraysEqual(journeyPlanner(londonLocations, "bus"), [
+    "Angel",
+    "Tower Bridge",
+    "Greenwich"
+  ])
 );
 
 test(
-  "journeyPlanner function works - case 3".arraysEqual(
-    journeyPlanner(londonLocations, "tube"),
-    ["Angel", "London Bridge", "Tower Bridge"]
-  )
+  "journeyPlanner function works - case 3",
+  arraysEqual(journeyPlanner(londonLocations, "tube"), [
+    "Angel",
+    "London Bridge",
+    "Tower Bridge"
+  ])
 );

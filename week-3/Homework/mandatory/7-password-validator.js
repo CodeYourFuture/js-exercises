@@ -32,21 +32,25 @@ function validatePassword(pass) {
   let regexLower = /[a-z]/;
   let regexNum = /[0-9]/;
   let regexSymbol = /[! # $ % .]/;
-  if (
+  function checkback(pass) {
+    for (i = 0; i < passwords.length; i++) {
+      !pass.includes(passwords[i]);
+    }
+  }
+  return (
     pass.length >= 5 &&
     regexUpper.test(pass) &&
     regexLower.test(pass) &&
     regexNum.test(pass) &&
-    regexSymbol.test(pass)
-  ) {
-    return true;
-  }
-
-  return false;
+    regexSymbol.test(pass) &&
+    checkback(pass)
+  );
 }
+
 function validatePasswords(passwords) {
   return passwords.map(validatePassword);
 }
+console.log(validatePassword("dvyyeyY!5"));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];

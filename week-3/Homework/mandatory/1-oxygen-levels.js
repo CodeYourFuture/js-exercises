@@ -13,6 +13,9 @@ function safeLevels(arr) {
   let found = arr.filter(element => element > "19.5%" && element < "23.5%");
 
   console.log(found);
+  if (found[0] === undefined) {
+    return undefined;
+  }
   return found[0];
 }
 
