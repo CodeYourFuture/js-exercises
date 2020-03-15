@@ -42,98 +42,38 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
-let eightballValid = 
-['It is certain',
-  'It is decidedly so',
-  'Without a doubt',
-  'Yes - definitely',
-  'You may rely on it',
-  'As I see it, yes',
-  'Most likely',
-  'Outlook good',
-  'Yes',
-  'Signs point to yes',
-  'Reply hazy, try again',
-  'Ask again later',
-  'Better not tell you now',
-  'Cannot predict now',
-  'Concentrate and ask again',
-  "Don't count on it",
-  'My reply is no',
-  'My sources say no',
-  'Outlook not so good',
-  'Very doubtful',
-]
 
 function shakeBall() {
-  console.log('The ball has shaken!')
-  randomNumber = Math.floor(Math.random() * 20)
-  let eightBall = ''
-  switch (randomNumber) {
-    case 0:
-      eightBall = 'It is certain'
-      break
-    case 1:
-      eightBall = 'It is decidedly so'
-      break
-    case 2:
-      eightBall = 'Without a doubt'
-      break
-    case 3:
-      eightBall = 'Yes - definitely'
-      break
-    case 4:
-      eightBall = 'You may rely on it'
-      break
-    case 5:
-      eightBall = 'As I see it, yes'
-      break
-    case 6:
-      eightBall = 'Most likely'
-      break
-    case 7:
-      eightBall = 'Outlook good'
-      break
-    case 8:
-      eightBall = 'Yes'
-      break
-    case 9:
-      eightBall = 'Signs point to yes'
-      break
-    case 10:
-      eightBall = 'Reply hazy, try again'
-      break
-    case 11:
-      eightBall = 'Ask again later'
-      break
-    case 12:
-      eightBall = 'Better not tell you now'
-      break
-    case 13:
-      eightBall = 'Cannot predict now'
-      break
-    case 14:
-      eightBall = 'Concentrate and ask again'
-      break
-    case 15:
-      eightBall = "Don't count on it"
-      break
-    case 16:
-      eightBall = 'My reply is no'
-      break
-    case 17:
-      eightBall = 'My sources say no'
-      break
-    case 18:
-      eightBall = 'Outlook not so good'
-      break
-    case 19:
-      eightBall = 'Very doubtful'
-      break
-  }
-  return eightBall
 }
-let answer
+let answer = checkAnswer
+checkAnswer()
+if (answer === 'It is certain.'
+  || answer === 'It is decidedly so.'
+  || answer === 'Without a doubt.'
+  || answer === 'Yes - definitely.'
+  || answer === 'You may rely on it.') {
+  return 'Very positive'
+} else if (answer === 'As I see it, yes.'
+  || answer === 'Most likely.'
+  || answer === 'Outlook good.'
+  || answer === 'Yes.'
+  || answer === 'Signs point to yes.') {
+  return 'Positive'
+} else if (answer === 'Reply hazy, try again.'
+  || answer === 'Ask again later.'
+  || answer === 'Better not tell you now.'
+  || answer === 'Cannot predict now.'
+  || answer === 'Concentrate and ask again.') {
+  return 'Negative'
+} else if (answer === "Don't count on it."
+  || answer === 'My reply is no.'
+  || answer === 'My sources say no.'
+  || answer === 'Outlook not so good.'
+  || answer === 'Very doubtful.') {
+  answer === 'Very negative'
+}
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
