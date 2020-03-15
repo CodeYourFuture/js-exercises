@@ -21,6 +21,7 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+
 function validateOnePasswordSimple(pass) {
   let regexUpper = /[A-Z]/;
   let regexLower = /[a-z]/;
