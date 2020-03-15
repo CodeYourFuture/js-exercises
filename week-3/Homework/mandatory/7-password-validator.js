@@ -43,7 +43,7 @@ function validatePassword(pass) {
     regexLower.test(pass) &&
     regexNum.test(pass) &&
     regexSymbol.test(pass) &&
-    checkback(pass)
+    passwords.map(checkback(pass))
   );
 }
 
