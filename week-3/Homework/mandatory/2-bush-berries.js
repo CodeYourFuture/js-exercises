@@ -15,7 +15,7 @@ function bushChecker() {
   let bush2 = bushBerryColours2.includes( v = "pink")
    console.log(bush)
    console.log(bush2)
-  
+  // using some method with if statment
 
 }
 

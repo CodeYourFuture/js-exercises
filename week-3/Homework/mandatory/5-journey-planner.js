@@ -7,10 +7,10 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(two parameter) {
 
 }
-
+// filter(x => x.inclde(transportr). map(x+> x.silence(0, 1).join(""));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
@@ -62,4 +62,4 @@ test("journeyPlanner function works - case 3".
     journeyPlanner(londonLocations, "tube"),
     ["Angle", "London Bridge", "Tower Bridge"]
   )
-)
+)0

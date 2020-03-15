@@ -12,6 +12,8 @@ function colonisers() {
 
 }
 
+// filter method using charAt to traget the any letter of your indes and using && between the two method
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
