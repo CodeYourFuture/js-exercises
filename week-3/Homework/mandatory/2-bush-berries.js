@@ -10,8 +10,10 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
+console.clear(); // Clear all old outputs and see your new output.
 
+function bushChecker(arry) { // This function is for check bushs
+  return (arry.filter(Element => Element != "pink")).length > 0 ? "Toxic! Leave bush alone!" : "Bush is safe to eat from"; // This line is for check berries is safe or not safe
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -22,12 +24,10 @@ let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
 function test(test_name, expr) {
   let status;
   if (expr) {
-    status = "PASSED";
+    console.log(`${test_name}:\x1b[32mPASSED\x1b[0m`); // show PASSED with green color in console
   } else {
-    status = "FAILED";
+    console.log(`${test_name}:\x1b[31mFAILED\x1b[0m`); // show FAILED with red color in console
   }
-
-  console.log(`${test_name}: ${status}`);
 }
 
 test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")

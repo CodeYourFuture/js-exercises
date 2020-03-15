@@ -8,8 +8,10 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+console.clear(); // Clear all old outputs and see your new output.
 
+function colonisers(arry) {
+  return arry.filter(Element => Element.charAt(0) == "A" && Element.charAt(Element.length - 6) == "f"); // This line seprate that families whose last names start with "A" for stay
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -44,12 +46,11 @@ function arraysEqual(a, b) {
 function test(test_name, expr) {
   let status;
   if (expr) {
-    status = "PASSED";
+    console.log(`${test_name}:\x1b[32mPASSED\x1b[0m`); // show PASSED with green color in console
   } else {
-    status = "FAILED";
+    console.log(`${test_name}:\x1b[31mFAILED\x1b[0m`); // show FAILED with red color in console
   }
 
-  console.log(`${test_name}: ${status}`);
 }
 
 test("colonisers function works",
