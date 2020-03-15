@@ -4,7 +4,7 @@
 function mood() {
   let isHappy = true;
 
-  if (typeof isHappy !== "boolean") {
+  if (isHappy == false) {
     return "I am happy";
   } else {
     return "I am not happy";
@@ -13,9 +13,10 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough = 12;
+  let isBigEnough = Boolean(num >= 10);
+  //or  let isBigEnough = num >= 10;
 
-  if (isBigEnough >= num) {
+  if (isBigEnough) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
@@ -36,8 +37,7 @@ function first5() {
   return sliced;
 }
 
-function get3rdIndex() {
-  let index = ["fruit", "banana", "apple", "strawberry", "raspberry"];
+function get3rdIndex(index) {
   let element = index[3];
 
   return element;
