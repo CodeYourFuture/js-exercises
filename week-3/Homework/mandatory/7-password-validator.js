@@ -22,7 +22,14 @@ let allNumbers = /[0-9]/;
 let allSymbols = /[!#$%.]/;
 
 function validatePasswords(passwords) {
-  let filterPasswords = passwords.map(function(checkPassword) {
+  let filterPasswords = passwords.filter(
+    (item, index) => passwords.indexOf(item) != index
+  );
+  let all = filterPasswords.slice(0);
+  all[0] = false;
+  console.log(all);
+
+  all = passwords.map(function(checkPassword) {
     if (
       checkPassword.length >= 5 &&
       allUpper.test(checkPassword) &&
@@ -35,8 +42,9 @@ function validatePasswords(passwords) {
       return false;
     }
   });
-  console.log(filterPasswords);
-  return filterPasswords;
+
+  console.log(all);
+  return all;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -74,5 +82,5 @@ test(
 
 test(
   "validatePasswords function works - case 2",
-  arraysEqual(validatePasswords(passwords2), [true, true, false, false, true])
+  arraysEqual(validatePasswords(passwords2), [true, true, false, false, false])
 );
