@@ -11,10 +11,10 @@
 */
 
 function bushChecker() {
-  let bush = bushBerryColours1.includes( v = "yel")
-  let bush2 = bushBerryColours2.includes( v = "pink")
-   console.log(bush)
-   console.log(bush2)
+  
+   let bush = (v) => v ==="neon";
+   console.log(bushBerryColours1.some(bush))
+   console.log(bushBerryColours2.some(bush))
   // using some method with if statment
 
 }

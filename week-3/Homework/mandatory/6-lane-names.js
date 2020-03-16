@@ -5,9 +5,10 @@
 */
 
 function getLanes() {
-
+ let familiesStay =  console.log(streetNames.filter("lane"));
+ console.log(familiesStay)
 }
-// filter(x => X.INCLUDE("LAND"))
+//.filter(x => x)
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const streetNames = [

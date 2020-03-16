@@ -7,7 +7,7 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner(two parameter) {
+function journeyPlanner() {
 
 }
 // filter(x => x.inclde(transportr). map(x+> x.silence(0, 1).join(""));

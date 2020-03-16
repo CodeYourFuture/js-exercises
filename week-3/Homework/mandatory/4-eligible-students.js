@@ -10,6 +10,7 @@
 function eligibleStudents() {
 
 }
+// using filter and map splice and join 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
