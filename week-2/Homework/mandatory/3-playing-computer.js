@@ -14,19 +14,18 @@
   6. What value does the "a" parameter take in the first "f1" call?
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
 */
-/*This program throws an error because "b" is not defined as a function argument before
- So it shoul be defined before execution.
- Console is printing value of x, a, b 
- "f2" is called one time
- "f1" is called one time
- "a" takes 7 in the first "f1" call
- it is 6 (outer variable)
+/*console(b) throws an error because "b" is not defined before
+  removed console(b).
+  Console is printing value of x=2 and  a=6,
+  f1 called 2 times for i=1 and i=3 
+  "f2" is called 3 times for i=0,2,4
+  value of "a" is "8" in the first "f1" call because while i=0 a takes 7 then while i=1 a takes 8
+ 
 
   */
 
 let x = 2;
 let a = 6;
-let b = 3;
 
 const f1 = function(a, b) {
   return a + b;
@@ -38,7 +37,6 @@ const f2 = function(a, b) {
 
 console.log(x);
 console.log(a);
-console.log(b);
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
