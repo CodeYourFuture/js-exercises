@@ -11,7 +11,19 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {
+function sortAges(arr) { //creating a function that takes an array arr value
+  for(var i = 0; i < arr.length; i++) //looping through the arrays from 0 index
+  {
+  const arrTwo = []; //create empty array to store all numbers
+  
+    if(typeof arr[i] === "number") //if the ith element in array is a number
+    {
+      const nonNumber = arrTwo.push(arr[i]);//push it in new array
+      nonNumber.sort(); //then sort the array
+    }
+  }
+
+  return nonNumber;
 
 }
 
