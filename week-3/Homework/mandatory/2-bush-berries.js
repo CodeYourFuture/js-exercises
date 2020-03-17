@@ -9,11 +9,33 @@
 
   Use the tests to confirm which message to return
 */
+// let checkPinkBerries = berries.
+// function bushChecker(berries) {
+// if (berries === "pink") {
+//   return "Bush is safe to eat from"}
+// // } else if (berries === )
+// else {
+//   return "Toxic! Leave bush alone!"
+// }
+// }
 
-function bushChecker() {
+//   for(let i=0; i < listOfBerryColours.length; i++){  
+//   let berryColour = listOfBerryColours[i];  
+    
+//     if(berryColour !== "pink") {
+//       return "Toxic! Leave bush alone";
+//     } else {
+//       return "Bush is safe to eat from";
+//     }
+// }
 
+function bushChecker(bushBerryColours) {
+  if (bushBerryColours.includes("neon", "transparent")){
+    return "Toxic! Leave bush alone!";
+  } else {
+    return "Bush is safe to eat from";
+  }
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
@@ -30,5 +52,5 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
+test("bushChecker function works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
+test("bushChecker function works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")

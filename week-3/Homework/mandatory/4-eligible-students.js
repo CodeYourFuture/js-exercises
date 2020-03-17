@@ -7,10 +7,8 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+function eligibleStudents() { //filter
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const attendances = [

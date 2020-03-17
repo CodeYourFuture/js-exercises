@@ -9,11 +9,12 @@ To be safe, they need to land on the first unamed planet that has Oxygen levels 
 Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
 */
 
+//.map - loops through array, checks against condition / we can apply changes by looping through array.
+
 function safeLevels(oxygenLevel) {
-  let foundPlanet = oxygenLevel.find(x => x > "19.5%" && x < "23.5%")
+  let foundPlanet = oxygenLevel.find(element => element > "19.5%" && element < "23.5%")
   return foundPlanet
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]
