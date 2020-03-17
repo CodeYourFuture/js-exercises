@@ -5,16 +5,15 @@ function mood() {
   let isHappy = true;
 
   if (isHappy) {
-    return "I am not happy";
-  } else {
     return "I am happy";
+  } else {
+    return "I am not happy";
   }
 }
- console.log(mood());
 
 function greaterThan10() {
-  let num = 10;  // no need for this line
-  let isBigEnough = true;
+  let num = 10;
+  let isBigEnough;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -25,17 +24,16 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters = letters.sort();  
-  console.log(sortedLetters)  //console.log display the correct result but I am still not passing
-  return sortedLetters;      // also I jsut realized there is an error in the test syntax,and \i didn't update the respo even though I did on tuesday  
-  
+  let sortedLetters;
+
+  return sortedLetters;
 }
 
 function first5() {
-  let numbers = ["1", "2", "3", "4", "5", "6", "7", "8"];
-  let first5Index = numbers.slice(0, 5);
-console.log(first5Index)
-  return first5Index;
+  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let sliced;
+
+  return sliced;
 }
 
 function get3rdIndex(arr) {
@@ -58,6 +56,18 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
+function arraysEqual(a, b) {
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
+}
+
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
@@ -65,9 +75,9 @@ test(
 );
 test(
   "sortArray function works",
-  sortArray().join()=== ["a", "c", "e", "f", "n", "z"].join()
+  arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
 );
-test("first5 function works", first5().join()=== [1, 2, 3, 4, 5].join());
+test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
 
 test(
   "get3rdIndex function works - case 1",
