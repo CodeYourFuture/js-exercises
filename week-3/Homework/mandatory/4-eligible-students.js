@@ -8,8 +8,20 @@
 */
 
 function eligibleStudents() {
+   let newArr = []
+    attendances.forEach( Element => {
+     if( Element[1] >= 8){
+       newArr.push(Element[0])
+     }
 
-}
+    });
+    console.log(newArr);
+    return newArr
+  }
+
+  
+  
+
 // using filter and map splice and join 
 
 /* ======= TESTS - DO NOT MODIFY ===== */

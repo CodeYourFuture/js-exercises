@@ -10,19 +10,33 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-  
-   let bush = (v) => v ==="neon";
-   console.log(bushBerryColours1.some(bush))
-   console.log(bushBerryColours2.some(bush))
-  // using some method with if statment
+function bushChecker(bushBerryColours) {
+  if (bushBerryColours.includes("neon")){
+    return "Toxic! Leave bush alone";
+  }else{
+    return"Bush is safe to eat from";
+  }
 
-}
+}  
+  
+  
+  
+//   if (bushBerryColours.includes("neon")){
+//     return "Toxic! Leave bush alone";
+
+//   }else if(bushBerryColours.every(element=> element === "pink")){
+//     return"Bush is safe to eat from";
+//   }
+
+// }  
+  
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
-let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+ let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
+ let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
 
 function test(test_name, expr) {
   let status;

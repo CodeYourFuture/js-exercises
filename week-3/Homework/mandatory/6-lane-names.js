@@ -5,10 +5,13 @@
 */
 
 function getLanes() {
- let familiesStay =  console.log(streetNames.filter("lane"));
- console.log(familiesStay)
+ 
+ let streetContainLane = streetNames.filter(element => element.includes("Lane"));
+ console.log(streetContainLane)
+
+  return streetContainLane;
 }
-//.filter(x => x)
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const streetNames = [

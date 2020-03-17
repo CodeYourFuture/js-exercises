@@ -3,17 +3,21 @@
   They call the planet "Alpha" and they decide that the FAMILIES whose last names start with 'A' should stay,
   while the others go on in search of other planets to call home.
 
+
   Create a function that returns an array of colonisers that will stay, according to the above rules.
 
   NOTE: don't include any element that is not a "family".
 */
 
 function colonisers() {
-  
-
+   let familiesStay = voyagers.filter(Element => Element < "B");
+    let familiesStay1 = familiesStay.filter(Element => Element !== "Aldous" && Element !== "Asimov");
+    
+   console.log(familiesStay1)
+   return familiesStay1
 }
 
-// filter method using charAt to traget the any letter of your indes and using && between the two method
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
