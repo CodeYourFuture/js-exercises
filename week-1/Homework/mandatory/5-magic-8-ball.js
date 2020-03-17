@@ -135,7 +135,7 @@ function checkAnswer() {
    }
    else (negative.includes(check))
    {
-     return "negative.";
+     return "negative check.";
    }
 }
 
