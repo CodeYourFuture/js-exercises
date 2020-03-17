@@ -18,8 +18,7 @@ function bushChecker(bushBerryColours) {
   }
 
 }  
-  
-  
+  /*           another way            */ 
   
 //   if (bushBerryColours.includes("neon")){
 //     return "Toxic! Leave bush alone";

@@ -9,12 +9,12 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-   let familiesStay = voyagers.filter(Element => Element < "B");
-    let familiesStay1 = familiesStay.filter(Element => Element !== "Aldous" && Element !== "Asimov");
+function colonisers(listOfFamily) {
+   let inistialFilering = listOfFamily.filter(Element => Element < "B");
+    let familiesStay = inistialFilering.filter(Element => Element !== "Aldous" && Element !== "Asimov");
     
-   console.log(familiesStay1)
-   return familiesStay1
+   console.log(familiesStay)
+   return familiesStay
 }
 
 
