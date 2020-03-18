@@ -24,17 +24,24 @@
 
 */ //[[string index 0],[number =index 1]]
 
-// function eligibleStudents(attendance) {
-//   let studentNames2 = attendance.filter(e => e[1] >= 8)
-//   return studentNames2.map(e => e[0])
+function eligibleStudents(attendance) {
+  let studentNames2 = attendance.filter(e => e[1] >= 8)
+  return studentNames2.map(e => e[0])
+}
+
+// function eligibleStudents(oldStudentlist) {
+//   let newStudentlist = [];
+//   //loops through each student name
+// for(let i = 0; i < oldStudentlist.length; ++i) {
+// //checks second index is greater than 8 or more
+//   if (oldStudentlist[i][1] >=8) {
+// newStudentlist.push(oldStudentlist [i][0]);
+// }
+// }
+// console.log(newStudentlist)
+//  return newStudentlist;
 // }
 
-function eligibleStudents(arr) {
-for(let i = 0; i > arr.lenght; ++i) {
-if(arr[i][1] >=8)
- return arr([1][0])
-}
-}
 
 // console.log(eligibleStudents([["Ahmed", 8],["Clement", 10],["Elamin", 6],
 // ["Adam", 7],["Tayoa", 11],["Nina", 10]]))
