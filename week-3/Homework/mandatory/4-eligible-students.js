@@ -5,10 +5,28 @@
   - Accepts an array which contains all the students' names and their attendance counts
     (see tests to confirm how this data will be structured)
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
-*/
 
-function eligibleStudents() { //filter
+  
 }
+  */
+function eligibleStudents(attendance) {
+  let goodStudents = attendance.filter(e => e[1] >= 8)
+  return goodStudents.map(e => e[0])
+}
+
+// function eligibleStudents(arr) {
+//     //  let newArr = []
+//   for (i=0; i < arr.length; i++) {
+//    for (j=1;j < arr.length; j++) {
+//     if (j >= 8) {
+//       console.log(arr[j])
+//       return arr[i]
+//     // } else {
+//     //   return "Uneligible"
+//     }
+//   }
+// }
+//     };
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const attendances = [

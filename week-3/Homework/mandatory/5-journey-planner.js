@@ -4,10 +4,14 @@
 
   Return an array of where I can go if I only want to use a specific mode of transport.
 
-  NOTE: only the names should be returned, not the means of transport.
-*/
+  NOTE: only the names should be returned, not the means of transport. //includes(mode of transport)-return index[0]
 
-function journeyPlanner() {
+let tube = arr.filter (e=> e[1].includes("tube"))
+return tube.map(e => e[0])
+ */
+
+function journeyPlanner(arr) {
+
 
 }
 

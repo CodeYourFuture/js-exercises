@@ -19,23 +19,24 @@
 // }
 // }
 
-//   for(let i=0; i < listOfBerryColours.length; i++){  
-//   let berryColour = listOfBerryColours[i];  
-    
-//     if(berryColour !== "pink") {
-//       return "Toxic! Leave bush alone";
-//     } else {
-//       return "Bush is safe to eat from";
-//     }
-// }
 
+
+  // if (bushBerryColours.includes("neon", "transparent")){
+  //   return "Toxic! Leave bush alone!";
+  // } else {
+  //   return "Bush is safe to eat from";
+  // }
 function bushChecker(bushBerryColours) {
-  if (bushBerryColours.includes("neon", "transparent")){
-    return "Toxic! Leave bush alone!";
-  } else {
-    return "Bush is safe to eat from";
+
+  for(let i=0; i < bushBerryColours.length; i++){  
+    let berryColour = bushBerryColours[i];  
+      
+      if(berryColour !== "pink") {
+        return "Toxic! Leave bush alone!";} 
+      
+      }
+      return "Bush is safe to eat from";
   }
-}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]

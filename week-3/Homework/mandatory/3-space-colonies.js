@@ -4,11 +4,17 @@
   while the others go on in search of other planets to call home.
 
   Create a function that returns an array of colonisers that will stay, according to the above rules.
-//char.at "A"?
+
   NOTE: don't include any element that is not a "family".
 */
+//let initialArr1 = oldArr.filter(e => e < "B") - too specific to test
+  // let finalArr2 = initialArr1.filter(e => e !== "Aldous" && e !== "Asimov")
+  // return finalArr2
 
-function colonisers()  
+function colonisers(arr) {  //char.at "A"?
+  let surnamesWithA = arr.filter(e => e.charAt(0) === "A" && e.includes("family"))
+  return surnamesWithA.map(e => e)
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
