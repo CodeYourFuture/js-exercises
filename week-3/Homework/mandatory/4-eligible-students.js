@@ -4,11 +4,18 @@
   Create a function which:
   - Accepts an array which contains all the students' names and their attendance counts
     (see tests to confirm how this data will be structured)
-  - Returns an array containing onl the names of the who have attended AT LEAST 8 classes
+  - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+function eligibleStudents(studentsname) {
+  let eligibleOnes = [];
+  for(let i = 0 ;i < studentsname.length; i++){
+    if(studentsname[i][1] >= 8){
+      eligibleOnes.push(studentsname[i][0]);
+      console.log(eligibleOnes);
+    }
+  }
+  return eligibleOnes;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -21,6 +28,7 @@ const attendances = [
   ["Tayoa", 11],
   ["Nina", 10]
 ]
+
 
 function arraysEqual(a, b) {
     if (a === b) return true;

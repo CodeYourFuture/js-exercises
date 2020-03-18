@@ -21,15 +21,34 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+let PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
+let myPass = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!, #, $, %, .])(?=.{5,})");
+console.log(myPass.test('384HsHF'))
+console.log(myPass.test('dvyyeyY!5'))
+console.log(myPass.test('tryT3729.'))
 
 function validatePasswords(passwords) {
-
+  let rightPasswords = [];
+  for(let i=0;i<passwords.length;i++){
+    if(PreviousPassword.includes(passwords[i])){
+      rightPasswords.push(false);
+    }
+    else{
+       let checkedPasswords = myPass.test(passwords[i]);
+       rightPasswords.push(checkedPasswords);
+       if(checkedPasswords){
+       PreviousPassword.push(passwords[i]);
+    }
+  }
+}
+  return rightPasswords;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+console.log(validatePasswords(passwords2));
 
 function arraysEqual(a, b) {
     if (a === b) return true;

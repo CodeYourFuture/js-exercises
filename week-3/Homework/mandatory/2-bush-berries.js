@@ -1,6 +1,5 @@
 /*
   The space travellers have safely landed and are foraging for food in the natural wildlife.
-
   There are bushes with many different colour berries.
   The pink berries are the ONLY safe ones to eat.
   If any other berries are present, it's best not to eat from the bush at all!
@@ -9,10 +8,21 @@
 
   Use the tests to confirm which message to return
 */
-
-function bushChecker() {
-
+function checkColor(colour){
+    if(colour === "pink"){
+      return colour;
+    } 
 }
+function bushChecker(allColours) {
+    let result =  allColours.every(checkColor);
+    if(result === true) {
+      return "Bush is safe to eat from" ;
+    }
+    else{
+      return "Toxic! Leave bush alone!" ;
+  
+    }
+  }    
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

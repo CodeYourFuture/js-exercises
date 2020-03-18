@@ -7,11 +7,23 @@
 
   NOTE: don't include any element that is not a "family".
 */
+function findNamesWithA(names){
+  if(names.charCodeAt(0) === 65){
+    return names;
+  }
+}  
 
-function colonisers() {
-
+function colonisers(arrayOfNames) {
+  let filterNames = arrayOfNames.filter(findNamesWithA);
+  console.log(filterNames);
+  let results =[];
+  for(let i=0;i<filterNames.length;i++){
+    if(filterNames[i].includes("family") === true ){
+         results.push(filterNames[i]);
+    }
+  }
+  return results;
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
