@@ -15,7 +15,8 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-
+  let arr2=[];
+  
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

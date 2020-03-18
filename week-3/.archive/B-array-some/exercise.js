@@ -4,21 +4,34 @@
   It is decided that if there is a null value the program should exit
   - Add a check for null values, and if one exists, exit the program
   - Do not edit any of the existing code
-*/
+// */
 
-var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
+// var pairsByIndex = [[0, 3], [1, 2], [2, 1], [3, 0]];
 
-// If there is a null value in the array exit the program with the error code
-// https://nodejs.org/api/process.html#process_process_exit_code
-// process.exit(1);
+// // If there is a null value in the array exit the program with the error code
+// // https://nodejs.org/api/process.html#process_process_exit_code
+// // process.exit(1);
 
-var students = ["Islam", "Lesley", "Harun", "Rukmini"];
-var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
+// var students = ["Islam", "Lesley", "Harun", "Rukmini"];
+// var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
-var pairs = pairsByIndex.map(function(indexes) {
-  var student = students[indexes[0]];
-  var mentor = mentors[indexes[1]];
-  return [student, mentor];
-});
+// var pairs = pairsByIndex.map(function(indexes) {
+//   var student = students[indexes[0]];
+//   var mentor = mentors[indexes[1]];
+//   return [student, mentor];
+// });
 
-console.log(pairs);
+// console.log(pairs);
+// var numbers = [1, 3, 11, 5, 9];
+// function negative(number){
+//   return number > 0;
+// }
+// var check = numbers.some(negative);
+// console.log(check)
+
+for (i = 0; i < 5; i= i+15) {
+  if (i % 2 === 0) {console.log(i + " is Even")
+} else {
+  console.log(i + " is odd")
+}
+}
