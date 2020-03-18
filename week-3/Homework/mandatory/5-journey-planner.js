@@ -7,9 +7,16 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(londonLocations1) {
+  let PlacesToVisit = londonLocations1.filter(e => e[0])
+  return PlacesToVisit.map(e => e[0])
 }
+console.log(journeyPlanner([
+  ["Angel", "tube", "bus"],
+  ["London Bridge", "tube", "river boat"],
+  ["Tower bridge", "tube", "bus"],
+  ["Greenwich", "bus", "river boat"]
+]))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -33,14 +40,14 @@ function arraysEqual(a, b) {
 }
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
 test("journeyPlanner function works - case 1".

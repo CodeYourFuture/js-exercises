@@ -6,7 +6,7 @@ function addNumbers(a, b, c) {
 addNumbers(3, 4, 6);
 
 function introduceMe(name, age) {
-  return `Hello, my name is ${name} and I am  ${age} years old`;
+  return `Hello, my name is ${name} and I am ${age} years old`;
 }
 introduceMe("Sonjide", 27);
 
@@ -14,7 +14,7 @@ function getRemainder(a, b) {
   remainder = a % b;
 
   // Use string interpolation here
-  return `${remainder}`;
+  return `The remainder is ${remainder}`
 }
 getRemainder(23, 5);
 
@@ -35,7 +35,7 @@ test("fixed addNumbers function - case 1", addNumbers(3, 4, 6) === 13);
 test(
   "fixed introduceMe function",
   introduceMe("Sonjide", 27) ===
-    "Hello, my name is Sonjide and I am 27 years old"
+  "Hello, my name is Sonjide and I am 27 years old"
 );
 test(
   "fixed getRemainder function",

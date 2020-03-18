@@ -4,11 +4,11 @@
   A business requires a program that calculates how much sales tax to charge
   Sales tax is 20% of the price of the product
 */
-const salesTax = 20 / 100;
+let salesTax = 20 / 100;
 function calculateSalesTax(ProductPrice) {
-  return `${salesTax}` * ProductPrice;
+  return salesTax * ProductPrice + ProductPrice;
 }
-calculateSalesTax(34);
+calculateSalesTax(17.5);
 
 /*
   CURRENCY FORMATTING
@@ -20,7 +20,12 @@ calculateSalesTax(34);
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(price) {
+  let salesT = 0.2 * price + price
+  return salesT.toFixed(2);
+}
+console.log(formatCurrency(17.5));
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

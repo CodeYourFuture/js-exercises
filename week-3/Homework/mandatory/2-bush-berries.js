@@ -10,9 +10,35 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(bushBerryColours) {
+  if (bushBerryColours.includes("neon", "transparent")) {
+    return "Toxic! Leave bush alone!";
+  } else {
+    return "Bush is safe to eat from";
+  }
 }
+
+
+// function bushChecker(listOfBerryColours, ) {
+//   for (let i = 0; i < listOfBerryColours.length; i++) {
+//     // for (let j = 0; j < listOfBerryColours.length; j++)
+
+//     var berryColour = listOfBerryColours[i];
+//     //var berryColour1 = listOfBerryColours1[i];
+
+//     if (berryColour === "pink" && berryColour == "neon") {
+//       return "Toxic! Leave bush alone!";
+//     }
+//     if (berryColour === "pink") {
+//       return "Toxic! Leave bush alone!";
+//     }
+//     //   else {
+//     //   return "Bush is safe to eat from";
+//     // }
+//   }
+// }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

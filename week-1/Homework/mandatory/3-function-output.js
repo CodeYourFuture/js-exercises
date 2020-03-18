@@ -1,19 +1,19 @@
 // Add comments to explain what this function does. You're meant to use Google!
-//It returns random decimal number less than one
+//It returns random decimal number between zero and ten
 function getNumber() {
   return Math.random() * 10;
 }
-getNumber();
+console.log(getNumber(5));
 
 // Add comments to explain what this function does. You're meant to use Google!
 //It is used to join two or more strings
 function s(w1, w2, w3) {
-  return w1.concat(w2).concat(w3);
+  return w1.concat(w2, w3);
 }
-s("I ", "Like ", "Pizza");
+s("code ", "your ", "future");
 
 function concatenate(firstWord, secondWord, thirdWord) {
-  return firstWord.concat(secondWord).concat(thirdWord);
+  return `${firstWord} ${secondWord} ${thirdWord}`;
   // Write the body of this function to concatenate three words together
   // Look at the test case below to understand what to expect in return
 }
