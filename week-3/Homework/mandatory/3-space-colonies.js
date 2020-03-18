@@ -2,16 +2,25 @@
   The voyagers decide that they quite like this planet, and some of them want to settle there and colonise it.
   They call the planet "Alpha" and they decide that the FAMILIES whose last names start with 'A' should stay,
   while the others go on in search of other planets to call home.
-
   Create a function that returns an array of colonisers that will stay, according to the above rules.
-
   NOTE: don't include any element that is not a "family".
 */
-
-function colonisers() {
-
+// function colonisers(oldArr) {
+//   let initialArr1 = oldArr.filter(e => e < "B")
+//   let finalArr2 = initialArr1.filter(e => e !== "Aldous" && e !== "Asimov")
+//   //console.log(newArr)
+//   return finalArr2
+// }
+function colonisers(oldArr) {
+  let initialArr1 = oldArr.filter(e => e.charAt(0) === "A" && e.includes("family"))
+  return initialArr1.map(e => e)
 }
 
+// function colonisers(lastNameWithA) {
+//   let newArr = lastNameWithA.filter(e => e.charAt(0) === "A");
+//   //return newArr
+// }
+// console.log(newArr)
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
