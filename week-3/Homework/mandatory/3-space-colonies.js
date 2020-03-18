@@ -6,10 +6,43 @@
   Create a function that returns an array of colonisers that will stay, according to the above rules.
 
   NOTE: don't include any element that is not a "family".
+
+const voyagers = [
+  "Adam family",
+  "Potter family",
+  "Eric",
+  "Aldous",
+  "Button family",
+  "Jude",
+  "Carmichael",
+  "Bunny",
+  "Asimov",
+  "Oscar family",
+  "Avery family",
+  "Archer family"
+];
+psoudocode - 
+ - needs to loop through all the names and 
+ select any name with initial A && families
+  - push it - new newArr
+  filter again etc
+  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+  return me the element that is smaller or equal than b
+
 */
 
-function colonisers() {
+// function colonisers(oldArr) {
+//   let initialArr1 = oldArr.filter(e => e < "B");
+//   let finalArr2 = initialArr1.filter(e => e !== "Aldous" && e !== "Asimov")
 
+// //console.log(newArr)
+//   return finalArr2
+// }
+
+function colonisers(oldArr) {
+  let initialArr1 = oldArr.filter(e => e.charAt(0) === "A" && e.includes("family"))
+  return initialArr1.map(e => e)
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

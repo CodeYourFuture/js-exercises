@@ -7,8 +7,9 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(oldArr) {
+let newArr = oldArr.filter(e => e   )
+return
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

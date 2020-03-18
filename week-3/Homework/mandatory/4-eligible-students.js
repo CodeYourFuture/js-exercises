@@ -3,13 +3,44 @@
 
   Create a function which:
   - Accepts an array which contains all the students' names and their attendance counts
-    (see tests to confirm how this data will be structured)
-  - Returns an array containing only the names of the who have attended AT LEAST 8 classes
-*/
+  (see tests to confirm how this data will be structured)
+  - Returns an array containing only the names of the who have attended AT LEAST 8 classes and plus
 
-function eligibleStudents() {
+  oldArr
+  let newArr
 
+  const attendances = [
+  ["Ahmed", 8],
+  ["Clement", 10],
+  ["Elamin", 6], 
+  ["Adam", 7],
+  ["Tayoa", 11],
+  ["Nina", 10]
+]
+- sort() in descending 
+- filter() - returns every element 
+- forEach()
+- multi-dimentional array sort
+
+*/ //[[string index 0],[number =index 1]]
+
+// function eligibleStudents(attendance) {
+//   let studentNames2 = attendance.filter(e => e[1] >= 8)
+//   return studentNames2.map(e => e[0])
+// }
+
+function eligibleStudents(arr) {
+for(let i = 0; i > arr.lenght; ++i) {
+if(arr[i][1] >=8)
+ return arr([1][0])
 }
+}
+
+// console.log(eligibleStudents([["Ahmed", 8],["Clement", 10],["Elamin", 6],
+// ["Adam", 7],["Tayoa", 11],["Nina", 10]]))
+
+//forEach
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
