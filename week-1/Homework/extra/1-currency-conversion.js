@@ -14,7 +14,7 @@ function convertToUSD() {}
   Write a new function for converting to the Brazilian real (exchange rate is 5.7 BRL to £)
   They have also decided that they should add a 1% fee to all foreign transactions
   Find a way to add 1% to all currency conversions (think about the DRY principle)
-*/
+*/wldwadad;aldmadmaamdm'amdam'dma'mda';lmd'md'amd'mad'md'mdm'amd;ma''fd'
 
 function convertToBRL() {}
 
