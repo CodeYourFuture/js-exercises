@@ -12,6 +12,7 @@ let newArr = oldArr.filter(e => e   )
 return
 }
 
+//testing a commit
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
