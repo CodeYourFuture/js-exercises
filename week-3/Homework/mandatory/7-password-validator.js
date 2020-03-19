@@ -21,7 +21,15 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-
+// function checkDublicates(pass) {
+//   for (i = 0; i < passwords.length; i++) {
+//     if (!pass.includes(passwords[i])) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+// }
 function validatePassword(pass) {
   //var result = passwords.filter(item => item.includes("Lane"));
   // passwords = passwords.filter(x => x.length > 4);
@@ -32,25 +40,23 @@ function validatePassword(pass) {
   let regexLower = /[a-z]/;
   let regexNum = /[0-9]/;
   let regexSymbol = /[! # $ % .]/;
-  function checkback(pass) {
-    for (i = 0; i < passwords.length; i++) {
-      !pass.includes(passwords[i]);
-    }
-  }
+
   return (
     pass.length >= 5 &&
     regexUpper.test(pass) &&
     regexLower.test(pass) &&
     regexNum.test(pass) &&
     regexSymbol.test(pass) &&
-    passwords.map(checkback(pass))
+    !passwords.some(x => x == pass)
   );
 }
 
 function validatePasswords(passwords) {
-  return passwords.map(validatePassword);
+  passwords.map(validatePassword);
 }
-console.log(validatePassword("dvyyeyY!5"));
+console.log(
+  validatePasswords(["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."])
+);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
