@@ -49,7 +49,7 @@ console.log(remove([10, 293, 292, 176, 29], 3))
 /*
 Write a function that:
 - takes an array of numbers as input
-- returns an array of strings formatted as percentages (e.g. 10 => "10%")
+- returns an array of strings formatted as percentages (e.g. 10 => "10%")!!!!!
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
