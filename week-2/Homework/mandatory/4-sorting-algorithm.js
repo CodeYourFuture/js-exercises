@@ -14,9 +14,31 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {
 
-}
+function sortAges(arr) {
+  let dataType; 
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++ ){
+    dataType = typeof(arr(i));
+    if (dataType === "number"){
+      newArr.push(arr(i));
+    }
+  }
+  let store; 
+  for(let i = 0; i < newArr.length; i++){
+    for(let j = i+1; j < newArr.length; j++){
+      if(newArr[i] > newArr[j]){
+        store = newArr[i];
+      newArr[i] = newArr[j];
+      newArr[j] = store;
+      }
+    }
+  }
+  console.log(`\x1b[42m\x1b[1m Sorted Arry : ${newArr} \x1b[0m`);
+  return newArr;
+}  
+
+console.log(sortAges([12, "nana", 23, "$$", [12], 43, 11, 1, "@", 7]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
