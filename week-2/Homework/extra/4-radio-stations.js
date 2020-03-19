@@ -1,3 +1,28 @@
+
+
+for (let i = 0; i < 15; i++){
+  if (i % 2 === 0) {
+    return `${i} is even`
+  } else {
+    return `${i} is odd`
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Finding a radio station, and a good one, can be hard manually.
  * Let's use some code to help us build a program that helps us scan

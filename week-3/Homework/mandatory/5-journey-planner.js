@@ -8,10 +8,7 @@
 */
 
 function journeyPlanner(arr, commuteType) {
-  const solution = arr.filter(element => element.includes(commuteType))
-  const stations = solution.map(element => element[0])
-  console.log(stations)
-  return stations
+  return arr.filter(element => element.includes(commuteType)).map(element => element[0])
 }
 
 // check each array of the main array

@@ -24,6 +24,7 @@
 //   })
 //   return namesMinimumEight
 // }
+
 function eligibleStudents(arr) {
   const namesMinimumEight = []
   arr.forEach(function (element) {
