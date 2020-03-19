@@ -14,6 +14,8 @@ Passwords must
 
 Passwords must not be any previous password in the passwords array. 
 
+
+ Element.length >= 5 && Element == /[0-9]/ && Element == /[a-z]/ && Element == /[A-Z]/ && Element == /["!", "#", "$", "%", "."]/);
 Example 1:
 PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
 
@@ -23,13 +25,15 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
+let validPassword = passwords.map(Element => Element === /(? =.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[!?#.])[a-zA-Z0-9!?#]{5,}/g);
+console.log(validPassword)
+return validPassword
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyY!5", "tryT3729."]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
 
 function arraysEqual(a, b) {
     if (a === b) return true;

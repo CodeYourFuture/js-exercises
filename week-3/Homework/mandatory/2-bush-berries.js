@@ -10,15 +10,16 @@
   Use the tests to confirm which message to return
 */
 
-// function bushChecker(bushBerryColours) {
-//   if (bushBerryColours.includes("neon", "transparent")){
-//     return "Toxic! Leave bush alone!";
-//   }else{
-//     return "Bush is safe to eat from";
-//   }
+function bushChecker(bushBerryColours) {
+  if (bushBerryColours.includes("neon", "transparent")){
+    return "Toxic! Leave bush alone!";
+  }else{
+    return "Bush is safe to eat from";
+  }
 
-// }  
-  /*           another way            */ 
+}  
+  /*           another way            */   // I beleive the method arr.every is the correct way to apply here but I didn't succeed
+
   function bushChecker(bushBerryColours) {
    if (bushBerryColours.includes("neon")){
      return "Toxic! Leave bush alone!";
