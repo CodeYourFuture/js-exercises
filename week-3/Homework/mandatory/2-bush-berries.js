@@ -12,14 +12,9 @@
 
 function bushChecker(bushes) {
   let bushBerryColours = bushes.every(Element => Element === "pink");
-  let message;
-  if(bushBerryColours){
-    message ="Bush is safe to eat from";
-    return message;
-  }
-  message = "Toxic! Leave bush alone!";
-  return message;
+  return bushBerryColours >0 ? "Bush is safe to eat from" : "Toxic! Leave bush alone!"
 }
+console.log(bushChecker(["pink", "pink", "pink", "neon", "pink", "transparent"]))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
