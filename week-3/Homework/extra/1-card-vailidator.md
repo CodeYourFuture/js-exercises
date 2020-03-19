@@ -4,10 +4,10 @@ In this project you'll write a script that validates whether or not a credit car
 
 Here are the rules for a valid number:
 
-- Number must be 16 digits, all of them must be numbers
+- Number must be 16 digits, all of them must be numbers (arr.length = 16)
 - You must have at least two different digits represented (all of the digits cannot be the same)
-- The final digit must be even
-- The sum of all the digits must be greater than 16
+- The final digit must be even (arr[16]%2 = 0)
+- The sum of all the digits must be greater than 16 (sum(arr) > 16)
 - The following credit card numbers are valid:
 
 ```markdown

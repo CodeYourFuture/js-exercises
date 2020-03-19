@@ -21,7 +21,7 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
-PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
+//PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyy!5", "qwbfj76%", "tytT3729."];
 
 function validatePasswords(passwords) {
 
@@ -30,16 +30,18 @@ function validatePasswords(passwords) {
   const numbers = /[0-9]/g;
   const symbols = /["!", "#", "$", "%", "."]/g;
   
-  validPassword = passwords.filter(x=> ((x.length > 4) && (upperCaseLetters.test(x)) && (lowerCaseLetters.test(x)) && (numbers.test(x)) && (symbols.test(x))))
-
-  console.log(validPassword)
-  return validPassword
+  validPassword = passwords.map(x=> ((x.length > 4) && (upperCaseLetters.test(x)) && (lowerCaseLetters.test(x)) && 
+  (numbers.test(x)) && (symbols.test(x))))
+  
+  return validPassword //passwords.map(x => x.length > 4 && upperCaseLetters.test(x) && lowerCaseLetters.test(x) && 
+  //numbers.test(x) && symbols.test(x))
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33", "shajsaUA**&&", "PlEnty"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
 
 function arraysEqual(a, b) {
     if (a === b) return true;
@@ -63,14 +65,14 @@ function test(test_name, expr) {
   
     console.log(`${test_name}: ${status}`);
 }
-
+console.log(validatePasswords(passwords1))
 test(
    "validatePasswords function works - case 1",
    arraysEqual(
       validatePasswords(passwords1), [false, false, true, false, false]
    )
  );
-
+ console.log(validatePasswords(passwords2))
  test(
    "validatePasswords function works - case 2",
    arraysEqual(

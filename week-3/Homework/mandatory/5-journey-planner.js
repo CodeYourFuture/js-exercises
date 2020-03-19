@@ -16,8 +16,8 @@
 //   return common;
 // }
 
-function journeyPlanner(arr, mean) {
-  return arr.filter(x=> x.includes(mean)).map(x => x= x[0])
+function journeyPlanner(arr, mean) { // mean is the vehicles
+  return arr.filter(x=> x.includes(mean)).map(x => x[0])
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
