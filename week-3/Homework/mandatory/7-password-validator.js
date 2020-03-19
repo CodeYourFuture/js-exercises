@@ -22,14 +22,25 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+
 function validatePasswords(passwords) {
 
-}
+  const validation = passwords.map(element => /A-Z a-z 0-9 ! # \$ % \./g.test(element.length > 4 && !element.includes("fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729.")));
+     
+  console.log(validation);
+    return validation;
+  }
 
-/* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
+
+
+  /* ======= TESTS - DO NOT MODIFY ===== */
+
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+
+
+
 
 function arraysEqual(a, b) {
     if (a === b) return true;

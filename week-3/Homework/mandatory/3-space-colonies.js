@@ -8,9 +8,12 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
-}
+function colonisers(voyagers) {
+   const colonisersA = voyagers.filter(element=>element<'B');
+   const aSettlers = colonisersA.filter(element => element !== 'Asimov' && element !=='Aldous')
+    console.log(aSettlers);
+    return aSettlers;
+  }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

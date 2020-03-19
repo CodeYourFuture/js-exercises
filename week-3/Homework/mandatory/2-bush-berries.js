@@ -9,10 +9,22 @@
 
   Use the tests to confirm which message to return
 */
+ 
 
-function bushChecker() {
+function bushChecker(bushBerryColours) {
+  if (bushBerryColours.includes('neon', 'transparent')){
+    return "Toxic! Leave bush alone!";
+  }else{
+    return "Bush is safe to eat from";
+  }
+  }
 
-}
+    
+    
+  
+  
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -31,4 +43,4 @@ function test(test_name, expr) {
 }
 
 test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
+test("bushChecker funtion works - case 2", bushChecker(bushBerryColours2) === "Bush is safe to eat from")

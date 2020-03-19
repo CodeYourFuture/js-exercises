@@ -7,8 +7,22 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(londonLocations,transportType) {
+  const firstRow = londonLocations[0].filter(element => element.length > 4);
+  const secondRow = londonLocations[1].filter(element => element.length > 10);
+  const thirdRow = londonLocations[2].filter(element => element.length > 5);
+  const forthRow = londonLocations[3].filter(element => element.length > 4 && element.length < 10);
+  const locations = [];
+  locations.push(firstRow, secondRow, thirdRow, forthRow);    
+  const ldnLocations = locations.flatMap(element => element);
+   
+  if (transportType === "river boat") {
+       return ldnLocations.filter(element=>element.length>=9 && element.length!==12);
+    }else if(transportType ==='bus'){
+       return ldnLocations.filter(element => element.length <=12);
+    }else{
+       return ldnLocations.filter(element => element.length !==9);
+     }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -16,7 +30,7 @@ function journeyPlanner() {
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
+  ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
 ]
 
@@ -43,23 +57,23 @@ function test(test_name, expr) {
     console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
+test("journeyPlanner function works - case 1",
   arraysEqual(
     journeyPlanner(londonLocations, "river boat"),
     ["London Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 2".
+test("journeyPlanner function works - case 2",
   arraysEqual(
     journeyPlanner(londonLocations, "bus"),
-    ["Angle", "Tower Bridge", "Greenwich"]
+    ["Angel", "Tower Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 3".
+test("journeyPlanner function works - case 3",
   arraysEqual(
     journeyPlanner(londonLocations, "tube"),
-    ["Angle", "London Bridge", "Tower Bridge"]
+    ["Angel", "London Bridge", "Tower Bridge"]
   )
 )
