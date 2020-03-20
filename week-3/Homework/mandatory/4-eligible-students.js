@@ -7,9 +7,21 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+function isEligibleStudent(index) {
+  let evaluateNumber = index[1] >= 8;
+  return evaluateNumber;
 }
+function isModifyList(elment) {
+  let name = elment[0];
+  return name;
+}
+
+function eligibleStudents(arr) {
+  let myList = arr.filter(isEligibleStudent);
+  let modifyList = myList.map(isModifyList);
+  return modifyList;
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
