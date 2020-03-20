@@ -8,8 +8,15 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
 
+
+function colonisersName(strrName) {
+  strrName = strrName[0] === "A" && strrName.includes("family");
+  return strrName
+}
+function colonisers(arr) {
+  let newArr = arr.filter(colonisersName); // filter out new array
+  return newArr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

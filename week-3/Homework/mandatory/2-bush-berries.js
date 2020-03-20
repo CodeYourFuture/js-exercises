@@ -9,9 +9,21 @@
 
   Use the tests to confirm which message to return
 */
-
-function bushChecker() {
-
+function isBushPink (bushColor){
+  if(bushColor=== "pink"){
+    return true;
+  }else{
+    return false 
+  }
+}
+function bushChecker(bushes) {
+  let allPink = bushes.every(isBushPink)
+  if(allPink === true){
+    return "Bush is safe to eat from"
+  }else{
+    return "Toxic! Leave bush alone!"
+  }
+    
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

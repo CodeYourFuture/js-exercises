@@ -22,14 +22,30 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+function checkPassword(password) {
+  let passUppercase = /[A-Z]/;
+  let passLowerercase = /[a-z]/;
+  let passNumber = /[0-9]/;
+  let passSymbols = /[!#$%.]/;
 
+  return (
+    password.length >= 5 &&
+    passUppercase.test(password) &&
+    passLowerercase.test(password) &&
+    passNumber.test(password) &&
+    passSymbols.test(password)
+  );
+}
+
+function validatePasswords(passWordList) {
+  let newPass = passWordList.map(checkPassword);
+  return newPass;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
 
 function arraysEqual(a, b) {
     if (a === b) return true;
