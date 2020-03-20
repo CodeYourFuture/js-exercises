@@ -1,6 +1,4 @@
-
-
-for (let i = 0; i < 15; i++){
+for (let i = 0; i < 15; i++) {
   if (i % 2 === 0) {
     return `${i} is even`
   } else {
@@ -8,9 +6,10 @@ for (let i = 0; i < 15; i++){
   }
 }
 
+kd velv lefnvl
 
 
-
+test
 
 
 
