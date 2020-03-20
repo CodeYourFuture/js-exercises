@@ -30,7 +30,7 @@ PasswordValidationResult=  [false, false, false, false, true]
 //     }
 //   }
 // }
-function validatePassword(pass) {
+function validatePassword(pass, passwords) {
   //var result = passwords.filter(item => item.includes("Lane"));
   // passwords = passwords.filter(x => x.length > 4);
   // passwords = passwords.filter(x => x !== x.toUpperCase());
@@ -47,7 +47,7 @@ function validatePassword(pass) {
     regexLower.test(pass) &&
     regexNum.test(pass) &&
     regexSymbol.test(pass) &&
-    !passwords.some(x => x == pass)
+    passwords.indexOf(pass) !== passwords.findIndex(pass)
   );
 }
 
