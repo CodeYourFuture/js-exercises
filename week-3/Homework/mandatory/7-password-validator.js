@@ -41,14 +41,14 @@ function validatePasswordsSimple(arr) {
   return arr.map(password => validateOnePasswordSimple(password));
 }
 
-function validateOnePasswordFully(password, index, arr) {
-  let prevElems = arr.slice(0, index);
-  return validateOnePasswordSimple(password) && !prevElems.includes(password);
-}
+// function validateOnePasswordFully(password, index, arr) {
+//   let prevElems = arr.slice(0, index);
+//   return validateOnePasswordSimple(password) && !prevElems.includes(password);
+// }
 
-function validatePasswordsGood(arr) {
-  return arr.map(validateOnePasswordFully);
-}
+// function validatePasswordsGood(arr) {
+//   return arr.map(validateOnePasswordFully);
+// }
 
 function validatePasswords(arr) {
   return arr.map(
