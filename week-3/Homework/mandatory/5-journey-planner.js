@@ -6,15 +6,44 @@
 
   NOTE: only the names should be returned, not the means of transport. //includes(mode of transport)-return index[0]
 
-let tube = arr.filter (e=> e[1].includes("tube"))
-return tube.map(e => e[0])
+
  */
+// let newArr = arr.filter (e=> e[1].includes("tube"))
+// return newArr.map(e => e[0])
 
-function journeyPlanner(arr) {
+  // for (i=0; i < arr.length; i++) {
+  //   for (j=1; j < arr[i].length; j++){
+  //   for(k=2; k < arr[i][j].length; k++) {
 
+//   for (i=0; i < arr.length; i++) {
+//     let transport1 = arr.length
+//     for (j=1; j < arr[i].length; j++){
+//     for(k=2; k < arr[i][j].length; k++) {
+// }
+//     }
+//   }
 
+// function journeyPlanner(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i].includes("bus")) {
+//         return arr[i][0]
+//       }
+//       if (arr[i].includes("tube")) {
+//         return arr[i][0]
+//       }
+//       if (arr[i].includes("river boat")) {
+//         return arr[i][0]
+//       }
+//     }
+// }
+
+newArr = []
+ 
+function journeyPlanner(londonLocations, transport) {  //(real array, value)
+  let newArr = londonLocations.filter(e => e.includes(transport))
+  console.log(newArr.map(e => e[0]))
+  return newArr.map(e => e[0])
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
