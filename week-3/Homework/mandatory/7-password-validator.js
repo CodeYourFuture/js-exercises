@@ -24,9 +24,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 function validatePasswords(passwords) {
   //var myS = ["Kbn.i", "Nvsk?", "csdR!"]
-  var strongRegex = new RegExp(
-    "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^.*])(?=.{5,})"
-  );
+  var strongRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{5,}$/;
+
   // var access = strongRegex.test(myS);
   var access = passwords.map(x => strongRegex.test(x));
   return access;
