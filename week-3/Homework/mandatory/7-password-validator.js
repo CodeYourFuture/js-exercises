@@ -21,13 +21,13 @@ PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT372
 
 Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
-
+const hasDuplicates = arr => arr.some((item, index) => arr.indexOf(item) !== index)
 */
 function checkPasswords(arrPassword) {
-let checkLowercase= /[a-z]/
-let checkUppercase= /[A-Z]/
-let checkNumber= /[0-9]/
-let checkSymbol= /[!#$%.]/
+  let checkLowercase= /[a-z]/
+  let checkUppercase= /[A-Z]/
+  let checkNumber= /[0-9]/
+  let checkSymbol= /[!#$%.]/
 
 if(checkLowercase.test(arrPassword) &&
     checkUppercase.test(arrPassword) &&
@@ -37,6 +37,7 @@ if(checkLowercase.test(arrPassword) &&
     ){
         return true
       }  else {
+
         return false
       }
 } 
@@ -47,6 +48,14 @@ function validatePasswords(arr){
 
 console.log(validatePasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]))
 console.log(validatePasswords(["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]))
+
+// function checkDuplicates (foundDupecharacters){
+//   checkPasswords = foundDupecharacters.map( e => e.some(([i],[j]) => e.indexOf([i]) !== [j])
+//   console.log(checkPasswords)  
+//   return checkPasswords
+// }
+// //https://stackoverflow.com/questions/49215358/checking-for-duplicate-strings-in-javascript-array
+
 //console.log(arrayCheck(["sonjideABC%5", "MIN", "cyn"]))
 
 // function validatePasswords(arr) {
