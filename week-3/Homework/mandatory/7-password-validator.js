@@ -21,15 +21,18 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+const passwords3 = ["abdullah"];
 
 function validatePasswords(passwords) {
-
+  const check = passwords.filter(element => element.includes(element.length >= 5))
+  return check
 }
 
+console.log(validatePasswords(passwords3))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
 
 function arraysEqual(a, b) {
     if (a === b) return true;

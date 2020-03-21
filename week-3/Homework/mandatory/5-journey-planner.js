@@ -6,17 +6,29 @@
 
   NOTE: only the names should be returned, not the means of transport.
 */
+const londonLocation = [
+  ["Angel", "tube", "bus"],
+  ["London Bridge", "tube", "river boat"],
+  ["Tower Bridge", "tube", "bus"],
+  ["Greenwich", "bus", "river boat"]
+]
 
-function journeyPlanner() {
+
+function journeyPlanner(londonLocation, service) {
+  const filteredArray = londonLocation.filter(el => el.includes(service));//filter the means of transport as argument first
+  const locations = filteredArray.map(el => el[0]) //second array that contains elements with means
+  
+  return locations
 
 }
 
+console.log(journeyPlanner(londonLocation,"bus"))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
+  ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
 ]
 
@@ -43,23 +55,23 @@ function test(test_name, expr) {
     console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
+test("journeyPlanner function works - case 1",
   arraysEqual(
     journeyPlanner(londonLocations, "river boat"),
     ["London Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 2".
+test("journeyPlanner function works - case 2",
   arraysEqual(
     journeyPlanner(londonLocations, "bus"),
-    ["Angle", "Tower Bridge", "Greenwich"]
+    ["Angel", "Tower Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 3".
+test("journeyPlanner function works - case 3",
   arraysEqual(
     journeyPlanner(londonLocations, "tube"),
-    ["Angle", "London Bridge", "Tower Bridge"]
+    ["Angel", "London Bridge", "Tower Bridge"]
   )
 )

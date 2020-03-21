@@ -11,6 +11,7 @@
 // */
 // function pink(berryColor){ 
 //   berryColor === "pink";
+//   return
 // }
 
 function bushChecker(array) { //checks whether every element is pink

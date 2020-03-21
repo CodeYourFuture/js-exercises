@@ -7,12 +7,15 @@
   - Returns an array containing onl the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
 
+function eligibleStudents(list) {
+let newList = [];
+list.array.forEach(element => element[1] >= 8) //checks who have attended AT LEAST 8 classes
+  newList.push(element[0]) //adds first element from first array that are true
+return newList
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
-
 const attendances = [
   ["Ahmed", 8],
   ["Clement", 10],
