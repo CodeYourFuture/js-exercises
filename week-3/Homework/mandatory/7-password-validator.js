@@ -36,22 +36,53 @@ PasswordValidationResult=  [false, false, false, false, true]
 //   }
 // }
 
-function CheckPassword(arrPassword) {
-  for (let i = 0; i < arrPassword.length; i++) {
-    if (arrPassword[i].length >= 5 && arrPassword[i].test(/[A-Z]/ < 0) && arrPassword[i].test(/[a-z]/ < 0) && arrPassword[i].test([0 - 9] < 0) && arrPassword[i].yest([/!#$%./] < 0)) {
-      return true
-      //console.log(arrPassword[i] + ' : ' + arrPassword[i].length)  
-    }
+// 
+
+
+
+/* 
+Password Validation
+//https://regex101.com/r/HirTdu/1/
+Passwords must not be any previous password in the passwords array. 
+Example 1:
+PreviousPassword = ["fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729."];
+Expected Result:
+PasswordValidationResult=  [false, false, false, false, true]
+*/
+function checkPasswords(arrPassword) {
+  let checkLowercase = /[a-z]/
+  let checkUppercase = /[A-Z]/
+  let checkNumber = /[0-9]/
+  let checkSymbol = /[!#$%.]/
+  if (checkLowercase.test(arrPassword) &&
+    checkUppercase.test(arrPassword) &&
+    checkNumber.test(arrPassword) &&
+    checkSymbol.test(arrPassword) &&
+    arrPassword.length >= 5
+  ) {
+    return true
+  } else {
     return false
   }
 }
+function validatePasswords(arr) {
+  let newArr1 = arr.map(checkPasswords)
+  return newArr1
+}
+console.log(validatePasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]))
+console.log(validatePasswords(["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]))
+//console.log(arrayCheck(["sonjideABC%5", "MIN", "cyn"]))
+// function validatePasswords(arr) {
+//   let newArr=arr.map(checkPasswords)
+//   console.log(newArr)
+//   return newArr
+// }
+// console.log(checkPasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]))
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
-
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
-
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
 function arraysEqual(a, b) {
   if (a === b) return true;
   if (a == null || b == null) return false;
@@ -63,7 +94,6 @@ function arraysEqual(a, b) {
 
   return true;
 }
-
 function test(test_name, expr) {
   let status;
   if (expr) {
@@ -74,14 +104,12 @@ function test(test_name, expr) {
 
   console.log(`${test_name}: ${status}`);
 }
-
 test(
   "validatePasswords function works - case 1",
   arraysEqual(
     validatePasswords(passwords1), [false, false, true, false, false]
   )
 );
-
 test(
   "validatePasswords function works - case 2",
   arraysEqual(
