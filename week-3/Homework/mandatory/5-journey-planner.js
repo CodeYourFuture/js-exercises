@@ -15,7 +15,7 @@ function journeyPlanner(londonLocations,transportType) {
   const locations = [];
   locations.push(firstRow, secondRow, thirdRow, forthRow);    
   const ldnLocations = locations.flatMap(element => element);
-   
+     console.log(locations);
   if (transportType === "river boat") {
        return ldnLocations.filter(element=>element.length>=9 && element.length!==12);
     }else if(transportType ==='bus'){

@@ -24,12 +24,15 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 
 function validatePasswords(passwords) {
+  const AZ = /[A-Z]/;
+  const azSmall =/[a-z]/;
+  const number = /[0-9]/;
+  const symbols =/[! # $ % .]/;
+  const validation = passwords.map((element,index)=> AZ.test(element) && azSmall.test(element) && number.test(element) && symbols.test(element) && element.length > 4 &&  !passwords.slice(0,index).includes(element));
 
-  const validation = passwords.map(element => /A-Z a-z 0-9 ! # \$ % \./g.test(element.length > 4 && !element.includes("fhD8!yrjj", "ttkTu.wer3", "dvyyeyY!5", "qwbfj76%", "tytT3729.")));
-     
   console.log(validation);
-    return validation;
-  }
+  return validation;
+};
 
 
 
@@ -38,7 +41,6 @@ function validatePasswords(passwords) {
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
 const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
-
 
 
 
