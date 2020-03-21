@@ -10,7 +10,7 @@
 //newArr = [] 
 function journeyPlanner(londonLocations, transport) {  //(real array, value)
   let newArr = londonLocations.filter(e => e.includes(transport))
-  console.log(newArr.map(e => e[0]))
+  //console.log(newArr.map(e => e[0]))
   return newArr.map(e => e[0])
 }
 

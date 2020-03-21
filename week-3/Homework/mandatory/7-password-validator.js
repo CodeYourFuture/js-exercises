@@ -6,11 +6,13 @@ contains a valid password (see below for password criterias) and return
 new array with true or false booleans.
 
 Passwords must 
-- Have at least 5 characters.
+- Have at least 5 characters.  >5
 - Have English uppercase letters (A-Z)
 - Have English lowercase letters (a-z)
 - Have numbers (0-9)
 - Have non-alphanumeric symbols ("!", "#", "$", "%", ".")
+
+//https://regex101.com/r/HirTdu/1/
 
 Passwords must not be any previous password in the passwords array. 
 
@@ -21,10 +23,39 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+function checkPasswords(arrPassword) {
+let checkLowercase= /[a-z]/
+let checkUppercase= /[A-Z]/
+let checkNumber= /[0-9]/
+let checkSymbol= /[!#$%.]/
 
-function validatePasswords(passwords) {
-
+if(checkLowercase.test(arrPassword) &&
+    checkUppercase.test(arrPassword) &&
+    checkNumber.test(arrPassword) &&
+    checkSymbol.test(arrPassword) &&
+    arrPassword.length >= 5
+    ){
+        return true
+      }  else {
+        return false
+      }
+} 
+function validatePasswords(arr){
+  let newArr1 = arr.map(checkPasswords)
+  return newArr1
 }
+
+console.log(validatePasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]))
+console.log(validatePasswords(["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]))
+//console.log(arrayCheck(["sonjideABC%5", "MIN", "cyn"]))
+
+// function validatePasswords(arr) {
+//   let newArr=arr.map(checkPasswords)
+//   console.log(newArr)
+//   return newArr
+// }
+// console.log(checkPasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]))
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
