@@ -22,7 +22,7 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function checkPassword(password) {
+function checkPassword(password,index,arr) {
   let passUppercase = /[A-Z]/;
   let passLowerercase = /[a-z]/;
   let passNumber = /[0-9]/;
@@ -33,7 +33,8 @@ function checkPassword(password) {
     passUppercase.test(password) &&
     passLowerercase.test(password) &&
     passNumber.test(password) &&
-    passSymbols.test(password)
+    passSymbols.test(password)&&
+    arr.indexOf(password) === index
   );
 }
 
