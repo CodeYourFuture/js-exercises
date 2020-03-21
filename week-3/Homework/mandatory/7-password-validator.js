@@ -60,7 +60,7 @@ function checkPasswords(arrPassword) {
     let newArr1 = arr.map(checkPasswords)
     return newArr1
   }
-  
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
