@@ -61,6 +61,7 @@ if(checkLowercase.test(testPassword) &&
         return false
       }
 } 
+//calls the function name (testPassword) using map method to validate all the passwords
 function validatePasswords(arr){
   let newArr1 = arr.map(testPassword)
   return newArr1
