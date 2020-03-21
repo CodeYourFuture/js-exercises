@@ -12,10 +12,10 @@
 
 function bushChecker(arr) {
   let pink = arr.every(name => name.includes("pink"));
-  if (!pink) {
-    return "Toxic! Leave bush alone!";
+  if (pink) {
+    return "Bush is safe to eat from";
   }
-  return "Bush is safe to eat from";
+  return "Toxic! Leave bush alone!";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

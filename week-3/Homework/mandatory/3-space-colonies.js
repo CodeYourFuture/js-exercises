@@ -8,7 +8,9 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function colonisers(arr) {
+  let stay = arr.filter(col => col.charAt(0) === "A" && col.includes("family"));
+  return stay;
 
 }
 
