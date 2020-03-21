@@ -21,30 +21,27 @@ let allLower = /[a-z]/;
 let allNumbers = /[0-9]/;
 let allSymbols = /[!#$%.]/;
 
-function validatePasswords(passwords) {
-  let filterPasswords = passwords.filter(
-    (item, index) => passwords.indexOf(item) != index
-  );
-  let all = filterPasswords.slice(0);
-  all[0] = false;
-  console.log(all);
-
-  all = passwords.map(function(checkPassword) {
-    if (
-      checkPassword.length >= 5 &&
-      allUpper.test(checkPassword) &&
-      allLower.test(checkPassword) &&
-      allNumbers.test(checkPassword) &&
-      allSymbols.test(checkPassword)
-    ) {
-      return true;
-    } else {
+function checkPasswords(checkPassword, index, allPasswords) {
+  for (let i = 0; i < index; i++) {
+    if (checkPassword === allPasswords[i]) {
       return false;
     }
-  });
-
-  console.log(all);
-  return all;
+  }
+  if (
+    checkPassword.length >= 5 &&
+    allUpper.test(checkPassword) &&
+    allLower.test(checkPassword) &&
+    allNumbers.test(checkPassword) &&
+    allSymbols.test(checkPassword)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function validatePasswords(arrPasswords) {
+  let validPassords = arrPasswords.map(checkPasswords);
+  return validPassords;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
