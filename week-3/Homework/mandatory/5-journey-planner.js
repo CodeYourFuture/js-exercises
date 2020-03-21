@@ -7,7 +7,9 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(arr, query) {
+  let location = arr.filter(innerarray => innerarray.includes(query)).map(arr => arr[0]);
+  return location;
 
 }
 
