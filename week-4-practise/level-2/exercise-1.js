@@ -8,7 +8,7 @@ drinking some of it, and emptying it.
 We made a start on this for you here: 
 */
 
-var bottle = {
+let bottle = {
 	volume: 0,
 	fill: function(){
 	 	// calling this function should make you bottles volume = 100; 
@@ -36,6 +36,6 @@ bottle.drink();
 bottle.drink();
 bottle.drink();
 if(!bottle.empty()){
-	console.log('bottles volume = ' + bottle.volume);
+	console.log(`bottles volume = ${bottle.volume}`);
 }
 console.log("Above volume should be: 70");
