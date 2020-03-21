@@ -38,17 +38,18 @@ function callback(item, position, wholeArray) {
 
 
 function testPassword(testPassword, index, allPassword ) {
-
-  for (let i = 0; i < index; ++i) {
+//for loop compares testPassword against all the previous passwords
+  for (let i = 0; i < index; i++) {
     if(testPassword === allPassword[i]){
       return false
     }
   }
+  //beginning of the IF STATEMENT = check validation criteria (single) password once 
   let checkLowercase= /[a-z]/
   let checkUppercase= /[A-Z]/
   let checkNumber= /[0-9]/
   let checkSymbol= /[!#$%.]/
-
+  //
 if(checkLowercase.test(testPassword) &&
     checkUppercase.test(testPassword) &&
     checkNumber.test(testPassword) &&
@@ -64,7 +65,6 @@ function validatePasswords(arr){
   let newArr1 = arr.map(testPassword)
   return newArr1
 }
-
 console.log(validatePasswords(["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]))
 console.log(validatePasswords(["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]))
 
