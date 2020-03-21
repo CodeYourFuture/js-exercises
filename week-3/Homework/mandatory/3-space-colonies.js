@@ -8,14 +8,25 @@
 
   NOTE: don't include any element that is not a "family".
 */
+ 
+ function colonisers(arr){
+  let inistialFilering = arr.filter(Element => Element.includes("A"))
+  let familiesStay = inistialFilering.filter(Element => Element.includes("family"))
 
-function colonisers(listOfFamily) {
+  console.log(familiesStay)
+  return familiesStay
+ }
+
+
+
+/*               another way            */
+ function colonisers(listOfFamily) {
    let inistialFilering = listOfFamily.filter(Element => Element < "B");
-    let familiesStay = inistialFilering.filter(Element => Element !== "Aldous" && Element !== "Asimov");
+  let familiesStay = inistialFilering.filter(Element => Element !== "Aldous" && Element !== "Asimov");
     
-   console.log(familiesStay)
-   return familiesStay
-}
+    console.log(familiesStay)
+    return familiesStay
+ }
 
 
 

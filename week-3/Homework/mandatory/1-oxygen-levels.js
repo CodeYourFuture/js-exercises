@@ -18,16 +18,16 @@ function safeLevels(levelsAround) {
  
  }
 
- /*                  another way           */
+ /*                  another way           */ // If we want all the safe oxygen levels around 
 
 
- function safeLevels(levelsAround) {
-   let firstSafe = levelsAround.filter( Element => Element > "19.5%" && Element < "23.5");
+  function safeLevels(levelsAround) {
+    let firstSafePlanet = levelsAround.filter( Element => Element > "19.5%" && Element < "23.5");
 
-   console.log(firstSafe);
- return firstSafe[0]; 
+    console.log(firstSafePlanet);
+  return firstSafePlanet[0]; 
 
- }
+  }
  
 
 /* ======= TESTS - DO NOT MODIFY ===== */

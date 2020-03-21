@@ -6,15 +6,11 @@
 
   NOTE: only the names should be returned, not the means of transport.
 */
+function journeyPlanner(londonLocation, transport) {
 
-function journeyPlanner( londonLocations, transport) {
-   let locations = londonLocations.filter(Element => Element.length === [0][1])
+  return londonLocation.filter(Element => Element.includes(transport). map(Element => Element["0"]));
+ }
 
- console.log(locations)
- return locations
-
-
-}
 // filter(x => x.inclde(transportr). map(x+> x.silence(0, 1).join(""));
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -8,15 +8,16 @@
 */
 
 function eligibleStudents() {
-   let newArr = []
+   let listOfEligibleStudents = []
+
     attendances.forEach( Element => {
      if( Element[1] >= 8){
-       newArr.push(Element[0])
+       listOfEligibleStudents.push(Element[0])
      }
 
     });
-    console.log(newArr);
-    return newArr
+    console.log(listOfEligibleStudents);
+    return listOfEligibleStudents
   }
 
   

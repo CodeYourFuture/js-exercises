@@ -21,13 +21,14 @@ function bushChecker(bushBerryColours) {
   /*           another way            */   // I beleive the method arr.every is the correct way to apply here but I didn't succeed
 
   function bushChecker(bushBerryColours) {
-   if (bushBerryColours.includes("neon")){
-     return "Toxic! Leave bush alone!";
-    }else{
-     return"Bush is safe to eat from";
-   }
+   let eatableBush = bushBerryColours.every(Element => Element === "pink")
 
- }  
+     if(eatableBush === true){
+       return "Bush is safe to eat from";
+    } else {
+       return"Toxic! Leave bush alone!";
+    }
+  }
   
 
 

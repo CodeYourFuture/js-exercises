@@ -25,15 +25,20 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-let validPassword = passwords.map(Element => Element/(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z])(?=.*[!?])[a-zA-Z0-9!?]{5,}/g);
+  let checkCapitalLetters = /[A-Z]/;
+  let checkSmallLetters = /[a-z]/;
+  let checkNumber = /[0-9]/;
+
+let validPassword = passwords.map((Element, index) => Element.length > 4 && checkCapitalLetters.test(Element) && checkSmallLetters.test(Element) && checkNumber.test(Element) && /[#.!%$£*]/.test(Element) && ! passwords.slice(0, index).includes(Element));
+
 console.log(validPassword)
 return validPassword
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyY!5", "tryT3729"]
-const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"] // passwords.slice(0, index).includes(Element));
 
 function arraysEqual(a, b) {
     if (a === b) return true;
