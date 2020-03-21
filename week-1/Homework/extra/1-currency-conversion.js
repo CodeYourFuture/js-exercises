@@ -10,7 +10,7 @@ function convertToUSD(x) {
   return answer;
 }
 
-console.log(convertToUSD(32));
+convertToUSD(32);
 
 /*
   CURRENCY FORMATTING
@@ -27,7 +27,7 @@ function convertToBRL(x) {
   return total;
 }
 
-console.log(convertToBRL(30))
+convertToBRL(30);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
