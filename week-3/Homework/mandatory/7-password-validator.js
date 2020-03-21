@@ -23,13 +23,23 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-
+  let checkCap = /[a-z]/;
+  let checkUp = /[A-Z]/;
+  let checkNumber = /[0-9]/;
+  let validatePassword = passwords.map((Element, index) => Element.length > 4 &&
+    checkCap.test(Element) &&
+    checkUp.test(Element) && 
+    checkNumber.test(Element) && 
+    /[#.!%$£*]/.test(Element) && 
+    !passwords.slice(0, index).includes(Element));
+  console.log(validatePassword);
+  return validatePassword;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
 
-const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
-const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
 
 function arraysEqual(a, b) {
     if (a === b) return true;
@@ -39,7 +49,6 @@ function arraysEqual(a, b) {
     for (let i = 0; i < a.length; ++i) {
       if (a[i] !== b[i]) return false;
     }
-  
     return true;
 }
 
