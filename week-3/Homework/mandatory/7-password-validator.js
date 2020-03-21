@@ -22,8 +22,20 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+// function validPassword(password, index, arr) {
+//   let pwd = arr.map(password => password.includes(password.match(/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{5,}$/)));
+//   let prePwd = arr.indexOf(password) === index;
+//   return ( pwd && prePwd);
+// }
+function validPassword(password, index, arr) {
+  let pwd = /^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{5,}$/;
+  let tst = pwd.test(password);
+  let prePwd = arr.indexOf(password) === index;
+  return ( tst && prePwd);
+}
 
+function validatePasswords(passwords){
+  return passwords.map(validPassword);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
