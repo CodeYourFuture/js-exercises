@@ -21,13 +21,46 @@ Expected Result:
 PasswordValidationResult=  [false, false, false, false, true]
 
 */
+// const previousPassword = [
+//   "Se%5", 
+//   "TktE.TJTU", 
+//   "384#HsHF", 
+//   "dvyyeyy!5", 
+//   "tryT3729",
+//   "StUFf27%", 
+//   "Pl3nty!", 
+//   "Jai33", 
+//   "shajsaUA**&&", 
+//   "Pl3nty!"
+// ]
+// function validatePasswords(passwords) {
+//   return passwords.map(function(password) {
+//     console.log(/^[a-z][A-Z][0-9][\!\#\$%\.]/.test("y!e7#TD345"));
+//   });
+// }
+// validatePasswords(previousPassword);
 
-function validatePasswords(passwords) {
-
-
-}
-
-}
+function checkPasswords(arrPassword) {
+  let checkLowercase= /[a-z]/
+  let checkUppercase= /[A-Z]/
+  let checkNumber= /[0-9]/
+  let checkSymbol= /[!#$%.]/
+  if(checkLowercase.test(arrPassword) &&
+      checkUppercase.test(arrPassword) &&
+      checkNumber.test(arrPassword) &&
+      checkSymbol.test(arrPassword) &&
+      arrPassword.length >= 5
+      ){
+          return true
+        }  else {
+          return false
+        }
+  } 
+  function validatePasswords(arr){
+    let newArr1 = arr.map(checkPasswords)
+    return newArr1
+  }
+  
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

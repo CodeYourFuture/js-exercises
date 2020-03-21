@@ -37,7 +37,7 @@
 //     }
 // }
 
-newArr = []
+newArr = [] 
  
 function journeyPlanner(londonLocations, transport) {  //(real array, value)
   let newArr = londonLocations.filter(e => e.includes(transport))
