@@ -5,6 +5,8 @@ Write a program that should check if each password in an array
 contains a valid password (see below for password criterias) and return 
 new array with true or false booleans.
 
+regex
+
 Passwords must 
 - Have at least 5 characters.
 - Have English uppercase letters (A-Z)
@@ -22,9 +24,28 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+// function validatePasswords(arrPassword) {
+//   let validation = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!#$%.]){5,}"
 
+//   function CheckPassword(arrPassword) {
+//     for (let i = 0; i < arrPassword.length; i++) {
+//       if (arrPassword[i] != validation)//(arrPassword[i].length >= 5 && arrPassword[i].search(/[A-Z]/ < 0) && arrPassword[i].search(/[a-z]/ < 0) && arrPassword[i].search([0 - 9] < 0) && arrPassword[i].search([/!#$%./] < 0)) {
+//         return false
+//     }
+//     return true
+//   }
+// }
+
+function CheckPassword(arrPassword) {
+  for (let i = 0; i < arrPassword.length; i++) {
+    if (arrPassword[i].length >= 5 && arrPassword[i].test(/[A-Z]/ < 0) && arrPassword[i].test(/[a-z]/ < 0) && arrPassword[i].test([0 - 9] < 0) && arrPassword[i].yest([/!#$%./] < 0)) {
+      return true
+      //console.log(arrPassword[i] + ' : ' + arrPassword[i].length)  
+    }
+    return false
+  }
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -32,38 +53,38 @@ const passwords1 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."]
 const passwords2 = ["StUFf27", "PlEnty", "Jai.33" "shajsaUA**&&", "PlEnty"]
 
 function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length != b.length) return false;
-  
-    for (let i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
-    }
-  
-    return true;
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
 }
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
-   "validatePasswords function works - case 1",
-   arraysEqual(
-      validatePasswords(passwords1), [false, false, true, false, false]
-   )
- );
+  "validatePasswords function works - case 1",
+  arraysEqual(
+    validatePasswords(passwords1), [false, false, true, false, false]
+  )
+);
 
- test(
-   "validatePasswords function works - case 2",
-   arraysEqual(
-      validatePasswords(passwords2), [true, true, false, false, false]
-   )
- );
+test(
+  "validatePasswords function works - case 2",
+  arraysEqual(
+    validatePasswords(passwords2), [true, true, false, false, false]
+  )
+);
