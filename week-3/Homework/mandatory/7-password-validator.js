@@ -12,6 +12,9 @@ Passwords must
 - Have numbers (0-9)
 - Have non-alphanumeric symbols ("!", "#", "$", "%", ".")
 
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"]
+
 Passwords must not be any previous password in the passwords array. 
 
 Example 1:
@@ -27,20 +30,26 @@ function validatePassword(passw){
   let regexLower = /[a-z]/;
   let regexNum = /[0-9]/;
   let regexSym = /[!#$%.]/;
-
-  return (
+  
+  let resultArray = (
     passw.length >= 5 &&
     regexUpper.test(passw) &&
     regexLower.test(passw) &&
     regexNum.test(passw) &&
     regexSym.test(passw) 
   ) 
+  return resultArray
 }
 
-function validatePasswords(passwords) {
+function validatePasswords(arr) {
 
- return passwords.map(password => validatePassword(password))
+ let newArray =  arr.map((Element, index) => validatePassword(Element, index) && ! arr.slice(0, index).includes(Element));
+
+return  newArray;
 }
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -55,7 +64,6 @@ function arraysEqual(a, b) {
     for (let i = 0; i < a.length; ++i) {
       if (a[i] !== b[i]) return false;
     }
-  
     return true;
 }
 
@@ -80,6 +88,6 @@ test(
  test(
    "validatePasswords function works - case 2",
    arraysEqual(
-      validatePasswords(passwords2), [true, true, false, false, true]
+      validatePasswords(passwords2), [true, true, false, false, false]
    )
  );
