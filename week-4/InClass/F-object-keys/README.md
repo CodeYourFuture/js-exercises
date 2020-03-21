@@ -11,7 +11,7 @@ Like arrays, objects have build in methods that can help us. In this lesson, we 
 Here is an example output for using `.keys()`:
 
 ```js
-var footballClubs = {
+let footballClubs = {
   chelsea_fc: 'England',
   fc_barcelona: 'Spain',
   ac_milan: 'Italy'

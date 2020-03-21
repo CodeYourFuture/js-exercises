@@ -5,7 +5,7 @@ Objects in the real world have properties that describe how they are unique. You
 How would we describe the above laptop as a JavaScript object?
 
 ```js
-var laptop = {
+let laptop = {
     brand: "Lenovo",
     screenSize: 13,
     isTouchscreen: true

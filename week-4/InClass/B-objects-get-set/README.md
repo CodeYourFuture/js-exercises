@@ -3,7 +3,7 @@
 Let's take one of the objects we looked at earlier..
 
 ```js
-var laptop = {
+let laptop = {
     brand: "Lenovo",
     screenSize: 13,
     isTouchscreen: true
@@ -35,7 +35,7 @@ laptop.brand = "Apple";
 It's strongly recommended you always use the same **type** when re-assigning an object's property (if it was a string before, keep it a string - and so on).
 
 ```js
-var laptop = {
+let laptop = {
     brand: "Lenovo",
     screenSize: 13,
     isTouchscreen: true

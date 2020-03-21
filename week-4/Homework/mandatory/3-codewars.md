@@ -3,6 +3,7 @@ Complete the following CodeWars exercises. Go to the webpages below and follow t
 Click "ATTEMPT" to test your solution.
 
 Exercises:
+- https://www.codewars.com/kata/welcome/train/javascript
 - https://www.codewars.com/kata/crash-override/train/javascript
 - https://www.codewars.com/kata/strive-matching-number-1/train/javascript
 - http://www.codewars.com/kata/strive-matching-number-2/train/javascript
