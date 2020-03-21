@@ -7,9 +7,11 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner(oldArr) {
-let newArr = oldArr.filter(e => e   )
-return
+//newArr = [] 
+function journeyPlanner(londonLocations, transport) {  //(real array, value)
+  let newArr = londonLocations.filter(e => e.includes(transport))
+  console.log(newArr.map(e => e[0]))
+  return newArr.map(e => e[0])
 }
 
 //testing a commit
