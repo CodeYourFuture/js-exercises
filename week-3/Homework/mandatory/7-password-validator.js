@@ -31,11 +31,8 @@ PasswordValidationResult=  [false, false, false, false, true]
 //   }
 // }
 
-function validatePassword(pass) {
-  let passwords = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
-  function hasDuplicates(pass, passwords) {
-    return passwords.indexOf(pass) !== passwords.lastIndexOf(pass);
-  }
+function validatePassword(pass, index, passwords) {
+  let existingPass = passwords.indexOf(pass) !== index;
   // passwords = passwords.filter(x => x.length > 4);
   // passwords = passwords.filter(x => x !== x.toUpperCase());
   // passwords = passwords.filter(x => x !== x.toLowerCase());
@@ -50,7 +47,7 @@ function validatePassword(pass) {
     regexLower.test(pass) &&
     regexNum.test(pass) &&
     regexSymbol.test(pass) &&
-    !hasDuplicates(pass, passwords)
+    !existingPass
   ) {
     return true;
   } else {
@@ -59,11 +56,16 @@ function validatePassword(pass) {
 }
 function validatePasswords(passwords) {
   return passwords.map(validatePassword);
+  console.log(
+    validatePasswords([
+      "StUFf27%",
+      "Pl3nty!",
+      "Jai33",
+      "shajsaUA**&&",
+      "Pl3nty!"
+    ])
+  );
 }
-console.log(
-  validatePasswords(["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"])
-);
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
