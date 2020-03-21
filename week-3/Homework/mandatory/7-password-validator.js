@@ -40,16 +40,25 @@ PasswordValidationResult=  [false, false, false, false, true]
 // }
 // validatePasswords(previousPassword);
 
-function checkPasswords(arrPassword) {
-  let checkLowercase= /[a-z]/
-  let checkUppercase= /[A-Z]/
-  let checkNumber= /[0-9]/
-  let checkSymbol= /[!#$%.]/
-  if(checkLowercase.test(arrPassword) &&
-      checkUppercase.test(arrPassword) &&
-      checkNumber.test(arrPassword) &&
-      checkSymbol.test(arrPassword) &&
-      arrPassword.length >= 5
+function testPassword(testPassword, index, allPasswords ) {
+  // testPassword - element being checked; index - index of element; allPassword - array of strings that has passwords
+  //we know the current password, were going through checking the existing password
+  //current if it exists and if it is the same it shoud, refutn false, if we get to the end of the loop and there are no dupes then we continue 
+    
+    for (let i = 0; i < index; ++i) {
+      if(testPassword === allPasswords[i]){
+        return false
+      }
+    }
+    let checkLowercase= /[a-z]/
+    let checkUppercase= /[A-Z]/
+    let checkNumber= /[0-9]/
+    let checkSymbol= /[!#$%.]/
+  if(checkLowercase.test(testPassword) &&
+      checkUppercase.test(testPassword) &&
+      checkNumber.test(testPassword) &&
+      checkSymbol.test(testPassword) &&
+      testPassword.length >= 5
       ){
           return true
         }  else {
@@ -57,10 +66,9 @@ function checkPasswords(arrPassword) {
         }
   } 
   function validatePasswords(arr){
-    let newArr1 = arr.map(checkPasswords)
-    return newArr1
+    let newArr = arr.map(testPassword)
+    return newArr
   }
-
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
