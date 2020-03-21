@@ -5,7 +5,7 @@
     and make sure it outputs the correct results
 */
 
-var house = {
+let house = {
     address: "1 Kinning Park",
     previousOwners: ["Claire M.", "John A."],
     currentOwner: {
@@ -14,7 +14,7 @@ var house = {
     }
 };
 
-var newCurrentOwner = {
+let newCurrentOwner = {
     firstName: "Georgina",
     lastName: "Hernandez"
 };
@@ -37,6 +37,6 @@ var newCurrentOwner = {
 */
 console.log(
     "Did you correctly assign the new owner using the given variable?",
-    "Expected result: true. Actual result: " + (house.currentOwner === newCurrentOwner));
-console.log("Expected result: Claire M., Stephen B. Actual result: " + house.previousOwners.toString());
-console.log("Expected result: false. Actual result: " + house.isForSale);
+    `Expected result: true. Actual result: ${(house.currentOwner === newCurrentOwner)}`);
+console.log(`Expected result: Claire M., Stephen B.Actual result: ${house.previousOwners.toString()}`);
+console.log(`Expected result: false.Actual result: ${house.isForSale}`);

@@ -8,7 +8,7 @@ Use the provided console.log statements below and follow the instructions above 
 
 */
 
-var storeBranches = {
+let storeBranches = {
 
   glasgow: {
     manager: 'Andrew',

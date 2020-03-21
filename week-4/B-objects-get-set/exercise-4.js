@@ -2,7 +2,7 @@
     Write code in the space provided so that the expected values output
 */
 
-var dog = {
+let dog = {
     name: 'Billy',
     wantsToPlay: false
 };

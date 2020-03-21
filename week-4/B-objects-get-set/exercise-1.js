@@ -2,7 +2,7 @@
     Console.log the values of each property of "kitten"
 */
 
-var kitten = {
+let kitten = {
     ageMonths: 3,
     isFemale: true,
     furColour: "brown"
