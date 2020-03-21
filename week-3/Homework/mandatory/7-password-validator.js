@@ -30,9 +30,10 @@ PasswordValidationResult=  [false, false, false, false, true]
 //     }
 //   }
 // }
-let passwords = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
+
 function validatePassword(pass) {
-  function hasDuplicates(pass) {
+  let passwords = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
+  function hasDuplicates(pass, passwords) {
     return passwords.indexOf(pass) !== passwords.lastIndexOf(pass);
   }
   // passwords = passwords.filter(x => x.length > 4);
@@ -49,7 +50,7 @@ function validatePassword(pass) {
     regexLower.test(pass) &&
     regexNum.test(pass) &&
     regexSymbol.test(pass) &&
-    !hasDuplicates(passwords, pass)
+    !hasDuplicates(pass, passwords)
   ) {
     return true;
   } else {
