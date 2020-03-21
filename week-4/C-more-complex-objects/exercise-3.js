@@ -4,7 +4,7 @@
     Write the code for the functions as per the description above them
 */
 
-var kinningParkHouse = {
+let kinningParkHouse = {
     address: "1 Kinning Park",
     price: 180000,
     currentOwner: {
@@ -14,7 +14,7 @@ var kinningParkHouse = {
     }
 };
 
-var parkAvenueHouse = {
+let parkAvenueHouse = {
     address: "50 Park Avenue",
     price: 195000,
     currentOwner: {
@@ -49,6 +49,6 @@ function getCheapestAddress(house1, house2) {
 /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
 */
-console.log("Expected result: Margaret Conway. Actual result: " + getOwnerFullName(kinningParkHouse));
-console.log("Expected result: margaret@fake-emails.com, marie.m@real-emails.com. Actual result: " + getEmailAddresses(kinningParkHouse, parkAvenueHouse));
-console.log("Expected result: 1 Kinning Park. Actual result: " + getCheapestAddress(parkAvenueHouse, kinningParkHouse));
+console.log(`Expected result: Margaret Conway. Actual result: ${getOwnerFullName(kinningParkHouse)}`);
+console.log(`Expected result: margaret@fake-emails.com, marie.m@real-emails.com. Actual result: ${getEmailAddresses(kinningParkHouse, parkAvenueHouse)}`);
+console.log(`Expected result: 1 Kinning Park. Actual result: ${getCheapestAddress(parkAvenueHouse, kinningParkHouse)}`);

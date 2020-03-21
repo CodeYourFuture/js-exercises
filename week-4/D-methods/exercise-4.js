@@ -4,7 +4,7 @@ Define a method "makeFriend" to add a new friend to her list.
 */
 
 
-var person = {
+let person = {
     name: "Alice",
     friends: ["John", "Nina"]
 };
@@ -16,4 +16,4 @@ DO NOT EDIT ANYTHING BELOW THIS LINE
 
 person.makeFriend("Bob");
 
-console.log("Expected result: 'John,Nina,Bob'. Actual result: " + person.friends);
+console.log(`Expected result: 'John,Nina,Bob'. Actual result: ${person.friends}`);

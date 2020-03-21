@@ -6,9 +6,9 @@ and for each object, `console.log()` out the sentence:
 
 Here is the array:
 
-*/ 
+*/
 
-var writers = [
+let writers = [
   {
     firstName: "Virginia",
     lastName: "Woolf",
