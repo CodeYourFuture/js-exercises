@@ -51,3 +51,4 @@ Exercises:
 
 1. [Methods and 'this' keyword in JavaScript](https://www.youtube.com/watch?v=0wN-L9CG3y0)
 2. [Modern JavaScript Tutorial #5 - Objects](https://www.youtube.com/watch?v=X0ipw1k7ygU)
+
