@@ -10,4 +10,3 @@ let groceryList = {
   item2: "",
   item3: ""
 };
-
