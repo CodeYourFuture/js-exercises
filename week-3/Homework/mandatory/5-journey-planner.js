@@ -7,16 +7,20 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
+function journeyPlanner(londonLocations, transport) {
+
+
+ return londonLocations.filter( x => x.includes(transport)).map(x => slice(0, 1).join(" "))
 
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
+  ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
 ]
 
@@ -43,23 +47,23 @@ function test(test_name, expr) {
     console.log(`${test_name}: ${status}`);
 }
 
-test("journeyPlanner function works - case 1".
+test("journeyPlanner function works - case 1",
   arraysEqual(
     journeyPlanner(londonLocations, "river boat"),
     ["London Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 2".
+test("journeyPlanner function works - case 2",
   arraysEqual(
     journeyPlanner(londonLocations, "bus"),
-    ["Angle", "Tower Bridge", "Greenwich"]
+    ["Angel", "Tower Bridge", "Greenwich"]
   )
 )
 
-test("journeyPlanner function works - case 3".
+test("journeyPlanner function works - case 3",
   arraysEqual(
     journeyPlanner(londonLocations, "tube"),
-    ["Angle", "London Bridge", "Tower Bridge"]
+    ["Angel", "London Bridge", "Tower Bridge"]
   )
 )

@@ -8,8 +8,10 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
+function colonisers(voyagers) {
+ let findFamily = voyagers.filter(voyager => voyager.includes("family") && voyager.charAt(0) === "A");
 
+ return findFamily
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

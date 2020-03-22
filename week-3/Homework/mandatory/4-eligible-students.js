@@ -4,12 +4,23 @@
   Create a function which:
   - Accepts an array which contains all the students' names and their attendance counts
     (see tests to confirm how this data will be structured)
-  - Returns an array containing onl the names of the who have attended AT LEAST 8 classes
+  - Returns an array containing only the names of the students who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents() {
-
+function eligibleStudents(arr) {
+  
+  let students = arr.filter(x => x[1] >= 8).map(x => x.splice(0, 1).join(" "))
+return students;
 }
+
+console.log(eligibleStudents([
+  ["Ahmed", 8],
+  ["Clement", 10],
+  ["Elamin", 6],
+  ["Adam", 7],
+  ["Tayoa", 11],
+  ["Nina", 10]
+]))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

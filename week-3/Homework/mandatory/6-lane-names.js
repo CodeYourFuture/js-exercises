@@ -4,8 +4,9 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
-
+function getLanes(streetNames) {
+let street = streetNames.filter(x => x.includes("Lane"))
+return street
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -10,10 +10,31 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
+function bushChecker(listOfBerryColours) {
+  for(let i=0; i < listOfBerryColours.length; i++){
 
+    let berryColour = listOfBerryColours[i];
+    if(berryColour !== "pink") {
+      
+      return "Toxic! Leave bush alone!";}
+    
+}
+  return "Bush is safe to eat from";
 }
 
+console.log(bushChecker(["pink", "pink", "pink", "neon", "pink", "transparent"]))
+console.log(bushChecker(["pink", "pink", "pink", "pink"]))
+// function bushChecker(arr) {
+
+//  if(arr.some(element => element !== "pink")){
+//   return "Toxic! Leave bush alone!"
+   
+//  } else {
+//   return "Bush is safe to eat from"
+//  }
+
+// }
+// console.log(bushChecker(["pink", "pink", "pink", "neon", "pink", "transparent"]))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
