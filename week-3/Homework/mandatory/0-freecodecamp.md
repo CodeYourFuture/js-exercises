@@ -23,3 +23,22 @@ You should complete all of these FreeCodeCamp exercises - https://www.freecodeca
 - Iterate Through the Keys of an Object with a for...in Statement
 - Generate an Array of All Object Keys with Object.keys()
 - Modify an Array Stored in an Object
+
+and
+
+- Convert Celsius to Fahrenheit
+- Reverse a String
+- Factorialize a Number
+- Find the Longest Word in a String
+- Return Largest Numbers in Arrays
+- Confirm the Ending
+- Repeat a String Repeat a String
+- Truncate a String
+- Finders Keepers
+- Boo who
+- Title Case a Sentence
+- Slice and Splice
+- Falsy Bouncer
+- Where do I Belong
+- Mutations
+- Chunky Monkey
