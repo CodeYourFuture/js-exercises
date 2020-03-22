@@ -36,7 +36,7 @@ let writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  },
+  }
 ];
 
 /*
