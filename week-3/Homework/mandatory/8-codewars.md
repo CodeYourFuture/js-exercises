@@ -25,9 +25,12 @@ _Arrays_
 
 - [invert values](https://www.codewars.com/kata/invert-values/train/javascript)done
 - [needle in haystack](https://www.codewars.com/kata/a-needle-in-the-haystack/train/javascript)done
-- [counting sheep](https://www.codewars.com/kata/counting-sheep-dot-dot-dot/train/javascript)
-- [sum of positive](https://www.codewars.com/kata/sum-of-positive/train/javascript)
+- [counting sheep](https://www.codewars.com/kata/counting-sheep-dot-dot-dot/train/javascript) done
+- [sum of positive](https://www.codewars.com/kata/sum-of-positive/train/javascript) done
+
 - [people in bus](https://www.codewars.com/kata/number-of-people-in-the-bus/train/javascript)
-- [sum without highest and lowest](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript)
-- [reveersed array of digits](https://www.codewars.com/kata/convert-number-to-reversed-array-of-digits/train/javascript)
-- [slash sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript)
+
+- [sum without highest and lowest](https://www.codewars.com/kata/sum-without-highest-and-lowest-number/train/javascript) done
+- [reveersed array of digits](https://www.codewars.com/kata/convert-number-to-reversed-array-of-digits/train/javascript) done
+
+* [slash sum of negatives](https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives/train/javascript) done
