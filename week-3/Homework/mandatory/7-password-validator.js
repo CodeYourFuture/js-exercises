@@ -37,6 +37,7 @@ function validatePasswords(passwords) {
 const passwords2 = ["Se%5", "TktE.TJTU", "384HsHF", "dvyyeyY!5", "tryT3729."];
 const passwords1 = ["StUFf27", "PlEnty", "Jai.33", "shajsaUA**&&", "PlEnty"];
 
+
 function arraysEqual(a, b) {
   if (a === b) return true;
   if (a == null || b == null) return false;
@@ -65,7 +66,9 @@ test(
   arraysEqual(validatePasswords(passwords1), [false, false, true, false, false])
 );
 
-test(
-  "validatePasswords function works - case 2",
-  arraysEqual(validatePasswords(passwords2), [true, true, false, false, false])
-);
+ test(
+   "validatePasswords function works - case 2",
+   arraysEqual(
+      validatePasswords(passwords2), [true, true, false, false, false]
+   )
+ );
