@@ -24,7 +24,7 @@ You should complete all of these FreeCodeCamp exercises - https://www.freecodeca
 - Generate an Array of All Object Keys with Object.keys()
 - Modify an Array Stored in an Object
 
-and
+and you should attempt all of these
 
 - Convert Celsius to Fahrenheit
 - Reverse a String
