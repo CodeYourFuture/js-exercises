@@ -4,14 +4,14 @@ Return the keys of the following object
 
 */
 
-var capitalCities = {
+let capitalCities = {
   scotland: 'Edinburgh',
   kenya: 'Nairobi',
   australia: 'Canberra',
   canada: 'Ottawa'
 };
 
-var highScores = {
+let highScores = {
   55: 'Alistair',
   100: 'David',
   89: 'Hannah',
@@ -20,8 +20,8 @@ var highScores = {
 
 // ONLY EDIT BELOW HERE
 
-var capitalCitiesKeys = ;
-var highScoresKeys;
+let capitalCitiesKeys = ;
+let highScoresKeys;
 
 // ONLY EDIT ABOVE HERE
 

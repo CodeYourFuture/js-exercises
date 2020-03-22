@@ -6,7 +6,7 @@ You're going to have to used what we learned at the start of this lesson, and so
 
 */
 
-var mentorsAges = {
+let mentorsAges = {
   james: 29,
   JOSH: 35,
   JAMIE: 25,
@@ -15,9 +15,9 @@ var mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
+let mentorsNames = ;
 
-var mentorsNamedUppercased = ;
+let mentorsNamedUppercased = ;
 
 // ONLY EDIT ABOVE THIS LINE
 
