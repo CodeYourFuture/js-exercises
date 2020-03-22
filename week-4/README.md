@@ -12,4 +12,6 @@ The exercises are split into two folders: `mandatory` and `extra`. All homework 
 
 To challenge yourself even further, you can get ahead for next week's class by reading some of the below documentation:
 
-- [ ] Add content here
+- [What is the DOM?](https://css-tricks.com/dom/)
+- [Introduction to the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+- [Eloquent JavaScript Chapter 14 - The Document Object Model](https://eloquentjavascript.net/14_dom.html)
