@@ -45,6 +45,7 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
+
 test(
   "journeyPlanner function works - case 1",
   arraysEqual(journeyPlanner(londonLocations, "river boat"), [
@@ -70,3 +71,4 @@ test(
     "Tower Bridge"
   ])
 );
+
