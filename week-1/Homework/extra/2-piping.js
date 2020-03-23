@@ -16,21 +16,26 @@
   the final result to the variable goodCode
 */
 
-function addNumbers(a, b) {
+function add(a, b) {
   let sum = a + b;
   return sum;
 }
 
+add(1,3)
 
-addNumbers(2.4, 5.3);
-
-
-function multiplyNumbers(c, d) {
-  let answer = c * d;
-  return answer;
+function add(a, b) {
+  let sum = a + b;
+  return sum;
 }
 
-multiplyNumbers(2, 3);
+add(2.4, 5.3).toFixed(1);
+
+function multiply(x, y) {
+  let answer = x * y;
+  return answer;
+} 
+
+multiply(2, 3);
 
 
 function format(num) {
@@ -43,17 +48,25 @@ format(16);
 
 // Why can this code be seen as bad practice? Comment your answer.
 
-let goodCode = function () {const startingValue = 2; let result = "£" + ((startingValue + 10) * 2); return result;};
+// let badCode = function () {const startingValue = 2; let result = "£" + ((startingValue + 10) * 2); return result};
+// - add 10 to startingValue
+//   - multiply the result by 2
+//     - format it
 
+const startingValue = 2;
+let badCode = format(multiply(add(10, startingValue), 2));
+
+//console.log("The result of bad code is " + badCode);
 
 /* BETTER PRACTICE */
+
 let goodCode = function() {
   const startingValue = 2;
-  let result = "£" + ((startingValue + 10) * 2); 
-  return result;
-};
+  let result = multiply(add(10, startingValue), 2); 
+    return result;
+}
 
-console.log(goodCode());
+//console.log("The result of good code is " + goodCode());
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
