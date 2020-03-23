@@ -7,8 +7,12 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function isTrnsport(element) {
+    return element === tranporters;
+}
+function journeyPlanner(arr, tranporters) {
+  let row1 = arr[0].filter(isTrnsport);
+  console.log(low1);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
