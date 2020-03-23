@@ -27,8 +27,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  let nums = num;
-  if (nums % 2 == 0 && nums <= 100) {
+  if (num % 2 == 0 && num <= 100 && Number.isNaN(num)) {
     return true;
   } else {
     return false;
@@ -44,8 +43,8 @@ The function must:
 */
 
 function remove(arr, index) {
-  let array = arr;
-  arr.splice(index, 1);
+  let array = arr.slice(0, index + 1);
+  console.log(array);
   return array; // complete this statement
 }
 
@@ -58,16 +57,15 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  let myArray = arr;
-  let newArray = [];
+  let decimalsArr = [];
   let formatArray = [];
   let finalArray = [];
-  for (let i = 0; i < myArray.length; i++) {
-    newArray[i] = Math.round(arr[i] * 100) / 100;
-    if (newArray[i] > 100) {
-      newArray[i] = 100;
+  for (let i = 0; i < arr.length; i++) {
+    decimalsArr[i] = Math.round(arr[i] * 100) / 100;
+    if (decimalsArr[i] > 100) {
+      decimalsArr[i] = 100;
     }
-    formatArray.push(newArray[i]);
+    formatArray.push(decimalsArr[i]);
     finalArray[i] = `${formatArray[i].toString()}%`;
   }
   return finalArray;
