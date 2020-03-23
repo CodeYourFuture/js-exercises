@@ -42,35 +42,43 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
-
+// This should log "The ball has shaken!"
+// // and return the answer.
+// function shakeBall() {
+//   console.log("The ball has shaken!")
+//   return "Very doubtful."
+// }
 function shakeBall() {
-}
-let answer = checkAnswer
-checkAnswer()
-if (answer === 'It is certain.'
-  || answer === 'It is decidedly so.'
-  || answer === 'Without a doubt.'
-  || answer === 'Yes - definitely.'
-  || answer === 'You may rely on it.') {
-  return 'Very positive'
-} else if (answer === 'As I see it, yes.'
-  || answer === 'Most likely.'
-  || answer === 'Outlook good.'
-  || answer === 'Yes.'
-  || answer === 'Signs point to yes.') {
-  return 'Positive'
-} else if (answer === 'Reply hazy, try again.'
-  || answer === 'Ask again later.'
-  || answer === 'Better not tell you now.'
-  || answer === 'Cannot predict now.'
-  || answer === 'Concentrate and ask again.') {
-  return 'Negative'
-} else if (answer === "Don't count on it."
-  || answer === 'My reply is no.'
-  || answer === 'My sources say no.'
-  || answer === 'Outlook not so good.'
-  || answer === 'Very doubtful.') {
-  answer === 'Very negative'
+  let answer = checkAnswer
+  checkAnswer(message)
+  {
+    if (answer === 'It is certain'
+      || answer === 'It is decidedly so.'
+      || answer === 'Without a doubt.'
+      || answer === 'Yes - definitely.'
+      || answer === 'You may rely on it.') {
+      return "very positive"
+    } else if (answer === "As I see it, yes."
+      || answer === "You may rely on it."
+      || answer === "Most likely."
+      || answer === "Outlook good."
+      || answer === "Yes.") {
+      return "positive"
+    } else if (answer === "Reply hazy, try again."
+      || answer === "Ask again later."
+      || answer === "Better not tell you now."
+      || answer === "Cannot predict now."
+      || answer === "Concentrate and ask again.") {
+      return "Negative"
+    } else if (answer === "Don't count on it."
+      || answer === "My reply is no."
+      || answer === "My sources say no."
+      || answer === "Outlook not so good."
+      || answer === "Very doubtful.") {
+      return "Very negative"
+    }
+    return answer
+  }
 }
 
 

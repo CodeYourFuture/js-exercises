@@ -6,22 +6,6 @@ Write a function that:
 - makes the string all lowercase
 */
 
-
-// function tidyUpString(strArr) {
-
-//   return strArr.filter((item) => item != ' ');
-// }
-// function tidyUpString(strArr) {
-// let str = ["/Daniel ", "irina ", " Gordon", "ashleigh "]
-
-//   for (let i = 0; i < strArr.length; i++) {
-
-//     strArr[i] = strArr[i].trim()
-//     strArr[i] = strArr[i].replace("/", "")
-//     strArr[i] = strArr[i].toLowerCase()
-//   }
-//   return strArr
-// }
 function tidyUpString(strArr) {
   for (let i = 0; i < strArr.length; i++) {
     strArr[i] = strArr[i].trim();
@@ -30,7 +14,6 @@ function tidyUpString(strArr) {
   }
   return strArr;
 }
-
 
 function validate(num) {
   if (typeof num === 'number' && num % 2 === 0 && num <= 100) {
@@ -47,13 +30,15 @@ function validate(num) {
   - is even
     - is less than or equal to 100
 Tip: use logical operators
-  * /
+  
 
 function validate(num) {
   let num = 5;
+  if(typeof = 'number' && num % 2 === 0 && <= 100)
+  return num
 }
 
-/* 
+
 Write a function that removes an element from an array
 The function must:
 - NOT change the original array

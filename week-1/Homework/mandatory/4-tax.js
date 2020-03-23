@@ -26,7 +26,6 @@ function formatCurrency(price) {
   return "£" + num;
 }
 
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
