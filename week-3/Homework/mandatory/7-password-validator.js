@@ -29,6 +29,7 @@ function checkPasswords(arrPassword) {
   let checkNumber= /[0-9]/
   let checkSymbol= /[!#$%.]/
 
+
 if(checkLowercase.test(arrPassword) &&
     checkUppercase.test(arrPassword) &&
     checkNumber.test(arrPassword) &&
@@ -37,7 +38,6 @@ if(checkLowercase.test(arrPassword) &&
     ){
         return true
       }  else {
-
         return false
       }
 } 
