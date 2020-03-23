@@ -10,13 +10,13 @@
 
 
 
-function colonisersName(strrName) {
-  strrName = strrName[0] === "A" && strrName.includes("family");
-  return strrName
-}
-function colonisers(arr) {
-  let newArr = arr.filter(colonisersName); // filter out new array
-  return newArr;
+// function colonisersName(strrName) {
+//   strrName = strrName[0] === "A" && strrName.includes("family");
+//   return strrName
+// }
+function colonisers(colonisersList) {
+   return colonisersList.filter(coloniser=>coloniser.charAt(0) === "A" && coloniser.includes("family")); 
+  
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

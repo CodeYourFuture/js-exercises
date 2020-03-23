@@ -7,19 +7,24 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
+// function journeyPlanner(londonLocations, transport) {
+//   let famousLocations = [];
+
+//   for (let i = 0; i < londonLocations.length; i++) {
+//     let location = londonLocations[i][0];
+//     let currentLocation = londonLocations[i];
+
+//     if (currentLocation.includes(transport)) {
+//       famousLocations.push(location);
+//     }
+//   }
+
+//   return famousLocations;
+// }
 function journeyPlanner(londonLocations, transport) {
-  let famousLocations = [];
-
-  for (let i = 0; i < londonLocations.length; i++) {
-    let location = londonLocations[i][0];
-    let currentLocation = londonLocations[i];
-
-    if (currentLocation.includes(transport)) {
-      famousLocations.push(location);
-    }
-  }
-
-  return famousLocations;
+  return  londonLocations.filter(famousLocation => famousLocation.includes(transport)).map(Location=>Location[0])
+ 
+  
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

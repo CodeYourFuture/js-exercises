@@ -7,18 +7,25 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents(studentList) {
-  let newAttendedList = [];
-  // Loop through each student
-  for (let i = 0; i < studentList.length; i++) {
-    // Check second index is greater than 8 or more
-    if (studentList[i][1] >= 8) {
-      newAttendedList.push(studentList[i][0]);
-    }
-  }
+// function eligibleStudents(studentList) {
+//   let newAttendedList = [];
+//   // Loop through each student
+//   for (let i = 0; i < studentList.length; i++) {
+//     // Check second index is greater than 8 or more
+//     if (studentList[i][1] >= 8) {
+//       newAttendedList.push(studentList[i][0]);
+//     }
+//   }
 
-  return newAttendedList;
+//   return newAttendedList;
+// }
+
+function eligibleStudents(studentList){
+   return studentList.filter(studentAttendance => studentAttendance[1] >=8 ).map(studentName=>studentName[0])
+  
+   
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

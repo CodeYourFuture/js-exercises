@@ -39,8 +39,8 @@ function checkPassword(password,index,arr) {
 }
 
 function validatePasswords(passWordList) {
-  let newPass = passWordList.map(checkPassword);
-  return newPass;
+  return  passWordList.map(checkPassword);
+  
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

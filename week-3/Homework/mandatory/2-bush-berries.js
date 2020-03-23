@@ -9,16 +9,16 @@
 
   Use the tests to confirm which message to return
 */
-function isBushPink (bushColor){
-  if(bushColor=== "pink"){
-    return true;
-  }else{
-    return false 
-  }
-}
+// function isBushPink (bushColor){
+//   if(bushColor=== "pink"){
+//     return true;
+//   }else{
+//     return false 
+//   }
+// }
 function bushChecker(bushes) {
-  let allPink = bushes.every(isBushPink)
-  if(allPink === true){
+  let allPink = bushes.every(n=>n==="pink")
+  if(allPink){
     return "Bush is safe to eat from"
   }else{
     return "Toxic! Leave bush alone!"
