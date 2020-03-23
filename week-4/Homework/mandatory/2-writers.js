@@ -7,7 +7,7 @@ and for each object, `console.log()` out the sentence:
 Here is the array:
 
 */
-
+//
 let writers = [
   {
     firstName: "Virginia",
