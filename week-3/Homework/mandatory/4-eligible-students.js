@@ -4,7 +4,7 @@
   Create a function which:
   - Accepts an array which contains all the students' names and their attendance counts
     (see tests to confirm how this data will be structured)
-  - Returns an array containing only the names of the students who have attended AT LEAST 8 classes
+  - Returns an array containing on the names of the students who have attended AT LEAST 8 classes
 */
 
 function eligibleStudents(arr) {
