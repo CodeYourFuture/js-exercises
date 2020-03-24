@@ -10,3 +10,10 @@ let groceryList = {
   item2: "",
   item3: ""
 };
+
+groceryList.item1 = 'Potatoes';
+groceryList.item2 = 'Orange Juice';
+groceryList.item3 = 'Rice';
+
+groceriesToBuy = Object.values(groceryList);
+console.log(groceriesToBuy);
