@@ -14,3 +14,10 @@ Make sure you use words like:
 - etc.
 
 */
+let table = {
+    color: "yellow",
+    KidsTable: true,
+    tableLegs: 4,
+    tableLegsColor: ["green", "blue", "red", "orange"]
+}
+console.log(table)

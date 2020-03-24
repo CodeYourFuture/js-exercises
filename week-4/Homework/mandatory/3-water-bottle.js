@@ -10,13 +10,19 @@ We made a start on this for you here:
 
 let bottle = {
   volume: 0,
-  fill: function() {
+  fill: function () {
+    return bottle.volume = 100;
     // calling this function should make you bottles volume = 100;
   },
-  drink: function() {
+  drink: function () {
+    return bottle.volume = bottle.volume - 10;
+
     // calling this function should decrease your bottles volume by 10;
   },
-  empty: function() {
+  empty: function () {
+    if (bottle.volume === 0) {
+      return true
+    }
     // this function should return true if your bottles volume = 0
   }
 };

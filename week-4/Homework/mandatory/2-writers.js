@@ -39,6 +39,10 @@ let writers = [
   }
 ];
 
-/*
-If you want an extra challenge, only `console.log()` the writers that are alive.
-*/
+writers.map(writer => {
+  if (writer.alive == true) {
+    return console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}.I am ${writer.age} years old, and work as a ${writer.occupation}.`)
+  }
+})
+
+

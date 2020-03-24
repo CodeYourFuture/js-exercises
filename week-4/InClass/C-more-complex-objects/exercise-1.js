@@ -5,14 +5,16 @@
 */
 
 let house = {
-    address: "1 Kinning Park",
-    previousOwners: ["Claire M.", "John A."],
-    currentOwner: {
-      firstName: "Margaret",
-      lastName: "Conway"
-    }
+  address: "1 Kinning Park",
+  previousOwners: ["Claire M.", "John A."],
+  currentOwner: {
+    firstName: "Margaret",
+    lastName: "Conway"
+  }
 };
-
+console.log(house.address = '51 Berkley Road');
+console.log(house.previousOwners = ["Brian M.", "Fiona S."])
+console.log(house.currentOwner.lastName = "Montgomery")
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
 
