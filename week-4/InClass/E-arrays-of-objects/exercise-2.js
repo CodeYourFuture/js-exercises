@@ -38,13 +38,18 @@ let travelDestinations = [destination1, destination2, destination3, destination4
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+let checkTrip = function(x){
+    if(travelDestinations.filter(x=>x.distanceKms<=50?){
+    retutn Object.this.name;
 
+}
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = 
+ console.log(destinationNamesWithin500Kms); // Complete here
 
 let destinationNameReachableByFerry = // Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+//let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
