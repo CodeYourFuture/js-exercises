@@ -9,7 +9,7 @@
 
 function journeyPlanner(location, mode) {
   let allLocations = location.filter(x => x.includes(mode));
-  let yourLocation = mo.map(x => x[0]);
+  let yourLocation = allLocations.map(x => x[0]);
 
   console.log(yourLocation);
   return yourLocation;
