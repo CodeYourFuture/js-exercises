@@ -8,7 +8,9 @@ let person = {
     name: "Alice",
     age: 25
 };
-
+    person.greet= function(){
+        return "Hello everybody"
+    }
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
