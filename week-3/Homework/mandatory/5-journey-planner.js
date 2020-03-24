@@ -17,7 +17,7 @@ function journeyPlanner(londonLocations, transport) {
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower bridge", "tube", "bus"],
+  ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
 ]
 
@@ -54,14 +54,4 @@ test("journeyPlanner function works - case 1",
 test("journeyPlanner function works - case 2",
   arraysEqual(
     journeyPlanner(londonLocations, "bus"),
-    ["Angel", "Tower bridge", "Greenwich"]
-  )
-)
-
-test("journeyPlanner function works - case 3",
-  arraysEqual(
-    journeyPlanner(londonLocations, "tube"),
-    ["Angel", "London Bridge", "Tower bridge"]
-  )
-)
 
