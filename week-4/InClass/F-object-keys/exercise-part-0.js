@@ -20,8 +20,8 @@ let highScores = {
 
 // ONLY EDIT BELOW HERE
 
-let capitalCitiesKeys = ;
-let highScoresKeys;
+let capitalCitiesKeys = Object.keys(capitalCities);
+let highScoresKeys = Object.keys(highScores);
 
 // ONLY EDIT ABOVE HERE
 
