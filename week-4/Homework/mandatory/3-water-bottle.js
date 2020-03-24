@@ -35,6 +35,7 @@ bottle.fill();
 bottle.drink();
 bottle.drink();
 bottle.drink();
+
 if (!bottle.empty()) {
   console.log(`bottles volume = ${bottle.volume}`);
 }

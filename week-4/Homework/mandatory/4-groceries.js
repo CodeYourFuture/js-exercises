@@ -6,7 +6,12 @@
 let groceriesToBuy = [];
 
 let groceryList = {
-  item1: "",
-  item2: "",
-  item3: ""
+  item1: "Potatoes",
+  item2: "Orange Juice",
+  item3: "Rice"
 };
+
+for (let value of Object.values(groceryList)) {
+  groceriesToBuy.push(value);
+}
+console.log(groceriesToBuy);
