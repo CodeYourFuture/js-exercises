@@ -38,7 +38,8 @@ let writers = [
     alive: true
   }
 ];
-
+let allWriters = writers.forEach(all => console.log(`Hi, my name is ${all.firstName} ${all.lastName}. I am ${all.age} years old, and work as a ${all.occupation}.`))
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+let writersAlive = writers.filter(person => person.alive === true).map(person => console.log(`${person.firstName}  ${person.lastName}`))
