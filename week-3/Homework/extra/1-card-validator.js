@@ -48,7 +48,7 @@ function validateCreditCard(cardNum) {
     parseFloat(digitsAsStringsArr[len - 1]) % 2 !== 0 ||
     digitsAsStringsArr
       .map(element => parseFloat(element))
-      .reduce((a, b) => a + b, 0) < 16
+      .reduce((a, b) => a + b, 0) <= 16
   ) {
     description = "invalid";
   } else {
