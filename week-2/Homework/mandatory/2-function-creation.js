@@ -5,13 +5,13 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {
-  let str = ["   This is JavaScript  "];
+// function tidyUpString(strArr) {
+//   let str = ["   This is JavaScript  "];
 
-  return str.trim();
-}
+//   return str.trim();
+// }
 
-tidyUpString();
+// tidyUpString();
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -22,10 +22,18 @@ Tip: use logical operators
 */
 
 function validate(num) {
-let 
-
-
+  if (num % 2 === 0 && num < 100) {
+    return "true";
+  } else {
+    return "false";
+  }
 }
+
+console.log(validate(10));
+console.log(validate(18));
+console.log(validate(17));
+console.log(validate("10")); 
+console.log(validate(108));
 
 /* 
 Write a function that removes an element from an array
@@ -36,8 +44,13 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let array = [arr];
+  let removed = array.splice(index, 1);
+  return array; // complete this statement
 }
+
+console.log(remove([10, 293, 292, 176, 29], 3));
+console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 6));
 
 /*
 Write a function that:
@@ -48,6 +61,7 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
+  let array = [];
   
 }
 
