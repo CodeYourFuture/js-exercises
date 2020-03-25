@@ -6,7 +6,12 @@
 let groceriesToBuy = [];
 
 let groceryList = {
-  item1: "",
-  item2: "",
-  item3: ""
+  item1: 'Potatoes',
+  item2: 'Orange Juice',
+  item3: 'Rice',
 };
+// Looping through the array created from Object.keys
+const groceriesToBuKeys = Object.keys (groceryList);
+// Adding the items properties into the groceriesToBuy array and console out the list
+groceriesToBuKeys.forEach (key => groceriesToBuy.push (groceryList[key]));
+console.log (groceriesToBuy);

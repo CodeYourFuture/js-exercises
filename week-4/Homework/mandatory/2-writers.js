@@ -10,35 +10,61 @@ Here is the array:
 
 let writers = [
   {
-    firstName: "Virginia",
-    lastName: "Woolf",
-    occupation: "writer",
+    firstName: 'Virginia',
+    lastName: 'Woolf',
+    occupation: 'writer',
     age: 59,
-    alive: false
+    alive: false,
   },
   {
-    firstName: "Zadie",
-    lastName: "Smith",
-    occupation: "writer",
+    firstName: 'Zadie',
+    lastName: 'Smith',
+    occupation: 'writer',
     age: 41,
-    alive: true
+    alive: true,
   },
   {
-    firstName: "Jane",
-    lastName: "Austen",
-    occupation: "writer",
+    firstName: 'Jane',
+    lastName: 'Austen',
+    occupation: 'writer',
     age: 41,
-    alive: false
+    alive: false,
   },
   {
-    firstName: "bell",
-    lastName: "hooks",
-    occupation: "writer",
+    firstName: 'bell',
+    lastName: 'hooks',
+    occupation: 'writer',
     age: 64,
-    alive: true
-  }
+    alive: true,
+  },
 ];
 
+writers.forEach (element =>
+  console.log (
+    'Hi, my name is ' +
+      element.firstName +
+      ' ' +
+      element.lastName +
+      ' ' +
+      element.lastName +
+      '.I am ' +
+      element.age +
+      '  years old, and work as a ' +
+      element.occupation +
+      '.'
+  )
+);
 /*
-If you want an extra challenge, only `console.log()` the writers that are alive.
+The following function console the writers that are alive.
 */
+function displayAliveWrites () {
+  return writers
+    .filter (element => element.alive == true)
+    .map (element =>
+      (element.firstName + ' ' + element.lastName).toUpperCase ()
+    );
+}
+console.log (
+  ' Here is the array of writers, who are alive:',
+  displayAliveWrites ()
+);
