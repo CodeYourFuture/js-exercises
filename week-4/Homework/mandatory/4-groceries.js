@@ -4,6 +4,7 @@
 // 3. Then use console.log() to print out the list. It should print ['Potatoes', 'Orange Juice', 'Rice']
 
 let groceriesToBuy = [];
+let groceriesToBuy2 = [];
 
 let groceryList = {
   item1: "Potatoes",
@@ -14,4 +15,9 @@ let groceryList = {
 for (let value of Object.values(groceryList)) {
   groceriesToBuy.push(value);
 }
+
+for (value in groceryList) {
+  groceriesToBuy2.push(groceryList[value]);
+}
 console.log(groceriesToBuy);
+console.log(groceriesToBuy2);
