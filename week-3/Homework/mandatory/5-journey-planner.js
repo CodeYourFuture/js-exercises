@@ -8,10 +8,9 @@
 */
 
 function journeyPlanner(arr, str) {
-  let stationNames = arr
+  return arr
     .filter(element => element.includes(str))
     .map(element => element[0]);
-  return stationNames;
 }
 
 // console.log(journeyPlanner(londonLocations, "bus"));

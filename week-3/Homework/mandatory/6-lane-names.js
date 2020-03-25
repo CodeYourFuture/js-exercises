@@ -5,8 +5,7 @@
 */
 
 function getLanes(arr) {
-  let namesWithLane = streetNames.filter(element => element.includes("Lane"));
-  return namesWithLane;
+  return streetNames.filter(element => element.includes("Lane"));
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

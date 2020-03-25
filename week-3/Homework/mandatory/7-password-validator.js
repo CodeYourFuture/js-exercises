@@ -41,6 +41,14 @@ function validatePasswordsSimple(arr) {
   return arr.map(password => validateOnePasswordSimple(password));
 }
 
+function validatePasswords(arr) {
+  return arr.map(
+    (password, index, arr) =>
+      validateOnePasswordSimple(password) &&
+      !arr.slice(0, index).includes(password)
+  );
+}
+
 // function validateOnePasswordFully(password, index, arr) {
 //   let prevElems = arr.slice(0, index);
 //   return validateOnePasswordSimple(password) && !prevElems.includes(password);
@@ -49,14 +57,6 @@ function validatePasswordsSimple(arr) {
 // function validatePasswordsGood(arr) {
 //   return arr.map(validateOnePasswordFully);
 // }
-
-function validatePasswords(arr) {
-  return arr.map(
-    (password, index, arr) =>
-      validateOnePasswordSimple(password) &&
-      !arr.slice(0, index).includes(password)
-  );
-}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

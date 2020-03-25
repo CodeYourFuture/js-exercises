@@ -10,18 +10,6 @@
 // - The sum of all the digits must be greater than 16
 // - The following credit card numbers are valid:
 
-function cardValidator(cardNumAsString) {
-  let len = cardNumAsString.length;
-  if (len === 3) {
-    let digitsArr = cardNumAsString.split("");
-    for (let i = 0; i < digistsArr.length; i++) {
-      for (let j = 0; j < digistsArr.length; j++) {}
-    }
-  }
-}
-
-console.log(cardValidator("666"));
-
 // ```markdown
 // 9999777788880000
 // 6666666666661666
@@ -45,3 +33,50 @@ console.log(cardValidator("666"));
 // - Use `node` from the command line to test if your code works as expected
 
 // Good luck!
+
+function validateCreditCard(cardNum) {
+  // Changing the number to an array of single digit strings.
+  let digitsAsStringsArr = String(cardNum).split("");
+  let len = digitsAsStringsArr.length;
+  let isNumber = /[0-9]/;
+  // If any of the following conditions is true the number will be invalid.
+  if (
+    len !== 16 ||
+    digitsAsStringsArr.some(element => !isNumber.test(parseFloat(element))) ||
+    digitsAsStringsArr.every(element => element === digitsAsStringsArr[0]) ||
+    parseFloat(digitsAsStringsArr[len - 1]) % 2 !== 0 ||
+    digitsAsStringsArr
+      .map(digit => parseFloat(digit))
+      .reduce((a, b) => a + b, 0) < 16
+  ) {
+    return `The credit card number: ${cardNum} is invalid.`;
+  }
+  return `The credit card number: ${cardNum} is valid.`;
+}
+
+/*=======================================================TEST=======================================================*/
+
+console.log(
+  `Expected result: The credit card number: 9999777788880000 is valid. Actual result:`,
+  validateCreditCard("9999777788880000")
+);
+console.log(
+  `Expected result: The credit card number: 6666666666661666 is valid. Actual result:`,
+  validateCreditCard("6666666666661666")
+);
+console.log(
+  `Expected result: The credit card number: a92332119c011112 is invalid. Actual result:`,
+  validateCreditCard("a92332119c011112")
+);
+console.log(
+  `Expected result: The credit card number: 4444444444444444 is invalid. Actual result:`,
+  validateCreditCard("4444444444444444")
+);
+console.log(
+  `Expected result: The credit card number: 1111111111111110 is invalid. Actual result:`,
+  validateCreditCard("1111111111111110")
+);
+console.log(
+  `Expected result: The credit card number: 6666666666666661 is invalid. Actual result:`,
+  validateCreditCard("6666666666666661")
+);
