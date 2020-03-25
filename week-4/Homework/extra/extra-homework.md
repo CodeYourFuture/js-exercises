@@ -6,8 +6,8 @@ Click "ATTEMPT" to test your solution.
 
 Exercises:
 
-- [Fix my Method](https://www.codewars.com/kata/558710234f02dcc4a8000005)
-- [Regular Ball Super Ball](https://www.codewars.com/kata/53f0f358b9cb376eca001079/train/javascript)
+- [Fix my Method](https://www.codewars.com/kata/558710234f02dcc4a8000005)done
+- [Regular Ball Super Ball](https://www.codewars.com/kata/53f0f358b9cb376eca001079/train/javascript)done
 
 ## Reading
 
