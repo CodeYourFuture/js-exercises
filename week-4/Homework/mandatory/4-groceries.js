@@ -3,10 +3,19 @@
 // 2. Loop through the groceryList object to gather the item properties into the groceriesToBuy array.
 // 3. Then use console.log() to print out the list. It should print ['Potatoes', 'Orange Juice', 'Rice']
 
-let groceriesToBuy = [];
+// let groceriesToBuy = [];
 
-let groceryList = {
-  item1: "",
-  item2: "",
-  item3: ""
-};
+// let groceryList = {
+//   item1: "",
+//   item2: "",
+//   item3: ""
+// };
+
+var me = "Ola Skoczylas";
+
+function greetMe() {
+  console.log("Hello " + me + "!");
+}
+
+me = "Mo";
+greetMe();

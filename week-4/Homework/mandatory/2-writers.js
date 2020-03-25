@@ -8,7 +8,8 @@ Here is the array:
 
 */
 
-let writers = [{
+let writers = [
+  {
     firstName: "Virginia",
     lastName: "Woolf",
     occupation: "writer",
@@ -38,15 +39,18 @@ let writers = [{
   }
 ];
 
+// let hasElement = (alive, writer) => writer.alive === alive;
+
+// let writerIsAlive = writers.filter(x => hasElement(true, x));
+
+// console.log(writerIsAlive);
+
 // writers.forEach(element => console.log(`Hi, my name is ${element.firstName} ${element.lastName}. I am ${element.age} years old, and work as a ${element.occupation}.`))
 
-
-writers.forEach(element => element.alive ? console.log(`Hi, my name is ${element.firstName} ${element.lastName}. 
-I am ${element.age} years old, and work as a ${element.occupation}.`) : null)
-
+// writers.forEach(element => element.alive ? console.log(`Hi, my name is ${element.firstName} ${element.lastName}.
+// I am ${element.age} years old, and work as a ${element.occupation}.`) : null)
 
 // "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
-
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
