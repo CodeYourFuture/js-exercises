@@ -35,6 +35,7 @@
 // Good luck!
 
 function validateCreditCard(cardNum) {
+  let returnedString = `The credit card number: ${cardNum} is`;
   // Changing the number to an array of single digit strings.
   let digitsAsStringsArr = String(cardNum).split("");
   let len = digitsAsStringsArr.length;
@@ -49,9 +50,9 @@ function validateCreditCard(cardNum) {
       .map(element => parseFloat(element))
       .reduce((a, b) => a + b, 0) < 16
   ) {
-    return `The credit card number: ${cardNum} is invalid.`;
+    return `${returnedString} invalid.`;
   }
-  return `The credit card number: ${cardNum} is valid.`;
+  return `${returnedString} valid.`;
 }
 
 /*=======================================================TEST=======================================================*/
