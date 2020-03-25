@@ -39,8 +39,11 @@ let writers = [
   }
 ];
 
-writers.forEach (e => 
-  console.log(`Hi my name is ${e.firstName} ${e.lastName}. I am ${e.age} years old and my occupation is a ${e.occupation}.`))
+writers.forEach (e => {
+  if (e.alive === true) { 
+    return console.log(`Hi my name is ${e.firstName} ${e.lastName}. I am ${e.age} years old and my occupation is a ${e.occupation}.`)
+}
+})
 
 
 // writers.forEach(writer => {
