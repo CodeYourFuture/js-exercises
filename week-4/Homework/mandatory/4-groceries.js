@@ -6,10 +6,15 @@
 let groceriesToBuy = [];
 
 let groceryList = {
-  item1: 'Potatoes',
-  item2: 'Orange Juice',
-  item3: 'Rice',
+  item1: '',
+  item2: '',
+  item3: '',
 };
+
+//Update groceryList
+groceryList.item1 = 'Potatoes';
+groceryList.item2 = 'Orange Juice';
+groceryList.item3 = 'Rice';
 // Looping through the array created from Object.keys
 const groceriesToBuKeys = Object.keys (groceryList);
 // Adding the items properties into the groceriesToBuy array and console out the list
