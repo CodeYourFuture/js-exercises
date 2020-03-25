@@ -41,4 +41,17 @@ var writers = [
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
+<<<<<<< Updated upstream:week-4-practise/level-1/exercise-1.js
 */
+=======
+<<<<<<< Updated upstream:week-4/Homework/mandatory/2-writers.js
+*/
+=======
+<<<<<<< Updated upstream:week-4-practise/level-1/exercise-1.js
+*/
+=======
+*/
+writers.filter(writer => writer.alive).forEach(writer => console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`))
+>>>>>>> Stashed changes:week-4/Homework/mandatory/2-writers.js
+>>>>>>> Stashed changes:week-4-practise/level-1/exercise-1.js
+>>>>>>> Stashed changes:week-4/Homework/mandatory/2-writers.js

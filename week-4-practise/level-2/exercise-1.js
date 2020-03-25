@@ -8,6 +8,12 @@ drinking some of it, and emptying it.
 We made a start on this for you here: 
 */
 
+<<<<<<< Updated upstream:week-4-practise/level-2/exercise-1.js
+=======
+<<<<<<< Updated upstream:week-4/Homework/mandatory/3-water-bottle.js
+=======
+<<<<<<< Updated upstream:week-4-practise/level-2/exercise-1.js
+>>>>>>> Stashed changes:week-4/Homework/mandatory/3-water-bottle.js
 var bottle = {
 	volume: 0,
 	fill: function(){
@@ -20,6 +26,38 @@ var bottle = {
 		// this function should return true if your bottles volume = 0
 	}
 }
+<<<<<<< Updated upstream:week-4-practise/level-2/exercise-1.js
+=======
+=======
+>>>>>>> Stashed changes:week-4-practise/level-2/exercise-1.js
+let bottle = {
+  volume: 0,
+  fill: function() {
+    // calling this function should make you bottles volume = 100;
+<<<<<<< Updated upstream:week-4/Homework/mandatory/3-water-bottle.js
+  },
+  drink: function() {
+    // calling this function should decrease your bottles volume by 10;
+  },
+  empty: function() {
+    // this function should return true if your bottles volume = 0
+  }
+};
+=======
+    this.volume = 100;
+  },
+  drink: function() {
+    // calling this function should decrease your bottles volume by 10;
+    this.volume -= 10;
+  },
+  empty: function() {
+    // this function should return true if your bottles volume = 0
+    return this.volume === 0 ? true : 0
+  }
+};
+>>>>>>> Stashed changes:week-4/Homework/mandatory/3-water-bottle.js
+>>>>>>> Stashed changes:week-4-practise/level-2/exercise-1.js
+>>>>>>> Stashed changes:week-4/Homework/mandatory/3-water-bottle.js
 
 /*
 --TIP--
