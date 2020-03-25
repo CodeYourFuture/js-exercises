@@ -42,3 +42,14 @@ let writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+  function greetings(){
+    writers.forEach(element=>{
+      console.log(`Hi, my name is ${element.firstName} ${element.lastName} I am ${element.age} years old, and work as a ${element.occupation} .`) ;
+    });
+   writers.filter(element=>{
+    if(element.alive ===true){
+      console.log(`hi my name is ${element.firstName} ${element.lastName} I am alive.`);
+    }
+  })
+  }
+console.log(greetings());
