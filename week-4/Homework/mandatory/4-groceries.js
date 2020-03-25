@@ -6,10 +6,14 @@
 let groceriesToBuy = [];
 
 let groceryList = {
-  item1: "Potatoes",
-  item2: "Orange Juice",
-  item3: "Rice"
+  item1: "",
+  item2: "",
+  item3: ""
 };
+
+groceryList.item1 = "Potatoes";
+groceryList.item2 = "Orange Juice";
+groceryList.item3 = "Rice";
 
 groceriesToBuy = Object.values(groceryList);
 
