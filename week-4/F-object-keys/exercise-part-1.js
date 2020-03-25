@@ -15,7 +15,7 @@ var mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-var mentorsNames = ;
+var mentorsNames = Object.;
 
 var mentorsNamedUppercased = ;
 

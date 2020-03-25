@@ -17,10 +17,12 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
+    this.insertedAmount +=amount;
     },
     getCoffee: function(coffee) {
-
+    if (this.insertedAmount>1.50){
+        return [this.cappuccino, this.blackCoffee, this.flatWhite]
+    }
     }
 };
 
