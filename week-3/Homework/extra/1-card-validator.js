@@ -42,11 +42,11 @@ function validateCreditCard(cardNum) {
   // If any of the following conditions is true the number will be invalid.
   if (
     len !== 16 ||
-    digitsAsStringsArr.some(element => !isNumber.test(parseFloat(element))) ||
+    digitsAsStringsArr.some(element => !isNumber.test(element)) ||
     digitsAsStringsArr.every(element => element === digitsAsStringsArr[0]) ||
     parseFloat(digitsAsStringsArr[len - 1]) % 2 !== 0 ||
     digitsAsStringsArr
-      .map(digit => parseFloat(digit))
+      .map(element => parseFloat(element))
       .reduce((a, b) => a + b, 0) < 16
   ) {
     return `The credit card number: ${cardNum} is invalid.`;
