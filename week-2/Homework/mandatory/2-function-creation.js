@@ -44,7 +44,7 @@ The function must:
 */
 
 function remove(arr, index) {
-  let array = [arr];
+  arr.
   let removed = array.splice(index, 1);
   return array; // complete this statement
 }
