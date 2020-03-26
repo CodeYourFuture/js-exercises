@@ -17,7 +17,7 @@ let coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function (amount) {
-
+        
     },
     getCoffee: function (coffee) {
 

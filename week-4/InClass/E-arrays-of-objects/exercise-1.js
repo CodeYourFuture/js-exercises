@@ -24,12 +24,18 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+//let kittens = [kitten1, kitten2, kitten3]; - example from syllabus
+let persons = [person1, person2, person3]// Complete here
 
-var persons = // Complete here
+// function getName(kitten) { - syllabus example
+//     return kitten.name;
+// }
 
-var personNames = // Complete here
+// kittens.map(getName);
 
-var personsYoungerThan28YearsOld = // Complete here
+let personNames = persons.map(e => e.name)  // Complete here
+
+var personsYoungerThan28YearsOld = persons.filter(e => e.age < 28)// Complete here
 
 
 /*

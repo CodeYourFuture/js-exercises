@@ -42,7 +42,7 @@ WRITE YOUR CODE BELOW
 
 let destinationNamesWithin500Kms = // Complete here
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry =// Complete here
 
 let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
