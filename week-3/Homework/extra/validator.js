@@ -3,8 +3,9 @@ var regNum = new RegExp('[0-9]');
 
 let hasAtleasTwoNum = function(num){
     let splitNum = num.split();
-   return splitNum.map(digit=>digit==splitNum[1])
+   return (splitNum.map(digit=>digit==splitNum[1]))
 }   
+
 console.log(hasAtleasTwoNum(4444444444444444))
 var regNonNum = new RegExp(/^[0-9]+$/);
 validateCardNum = function(num){
