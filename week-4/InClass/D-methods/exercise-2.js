@@ -14,7 +14,6 @@ let person = {
     }
 };
 
-
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */

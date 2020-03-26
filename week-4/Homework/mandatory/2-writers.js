@@ -36,13 +36,11 @@ let writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  }
+  },
 ];
 
-writers.map(writer => {
-  if (writer.alive == true) {
-    return console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}.I am ${writer.age} years old, and work as a ${writer.occupation}.`)
-  }
+writers.map(w => {
+  return console.log(`Hi, my name is ${w.firstName} ${w.lastName}.I am ${w.age} years old, and work as a ${w.occupation}.`)
 })
 
 

@@ -17,9 +17,12 @@ let coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function (amount) {
+        return this.insertedAmount = this.cappuccino
 
     },
     getCoffee: function (coffee) {
+        return `Please take your ${this.cappuccino}.`
+
 
     }
 };

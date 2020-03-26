@@ -9,14 +9,26 @@ let groceryList = {
   item1: "Potatoes",
   item2: "Orange Juice",
   item3: "Rice",
-  item4: "beans"
-
+  item4: "Beans",
+  item5: "Cheese"
 };
-//How to loop through an object
-// object.keys refers to the items in an object
-Object.keys(groceryList).forEach(key => {
-  return groceriesToBuy.push(groceryList[key])
-
+Object.values(groceryList).forEach(items => {
+  return groceriesToBuy.push(items)
 })
 console.log(groceriesToBuy)
+
+// Read: How to loop through an object
+// object.keys refers to item1-5
+// Object.keys(groceryList).forEach(key => {
+//   return groceriesToBuy.push(groceryList[key])
+// })
+// console.log(groceriesToBuy)
+
+// let myList = [groceryList.item1, groceryList.item2]
+// myList = myList.map(e => {
+//   return groceriesToBuy.push(myList)
+// })
+// console.log(groceriesToBuy)
+
+
 
