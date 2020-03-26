@@ -33,10 +33,10 @@ let parkAvenueHouse = {
 
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
-  //let fullName = house.currentOwner.firstName + ' ' + house.currentOwner.lastName;
-  //fullName = house.currentOwner.firstName + ' ' + house.currentOwner.lastName;
-  //return house.currentOwner.firstName + ' ' + house.currentOwner.lastName;  // concatenation
-  return `${house.currentOwner.firstName} ${house.currentOwner.lastName}` // string interpolation
+  //let fullName = house.currentOwner.firstName + ' ' + house.currentOwner.lastName; // dont need to use let 
+  //fullName = house.currentOwner.firstName + ' ' + house.currentOwner.lastName; //  or new variable name
+  //return house.currentOwner.firstName + ' ' + house.currentOwner.lastName;  // concatenation example returns dotnotation objectName and the key:value properties eg.nestedArray.firstName and lastName
+  return `${house.currentOwner.firstName} ${house.currentOwner.lastName}` // string interpolation, the space between the stringsinterpolation seperates the dotnation properties
 //console.log(fullName);
 //   return fullName;
 }
@@ -45,7 +45,7 @@ function getOwnerFullName(house) {
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
   
-  return
+  return `${house1.currentOwner.email}, ${house2.currentOwner.email}`;
 }
 
 // returns the address for the cheapest house out of the two
