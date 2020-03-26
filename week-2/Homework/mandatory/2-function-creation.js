@@ -5,13 +5,13 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {
-  let str = ["   This is JavaScript  "];
 
-  return str.trim();
+function tidyUpString(strArr) {
+  let arraysEqual = strArr.trim();
+  return arraysEqual;
 }
 
-tidyUpString();
+console.log(arraysEqual(tidyUpString["/Daniel ", "irina ", " Gordon", "ashleigh "]));
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -22,7 +22,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (num % 2 === 0 && num < 100) {
+  if (num % 2 === 0 && num <= 100) {
     return "true";
   } else {
     return "false";
@@ -45,7 +45,7 @@ The function must:
 
 function remove() {
   let removed = array.splice(index, 1);
-  return array; // complete this statement
+  return array; 
 }
 
 console.log(remove([10, 293, 292, 176, 29], 3));
