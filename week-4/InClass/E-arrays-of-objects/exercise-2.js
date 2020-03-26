@@ -38,20 +38,26 @@ let travelDestinations = [destination1, destination2, destination3, destination4
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-let checkTrip = function(x){
-    if(travelDestinations.filter(x=>x.distanceKms<=50?){
-    retutn Object.this.name;
+let checkTrip = travelDestinations.filter(x=>x.distanceKms<=500);
+console.log(checkTrip);
+let checkTripNames = checkTrip.map(a => a = a.destinationName);
+console.log(checkTripNames);
 
-}
-
-let destinationNamesWithin500Kms = 
+let destinationNamesWithin500Kms = checkTripNames;
  console.log(destinationNamesWithin500Kms); // Complete here
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry =travelDestinations.filter(x=>x.transportations.includes("ferry"));
+let destinationNameReachableByFerryNames = destinationNameReachableByFerry.map(a => a = a.destinationName);
+destinationNameReachableByFerry = destinationNameReachableByFerryNames;
+console.log(checkTripNames);
+ // Complete here
 
-//let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
-
-
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(x=>x.distanceKms>=300);// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+let pneumonoultramicroscopicsilicovolcanoconiosis = destinationNamesMoreThan300KmsAwayByTrain.filter(x=>x.transportations.includes("train"));
+//by the way pneumonoultramicroscopicsilicovolcanoconiosis is the logest word in English) BEST FOR VARIABLES!!!( i am just joking because of the very long variable names)
+let pneumonoultramicroscopicsilicovolcanoconiosisNames = pneumonoultramicroscopicsilicovolcanoconiosis.map(a => a = a.destinationName);
+destinationNamesMoreThan300KmsAwayByTrain = pneumonoultramicroscopicsilicovolcanoconiosisNames;
+console.log()
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
