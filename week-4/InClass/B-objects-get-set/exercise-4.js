@@ -9,7 +9,8 @@ let dog = {
 
 // WRITE CODE BELOW THIS LINE
 
-
+console.log(dog.name);
+console.log(dog.wantsToPlay);
 
 // WRITE CODE ABOVE THIS LINE
 

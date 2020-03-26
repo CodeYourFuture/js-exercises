@@ -2,13 +2,19 @@
 Did you know you can also have an array of objects? We've created one for you here. Loop through the array, 
 and for each object, `console.log()` out the sentence:
 
-"Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
+output = "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 
 Here is the array:
+-for loop
+-foreach  
+-map
+-concatination
 
+notes - make sure the function outside of the object array. 
 */
 
 let writers = [
+  //array of objects
   {
     firstName: "Virginia",
     lastName: "Woolf",
@@ -36,9 +42,27 @@ let writers = [
     occupation: "writer",
     age: 64,
     alive: true
-  }
+  },
 ];
 
+
+function getName(writers) {
+
+  return `Hi, my name is ${writers.firstName} ${writers.lastName}. I am ${writers.age} years old, and work as a ${writers.occupation}.`
+}
+
+
+let newArr = writers.map(getName);
+console.log(newArr)
+
+
+ 
+//map requires a function  - learn this
+
+// console.log("Hi, my name is ${writers.firstName} ${writers.lastName}. I am ${writers.age} years old, and work as a ${writers.occupation}.")
+
 /*
+"Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
+
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
