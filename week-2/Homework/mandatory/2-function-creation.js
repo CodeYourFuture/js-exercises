@@ -5,13 +5,13 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-// function tidyUpString(strArr) {
-//   let str = ["   This is JavaScript  "];
+function tidyUpString(strArr) {
+  let str = ["   This is JavaScript  "];
 
-//   return str.trim();
-// }
+  return str.trim();
+}
 
-// tidyUpString();
+tidyUpString();
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -43,8 +43,7 @@ The function must:
 - remove the item at the specified index
 */
 
-function remove(arr, index) {
-  arr.
+function remove() {
   let removed = array.splice(index, 1);
   return array; // complete this statement
 }
