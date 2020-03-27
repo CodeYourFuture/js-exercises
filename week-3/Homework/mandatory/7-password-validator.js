@@ -22,8 +22,20 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
+let checker = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{5,}$/;
 
+function isUpCase(element) {
+  let resultUp = checker.test(element);
+  console.log(resultUp);
+  return resultUp;
+}
+
+
+
+  function validatePasswords(passwords) {
+    
+   return  passwords.map(isUpCase);
+    
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

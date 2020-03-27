@@ -4,11 +4,11 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 function isFunc(element) {
-    return element.includes('Lane');
+ return element.includes('Lane');
 }
 
 function getLanes(arr) {
- return arr.filter(isFunc);
+  return arr.filter(isFunc);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
