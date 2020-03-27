@@ -17,15 +17,27 @@ let coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function (amount) {
-        return this.insertedAmount = this.cappuccino
-
+        return this.insertedAmount = amount
+        console.log(insertMoney)
     },
     getCoffee: function (coffee) {
-        return `Please take your ${this.cappuccino}.`
-
-
+        if (this.insertedAmount >= this.prices.cappuccino) {
+            return (`Please take your ${coffee}`);
+        }
+        if (this.insertedAmount >= this.prices.blackCoffee) {
+            return (`Please take your ${coffee}`);
+        }
+        if (this.insertedAmount >= this.prices.flatWhite) {
+            return (`Please take your ${coffee}`);
+        } else {
+            return "Sorry you don't have enough money for a flatWhite."
+        }
     }
-};
+}
+// console.log(coffeeMachine.insertMoney(2.40, "cappuccino"))
+// console.log(coffeeMachine.insertMoney(1.50, "black coffee"))
+// console.log(coffeeMachine.insertMoney(4.00, "flathWhite"))
+// console.log(coffeeMachine.insertMoney(2.40, "flathWhite"))
 
 
 /*
@@ -33,13 +45,13 @@ DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
 coffeeMachine.insertMoney(2.40);
-console.log(`Expected result: 'Please take your cappuccino'. Actual result: ${coffeeMachine.getCoffee('cappuccino')}`);
+console.log(`Expected result: 'Please take your cappuccino'.Actual result: ${coffeeMachine.getCoffee('cappuccino')} `);
 
 coffeeMachine.insertMoney(1.50);
-console.log(`Expected result: 'Please take your blackCoffee'. Actual result: ${coffeeMachine.getCoffee('blackCoffee')}`);
+console.log(`Expected result: 'Please take your blackCoffee'.Actual result: ${coffeeMachine.getCoffee('blackCoffee')} `);
 
 coffeeMachine.insertMoney(4.00);
-console.log(`Expected result: 'Please take your flatWhite'. Actual result: ${coffeeMachine.getCoffee('flatWhite')}`);
+console.log(`Expected result: 'Please take your flatWhite'.Actual result: ${coffeeMachine.getCoffee('flatWhite')} `);
 
 coffeeMachine.insertMoney(2.40);
 console.log(`Expected result: 'Sorry you don't have enough money for a flatWhite'. Actual result: ${coffeeMachine.getCoffee('flatWhite')}`);

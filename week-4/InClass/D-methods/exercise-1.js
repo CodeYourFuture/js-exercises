@@ -9,7 +9,6 @@ let person = {
     age: 25,
     greet: function () {
         return "Hello everybody"
-
     }
 };
 

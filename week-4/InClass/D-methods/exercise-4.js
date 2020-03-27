@@ -8,10 +8,10 @@ let person = {
     name: "Alice",
     friends: ["John", "Nina"],
     makeFriend: function () {
-        return this.friends
+        return this.friends = `${this.friends},Bob`
     }
 };
-console.log()
+console.log(person)
 
 
 /*
