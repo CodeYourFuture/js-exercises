@@ -44,15 +44,27 @@ function getOwnerFullName(house) {
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
-  
-  return `${house1.currentOwner.email}, ${house2.currentOwner.email}`;
+//return `${house1.currentOwner.email}, ${house2.currentOwner.email}`;  // returned the result as a string datatype using `back-ticks` and ${interterpolation} use them when 
+//   const emails = [house1.currentOwner.email, house2.currentOwner.email];
+//   return emails
+//return [house1.currentOwner.email, house2.currentOwner.email];  // this will return an output that is using square bracket as an array
+let emailsArr = []
+emailsArr.push(house1.currentOwner.email);
+emailsArr.push(house2.currentOwner.email);
+//return Array.isArray(emailsArr);
+return emailsArr  // simplify
 }
+//source - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
-
-  return
-}
+   
+  if (house1.price < house2.price) {
+    return house1.address
+  } else {
+    return house2.address
+  }
+};  
 
 
 /*

@@ -10,8 +10,7 @@ all the restaurant names which have the required number of seats available at th
 2) Define a method findRestaurantServingDish which takes a dish name in parameter and returns
 all the restaurant names serving this dish.
 
-3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west),
-and returns the number of restaurants in this area.
+3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west), and returns the number of restaurants in this area.
 */
 
 let restaurant1 = {
@@ -54,21 +53,29 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
-
 let restaurantFinderApplication = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
+
+       return restaurants.filter(e => (e.totalSeats - e.numberOfCustomers) >= numberOfPeople).map(e => e.name)
         // Complete here
     },
     findRestaurantServingDish: function (dishName) {
+
+        return restaurants.filter(restaurant => restaurant.menu.includes(dishName)).map(restaurant => restaurant.name)   //filter checks the condition or return an expression
+
         // Complete here
     },
     countNumberOfRestaurantsInArea: function (area) {
+        let restaurantInArea = restaurants.filter(restaurant => restaurant.address.area === area)
         // Complete here
+        return restaurantInArea.length
     }
 };
+
+// review these exercise again
 
 
 /*

@@ -31,14 +31,12 @@ let coffeeMachine = {
         else {
             return false}
     },
-    },
     getCoffee: function (coffee) {
 
-        return `'Please take your ${coffee}`;
 
     }
-}
-//console.log(2.40, cappuccino)
+};
+
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
