@@ -22,9 +22,47 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
+<<<<<<< Updated upstream
 function validatePasswords(passwords) {
 
 }
+=======
+<<<<<<< HEAD
+
+
+let checker = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{5,}$/;
+
+function isUpCase(element) {
+  let resultUp = checker.test(element);
+  console.log(resultUp);
+  return resultUp;
+}
+
+
+
+  function validatePasswords(passwords) {
+    
+   return  passwords.map(isUpCase);
+    
+  }
+// function isLowCase(element) {
+//   let resultLow = element.match(lowCase);
+//   console.log(resultLow);
+//   return resultLow;
+// }
+// function isNum(element) {
+//   let resultNum = element.match(numbber);
+//   console.log(resultNum);
+//   return resultNum;
+// }
+// function isAlpha(element) {
+//   let resultAlpha = element.match(alphanum);
+//   console.log(resultAlpha);
+//   return resultAlpha;
+// }
+
+   
+>>>>>>> Stashed changes
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
