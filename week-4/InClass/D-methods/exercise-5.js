@@ -20,15 +20,24 @@ let coffeeMachine = {
     this.insertedAmount = amount;
   },
   getCoffee: function(coffee) {
-    if (this.prices[coffee] <= this.insertedAmount) {
-      return `Please take your ${coffee}`;
-    } else if (this.prices[coffee] > this.insertedAmount) {
-      return `Sorry you don't have enough money for a ${coffee}`;
-    } else {
-      return `Not available!`;
-    }
+    let hasPaidEnough = this.insertedAmount >= this.prices[coffee];
+    return !this.prices.hasOwnProperty(coffee)
+      ? `Not available!`
+      : hasPaidEnough
+      ? `Please take your ${coffee}`
+      : `Sorry you don't have enough money for a ${coffee}`;
   }
 };
+
+function getCoffee2(coffee) {
+  if (this.prices[coffee] <= this.insertedAmount) {
+    return `Please take your ${coffee}`;
+  } else if (this.prices[coffee] > this.insertedAmount) {
+    return `Sorry you don't have enough money for a ${coffee}`;
+  } else {
+    return `Not available!`;
+  }
+}
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
