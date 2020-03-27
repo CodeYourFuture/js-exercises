@@ -43,6 +43,5 @@ console.log(Object.keys(storeBranches.glasgow))
 
 // # 3
 // prints [ 'head_intern', 'intern' ]
-console.log(Object.keys(storeBranches.edinburgh.interns))//verygood where's my pool request
-
+console.log(Object.keys(storeBranches.edinburgh.interns))//
 // ONLY EDIT ABOVE THIS LINE
