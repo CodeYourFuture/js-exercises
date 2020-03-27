@@ -25,7 +25,7 @@ let coffeeMachine = {
     } else if (this.prices[coffee] > this.insertedAmount) {
       return `Sorry you don't have enough money for a ${coffee}`;
     } else {
-      return `Not recognised! Please choose one of the available options`;
+      return `Not available!`;
     }
   }
 };
