@@ -6,7 +6,10 @@
 let groceriesToBuy = [];
 
 let groceryList = {
-  item1: "",
-  item2: "",
-  item3: ""
+  item1: "Potatoes",
+  item2: "Orange Juice",
+  item3: "Rice"
 };
+groceriesToBuy = (Object.values(groceryList)); //returns an array of groceryList's enumerable property values
+
+console.log(groceriesToBuy)
