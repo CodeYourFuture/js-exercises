@@ -15,8 +15,35 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
+  let newArr = [];
 
+  for ( let index = 0; index < arr.length; index++ ) {
+    if ( typeof arr[index] === "number" ) {
+      newArr.push ( arr[index] )
+    }
+  }
 }
+
+// takes and cretae a new array,
+// finding any non-number typeof, 
+// removes non-number data types
+
+//return the array of sorting in ascending order let swap
+
+for ( let i = 0; i < newArr.length; i++ ){
+   for ( let j = i + 1; j < newArr.length; j++ ) {
+     if ( newArr [i] > newArr [j] ) {
+       swap = newArr [i];
+       newArr [i] > newArr [j];
+       newArr [j] = swap;
+     }
+   }
+
+  }
+
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

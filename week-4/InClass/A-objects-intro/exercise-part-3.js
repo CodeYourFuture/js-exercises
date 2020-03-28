@@ -14,3 +14,18 @@ Make sure you use words like:
 - etc.
 
 */
+/*
+let kitten = {
+    ageMonths: 3,
+    isFemale: true,
+    furColour: "brown"
+};
+
+* kitten {.......} ========> object literal
+
+* ageMonths, isFemale, furColour ===========> properties for kitten object
+
+
+* 3 (number value), true (boolean value), "brown" (string value)===>of the properties
+
+

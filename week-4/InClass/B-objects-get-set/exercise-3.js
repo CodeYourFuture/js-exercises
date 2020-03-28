@@ -4,6 +4,11 @@
 
 // WRITE CODE BELOW THIS
 
+let kitten = {
+    name: "Gilbert",
+    age: 7
+  };
+
 // WRITE CODE ABOVE THIS
 
 console.log(kitten.name);

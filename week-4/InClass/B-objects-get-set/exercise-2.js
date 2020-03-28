@@ -4,12 +4,20 @@
     Once you fix them, run this file, it should output the correct values!
 */
 
+/*
 let phone = {
     brand: 'iPhone,
     model 'iPhone X'
     launchYear: 2017,
     is Unlocked: true
 ;
+*/
+let phone = {
+    brand:'iPhone',
+    model: 'iPhone X',
+    launchYear: 2017,
+    isUnlocked: true
+};
 
 let phoneBrand = phone.bbrand;
 let phoneLaunchYear = phone[launchYear];

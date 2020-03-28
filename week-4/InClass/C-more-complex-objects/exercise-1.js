@@ -20,8 +20,22 @@ let house = {
 */
 
 // - change the address of "house" to '51 Berkley Road'
+
+house.address = '51 Berkley Road';
+console.log(house.address);
+
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]
+
+house.previousOwners = ["Brian M.", "Fiona S."];
+console.log(house.previousOwners);
+
+
 // - change the last name of the current owner of "house" to "Montgomery"
+
+
+house.currentOwner.lastName = "Montgomery";
+console.log(house.currentOwner.lastName);
+
 
 
 /*

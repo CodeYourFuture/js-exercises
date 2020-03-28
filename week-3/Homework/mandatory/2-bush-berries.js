@@ -10,9 +10,19 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
 
-}
+let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
+let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+
+
+let bushChecker = bushBerryColours1.filter(function (item) {
+
+  if item === "pink"
+     return ("Bush is safe to eat from");     
+
+});
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

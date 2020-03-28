@@ -7,7 +7,21 @@ Add a method "greet" so this person can say hello.
 let person = {
     name: "Alice",
     age: 25
+
 };
+
+
+let person.greet = "Hellooo";
+console.log(person.greet ${nasilisin} ${benim adim}person.name );
+
+
+
+
+
+
+
+
+
 
 
 /*
