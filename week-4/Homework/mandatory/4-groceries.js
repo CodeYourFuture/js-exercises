@@ -4,9 +4,10 @@
 // 3. Then use console.log() to print out the list. It should print ['Potatoes', 'Orange Juice', 'Rice']
 
 let groceriesToBuy = [];
-
 let groceryList = {
-  item1: "",
-  item2: "",
-  item3: ""
+  item1: "Potatoes",
+  item2: "Orange Juice",
+  item3: "Rice"
 };
+console.log(Object.values(groceryList))
+
