@@ -48,10 +48,10 @@ function getOwnerFullName(house) {
   
   // returns the address for the cheapest house out of the two
   function getCheapestAddress(house1, house2) {
-  if (house1.price > house2.price) {
-    return house2.address
-  } else {
+  if (house1.price < house2.price) {
     return house1.address
+  } else {
+    return house2.address
   }
   
   }

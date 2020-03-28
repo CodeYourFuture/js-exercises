@@ -9,7 +9,8 @@ let person = {
     friends: ["John", "Nina"],
 
     makeFriend: function() {
-        this.friends.push("Bob")
+        return this.friends.push("Bob")
+        //return this.friends = `${this.friends},Bob`
     }
 };
 

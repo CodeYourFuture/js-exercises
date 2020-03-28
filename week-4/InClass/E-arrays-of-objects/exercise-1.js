@@ -24,14 +24,7 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
-//let kittens = [kitten1, kitten2, kitten3]; - example from syllabus
 let persons = [person1, person2, person3]// Complete here
-
-// function getName(kitten) { - syllabus example
-//     return kitten.name;
-// }
-
-// kittens.map(getName);
 
 let personNames = persons.map(e => e.name)  // Complete here
 
