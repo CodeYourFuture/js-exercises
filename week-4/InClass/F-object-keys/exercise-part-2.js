@@ -34,9 +34,9 @@ let storeBranches = {
 console.log(Object.keys(storeBranches))
 // # 2
 // prints [ 'manager', 'assistant', 'interns' ]
-console.log(Object.keys(storeBranches.Object.keys))
+console.log(Object.keys(storeBranches.glasgow))
 // # 3
 // prints [ 'head_intern', 'intern' ]
-console.log(Object.keys(Object.keys(storeBranches)))
+console.log(Object.keys(storeBranches.edinburgh.interns))
 
 // ONLY EDIT ABOVE THIS LINE

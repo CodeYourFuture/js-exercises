@@ -58,14 +58,11 @@ let restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-
        return restaurants.filter(e => (e.totalSeats - e.numberOfCustomers) >= numberOfPeople).map(e => e.name)
         // Complete here
     },
     findRestaurantServingDish: function (dishName) {
-
         return restaurants.filter(restaurant => restaurant.menu.includes(dishName)).map(restaurant => restaurant.name)   //filter checks the condition or return an expression
-
         // Complete here
     },
     countNumberOfRestaurantsInArea: function (area) {

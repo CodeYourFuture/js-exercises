@@ -11,35 +11,31 @@ only if the inserted amount is greater or equal than the price of the coffee!
 let coffeeMachine = {
     brand: "Super Coffee",
     prices: {
-        cappuccino: 2.40,
-        blackCoffee: 1.50,
-        flatWhite: 3.00
+      cappuccino: 2.4,
+      blackCoffee: 1.5,
+      flatWhite: 3.0
     },
     insertedAmount: 0,
-    //
-    insertMoney: function (amount) {
-        if (amount === Object.value)
-        if (amount = this.cappuccino){
-            return true
-        } 
-        if(amount = this.blackCoffee){
-            return true
-        } 
-        if(amount = this.flatWhite){
-            return true
-        }
-        else {
-            return false}
+    insertMoney: function(amount) {
+      this.insertedAmount = amount;
     },
-    },
-    getCoffee: function (coffee) {
+    getCoffee: function(coffee) {// this coffee is being told by the user
+      
+      /* check if the amount is greater or equal price */
+      /* if true dispeanse coffee*/
+      /* we going to display the sorry you don't have enough funds*/
+     
 
-        return `'Please take your ${coffee}`;
-
+      if(this.insertedAmount>=this.prices[coffee]){// if the right amount is inserted then the user gets a correct coffee.
+        return "Please take your " + coffee;
+    }else{
+        return "Sorry you don't have enough money for a " + coffee;
     }
-}
-//console.log(2.40, cappuccino)
 
+}
+};
+
+  
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
