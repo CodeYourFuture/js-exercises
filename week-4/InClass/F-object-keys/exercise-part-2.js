@@ -24,8 +24,8 @@ let storeBranches = {
     assistant: 'Derek',
     interns: {
       head_intern: 'John',
-      intern: 'Sarah',
-      sub_intern: 'Carl'
+      intern: 'Sarah'
+      //sub_intern: 'Carl'
     }
   }
 }
@@ -38,10 +38,11 @@ console.log(Object.keys(storeBranches))
 console.log(Object.keys(storeBranches.glasgow))
 // # 3
 // prints [ 'head_intern', 'intern' ]
-// prints [ 'head_intern', 'intern', 'sub_intern' ]
+// prints [ 'head_intern', 'intern', 'sub_intern' ] // this was added to object ediburgh to test if the object had different information
 console.log(Object.keys(storeBranches.edinburgh.interns))
 
-//side note = to access the nested objects inside variableName 'storeBranches' use .map method to loop through the properties of the object. This will allow you to access the dynamic object.keys [string array]  
+//To access the nested objects inside an object. 
+//inside variableName 'storeBranches' use .map method to loop through the properties of the object. This will allow you to access the dynamic object.keys [string array]  
 console.log(
   Object.keys(storeBranches).map(branch => 
     Object.keys(storeBranches[branch].interns)
