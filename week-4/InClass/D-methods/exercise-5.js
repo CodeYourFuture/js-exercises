@@ -29,15 +29,15 @@ let coffeeMachine = {
   }
 };
 
-function getCoffee2(coffee) {
-  if (this.prices[coffee] <= this.insertedAmount) {
-    return `Please take your ${coffee}`;
-  } else if (this.prices[coffee] > this.insertedAmount) {
-    return `Sorry you don't have enough money for a ${coffee}`;
-  } else {
-    return `Not available!`;
-  }
-}
+// getCoffee2: function(coffee) {
+//   if (this.prices[coffee] <= this.insertedAmount) {
+//     return `Please take your ${coffee}`;
+//   } else if (this.prices[coffee] > this.insertedAmount) {
+//     return `Sorry you don't have enough money for a ${coffee}`;
+//   } else {
+//     return `Not available!`;
+//   }
+// }
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
