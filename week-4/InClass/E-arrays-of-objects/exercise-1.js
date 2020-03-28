@@ -19,17 +19,18 @@ var person3 = {
     age: 20
 };
 
+
 /* 
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
 
-var persons = // Complete here
+var persons = [person1, person2, person3];
 
-var personNames = // Complete here
+var personNames = persons.map( x => x.name);
 
-var personsYoungerThan28YearsOld = // Complete here
+var personsYoungerThan28YearsOld = persons.filter (x => x.age < 28)// Complete here
 
 
 /*
