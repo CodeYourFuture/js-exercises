@@ -62,10 +62,8 @@ let restaurantFinderApplication = {
     findAvailableRestaurants: function (numberOfPeople) {
         // Complete here
         return restaurants.filter(function(restaurant ){
-            if(
-              (restaurant.totalSeats-restaurant.numberOfCustomers)
-               > numberOfPeople)
-                 {return restaurant}  
+            if((restaurant.totalSeats-restaurant.numberOfCustomers)>numberOfPeople)
+                 {return restaurant;}  
               }
               ).map(restaurant=>restaurant.name)
     },
