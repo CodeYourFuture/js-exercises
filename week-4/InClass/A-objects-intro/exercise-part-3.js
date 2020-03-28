@@ -14,3 +14,21 @@ Make sure you use words like:
 - etc.
 
 */
+
+let colleagues = [
+{
+  firstName : "alex",
+  lastName : "ahmad",
+  occupation : "worker",
+  hasChildren : true,
+  childsName : ["ali","mike","sarah"]
+} ,
+{ 
+    firstName : "John",
+    lastName : "Doe",
+    age : "53",
+    occupation : "doctor",
+    isMarried : false,
+    telephoneNo : "07888955611"
+
+}];
