@@ -23,13 +23,15 @@ var person3 = {
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+ 
 
+var persons = [];
+ 
+persons.push(person1,person2,person3);
 
-var persons = // Complete here
+var personNames = persons.map(element=>element.name)// Complete here
 
-var personNames = // Complete here
-
-var personsYoungerThan28YearsOld = // Complete here
+var personsYoungerThan28YearsOld = persons.filter(element=>element.age<28);// Complete here
 
 
 /*

@@ -29,9 +29,9 @@ let newCurrentOwner = {
 // - from the list of previous owners, replace only "John A." with "Stephen B."
 // - give the house a new property called 'isForSale' with the value 'false'
 
-
-
-
+house.currentOwner = newCurrentOwner;
+house.previousOwners[1] = 'Stephen B';
+house.isForSale = false;
 /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
 */

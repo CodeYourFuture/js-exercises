@@ -3,6 +3,13 @@
 */
 
 // WRITE CODE BELOW THIS
+  let kitten ={
+      name:'Gilbert',
+      color: 'Ginger',
+      race: 'British Shorthair'
+  }
+
+
 
 // WRITE CODE ABOVE THIS
 
