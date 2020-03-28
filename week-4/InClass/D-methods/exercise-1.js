@@ -3,10 +3,12 @@ A person named Alice is defined below.
 Add a method "greet" so this person can say hello.
 */
 
-
 let person = {
     name: "Alice",
-    age: 25
+    age: 25,
+    greet: function(){
+        return "Hello everybody";
+    }
 };
 
 
