@@ -40,11 +40,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = travelDestinations.filter(e => e.destinationName < '500kms')// Complete here
+let destinationNamesWithin500Kms = travelDestinations.filter(e => e.distanceKms < 500).map(e => e.destinationName) // Complete here
 
-let destinationNameReachableByFerry = travelDestinations.filter(e => e.transportations === "ferry")
+let destinationNameReachableByFerry = travelDestinations.filter(e => e.transportations.includes("ferry")).map(e => e.destinationName)
 
-let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(e => e.distanceKms > "300kms" && e.transportations === "train")
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(e => e.distanceKms > 300 && e.transportations.includes("train")).map(e => e.destinationName)
 
 console.log(destinationNamesWithin500Kms)
 console.log(destinationNameReachableByFerry)

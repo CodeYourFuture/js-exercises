@@ -15,13 +15,10 @@ let mentorsAges = {
 
 // ONLY EDIT BELOW THIS LINE
 
-let mentorsNames = mentorsAges.map(e => {
-  return console.log(mentorsNames)
+let mentorsNames = Object.keys(mentorsAges)
 
-}) //Object.keys(mentorAges)
-
-//let mentorsNamedUppercased = mentorsNames.toUpperCase();
-//console.log(mentorsNames)
+let mentorsNamedUppercased = mentorsNames;//mentorsNames.map(e => e.toUpperCase())//mentorsNames.toUpperCase();
+console.log(mentorsNamedUppercased.toUpperCase())
 // ONLY EDIT ABOVE THIS LINE
 
 //console.log(mentorsNamedUppercased);
