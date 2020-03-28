@@ -19,6 +19,11 @@ let house = {
   WRITE YOUR CODE BELOW
 */
 
+house.address = '51 Berkley Road'
+house.previousOwners = ["Brian M.", "Fiona S."]
+house.currentOwner.lastName = "Montgomery"
+
+
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]
 // - change the last name of the current owner of "house" to "Montgomery"

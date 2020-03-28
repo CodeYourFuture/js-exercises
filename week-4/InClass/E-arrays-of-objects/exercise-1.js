@@ -24,14 +24,11 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+let persons = [person1, person2, person3]
 
-var persons = // Complete here
+let personNames = persons.map(x => x["name"])
 
-var personNames = // Complete here
-
-var personsYoungerThan28YearsOld = // Complete here
-
-
+let personsYoungerThan28YearsOld = persons.filter(x => x["age"] < 28)
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
