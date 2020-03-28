@@ -24,12 +24,12 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+ 
+var persons = [person1, person2, person3];// Complete here
 
-var persons = // Complete here
+var personNames = persons.map(person => person.name);// Complete here
 
-var personNames = // Complete here
-
-var personsYoungerThan28YearsOld = // Complete here
+var personsYoungerThan28YearsOld = persons.filter(person => person.age < 28);// Complete here
 
 
 /*
