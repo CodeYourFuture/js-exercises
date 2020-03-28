@@ -28,6 +28,34 @@ let coffeeMachine = {
 
     }
 };
+/*
+let coffeeMachine = { - another example of doing this question- using if else = more room for error, as you'd have to keep going back and adding statements for every coffee added
+    brand: "Super Coffee",
+    prices: {
+        cappuccino: 2.40,
+        blackCoffee: 1.50,
+        flatWhite: 3.00
+    },
+    insertedAmount: 0,
+    insertMoney: function (amount) {
+        return this.insertedAmount = amount
+        console.log(insertMoney)
+    },
+    getCoffee: function (coffee) {
+        if (this.insertedAmount >= this.prices.cappuccino && coffee === "cappuccino") {
+            return (`Please take your ${coffee}`);
+        }
+        if (this.insertedAmount >= this.prices.blackCoffee && coffee === "blackCoffee") {
+            return (`Please take your ${coffee}`);
+        }
+        if (this.insertedAmount >= this.prices.flatWhite && coffee === "flatWhite") {
+            return (`Please take your ${coffee}`);
+        } else {
+            return `Sorry you don't have enough money for a flatWhite. ${coffee}`
+        }
+    }
+}
+*/
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
