@@ -39,6 +39,8 @@ let writers = [
   }
 ];
 
+writers.map(x => console.log(`Hi, my name is ${x.firstName} ${x.lastName}. I am  ${x.age} years old, and work as a ${x.occupation}.`))
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+writers.filter(x => x.alive === true).forEach(x => console.log(x.firstName +" "+ x.lastName));
