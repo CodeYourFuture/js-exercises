@@ -11,15 +11,15 @@
 */
 
 function bushChecker(arrY) {
-  let j ;
+  let j = 0 ;
   for (let i = 0 ; i <= arrY.length ; i ++ ){
-   if (arrY[i] === "pink"){
+   if (arrY[i] == "pink"){
      j ++;
    }
   }
-  if (arrY.length === j){
+  if (arrY.length == j){
     return "Bush is safe to eat from";
-  }else {
+  }else { 
     return "Toxic! Leave bush alone!";
   }
 }
