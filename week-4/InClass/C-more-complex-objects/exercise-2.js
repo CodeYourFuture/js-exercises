@@ -19,7 +19,7 @@ let newCurrentOwner = {
   lastName: "Hernandez"
 };
 house.currentOwner = newCurrentOwner;
-house.previousOwners[0] = "Stephen B.";
+house.previousOwners[1] = "Stephen B.";
 house.isForSale = false;
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
