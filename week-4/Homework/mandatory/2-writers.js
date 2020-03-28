@@ -42,3 +42,8 @@ let writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+
+writers.forEach( element =>
+  console.log(`Hi, my name is ${element.firstName} ${element.lastName}. I am ${element.age} years old, and work as a ${element.occupation}.`))
+
+writers.forEach(element => console.log(element.alive === true ? `${element.firstName} ${element.lastName}` : "" ))
