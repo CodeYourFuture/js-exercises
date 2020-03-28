@@ -48,9 +48,11 @@ Each destination has a name, a distance from Glasgow, and a list of transportati
 1) Filter the travelDestinations array to return all destination names reachable within 500 kms.
 2) Find a destination name reachable by ferry.
 3) Print in the console all the destination names more than 300 kms far away and reachable by train.
+
+//where possible give clear names - *e = should be given a clearName
 */
 
-let destinationNamesWithin500Kms = travelDestinations.filter(destinationName => destinationName.distanceKms < 500).map(destinationName => destinationName.destinationName)// Complete here
+let destinationNamesWithin500Kms = travelDestinations.filter(listName => listName.distanceKms < 500).map(listName => listName.destinationName)// Complete here
 console.log(destinationNamesWithin500Kms) 
 
 let destinationNameReachableByFerry = travelDestinations.filter(e => e.transportations.includes("ferry")).map(e => e.destinationName)

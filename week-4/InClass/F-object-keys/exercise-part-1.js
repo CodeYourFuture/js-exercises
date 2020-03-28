@@ -19,9 +19,11 @@ let mentorsAges = {
 //let mentorsNames = [];
 let mentorsNames = Object.keys(mentorsAges)
 
+//let mentorsNamedUppercased = mentorsNames.toUpperCase()
 let mentorsNamedUppercased = mentorsNames.map(name => name.toUpperCase())
 //console.log(mentorsNames) //mentors name is an array
 // ONLY EDIT ABOVE THIS LINE
-
+//.map.filter.forEach - for [arrays]
+//.toUpperCase only applies to 'string'
 console.log(mentorsNamedUppercased);
 // prints [ 'JAMES', 'JOSH', 'JAMIE', 'MOZAFAR' ]
