@@ -27,7 +27,7 @@ let colleagues = [
       lastName: "Smith",
       occupation: "writer",
       location: ["london", "UK", "Earth"],
-      xmarksThespot: 133454567,
+      xMarksTheSpot: 133454567,
       age: 99,
       alive: false
     },
