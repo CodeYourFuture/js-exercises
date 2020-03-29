@@ -43,6 +43,7 @@ let writers = [
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
 
-console.log(writers.map(i => `Hi, my name is ${i.firstName} ${i.lastName}. I am ${i.age} years old, and work as a ${i.occupation}.`))
+// console.log(writers.map(i => `Hi, my name is ${i.firstName} ${i.lastName}. I am ${i.age} years old, and work as a ${i.occupation}.`))
 
-console.log(writers.filter(alive => alive.alive).map(alive => `${alive.firstName} is alive and ${alive.age} years old`))
+// console.log(writers.filter(alive => alive.alive).map(alive => `${alive.firstName} is alive and ${alive.age} years old`))
+writers.forEach (e =>  e.alive  ? console.log(`Hi my name is ${e.firstName} ${e.lastName}. I am ${e.age} years old and my occupation is a ${e.occupation}.`) : {});
