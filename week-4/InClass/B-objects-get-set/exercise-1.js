@@ -5,7 +5,7 @@
 let kitten = {
     ageMonths: 3,
     isFemale: true,
-    furColour: "brown"
+    furColour: "brow"
 };
 
 // YOUR CODE GOES BELOW HERE

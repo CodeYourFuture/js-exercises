@@ -23,17 +23,21 @@ var person3 = {
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-
-
+function getName(person){
+    return person.name;
+}
+function personsYoungerThan28YearsOld(person){
+    return person.age<=28;
+}
 var persons = [person1, person2, person3];// Complete here
 
-var personNames = // Complete here
+var personNames = persons.map(getName); // Complete here 
 
-var personsYoungerThan28YearsOld = // Complete here
-
+var personsYoungerThan28YearsOld =persons.filter(personsYoungerThan28YearsOld); // Complete here
 
 /*
-DO NOT EDIT ANYTHING BELOW THIS LINE
+DO NOT EDIT ANYTHING BELOW THIS LINE 
+
 */
 
 console.log("Question 1: array defined with 3 persons -> ", 

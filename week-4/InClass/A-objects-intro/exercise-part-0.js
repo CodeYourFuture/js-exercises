@@ -9,4 +9,5 @@ let laptop={
     brand:"lenova",
     size:13,
     color:"black",
+    oldVersion:true
 }

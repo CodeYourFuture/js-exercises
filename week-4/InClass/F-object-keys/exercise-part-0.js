@@ -22,9 +22,6 @@ let highScores = {
 var capitalCitiesKeys=Object.keys(capitalCities) ; 
 var highScoresKeys=Object.keys(highScores) ; 
 
-let capitalCitiesKeys = ;
-let highScoresKeys;
-
 // ONLY EDIT ABOVE HERE
 
 console.log(capitalCitiesKeys);

@@ -14,3 +14,10 @@ Make sure you use words like:
 - etc.
 
 */
+let friend = {
+    name: "Min Ko",
+    hairColor: "black",
+    handsome: true,
+    weight: 100,
+    height: ["tall", "short"]
+}

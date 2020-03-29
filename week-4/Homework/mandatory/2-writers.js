@@ -38,6 +38,11 @@ let writers = [
     alive: true
   }
 ];
+function getName(writers){
+  return `Hi, my name is ${writers.firstName} ${writers.lastName}. I am ${writers.age} years old, and work as a ${writers.occupation}.`
+}
+let newArr = writers.map(getName);
+console.log(newArr);
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.

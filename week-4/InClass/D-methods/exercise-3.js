@@ -15,8 +15,6 @@ let person = {
         this.age +=  1;
     }
 };
-
-
 /* 
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */

@@ -38,11 +38,16 @@ let travelDestinations = [destination1, destination2, destination3, destination4
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+function within500Kms(dest){
+return dest.distanceKms<500;
+}
+function reachableByFerry(ferr){
+    return ferr.transportations="ferry";
+}
 
+let destinationNamesWithin500Kms =travelDestinations.find(within500Kms); // Complete here
 
-let destinationNamesWithin500Kms = // Complete here
-
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry = travelDestinations.find(reachableByFerry);// Complete here
 
 let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
