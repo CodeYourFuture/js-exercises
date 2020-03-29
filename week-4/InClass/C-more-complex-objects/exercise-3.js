@@ -32,7 +32,8 @@ let parkAvenueHouse = {
 
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
-
+  let name = kinningParkHouse.currentOwner.firstName;
+  this.
 }
 
 // returns an array of the owners' email addresses of the two houses

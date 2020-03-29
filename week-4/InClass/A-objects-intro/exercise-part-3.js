@@ -14,3 +14,37 @@ Make sure you use words like:
 - etc.
 
 */
+
+// let cup = something... is declaring a varial 
+
+let cup = {color: "teal", madeOf: "ceramic", weight: "30g", price: "£20"}; // = object literal
+
+let person = {
+    firstName: "Jenny", // firstname = property/key, "jenny" = value
+    lastName: "Williams",
+    age: 36, // number
+    nationality: "Canadian", // =string
+    height: "5ft 4inches",
+    occupation: "software developer"
+};
+
+let car = {
+    color: "blue",
+    make: "Renault",
+    models: "KADJAR",
+    bodyStyle: "SUV",
+    transmission: "manual",
+    fuelType: "petrol",
+    engineCapacity: "1332 cc"
+};
+
+let laptop = {
+    brand: "Dell",
+    screenSize: 17, 
+    ram: "8GB",
+    processor: "intel",
+    core: "i7-6500U",
+    cpu: "2.50GHz",
+    systemType: "64-bit",
+    isTouchscreen: false // = boolean
+};

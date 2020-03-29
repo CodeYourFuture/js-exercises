@@ -8,6 +8,7 @@
 let house = {
     address: "1 Kinning Park",
     previousOwners: ["Claire M.", "John A."],
+    isForSale = false,
     currentOwner: {
       firstName: "Margaret",
       lastName: "Conway"
@@ -24,6 +25,11 @@ let newCurrentOwner = {
 
   WRITE YOUR CODE BELOW
 */
+this.house.currentOwner = `${newCurrentOwner}`
+house.previousOwners[1] = "Stephen B."
+
+
+
 
 // - assign the value of the variable 'newCurrentOwner' as the value to the house's "currentOwner"
 // - from the list of previous owners, replace only "John A." with "Stephen B."
