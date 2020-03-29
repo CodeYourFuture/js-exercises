@@ -8,7 +8,8 @@ let groceriesToBuy = [];
 let groceryList = {
   item1: "Potatoes",
   item2: "Orange Juice",
-  item3: "Rice"
+  item3: "Rice",
+  item4: "Toilet paper"
 };
 
 for(let key in groceryList){
