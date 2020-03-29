@@ -10,3 +10,12 @@ let groceryList = {
   item2: "",
   item3: ""
 };
+
+groceryList.item1 = "Potatoes";
+groceryList.item2 = "Orange Juice";
+groceryList.item3 = "Rice";
+
+for (let property in groceryList) {
+  groceriesToBuy.push(groceryList[property]);
+}
+console.log(groceriesToBuy);
