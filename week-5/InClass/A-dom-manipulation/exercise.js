@@ -16,6 +16,8 @@ Write JavaScript below that logs:
 
 */
 
+//1. 
+console.log(document.querySelectorAll("p"));
 
 /*
 Task 2
