@@ -7,3 +7,12 @@ Assign each of them to a separate variable
 
 */
 
+let planet = {};
+
+let car = {};
+
+let myHome = {};
+
+let person = {};
+
+let Whale = {};
