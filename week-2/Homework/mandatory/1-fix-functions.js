@@ -38,7 +38,7 @@ function first5() {
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element = arr[3];
 
   return element;
 }
