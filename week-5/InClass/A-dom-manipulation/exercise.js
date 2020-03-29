@@ -22,7 +22,7 @@ console.log(allP);
 let firstDiv = document.querySelector(".site-header");
 console.log(firstDiv);
 
-let jumbotron = document.querySelector("#jumbotron-text");
+let jumbotron1 = document.querySelector("#jumbotron-text");
 console.log(jumbotron);
 
 let primaryContent = document.querySelector(".primary-content");
@@ -35,20 +35,39 @@ console.log(allPs2);
 allPs3 = document.querySelectorAll(".primary-content p");
 console.log(allPs3);
 
-/*
-Task 2
-======
+// /*
+// Task 2
+// ======
 
-When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
-*/
+// When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
+// */
 
 
-/*
-Task 3
-=======
+// /*
+// Task 3
+// =======
 
-Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
-*/
+// Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
+// */
+
+// let changeButton = document.querySelector("#bgrChangeBtn");
+// changeButton.addEventListener("click",changeColor);
+// function changeColor() {
+//     document.querySelector("body").style.backgroundColor = "blue";
+//     document.querySelector("body").style.fontSize = "20px";
+// }
+
+// let changeColorBtn = document.querySelector("#bgrChangeBtn");
+// changeColorBtn.addEventListener("click", function () {
+//     document.querySelector("body").style.backgroundColor = "yellow";
+//     document.querySelector(".jumbotron").style.backgroundColor = "orange";
+// }
+
+
+
+let bodyEl = document.querySelector("body");
+let newParagraph = document.createElement("hr");
+bodyEl.appendChild(newParagraph); 
 
 
 /*
@@ -57,7 +76,14 @@ Task 4
 
 When a user clicks the 'Add some text' button, a new paragraph should be added below the buttons that says "Read more below."
 */
+let button = document.querySelector("#addTextBtn")
+let jumbotron = document.querySelector(".jumbotron")  
 
+button.addEventListener("click", function() {
+    let paragraph = document.createElement("p");
+    paragraph.innerText = "Read more below";
+    jumbotron.appendChild(paragraph);
+})
 
 
 /*
@@ -66,3 +92,6 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+
+let paragraphs = document.querySelector("body p");
+paragraphs.forEach(element => element.style.backgroundColor = "blue");
