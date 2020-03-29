@@ -8,8 +8,8 @@
  * All of your HTML should go inside the Div tag with the id "content".
  *
  * <div id="content">
- *      <h1>Name</h1>
- *      <h2>Job</h2>
+ *      <h1>{Name Here}</h1>
+ *      <h2>{Job Here}</h2>
  *      .....
  * </div>
  */
