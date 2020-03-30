@@ -12,12 +12,18 @@ let bottle = {
   volume: 0,
   fill: function() {
     // calling this function should make you bottles volume = 100;
+    this.volume = 100;
   },
   drink: function() {
     // calling this function should decrease your bottles volume by 10;
+    this.volume -= 10;
   },
   empty: function() {
     // this function should return true if your bottles volume = 0
+    //this.volume = 0;
+    if (this.volume == 0) {
+      return true;
+    }
   }
 };
 
@@ -31,10 +37,11 @@ Once you have completed your object run the following and see if your answer
 matches the expected result at the bottom :)
 */
 
-bottle.fill();
-bottle.drink();
-bottle.drink();
-bottle.drink();
+bottle.fill(); //100
+bottle.drink(); //100-10=90
+bottle.drink(); //90-10=80
+bottle.drink(); //80-10=70
+
 if (!bottle.empty()) {
   console.log(`bottles volume = ${bottle.volume}`);
 }
