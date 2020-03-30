@@ -83,17 +83,16 @@ paragraph.style.fontSize = "4em";
 let myParentElement = document.querySelector(".buttons");
 let myParent2 = document.querySelector(".buttons");
 function addParagraph() {
- myParentElement.prepend(paragraph);
+ myParentElement.appendChild(paragraph);
 }
 
 //====================
-let addTxtBtn = document.querySelector("#addTextBtn");
-addTxtBtn.addEventListener("click", function (){
-    let newPara = document.createElement("p");
-    newPara.innerText = "This is new text will appear on click of button."
-
-    let parent = document.querySelector(".button");
-    parent.appendChild(newPara);
+let addSomeTxt = document.querySelector("#addTextBtn");
+addSomeTxt.addEventListener("click", function (){
+    let readMore = document.querySelector(".button"); 
+    let paragraphTxt = document.createElement("p");
+    readMore.innerText = "This is new text will appear on click of button."
+    parent.appendChild(paragraphTxt);
 });
 
 //======================
@@ -126,5 +125,14 @@ linkBtn.addEventListener("click", function(){
 });
 
 
+//==========
+
+let largerLinksBtn = document.querySelector("#largerLinksBtn");
+largerLinksBtn.addEventListener("click", function(){
+    let allAnchorTags = document.querySelectorAll("a");
+    for (let i = 0; i < allAnchorTags.length; i++) {
+        allAnchorTags[i].style.fontSize = "60px";
+    }
+})
 
 
