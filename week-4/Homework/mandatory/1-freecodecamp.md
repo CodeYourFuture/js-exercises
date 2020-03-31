@@ -29,3 +29,8 @@ Complete all 26 of the 'Object Oriented Programming' lessons on FreeCodeCamp at 
 - Use Closure to Protect Properties Within an Object from Being Modified Externally
 - Understand the Immediately Invoked Function Expression (IIFE)
 - Use an IIFE to Create a Module
+
+
+
+
+

@@ -39,6 +39,16 @@ let writers = [
   }
 ];
 
+
+
+function helloWriter(writers) {
+  return  `Hi, my name is ${writers.firstName} ${writers.lastName}. I am ${writers.sage} years old, and work as a ${writers.occupation}.`;
+}
+
+let newArr = writers.map(helloWriter);
+console.log(newArr);
+
+
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
