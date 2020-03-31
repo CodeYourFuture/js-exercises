@@ -45,7 +45,7 @@ console.log(document.querySelectorAll(".primary-content p"));
 // */
 
 let alertButton = document.querySelector("#alertBtn"); //variable stores a value
-alertButton.addEventListener("click", alertSomething);  //object method - calling the variable 
+alertButton.addEventListener("click", alertSomething); //object method - calling the variable 
 
 function alertSomething() {
     alert("Thanks for visiting Bikes for Refugees!");
@@ -59,8 +59,9 @@ Write JavaScript below that changes the background colour of the page when the '
 */
 
 let changeColor = document.querySelector("#bgrChangeBtn");
-    changeColor.addEventListener("click", changeBgr);
-    function changeBgr() {
+changeColor.addEventListener("click", changeBgr);
+
+function changeBgr() {
     document.body.style.backgroundColor = "palegreen";
 };
 
@@ -73,7 +74,7 @@ When a user clicks the 'Add some text' button, a new paragraph should be added b
 
 function addParagraph() {
     myParentElement.appendChild(paragraph);
-   };
+};
 
 //global variables 
 let addTextBtn = document.querySelector("#addTextBtn");
@@ -84,14 +85,14 @@ paragraph.style.color = "red";
 paragraph.style.fontSize = "4em";
 let myParentElement = document.querySelector(".buttons");
 
-function addParagraph() {
- myParentElement.appendChild(paragraph);
-}
+// function addParagraph() {
+//  myParentElement.appendChild(paragraph);
+// }
 
 //global variables 
 let addTextBtn = document.querySelector("#addTextBtn");
 
-addTextBtn.addEventListener("click", function() {
+addTextBtn.addEventListener("click", function () {
     let myParentElement = document.querySelector(".buttons");
     let paragraph = document.createElement("p");
     let readMoreline = document.createTextNode("Read more below.");
@@ -107,8 +108,8 @@ addTextBtn.addEventListener("click", function() {
 
 //====================
 let addSomeTxt = document.querySelector("#addTextBtn");
-    addSomeTxt.addEventListener("click", function (){
-    let readMore = document.querySelector(".button"); 
+addSomeTxt.addEventListener("click", function () {
+    let readMore = document.querySelector(".button");
     let paragraphTxt = document.createElement("p");
     readMore.innerText = "This is new text will appear on click of button."
     parent.appendChild(paragraphTxt);
@@ -120,10 +121,10 @@ let addTxtButton = document.querySelector("#addTextBtn"); //#id button element s
 addTxtButton.addEventListener("click", addNewTextToButtonOnClick); //defined the event "click", call the function addNewTextToButtonOnClick
 //create a function for new inner paragraph text that will appear on click
 function addNewTextToButtonOnClick() {
-    let newInnerParagraphTxt = document.createElement("p");//creates a new paragraph element
+    let newInnerParagraphTxt = document.createElement("p"); //creates a new paragraph element
     newInnerParagraphTxt.innerText = "Read more below." //new text added on click of button
     let jumbotron = document.querySelector(".jumbotron"); // select parent for this button = .jumbotron class is the parent    
-    jumbotron.appendChild(newInnerParagraphTxt);  // see comment below. 
+    jumbotron.appendChild(newInnerParagraphTxt); // see comment below. 
 };
 
 //https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild  
@@ -138,7 +139,7 @@ function addNewTextToButtonOnClick() {
 // */
 
 let linkBtn = document.querySelector("#largerLinksBtn");
-    linkBtn.addEventListener("click", function(){
+linkBtn.addEventListener("click", function () {
     let allParagraphs = document.querySelectorAll("a");
     allParagraphs.forEach(links => links.style.fontSize = "165%");
 });
@@ -147,11 +148,9 @@ let linkBtn = document.querySelector("#largerLinksBtn");
 //==========
 
 let largerLinksBtn = document.querySelector("#largerLinksBtn");
-    largerLinksBtn.addEventListener("click", function(){
+largerLinksBtn.addEventListener("click", function () {
     let allAnchorTags = document.querySelectorAll("a");
     for (let i = 0; i < allAnchorTags.length; i++) {
         allAnchorTags[i].style.fontSize = "60px";
     }
 });
-
-
