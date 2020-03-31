@@ -23,7 +23,7 @@ let firstDiv = document.querySelector(".site-header");
 console.log(firstDiv);
 
 let jumbotron1 = document.querySelector("#jumbotron-text");
-console.log(jumbotron);
+console.log(jumbotron1);
 
 let primaryContent = document.querySelector(".primary-content");
 let allPs = primaryContent.querySelectorAll("p");
@@ -42,6 +42,10 @@ console.log(allPs3);
 // When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 // */
 
+let alertButton = document.querySelector("#alertBtn");
+alertButton.addEventListener("click", function() {
+    alert("Thank you for visiting Bikes for Refugees!");
+});
 
 // /*
 // Task 3
@@ -83,7 +87,7 @@ button.addEventListener("click", function() {
     let paragraph = document.createElement("p");
     paragraph.innerText = "Read more below";
     jumbotron.appendChild(paragraph);
-})
+});
 
 
 /*
@@ -93,5 +97,22 @@ Task 5
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
 
-let paragraphs = document.querySelector("body p");
-paragraphs.forEach(element => element.style.backgroundColor = "blue");
+let paragraph = document.querySelector("#largerLinksBtn");
+paragraph.addEventListener("click", largeLink);
+function largeLink() {
+    let links = document.querySelectorAll("a");
+    // for (i=0; i<links.length; i++) {
+    //     links[i].style.fontSize = "200%";
+    // }
+
+    links.forEach(element => element.style.fontSize = "200%");
+    
+    console.log(links);
+}
+
+
+
+
+
+
+// paragraphs.forEach(element => element.style.backgroundColor = "blue"); 
