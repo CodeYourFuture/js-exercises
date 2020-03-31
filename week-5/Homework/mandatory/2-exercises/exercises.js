@@ -15,6 +15,7 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  
 }
 
 /**
