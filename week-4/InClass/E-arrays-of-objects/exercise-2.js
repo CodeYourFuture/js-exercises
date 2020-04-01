@@ -52,11 +52,13 @@ let destinationNameReachableByFerry = travelDestinations.find(destination =>
 ).destinationName; // Complete here
 
 let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
-  .filter(destination => destination.distanceKms > 300)
-  .filter(destination => destination.transportations.includes("train"));
-console
-  .log(destinationNamesMoreThan300KmsAwayByTrain)
-  .map(destination => destination.destinationName); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+  .filter(
+    destination =>
+      destination.distanceKms > 300 &&
+      destination.transportations.includes("train")
+  )
+  .map(destination => destination.destinationName);
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
