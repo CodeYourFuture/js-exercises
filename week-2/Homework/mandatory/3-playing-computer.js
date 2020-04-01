@@ -22,7 +22,7 @@
   Three times.
 
   6. What value does the "a" parameter take in the first "f1" call?
-  Seven.
+  Eight.
 
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
   Eight.
