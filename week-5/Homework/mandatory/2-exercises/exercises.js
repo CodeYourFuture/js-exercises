@@ -15,6 +15,14 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  let h1tag = document.createElement("h1");
+  let h2tag = document.createElement("h2");
+  content.appendChild(h1tag);
+  content.appendChild(h2tag);
+  for (var i = 0; i < arrayOfPeople.length; i++) {
+    document.querySelector("h1").innerHTML += arrayOfPeople[i].name;
+    document.querySelector("h2").innerHTML += arrayOfPeople[i].job;
+  }
 }
 
 /**
@@ -25,6 +33,15 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
+  let content = document.querySelector("#content");
+  var list = document.createElement("ul");
+  content.appendChild(list);
+  shopping.forEach(function(item) {
+    var li = document.createElement("li");
+    li.textContent = item;
+    list.appendChild(li);
+  });
+
   //Write your code in here
 }
 
