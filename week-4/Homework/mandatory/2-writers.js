@@ -40,7 +40,7 @@ let writers = [
 ];
 
 
-writers.forEach(element => console.log("Hi, my name is " + element.firstName + " " +element.lastName + " I am " + element.age + " years old, and work as a " +  element.occupation));
+writers.forEach(element => console.log("Hi, my name is " + element.firstName + " " + element.lastName + " I am " + element.age + " years old, and work as a " +  element.occupation));
 
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive. - filter 
