@@ -72,9 +72,7 @@ let restaurantFinderApplication = {
       .map(resName => resName.name);
   },
   countNumberOfRestaurantsInArea: function(area) {
-    let numInArea = restaurants.filter(num => num.address.area === area);
-    let count = numInArea.length;
-    return count;
+    return restaurants.filter(num => num.address.area === area).length;
   }
 };
 
