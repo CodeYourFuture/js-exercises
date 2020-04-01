@@ -15,16 +15,21 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
-
-
+let pis =  document.querySelectorAll('p');
+console.log(pis);
+let hea =  document.querySelector('.site-header');
+console.log(hea);
 /*
 Task 2
 ======
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
-
-
+let alertBtn = document.getElementById("alertBtn");
+let onClick = function (){
+    alert("Thanks for visiting Bikes for Refugees!");
+}
+alertBtn.addEventListener("click", onClick);
 /*
 Task 3
 =======
