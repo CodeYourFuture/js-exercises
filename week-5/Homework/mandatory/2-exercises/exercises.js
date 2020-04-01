@@ -14,15 +14,25 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
+  // let content = document.querySelector("#content");
+  // let h1tag = document.createElement("h1");
+  // let h2tag = document.createElement("h2");
+  // content.appendChild(h1tag);
+  // content.appendChild(h2tag);
+  // for (var i = 0; i < arrayOfPeople.length; i++) {
+  //   document.querySelector("h1").innerHTML += arrayOfPeople[i].name;
+  //   document.querySelector("h2").innerHTML += arrayOfPeople[i].job;
+  // }
   let content = document.querySelector("#content");
-  let h1tag = document.createElement("h1");
-  let h2tag = document.createElement("h2");
-  content.appendChild(h1tag);
-  content.appendChild(h2tag);
-  for (var i = 0; i < arrayOfPeople.length; i++) {
-    document.querySelector("h1").innerHTML += arrayOfPeople[i].name;
-    document.querySelector("h2").innerHTML += arrayOfPeople[i].job;
-  }
+  arrayOfPeople.forEach(function(item) {
+    let h1tag = document.createElement("h1");
+    let h2tag = document.createElement("h2");
+
+    h1tag.textContent = item.name;
+    h2tag.textContent = item.job;
+    content.appendChild(h1tag);
+    content.appendChild(h2tag);
+  });
 }
 
 /**
