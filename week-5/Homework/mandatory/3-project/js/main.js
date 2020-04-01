@@ -42,3 +42,34 @@ let changeColorGreen = function() {
   changeBtnOCol2.style.color = "white";
 };
 greenBtnEl.addEventListener("click", changeColorGreen);
+
+//Part 2. Register
+let atRegx =/[@]/; 
+let setId = document.querySelector("form button");
+setId.setAttribute("id", "submit");
+let submitEl = document.querySelector("#submit");
+submitEl.addEventListener("click", function(e) {
+  e.preventDefault();
+  let getEmailValue = document.querySelector("#exampleInputEmail1").value;
+  let getPersonNameValue = document.querySelector("#example-text-input").value;
+  let getDescibeValue = document.querySelector("#exampleTextarea").value;
+  let tst = atRegx.test(getEmailValue);
+  console.log(tst);
+  console.log(getEmailValue.length);
+  if (getEmailValue.length <= 0) {
+    let getEmailCol = document.querySelector(".form-control");
+    getEmailCol.style.backgroundColor = "red";
+     if(getPersonNameValue.length <= 0){
+      let getNameCol = document.querySelector("#example-text-input");
+      getNameCol.style.backgroundColor = "red";
+       if(getDescibeValue.length <= 0){
+         let getDesCol = document.querySelector("#exampleTextarea");
+         getDesCol.style.backgroundColor = "red";
+       }
+      }
+  }else{
+    document.querySelector("form").reset();
+    alert("Thank you for filling out the form.")
+  }
+});
+
