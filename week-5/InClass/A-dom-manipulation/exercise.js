@@ -36,15 +36,34 @@ Task 3
 
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
+let changeBtn = document.getElementById("bgrChangeBtn");
+let onClickChange  = function (){
+    
+    document.body.style.backgroundColor = "green";
 
+}
 
+changeBtn.addEventListener("click", onClickChange);
 /*
 Task 4
 ======
 
 When a user clicks the 'Add some text' button, a new paragraph should be added below the buttons that says "Read more below."
 */
+let addTextBtn = document.getElementById("addTextBtn");
+let onClickaddTextBtn  = function (){
+    
+   let newPar = document.createElement("p");
+   console.log(newPar);
+   newPar.innerHTML = ("Read more below.");
+   var jumbotron = document.getElementsByClassName("jumbotron");
+   jumbotron[0].appendChild(newPar);
 
+
+
+}
+
+addTextBtn.addEventListener("click", onClickaddTextBtn);
 
 
 /*
