@@ -36,33 +36,28 @@ btnGreen.addEventListener("click", function() {
     .setAttribute("style", "background-color: #8c9c08; color: white;");
 });
 
+// Part 2
+
 let submit = document.querySelector("form");
 let submitButton = submit.querySelector("button");
 submitButton.addEventListener("click", checkForm);
 let checkAt = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/;
+let emailInput = document.getElementById("exampleInputEmail1");
+let nameInput = document.getElementById("example-text-input");
+let textArea = document.getElementById("exampleTextarea");
 
 function checkEmail() {
-  let emailInput = document.getElementById("exampleInputEmail1").value;
-  return checkAt.test(emailInput);
+  return checkAt.test(emailInput.value);
 }
 
 function checkForm(event) {
-  let emailInput = document.getElementById("exampleInputEmail1").value;
-  let nameInput = document.getElementById("example-text-input").value;
-  let textArea = document.getElementById("exampleTextarea").value;
   event.preventDefault();
-  if (emailInput.length == 0 || !checkEmail() === true) {
-    return document
-      .getElementById("exampleInputEmail1")
-      .setAttribute("style", "background-color: red; color: white");
-  } else if (nameInput === "") {
-    return document
-      .getElementById("example-text-input")
-      .setAttribute("style", "background-color: red; color: white");
-  } else if (textArea === "") {
-    return document
-      .getElementById("exampleTextarea")
-      .setAttribute("style", "background-color: red; color: white");
+  if (emailInput.value.length == 0 || !checkEmail()) {
+    return (emailInput.style.backgroundColor = "red");
+  } else if (nameInput.value.length == 0) {
+    return (nameInput.style.backgroundColor = "red");
+  } else if (textArea.value.length == 0) {
+    return (textArea.style.backgroundColor = "red");
   } else {
     alert("Thank you for filling out the form");
     return submit.requestSubmit();
