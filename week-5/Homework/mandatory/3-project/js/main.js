@@ -47,19 +47,37 @@ let nameInput = document.getElementById("example-text-input");
 let textArea = document.getElementById("exampleTextarea");
 
 function checkEmail() {
-  return checkAt.test(emailInput.value);
+  if (emailInput.value.length == 0 || !checkAt.test(emailInput.value)) {
+    emailInput.style.backgroundColor = "red";
+    return false;
+  } else {
+    emailInput.style.backgroundColor = "white";
+    return true;
+  }
+}
+function checkNameInput() {
+  if (nameInput.value.length == 0) {
+    nameInput.style.backgroundColor = "red";
+    return false;
+  } else {
+    nameInput.style.backgroundColor = "white";
+    return true;
+  }
+}
+function checkTextArea() {
+  if (textArea.value.length == 0) {
+    textArea.style.backgroundColor = "red";
+    return false;
+  } else {
+    textArea.style.backgroundColor = "white";
+  }
+  return true;
 }
 
-function checkForm(event) {
+function checkForm() {
   event.preventDefault();
-  if (emailInput.value.length == 0 || !checkEmail()) {
-    return (emailInput.style.backgroundColor = "red");
-  } else if (nameInput.value.length == 0) {
-    return (nameInput.style.backgroundColor = "red");
-  } else if (textArea.value.length == 0) {
-    return (textArea.style.backgroundColor = "red");
-  } else {
+  if (checkEmail() && checkNameInput() && checkTextArea()) {
     alert("Thank you for filling out the form");
-    return submit.requestSubmit();
+    submit.requestSubmit();
   }
 }
