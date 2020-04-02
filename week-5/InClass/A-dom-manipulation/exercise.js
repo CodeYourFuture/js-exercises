@@ -83,4 +83,4 @@ let onClicklargerLinksBtn  = function (){
 }
 largerLinksBtn.addEventListener("click", onClicklargerLinksBtn);
 
-//this is the latest version
+//this is the latest version v2
