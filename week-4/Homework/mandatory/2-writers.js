@@ -41,7 +41,7 @@ let writers = [
 let onlyAliveWriters = writers.filter(element => element.alive === true)
 
 onlyAliveWriters.forEach(v => console.log("Hi, my name is " + v.firstName+ v.lastName +" I am " +v.age + 
-" years old, and work as a " +v.occupation));
+" years old, and work as a " +v.occupation))
 
 /*
 /*
