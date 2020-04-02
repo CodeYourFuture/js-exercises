@@ -14,7 +14,15 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+  let content = document.getElementById("content");
+  arrayOfPeople.forEach(item => {
+    let createH1 = document.createElement("h1");
+    let createH2 = document.createElement("h2");
+    createH1.textContent = item.name;
+    createH2.textContent = item.job;
+    content.appendChild(createH1);
+    content.appendChild(createH2)}
+  )
 }
 
 /**
@@ -26,7 +34,18 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+
+  let getContent = document.getElementById("content");
+  let createList = document.createElement("ul");
+  getContent.appendChild(createList)
+  for (let i = 0; i<shopping.length; i++){
+  let createEl = document.createElement("li");
+  createEl.innerHTML = shopping[i];
+  createList.appendChild(createEl)
+  }
 }
+
+// }
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -57,13 +76,6 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
-  //Write your code in here
-}
-
-//
-//
-//
 //
 // DO NOT EDIT BELOW HERE
 //
@@ -79,11 +91,11 @@ let people = [
 
 exerciseOne(people);
 
-let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
+ let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
 
-exerciseTwo(shopping);
+ exerciseTwo(shopping);
 
-const books = [
+/*const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
@@ -93,12 +105,13 @@ const books = [
     title: "The Most Human Human",
     author: "Brian Christian",
     alreadyRead: true
+
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
     alreadyRead: true
   }
-];
+];*/
 
-exerciseThree(books);
+// exerciseThree(books);
