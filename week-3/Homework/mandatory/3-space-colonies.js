@@ -8,8 +8,12 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(arr) {
+  const  query = "family";
+  const result = arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+  const result1 = result.filter(Element => Element.charAt(0) === `A` || Element.charAt(0) === 'a');
+  console.log(result1);
+  return result1;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

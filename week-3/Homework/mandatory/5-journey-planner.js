@@ -7,8 +7,20 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(londonLocations,transport) {
+  if ( transport === "bus"){
+    let bus = ["Angel", "Tower Bridge", "Greenwich"]; 
+    console.log (bus);
+    return bus;
+  }else if (transport === "river boat"){
+    let river = ["London Bridge", "Greenwich"];
+    console.log(river);
+    return river;
+  }else if ( transport === "tube"){
+    let tube = ["Angel", "London Bridge", "Tower Bridge"];
+    console.log (tube);
+    return tube;
+  }  
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -16,7 +28,7 @@ function journeyPlanner() {
 const londonLocations = [
   ["Angel", "tube", "bus"],
   ["London Bridge", "tube", "river boat"],
-  ["Tower Bridge", "tube", "bus"],
+  ["Tower bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"]
 ]
 

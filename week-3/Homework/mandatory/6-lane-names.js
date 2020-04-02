@@ -4,8 +4,11 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
-
+function getLanes(streetNames) {
+    const  query = "Lane";
+    const result = streetNames.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1);
+    console.log(result);
+ return result;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
