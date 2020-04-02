@@ -11,12 +11,20 @@ We made a start on this for you here:
 let bottle = {
   volume: 0,
   fill: function() {
+    bottle.volume = 100;
+    console.log('Bottle is full now ' + bottle.volume );
     // calling this function should make you bottles volume = 100;
   },
   drink: function() {
+   bottle.volume -= 10; 
+   console.log('Drinking and Bottle now ' + bottle.volume );
     // calling this function should decrease your bottles volume by 10;
   },
   empty: function() {
+    if (bottle.volume === 0 ){ 
+    console.log('Bottle is empty now ' ); 
+    return true;
+  }
     // this function should return true if your bottles volume = 0
   }
 };
