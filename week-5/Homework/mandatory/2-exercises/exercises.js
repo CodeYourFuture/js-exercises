@@ -13,10 +13,20 @@
  *      .....
  * </div>
  */
+// let content = document.createElement("div");
+//     content.id = "content";
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-}
-
+  arrayOfPeople.map(function(man){
+    var h1 = document.createElement("h1");
+    let name  = content.appendChild(h1);
+    name.innerHTML = (man.name);
+    var h2 = document.createElement("h2");
+    let job  = content.appendChild(h2);
+    job.innerHTML = (man.job);
+  })
+};
+   
 /**
  *
  * Create a list of shopping items. You should use an unordered list.
@@ -25,6 +35,14 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
+  var ul = document.createElement("ul");
+  content.appendChild(ul);
+  shopping.map(function(item){
+  let li = document.createElement("li");
+  ul.appendChild(li);
+  li.innerHTML = item;
+  })
+
   //Write your code in here
 }
 
