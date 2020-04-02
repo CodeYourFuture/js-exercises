@@ -76,6 +76,47 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
+    let urlS =["https://lh3.googleusercontent.com/_QRovMnva2jNHn0nryD_MSMAim3SfSeOvVdbUBTUQnn3HS7Wp7jdlFGA37m3j5rY01T3KQZqGCGIIw=s200-rw","https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg", "https://images-na.ssl-images-amazon.com/images/I/418M2053aNL.jpg"];
+    let p = document.createElement("p");
+    content.appendChild(p);
+    let ul2 = document.createElement("ul");
+    p.appendChild(ul2);
+    books.map(function(book,index){
+      let li = document.createElement("li");
+      ul2.appendChild(li);
+      id = book.name
+      li.id =`${book.title}`;
+      li.innerHTML = (book.title +"  "+"♫"+"  "+ book.author)
+
+      let img = document.createElement("img");
+      li.appendChild(img);
+      img.style.height = "200px";
+      img.src = urlS[index];
+      ul2.style.display = "inline-flex";
+      ul2.style.flexWrap="wrap";
+  
+      li.style.display = "listItem";
+      li.style.padding = "10px";
+      img.style.padding = "20px";
+      
+      li.style.width = "350px";
+      li.style.margin = "20px";
+      li.style.width = "350px";
+      ul2.style.listStyle = "none";
+      ul2.style.width = "100%";
+
+      if(book.alreadyRead){
+        li.style.backgroundColor = "green";
+        }
+        else{
+          li.style.backgroundColor = "red";
+
+        }
+        
+    })
+  
+    
+
   //Write your code in here
 }
 
