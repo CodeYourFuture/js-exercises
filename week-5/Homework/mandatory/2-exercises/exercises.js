@@ -99,41 +99,45 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
-  let page = document.getElementById("content");
   let bookTitle = books.map(book => `${book.title}: ${book.author}`);
-  let bookAuthor = books.map(book => book.author);
-  let RorNot = books.map(read => read.alreadyRead === true ? `green` : `red`);
-  console.log(RorNot);
+  let RorN = books.map(read => (read.alreadyRead === true ? `green` : `red`));
+  // console.log(RorNot);
   let ulEl = document.createElement("ul");
-  for(let i = 0; i < books.length; i++){
-    books[i] = document.createElement("p");
-    let pEl = document.body.appendChild(books[i]);
-    pEl.innerText = bookTitle[i];
+  let content = document.getElementById("content");
+  content.appendChild(ulEl);
+  ulEl.style.display = "flex"
+  ulEl.style.justifyContent = "space-between";
+  for (let i = 0; i < books.length; i++) {
     books[i] = document.createElement("li");
-     
-    let singlebook = document.body.appendChild(ulEl.appendChild(books[i]));
-   
+    let listItem = books[i];
+    // let pEl = ulEl.appendChild(books[i]);
+    ulEl.appendChild(listItem);
+    listItem.style.listStyleType = "none";
+    books[i] = document.createElement("p");
+    let pEl = books[i];
+    listItem.appendChild(pEl);
+    pEl.style.color = "white"
+    pEl.innerText = bookTitle[i];
     books[i] = document.createElement("img");
+    let imgs = books[i];
+    listItem.appendChild(imgs);
     
-    books[0].src = "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg";
-    books[1].src= "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg";
-    books[2].src = "https://images-na.ssl-images-amazon.com/images/I/51cUVaBWZzL._SX380_BO1,204,203,200_.jpg"; 
     
-    let singleBookLink = singlebook.appendChild(books[i]);
-    let paints = document.getElementsByTagName("img")
-    for(let m = 0; m< paints.length; m++){
-      //var img = paints[m];
-      paints.item(0).setAttribute("style", "border: 5px solid dodgerblue")
-      //paints.item(1).setAttribute("style", "border: 5px solid dodgerblue")
+    books[0].src =
+      "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg";
+    books[1].src =
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg";
+    books[2].src =
+      "https://images-na.ssl-images-amazon.com/images/I/51cUVaBWZzL._SX380_BO1,204,203,200_.jpg";
+
+      if(RorN[i] === 'red'){
+         listItem.style.backgroundColor = "red"}else{
+         listItem.style.backgroundColor = "green";}
+    
       
-    }
-    console.log(paints.item(0), paints.item(1), paints.item(2))
-    console.log(paints);
-    // books[0].style.border = "10px dashed red";
-    // books[1].style.border = "10px dashed green";
-    
-    
   }
+  
+  
 }
 
 
