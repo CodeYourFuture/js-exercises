@@ -13,8 +13,11 @@
  *      .....
  * </div>
  */
+let arrayOfPeople = [Tom, Joe, Michel, Dave]
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  let arrayOfJob = [Driver, Engineer, Shopkeeper, Postman];
+
 }
 
 /**
