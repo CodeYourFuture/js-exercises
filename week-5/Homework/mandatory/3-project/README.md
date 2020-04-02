@@ -9,20 +9,20 @@ Clicking on the buttons should change the "theme" of the website:
 
 - When clicking **blue** it should change:
 
-  - **Jumbotron** background color to `#588fbd`
-  - **Donate a bike** button background color to `#ffa500`
-  - **Volunteer** button background color to `black` and text color to `white`
+  - **Jumbotron** background color to `#588fbd` done
+  - **Donate a bike** button background color to `#ffa500` done
+  - **Volunteer** button background color to `black` and text color to `white` done
 
 - When clicking **orange** it should change:
 
-  - **Jumbotron** background color to `#f0ad4e`
-  - **Donate a bike** button background color to `#5751fd`
-  - **Volunteer** button background color to `#31b0d5` and text color to `white`
+  - **Jumbotron** background color to `#f0ad4e` done
+  - **Donate a bike** button background color to `#5751fd` done
+  - **Volunteer** button background color to `#31b0d5` and text color to `white` done
 
 - When clicking **green** it should change:
-  - **Jumbotron** background color to `#87ca8a`
-  - **Donate a bike** button background color to `black`
-  - **Volunteer** button background color to `#8c9c08`
+  - **Jumbotron** background color to `#87ca8a` done
+  - **Donate a bike** button background color to `black` done
+  - **Volunteer** button background color to `#8c9c08` done
 
 Here's an example of how the website should look for the blue button:
 
@@ -36,8 +36,9 @@ Continue working in `./js/main.js` to add the following functionality:
 
 When the submit button is pressed, it should check that all the form fields are valid:
 
-- The **Your name**, **Email** and **Describe yourself** fields need to be non-empty (Hint: their `value` length has to be greater than zero)
-- For the **Email** field also check if it contains the `@` character
+- The 
+**Your name**, **Email** and **Describe yourself** fields need to be non-empty (Hint: their `value` length has to be greater than zero)
+- For the **Email** field also check if it contains the `@` character // done
 
 For all the fields that invalid, it should make their background color `red`.
 IF all the fields are valid, when you click **Submit** it should:

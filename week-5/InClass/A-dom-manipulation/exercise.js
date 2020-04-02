@@ -62,7 +62,7 @@ let changeColor = document.querySelector("#bgrChangeBtn");
 changeColor.addEventListener("click", changeBgr);
 
 function changeBgr() {
-    document.body.style.backgroundColor = "palegreen";
+    document.body.style.backgroundColor = "green";
 };
 
 /*
@@ -116,7 +116,7 @@ addSomeTxt.addEventListener("click", function () {
 });
 
 
-// //======================
+//======================
 let addTxtButton = document.querySelector("#addTextBtn"); //#id button element selected
 addTxtButton.addEventListener("click", addNewTextToButtonOnClick); //defined the event "click", call the function addNewTextToButtonOnClick
 //create a function for new inner paragraph text that will appear on click
@@ -143,7 +143,6 @@ linkBtn.addEventListener("click", function () {
     let allParagraphs = document.querySelectorAll("a");
     allParagraphs.forEach(links => links.style.fontSize = "165%");
 });
-
 
 //==========
 
