@@ -13,10 +13,22 @@
  *      .....
  * </div>
  */
-let arrayOfPeople = [Tom, Joe, Michel, Dave]
+
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-  let arrayOfJob = [Driver, Engineer, Shopkeeper, Postman];
+  console.log(document);
+
+ for(let i = 0; i < arrayOfPeople.length; i++) {
+  let myEle1 = document.createElement("h1");
+  let myEle2 = document.createElement("h2");
+  myEle1.innerHTML = arrayOfPeople[i].name;
+  myEle2.innerHTML = arrayOfPeople[i].job;
+  console.log(myEle1);
+  content.appendChild(myEle1)
+  content.appendChild(myEle2)
+  
+  
+  }
 
 }
 
@@ -29,6 +41,19 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  console.log(document);
+  let myUl = document.createElement("ul");
+  content.appendChild(myUl);
+ for(let i = 0; i < shopping.length; i++) {
+  let myEle1 = document.createElement("li");
+  myEle1.innerHTML = shopping[i];
+  console.log(myEle1);
+  myUl.appendChild(myEle1);
+
+  
+  
+  }
 }
 
 /**
