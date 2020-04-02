@@ -5,14 +5,14 @@ function addNumbers(a, b, c) {
 }
 
 function introduceMe(name, age){
-return "Hello, my name is " + name + "and I am " + age + "years old";
+    return "Hello, my name is " + name + " and I am " + age + " years old";
 }
 function getRemainder(a, b) {
     
-    remainder = a % b;
+   let remainder = a % b;
 
     // Use string interpolation here
-    return "The remainder is %{remainder}"
+    return "The remainder is " +remainder;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -8,6 +8,7 @@
 
 function colonisers(arr) {
     var filter = arr.filter(element => element.includes("family")).filter(element => element[0] === "A");
+    return filter;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

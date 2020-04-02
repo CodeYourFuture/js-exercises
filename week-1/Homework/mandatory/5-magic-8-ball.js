@@ -47,7 +47,7 @@ Very doubtful.
 // and return the answer.
 function shakeBall() {
   console.log("The ball has shaken!");
-  let answers = answer[Math.floor(Math.random() * answer.length)];
+  let answers = Math.floor(Math.random() * answer.length);
 }
 
 let check = shakeBall();

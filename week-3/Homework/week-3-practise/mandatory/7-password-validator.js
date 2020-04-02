@@ -17,12 +17,15 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
-    for(var i = 0; i < passwords.length; i++){
-    if(passwords[i].length>=5 && passwords[i].test(/[A-Z]/) && passwords[i].test(/[a-z]/) && passwords.test(/(0-9/)) &){
-        return true;
+   passwords.filter(password => { 
+    if(passwords[i].length>=5 && passwords[i].test(/[A-Z]/) && passwords[i].test(/[a-z]/) && passwords.test(/[0-9/]) {
+      
+    
     }
-  }
-}
+
+  } 
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

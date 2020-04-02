@@ -6,7 +6,9 @@
 */
 
 function calculateSalesTax(price) {
-    return (price) * 20 / 100;
+    let calculatePercentage = (price/ 100) * 20;
+    let newPrice = price + calculatePercentage;
+    return newPrice;
 }
 
 /*
@@ -20,7 +22,8 @@ function calculateSalesTax(price) {
 */
 
 function formatCurrency(price) {
-   return price * 0.78;
+  let currency = calculateSalesTax(price).toFixed(2);
+  return '£' + currency;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -7,10 +7,12 @@
   */
   function tidyUpString(strArr) {
       
-          for(var i = 0; i < strArr.length; i++) {
-              strArr[i].trim();
-              strArr[i].split("/").join(""); 
+      for(var i = 0; i < strArr.length; i++) {
+              strArr[i].replace(/\s/g, ' ');
+              strArr[i].split("/").join(" ");
               strArr[i].toLowerCase();
+              
+        
           }
           return strArr;
         
@@ -27,14 +29,16 @@
   function validate(num) {
       if (typeof num === "number")
       {
-          return "it is a number";
+          return true;
       }
-          else if (num <= 100 && num > 0) 
+          else if (num <= 100) 
           {
             return true;
-          } else if(num%2==0)
+
+          } 
+          else if(num%2==0)
           {
-            return false;
+            return true;
           }
         
   }
@@ -67,17 +71,19 @@
   function formatPercentage(arr) {
       for(var i = 0; i < arr.length; i++)
       {
-          if(arr[i]>100){
+          if(arr[i]>100)
+          {
               arr[i]=100;
               
           }
-          else if(arr[i]){
-              arr[i] = `${arr[i]}%`;
-              arr[i].toFixed(2);
+          else
+          {
+              arr[i] = "${arr[i]}%";
+              //arr[i].toFixed(2);
           }
     
       }
-    
+    return arr;
   }
 
   /* ======= TESTS - DO NOT MODIFY ===== */

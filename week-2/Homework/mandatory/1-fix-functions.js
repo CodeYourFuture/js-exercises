@@ -2,25 +2,25 @@
 // Look at the tests and see how you can fix them.
 
 function mood() { //creating a function called mood
-    let isHappy = true; //assigning boolean variables either true or false
-    let isHappy = false;
+    let isHappy = false; //assigning boolean variables to true
+    //let isHappy = false;
   
     if (isHappy) { //conditional statement checks if it is true
       return "I am happy";
     } 
     else { //other posibility is not true
-      return "I am not hapipy";
+      return "I am not happy";
     }
   }
 
-  console.log(mood()); 
+  //console.log(mood()); 
   
  //creating a function called greateThan10
   function greaterThan10() {
     let num = 10; //setting variables num and isBigEnough
-    let isBigEnough;
+    let isBigEnough = true;
 
-  function greaterThan10(num){
+  
     if (isBigEnough) {
       return "num is greater than or equal to 10";
     }
@@ -31,7 +31,7 @@ function mood() { //creating a function called mood
       return "num is not big enough";
     }
   }
-}
+
 
 
 console.log(greaterThan10(5));
@@ -50,10 +50,9 @@ console.log(greaterThan10(5));
   }
   
   function get3rdIndex(arr) {
-    let index = 3;
-    let element = [0,1,2,3,4];
-    element[2];
-    return element;
+    //let element = [0,1,2,3,4];
+    let index = arr[3];
+    return index;
   }
   
   /* ======= TESTS - DO NOT MODIFY ===== */

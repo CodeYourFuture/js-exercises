@@ -10,12 +10,14 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 function safeLevels(arr) {
     for(var i = 0; i < arr.length; i++)
     {
-        if(arr[i]>19.5 && arr[i]<23.5){
-             return true;
+        if(arr[i]>19.5 && arr[i]<23.5)
+        {
+             
         }
     }
+    return true;
 }
-
+/*
 console.log(safeLevels(oxygenLevels1));
 console.log(safeLevels(oxygenLevels2));
 

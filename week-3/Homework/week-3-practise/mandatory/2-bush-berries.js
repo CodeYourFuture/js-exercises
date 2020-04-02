@@ -19,7 +19,7 @@ function bushChecker(arr) {
 }
 //method above is good but I would like to learn how to effectively use filter method to return "pink"
 
-console.log(bushChecker(bushBerryColours1));
+//console.log(bushChecker(bushBerryColours1));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
