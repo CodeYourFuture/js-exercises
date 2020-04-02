@@ -14,15 +14,6 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  // let content = document.querySelector("#content");
-  // let h1tag = document.createElement("h1");
-  // let h2tag = document.createElement("h2");
-  // content.appendChild(h1tag);
-  // content.appendChild(h2tag);
-  // for (var i = 0; i < arrayOfPeople.length; i++) {
-  //   document.querySelector("h1").innerHTML += arrayOfPeople[i].name;
-  //   document.querySelector("h2").innerHTML += arrayOfPeople[i].job;
-  // }
   let content = document.querySelector("#content");
   arrayOfPeople.forEach(function(item) {
     let h1tag = document.createElement("h1");
@@ -42,6 +33,7 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
+
 function exerciseTwo(shopping) {
   let content = document.querySelector("#content");
   var list = document.createElement("ul");
@@ -84,8 +76,49 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+// const books = [
+//   {
+//     title: “The Design of Everyday Things”,
+//   author: “Don Norman”,
+//   alreadyRead: false
+//   },
+// {
+//   title: “The Most Human Human”,
+//   author: “Brian Christian”,
+//   alreadyRead: true
+// },
+// {
+//   title: “The Pragmatic Programmer”,
+//   author: “Andrew Hunt”,
+//   alreadyRead: true
+// }
+// ];
+let url1 =
+  "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg";
+let url2 =
+  "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg";
+let url3 =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvVg-9fpJlcF2GWF2Vd5c181LSCsT9VwZkT844SmzohNLtyRGcwIKvn43eLLx4biDzCfg_YwDi&usqp=CAc";
+let urls = [url1, url2, url3];
 function exerciseThree(books) {
-  //Write your code in here
+  let list = document.createElement("ul");
+  let content = document.querySelector("#content");
+  content.appendChild(list);
+  let urls = [url1, url2, url3];
+  for (i = 0; i < books.length; i++) {
+    let listItem = document.createElement("li");
+    listItem.style.width = "400px";
+    list.appendChild(listItem);
+    let parEl = document.createElement("p");
+    listItem.appendChild(parEl);
+    parEl.innerHTML = `${books[i].title} - ${books[i].author}`;
+    let image = document.createElement("img");
+    listItem.appendChild(image);
+    image.src = urls[i];
+    books[i].alreadyRead
+      ? (listItem.style.backgroundColor = "green")
+      : (listItem.style.backgroundColor = "red");
+  }
 }
 
 //
