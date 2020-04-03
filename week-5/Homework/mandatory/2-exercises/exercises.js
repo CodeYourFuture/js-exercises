@@ -13,14 +13,17 @@
  *      .....
  * </div>
  */
+let content = document.querySelector('#content');
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  arrayOfPeople.forEach( person => {let h1Element = document.createElement("h1")
-  let h2Element = document.createElement("h2")
-  content.appendChild(h1Element)
-  content.appendChild(h2Element)
-  h1Element.innerHTML = person.name;
-  h2Element.innerHTML = person.job;} );}
+  arrayOfPeople.forEach(person => {
+    let h1Element = document.createElement('h1');
+    let h2Element = document.createElement('h2');
+    content.appendChild(h1Element);
+    content.appendChild(h2Element);
+    h1Element.innerHTML = person.name;
+    h2Element.innerHTML = person.job;
+  });
+}
 
 /**
  *
@@ -30,7 +33,22 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
+  let unorderedListElement = document.createElement('ul');
+  shopping.forEach(shoppingItem => {
+    //create new li element
+    let newNumberListItem = document.createElement('li');
+
+    //create new text node
+    let numberListValue = document.createTextNode(shoppingItem);
+
+    //add text node to li element
+    newNumberListItem.appendChild(numberListValue);
+
+    //add new list element built in previous steps to unordered list
+    //called numberList
+    unorderedListElement.appendChild(newNumberListItem);
+    content.appendChild(unorderedListElement);
+  });
 }
 
 /**
@@ -63,7 +81,26 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  //Write your code in here
+  let booksList = document.createElement('ul');
+  books.forEach(book => {
+    let pElement = document.createElement('p');
+    pElement.innerHTML = book.title + ' - ' + book.author;
+    document.body.appendChild(pElement);
+    let bookItem = document.createElement('li');
+    let bookImg = document.createElement('img');
+    bookImg.src = book.url;
+    bookItem.appendChild(bookImg);
+    pElement.appendChild(bookItem);
+    if (book.alreadyRead) {
+      bookItem.style.color = 'green';
+      pElement.style.color = 'green';
+
+    } else {
+      bookItem.style.color = 'red';
+    }
+    booksList.appendChild(bookItem);
+  });
+  document.body.appendChild(booksList);
 }
 
 //
@@ -77,33 +114,36 @@ function exerciseThree(books) {
 //
 
 let people = [
-  { name: "Chris", job: "Teacher" },
-  { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+  {name: 'Chris', job: 'Teacher'},
+  {name: 'Joanna', job: 'Student'},
+  {name: 'Boris', job: 'Prime Minister'},
 ];
 
 exerciseOne(people);
 
-let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
+let shopping = ['Milk', 'Break', 'Eggs', 'A Dinosaur', 'Cake', 'Sugar', 'Tea'];
 
 exerciseTwo(shopping);
 
 const books = [
   {
-    title: "The Design of Everyday Things",
-    author: "Don Norman",
-    alreadyRead: false
+    title: 'The Design of Everyday Things',
+    author: 'Don Norman',
+    alreadyRead: false,
+    url: 'http://ecx.images-amazon.com/images/I/41j2ODGkJDL._AA115_.jpg',
   },
   {
-    title: "The Most Human Human",
-    author: "Brian Christian",
-    alreadyRead: true
+    title: 'The Most Human Human',
+    author: 'Brian Christian',
+    alreadyRead: true,
+    url: 'http://ecx.images-amazon.com/images/I/41Z56GwEv9L._AA115_.jpg',
   },
   {
-    title: "The Pragmatic Programmer",
-    author: "Andrew Hunt",
-    alreadyRead: true
-  }
+    title: 'The Pragmatic Programmer',
+    author: 'Andrew Hunt',
+    alreadyRead: true,
+    url: 'http://ecx.images-amazon.com/images/I/41Z56GwEv9L._AA115_.jpg',
+  },
 ];
 
 exerciseThree(books);
