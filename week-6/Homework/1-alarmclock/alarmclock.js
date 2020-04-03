@@ -1,6 +1,4 @@
-function setAlarm() {
-  //Write you code inside here
-}
+function setAlarm() {}
 
 // DO NOT EDIT BELOW HERE
 
