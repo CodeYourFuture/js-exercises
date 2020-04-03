@@ -11,16 +11,25 @@
 */
 
 
-let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
-let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+//let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
+//let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
 
 
-let bushChecker = bushBerryColours1.filter(function (item) {
 
-  if item === "pink"
-     return ("Bush is safe to eat from");     
+function bushChecker(arr) {
+  let safeBerries = arr.every(element => element === "pink");
 
-});
+  if (safeBerries){
+   //
+    console.log( " Bush is safe to eat from ")//when i didn't put this one it wasn't work why?
+    return " Bush is safe to eat from"
+  }
+  return "Toxic! Leave bush alone!";
+}
+//test: /Users/User1/Documents/GitHub/js-exercises/week-3/Homework/mandatory/2-bush-berries.js
+//bushChecker funtion works - case 1: PASSED
+// Bush is safe to eat from 
+//bushChecker funtion works - case 1: FAILED
 
 
 

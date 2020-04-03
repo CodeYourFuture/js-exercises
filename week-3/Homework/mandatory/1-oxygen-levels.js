@@ -13,7 +13,8 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 //let oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]
 
 
-function safePlanet(arr) {
+function safePlanet(oxygenLevels ) {
+  
   let firstOxygenLevelFound = oxygenLevels.find ( e => e > "19.5%" && e < "23.5%" );
      
   return firstOxygenLevelFound;
