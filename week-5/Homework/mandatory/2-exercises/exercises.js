@@ -87,6 +87,22 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  console.log(document);
+  let paragraphEle = document.createElement("p");
+  content.appendChild(paragraphEle);
+  let ulEle = document.createElement("ul");
+  paragraphEle.appendChild(ulEle);
+  for(let i = 0; i < books.length; i++) {
+  let liEleTitle = document.createElement("li");
+  let liEleAuthor = document.createElement("li")
+  liEleTitle.innerHTML = books[i].title;
+  liEleAuthor.innerHTML = books[i].author;
+  console.log(liEleTitle);
+  ulEle.appendChild(liEleTitle);
+  ulEle.appendChild(liEleAuthor);
+
+  }
 }
 
 //
