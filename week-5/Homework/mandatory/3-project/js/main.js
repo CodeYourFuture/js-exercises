@@ -50,3 +50,22 @@ submitButton.addEventListener ('click', function () {
     alert ('Thank You for filling out the form');
   }
 });
+
+// let configs=[
+//   {id:'#blueBtn',colors:['#588fbd','#ffa500','black','white']},
+//   {id:'#orangeBtn',colors:['#f0ad4e','#5751fd','#31b0d5','white']},
+//   {id:'#greenBtn',colors:['#87ca8a','black','#8c9c08','white']}
+// ];
+// configs.forEach(({id,colors}) => registerButtonToChangeTheme(id,colors));
+
+// function registerButtonToChangeTheme(buttonId,arrayOfColors) {
+//  document.querySelector(buttonId).addEventListener("click",() => changeTheme(...arrayOfColors));
+// }
+
+// function changeTheme(color1,color2,color3,color4) {
+//   document.querySelector('.Jumbotron').style.backgroundColor = color1;
+//   document.querySelector('.buttons .btn-primary').style.backgroundColor = color2;
+//   let volunteerButton = document.querySelector('.btn-secondary');
+//   volunteerButton.style.backgroundColor = color3;
+//   volunteerButton.style.color = color4;
+// }
