@@ -20,7 +20,7 @@ Only read this section if you really need to! It's good to work this out for you
 
 ### Hints
 
-- Have you tried lookng at the `setInterval` function?
+- Have you tried looking at the `setInterval` function?
 
 ### Steps to complete
 
