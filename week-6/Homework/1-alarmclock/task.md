@@ -10,4 +10,14 @@ When you click the `Set Alarm` button the counter at the top of the screen shoul
 
 Every one second the title should count down by one.
 
-When the `Time Remaining` reaches `00:00` the alarm should play a sound. You can make the sound happen by using `playAlarm()`
+When the `Time Remaining` reaches `00:00` the alarm should play a sound. You can make the sound happen by using `playAlarm()`.
+
+You can stop the alarm sound by pressing the `Stop Alarm` button.
+
+## Extra Tasks
+
+If you have time and want to do more why not try
+
+- Make the background change color when the alarm clock finishes
+  - Try making the background flash!
+- Could you add `pause` functionality so that the count down stops and then you restart it later?
