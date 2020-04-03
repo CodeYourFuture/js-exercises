@@ -50,18 +50,16 @@ form.onsubmit = function (event) {
     console.log("hello");
     if (emailText.length === 0 || !emailText.includes("@")) { //had to change line 71 to be able to validate the email <input type=""
         inputEmail.style.background = "red";
-    }
-    if (nameText.length === 0) {
+    } else if (nameText.length === 0) {
         inputName.style.background = "red";
-    }
-    if (descriptionText.length === 0) {
+    } else if (descriptionText.length === 0) {
         inputDescribeYourself.style.background = "red";
     } else {
-        inputEmail.style.background === "white" && inputName.style.background === "white" && inputDescribeYourself.style.background === "white";
+        inputEmail.style.background === "white";
     }
 
     event.preventDefault();
-    console.log(emailText);
+    //console.log(emailText);
 };
 
 // for(let i = 0; i < submit.length; i++) {
