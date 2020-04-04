@@ -25,3 +25,26 @@ function ChangeColor2() {
   document.querySelector(".buttons .btn-secondary").style.background =
     "#8c9c08";
 }
+
+let submitBtn = document.querySelector("form .btn");
+submitBtn.addEventListener("click", CheckForm);
+function CheckForm(e) {
+  e.preventDefault();
+  let email = document.querySelector("#exampleInputEmail1");
+  let name = document.querySelector("#example-text-input");
+  let describe = document.querySelector("#exampleTextarea");
+  let form = [email, name, describe];
+  let a = !email.value.length > 0 || !email.value.includes("@");
+  let b = !name.value.length > 0;
+  let c = !describe.value.length > 0;
+  let abc = [a, b, c];
+  for (i = 0; i < abc.length; i++) {
+    if (abc[i]) {
+      form[i].style.background = "red";
+    }
+  }
+  if (!a && !b && !c) {
+    alert("Thank you for filling out the form");
+    document.querySelector("form").reset();
+  }
+}
