@@ -49,6 +49,7 @@ let textArea = document.getElementById("exampleTextarea");
 function checkEmail() {
   if (emailInput.value.length == 0 || !checkAt.test(emailInput.value)) {
     emailInput.style.backgroundColor = "red";
+    MessageChannel();
     return false;
   } else {
     emailInput.style.backgroundColor = "white";
