@@ -37,13 +37,16 @@ Continue working in `./js/main.js` to add the following functionality:
 When the submit button is pressed, it should check that all the form fields are valid:
 
 - The 
-**Your name**, **Email** and **Describe yourself** fields need to be non-empty (Hint: their `value` length has to be greater than zero)
+**Your name**, 
+**Email** and 
+**Describe yourself** 
+fields need to be non-empty (Hint: their `value` length has to be greater than zero)
 - For the **Email** field also check if it contains the `@` character // done
 
 For all the fields that invalid, it should make their background color `red`.
-IF all the fields are valid, when you click **Submit** it should:
+IF all the fields are valid, when you click **Submit** it should: 
 
 - Display an alert to thank you for filling out the form (at the end of the process)
-- Blank out (make empty) all the text fields
+- When press OK then the form should reset and it should be Blank and all text fields should be empty
 
 **Important hint:** In your function that handles clicks on the `Submit` button you will need to call `event.preventDefault()` to stop the browser from refreshing the page. To read more on how to do this: https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault
