@@ -1,35 +1,44 @@
 /*
   SALES TAX
   =========
-  A business requires a program that calculates how much sales tax to charge
+  A business requires a program  that calculates how much sales tax to charge
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(price) {
+    //let salesTax = 20 / 100;
+    //let totalPrice = price + salesTax;
+    return price * 20 / 100 + price;
+}
+console.log(calculateSalesTax(15));
 
 /*
   CURRENCY FORMATTING
   ===================
   The business has informed you that prices must have 2 decimal places
   They must also start with the currency symbol
-  Write a function that transforms numbers into the format £0.00
+  Write a function that transforms numbers into the format 0.00£
 
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
-
+function formatCurrency(price) {
+    return `£${calculateSalesTax(price).toFixed(2)}`;
+}
+let price = 15;
+console.log(price.toFixed(2));
+console.log(formatCurrency(15));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
-  let status;
-  if (expr) {
-      status = "PASSED"
-  } else {
-      status = "FAILED"
-  }
+    let status;
+    if (expr) {
+        status = "PASSED"
+    } else {
+        status = "FAILED"
+    }
 
-  console.log(`${test_name}: ${status}`)
+    console.log(`${test_name}: ${status}`)
 }
 
 test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18)
