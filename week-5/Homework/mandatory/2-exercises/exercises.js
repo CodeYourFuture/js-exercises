@@ -15,7 +15,19 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+
+  arrayOfPeople.forEach( x => {
+    let createH1 = document.createElement("h1");
+    let createH2 = document.createElement("h2");
+    content.appendChild(createH1);
+    content.appendChild(createH2);
+    
+  createH1.textContent = x.name
+  createH2.textContent = x.job
+   })
+
 }
+
 
 /**
  *
@@ -26,6 +38,13 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let createUl = document.createElement("ul");
+  content.appendChild(createUl)
+  shopping.forEach(x => { 
+    let defineList = document.createElement("li")
+    createUl.appendChild(defineList)
+    defineList.textContent = x;})
 }
 
 /**
@@ -59,6 +78,44 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let createUl = document.createElement("ul")
+    content.appendChild(createUl)
+    
+    createUl.style.display = "flex"
+    createUl.style.justifyContent ="space-around"
+    createUl.style.listStyleType ="none"
+
+  books.forEach(x => {
+    let createLi = document.createElement("li")
+    createUl.appendChild(createLi)
+    let createP = document.createElement("p")
+    createLi.appendChild(createP)
+    createP.textContent = `${x.title} - ${x.author} `
+
+   let createImage = document.createElement("img")
+    createLi.appendChild(createImage)
+    let createSrc = document.createAttribute("src")
+    createImage.setAttributeNode(createSrc)
+    let createHeight = document.createAttribute("height")
+    createImage.setAttributeNode(createHeight)
+    createHeight.value = "300px"
+    
+
+    if (x.title.includes("Design")){
+      createSrc.value = "https://image.ebooks.com/previews/095/095767/095767915/095767915-hq-168-80.jpg"
+    }else if (x.title.includes("Human")){
+      createSrc.value ="https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg"
+    }else {
+      createSrc.value = "https://blackwells.co.uk/jacket/l/9780201616224.jpg"
+    }
+
+
+    x.alreadyRead ? createLi.style.backgroundColor = "green" : createLi.style.backgroundColor = "red";
+
+  })
+
+
 }
 
 //
