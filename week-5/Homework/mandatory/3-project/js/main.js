@@ -70,7 +70,7 @@ function CheckForm(e) {
     let describe = document.querySelector("#exampleTextarea");
     let form = [email,name,describe]
 
-    let a = !email.value.length > 0 && !email.value.includes("@")
+    let a = (!email.value.length > 0 || !email.value.includes("@"))
     let b = !name.value.length > 0
     let c = !describe.value.length > 0
 
