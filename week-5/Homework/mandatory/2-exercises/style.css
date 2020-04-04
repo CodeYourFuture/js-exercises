@@ -8,7 +8,7 @@
 
 html,
 body {
-	font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+	font-family: "Source Sans Pro", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .site-footer {
@@ -21,7 +21,7 @@ body {
 	padding-bottom: 2em;
 }
 
-.navbar-brand > img {
+.navbar-brand>img {
 	max-height: 40px;
 	width: auto;
 }
@@ -129,18 +129,18 @@ body {
 
 #addArticleBtn {
 	margin-left: 20px;
-    height: 37px;
+	height: 37px;
 }
 
 .colorButton {
 	margin-bottom: 20px;
-    margin-right: 20px;
-    width: 100px;
-    height: 50px;
+	margin-right: 20px;
+	width: 100px;
+	height: 50px;
 }
 
 #blueBtn {
-    background: #588fbd;
+	background: #588fbd;
 }
 
 #orangeBtn {
@@ -153,7 +153,37 @@ body {
 
 @media screen and (min-width: 992px) {
 
-	.navbar-brand > img {
-	   max-height: 80px;
+	.navbar-brand>img {
+		max-height: 80px;
 	}
+}
+
+.books-list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	width: calc(100% - 41px);
+}
+
+.book {
+	width: calc(25% - 51px);
+	margin: 15px;
+	padding: 10px;
+	min-width: 350px;
+}
+
+.book-title {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+
+.books-list .book {
+	background-color: red;
+}
+
+.books-list .already-read {
+	background-color: green;
 }

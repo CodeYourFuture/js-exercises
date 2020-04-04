@@ -15,7 +15,17 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+const pEls = document.querySelectorAll("p");
+console.log(pEls);
 
+const divEl = document.querySelector("div");
+console.log(divEl);
+
+const jumbotron = document.getElementById("jumbotron-text");
+console.log(jumbotron);
+
+const pElsInPrimary = document.querySelectorAll(".primary-content p");
+console.log(pElsInPrimary);
 
 /*
 Task 2
@@ -24,7 +34,6 @@ Task 2
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
 
-
 /*
 Task 3
 =======
@@ -32,15 +41,12 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
-
 /*
 Task 4
 ======
 
 When a user clicks the 'Add some text' button, a new paragraph should be added below the buttons that says "Read more below."
 */
-
-
 
 /*
 Task 5
