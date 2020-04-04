@@ -71,43 +71,28 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-let books = [
-  {
-    title: "The Design of Everyday Things",
-    author: "Don Norman",
-    alreadyRead: false
-  },
-  {
-    title: "The Most Human Human",
-    author: "Brian Christian",
-    alreadyRead: true
-  },
-  {
-    title: "The Pragmatic Programmer",
-    author: "Andrew Hunt",
-    alreadyRead: true
-  }
-];
+
 
 let url1 = "https://image.ebooks.com/previews/095/095767/095767915/095767915-hq-168-80.jpg"
 let url2 = "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg"
 let url3 = "https://wordery.com/jackets/892d2e10/m/the-pragmatic-programmer-david-thomas-9780135957059.jpg"
+let urls = [url1, url2, url3]
 
 function exerciseThree(books) {
   let list = document.createElement("ul");
   let content = document.getElementById("content");
   content.appendChild(list);
-  books[0].url = url1;
-  books[1].url = url2;
-  books[2].url = url3;
-  books.forEach(book => {
+  // books[0].url = url1;
+  // books[1].url = url2;
+  // books[2].url = url3;
+  books.map((book, i) => {
     let listItem = document.createElement("li");
     list.appendChild(listItem);
     let parEl = document.createElement("p");
     listItem.appendChild(parEl);
     parEl.innerHTML = `${book.title} - ${book.author}`;
     let image = document.createElement("img");
-    image.src = book.url;
+    image.src = urls[i];
     listItem.appendChild(image);
     book.alreadyRead
       ? (listItem.style.backgroundColor = "green")
@@ -141,22 +126,22 @@ let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
 
 exerciseTwo(shopping);
 
-// const books = [
-//   {
-//     title: "The Design of Everyday Things",
-//     author: "Don Norman",
-//     alreadyRead: false
-//   },
-//   {
-//     title: "The Most Human Human",
-//     author: "Brian Christian",
-//     alreadyRead: true
-//   },
-//   {
-//     title: "The Pragmatic Programmer",
-//     author: "Andrew Hunt",
-//     alreadyRead: true
-//   }
-// ];
+const books = [
+  {
+    title: "The Design of Everyday Things",
+    author: "Don Norman",
+    alreadyRead: false
+  },
+  {
+    title: "The Most Human Human",
+    author: "Brian Christian",
+    alreadyRead: true
+  },
+  {
+    title: "The Pragmatic Programmer",
+    author: "Andrew Hunt",
+    alreadyRead: true
+  }
+];
 
 exerciseThree(books);
