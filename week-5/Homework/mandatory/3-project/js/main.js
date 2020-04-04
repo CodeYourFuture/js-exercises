@@ -37,12 +37,11 @@ greenButton.addEventListener('click', ()=>{
     const userName = document.querySelector('#example-text-input')
     const userDescribe = document.querySelector('#exampleTextarea')
 
-    const isUserEmailEmpty = userEmail.value.length < 1
+    const isUserEmailEmpty = userEmail.value.length <= 1
     const userEmailValueInclude = userEmail.value.includes("@")
-    
-    const isEmailvalid = !userEmailValueInclude || isUserEmailEmpty
-    const isUserNameEmpty = userName.value.length < 1
-    const isuserDescribeEmpty = userDescribe.value.length < 1
+    const isEmailvalid = !userEmailValueInclude && !isUserEmailEmpty
+    const isUserNameEmpty = userName.value.length <= 1
+    const isuserDescribeEmpty = userDescribe.value.length <=1
       
     if (isEmailvalid ){
           userEmail.style.backgroundColor= 'red'
