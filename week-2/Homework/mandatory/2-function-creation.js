@@ -5,7 +5,15 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  
+  for (let i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", "");
+    strArr[i] = strArr[i].toLowerCase();
+  }
+  return strArr;
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,8 +23,20 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
-
+function validate(num) {
+  if ( typeof num === 'number' && num <= 0 && num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+/*
+let answer = [“a”, “c”, “e”, “f”, “n”, “z”];
+let finalSortedAnswer = [];
+for(var i=0;i < mySortedArray.length;i++) {if (mySortedArray[i] === answer[i]){
+    return  finalSortedAnswer.push(mySortedArray[i]);
+} }
+*/
 /* 
 Write a function that removes an element from an array
 The function must:
@@ -26,7 +46,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let removed = arr.splice(index , 1);
+  console.log (arr);
+  return arr; // complete this statement
 }
 
 /*
@@ -38,9 +60,22 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  
+  let strArr = [];
+  let numRound = [];
+  for (let i = 0; i < arr.length; ++i) {
+    numRound[i] = Math.round(arr[i]);
+    if (numRound[i] > 100) {
+        numRound[i] = 100;
+    }else if ( numRound[i] < 0 ){
+        numRound = num.toFixed(2);
+    }
+    strArr[i] = `${numRound[i].toString()}%`;
+  }
+  console.log(strArr);
+  //console.log(formatPercentage([120, 13, 4.367, 60.49, 160.6]));
+  return strArr;
 }
-
+ 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
@@ -68,12 +103,7 @@ function test(test_name, expr) {
 
 test(
   "tidyUpString function works - case 1",
-  arraysEqual(tidyUpString(["/Daniel ", "irina ", " Gordon", "ashleigh "]), [
-    "daniel",
-    "irina",
-    "gordon",
-    "ashleigh"
-  ])
+  arraysEqual(tidyUpString(["    /Daniel ", "irina ", " Gordon", "ashleigh      "]), ["daniel","irina","gordon","ashleigh"])
 );
 test(
   "tidyUpString function works - case 2",

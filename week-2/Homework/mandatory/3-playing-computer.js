@@ -15,28 +15,37 @@
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
 */
 
-let x = 2;
-let a = 6;
+let x = 1;
+let a = 2;
+let b = 3;
+let i = 0;
+let g = 0;
+let j = 0;
 
 const f1 = function(a, b) {
+  g++;
   return a + b;
 };
 
 const f2 = function(a, b) {
+  j++;
   return a + b + x;
+  
 };
 
-console.log(x);
-console.log(a);
-console.log(b);
+console.log(`this is x ` + `${x}`);
+console.log(`this is a ` + `${a}`);
+console.log(`this is b ` + `${b}`);
 
+console.log(`this is g ` + `${g}`);
+console.log(`this is j ` + `${j}`);
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
   if (i % 2 === 0) {
     const d = f2(i, x);
-    console.log(d);
+    console.log(`this is d ` + `${d}`);
   } else {
     const e = f1(i, a);
-    console.log(e);
+    console.log(`this is e ` + `${e}`);
   }
 }

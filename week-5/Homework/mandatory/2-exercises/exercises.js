@@ -15,6 +15,14 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  var newContent = document.createTextNode("Hi there and greetings!"); 
+  let h1 = document.createElement("h1"); 
+  h1.innerHTML = "arrayOfPeople.name";
+  let h2 = document.createElement("h2");
+  h2.innerHTML = "arrayOfPeople.job";
+  nDiv.appendChild(h1 , h2);   
+   
+ 
 }
 
 /**
@@ -25,8 +33,9 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
+  let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
 }
+  //Write your code in here
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -58,6 +67,7 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
+  
   //Write your code in here
 }
 
