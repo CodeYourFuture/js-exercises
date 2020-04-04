@@ -44,21 +44,17 @@ greenButton.addEventListener('click', ()=>{
     const isUserNameEmpty = userName.value.length < 1
     const isuserDescribeEmpty = userDescribe.value.length < 1
       
-
-      
-
-      
-      if (isEmailvalid ){
+    if (isEmailvalid ){
           userEmail.style.backgroundColor= 'red'
       } 
       if(isUserNameEmpty){
           userName.style.backgroundColor= 'red'
       }
-      if(isUserNameEmpty){
+      if(isuserDescribeEmpty){
           userDescribe.style.backgroundColor = 'red'
       }
 
-      if(!isUserNameEmpty && !isUserNameEmpty && !isEmailvalid ){
+      if(!isUserNameEmpty && !isuserDescribeEmpty && !isEmailvalid ){
         alert('thank you for filling out the form')
 
       }
