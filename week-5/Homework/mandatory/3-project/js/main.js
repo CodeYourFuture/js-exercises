@@ -26,7 +26,55 @@ greenButton.addEventListener('click', ()=>{
 })
 
 
+    const submitButton = document.querySelector('form .btn')
+  
 
+    submitButton.addEventListener('click', (event)=>{
+
+    event.preventDefault()
+
+    const userEmail = document.querySelector('#exampleInputEmail1')
+    const userName = document.querySelector('#example-text-input')
+    const userDescribe = document.querySelector('#exampleTextarea')
+
+    const isUserEmailEmpty = userEmail.value.length < 1
+    const userEmailValueInclude = userEmail.value.includes("@")
+    
+    const isEmailvalid = !userEmailValueInclude || isUserEmailEmpty
+    const isUserNameEmpty = userName.value.length < 1
+    const isuserDescribeEmpty = userDescribe.value.length < 1
+      
+
+      
+
+      
+      if (isEmailvalid ){
+          userEmail.style.backgroundColor= 'red'
+      } 
+      if(isUserNameEmpty){
+          userName.style.backgroundColor= 'red'
+      }
+      if(isUserNameEmpty){
+          userDescribe.style.backgroundColor = 'red'
+      }
+
+      if(!isUserNameEmpty && !isUserNameEmpty && !isEmailvalid ){
+        alert('thank you for filling out the form')
+
+      }
+      
+        
+      
+      
+      
+      
+      
+        
+      
+    
+    
+
+  })
 
 
 
