@@ -40,11 +40,11 @@
     }
 
 
-    //Part 2
+    //Part 2 Special Thanks to Ferhat
     let submitBtn = document.querySelector("form .btn");
 
-    function CheckForm(e) {
-        e.preventDefault()
+    function CheckForm() {
+        
         let email = document.querySelector("#exampleInputEmail1");
         let name = document.querySelector('#example-text-input')
         let describe = document.querySelector("#exampleTextarea");
@@ -54,7 +54,7 @@
         let nameCheck = !name.value.length > 0
         let describeCheck = !describe.value.length > 0
     
-        let formCheck = [emailCheck,nameCheck,describeCheck]
+        let formCheck = [!emailCheck,!nameCheck,!describeCheck]
         for (i=0; i<formCheck.length; i++){
             if (formCheck[i]) {
             form[i].style.background = "red"
