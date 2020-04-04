@@ -14,7 +14,14 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+  const content = document.querySelector("#content");
+
+  arrayOfPeople.forEach(people =>{
+    content.innerHTML += `<h1> ${people.name}</h1>`
+    content.innerHTML += `<h2> ${people.job}</h2>`
+  })
+    
+  
 }
 
 /**
@@ -26,6 +33,17 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  const mainHolder = document.querySelector("#content");
+  const shoppingListHolder = document.createElement('ul');
+ 
+    mainHolder.append(shoppingListHolder)
+    
+
+    shopping.forEach(item=>{
+      shoppingListHolder.innerHTML +=`<li> ${item} </li>`
+    })
+
+    console.log(document.body)
 }
 
 /**
@@ -57,8 +75,41 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+
 function exerciseThree(books) {
   //Write your code in here
+  const holder = document.querySelector("#content");
+  const bookListHolder = document.createElement('ul');
+    holder.append(bookListHolder)
+    
+  books.forEach(book => {
+    const bookList = document.createElement('li')
+    bookListHolder.append(bookList)
+    bookListHolder.classList = 'book-list'
+    bookList.classList = 'book'
+    bookList.innerHTML  += `<p>${book.author} - ${book.title}</p>`
+
+    const pictureBook = document.createElement('img')
+    bookList. append(pictureBook)
+    if(book.title == "The Design of Everyday Things" ){
+      pictureBook.setAttribute('src', 'https://productimages.worldofbooks.com/0465050654.jpg')
+    }else if(book.title == "The Most Human Human" ){
+      pictureBook.setAttribute('src', 'https://lh3.googleusercontent.com/nWZrA2c2YGcZ7Bt6xQ7gLAt0Ccu5d-BkvXRr68OjUoIfCtfUSOoGtTQVWR8ESJwyMzZ4rqGQHlHG=s400-rw')
+    }else if(book.title == "The Pragmatic Programmer"){
+      pictureBook.setAttribute('src', 'https://image.ebooks.com/previews/209/209748/209748258/209748258-hq-168-80.jpg')
+    }
+    
+    pictureBook.classList.add('photo')
+    if ( book.alreadyRead){
+      bookList.style.background = 'green'
+    }else{
+      bookList.style.background = 'red'
+    }
+    
+
+    
+  })
+
 }
 
 //

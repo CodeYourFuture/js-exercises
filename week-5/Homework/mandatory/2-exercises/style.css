@@ -10,18 +10,24 @@ html,
 body {
 	font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
-.list{
-	border: 3px solid wheat;
+.book-list {
+	display: flex;
+}
+.book{
+	list-style: none;
+	margin: 0px 5px;
+	height:300px;
+	border: 1px solid black;
 	box-shadow: 5px 10px #888888;
-	
 }
-.list li{
-	margin-bottom: 2px;
-	font-size: 20px;
-
+.book p {
+	margin: 10px;
+	font-weight: bolder;
 }
-.card{
-	border: 2px solid skyblue;
+.photo{
+	margin:10px;
+	width: 240px;
+	height: 150px;
 }
 .site-footer {
 	margin-top: 4em;
