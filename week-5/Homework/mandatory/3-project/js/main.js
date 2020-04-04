@@ -58,18 +58,17 @@ submitEl.addEventListener("click", function(e) {
   console.log(getEmailValue.length);
   if (getEmailValue.length <= 0) {
     let getEmailCol = document.querySelector(".form-control");
-    getEmailCol.style.backgroundColor = "red";
+    getEmailCol.style.backgroundColor = "red"; getEmailCol.focus();}
      if(getPersonNameValue.length <= 0){
       let getNameCol = document.querySelector("#example-text-input");
-      getNameCol.style.backgroundColor = "red";
+      getNameCol.style.backgroundColor = "red"; getNameCol.focus(); }
        if(getDescibeValue.length <= 0){
          let getDesCol = document.querySelector("#exampleTextarea");
-         getDesCol.style.backgroundColor = "red";
-       }
-      }
-  }else{
-    document.querySelector("form").reset();
+         getDesCol.style.backgroundColor = "red"; getDesCol.focus();}
+     if(getEmailValue.length > 1 && getPersonNameValue.length > 1 && getDescibeValue.length > 0 ){
+    // document.querySelector("form").reset();
     alert("Thank you for filling out the form.")
+    document.querySelector("form").reset();
   }
 });
 
