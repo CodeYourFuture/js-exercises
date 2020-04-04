@@ -1,3 +1,9 @@
+// PART-1
+
+// Clicking on the buttons should change the "theme" of the website
+
+// Blue Button
+
 let btnBlue = document.querySelector("#blueBtn");
 btnBlue.addEventListener("click", ChangeColor);
 function ChangeColor() {
@@ -6,6 +12,7 @@ function ChangeColor() {
   document.querySelector(".buttons .btn-secondary").style.background = "black";
   document.querySelector(".buttons .btn-secondary").style.color = "white";
 }
+// Orange Button
 
 let orangeBtn = document.querySelector("#orangeBtn");
 orangeBtn.addEventListener("click", ChangeColor1);
@@ -17,6 +24,7 @@ function ChangeColor1() {
   document.querySelector(".buttons .btn-secondary").style.color = "white";
 }
 
+// Green Button
 let grnBtn = document.querySelector("#greenBtn");
 grnBtn.addEventListener("click", ChangeColor2);
 function ChangeColor2() {
@@ -25,6 +33,8 @@ function ChangeColor2() {
   document.querySelector(".buttons .btn-secondary").style.background =
     "#8c9c08";
 }
+//PART-2
+// When the submit button is pressed, it should check that all the form fields are valid:
 
 let submitBtn = document.querySelector("form .btn");
 submitBtn.addEventListener("click", CheckForm);
