@@ -54,6 +54,16 @@ Task 4
 When a user clicks the 'Add some text' button, a new paragraph should be added below the buttons that says "Read more below."
 */
 
+document.querySelector("#addTextBtn").addEventListener("click",addText);
+let myText = document.createElement("p");
+myText.innerHTML = "Read more below."
+let Parent = document.querySelector(".buttons");
+myText.style.color = "red"
+myText.style.fontSize = "150%"
+function addText(){
+    Parent.appendChild(myText);
+}
+
 /*
 Task 5
 ======
@@ -61,7 +71,7 @@ Task 5
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
 let links = document.querySelectorAll("a");
-document.querySelector("largerLinksBtn").addEventListener("click",size);
+document.querySelector("#largerLinksBtn").addEventListener("click",size);
 
 function size(){
     for(let i=0; i<links.length; i++) {
