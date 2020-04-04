@@ -15,6 +15,14 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  for (let i = 0; i < people.length; i++) {
+    let contentH1 = document.createElement(`h1`);
+    contentH1.innerHTML = `${people[i].name}`;
+    let contentH2 = document.createElement(`h2`);
+    contentH2.innerHTML = `${people[i].job}`;
+    content.appendChild(contentH1);
+    content.appendChild(contentH2);
+  }
 }
 
 /**
@@ -22,10 +30,18 @@ function exerciseOne(arrayOfPeople) {
  * Create a list of shopping items. You should use an unordered list.
  *
  * All of your HTML should go inside the Div tag with the id "content".
- *
+ *let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  let content = document.getElementById(`content`);
+  let ul = document.createElement(`ul`);
+  content.appendChild(ul);
+  shopping.forEach(element => {
+    let li = document.createElement(`li`);
+    li.innerHTML = element;
+    ul.appendChild(li);
+  });
 }
 
 /**
@@ -58,7 +74,41 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  //Write your code in here
+  let content = document.getElementById(`content`);
+  let ul = document.createElement("ul");
+  content.appendChild(ul);
+  books.forEach(element => {
+    let li = document.createElement(`li`);
+    ul.appendChild(li);
+    let pEl = document.createElement(`p`);
+    li.appendChild(pEl);
+    pEl.innerHTML = `${element.title} of ${element.author}`;
+
+    let picture = document.createElement(`img`);
+    if (books.title === "The Design of Everyday Things") {
+      picture.setAttribute(
+        "src",
+        " https://lh3.googleusercontent.com/_QRovMnva2jNHn0nryD_MSMAim3SfSeOvVdbUBTUQnn3HS7Wp7jdlFGA37m3j5rY01T3KQZqGCGIIw=s400-rw"
+      );
+    } else if (books.title === "The Most Human Human") {
+      picture.setAttribute(
+        "src",
+        "https://i.ebayimg.com/00/s/NDAwWDI2MQ==/z/eisAAOSw~y9ZCvP1/$_35.JPG?set_id=89040003C1"
+      );
+    } else {
+      picture.setAttribute(
+        "src",
+        "https://i.ebayimg.com/images/g/AugAAOSwsZlefx7b/s-l640.jpg"
+      );
+    }
+    li.appendChild(picture);
+    if (element.alreadyRead) {
+      li.style.backgroundColor = "green";
+    } else {
+      li.style.backgroundColor = "red";
+    }
+  });
+  console.log(ul);
 }
 
 //
