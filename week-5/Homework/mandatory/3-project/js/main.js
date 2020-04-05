@@ -32,11 +32,13 @@ function changeThemeToGreen() {
 const formEl = document.querySelector("form");
 
 const formControl = document.querySelectorAll(".form-control");
+
 const emailArea = document.querySelector("#exampleInputEmail1");
 const nameArea = document.querySelector("#example-text-input");
 const textArea = document.querySelector("#exampleTextarea");
 
 const submitBtn = document.querySelector("form button");
+
 submitBtn.addEventListener("click", checkValidity);
 function checkValidity(event) {
   event.preventDefault();
@@ -48,12 +50,30 @@ function checkValidity(event) {
   ) {
     alert("Thank you!");
     formEl.reset();
-  } else if (!emailArea.value.includes("@")) {
-    emailArea.style.backgroundColor = "red";
-  } else
-    formControl.forEach((form) => {
-      if (!form.value.length > 0) {
-        form.style.backgroundColor = "red";
-      }
+  } else {
+    formControl.forEach((area) => {
+      !area.value.length > 0
+        ? (area.style.backgroundColor = "red")
+        : !emailArea.value.includes("@")
+        ? (emailArea.style.backgroundColor = "red")
+        : null;
     });
+  }
 }
+
+// if (
+//   emailArea.value.length > 0 &&
+//   nameArea.value.length > 0 &&
+//   textArea.value.length > 0 &&
+//   emailArea.value.includes("@")
+// ) {
+//   alert("Thank you!");
+//   formEl.reset();
+// } else if (!emailArea.value.includes("@")) {
+//   emailArea.style.backgroundColor = "red";
+// } else
+//   formControl.forEach((form) => {
+//     if (!form.value.length > 0) {
+//       form.style.backgroundColor = "red";
+//     }
+//   });
