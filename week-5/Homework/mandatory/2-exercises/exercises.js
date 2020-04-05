@@ -14,6 +14,7 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
+
   const content = document.querySelector("#content");
 
   arrayOfPeople.forEach(people =>{
@@ -21,8 +22,8 @@ function exerciseOne(arrayOfPeople) {
     content.innerHTML += `<h2> ${people.job}</h2>`
   })
     
+
   
-}
 
 /**
  *
@@ -33,6 +34,7 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+
   const mainHolder = document.querySelector("#content");
   const shoppingListHolder = document.createElement('ul');
  
@@ -44,6 +46,7 @@ function exerciseTwo(shopping) {
     })
 
     console.log(document.body)
+
 }
 
 /**
@@ -75,6 +78,7 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+
 
 function exerciseThree(books) {
   //Write your code in here

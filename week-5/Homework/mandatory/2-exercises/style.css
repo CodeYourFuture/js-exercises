@@ -10,6 +10,7 @@ html,
 body {
 	font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
+
 .book-list {
 	display: flex;
 }
@@ -29,6 +30,7 @@ body {
 	width: 240px;
 	height: 150px;
 }
+
 .site-footer {
 	margin-top: 4em;
 }
