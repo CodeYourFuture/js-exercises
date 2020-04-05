@@ -1,80 +1,59 @@
+let targetBlue = document.getElementById("blueBtn");
+let targetOrange = document.getElementById("orangeBtn");
+let targetGreen = document.getElementById("greenBtn");
 
-let targetBlue = document.getElementById("blueBtn")
-let targetOrange = document.getElementById("orangeBtn")
-let targetGreen = document.getElementById("greenBtn")
+let targetJumbotron = document.querySelector(".jumbotron");
+let targetDonateBtn = document.querySelector(".buttons .btn-primary");
+let targetVolunteerBtn = document.querySelector(".buttons .btn-secondary");
 
-let targetJumbotron = document.querySelector(".jumbotron")
-let targetDonateBtn = document.querySelector(".buttons .btn-primary")
-let targetVolunteerBtn = document.querySelector(".buttons .btn-secondary")
+targetBlue.addEventListener("click", function() {
+  targetJumbotron.style.backgroundColor = "#588fbd";
+  targetDonateBtn.style.backgroundColor = "#ffa500";
+  targetVolunteerBtn.style.backgroundColor = "black";
+  targetVolunteerBtn.style.color = "white";
+});
 
-targetBlue.addEventListener("click", function(){
+targetOrange.addEventListener("click", function() {
+  targetJumbotron.style.backgroundColor = "#f0ad4e";
+  targetDonateBtn.style.backgroundColor = "#5751fd";
+  targetVolunteerBtn.style.backgroundColor = "#31b0d5";
+  targetVolunteerBtn.style.color = "white";
+});
 
-    targetJumbotron.style.backgroundColor = "#588fbd"
-    targetDonateBtn.style.backgroundColor = "#ffa500"
-    targetVolunteerBtn.style.backgroundColor = "black"
-    targetVolunteerBtn.style.color = "white"
+targetGreen.addEventListener("click", function() {
+  targetJumbotron.style.backgroundColor = "#87ca8a";
+  targetDonateBtn.style.backgroundColor = "black";
+  targetVolunteerBtn.style.backgroundColor = "#8c9c08";
+});
 
-})
+let targetSubmit = document.querySelector("form button");
+let targetEmail = document.querySelector("div #exampleInputEmail1");
+let targetName = document.querySelector("div #example-text-input");
+let targetDescribeYourself = document.querySelector("div #exampleTextarea");
 
-targetOrange.addEventListener("click", function(){
+let emailExpression = /[a-z0-9][@.]/;
 
-    targetJumbotron.style.backgroundColor = "#f0ad4e"
-    targetDonateBtn.style.backgroundColor = "#5751fd"
-    targetVolunteerBtn.style.backgroundColor = "#31b0d5"
-    targetVolunteerBtn.style.color = "white"
-
-})
-
-targetGreen.addEventListener("click", function(){
-
-    targetJumbotron.style.backgroundColor = "#87ca8a"
-    targetDonateBtn.style.backgroundColor = "black"
-    targetVolunteerBtn.style.backgroundColor = "#8c9c08"
-
-})
-
-
-let targetSubmit = document.querySelector("form button")
-let targetEmail = document.querySelector("div #exampleInputEmail1")
-let targetName = document.querySelector("div #example-text-input")
-let targetDescribeYourself = document.querySelector("div #exampleTextarea")
-
-let emailExpression = /[a-z0-9][@.]/
-
-targetSubmit.addEventListener("click", validateAll)
+targetSubmit.addEventListener("click", validateAll);
 
 function validateAll(e) {
-    e.preventDefault();
-    targetEmail.value.length > 0 &&
-    emailExpression.test(targetEmail.value) &&
-    targetName.value.length > 0 &&
-    targetDescribeYourself.value.length > 0
-      ? alert("Thank you!")
-      : redBackground();
+  e.preventDefault();
+  targetEmail.value.length > 0 &&
+  emailExpression.test(targetEmail.value) &&
+  targetName.value.length > 0 &&
+  targetDescribeYourself.value.length > 0
+    ? alert("Thank you!")
+    : redBackground();
 
-    let targetSubmit = document.querySelector("form");
-    targetSubmit.reset();
-  }
- 
-  function redBackground() {
-  
-    let listTargets = [targetEmail, targetName, targetDescribeYourself];
+  let targetSubmit = document.querySelector("form");
+  targetSubmit.reset();
+}
 
-    listTargets.forEach(x => { if (x.value.length <= 0) {
-        x.style.backgroundColor = "red"}}
-        )
+function redBackground() {
+  let listTargets = [targetEmail, targetName, targetDescribeYourself];
 
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
+  listTargets.forEach(x => {
+    if (x.value.length <= 0) {
+      x.style.backgroundColor = "red";
+    }
+  })
+}
