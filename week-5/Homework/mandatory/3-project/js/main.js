@@ -37,9 +37,29 @@ function changeThemeToGreen() {
 
 const submitBtn = document.querySelector("form button");
 
+const formControl = document.querySelectorAll(".form-control");
+
+const emailArea = document.querySelector("#exampleInputEmail1");
+const nameArea = document.querySelector("#example-text-input");
+const textArea = document.querySelector("#exampleTextarea");
+
+const formEl = document.querySelector("form");
+
 submitBtn.addEventListener("click", checkValidity);
 
-function checkValidity() {
+function checkValidity(event) {
   event.preventDefault();
-  submitBtn.style.BackgroundColor = "red";
+  formControl.forEach(form => {
+    if (!form.value > 0) {
+      form.style.backgroundColor = "red";
+    }
+  });
+  if (
+    emailArea.value.length > 0 &&
+    nameArea.value.length > 0 &&
+    textArea.value.length > 0
+  ) {
+    alert("Thank you!");
+    formEl.reset();
+  }
 }
