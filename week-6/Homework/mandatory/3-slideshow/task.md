@@ -1,4 +1,4 @@
-# Challenge: "Image Carousel" (React)
+# Challenge: "Image Carousel"
 
 ## Challenge Overview
 
