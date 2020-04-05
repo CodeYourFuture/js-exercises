@@ -18,3 +18,7 @@ It can look however you like but there is an example in this folder at `quote_ge
   - (advanced) try to use `Math.random()`
   - OR
   - (basic) use the `pickFromArray()` function supplied in the javascript file.
+
+
+## Further work
+See the `extra` folder of homework for further ideas for your Quote Generator.
