@@ -27,7 +27,6 @@ function exerciseOne(arrayOfPeople) {
   }
 }
 
-
 /**
  *
  * Create a list of shopping items. You should use an unordered list.
@@ -35,6 +34,14 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
+
+//  <div id="content">
+//    <ul>
+//      <li>milk</li>
+//      <li>tea</li>
+//    </ul>
+//  </div>
+
 function exerciseTwo(shopping) {
   let content = document.querySelector("#content");
   let shoppingList = document.createElement("ul");
