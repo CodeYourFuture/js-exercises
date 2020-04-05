@@ -3,9 +3,7 @@ const donateABike = document.querySelector(".buttons > .btn-primary");
 const volunteer = document.querySelector(".buttons > .btn-secondary");
 
 const blueBtn = document.getElementById("blueBtn");
-
 blueBtn.addEventListener("click", changeThemeToBlue);
-
 function changeThemeToBlue() {
   jumbotron.style.backgroundColor = "#588fbd";
   donateABike.style.backgroundColor = "#ffa500";
@@ -14,9 +12,7 @@ function changeThemeToBlue() {
 }
 
 const orangeBtn = document.getElementById("orangeBtn");
-
 orangeBtn.addEventListener("click", changeThemeToOrange);
-
 function changeThemeToOrange() {
   jumbotron.style.backgroundColor = "#f0ad4e";
   donateABike.style.backgroundColor = "#5751fd";
@@ -25,9 +21,7 @@ function changeThemeToOrange() {
 }
 
 const greenBtn = document.getElementById("greenBtn");
-
 greenBtn.addEventListener("click", changeThemeToGreen);
-
 function changeThemeToGreen() {
   jumbotron.style.backgroundColor = "#87ca8a";
   donateABike.style.backgroundColor = "black";
@@ -35,18 +29,15 @@ function changeThemeToGreen() {
   volunteer.style.color = "white";
 }
 
-const submitBtn = document.querySelector("form button");
+const formEl = document.querySelector("form");
 
 const formControl = document.querySelectorAll(".form-control");
-
 const emailArea = document.querySelector("#exampleInputEmail1");
 const nameArea = document.querySelector("#example-text-input");
 const textArea = document.querySelector("#exampleTextarea");
 
-const formEl = document.querySelector("form");
-
+const submitBtn = document.querySelector("form button");
 submitBtn.addEventListener("click", checkValidity);
-
 function checkValidity(event) {
   event.preventDefault();
   if (
