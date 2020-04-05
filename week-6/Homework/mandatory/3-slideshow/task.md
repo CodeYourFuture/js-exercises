@@ -72,7 +72,6 @@ These should allow automatic navigation through the images, say every 5 seconds.
 
 Congratulations, you've finished the basics!
 
-- Send the URL of your hosted app to your team on Slack.
 - Make sure you can access it and play with it on a smartphone!
 - Celebrate!
 
