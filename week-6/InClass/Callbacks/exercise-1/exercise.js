@@ -19,6 +19,8 @@ let colorPage = function(){
     let background = document.getElementsByTagName("body");
     console.log(background);
 background[0].style.backgroundColor = colors[Math.floor(Math.random() * 3)];
+
+background[0].style.color = colors[Math.floor(Math.random() * 3)];
 }
 
 
