@@ -5,14 +5,9 @@ let myDonateBike = myButtons[0];
 let myVolunteer = myButtons[1];
 let myOrangeButton = document.querySelector("#orangeBtn");
 let myGreenButton = document.querySelector("#greenBtn");
-let mySubmitButton = document.querySelectorAll("form button");
+let mySubmitButton = document.querySelector("button[type*=\"submit\"]");
 let myRegisterInput = document.querySelectorAll("div[class*=\"form-group\"]");
 let MyArrayOfMyRegisterInput= Array.from(myRegisterInput);
-let myAlert = document.querySelectorAll(".alert");
-let myArrayOfmyAlert = Array.from(myAlert);
-let myEmailInput = document.querySelectorAll("div[class*=\"form-group\"]>input[id*=exampleInputEmail1");
-let myNameInput = document.querySelectorAll("div[class*=\"form-group\"]>input[id*=\"example-text-input\"]");
-let myDescribeInput =document.querySelectorAll("div[class*=\"form-group\"]>textarea[id*=\"exampleTextarea\"]");
 myBlueButton.addEventListener("click", changeWithBlueButton);
 function changeWithBlueButton() {
   myJumbotron.style.backgroundColor = `#588fbd`;
@@ -34,14 +29,25 @@ function changeWithGreenButton(){
     myVolunteer.style.backgroundColor = "#8c9c08";
 }
 mySubmitButton.addEventListener("click",checkValid);
- function checkValid(){
-    for(let i=0;i<MyArrayOfMyRegisterInput.length;i++){
-        if(MyArrayOfMyRegisterInput.length > 0 && MyArrayOfMyRegisterInput[0].includes("@")){
-        myAlert.innerHTML = "thank you for filling out the form";
-        MyArrayOfMyRegisterInput.forEach( x => x = "");
+function checkValid(event){
+        if(!(MyArrayOfMyRegisterInput[0].querySelector("input").value.length > 0 &&
+        MyArrayOfMyRegisterInput[0].querySelector("input").value.split("").includes("@")))
+        {
+            MyArrayOfMyRegisterInput[0].querySelector("input").style.backgroundColor = "red";
+            event.preventDefault()
         }
-        else{
-            MyArrayOfMyRegisterInput[i].style.backgroundColor = 'red';
+        if(!(MyArrayOfMyRegisterInput[1].querySelector("input").value.length > 0)){
+            MyArrayOfMyRegisterInput[1].querySelector("input").style.backgroundColor = "red";
+            event.preventDefault()
         }
-    }
- }    
+        if(!(MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").value.length > 0)){
+            MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").style.backgroundColor = "red";
+            event.preventDefault();
+        }
+        else {
+            alert("thank you for filling out the form");
+            MyArrayOfMyRegisterInput[0].querySelector("input").value = "";
+            MyArrayOfMyRegisterInput[1].querySelector("input").value = "";
+            MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").value = "";
+        }
+}
