@@ -41,19 +41,30 @@ let targetDescribeYourself = document.querySelector("div #exampleTextarea")
 
 let emailExpression = /[a-z0-9][@.]/
 
-targetSubmit.addEventListener("click", (e) => { 
-    e.preventDefault()
+targetSubmit.addEventListener("click", validateAll)
 
-validateAll() ? alert("thank you") : alert("no")
-    
-})
+function validateAll(e) {
+    e.preventDefault();
+    targetEmail.value.length > 0 &&
+    emailExpression.test(targetEmail.value) &&
+    targetName.value.length > 0 &&
+    targetDescribeYourself.value.length > 0
+      ? alert("Thank you!")
+      : redBackground();
 
-function validateAll (){
-    targetEmail.value.length  > 0 && emailExpression.test(targetEmail.value) ? targetEmail.value = "" : targetEmail.style.backgroundColor ="red"
-    targetName.value.length > 0 ? targetName.value = "" : targetName.style.backgroundColor ="red"
-    targetDescribeYourself.value.length > 0 ? targetDescribeYourself.value = "" : targetDescribeYourself.style.backgroundColor ="red"
+    let targetSubmit = document.querySelector("form");
+    targetSubmit.reset();
+  }
+ 
+  function redBackground() {
+  
+    let listTargets = [targetEmail, targetName, targetDescribeYourself];
 
-}
+    listTargets.forEach(x => { if (x.value.length <= 0) {
+        x.style.backgroundColor = "red"}}
+        )
+
+  }
 
 
 
