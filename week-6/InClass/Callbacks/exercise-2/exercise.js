@@ -62,12 +62,12 @@ const movies = [
 ];
 // Task 1
 // create showMovies function
-function showMovies(movie) {
+function showMovies() {
   setTimeout(function () {
     movies.forEach((movie) => {
       let pElement = document.createElement("p");
-      pElement.innerHTML = `${movie.title} by ${movie.director}`;
-      document.querySelector("#all-movies").appendChild(pElement);
+      document.querySelector("#all-movies").append(pElement);
+      pElement.innerText = `${movie.title} by ${movie.director}`;
     });
     let allMovies = document.querySelector("#movies-number");
     allMovies.textContent = movies.length;
@@ -77,12 +77,12 @@ function showMovies(movie) {
 // Task 2
 // create a new movie object for your favorite movie
 
-const newMovie = {
-  title: "The Experiment",
-  director: "Leigh Whannell",
-  type: "horror",
-  haveWatched: false,
-};
+// const newMovie = {
+//   title: "The Experiment",
+//   director: "Leigh Whannell",
+//   type: "horror",
+//   haveWatched: false,
+// };
 
 //  Task 3
 // create addMovies function
@@ -98,26 +98,21 @@ function addMovies(movie, callback) {
 let button = document.getElementById("form-button");
 button.addEventListener("click", clickButton);
 
-function clickButton() {
-  setTimeout(function () {
-    let userMovie = {
-      title: document.getElementById("form-title").value,
-      director: document.getElementById("form-director").value,
-      genre: document.getElementById("form-genre").value,
-      // watched: function () {
-      //   let watched = document.getElementById("form-watched").value;
-      //   watched.toLowercase();
-      //   if (watched === "yes") {
-      //     return (watched = true);
-      //   } else if (watched === "no") {
-      //     return (watched = false);
-      //   }
-      // },
-    };
-
-    movies.push(userMovie);
-  }, 2000);
+function clickButton(event) {
+  event.preventDefault();
+  let userMovie = {
+    title: document.getElementById("form-title").value,
+    director: document.getElementById("form-director").value,
+    genre: document.getElementById("form-genre").value,
+    // watched: function () {
+    //   let watched = document.getElementById("form-watched").value;
+    //   watched.toLowercase();
+    //   if (watched === "yes") {
+    //     return (watched = true);
+    //   } else if (watched === "no") {
+    //     return (watched = false);
+    //   }
+    // },
+  };
+  addMovies(userMovie, showMovies);
 }
-addMovies(newMovie, showMovies);
-clickButton();
-console.log(movies);
