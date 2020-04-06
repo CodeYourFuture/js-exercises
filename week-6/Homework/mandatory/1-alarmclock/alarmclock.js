@@ -1,6 +1,7 @@
 function setAlarm() {}
+//test comment
 
-// DO NOT EDIT BELOW HERE
+// DO NOT EDIT BELOW HERE  
 
 function setup() {
   var audio = new Audio("alarmsound.mp3");
