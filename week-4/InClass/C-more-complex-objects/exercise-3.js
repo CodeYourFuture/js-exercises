@@ -33,26 +33,28 @@ let parkAvenueHouse = {
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
   //return parkAvenueHouse.currentOwner.firstName + parkAvenueHouse.currentOwner.lastName;
-  return kinningParkHouse.currentOwner.firstName + kinningParkHouse.currentOwner.lastName;
-
+  return house.currentOwner.firstName + house.currentOwner.lastName;
 }
+getOwnerFullName(kinningParkHouse)
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
   let newArr = [];
-  newArr = kinningParkHouse.currentOwner.email + parkAvenueHouse.currentOwner.email
+  newArr = house1.currentOwner.email + house2.currentOwner.email
   return newArr
 }
+getEmailAddresses(kinningParkHouse, parkAvenueHouse)
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
-  if (kinningParkHouse.price < parkAvenueHouse.price) {
-    return kinningParkHouse.address
+  if (house1.price < house2.price) {
+    return house1.address
   } else {
-    return parkAvenueHouse.address
+    return house2.address
   }
 
 }
+getCheapestAddress(kinningParkHouse, parkAvenueHouse)
 
 
 /*

@@ -16,7 +16,7 @@ Make sure you use words like:
 */
 let table = {
     color: "yellow",
-    KidsTable: true,
+    kidsTable: true,
     tableLegs: 4,
     tableLegsColor: ["green", "blue", "red", "orange"]
 }

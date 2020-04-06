@@ -15,7 +15,7 @@ let bottle = {
     // calling this function should make you bottles volume = 100;
   },
   drink: function () {
-    return bottle.volume = bottle.volume - 10;
+    return bottle.volume -= 10;
 
     // calling this function should decrease your bottles volume by 10;
   },
