@@ -14,7 +14,15 @@
  * </div>
  */
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+  let content = document.querySelector("#content");//defined a variable and asigned element with Id 'content' to it.
+  arrayOfPeople.forEach(person => {//loop through arrayOfPeople
+    let names = document.createElement("h1");//made a h1 and asigned it to a variable
+    let jobs = document.createElement("h2");//made a h2 and asigned it to a variable
+    names.innerHTML = person.name;//asigned people name to h1 tag 
+    jobs.innerHTML = person.job;//asigned people job to h2 tag
+    content.appendChild(names);// 
+    content.appendChild(jobs);
+  })
 }
 
 /**
@@ -26,6 +34,14 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  let unorderedList = document.createElement("ul");
+  let content = document.querySelector("#content");
+  content.appendChild(unorderedList);
+  shopping.forEach(item => {
+    let items = document.createElement("li");
+    items.innerHTML = item;
+    unorderedList.appendChild(items);
+  })
 }
 
 /**
@@ -59,6 +75,21 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  
+  let unord = document.createElement("ul");
+  document.body.appendChild(unord);
+  books.forEach(book => {
+    let pEls = document.createElement("p");
+    pEls.innerHTML = `${book.title}, ${book.author}`;
+    console.log(pEls);
+    let listEls = document.createElement("li");
+    let imgEls = document.createElement("img");
+    unord.appendChild(listEls);
+    listEls.appendChild(pEls);
+    listEls.appendChild(imgEls);
+    (book.alreadyRead)? listEls.style.backgroundColor = "green" : listEls.style.backgroundColor = "red"; 
+  })
+  
 }
 
 //
