@@ -5,22 +5,13 @@
   Create a function that returns an array of colonisers that will stay, according to the above rules.
   NOTE: don't include any element that is not a "family".
 */
-// function colonisers(oldArr) {
-//   let initialArr1 = oldArr.filter(e => e < "B")
-//   let finalArr2 = initialArr1.filter(e => e !== "Aldous" && e !== "Asimov")
-//   //console.log(newArr)
-//   return finalArr2
-// }
+
 function colonisers(oldArr) {
   let initialArr1 = oldArr.filter(e => e.charAt(0) === "A" && e.includes("family"))
-  return initialArr1.map(e => e)
+  return initialArr1
 }
 
-// function colonisers(lastNameWithA) {
-//   let newArr = lastNameWithA.filter(e => e.charAt(0) === "A");
-//   //return newArr
-// }
-// console.log(newArr)
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
