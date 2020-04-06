@@ -8,7 +8,7 @@
 let house = {
     address: "1 Kinning Park",
     previousOwners: ["Claire M.", "John A."],
-    isForSale = false,
+    isForSale: false,
     currentOwner: {
       firstName: "Margaret",
       lastName: "Conway"
@@ -25,8 +25,13 @@ let newCurrentOwner = {
 
   WRITE YOUR CODE BELOW
 */
-this.house.currentOwner = `${newCurrentOwner}`
-house.previousOwners[1] = "Stephen B."
+// house.currentOwner = `${newCurrentOwner}`;
+
+house.currentOwner = {
+  firstName: "Geogina";
+  lastName: "Hernandez";
+}
+house.previousOwners[1].toString("Stephen B.");
 
 
 
