@@ -8,6 +8,7 @@
   <meta name="description" content="Callbacks">
   <meta name="author" content="CodeYourFuture">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       padding: 30px;
@@ -23,7 +24,29 @@
         <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
       </div>
     </div>
-    <script src="exercise.js"></script>
+
+    <form>
+      <h3>Add your movie</h3>
+      <div class="form-input">
+        <label> Title</label>
+        <input id="form-title" type=text; placeholder="enter title">
+      </div>
+      <div class="form-input">
+        <label> Director</label>
+        <input id="form-director" type=text; placeholder="enter director">
+      </div>
+      <div class="form-input">
+        <label> Genre</label>
+        <input id="form-genre" type=text; placeholder="enter genre">
+      </div>
+      <div class="form-input">
+        <label> Have you watched the movie?</label>
+        <input id="form-watched" type=text; placeholder="enter yes/no">
+      </div>
+      <button type="submit" id="form-button" href="index.html">Save</button>
+    </form>
+  </div>
+  <script src="exercise.js"></script>
 </body>
 
 </html>
