@@ -28,26 +28,29 @@ function changeWithGreenButton(){
     myDonateBike.style.backgroundColor = `black`;
     myVolunteer.style.backgroundColor = "#8c9c08";
 }
-mySubmitButton.addEventListener("click",checkValid);
+mySubmitButton.addEventListener("click",checkValid); 
 function checkValid(event){
-        if(!(MyArrayOfMyRegisterInput[0].querySelector("input").value.length > 0 &&
-        MyArrayOfMyRegisterInput[0].querySelector("input").value.split("").includes("@")))
-        {
-            MyArrayOfMyRegisterInput[0].querySelector("input").style.backgroundColor = "red";
-            event.preventDefault()
-        }
-        if(!(MyArrayOfMyRegisterInput[1].querySelector("input").value.length > 0)){
-            MyArrayOfMyRegisterInput[1].querySelector("input").style.backgroundColor = "red";
-            event.preventDefault()
-        }
-        if(!(MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").value.length > 0)){
-            MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").style.backgroundColor = "red";
-            event.preventDefault();
-        }
-        else {
-            alert("thank you for filling out the form");
-            MyArrayOfMyRegisterInput[0].querySelector("input").value = "";
-            MyArrayOfMyRegisterInput[1].querySelector("input").value = "";
-            MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").value = "";
-        }
+    if(!(MyArrayOfMyRegisterInput[0].querySelector("input").value.length > 0) ||
+      !(MyArrayOfMyRegisterInput[0].querySelector("input").value.split("").includes("@")))
+    {
+        MyArrayOfMyRegisterInput[0].querySelector("input").style.backgroundColor = "red";
+        MyArrayOfMyRegisterInput[0].querySelector("input").value = "please try again";
+        event.preventDefault();
+    }
+    if(!(MyArrayOfMyRegisterInput[1].querySelector("input").value.length > 0)){
+        MyArrayOfMyRegisterInput[1].querySelector("input").style.backgroundColor = "red";
+        event.preventDefault();
+    }
+    if(!(MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").value.length > 0)){
+        MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").style.backgroundColor = "red";
+        event.preventDefault();
+    }
+    else {
+        alert("thank you for filling out the form");
+        MyArrayOfMyRegisterInput[0].querySelector("input").value = "";
+        MyArrayOfMyRegisterInput[1].querySelector("input").value = "";
+        MyArrayOfMyRegisterInput[2].querySelector("#exampleTextarea").value = "";
+    }
 }
+
+       
