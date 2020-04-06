@@ -2,7 +2,7 @@ function websiteThemes(){
     blueButtonClicked();
     orangeButtonClicked();
     greenButtonClicked();
-    validateForm();
+   
 }
 
 
@@ -63,29 +63,37 @@ function greenButtonClicked() {
     });
 }
 
-function validateForm(){
-    email = document.getElementById('#exampleInputEmail1');
-    name = document.getElementById('#example-text-input');
-    descSelf = document.getElementById('#exampleTextarea');
-    let isValid = false;
-    if(email.value.length>0 && email.value.includes('@') && name.value.length>0 && descSelf.value.length>0){
-        isValid == true;
-        let submit = document.getElementsByClassName('btn-primary');
-        submit.addEventListener('click',()=>{
-           if(isValid === true){
-               alert('thank you for filling out the form');
-                form.reset();
-           }
-        })
-    }else{
-      email.style.backgroundColor = 'red';   
-      name.style.backgroundColor ='red';
-      descSelf.style.backgroundColor ='red';
-       isValid == false;
-    }
+let form = document.querySelector('form');
+let submitBtn = form.querySelector('button');
+let email = document.getElementById('exampleInputEmail1');
+let name = document.getElementById('example-text-input');
+console.log(name)
+let descSelf = document.getElementById('exampleTextarea');
+
+submitBtn.addEventListener('click',()=>{
+if(email.value.length === 0 || !email.value.includes('@')) { 
+     email.style.backgroundColor ='red';
+     return false;
+}else if(name.value.length === 0){
+        name.style.backgroundColor = 'red';
+        return false;
+   }else if(descSelf.value.length === 0){
+         descSelf.style.backgroundColor = 'red';
+         return false;
+   }else{
+        alert('thank you for filling out the form');
+        form.submit();
+        form.reset();
+    }  
+    
+
+})
+
      
    
-}
+
 
 
 websiteThemes();
+
+
