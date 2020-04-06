@@ -42,12 +42,12 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
-// This should log "The ball has shaken!"
-// // and return the answer.
-// function shakeBall() {
-//   console.log("The ball has shaken!")
-//   return "Very doubtful."
-// }
+
+function shakeBall() {
+  console.log("The ball has shaken!");
+  return "My reply is no."
+}
+
 let ball = [
   "It is certain.",
   "It is decidedly so.",
@@ -69,6 +69,11 @@ let ball = [
   "My sources say no.",
   "Outlook not so good.",
   "Very doubtful."]
+
+function myFunction() {
+  var randomBall = ball[Math.floor((Math.random() * ball.length))];
+  return randomBall
+}
 
 function checkAnswer(answer) {
   {
@@ -99,11 +104,6 @@ function checkAnswer(answer) {
     }
   }
 }
-function shakeBall() {
-  console.log("The ball has shaken!");
-  return "My reply is no."
-}
-
 
 
 

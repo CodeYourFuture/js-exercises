@@ -22,8 +22,8 @@ calculateSalesTax(15);
 
 function formatCurrency(price) {
   var num = calculateSalesTax(price);
-  var num = num.toFixed(2)
-  return "£" + num;
+  var num2 = num.toFixed(2)
+  return "£" + num2;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
