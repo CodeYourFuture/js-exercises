@@ -60,7 +60,7 @@ const movies = [
     haveWatched: false,
   },
 ];
-
+// Task 1
 // create showMovies function
 function showMovies(movie) {
   setTimeout(function () {
@@ -74,44 +74,50 @@ function showMovies(movie) {
   }, 1000);
 }
 
+// Task 2
 // create a new movie object for your favorite movie
 
-// const newMovie = {
-//     title: "The Experiment",
-//     director: "Leigh Whannell",
-//     type: "horror",
-//     haveWatched: false
-// }
+const newMovie = {
+  title: "The Experiment",
+  director: "Leigh Whannell",
+  type: "horror",
+  haveWatched: false,
+};
+
+//  Task 3
 // create addMovies function
-// function addMovies (movie, callback) {
-//   setTimeout(function () {
-//     callback()
-// }, 2000)
-// }
+
+function addMovies(movie, callback) {
+  setTimeout(function () {
+    movies.push(movie);
+    callback();
+  }, 3000);
+}
 
 //Task 4
-let button = document
-  .getElementById("form-button")
-  .addEventListener("click", clickButton);
+let button = document.getElementById("form-button");
+button.addEventListener("click", clickButton);
 
-function clickButton(callback) {
+function clickButton() {
   setTimeout(function () {
     let userMovie = {
       title: document.getElementById("form-title").value,
       director: document.getElementById("form-director").value,
       genre: document.getElementById("form-genre").value,
-      watched: function () {
-        let watched = document.getElementById("form-watched").value;
-        watched.toLowercase();
-        if (watched === "yes") {
-          return (watched = true);
-        } else if (watched === "no") {
-          return (watched = false);
-        }
-      },
+      // watched: function () {
+      //   let watched = document.getElementById("form-watched").value;
+      //   watched.toLowercase();
+      //   if (watched === "yes") {
+      //     return (watched = true);
+      //   } else if (watched === "no") {
+      //     return (watched = false);
+      //   }
+      // },
     };
+
     movies.push(userMovie);
-    callback();
   }, 2000);
 }
-clickButton(showMovies);
+addMovies(newMovie, showMovies);
+clickButton();
+console.log(movies);
