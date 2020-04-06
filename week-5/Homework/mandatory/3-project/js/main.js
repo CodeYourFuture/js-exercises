@@ -50,6 +50,7 @@ function checkValidity(event) {
   ) {
     alert("Thank you!");
     formEl.reset();
+    formControl.forEach((area) => (area.style.backgroundColor = "white"));
   } else {
     formControl.forEach((area) => {
       !area.value.length > 0
@@ -60,3 +61,20 @@ function checkValidity(event) {
     });
   }
 }
+
+// if (
+//   emailArea.value.length > 0 &&
+//   nameArea.value.length > 0 &&
+//   textArea.value.length > 0 &&
+//   emailArea.value.includes("@")
+// ) {
+//   alert("Thank you!");
+//   formEl.reset();
+// } else if (!emailArea.value.includes("@")) {
+//   emailArea.style.backgroundColor = "red";
+// } else
+//   formControl.forEach((form) => {
+//     if (!form.value.length > 0) {
+//       form.style.backgroundColor = "red";
+//     }
+//   });
