@@ -2,12 +2,17 @@ function setAlarm() {
   let inputField = document.querySelector("#alarmSet");
   let title = document.querySelector("#timeRemaining");
   let counter = inputField.value;
+
   return setInterval(function() {
+    let audio = document.querySelector("#myAudio");
     title.innerHTML = "Time Remaining: 00:" + counter;
-    counter--;
-    if (counter === 0) {
-      clearInterval();
-      pauseAlarm(audio);
+
+    if (counter > 0) {
+      counter--;
+      if (counter == 0) {
+        // clearInterval();
+        playAlarm(audio);
+      }
     }
   }, 1000);
 
