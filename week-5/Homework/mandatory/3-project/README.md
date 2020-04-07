@@ -44,5 +44,5 @@ IF all the fields are valid, when you click **Submit** it should:
 
 - Display an alert to thank you for filling out the form
 - Blank out (make empty) all the text fields
-
+#31b0d5
 **Important hint:** In your function that handles clicks on the `Submit` button you will need to call `event.preventDefault()` to stop the browser from refreshing the page. To read more on how to do this: https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault

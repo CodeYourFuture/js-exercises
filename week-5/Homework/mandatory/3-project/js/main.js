@@ -4,7 +4,10 @@ let jumbortonn = document.querySelector(".jumbotron");
 let getChild1 = btnDiv[0]
 let getChild2 = btnDiv[1];
 let btnOrang = document.querySelector("#orangeBtn");
-let btnGreen = document.querySelector("#greenBtn")
+let btnGreen = document.querySelector("#greenBtn");
+let btnSubmit = document.querySelectorAll("button")[4];
+let email1 = document.querySelector("exampleInputEmail1");
+
 
 function btnBackColor() {
     
@@ -25,8 +28,12 @@ function btnGreenFunc() {
     getChild2.style.backgroundColor = "#8c9c08"
     getChild2.style.color = "black"
 }
+function btnSubmitFunc() {
+    if()
+}
 
 btnBlue.addEventListener("click",btnBackColor);
 btnOrang.addEventListener("click", btnOrangeFunc);
-btnGreen.addEventListener("click", btnGreenFunc)
+btnGreen.addEventListener("click", btnGreenFunc);
+btnSubmit.addEventListener("click", )
 
