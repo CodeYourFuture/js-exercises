@@ -45,6 +45,7 @@ function setAlarm() {
       document.querySelector("body").style.backgroundColor = "white";
       stopChangeBackgroundColor();
       pauseAlarm(audio);
+      document.getElementById("alarmSet").value = "";
       // clearInterval(newTime);
     });
   }, 1000);
