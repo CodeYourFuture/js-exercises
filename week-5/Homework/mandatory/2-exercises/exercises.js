@@ -82,7 +82,10 @@ function exerciseThree(books , i) {
     console.log(element.alreadyRead);
     const List = document.createElement("ul");
     const text = "Titel :" + element.title;
-    List.textContent= text;
+    const imGe = document.createElement("img");
+    imGe.src = "https://productdork.com/uploads/default/original/1X/ddbda1150301e89cdf0119d84f2a7fb8930beffb.png";
+    imGe.style.textAlign = "center";
+    List.textContent= text + imGe;
     ListBook.appendChild(List);
     for (let i = 0 ; i < 2 ; i ++){
       var item = document.createElement('li');
