@@ -114,5 +114,7 @@ function clickButton(event) {
     //   }
     // },
   };
+
   addMovies(userMovie, showMovies);
+  // document.querySelector("form").requestSubmit();
 }
