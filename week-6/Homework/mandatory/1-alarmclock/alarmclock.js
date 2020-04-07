@@ -2,25 +2,23 @@ function setAlarm() {}
 
 // DO NOT EDIT BELOW HERE
 
+var audio = new Audio("alarmsound.mp3");
+
 function setup() {
-  var audio = new Audio("alarmsound.mp3");
-
-  console.log(document.getElementById("set"));
-
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
   });
 
   document.getElementById("stop").addEventListener("click", () => {
-    pauseAlarm(audio);
+    pauseAlarm();
   });
 }
 
-function playAlarm(audio) {
+function playAlarm() {
   audio.play();
 }
 
-function pauseAlarm(audio) {
+function pauseAlarm() {
   audio.pause();
 }
 
