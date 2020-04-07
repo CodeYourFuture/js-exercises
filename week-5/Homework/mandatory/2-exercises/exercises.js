@@ -15,6 +15,15 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach((person) => {
+    let myH1 = document.createElement("h1");
+    let myH2 = document.createElement("h2");
+
+    myH1.textContent = person.name;
+    myH2.textContent = person.job;
+    content.appendChild(myH1);
+    content.appendChild(myH2);
+  });
 }
 
 /**
@@ -26,6 +35,16 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  let myUl = document.createElement("ul");
+
+  shopping.forEach((item) => {
+    let myLi = document.createElement("li");
+    myLi.textContent = item;
+    myUl.appendChild(myLi);
+  });
+
+  let content = document.querySelector("#content");
+  content.appendChild(myUl);
 }
 
 /**
@@ -59,6 +78,31 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let mycontent = document.querySelector("#content");
+  let myUl = document.createElement("ul");
+
+  books.forEach((book) => {
+    let myP = document.createElement("p");
+    let myLi = document.createElement("li");
+    let myImage = document.createElement("img");
+    //let myAnchor = document.createElement("a");
+
+    myP.textContent = `Title : ${book.title} - Author : ${book.author}`;
+
+    if (book.alreadyRead == true) {
+      myP.style.color = "red";
+    } else {
+      myP.style.color = "green";
+    }
+
+    myImage.src = "";
+
+    myLi.appendChild(myP);
+    myLi.appendChild(myImage);
+    myUl.appendChild(myLi);
+  });
+
+  mycontent.appendChild(myUl);
 }
 
 //
@@ -74,7 +118,7 @@ function exerciseThree(books) {
 let people = [
   { name: "Chris", job: "Teacher" },
   { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+  { name: "Boris", job: "Prime Minister" },
 ];
 
 exerciseOne(people);
@@ -87,18 +131,18 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
-  }
+    alreadyRead: true,
+  },
 ];
 
 exerciseThree(books);
