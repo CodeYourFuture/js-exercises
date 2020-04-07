@@ -16,8 +16,10 @@ function setAlarm() {
   let inputValue = document.getElementById("alarmSet").value;
   let timeRemain = document.getElementById("timeRemaining");
   let newTime = setInterval(function () {
+    let minutes = Math.floor(inputValue / 60);
+    let seconds = inputValue - minutes * 60;
     inputValue--;
-    timeRemain.textContent = `Time Remaining: 00:${inputValue}`;
+    timeRemain.textContent = `Time Remaining: ${minutes}:${seconds}`;
     if (inputValue == 0) {
       changeBackgroundColor();
       playAlarm(audio);
@@ -33,8 +35,6 @@ function setAlarm() {
 // DO NOT EDIT BELOW HERE
 
 function setup() {
-  var audio = new Audio("alarmsound.mp3");
-
   console.log(document.getElementById("set"));
 
   document.getElementById("set").addEventListener("click", () => {
