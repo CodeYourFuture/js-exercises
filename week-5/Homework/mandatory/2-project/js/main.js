@@ -1,4 +1,3 @@
-
 /*
   
 - When clicking **blue** it should change:
@@ -17,59 +16,47 @@
 
 */
 
-document.querySelector("#blueBtn").addEventListener("click", function() {
-    document.getElementsByClassName("jumbotron")[0].style.background = "#588fbd";
-    document.querySelector(".buttons").children[0].style.background = "#ffa500";
-    document.querySelector(".buttons").children[1].style.background = "black";
-    document.querySelector(".buttons").children[1].style.color = "white";
+document.querySelector("#blueBtn").addEventListener("click", function () {
+  document.getElementsByClassName("jumbotron")[0].style.background = "#588fbd";
+  document.querySelector(".buttons").children[0].style.background = "#ffa500";
+  document.querySelector(".buttons").children[1].style.background = "black";
+  document.querySelector(".buttons").children[1].style.color = "white";
 });
 
-
-document.querySelector("#orangeBtn").addEventListener("click", function() {
-    document.getElementsByClassName("jumbotron")[0].style.background = "#f0ad4e";
-    document.querySelector(".buttons").children[0].style.background = "#5751fd";
-    document.querySelector(".buttons").children[1].style.background = "#31b0d5";
-    document.querySelector(".buttons").children[1].style.color = "white";
+document.querySelector("#orangeBtn").addEventListener("click", function () {
+  document.getElementsByClassName("jumbotron")[0].style.background = "#f0ad4e";
+  document.querySelector(".buttons").children[0].style.background = "#5751fd";
+  document.querySelector(".buttons").children[1].style.background = "#31b0d5";
+  document.querySelector(".buttons").children[1].style.color = "white";
 });
 
-
-document.querySelector("#greenBtn").addEventListener("click", function() {
-    document.getElementsByClassName("jumbotron")[0].style.background = "#87ca8a";
-    document.querySelector(".buttons").children[0].style.background = "black";
-    document.querySelector(".buttons").children[1].style.background = "#8c9c08";
-    console.log("hello");
+document.querySelector("#greenBtn").addEventListener("click", function () {
+  document.getElementsByClassName("jumbotron")[0].style.background = "#87ca8a";
+  document.querySelector(".buttons").children[0].style.background = "black";
+  document.querySelector(".buttons").children[1].style.background = "#8c9c08";
+  console.log("hello");
 });
- 
- 
-function init(){
-    
-}
 
-
+function init() {}
 
 //2- forms
 let form = document.getElementsByTagName("form")[0];
 
+function formValidate() {
+  let emailText = inputEmail.value;
+  let nameText = inputName.value;
+  let descriptionText = inputDescribeYourself.value;
 
+  let newEmailResult = true;
+  let newTextResult = true;
+  let newDescriptionTextResult = true;
 
+  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-function formValidate()
-{
-
-    let emailText = inputEmail.value;
-    let nameText = inputName.value;
-    let descriptionText = inputDescribeYourself.value;
-
-
-    let newEmailResult = true;
-    let newTextResult = true;
-    let newDescriptionTextResult = true;
-
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-   return false;//checkEmailInput(emailText)
-
+  return false; //checkEmailInput(emailText)
 }
+
+/*
 
 function checkEmailInput(txtEmail) {
     if (txtEmail.length != 0 && txtEmail.match(regexEmail)) {
@@ -81,6 +68,7 @@ function checkEmailInput(txtEmail) {
         return false;
     }; 
 }
+
 
 //====checking name is checking and validating the conditions===
 function nameTextInput() {
@@ -123,3 +111,4 @@ event.preventDefault(); // this stops the page refreshing
 };
 
 
+*/
