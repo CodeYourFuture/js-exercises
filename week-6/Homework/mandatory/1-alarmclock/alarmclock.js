@@ -15,7 +15,6 @@ function setAlarm() {
     }
   }
 }
-let newVar;
 // Testing github issues
 
 // DO NOT EDIT BELOW HERE
