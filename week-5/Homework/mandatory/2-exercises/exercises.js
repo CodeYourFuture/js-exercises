@@ -13,16 +13,17 @@
  *      .....
  * </div>
  */
+
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  var newContent = document.createTextNode("Hi there and greetings!"); 
-  let h1 = document.createElement("h1"); 
-  h1.innerHTML = "arrayOfPeople.name";
-  let h2 = document.createElement("h2");
-  h2.innerHTML = "arrayOfPeople.job";
-  nDiv.appendChild(h1 , h2);   
-   
- 
+  const content = document.getElementById("content");
+  const h1 = document.createElement("h1"); 
+  const h2 = document.createElement("h2");
+  h1.textContent = arrayOfPeople[2].name;
+  h2.textContent = arrayOfPeople[2].job;
+  console.log(h1);
+  console.log(h2);
+  content.appendChild(h1);
+  content.appendChild(h2);   
 }
 
 /**
@@ -33,7 +34,15 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
+  const conT = document.getElementById("content");
+  const List = document.createElement("ul");
+  conT.append(List);
+  for (var i = 0; i < shopping.length; i++) {
+    var item = document.createElement('li');
+    console.log(shopping[i]);
+    item.textContent= shopping[i];
+    List.appendChild(item);
+  };
 }
   //Write your code in here
 
@@ -66,8 +75,26 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
-  
+function exerciseThree(books , i) {
+  const ListBook = document.getElementById("content");
+  books.forEach(element => {
+    let PEl = document.createElement("p");
+    console.log(element.alreadyRead);
+    const List = document.createElement("ul");
+    const text = "Titel :" + element.title;
+    List.textContent= text;
+    ListBook.appendChild(List);
+    for (let i = 0 ; i < 2 ; i ++){
+      var item = document.createElement('li');
+      if (i === 0){
+       item.textContent= "Author: "+ element.author; 
+      } if (i === 1) {
+        item.textContent= element.alreadyRead;
+      }
+    List.appendChild(item);
+    List.appendChild(item);
+    };
+  });
   //Write your code in here
 }
 
