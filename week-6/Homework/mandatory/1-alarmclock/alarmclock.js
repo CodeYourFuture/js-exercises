@@ -15,6 +15,8 @@ function setAlarm() {
     }
   }
 }
+let newVar;
+// Testing github issues
 
 // DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");
