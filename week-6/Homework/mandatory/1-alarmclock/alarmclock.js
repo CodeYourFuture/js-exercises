@@ -2,7 +2,6 @@ function setAlarm() {
   let inputField = document.querySelector("#alarmSet");
   let title = document.querySelector("#timeRemaining");
   let counter = inputField.value;
-
   return setInterval(function() {
     let audio = document.querySelector("#myAudio");
     title.innerHTML = "Time Remaining: 00:" + counter;
@@ -15,13 +14,6 @@ function setAlarm() {
       }
     }
   }, 1000);
-
-  //title.innerHTML = "Time Remaining: 00:" + inputField.value
-  // setinterval (updateTitle, 1000)
-  // function updateTitle (){
-  //   title.innerHTML = "Time Remaining: 00:" + inputField.value
-  //   inputField.value -= 1
-  //
 }
 
 // DO NOT EDIT BELOW HERE
