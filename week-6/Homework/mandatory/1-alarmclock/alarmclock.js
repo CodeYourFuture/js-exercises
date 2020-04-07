@@ -2,9 +2,13 @@ function setAlarm() {
 let alarmSet = document.getElementById("alarmSet").value;
 
 let timeRemaining = document.getElementById("timeRemaining");
-let rounded  = parseFloat(alarmSet).toFixed(2);
-console.log(alarmSet);
-timeRemaining.innerHTML = `Time Remaining: ${rounded}`;
+
+for(let rounded=parseFloat(alarmSet).toFixed(2);rounded=0;rounded-=1){
+  setInterval(function(rounded,timeRemaining){ 
+    timeRemaining.innerHTML = `Time Remaining: ${rounded}`;
+    rounded-=0.1;
+  }, 1000, timeRemaining );
+};
 }
 // setTimeout(,
 // 1000);
