@@ -1,5 +1,13 @@
-function setAlarm() {}
+function setAlarm() {
+let alarmSet = document.getElementById("alarmSet").value;
 
+let timeRemaining = document.getElementById("timeRemaining");
+let rounded  = parseFloat(alarmSet).toFixed(2);
+console.log(alarmSet);
+timeRemaining.innerHTML = `Time Remaining: ${rounded}`;
+}
+// setTimeout(,
+// 1000);
 // DO NOT EDIT BELOW HERE
 
 function setup() {
