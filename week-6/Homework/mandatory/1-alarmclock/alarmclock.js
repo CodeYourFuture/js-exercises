@@ -39,9 +39,15 @@ function setAlarm() {
       document.getElementById("alarmSet").value = "";
       clearInterval(intervalId);
     });
+
+    document.getElementById("pause").addEventListener("click", () => {
+      clearInterval(intervalId);
+    });
   }, 1000);
 }
+
 // DO NOT EDIT BELOW HERE
+
 let audio = new Audio("alarmsound.mp3");
 function setup() {
   document.getElementById("alarmSet").placeholder = "seconds";
