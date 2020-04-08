@@ -3,14 +3,14 @@ function setAlarm() {
   let title = document.querySelector("#timeRemaining");
   let counter = inputField.value;
   return setInterval(function() {
-    let audio = document.querySelector("#myAudio");
+    let audioEl = document.querySelector("#myAudio");
     title.innerHTML = "Time Remaining: 00:" + counter;
 
     if (counter > 0) {
       counter--;
       if (counter == 0) {
         // clearInterval();
-        playAlarm(audio);
+        playAlarm(audioEl);
       }
     }
   }, 1000);
@@ -18,26 +18,19 @@ function setAlarm() {
 
 // DO NOT EDIT BELOW HERE
 
+var audio = new Audio("alarmsound.mp3");
 function setup() {
-  var audio = new Audio("alarmsound.mp3");
-
-  console.log(document.getElementById("set"));
-
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
   });
-
   document.getElementById("stop").addEventListener("click", () => {
-    pauseAlarm(audio);
+    pauseAlarm();
   });
 }
-
-function playAlarm(audio) {
+function playAlarm() {
   audio.play();
 }
-
-function pauseAlarm(audio) {
+function pauseAlarm() {
   audio.pause();
 }
-
 window.onload = setup;
