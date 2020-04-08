@@ -5,7 +5,7 @@ function changeBackgroundColor() {
 function changeColor() {
   let body = document.querySelector("body");
   body.style.backgroundColor =
-    body.style.backgroundColor == "red" ? "blue" : "red";
+    body.style.backgroundColor == "crimson" ? "#0083B0" : "crimson";
 }
 function stopChangeBackgroundColor() {
   clearInterval(backgroundColors);
@@ -33,7 +33,7 @@ function setAlarm() {
       clearInterval(intervalId);
     }
     document.getElementById("stop").addEventListener("click", () => {
-      document.querySelector("body").style.backgroundColor = "white";
+      document.querySelector("body").style.backgroundColor = "#0083B0";
       stopChangeBackgroundColor();
       timeRemain.textContent = `Time Remaining: 00:00`;
       document.getElementById("alarmSet").value = "";
