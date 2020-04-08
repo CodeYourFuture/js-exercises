@@ -1,1 +1,33 @@
 /** Write your CSS in here **/
+body{
+    background-color:#fca103;
+}
+#container{
+    background-color: #c8ccc9;
+    height: 20em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 12em;
+    margin-left: 10em;
+    margin-right: 12em;
+
+}
+
+#quote {
+    margin: 0;
+    font-size:40px;
+    color: ; 
+}
+
+ #boxContainer {
+    display: flex;
+    justify-content:flex-end;
+    position: relative;
+    margin-right: 12em
+} 
+
+.box {
+    background:#fca903;
+    height: 50px;
+}

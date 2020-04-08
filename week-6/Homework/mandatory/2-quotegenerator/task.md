@@ -1,4 +1,4 @@
-# Make a Quote Generator
+# Make a z
 
 In this folder you will find the basic setup of a quote generator.
 
