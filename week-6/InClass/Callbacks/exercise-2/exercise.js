@@ -62,11 +62,14 @@ const movies = [
 ];
 // Task 1
 // create showMovies function
+
 function showMovies() {
   setTimeout(function () {
+    document.querySelector("#listFilms").innerText = "";
+
     movies.forEach((movie) => {
       let pElement = document.createElement("p");
-      document.querySelector("#all-movies").append(pElement);
+      document.querySelector("#listFilms").append(pElement);
       pElement.innerText = `${movie.title} by ${movie.director}`;
     });
     let allMovies = document.querySelector("#movies-number");
@@ -93,7 +96,7 @@ function addMovies(movie, callback) {
     callback();
   }, 3000);
 }
-
+showMovies();
 //Task 4
 let button = document.getElementById("form-button");
 button.addEventListener("click", clickButton);
@@ -116,5 +119,5 @@ function clickButton(event) {
   };
 
   addMovies(userMovie, showMovies);
-  // document.querySelector("form").requestSubmit();
+  document.querySelector("form").reset();
 }
