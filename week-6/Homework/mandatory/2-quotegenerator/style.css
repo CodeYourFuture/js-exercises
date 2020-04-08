@@ -1,1 +1,16 @@
-/** Write your CSS in here **/
+blockquote {
+  height: 50vh;
+  width: 90%;
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+a {
+  font-size: 2em;
+}
