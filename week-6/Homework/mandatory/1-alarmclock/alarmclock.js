@@ -10,10 +10,21 @@ function setAlarm() {
     if (rounded > 0) {
       rounded -= 0.01;
     } else {
-      timeRemaining.innerHTML = `Time Remaining: 00:00`;
+      timeRemaining.innerHTML = `ALARM!!!!!`;
       var audio = new Audio("alarmsound.mp3");
       playAlarm(Audio);
       clearInterval(timer);
+      setInterval(function () {
+        document.querySelector("body").style.backgroundColor = "red";
+        document.querySelector("body").style.color = "red";
+      }, 100);
+      setTimeout(function () {
+        setInterval(function () {
+          document.querySelector("body").style.backgroundColor = "black";
+          document.querySelector("body").style.color = "red";
+          document.querySelector("body").style.color = "black";
+        }, 75);
+      }, 50);
     }
   }, 10);
 }
