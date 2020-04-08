@@ -7,11 +7,13 @@ Write a function that:
 */
 
 function tidyUpString(strArr) {
-  let arraysEqual = strArr.trim();
-  return arraysEqual;
+  let newArray = [];
+  for (let i=0; i < strArr.length; i++) {
+    newArray.push((strArr[i].trim().replace("/", "").toLowerCase()));
+  }
+  return newArray;
 }
 
-console.log(arraysEqual(tidyUpString["/Daniel ", "irina ", " Gordon", "ashleigh "]));
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -22,17 +24,17 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (num % 2 === 0 && num <= 100) {
-    return "true";
+  if (typeof num === "number" && num % 2 === 0 && num <= 100) {
+    return true;
   } else {
-    return "false";
+    return false;
   }
 }
 
 console.log(validate(10));
 console.log(validate(18));
 console.log(validate(17));
-console.log(validate("10")); 
+console.log(validate("Ten")); 
 console.log(validate(108));
 
 /* 
@@ -40,10 +42,13 @@ Write a function that removes an element from an array
 The function must:
 - NOT change the original array
 - return a new array with the item removed
-- remove the item at the specified index
+- remove the item at the specified index - The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+
+  slice - The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
 */
 
-function remove() {
+function remove(array, index) {
   let removed = array.splice(index, 1);
   return array; 
 }
@@ -51,18 +56,35 @@ function remove() {
 console.log(remove([10, 293, 292, 176, 29], 3));
 console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 6));
 
+
 /*
-Write a function that:
-- takes an array of numbers as input
-- returns an array of strings formatted as percentages (e.g. 10 => "10%")
-- the numbers must be rounded to 2 decimal places
-- numbers greater 100 must be replaced with 100
-*/
+ Write a function that:
+ - takes an array of numbers as input
+ - returns an array of strings formatted as percentages (e.g. 10 => "10%")
+  *will need a method that formats something...
+  *you will need to concat, ``,
+ - the numbers must be rounded to 2 decimal places
+  *Math.round
+  *toFixed
+ - numbers greater 100 must be replaced with 100
+  *replace method??
+ */ 
+
 
 function formatPercentage(arr) {
-  let array = [];
-  
-}
+  let newArray1 = [i];
+   for (let i=0; i < newArray.length; i++) {
+    if (newArray1 > 100) {newArray = 100}
+    newArray1 = newArray1.toFixed(2); 
+    newArray1 = newArray1.toString();
+    newArray1 = newArray1 + "%";
+   }
+    return newArray1; 
+ }
+
+console.log([23, 18, 187.2, 0.372]);
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -128,12 +150,12 @@ test(
   ])
 );
 
-test(
-  "formatPercentage function works - case 1",
-  arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
-    "23%",
-    "18%",
-    "100%",
+ test(
+   "formatPercentage function works - case 1",
+    arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
+     "23%",
+     "18%",
+     "100%",
     "0.37%"
   ])
-);
+ );
