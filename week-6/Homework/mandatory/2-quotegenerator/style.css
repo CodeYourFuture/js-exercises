@@ -1,1 +1,35 @@
 /** Write your CSS in here **/
+body {
+  background-image: url("https://images.unsplash.com/photo-1495639004258-10f5563eb702?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+}
+#wrapper {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -550px;
+}
+#quoteBox {
+  display: inline-block;
+  width: 1100px;
+  height: 400px;
+  background-color: rgb(238, 235, 230);
+  border-radius: 25px;
+}
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-size: 25px;
+  margin-top: 5%;
+}
+button {
+  position: absolute;
+  left: 50%;
+  font-weight: bold;
+  margin-left: -80px;
+  bottom: 10px;
+  width: 160px;
+  height: 40px;
+  background-color: rgb(240, 160, 57);
+}

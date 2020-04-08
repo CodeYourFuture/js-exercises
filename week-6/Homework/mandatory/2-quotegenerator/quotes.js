@@ -20,7 +20,14 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-document.querySelector("generateBtn").addEventListener("click", pickFromArray);
+let paragraph1 = document.createElement("p");
+let paragraph2 = document.createElement("p");
+document.querySelector("#quoteBox").appendChild(paragraph1);
+document.querySelector("#quoteBox").appendChild(paragraph2);
+document.querySelector("#generateBtn").addEventListener("click", function() {
+  paragraph1.innerHTML = "“" + pickFromArray(quotes).quote + "”";
+  paragraph2.innerHTML = pickFromArray(quotes).author;
+});
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
