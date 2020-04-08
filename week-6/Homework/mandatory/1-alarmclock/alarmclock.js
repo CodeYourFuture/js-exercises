@@ -1,37 +1,36 @@
 function setAlarm() {
-let alarmSet = document.getElementById("alarmSet").value;
+  let alarmSet = document.getElementById("alarmSet").value;
 
-let timeRemaining = document.getElementById("timeRemaining");
-rounded=parseFloat(alarmSet);
-  setInterval(function(){ 
+  let timeRemaining = document.getElementById("timeRemaining");
+  timeRemaining.style.width = "500 px";
+  rounded = parseFloat(alarmSet);
+  let timer = setInterval(function () {
     timeRemaining.innerHTML = `Time Remaining: ${rounded.toFixed(2)}`;
-    rounded-=0.01;
+    console.log(rounded);
+    if (rounded > 0) {
+      rounded -= 0.01;
+    } else {
+      timeRemaining.innerHTML = `Time Remaining: 00:00`;
+      var audio = new Audio("alarmsound.mp3");
+      playAlarm(Audio);
+      clearInterval(timer);
+    }
   }, 10);
-};
-// setTimeout(,
-// 1000);
+}
 // DO NOT EDIT BELOW HERE
-
+var audio = new Audio("alarmsound.mp3");
 function setup() {
-  var audio = new Audio("alarmsound.mp3");
-
-  console.log(document.getElementById("set"));
-
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
   });
-
   document.getElementById("stop").addEventListener("click", () => {
-    pauseAlarm(audio);
+    pauseAlarm();
   });
 }
-
-function playAlarm(audio) {
+function playAlarm() {
   audio.play();
 }
-
-function pauseAlarm(audio) {
+function pauseAlarm() {
   audio.pause();
 }
-
 window.onload = setup;
