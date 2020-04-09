@@ -1,20 +1,22 @@
-window.onload=function(quotes){
-let button = document.querySelector("generate");
+window.onload=function(){
+let button = document.querySelector("#generate");
 console.log(button)
-    button.addEventListener("click", runThePhylosopher);
 let runThePhylosopher = function(){
 
-// let fontUnblur = function (whattublur) {
-//   for (let blur = 25; (blur = 0); blur--) {
-//     querySelector(
-//       whattoblur
-//     ).style.textShadow = `1px 2px ${blur}px rgb(255, 255, 255)`;
-//   }
-//    fontUnblur();
-   let quo = pickFromArray(quotes);
-   document.querySelector(h1).innerHTML = `${quo.quote}`;
-};
-runThePhylosopher
+  // let fontUnblur = function (whattublur) {
+  //   for (let blur = 25; (blur = 0); blur--) {
+  //     querySelector(
+  //       whattoblur
+  //     ).style.textShadow = `1px 2px ${blur}px rgb(255, 255, 255)`;
+  //   }
+  //    fontUnblur();
+     let quo = pickFromArray(quotes);
+     document.querySelector("h1").innerHTML = `${quo.quote}`;
+    };
+    button.addEventListener("click", runThePhylosopher);
+
+
+runThePhylosopher();
 };
 // DO NOT EDIT BELOW HERE
 

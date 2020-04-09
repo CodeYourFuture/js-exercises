@@ -23,7 +23,7 @@ function setAlarm() {
           document.querySelector("body").style.backgroundColor = "orange";
           document.querySelector("body").style.color = "green";
           document.querySelector("body").style.color = "green";
-        }, 375);
+        }, 300);
       }, 150);
     }
   }, 10);
