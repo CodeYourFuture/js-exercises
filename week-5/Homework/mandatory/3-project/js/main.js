@@ -33,15 +33,28 @@ function btnGreenFunc() {
     getChild2.style.color = "black"
 }
 
-function btnSubmitFunc(e) {
+function btnSubmitFunc(event) {
     let errorMessage = "";
     if (email1.value == "" || !email1.includs("@")) {
+        errorMessage += "emails are empty\n";
         email1.style.backgroundColor = "red";
-        errorMessage += "Pls fill valid email\n";
+        event.preventDefault()
+        if (name.value == "" || describe.value == "") {
+            event.preventDefault()
+        }
     }
-    if (!errorMessage === "") {
-        e.preventDefault()
+    if (name.value == "") {
+        name.style.backgroundColor = "red";
+        errorMessage += "name is empty\n";
+        event.preventDefault()
     }
+    if (describe.value == "") {
+        describe.style.backgroundColor = "red"
+        errorMessage += "describe is empty";
+        event.preventDefault()
+    }
+
+
 }
 
 btnBlue.addEventListener("click", btnBackColor);
