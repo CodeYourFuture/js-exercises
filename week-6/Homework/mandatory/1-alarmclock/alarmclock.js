@@ -39,6 +39,7 @@ function setAlarm() {
       playAlarm(audio);
       clearInterval(intervalId);
     }
+    remainingTime = inputValue;
   }, 1000);
   document.getElementById("stop").addEventListener("click", () => {
     document.querySelector("body").style.backgroundColor = "#0083B0";
@@ -49,7 +50,6 @@ function setAlarm() {
   });
 }
 function pauseResume() {
-  remainingTime = inputValue;
   console.log(remainingTime);
   clearInterval(intervalId);
   if (intervalId == -1) {
