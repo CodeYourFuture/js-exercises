@@ -1,1 +1,8 @@
 /** Write your CSS in here **/
+body{
+  padding: 20px;
+}
+
+#quoteHolder{
+   height: 50px;
+}
