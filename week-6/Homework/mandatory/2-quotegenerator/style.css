@@ -15,19 +15,19 @@ body {
 }
 h1 {
   font-size: 49 px;
-  color: "white";
-  text-shadow: 1px 2px 25px rgb(255, 255, 255);
+  color: white;
+  /* text-shadow: 1px 2px 25px rgb(255, 255, 255);
 
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   text-align: right;
 }
 h2 {
   font-size: 24px;
   color:  white;
-  background-clip: text;
+  /* background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 2px 25px rgb(255, 255, 255);
+  text-shadow: 1px 2px 25px rgb(255, 255, 255); */
   text-align: right;
 }
 
