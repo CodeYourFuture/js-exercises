@@ -2,23 +2,28 @@
 <html>
   <head>
     <title>Quote Generator</title>
-    <script src="quotes.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="body" onload="bringQuoets()">
     <div id="container">
-    <div id="quote"> 
+    <div id="bookname"> 
+    </div>
+    <div id="author"> 
     </div>
     </div>
-    <div id="boxContainer">
-    <button class="box"> New quote </button>
+    <div id="buttonContainer">
+    <button class="button"> New quote </button>
     </div>
     </div>
+    <script src="quotes.js"></script>
   </body>
 </html>
