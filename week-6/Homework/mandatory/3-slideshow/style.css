@@ -8,12 +8,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    width: 80%;
+    width: 90%;
     background-color:#f0fa62;
+    margin:80px 80px;
 }
 h1{
     display: flex;
     align-self: center;
+    font-family: 'Indie Flower', cursive;
 }
 #images {
     width: 50%;
@@ -25,5 +27,6 @@ h1{
 }
 #buttons{
     align-self: flex-start;
-    background-color: #b68118;
+    background-color: #d86b12;
+    font-family: 'Indie Flower', cursive;
 }
