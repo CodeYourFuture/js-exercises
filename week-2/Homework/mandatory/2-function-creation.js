@@ -8,12 +8,11 @@ Write a function that:
 
 function tidyUpString(strArr) {
   let newArray = [];
-  for (let i=0; i < strArr.length; i++) {
-    newArray.push((strArr[i].trim().replace("/", "").toLowerCase()));
+  for (let i = 0; i < strArr.length; i++) {
+    newArray.push(strArr[i].trim().replace("/", "").toLowerCase());
   }
   return newArray;
 }
-
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -34,7 +33,7 @@ function validate(num) {
 console.log(validate(10));
 console.log(validate(18));
 console.log(validate(17));
-console.log(validate("Ten")); 
+console.log(validate("Ten"));
 console.log(validate(108));
 
 /* 
@@ -50,12 +49,11 @@ The function must:
 
 function remove(array, index) {
   let removed = array.splice(index, 1);
-  return array; 
+  return array;
 }
 
 console.log(remove([10, 293, 292, 176, 29], 3));
 console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 6));
-
 
 /*
  Write a function that:
@@ -68,23 +66,30 @@ console.log(remove(["a", "b", "c", "d", "e", "f", "g"], 6));
   *toFixed
  - numbers greater 100 must be replaced with 100
   *replace method??
- */ 
+ */
 
+ // function signature 
+ // input - what type?
+ //output - what type?
 
 function formatPercentage(arr) {
-  let newArray1 = [i];
-   for (let i=0; i < newArray.length; i++) {
-    if (newArray1 > 100) {newArray = 100}
-    newArray1 = newArray1.toFixed(2); 
-    newArray1 = newArray1.toString();
-    newArray1 = newArray1 + "%";
-   }
-    return newArray1; 
- }
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+    if (num > 100) {
+      num = 100;
+    }
+    if (Math.floor(num) !== Math.ceil(num)) {
+    num = num.toFixed(2);
+    } 
+    num = num + "%";
+    newArray.push(num);
+  }
+  console.log(newArray);
+  return newArray;
+}
 
 console.log([23, 18, 187.2, 0.372]);
-
-
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -117,7 +122,7 @@ test(
     "daniel",
     "irina",
     "gordon",
-    "ashleigh"
+    "ashleigh",
   ])
 );
 test(
@@ -146,16 +151,16 @@ test(
     "c",
     "d",
     "e",
-    "f"
+    "f",
   ])
 );
 
- test(
-   "formatPercentage function works - case 1",
-    arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
-     "23%",
-     "18%",
-     "100%",
-    "0.37%"
+test(
+  "formatPercentage function works - case 1",
+  arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
+    "23%",
+    "18%",
+    "100%",
+    "0.37%",
   ])
- );
+);
