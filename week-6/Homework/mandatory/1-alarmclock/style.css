@@ -1,5 +1,5 @@
 body {
-  background-color: #0083B0;
+  background-color: #0083b0;
 }
 
 .centre {
@@ -28,12 +28,12 @@ input {
   padding: 0.7em;
   width: 300px;
   border-radius: 15px;
-  border: 1px solid white
+  border: 1px solid white;
 }
 
 input:focus {
   outline: none;
-  border: 2px solid #0083b0
+  border: 2px solid #0083b0;
 }
 
 #alarmSet {
@@ -60,28 +60,28 @@ button {
 }
 
 #set {
-  background-color: #44A08D;
+  background-color: #00b4db;
 }
 
 #set:hover {
   transition: 300ms ease-in-out;
-  background-color: #00B4DB;
+  background-color: rgb(95, 158, 160);
 }
 
 #stop {
-  background-color: #00B4DB;
+  background-color: #00b4db;
 }
 
 #stop:hover {
   transition: 300ms ease-in-out;
-  background-color: #ED213A;
+  background-color: rgb(95, 158, 160);
 }
 
 #pause {
-  background-color: #00B4DB;
+  background-color: rgb(0, 128, 128);
 }
 
 #pause:hover {
   transition: 300ms ease-in-out;
-  background-color: #F37335;
+  background-color: #00b4db;
 }

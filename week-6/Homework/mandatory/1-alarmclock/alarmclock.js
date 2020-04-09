@@ -54,6 +54,7 @@ function pauseResume() {
   clearInterval(intervalId);
   if (intervalId == -1) {
     document.getElementById("pause").innerText = "Pause";
+    document.getElementById("pause").style.backgroundColor = "rgb(0,128,128)";
     let timeRemain = document.getElementById("timeRemaining");
     intervalId = setInterval(() => {
       remainingTime--;
@@ -70,6 +71,7 @@ function pauseResume() {
     clearInterval(intervalId);
     intervalId = -1;
     document.getElementById("pause").innerText = "Resume";
+    document.getElementById("pause").style.backgroundColor = "green";
   }
 }
 // DO NOT EDIT BELOW HERE
