@@ -15,7 +15,13 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-let newArray = [];
+let newArray = newArray.map(function, )
+for (let i = 0; i < arr.length; i++) {
+newArray.map()
+
+//replace(/\D/g, "");
+
+}
 
 
 }
