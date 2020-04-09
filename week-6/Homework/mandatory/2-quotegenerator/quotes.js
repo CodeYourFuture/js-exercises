@@ -1,4 +1,4 @@
-window.onload=function(){
+window.onload=function(quotes){
 let button = document.querySelector("generate");
 console.log(button)
     button.addEventListener("click", runThePhylosopher);
@@ -14,6 +14,7 @@ let runThePhylosopher = function(){
    let quo = pickFromArray(quotes);
    document.querySelector(h1).innerHTML = `${quo.quote}`;
 };
+runThePhylosopher
 };
 // DO NOT EDIT BELOW HERE
 
