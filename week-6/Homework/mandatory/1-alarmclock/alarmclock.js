@@ -1,4 +1,5 @@
 let backgroundColors;
+
 function changeBackgroundColor() {
   backgroundColors = setInterval(changeColor, 500);
 }
@@ -47,7 +48,30 @@ function setAlarm() {
     clearInterval(intervalId);
   });
 }
-
+function pauseResume() {
+  remainingTime = inputValue;
+  console.log(remainingTime);
+  clearInterval(intervalId);
+  if (intervalId == -1) {
+    document.getElementById("pause").innerText = "Pause";
+    let timeRemain = document.getElementById("timeRemaining");
+    intervalId = setInterval(() => {
+      remainingTime--;
+      timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(
+        remainingTime
+      )}`;
+      if (remainingTime == 0) {
+        changeBackgroundColor();
+        playAlarm(audio);
+        clearInterval(intervalId);
+      }
+    }, 1000);
+  } else {
+    clearInterval(intervalId);
+    intervalId = -1;
+    document.getElementById("pause").innerText = "Resume";
+  }
+}
 // DO NOT EDIT BELOW HERE
 
 let audio = new Audio("alarmsound.mp3");
@@ -62,29 +86,8 @@ function setup() {
   document.getElementById("stop").addEventListener("click", () => {
     pauseAlarm(audio);
   });
-  document.getElementById("pause").addEventListener("click", () => {
-    remainingTime = inputValue;
-    console.log(remainingTime);
-    if (intervalId == -1) {
-      document.getElementById("pause").innerText = "Pause";
-      let timeRemain = document.getElementById("timeRemaining");
-      intervalId = setInterval(() => {
-        remainingTime--;
-        timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(
-          remainingTime
-        )}`;
-        if (remainingTime == 0) {
-          changeBackgroundColor();
-          playAlarm(audio);
-          clearInterval(intervalId);
-        }
-      }, 1000);
-    } else {
-      clearInterval(intervalId);
-      intervalId = -1;
-      document.getElementById("pause").innerText = "Resume";
-    }
-  });
+
+  document.getElementById("pause").addEventListener("click", pauseResume);
 }
 
 function playAlarm(audio) {
