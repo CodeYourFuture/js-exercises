@@ -8,7 +8,7 @@ body {
 }
 .container {
   display: block;
-  align-self: auto;
+  align-items: right;
   margin-top: 10%;
   height: 50%;
   width: 75%;
@@ -24,8 +24,19 @@ h1 {
 }
 h2 {
   font-size: 24px;
-  background: -webkit-linear-gradient(rgb(12, 68, 255), rgb(13, 219, 219));
+  color:  white;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: 1px 2px 25px rgb(255, 255, 255);
   text-align: right;
+}
+
+.generate {
+  background: -webkit-linear-gradient(rgb(12, 68, 255), rgb(13, 219, 219));
+  color: white;
+  border-radius: 5px;
+  border-style: dotted;
+  border: white;
+  float: right;
+  margin-top: 20px;
 }

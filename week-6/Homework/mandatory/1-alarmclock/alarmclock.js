@@ -15,16 +15,16 @@ function setAlarm() {
       playAlarm(Audio);
       clearInterval(timer);
       setInterval(function () {
-        document.querySelector("body").style.backgroundColor = "red";
-        document.querySelector("body").style.color = "red";
+        document.querySelector("body").style.backgroundColor = "green";
+        document.querySelector("body").style.color = "green";
       }, 100);
       setTimeout(function () {
         setInterval(function () {
-          document.querySelector("body").style.backgroundColor = "black";
-          document.querySelector("body").style.color = "red";
-          document.querySelector("body").style.color = "black";
-        }, 75);
-      }, 50);
+          document.querySelector("body").style.backgroundColor = "orange";
+          document.querySelector("body").style.color = "green";
+          document.querySelector("body").style.color = "green";
+        }, 375);
+      }, 150);
     }
   }, 10);
 }
