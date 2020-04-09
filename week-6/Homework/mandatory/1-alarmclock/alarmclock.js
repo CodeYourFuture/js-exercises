@@ -21,10 +21,16 @@ function fancyTimeFormat(time) {
   return newTime;
 }
 
+let intervalId = -1;
+let inputValue = 0;
+let remainingTime = 0;
+
 function setAlarm() {
-  let inputValue = document.getElementById("alarmSet").value;
+  clearInterval(intervalId);
   let timeRemain = document.getElementById("timeRemaining");
-  let intervalId = setInterval(function () {
+  inputValue = document.getElementById("alarmSet").value;
+  timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputValue)}`;
+  intervalId = setInterval(function () {
     inputValue--;
     timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputValue)}`;
     if (inputValue == 0) {
@@ -32,18 +38,14 @@ function setAlarm() {
       playAlarm(audio);
       clearInterval(intervalId);
     }
-    document.getElementById("stop").addEventListener("click", () => {
-      document.querySelector("body").style.backgroundColor = "#0083B0";
-      stopChangeBackgroundColor();
-      timeRemain.textContent = `Time Remaining: 00:00`;
-      document.getElementById("alarmSet").value = "";
-      clearInterval(intervalId);
-    });
-
-    document.getElementById("pause").addEventListener("click", () => {
-      clearInterval(intervalId);
-    });
   }, 1000);
+  document.getElementById("stop").addEventListener("click", () => {
+    document.querySelector("body").style.backgroundColor = "#0083B0";
+    stopChangeBackgroundColor();
+    timeRemain.textContent = `Time Remaining: 00:00`;
+    document.getElementById("alarmSet").value = "";
+    clearInterval(intervalId);
+  });
 }
 
 // DO NOT EDIT BELOW HERE
@@ -59,6 +61,29 @@ function setup() {
 
   document.getElementById("stop").addEventListener("click", () => {
     pauseAlarm(audio);
+  });
+  document.getElementById("pause").addEventListener("click", () => {
+    remainingTime = inputValue;
+    console.log(remainingTime);
+    if (intervalId == -1) {
+      document.getElementById("pause").innerText = "Pause";
+      let timeRemain = document.getElementById("timeRemaining");
+      intervalId = setInterval(() => {
+        remainingTime--;
+        timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(
+          remainingTime
+        )}`;
+        if (remainingTime == 0) {
+          changeBackgroundColor();
+          playAlarm(audio);
+          clearInterval(intervalId);
+        }
+      }, 1000);
+    } else {
+      clearInterval(intervalId);
+      intervalId = -1;
+      document.getElementById("pause").innerText = "Resume";
+    }
   });
 }
 
