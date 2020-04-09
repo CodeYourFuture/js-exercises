@@ -20,6 +20,43 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+//new code
+const outerDiv = document.createElement("canvas");
+const innerDiv = document.createElement("div");
+//this works from line 27 - 30
+
+outerDiv.appendChild(innerDiv)
+innerDiv.style.backgroundColor = "black"
+innerDiv.style.margin = "10px 10px 100px 100px"
+innerDiv.style.padding = "50px 50px 50px 50px"
+
+document.body.appendChild(outerDiv)
+outerDiv.style.backgroundColor = "	#FED8B1"
+outerDiv.style.margin = "150px 250px 150px 250px"
+outerDiv.style.padding = "200px 250px 100px 250px"
+
+
+
+
+
+const quoteParagraph = document.createElement("p");
+const authorParagraph = document.createElement("p");
+document.getElementById("myBtn").addEventListener("click", function () {
+  const { quote, author } = pickFromArray(quotes);
+  //new code line 31 - 35
+
+  //code that works
+  quoteParagraph.textContent = quote;
+  document.body.appendChild(quoteParagraph)
+
+  authorParagraph.textContent = author;
+  document.body.appendChild(authorParagraph)
+})
+//The aim of this file is to create two divs one orange and white
+//The white box will contain the quotation and a button
+//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_div_create
+
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.

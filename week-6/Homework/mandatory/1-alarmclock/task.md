@@ -10,9 +10,9 @@ When you click the `Set Alarm` button the counter at the top of the screen shoul
 
 Every one second the title should count down by one.
 
-When the `Time Remaining` reaches `00:00` the alarm should play a sound. You can make the sound happen by using `playAlarm()`.
+When the `Time Remaining` reaches `00:00` the alarm should play a sound. You can make the sound happen by using `playAlarm()`. //create `playAlarm() function
 
-You can stop the alarm sound by pressing the `Stop Alarm` button.
+You can stop the alarm sound by pressing the `Stop Alarm` button. //addEventListener
 
 ## Need Help?
 
@@ -20,13 +20,13 @@ Only read this section if you really need to! It's good to work this out for you
 
 ### Hints
 
-- Have you tried looking at the `setInterval` function?
+- Have you tried looking at the `setInterval` function? //research setintervals
 
 ### Steps to complete
 
-1. When the `Set Alarm` button is clicked, get the value of the input field
-2. When you have the input field value, set the title to the correct value
-3. Work out how to update the `Time Remaining` title every second
+1. When the `Set Alarm` button is clicked, get the value of the input field//
+2. When you have the input field value, set the title to the correct value //
+3. Work out how to update the `Time Remaining` title every second //count down to zero
 4. When the remaining time left is 0, play the alarm sound
 
 ## Extra Tasks
