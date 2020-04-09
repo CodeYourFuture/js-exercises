@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,6 +11,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <ul id="slides">
+      <li class="slide active">
+        <img
+        src=https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=20
+        title="Title of image" alt="alt text here">
+      </li>
+      <li class="slide">
+        <img
+        src=https://ichef.bbci.co.uk/food/ic/food_16x9_832/recipes/easter_simnel_cake_82449_16x9.jpg
+        title="Title of image" alt="alt text here">
+      </li>
+      <li class="slide">
+        <img
+        src=https://livforcake.com/wp-content/uploads/2017/07/black-forest-cake-thumb.jpg
+        title="Title of image" alt="alt text here">
+      </li>
+      <li class="slide">
+        <img
+        src=https://i.pinimg.com/originals/ab/67/53/ab6753ec1cef75f1cc2052487b1f4059.jpg
+        title="Title of image" alt="alt text here">
+      </li>
+      <li class="slide">
+        <img
+        src=https://livforcake.com/wp-content/uploads/2017/07/black-forest-cake-thumb.jpg
+        title="Title of image" alt="alt text here">
+      </li>
+    </ul>
+    <div id="buttons">
+      <button class="controls" id="auto-backward">Auto-Back</button>
+      <button class="controls" id="previous">Back</button>
+      <button class="controls" id="pause">Play</button>
+      <button class="controls" id="next">Forward</button>
+      <button class="controls" id="auto-forward">Auto-Forward</button>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>
