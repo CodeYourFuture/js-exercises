@@ -1,1 +1,20 @@
 /** Write your CSS in here **/
+body {
+    background-color: orange;
+}
+
+#quote-area {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 200px;
+    background-color: white;
+}
+
+#new-quote-btn {
+    background-color: orange;
+    /* position: relative; */
+}
+
+span {}
+
+#quote {}
