@@ -44,12 +44,14 @@ The function must:
 - remove the item at the specified index - The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 
-  slice - The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
+  use: slice - The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included) where begin and end represent the index of items in that array. The original array will not be modified.
 */
 
 function remove(array, index) {
-  let removed = array.splice(index, 1);
-  return array;
+  let array1 = array.slice(0, index);
+  let array2 = array.slice(index + 1, array.length)
+  let array3 = array1.concat(array2);
+  return array3;
 }
 
 console.log(remove([10, 293, 292, 176, 29], 3));
@@ -81,6 +83,7 @@ function formatPercentage(arr) {
     }
     if (Math.floor(num) !== Math.ceil(num)) {
     num = num.toFixed(2);
+    //num = Number("num");
     } 
     num = num + "%";
     newArray.push(num);
