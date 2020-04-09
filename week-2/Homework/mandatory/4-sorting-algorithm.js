@@ -15,12 +15,30 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
+ let maxarray = [];
+ for ( let i = 0 ; i <= arr.length ; ++i ){
+   if (typeof arr[i] == `number`){
+     maxarray.push(arr[i]);
+   }
+ }
+ sortAge(maxarray);
+ console.log (maxarray);
+ return maxarray;
+}
+// for sort number 
 
+function sortNumber(a, b) {
+  return a - b;
+}
+
+function sortAge(maxarray){
+ maxarray.sort(sortNumber);
+ return maxarray;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismeal']
+const agesCase1 = ['🎹', 100, '💩', 55, '🥵', '🙈', 45, '🍕', 'Sanyia', 66, 'James', 23, '🎖','Ismail', `meisam`]
 const agesCase2 = ['28', 100, 60, 55, '75', '🍕', 'Elamin']
 
 function arraysEqual(a, b) {

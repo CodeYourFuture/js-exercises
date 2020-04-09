@@ -13,8 +13,17 @@
  *      .....
  * </div>
  */
+
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+  const content = document.getElementById("content");
+  const h1 = document.createElement("h1"); 
+  const h2 = document.createElement("h2");
+  h1.textContent = arrayOfPeople[2].name;
+  h2.textContent = arrayOfPeople[2].job;
+  console.log(h1);
+  console.log(h2);
+  content.appendChild(h1);
+  content.appendChild(h2);   
 }
 
 /**
@@ -25,8 +34,17 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
+  const conT = document.getElementById("content");
+  const List = document.createElement("ul");
+  conT.append(List);
+  for (var i = 0; i < shopping.length; i++) {
+    var item = document.createElement('li');
+    console.log(shopping[i]);
+    item.textContent= shopping[i];
+    List.appendChild(item);
+  };
 }
+  //Write your code in here
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -57,7 +75,29 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
+function exerciseThree(books , i) {
+  const ListBook = document.getElementById("content");
+  books.forEach(element => {
+    let PEl = document.createElement("p");
+    console.log(element.alreadyRead);
+    const List = document.createElement("ul");
+    const text = "Titel :" + element.title;
+    const imGe = document.createElement("img");
+    imGe.src = "https://productdork.com/uploads/default/original/1X/ddbda1150301e89cdf0119d84f2a7fb8930beffb.png";
+    imGe.style.textAlign = "center";
+    List.textContent= text + imGe;
+    ListBook.appendChild(List);
+    for (let i = 0 ; i < 2 ; i ++){
+      var item = document.createElement('li');
+      if (i === 0){
+       item.textContent= "Author: "+ element.author; 
+      } if (i === 1) {
+        item.textContent= element.alreadyRead;
+      }
+    List.appendChild(item);
+    List.appendChild(item);
+    };
+  });
   //Write your code in here
 }
 

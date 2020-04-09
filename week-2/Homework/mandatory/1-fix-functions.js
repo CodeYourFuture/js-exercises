@@ -2,9 +2,9 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
-
+  let isHappy = false;
   if (isHappy) {
+    console.log ('I am happy');
     return "I am happy";
   } else {
     return "I am not happy";
@@ -13,9 +13,9 @@ function mood() {
 
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
-
-  if (isBigEnough) {
+  let isBigEnough = false;
+  if (isBigEnough || num === 10) {
+    console.log('num is greater than or equal to 10');
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
@@ -23,23 +23,26 @@ function greaterThan10() {
 }
 
 function sortArray() {
-  let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
-
-  return sortedLetters;
+  let letters = [ "a", "n", "c", "e", "z", "f"];
+  console.log(letters.sort());
+  return letters.sort();
 }
 
-function first5() {
+function first5(array) {
+  //const stringSecund = array.toString();
+  //console.log (stringSecund);
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
-  return sliced;
+  let length = numbers.length = 5;
+  console.log(numbers);
+  const stringFirst = numbers.toString();
+  console.log (stringFirst);
+  return numbers;
 }
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
-
+  let element= arr[index];
+  console.log(element);
   return element;
 }
 
@@ -75,7 +78,11 @@ test(
 );
 test(
   "sortArray function works",
+<<<<<<< HEAD
   arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
+=======
+  sortArray() === [ "a", "c", "e", "f", "n", "z"]
+>>>>>>> 58dec296af787c71673f918704c63f136b29bb5e
 );
 test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
 

@@ -1,18 +1,20 @@
 function setAlarm() {
   let currentTime = document.getElementById("alarmSet").value;
-  let timeR = document.getElementById('timeRemaining');
-  console.log(timeR);
+  let s = 60;
+  let x = setInterval(function(){
+    document.getElementById('timeRemaining').innerHTML=" " + currentTime + ":" + s;
+    currentTime = currentTime - 1;
+     if (s > 0 ){
+       s= s - 1;
+     }
+    if (currentTime < 0 ) {
+      clearInterval(x);
+    }
+  }, 1000);
+
   console.log(currentTime);
-  for (let i = 0 ; i <= currentTime.length ; i ++){
-    if (currentTime > 0) {
-      timeR.textContent = currentTime - 1; 
-      console.log(currentTime);
-    } else {
-        window.clearInterval(timer);
-      }
- }
+
 }
-var myVar = setInterval(myTimer, 1000);
 function myTimer() {
   let Dive = document.querySelector('center');
   let Time = document.createElement("p");
