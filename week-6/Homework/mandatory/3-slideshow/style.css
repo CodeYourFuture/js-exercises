@@ -1,1 +1,29 @@
 /** Write your CSS in here **/
+body{
+    background-color:#e76bad;
+    margin: auto;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 80%;
+    background-color:#f0fa62;
+}
+h1{
+    display: flex;
+    align-self: center;
+}
+#images {
+    width: 50%;
+}
+
+#showpicnum{
+   font-size: large;
+   align-self: center;
+}
+#buttons{
+    align-self: flex-start;
+    background-color: #b68118;
+}

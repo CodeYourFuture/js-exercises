@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,6 +11,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div id="container">
+      <h1>Image Carousel Simplest Demo</h1>
+      <div>
+        <img src="images/image1.jpg" id="images">
+      </div>
+      <div id="showpicnum">
+      </div>
+      <div id="buttons">
+      <button id="autoback">
+        <p>Auto Back</p>
+      </button>
+      <button id="back"> 
+        <p>Back</p>
+      </button>
+      <button id="stop">
+        <p>Stop</p>
+      </button>
+      <button id="forward">
+        <p>Forward</p>
+      </button>
+      <button id="autoforward">
+        <p>Auto Forward</p>
+      </button>
+      </div>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>
