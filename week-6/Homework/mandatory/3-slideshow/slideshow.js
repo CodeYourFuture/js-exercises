@@ -22,8 +22,8 @@ function goback(){
     image.src = images[i];
     showpicnum.innerHTML = i ;
     if(i === 0 || i < 0){
-        i = 0;
+        i = images.length-1;
         image.src = images[i];
-        showpicnum.innerHTML = 0;
+        showpicnum.innerHTML = i;
     }
 }

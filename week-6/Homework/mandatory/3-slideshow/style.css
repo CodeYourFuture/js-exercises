@@ -19,14 +19,21 @@ h1{
 }
 #images {
     width: 50%;
+    margin-left:25%;
 }
 
 #showpicnum{
-   font-size: large;
+   font-size: xx-large;
    align-self: center;
 }
 #buttons{
-    align-self: flex-start;
+    align-self: stretch;
     background-color: #d86b12;
     font-family: 'Indie Flower', cursive;
+    font-size: x-large;
+    width: 50%;
+    margin-left: 25%;
+}
+#autoback{
+    margin-left:5%;
 }
