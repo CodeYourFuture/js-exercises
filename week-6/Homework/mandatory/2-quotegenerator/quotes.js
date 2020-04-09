@@ -1,3 +1,10 @@
+let fontUnblur = function (whattublur) {
+  for (let blur = 25; (blur = 0); blur--) {
+    querySelector(
+      whattoblur
+    ).style.textShadow = `1px 2px ${blur}px rgb(255, 255, 255)`;
+  }
+};
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
