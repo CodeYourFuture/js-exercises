@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div id="content">
+      <div id="wrapper">
+        <h1>Mountain View Carousel</h1>
+        <div id="slideBox"></div>
+        <div>
+          <button id="auto-backward" type="button">Auto Backward</button>
+          <button id="backward" type="button">Backward</button>
+          <button id="stop" type="button">Stop</button>
+          <button id="forward" type="button">Forward</button>
+          <button id="auto-forward" type="button">Auto Forward</button>
+        </div>
+      </div>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>
