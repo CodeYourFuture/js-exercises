@@ -34,27 +34,35 @@ function btnGreenFunc() {
 }
 
 function btnSubmitFunc(event) {
-    let errorMessage = "";
-    if (email1.value == "" || !email1.includs("@")) {
-        errorMessage += "emails are empty\n";
+    event.preventDefault();
+    let messageEmail = "";
+    let messageName = "";
+    let messageDescribe = "";
+    console.log(name.value)
+    if (email1.value == "" || !email1.value.includes("@")) {
+        messageEmail = "email are empty";
         email1.style.backgroundColor = "red";
-        event.preventDefault()
-        if (name.value == "" || describe.value == "") {
-            event.preventDefault()
-        }
+
+    } else {
+        email1.style.backgroundColor = "white"
     }
     if (name.value == "") {
         name.style.backgroundColor = "red";
-        errorMessage += "name is empty\n";
-        event.preventDefault()
+        messageName = "name is empty";
+
+
+    } else {
+        name.style.backgroundColor = "white"
     }
-    if (describe.value == "") {
+    if (describe.value == "" && messageName == "" && messageEmail == "") {
         describe.style.backgroundColor = "red"
-        errorMessage += "describe is empty";
-        event.preventDefault()
+        messageDescribe = "describe is empty";
+
     }
 
-
+    let emailVaue = email1.value;
+    let nameValue = name.value;
+    let describeValue = describe.value;
 }
 
 btnBlue.addEventListener("click", btnBackColor);
