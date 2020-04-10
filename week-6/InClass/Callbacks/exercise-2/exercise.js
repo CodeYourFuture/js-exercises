@@ -95,16 +95,42 @@ setTimeout(()=>{
   movies.push(myMovie);
   showMovies();
 }, 2000);
-
-
 /*
-Task 2
-Amend your function above to only show movies after 1 second. Remember to use setTimeout to achieve that
-Create a new function called "addMovie"
-- it receives a movie object as an argument - your can create a new object for your favorite movie following using 
-the "myMovies" objects as a guide 
-- it adds the new movie to the list of movies after 2 seconds. Remember to setTimeout to achieve that
-Call addMovies to add the new movie to the list and then showMovies to see the movies added on the screen.
-How many movies can you see on your page?
+Task 4 - **Extra**
+Create a form anywhere on your page. The form should have
+- 4 input text fields, one for each property of your movie object
+- a "save" button.
+When the button is clicked
+- The field values should be used to create a new movie object literal
+- The new movie is then added to the list of movies and gets displayed on your page
+TIP: Use the functions you created on tasks 1-3
 */
-// create addMovies function
+let formEl = document.createElement("form");
+document.body.appendChild(formEl);
+let titleEl = document.createElement("input");
+titleEl.type = "text";
+formEl.appendChild(titleEl);
+let directorEl = document.createElement("input");
+directorEl.type = "text";
+formEl.appendChild(directorEl);
+let typeEl = document.createElement("input");
+typeEl.type = "text";
+formEl.appendChild(typeEl);
+let haveWatchedEl = document.createElement("input");
+haveWatchedEl.type = "text";
+formEl.appendChild(haveWatchedEl);
+let saveEl = document.createElement("input");
+saveEl.type = "button";
+formEl.appendChild(saveEl);
+saveEl.style.backgroundColor = "lightgrey";
+saveEl.value = "Save";
+saveEl.addEventListener("click", ()=>{
+  let newMovie = {};
+  newMovie.title = titleEl.value;
+  newMovie.director = directorEl.value;
+  newMovie.type = typeEl.value;
+  newMovie.haveWatched = haveWatchedEl.value;
+  movies.push(newMovie);
+  showMovies();
+  
+})
