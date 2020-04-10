@@ -1,1 +1,46 @@
 /** Write your CSS in here **/
+body {
+    background-color: #aca2d8;
+}
+
+#content {
+    text-align: center;
+    width: 1100px;
+    height: 400px;
+    margin: 200px 350px;
+    background-color: rgb(10, 16, 53);
+    border-radius: 25px;
+  }
+
+p {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 35px;
+    margin-top: 20px;
+    color: whitesmoke;
+    padding: 30px 10px;
+  }
+
+button {
+    position: absolute;
+    top: 60%;
+    right: 22%;
+    background-color: rgb(188, 229, 240);
+    border-radius: 3px;
+    color: red;
+    }
+      
+button:hover {
+    transition-duration: 0.6s;
+    background-color: rgb(28, 13, 68); /* dark blue */
+    color: rgb(255, 255, 255);
+  }
+
+#myBtn {
+    padding : 10px 20px;
+    border-radius: 25px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+
+  

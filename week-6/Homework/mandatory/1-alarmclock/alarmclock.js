@@ -1,21 +1,18 @@
 
 function setAlarm() {
-  let audEl = document.querySelector("#myAudio");
-
-  let inputField = document.querySelector("#alarmSet");
-  let title = document.querySelector("#timeRemaining");
-  let counter = inputField.value;
-  return setInterval(function() {
-    title.innerHTML = "Time Remaining: 00:" + counter;
-    if (counter > 0){
-      counter--;
-      if (counter == 0){
-      clearInterval(counter);
-      playAlarm(audEl);
-      }     
+  let getValue = document.getElementById('alarmSet').value;
+  const timeRemain = document.getElementById('timeRemaining');
+  timeRemain.innerText = "Time Remaining: 00:" + getValue;
+  const timeSet = setInterval(function () {
+    if (getValue > 0) {
+      getValue--;
+      timeRemain.innerText = "Time Remaining: 00:" + getValue;
+    } else {
+      clearInterval(timeSet);
+      playAlarm();
     }
-  }, 1000); 
-};
+  }, 1000);
+}
 
 
 

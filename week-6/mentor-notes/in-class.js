@@ -5,7 +5,7 @@ function loginUser(name, password, callback) {
 
         console.log("The user is now logged in", loggedInUser);
 
-         //callback(loggedInUser);
+        callback(loggedInUser);
     };
 
     setTimeout(test, 2000)

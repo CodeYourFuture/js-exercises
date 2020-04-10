@@ -58,13 +58,39 @@ const movies = [
     director: "Leigh Whannell",
     type: "horror",
     haveWatched: false,
-  },
+  }
 ];
 
 // create showMovies function
+function showMovies(movies){
 
+  setTimeout(function(){
+    const main = document.querySelector("#all-movies");
+    movies.forEach(movie => {
+    let newP = document.createElement("p");
+    newP.textContent = movie.title;
+    main.appendChild(newP)
+    });
+    document.querySelector("#movies-number").innerText = movies.length
+  }, 1000)
+
+}
 
 // create a new movie object for your favorite movie
 
+let newMovie =  {
+  title: "God Father",
+  director: "Francis Ford Coppola",
+  type: "crime drama",
+  haveWatched: true,
+}
 
 // create addMovies function
+function addMovie(movie, callback){
+  setTimeout(function(){
+    movies.push(movie);
+    callback(movies);
+  },2000)
+}
+
+addMovie(newMovie, showMovies)
