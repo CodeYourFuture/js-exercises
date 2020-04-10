@@ -13,19 +13,19 @@
  *      .....
  * </div>
  */
-function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  for(i = 0; i < arrayOfPeople.length; i++){
-    let person  = arrayOfPeople[i];
-    let name = document.createElement("h1");
-    name.textContent = person.name;
-    let job = document.createElement("h2");
-    job.textContent = person.job;
-    content.appendChild(name)
-    content.appendChild(job)
-console.log(name)
-  }
-}
+ function exerciseOne(arrayOfPeople) {
+   let content = document.querySelector("#content");
+   for(i = 0; i < arrayOfPeople.length; i++){
+     let person  = arrayOfPeople[i];
+     let name = document.createElement("h1");
+     name.textContent = person.name;
+     let job = document.createElement("h2");
+     job.textContent = person.job;
+     content.appendChild(name)
+     content.appendChild(job)
+ console.log(name)
+   }
+ }
 
 /**
  *
@@ -34,9 +34,18 @@ console.log(name)
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
+function exerciseTwo(shopping) { 
+  let content = document.querySelector("#content");
+  let shoppingList = document.createElement("ul");
+  shopping.forEach(function (item) {
+    let listItem = document.createElement("li");
+    listItem.textContent = item;
+    shoppingList.appendChild(listItem);
+  });
+  content.appendChild(shoppingList);
+  }
   //Write your code in here
-}
+//}
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -67,11 +76,32 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-function exerciseThree(books) {
+ function exerciseThree(books) {
+  let content = document.querySelector("#content");
+  let bookList = document.createElement("ul");
+   bookList.style.display = "flex"
+   bookList.style.listStyleType = "none"
+   books.forEach(function(book){
+     let listItem = document.createElement("li");
+     let paragraph = document.createElement("p");
+     paragraph.textContent = `${book.title}  - ${book.author}`
+     listItem.style.style.backgroundColor = book.alreadyRead ? "green"  : "red"
+     listItem.style.padding = "20px"
+     listItem.style.margin= "20px"
+     listItem.appendChild(paragraph)
+     bookList.appendChild(listItem);
+     let image = document.createElement("img")
+     image.src = book.url;
+     listItem.appendChild(image)
+
+   });
+   content.appendChild(bookList)
+
   //Write your code in here
 }
 
-//
+
+
 //
 //
 //
