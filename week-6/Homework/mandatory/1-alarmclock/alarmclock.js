@@ -3,13 +3,14 @@ function setAlarm() {
     var timmer = document.getElementById("timeRemaining")
     var counter = document.getElementById("alarmSet").value
     console.log(counter);
-    timmer.innerHTML = counter
-    for (let i = counter; i > 0; i--) {
-        timmer.innerHTML = i
-        setTimeout(1000);
-    }
+    timmer.innerHTML = "00:" + counter
 
 
+    setInterval(() => {
+        for (let i = counter + counter; i > 0; i--) {
+            timmer.innerHTML = "00:" + i
+        }
+    }, 1000);
 }
 
 
