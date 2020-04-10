@@ -490,3 +490,18 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+document.getElementById("newqoute").addEventListener("click", changeQoute);
+let title = document.getElementById("qoute");
+let p = document.getElementById("author");
+let qouteObject = pickFromArray(quotes);
+title.innerHTML = qouteObject.quote;
+p.innerText = qouteObject.author;
+
+function changeQoute() {
+  let qouteObject = pickFromArray(quotes);
+  title.innerHTML = `${qouteObject.quote}`;
+  p.innerText = qouteObject.author;
+}
+
+function switchOnOff() {}
