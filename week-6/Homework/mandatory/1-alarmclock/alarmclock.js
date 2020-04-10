@@ -1,4 +1,6 @@
-function setAlarm() {}
+function setAlarm() {
+  document.querySelector("#timeRemaining")
+}
 
 // DO NOT EDIT BELOW HERE
 
