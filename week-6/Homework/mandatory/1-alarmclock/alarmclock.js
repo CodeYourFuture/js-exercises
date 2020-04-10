@@ -1,29 +1,50 @@
+// set alarm button
 function setAlarm() {
   let currentTime = document.getElementById("alarmSet").value;
-  let s = 60;
   let x = setInterval(function(){
-    document.getElementById('timeRemaining').innerHTML=" " + currentTime + ":" + s;
-    currentTime = currentTime - 1;
-     if (s > 0 ){
-       s= s - 1;
-     }
-    if (currentTime < 0 ) {
-      clearInterval(x);
+    if (currentTime < 10 && currentTime >= 0){
+      document.getElementById('timeRemaining').innerHTML= "00:0"+ currentTime ;
+    }else{
+      document.getElementById('timeRemaining').innerHTML= "00:"+ currentTime ;
     }
-  }, 1000);
-
-  console.log(currentTime);
-
+    currentTime = currentTime - 1;
+    if (currentTime < 0 ) {
+      playAlarm();
+      colorB(z=0);
+      clearInterval(x);
+    } 
+}, 1000);
 }
+
+// change color :
+
+function colorB(co){ 
+  console.log(co);
+  let col = setInterval(function(){
+    let color = ["orange", "purple", "yellow","red","brown"];
+    for(let i = 0; i < 5; i++){
+      document.body.style.backgroundColor = color[Math.floor(Math.random() * 4)];  
+    }
+  }, 300);
+  document.body.style.backgroundColor = "white";
+  if (co === true ){
+    console.log("inside: " + co);
+    clearInterval(col);
+    
+  }
+}
+
+// The Timer in top left :
+var Timer = setInterval(myTimer, 1000);
+let Time = document.createElement("h1");
 function myTimer() {
-  let Dive = document.querySelector('center');
-  let Time = document.createElement("p");
-  //Dive.append(Time);
   var d = new Date();
-  document.getElementById(Time).innerHTML = d.toLocaleTimeString();
+  Time.innerHTML =  d.toLocaleTimeString();
+  Time.style.color = 'red';
+  Time.style.fontSize = '25px';
+  document.body.appendChild(Time);
 }
 
- 
 // DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");
 function setup() {
@@ -39,5 +60,7 @@ function playAlarm() {
 }
 function pauseAlarm() {
   audio.pause();
+  let co = true;
+  colorB(co);
 }
 window.onload = setup;
