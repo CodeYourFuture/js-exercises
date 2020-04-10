@@ -7,10 +7,30 @@ blockquote {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   margin: auto;
   margin-top: 10vh;
 }
 
 a {
-  font-size: 2em;
+  outline: none;
+  text-decoration: none;
+  background-color: Crimson;
+  border-radius: 0.3em;
+  color: white;
+  padding: 0.3em;
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+.container {
+  background-color: Crimson;
+  border-radius: 6px;
+  color: white;
+  padding: 0.19em;
+  width: 6em;
+  font-size: 1.5em;
+}
+input.largeChkBox {
+  width: 1em;
+  height: 1em;
 }

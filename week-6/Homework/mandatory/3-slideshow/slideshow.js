@@ -16,6 +16,9 @@ function goToSlide(n) {
   slides[currentSlide].className = 'slide active';
 }
 let playing = false;
+
+let userWaitTime = document.querySelector('input[type=text]');
+let userDelayTime;
 let pauseButton = document.getElementById('pause');
 let forwardButton = document.getElementById('next');
 let backButton = document.getElementById('previous');
@@ -29,7 +32,7 @@ function pauseSlideshow() {
 function playSlideshow() {
   pauseButton.innerHTML = 'Stop';
   playing = true;
-  slideInterval = setInterval(nextSlide, 2000);
+  slideInterval = setInterval(nextSlide, userDelayTime);
 }
 
 forwardButton.addEventListener('click', () => {
@@ -50,8 +53,19 @@ pauseButton.addEventListener('click', () => {
   }
 });
 autoForwardButton.addEventListener('click', () => {
-  slideInterval = setInterval(nextSlide, 2000);
+  pauseButton.innerHTML = 'Stop';
+  playing = true;
+  clearInterval(slideInterval);
+  slideInterval = setInterval(nextSlide, userDelayTime);
 });
-backButton.addEventListener('click', () => {
-  slideInterval = setInterval(previousSlide, 2000);
+autoBackButton.addEventListener('click', () => {
+  pauseButton.innerHTML = 'Stop';
+  playing = true;
+  clearInterval(slideInterval);
+  slideInterval = setInterval(previousSlide, userDelayTime);
+});
+userWaitTime.addEventListener('change', () => {
+  userDelayTime = userWaitTime.value * 1000;
+
+  console.log(userDelayTime);
 });
