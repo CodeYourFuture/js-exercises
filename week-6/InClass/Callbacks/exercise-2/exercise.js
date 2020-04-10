@@ -13,7 +13,8 @@ Create a function called "showMovies" that
 Task 2
 Amend your function above to only show movies after 1 second. Remember to use setTimeout to achieve that
 Create a new function called "addMovie"
-- it receives a movie object as an argument - your can create a new object for your favorite movie following using the "myMovies" objects as a guide 
+- it receives a movie object as an argument - your can create a new object for your favorite movie following using 
+the "myMovies" objects as a guide 
 - it adds the new movie to the list of movies after 2 seconds. Remember to setTimeout to achieve that
 Call addMovies to add the new movie to the list and then showMovies to see the movies added on the screen.
 How many movies can you see on your page?
@@ -64,16 +65,46 @@ const movies = [
 // create showMovies function
 function showMovies(){
   allMovies = document.querySelector("#all-movies");
+  allMovies.innerHTML="";
+  let movieNum = document.createElement("p");
+  movieNum.id = "movies-number";
+  movieNum.className = "alert alert-info";
+  movieNum.innerText = "Number of movies: "
+  allMovies.appendChild(movieNum);
+  let totalMovie = document.createElement("span");
+  movieNum.appendChild(totalMovie);
   movies.forEach(movie => {
     let pEl = document.createElement("p");
     pEl.innerHTML = `${movie.title} , ${movie.director}`;
     allMovies.appendChild(pEl);
   })
-  document.querySelector("#movies-number").innerText = movies.length;
+  totalMovie.innerText = movies.length;
 }
-showMovies();
+
 
 // create a new movie object for your favorite movie
+myMovie = {
+  title: "Extension",
+  director: "Richard Stanley",
+  type: "Action",
+  haveWatched: false,
+};
+setTimeout(showMovies,1000);
+
+setTimeout(()=>{
+  movies.push(myMovie);
+  showMovies();
+}, 2000);
 
 
+/*
+Task 2
+Amend your function above to only show movies after 1 second. Remember to use setTimeout to achieve that
+Create a new function called "addMovie"
+- it receives a movie object as an argument - your can create a new object for your favorite movie following using 
+the "myMovies" objects as a guide 
+- it adds the new movie to the list of movies after 2 seconds. Remember to setTimeout to achieve that
+Call addMovies to add the new movie to the list and then showMovies to see the movies added on the screen.
+How many movies can you see on your page?
+*/
 // create addMovies function
