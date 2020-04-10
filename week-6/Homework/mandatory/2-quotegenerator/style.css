@@ -15,6 +15,9 @@ body {
     /* position: relative; */
 }
 
-span {}
+#quote-marks {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 90px;
+}
 
 #quote {}

@@ -25,6 +25,8 @@ function displayRandomQuote(event) {
   const randomQuoteObj = pickFromArray(quotes);
   const quoteHolder = document.querySelector("#quote");
   quoteHolder.textContent = randomQuoteObj.quote;
+  const quoteAuthor = document.querySelector("#author");
+  quoteAuthor.textContent = "- " + randomQuoteObj.author;
   console.log(event);
 }
 
