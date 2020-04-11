@@ -1,4 +1,15 @@
-pickFromArray(quotes);
+let myBady = document.body
+myBady.style.backgroundColor = "blue";
+let mainDiv = document.createElement("div");
+let paragQut = document.createElement("p");
+let btnQut = document.createElement("button");
+myBady.appendChild(mainDiv);
+backColorr.innerHTML = "hello";
+
+
+
+
+//pickFromArray(quotes);
 
 
 
