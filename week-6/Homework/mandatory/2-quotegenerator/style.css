@@ -1,45 +1,43 @@
 /** Write your CSS in here **/
-body{
-    background-color:#0352fc;
+body {
+  background-color: #0352fc;
 }
-#container{
-    background-color: #c8ccc9;
-    height: 20em;
-    display: flex;
-    flex-direction: column;
-    justify-content:space-evenly;
-    align-items: center;
-    margin-top: 12em;
-    margin-left: 10em;
-    margin-right: 12em;
-
+#container {
+  background-color: #c8ccc9;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 12em;
+  margin-left: 10em;
+  margin-right: 12em;
 }
 
 #bookname {
-    margin: 0;
-    font-size:35px;
-    color: black;
-    font-family: 'Fredericka the Great', cursive;
+  margin: 0;
+  font-size: 35px;
+  color: black;
+  font-family: "Fredericka the Great", cursive;
 }
 #author {
-    justify-content: flex-end;
-    align-self: flex-end;
-    margin-right: 3em;
-    font-size: 1em;
-    color: red;
-    font-family: 'Fredericka the Great', cursive;
-
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-right: 3em;
+  font-size: 1em;
+  color: red;
+  font-family: "Fredericka the Great", cursive;
 }
 
- #buttonContainer {
-    display: flex;
-    justify-content:flex-end;
-    position: relative;
-    margin-right: 12em
-} 
+#buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-right: 12em;
+}
 
 .button {
-    background:#53d9e0;
-    height: 50px;
-    font-family: 'Fredericka the Great', cursive;
+  background: #53d9e0;
+  height: 50px;
+  font-family: "Fredericka the Great", cursive;
 }

@@ -1,38 +1,37 @@
-
-body{
-    background-color:#e76bad;
-    margin: auto;
+body {
+  background-color: #e76bad;
+  margin: auto;
 }
-#container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 90%;
-    background-color:#f0fa62;
-    margin:80px 80px;
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 90%;
+  background-color: #f0fa62;
+  margin: 80px 80px;
 }
-h1{
-    display: flex;
-    align-self: center;
-    font-family: 'Indie Flower', cursive;
+h1 {
+  display: flex;
+  align-self: center;
+  font-family: "Indie Flower", cursive;
 }
 #images {
-    width: 50%;
-    margin-left:25%;
+  width: 50%;
+  margin-left: 25%;
 }
 
-#showpicnum{
-   font-size: xx-large;
-   align-self: center;
+#showpicnum {
+  font-size: xx-large;
+  align-self: center;
 }
-#buttons{
-    align-self: stretch;
-    font-family: 'Indie Flower', cursive;
-    font-size: x-large;
-    width: 50%;
-    margin-left: 25%;
+#buttons {
+  align-self: stretch;
+  font-family: "Indie Flower", cursive;
+  font-size: x-large;
+  width: 50%;
+  margin-left: 25%;
 }
-#autoback{
-    margin-left:5%;
+#autoback {
+  margin-left: 5%;
 }

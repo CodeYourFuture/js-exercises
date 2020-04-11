@@ -491,22 +491,32 @@ const quotes = [
   },
 ];
 let myButton = document.querySelector(".button");
-function bringQuoets(){
-let myrandomQuoets = Math.floor(Math.random()*quotes.length);
-let bookname = quotes[myrandomQuoets].quote;
-let author = quotes[myrandomQuoets].author;
-let myquotePosition = document.querySelector("#bookname");
-let myauthorPosition = document.querySelector("#author");
-myquotePosition.innerHTML = bookname;
-myauthorPosition.innerHTML = author;
+function bringQuoets() {
+  let myrandomQuoets = Math.floor(Math.random() * quotes.length);
+  let bookname = quotes[myrandomQuoets].quote;
+  let author = quotes[myrandomQuoets].author;
+  let myquotePosition = document.querySelector("#bookname");
+  let myauthorPosition = document.querySelector("#author");
+  myquotePosition.innerHTML = bookname;
+  myauthorPosition.innerHTML = author;
 }
-myButton.addEventListener("click",changeQuoets);
-function changeQuoets(){ 
- bringQuoets();
-let differentColors = ['red','#03fcce','#03d3fc','#1c03fc','#6b03fc','#ce03fc','#fc0373','#fc032d','#fcce03'];
-let myrandomColors = Math.floor(Math.random()*differentColors.length);
-let buttonColor = Math.floor(Math.random()*differentColors.length);
-document.body.style.backgroundColor = differentColors[myrandomColors];
-myButton.style.backgroundColor = differentColors[buttonColor];
+myButton.addEventListener("click", changeQuoets);
+function changeQuoets() {
+  bringQuoets();
+  let differentColors = [
+    "red",
+    "#03fcce",
+    "#03d3fc",
+    "#1c03fc",
+    "#6b03fc",
+    "#ce03fc",
+    "#fc0373",
+    "#fc032d",
+    "#fcce03",
+  ];
+  let myrandomColors = Math.floor(Math.random() * differentColors.length);
+  let buttonColor = Math.floor(Math.random() * differentColors.length);
+  document.body.style.backgroundColor = differentColors[myrandomColors];
+  myButton.style.backgroundColor = differentColors[buttonColor];
 }
 
