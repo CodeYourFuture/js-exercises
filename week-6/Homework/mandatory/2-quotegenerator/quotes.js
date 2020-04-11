@@ -1,22 +1,16 @@
-window.onload=function(){
-let button = document.querySelector("#generate");
-console.log(button)
-let runThePhylosopher = function(){
+window.onload = function () {
+  let runThePhylosopher = function () {
 
-  // let fontUnblur = function (whattublur) {
-  //   for (let blur = 25; (blur = 0); blur--) {
-  //     querySelector(
-  //       whattoblur
-  //     ).style.textShadow = `1px 2px ${blur}px rgb(255, 255, 255)`;
-  //   }
-  //    fontUnblur();
-     let quo = pickFromArray(quotes);
-     document.querySelector("h1").innerHTML = `${quo.quote}`;
-    };
-    button.addEventListener("click", runThePhylosopher);
+  
+    let quo = pickFromArray(quotes);
+    document.querySelector("h1").innerHTML = `"   ${quo.quote} "`;
+    document.querySelector("h2").innerHTML = `${quo.author}`;
+  };
 
+  let button = document.querySelector("#generate");
+  button.addEventListener("click", runThePhylosopher);
 
-runThePhylosopher();
+  runThePhylosopher();
 };
 // DO NOT EDIT BELOW HERE
 
