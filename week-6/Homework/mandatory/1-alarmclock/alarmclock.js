@@ -36,6 +36,7 @@ function setAlarm() {
 //setInterval(setAlarm,1000);
 
 // DO NOT EDIT BELOW HERE
+
 var audio = new Audio('alarmsound.mp3');
 function setup() {
   document.getElementById('set').addEventListener('click', () => {
@@ -48,6 +49,25 @@ function setup() {
 function playAlarm() {
   audio.play();
 }
+
+
+var audio = new Audio("alarmsound.mp3");
+
+function setup() {
+  document.getElementById("set").addEventListener("click", () => {
+    setAlarm();
+  });
+
+  document.getElementById("stop").addEventListener("click", () => {
+    pauseAlarm();
+  });
+}
+
+function playAlarm() {
+  audio.play();
+}
+
+
 function pauseAlarm() {
   audio.pause();
 }
