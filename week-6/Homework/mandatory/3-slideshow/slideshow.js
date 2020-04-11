@@ -10,7 +10,6 @@ let backButton = document.querySelector("#back");
 forwardButton.addEventListener("click",goforward);
 let i = 0;
 let myVar = null;
-let myColor = null;
 function goforward(){
     i = i+1;
     image.src = images[i];
