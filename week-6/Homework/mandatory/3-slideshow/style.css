@@ -1,4 +1,36 @@
 /** Write your CSS in here **/
 #pic{
+        width: 100vw;
+        max-height: 85vh;
+        object-fit: cover;
+    }
+.btns{
+    display: flex;
+    align-items: left;
+    /* justify-content: space-between; */
+  
+  }
+  .frame{
+    display:flex;
     width:100%;
-}
+    color:grey;
+   background-color: black;
+   height: 50px;
+   margin-bottom:0px;
+   margin-left: 10 px;
+   font-size: 12px;
+  }
+  body{
+      background-color:black;
+  }
+  button{
+    background-color:grey ;
+    color:black;
+    border:5px;
+    transition-duration: 0.4s;
+  }
+ 
+ button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }

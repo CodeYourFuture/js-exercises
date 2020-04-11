@@ -33,15 +33,22 @@
         }
     
     }
+   let play;
+   let rewind;
     let playForward = function(){
-        setInterval( forward, 1000)
+       play = setInterval( forward, 1000)
     }
     let playBackward = function(){
-        setInterval( back, 1000)
+       rewind = setInterval( back, 1000)
+    }
+    let stop = function (){
+        clearInterval(play);
+        clearInterval(rewind);
     }
 document.getElementById("next").addEventListener("click", forward);
 document.getElementById("previous").addEventListener("click", back);
 document.getElementById("play forward").addEventListener("click", playForward);
 document.getElementById("play backward").addEventListener("click", playBackward);
+document.getElementById("stop").addEventListener("click", stop);
 
  }

@@ -50,9 +50,7 @@ h2 {
    justify-content: space-between;
  }
  .frame{
-   display:flex;
-   width:100%;
-   height: 5vh;
-   background-color:black;
-   z-index:0;
+   color:green;
+  background-color: black;
+  height: 5000px;
  }
