@@ -3,10 +3,15 @@ let images =["images/image1.jpg","images/image2.jpg","images/image3.jpg","images
 let image = document.querySelector("div>img");
 let showpicnum = document.querySelector("#showpicnum");
 let forwardButton = document.querySelector("#forward");
-let backButton = document.querySelector("#back");
+let autobackButton = document.querySelector("#autoback");
+let autoforwardButton = document.querySelector("#autoforward");
+let stopButton = document.querySelector("#stop");
+let backButton = document.querySelector("#back"); 
 forwardButton.addEventListener("click",goforward);
 let i = 0;
+let isPaused = false;
 function goforward(){
+    if(!isPaused){
     i = i+1;
     image.src = images[i];
     showpicnum.innerHTML = i ;
@@ -15,9 +20,11 @@ function goforward(){
         image.src = images[i];
         showpicnum.innerHTML = 0;
     }
+}   
 }
 backButton.addEventListener("click",goback);
 function goback(){
+    if(!isPaused){
     i = i - 1;
     image.src = images[i];
     showpicnum.innerHTML = i ;
@@ -26,4 +33,19 @@ function goback(){
         image.src = images[i];
         showpicnum.innerHTML = i;
     }
+}   
 }
+autoforwardButton.addEventListener("click",autoforward);
+function autoforward(){
+  setInterval(goforward,1000);
+};
+autobackButton.addEventListener("click",autoback);
+function autoback(){
+    setInterval(goback,1000);
+}
+stopButton.addEventListener("click",stop);
+function stop(event){
+    event.preventDefault();
+    isPaused = true;
+}
+
