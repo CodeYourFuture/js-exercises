@@ -10,10 +10,7 @@ function timeIt() {
     counter += 1;
     myTimeRemaining.innerHTML =
       "Time Remaining: " + convertSeconds(mySetTimeValue - counter);
-  } else if (
-    mySetTimeValue - counter > 60 ||
-    mySetTimeValue - counter === 60
-  ) {
+  } else if (mySetTimeValue - counter > 60 || mySetTimeValue - counter === 60) {
     counter += 1;
     myTimeRemaining.innerHTML =
       "Time Remaining: " + convertSeconds(mySetTimeValue - counter);
@@ -80,8 +77,8 @@ function mypause() {
   clearInterval(SetIntAlarm);
 }
 
-myrestartButton.addEventListener("click", myrestart)
-function myrestart(){
+myrestartButton.addEventListener("click", myrestart);
+function myrestart() {
   SetIntAlarm = setInterval(timeIt, 1000);
 }
 
