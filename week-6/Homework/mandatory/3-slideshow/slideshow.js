@@ -11,7 +11,6 @@ forwardButton.addEventListener("click",goforward);
 let i = 0;
 let isPaused = false;
 function goforward(){
-    if(!isPaused){
     i = i+1;
     image.src = images[i];
     showpicnum.innerHTML = i ;
@@ -20,11 +19,10 @@ function goforward(){
         image.src = images[i];
         showpicnum.innerHTML = 0;
     }
-}   
 }
+console.log(goforward());
 backButton.addEventListener("click",goback);
 function goback(){
-    if(!isPaused){
     i = i - 1;
     image.src = images[i];
     showpicnum.innerHTML = i ;
@@ -32,16 +30,24 @@ function goback(){
         i = images.length-1;
         image.src = images[i];
         showpicnum.innerHTML = i;
-    }
-}   
+    }  
 }
 autoforwardButton.addEventListener("click",autoforward);
 function autoforward(){
-  setInterval(goforward,1000);
+    isPaused = false;  
+    setInterval(autoNext,2000);
 };
+function autoNext(){
+    if(!isPaused){goforward()};
+}
+console.log(autoforward());
 autobackButton.addEventListener("click",autoback);
 function autoback(){
-    setInterval(goback,1000);
+    isPaused = false;
+    setInterval(back,1000);
+}
+function back(){
+    if(!isPaused){goback()};
 }
 stopButton.addEventListener("click",stop);
 function stop(event){
