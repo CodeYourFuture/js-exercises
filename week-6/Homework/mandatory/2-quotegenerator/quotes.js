@@ -500,8 +500,27 @@ p.innerText = qouteObject.author;
 
 function changeQoute() {
   let qouteObject = pickFromArray(quotes);
-  title.innerHTML = `${qouteObject.quote}`;
+  title.innerHTML = qouteObject.quote;
   p.innerText = qouteObject.author;
 }
+let switchButton = document
+  .getElementById("switch")
+  .addEventListener("click", switchAuto);
 
-function switchOnOff() {}
+let intervalId = -1;
+function switchAuto() {
+  if (intervalId == -1) {
+    intervalId = setInterval(() => {
+      let qouteObject = pickFromArray(quotes);
+      title.innerHTML = qouteObject.quote;
+      p.innerText = qouteObject.author;
+    }, 2000);
+    document.getElementById("switch").style.backgroundColor = "red";
+    document.getElementById("switch").innerText = "Off";
+  } else {
+    clearInterval(intervalId);
+    document.getElementById("switch").style.backgroundColor = "green";
+    document.getElementById("switch").innerText = "On";
+    intervalId = -1;
+  }
+}
