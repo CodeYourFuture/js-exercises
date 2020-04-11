@@ -1,3 +1,13 @@
+
+let para = document.createElement('p')
+document.body.append(para)
+  para.innerHTML += " hello World"
+
+// function showQuotes(){
+//   let para = document.createElement('p')
+//   para. innerHTML = " hello World"
+// }
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
