@@ -36,6 +36,7 @@ body {
     padding: 15px 25px;
     margin-top: 9em;
     margin-left: 25em;
+    border-radius: 2em;
 }
 
 #newqoute:focus {
