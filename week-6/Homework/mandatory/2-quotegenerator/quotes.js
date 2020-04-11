@@ -3,7 +3,7 @@ window.onload = function () {
 
   
     let quo = pickFromArray(quotes);
-    document.querySelector("h1").innerHTML = `"   ${quo.quote} "`;
+    document.querySelector("h1").innerHTML = `"${quo.quote}"`;
     document.querySelector("h2").innerHTML = `${quo.author}`;
   };
 

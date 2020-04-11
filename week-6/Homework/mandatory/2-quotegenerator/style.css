@@ -11,10 +11,11 @@ body {
   align-items: right;
   margin-top: 10%;
   height: 50%;
-  width: 35%;
+  width: 55%;
 }
 h1 {
   font-size: 32 px;
+  width:100%;
   color: white;
   justify-content: center;
   hyphens:auto; 
@@ -23,6 +24,18 @@ h1 {
   background-clip: text;
   -webkit-text-fill-color: transparent; */
   text-align: top;
+  float: left;
+  margin-left:5vw;
+  margin-bottom:5vw;
+  text-shadow: 5px 5px 5px rgb(23, 1, 75);
+}
+h1::first-letter {
+  font-size: 300%;
+  color: rgb(255, 255, 255);
+  line-height: 0;
+
+  float: left; /* Выравнивание по левому краю */
+    margin: 0 2px 2px -100px; /* Отступы вокруг буквы */
 }
 h2 {
   font-size: 18px;
@@ -30,6 +43,8 @@ h2 {
   text-align: right;
   font-style: italic;
   margin-top: 2vh;
+  
+  text-shadow: 5px 5px 5px rgb(23, 1, 75);
 }
 
 .generate {
@@ -40,7 +55,7 @@ h2 {
   border: white;
   float: right;
   margin-top: 20px;
-
+  text-shadow: 5px 5px 5px rgb(23, 1, 75);
   justify-content:right;
 }
 
@@ -48,6 +63,7 @@ h2 {
    display: inline-flex;
    align-items: center;
    justify-content: space-between;
+   text-shadow: 5px 5px 5px rgb(23, 1, 75);
  }
  .frame{
    color:green;
