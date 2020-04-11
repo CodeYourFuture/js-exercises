@@ -1,4 +1,4 @@
-/** Write your CSS in here **/
+
 body{
     background-color:#e76bad;
     margin: auto;
@@ -28,7 +28,6 @@ h1{
 }
 #buttons{
     align-self: stretch;
-    background-color: #d86b12;
     font-family: 'Indie Flower', cursive;
     font-size: x-large;
     width: 50%;
