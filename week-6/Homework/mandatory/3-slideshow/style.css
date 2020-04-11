@@ -1,1 +1,28 @@
 /** Write your CSS in here **/
+body{
+    background-color: rgb(25, 54, 54);
+}
+
+#slideBox {
+    position: absolute;
+    right: 46%;
+    bottom: 30%;   
+    border-width: 5px;
+}
+
+img {
+  width: 150%;
+ border-style: groove;
+}
+
+button {
+background-color: rgb(177, 222, 228);
+border-radius: 5px;
+padding: 10px 20px;
+}
+
+#buttons {
+position: absolute;
+right: 45%;
+bottom: 20%;
+}
