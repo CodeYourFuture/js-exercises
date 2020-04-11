@@ -1,16 +1,15 @@
 let timeRemaining;
 let inNumVal;
-let innerval;
+let interval;
 
- function setAlarm() {
+ function setAlarm() {// This function will execute when click the set alarm button.
   let inputNum = document.querySelector("#alarmSet");
    inNumVal = inputNum.value;
    timeRemaining = document.querySelector("#timeRemaining");
-   console.log(inNumVal);
-   innerval = setInterval(decrement, 1000);
+   interval = setInterval(decrement, 1000);// set the interval to count down the time.
 }
 
-function decrement(){
+function decrement(){// This function will count down to zero, if it reach's zero play alarm and clear the interval.
   if(inNumVal > 0){
     inNumVal -= 1
   } else{
@@ -19,7 +18,7 @@ function decrement(){
   };
 timeRemaining.innerHTML = `Time Remaining: ${numToTime(inNumVal)}`;
 }
-function numToTime(i) {
+function numToTime(i) {//This function will convert the number which user has inserted in input to time (minutes : second).
   var minutes = Math.floor(i / 60);
   var seconds = i  - (minutes * 60);
   if (minutes < 10) {minutes = "0"+minutes;}
