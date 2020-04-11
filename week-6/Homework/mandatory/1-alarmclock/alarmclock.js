@@ -27,7 +27,6 @@ function numToTime(i) {
   return minutes+':'+seconds;
 }
 
-
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
