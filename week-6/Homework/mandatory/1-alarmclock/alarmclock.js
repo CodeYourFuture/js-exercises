@@ -29,13 +29,9 @@ function setAlarm() {
   }, 10);
 }
 // DO NOT EDIT BELOW HERE
-<<<<<<< HEAD
-var audio = new Audio("alarmsound.mp3");
-=======
 
 var audio = new Audio("alarmsound.mp3");
 
->>>>>>> upstream/master
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
@@ -44,17 +40,11 @@ function setup() {
     pauseAlarm();
   });
 }
-<<<<<<< HEAD
-function playAlarm() {
-  audio.play();
-}
-=======
 
 function playAlarm() {
   audio.play();
 }
 
->>>>>>> upstream/master
 function pauseAlarm() {
   audio.pause();
 }
