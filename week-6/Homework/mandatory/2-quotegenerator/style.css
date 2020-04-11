@@ -43,3 +43,11 @@ h2 {
 
   justify-content:right;
 }
+.nobull {
+  list-style-type: none;
+ }
+ .btns{
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+ }
