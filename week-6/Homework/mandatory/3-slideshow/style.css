@@ -6,28 +6,29 @@
     }
 .btns{
     display: flex;
-    align-items: left;
-    /* justify-content: space-between; */
-  
+
   }
   .frame{
-    display:flex;
-    width:100%;
-    color:grey;
-   background-color: black;
-   height: 50px;
-   margin-bottom:0px;
-   margin-left: 10 px;
-   font-size: 12px;
+  display:flex;
+  width:100%;
+  color:rgb(77, 76, 76);
+  background-color: black;
+  height: 50px;
+  margin-bottom:0px;
+  margin-left: 10 px;
+  font-size: 12px;
+  padding:15px;
   }
   body{
       background-color:black;
   }
   button{
-    background-color:grey ;
-    color:black;
+    background-color:rgb(20, 20, 20) ;
+    color:rgb(77, 76, 76);
     border:5px;
     transition-duration: 0.4s;
+    border-radius: 15px;
+
   }
  
  button:hover {
