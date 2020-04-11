@@ -1,12 +1,24 @@
 
+
+function setMinsAndSecs(timeEntry){
+let convertToMin = Math.floor(timeEntry/60);
+let remainderSec = (timeEntry - convertToMin * 60);
+let stringMins = convertToMin.toString().padStart(2, "0")
+let stringSecs = remainderSec.toString().padStart(2, "0")
+console.log(convertToMin, remainderSec)
+return `${stringMins}:${stringSecs}`
+}
+
+
 function setAlarm() {
+  
   let getValue = document.getElementById('alarmSet').value;
-  const timeRemain = document.getElementById('timeRemaining');
-  timeRemain.innerText = "Time Remaining: 00:" + getValue;
+  let timeRemain = document.getElementById('timeRemaining'); 
   const timeSet = setInterval(function () {
+    
     if (getValue > 0) {
       getValue--;
-      timeRemain.innerText = "Time Remaining: 00:" + getValue;
+      timeRemain.innerText = "Time Remaining:" + setMinsAndSecs(getValue);
     } else {
       clearInterval(timeSet);
       playAlarm();
