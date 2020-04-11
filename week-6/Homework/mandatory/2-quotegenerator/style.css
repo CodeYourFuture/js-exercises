@@ -82,4 +82,5 @@ img {
     outline: none;
     background-color: green;
     color: white;
+    border-radius: 2em;
 }
