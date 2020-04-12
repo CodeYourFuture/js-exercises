@@ -15,16 +15,27 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 
 function sortAges(arr) {
-let newArray = newArray.map(function, )
-for (let i = 0; i < arr.length; i++) {
-newArray.map()
+  let newArray= [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+       newArray.push(arr[i]);
+    }
+  }
 
-//replace(/\D/g, "");
+  console.log(sortAges(arr)); 
 
+   for (let i = 0; i < newArray.length; i++) {
+     for (let j = 0; j < newArray.length - i - 1; j++) {
+       if (newArray[j] > newArray[j + i]) {
+         let t = newArray[j];
+         newArray[j] = newArray[j + 1];
+         newArray[j + i] = t;
+       }
+     }
+   }
+   return newArray; 
 }
-
-
-}
+  
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
