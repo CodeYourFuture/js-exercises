@@ -1,14 +1,23 @@
 // Write your code here
 
 let pic1 =
-  "https://images.unsplash.com/photo-1505764761634-1d77b57e1966?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
+  "https://images.wallpaperscraft.com/image/autumn_drawing_walking_82963_960x544.jpg";
 let pic2 =
-  "https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
+  "https://images.wallpaperscraft.com/image/graffiti_wall_girl_art_110107_960x544.jpg";
 let pic3 =
-  "https://images.unsplash.com/photo-1455305049585-41b8d277d68a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
+  "https://images.wallpaperscraft.com/image/painting_france_town_street_sea_sailing_boats_houses_porches_flag_flashlight_restaurant_umbrellas_bridge_flowers_58378_960x544.jpg";
 let pic4 =
-  "https://images.unsplash.com/photo-1462651567147-aa679fd1cfaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60";
-let pictures = [pic1, pic2, pic3, pic4];
+  "https://images.wallpaperscraft.com/image/graffiti_art_muzzle_wall_117800_960x544.jpg";
+let pic5 =
+  "https://images.wallpaperscraft.com/image/girl_face_art_147960_960x544.jpg";
+let pic6 =
+  "https://images.wallpaperscraft.com/image/vincent_van_gogh_the_starry_night_oil_canvas_117815_960x544.jpg";
+let pic7 =
+  "https://images.wallpaperscraft.com/image/vincent_van_gogh_selfportrait_with_a_straw_hat_portrait_135340_960x544.jpg";
+let pic8 =
+  "https://images.wallpaperscraft.com/image/vincent_van_gogh_wheat_field_with_cypresses_wheat_fields_120692_960x544.jpg";
+
+let pictures = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8];
 let slide = document.querySelector("#slideBox");
 let image = document.createElement("img");
 slide.appendChild(image);
@@ -24,7 +33,7 @@ function forwardImg() {
   image.src = pictures[i];
   i++;
   j = i - 2;
-  i == pictures.length - 1 ? (i = 0) : i;
+  i == pictures.length ? (i = 0) : i;
 }
 
 function backwardImg() {
@@ -37,9 +46,15 @@ function backwardImg() {
 fwdBtn.addEventListener("click", forwardImg);
 backBtn.addEventListener("click", backwardImg);
 
-autoFwdBtn.addEventListener("click", function() {
+autoFwdBtn.addEventListener("click", function () {
   var myVar = setInterval(forwardImg, 1000);
-  stopBtn.addEventListener("click", function() {
+  stopBtn.addEventListener("click", function () {
+    clearInterval(myVar);
+  });
+});
+autoBackBtn.addEventListener("click", function () {
+  var myVar = setInterval(backwardImg, 1000);
+  stopBtn.addEventListener("click", function () {
     clearInterval(myVar);
   });
 });

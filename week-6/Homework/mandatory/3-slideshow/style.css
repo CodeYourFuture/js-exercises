@@ -1,23 +1,22 @@
 /** Write your CSS in here **/
 body {
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 700px;
-
-  background-color: #d6c556;
+  background-image: url("https://images.unsplash.com/photo-1516053256215-94022213b13c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  /* background-color: #16dd9b; */
 }
 #wrapper {
   text-align: center;
   position: fixed;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  margin-top: -200px;
-  margin-left: -550px;
+  margin-top: -272px;
+  margin-left: -480px;
 }
 #slideBox {
   display: inline-block;
-  width: 1100px;
-  height: 400px;
+  width: 960px;
+  height: 544px;
   background-color: rgb(6, 136, 153);
-}
-img {
-  height: 300px;
 }
