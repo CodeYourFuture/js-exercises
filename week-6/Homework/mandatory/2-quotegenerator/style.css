@@ -1,1 +1,29 @@
 /** Write your CSS in here **/
+body{
+    background-color: #f7d794;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+    background-color: white;
+    margin:200px;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+#newBtn{
+    background-color: #f7d794;
+    color: white;
+    width: 120px;
+    font-size: 20px;
+}
+#quote{
+    color: #ffb142;
+    font-size: 32px;
+}
+#author{
+    color: #ffb142;
+    font-size: 32px;
+
+}

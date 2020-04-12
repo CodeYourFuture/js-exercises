@@ -1,3 +1,4 @@
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +491,15 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+function showQuote(){
+  let outAns = pickFromArray(quotes);
+  let pEl = document.querySelector("#quote");
+  pEl.innerHTML= outAns.quote;
+  let h4El = document.querySelector("#author");
+   h4El.innerText= outAns.author;  
+  console.log("you called me");
+}
+showQuote();
+document.querySelector("#newBtn").addEventListener("click", showQuote);
