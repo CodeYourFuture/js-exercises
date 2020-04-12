@@ -29,16 +29,14 @@ bottom: 20%;
 
 #newPhoto{
     position: absolute;
-    right: 40%;
+    right: 32%;
     bottom: 5%;
-}
-.newPhotoEntry { 
-    color : white;
 }
 
 #nphoto{
-    width: 600px;
+    width: 778px;
     border-radius: 5px;
+    text-align: center;
 }
 
 #submitButton{
@@ -48,8 +46,7 @@ bottom: 20%;
 }
 
 #submitButton:hover{
-    background-color: "red";
     color: white;
     transition-duration: 0.6s;
-
+    background-color: teal;
 }
