@@ -13,16 +13,17 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 //let oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]
 
 
-function safePlanet(oxygenLevels ) {
+function safeLevels(oxygenLevels) {
   
-  let firstOxygenLevelFound = oxygenLevels.find ( e => e > "19.5%" && e < "23.5%" );
+  //let firstOxygenLevelFound = oxygenLevels.find ( e => e > "19.5%" && e < "23.5%" );
      
-  return firstOxygenLevelFound;
-}
-   console.log(safePlanet(oxygenLevels));
+  //return firstOxygenLevelFound;
+
+  console.log(oxygenLevels);
    
+}; 
    
-   
+safeLevels();
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */

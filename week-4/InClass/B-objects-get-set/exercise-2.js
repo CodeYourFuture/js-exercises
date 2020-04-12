@@ -19,8 +19,8 @@ let phone = {
     isUnlocked: true
 };
 
-let phoneBrand = phone.bbrand;
-let phoneLaunchYear = phone[launchYear];
+let phoneBrand = phone.brand;
+let phoneLaunchYear = phone.launchYear;
 
 // DO NOT MODIFY BELOW THIS LINE
 

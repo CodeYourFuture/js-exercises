@@ -22,3 +22,7 @@ let phone = {
     megapixels: 12,
     batteryLife: "24 hours"
 };
+
+console.log(kitten);
+console.log(laptop);
+console.log(phone);
