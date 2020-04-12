@@ -1,17 +1,47 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Slideshow</title>
-    <script src="slideshow.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Write your HTML in here -->
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="slideshow">
+      <img
+        src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        alt="interior">
+    </div>
+    <div class="slideshow">
+      <img
+        src="https://images.unsplash.com/photo-1520280955819-e019bcdc976a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        alt="cadillac">
+    </div>
+    <div class="slideshow">
+      <img
+        src="https://images.unsplash.com/photo-1455098934982-64c622c5e066?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
+        alt="continental">
+    </div>
+    <div class="slideshow">
+      <img
+        src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+        alt="thunderbird">
+    </div>
+    <div>
+      <button type="button" id="autoBackward">Auto Backward</button>
+      <button type="button" id="Backward" onclick="plusSlide(-1)">Backward</button>
+      <button type="button" id="Forward" onclick="plusSlide(1)">Forward</button>
+      <button type="button" id="autoForward">Auto Forward</button>
+
+    </div>
+
+
+  </div>
+
+  <script src="slideshow.js"></script>
+</body>
+
 </html>
