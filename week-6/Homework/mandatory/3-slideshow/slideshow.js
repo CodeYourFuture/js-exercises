@@ -23,17 +23,32 @@ function slideShow(n) {
 slideShow(slideIndex);
 let intervalId;
 
+let secondsForInterval = 2000;
+document.getElementById("inputBtn").addEventListener("click", () => {
+  clearInterval(intervalId);
+  let inputValue = document.getElementById("input").value;
+  console.log(inputValue);
+  if (inputValue == 0) {
+    secondsForInterval == 2000;
+  } else {
+    secondsForInterval = inputValue * 1000;
+  }
+  autoForward();
+  console.log(secondsForInterval);
+});
+console.log(secondsForInterval);
+
 function autoForward() {
   clearInterval(intervalId);
   intervalId = setInterval(() => {
     slideShow((slideIndex += 1));
-  }, 1000);
+  }, secondsForInterval);
 }
 function autoBackward() {
   clearInterval(intervalId);
   intervalId = setInterval(() => {
     slideShow((slideIndex -= 1));
-  }, 1000);
+  }, secondsForInterval);
 }
 
 document.getElementById("autoForward").addEventListener("click", autoForward);
