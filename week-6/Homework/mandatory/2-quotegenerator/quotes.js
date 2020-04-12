@@ -527,9 +527,11 @@ function checkswitch(){
   if(myswitch.checked === true){
     autoQuotes = setInterval(changeQuoets,5000);
     switchPosition.innerHTML = "Auto-play:ON";
+    switchPosition.style.color = "blue"
   }
   else{
     switchPosition.innerHTML = "Auto-play:OFF";
+    switchPosition.style.color = "red"
     clearInterval(autoQuotes);
   }
 }

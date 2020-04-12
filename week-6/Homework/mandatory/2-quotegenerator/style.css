@@ -49,14 +49,14 @@ body {
 .button {
   background: #53d9e0;
   height: 50px;
-  font-family: "Fredericka the Great", cursive;
+  margin-right:40%;
+  font-family:'Rubik Mono One', sans-serif;
 }
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-left: 80%;
+  width: 70px;
+  height: 40px;
 }
 .switch input { 
   opacity: 0;
@@ -70,7 +70,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:white;
+  background-color:rgb(194, 17, 17);
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -82,12 +82,12 @@ body {
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color:blueviolet;
+  background-color:rgb(2, 5, 2);
   -webkit-transition: .4s;
   transition: .4s;
 }
 input:checked + .slider {
-  background-color: white;
+  background-color: rgb(36, 33, 224);
 }
 
 input:focus + .slider {
