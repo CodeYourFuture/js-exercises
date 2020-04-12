@@ -18,26 +18,30 @@ function setAlarm() {
 }
 
 
+ 
+
+function setAlarm() {}
 
 // DO NOT EDIT BELOW HERE
+
 var audio = new Audio("alarmsound.mp3");
 
 function setup() {
-    document.getElementById("set").addEventListener("click", () => {
-        setAlarm();
-    });
+  document.getElementById("set").addEventListener("click", () => {
+    setAlarm();
+  });
 
-    document.getElementById("stop").addEventListener("click", () => {
-        pauseAlarm();
-    });
+  document.getElementById("stop").addEventListener("click", () => {
+    pauseAlarm();
+  });
 }
 
 function playAlarm() {
-    audio.play();
+  audio.play();
 }
 
 function pauseAlarm() {
-    audio.pause();
+  audio.pause();
 }
 
 window.onload = setup;
