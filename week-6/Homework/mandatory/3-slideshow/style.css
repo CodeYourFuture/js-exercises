@@ -26,3 +26,30 @@ position: absolute;
 right: 45%;
 bottom: 20%;
 }
+
+#newPhoto{
+    position: absolute;
+    right: 40%;
+    bottom: 5%;
+}
+.newPhotoEntry { 
+    color : white;
+}
+
+#nphoto{
+    width: 600px;
+    border-radius: 5px;
+}
+
+#submitButton{
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 5px 10px ;
+}
+
+#submitButton:hover{
+    background-color: "red";
+    color: white;
+    transition-duration: 0.6s;
+
+}
