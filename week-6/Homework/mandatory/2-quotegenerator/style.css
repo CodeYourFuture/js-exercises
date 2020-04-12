@@ -1,1 +1,43 @@
 /** Write your CSS in here **/
+ body {
+    background-color: orange;
+  }
+
+
+  .quote {
+    position: center;
+    width: 70%;
+    top: 50px;
+    text-align: center;
+    border: 3px solid rgb(221, 17, 17);
+    margin: 100px;
+    padding: 10px;
+    margin-left: 150px;
+    margin-top: 5px;
+    font-size: 25px;
+  }
+  
+  .author {
+    position: center;
+    top: 280px;
+    right: 0px;
+    width: 200px;
+    height: 60px;
+    margin-right: 0px;
+    margin-left: 250px;
+    border: none;
+  }
+
+  #myBtn {
+    position: absolute;
+    top: 320px;
+    right: 0;
+    width: 200px;
+    height: 60px;
+    margin-right: 15px;
+    margin-left: 150px;
+    border: none;
+    background-color: hsl(39, 98%, 51%);
+  }
+  
+
