@@ -1,1 +1,58 @@
 /** Write your CSS in here **/
+body{
+  background: orange;
+}
+p{
+  
+  margin:100px 90px;
+  padding:40px 50px;
+  color:orange;
+  align-self: flex-end;
+  margin:0px 20px 10px 0px;
+  display:flex;
+  flex-direction: column;
+  
+}
+.container{
+  background: white;
+  margin:100px 90px;
+  padding:40px 50px;
+  display:flex;
+  flex-direction: column;
+  
+  
+}
+.content{
+  
+  font-size: 35px;
+  margin-right:20px;
+  align-self: flex-end;
+  margin:30px 20px 10px 0px;
+}
+.content-two{
+  align-self: flex-end;
+  margin:0px 20px 10px 0px;
+}
+
+button{
+  
+  width: 150px;
+  height: 50px;
+  color:white;
+  align-self:flex-end ;
+  background-color:orange;
+  margin:0px 20px 10px 0px;
+}
+#check{
+  align-self: flex-end;
+  margin:0px 20px 10px 0px;
+}
+
+input.bigcheck{
+  width:100px;
+  height:40px;
+}
+.inputCheck{
+  font-size: 20px;
+  color:black;
+}

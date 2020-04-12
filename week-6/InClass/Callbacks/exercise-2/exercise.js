@@ -60,6 +60,46 @@ const movies = [
     haveWatched: false,
   },
 ];
+function showMovies() {
+  setTimeout(function () {
+    const listsHolder = document.querySelector("#all-movies");
+    //listsHolder.textContent = "";
+    movies.forEach((movie) => {
+      const pMovieElem = document.createElement("p");
+      listsHolder.append(pMovieElem);
+      pMovieElem.innerHTML = `<span class = "movie-title">${movie.title}</span> , ${movie.director}`;
+      });
+  }, 1000);
+}
+
+
+function addMovie(movie, callback) {
+  setTimeout(function () {
+    movies.push(movie);
+    callback();
+    const totalmovie = document.querySelector("#movies-number");
+    totalmovie.innerText = movies.length;
+  }, 2000);
+}
+const myMovie = {
+  title: "Frozen",
+  director: "Jennifer Lee",
+  type: "Animation",
+  haveWatched: true,
+};
+const buttonSub = document.querySelector("#sentButton");
+buttonSub.addEventListener("click", createNew);
+
+function createNew(event) {
+  event.preventDefault();
+  const new_movie = {
+    title: document.querySelector("#fname").value,
+    director: document.querySelector("#lname").value,
+    typeOfMovie: document.querySelector("#typeOfMovie").value,
+    lastSeen: document.querySelector("#lastSeen").value,
+  };
+  addMovie(new_movie,showMovies());
+}
 
 // create showMovies function
 

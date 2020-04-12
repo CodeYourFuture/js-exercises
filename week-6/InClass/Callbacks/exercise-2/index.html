@@ -18,11 +18,25 @@
 <body>
   <div id="main">
     <div class="jumbotron">
+      <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
       <h1>My movies</h1>
       <div id="all-movies">
-        <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
       </div>
+
     </div>
+    <form>
+      <label for="fname">Movie title</label>
+      <input type="text" id="fname" name="firstname" placeholder="Movie">
+      <label for="lname">Director</label>
+      <input type="text" id="lname" name="lastname" placeholder="Director">
+      <label for="lname">Type of movie</label>
+      <input type="text" id="typeOfMovie">
+      <label for="lname">Last seen </label>
+      <input type="text" id="lastSeen">
+
+      <button id='sentButton'> save </button>
+
+    </form>
     <script src="exercise.js"></script>
 </body>
 
