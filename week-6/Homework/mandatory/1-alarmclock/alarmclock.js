@@ -14,7 +14,7 @@ function setAlarm() {
   ticker = setInterval(countdownTimer, 1000);
 }
 
-function pauseAlarm() {
+function pauseResumeAlarm() {
   if (playing) {
     clearInterval(ticker);
     playing = false;
@@ -66,22 +66,27 @@ function countdownTimer() {
   message.textContent = `Time Remaining: ${hours}:${minutes}:${secs}`;
 }
 // DO NOT EDIT BELOW HERE
+
 var audio = new Audio('alarmsound.mp3');
+
 function setup() {
   document.getElementById('set').addEventListener('click', () => {
     setAlarm();
   });
+
   document.getElementById('stop').addEventListener('click', () => {
-    stopAlarm();
-  });
-  document.getElementById('pause').addEventListener('click', () => {
     pauseAlarm();
   });
+  document.getElementById('pause').addEventListener('click', () => {
+    pauseResumeAlarm();
+  });
 }
+
 function playAlarm() {
   audio.play();
 }
-function stopAlarm() {
+
+function pauseAlarm() {
   audio.pause();
   clearInterval(colorInterval);
   document.body.style.backgroundColor = 'white';
