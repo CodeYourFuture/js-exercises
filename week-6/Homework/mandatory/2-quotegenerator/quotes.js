@@ -519,4 +519,18 @@ function changeQuoets() {
   document.body.style.backgroundColor = differentColors[myrandomColors];
   myButton.style.backgroundColor = differentColors[buttonColor];
 }
+let myswitch = document.querySelector("#checkbox");
+let switchPosition = document.querySelector("#autogenerator");
+let autoQuotes = null;
+myswitch.addEventListener("click",checkswitch);
+function checkswitch(){
+  if(myswitch.checked === true){
+    autoQuotes = setInterval(changeQuoets,5000);
+    switchPosition.innerHTML = "Auto-play:ON";
+  }
+  else{
+    switchPosition.innerHTML = "Auto-play:OFF";
+    clearInterval(autoQuotes);
+  }
+}
 
