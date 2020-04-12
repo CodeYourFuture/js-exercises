@@ -1,7 +1,6 @@
 // Write your code here
 
 let slideIndex = 1;
-slideShow(slideIndex);
 
 function plusSlide(n) {
   slideShow((slideIndex += n));
@@ -21,9 +20,24 @@ function slideShow(n) {
   }
   slides[slideIndex - 1].style.display = "block";
 }
-function forward() {
-  setTimeout(() => {
-    slideIndex++;
+slideShow(slideIndex);
+let intervalId;
+
+function autoForward() {
+  clearInterval(intervalId);
+  intervalId = setInterval(() => {
+    slideShow((slideIndex += 1));
   }, 1000);
 }
-document.getElementById("autoForward").addEventListener("click", forward);
+function autoBackward() {
+  clearInterval(intervalId);
+  intervalId = setInterval(() => {
+    slideShow((slideIndex -= 1));
+  }, 1000);
+}
+
+document.getElementById("autoForward").addEventListener("click", autoForward);
+document.getElementById("autoBackward").addEventListener("click", autoBackward);
+document.getElementById("Stop").addEventListener("click", () => {
+  clearInterval(intervalId);
+});
