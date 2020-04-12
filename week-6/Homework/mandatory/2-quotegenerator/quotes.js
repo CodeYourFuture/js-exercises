@@ -417,7 +417,7 @@ mainDiv.appendChild(paragQut);
 mainDiv.appendChild(btnQut);
 //let text = document.createTextNode(pickFromArray(quotes));
 let text = document.createTextNode(pickFromArray(quotes));
-paragQut.textContent += text;
+//paragQut.textContent += text;
 paragQut.appendChild(text);
 
 
