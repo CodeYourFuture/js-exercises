@@ -1,40 +1,70 @@
-let counter = {};
+let ticker, colorInterval, message, secs, hours, minutes;
+let playing = true,
+  flashColor = 0;
 function setAlarm() {
   // getting the html elements
-  counter.timer = document.querySelector('#alarmSet').value;
-  counter.message = document.querySelector('#timeRemaining');
+  secs = document.querySelector('#alarmSet').value;
+  message = document.querySelector('#timeRemaining');
   // if a negative number is entered , changing it to positive
-  if (counter.timer < 0) {
-    counter.timer *= -1;
+  if (secs < 0) {
+    secs *= -1;
   }
   // start the alarm countdown
 
-  counter.ticker = setInterval(function() {
-    counter.timer--;
-    //stop the countdown of the alarm and play the alarm
-    if (counter.timer <= 0) {
-      playAlarm();
-      clearInterval(counter.ticker);
-      counter.timer = 0;
-    }
-    // Calculate remaining time
-    counter.secs = counter.timer;
-    counter.mins = Math.floor(counter.secs / 60);
-    counter.secs -= counter.mins * 60;
-    // updating the HTML and setting up the time format on the heading message to 00:00
-    if (counter.mins < 10 && counter.secs < 10) {
-      counter.message.textContent = `Time Remaining: 0${counter.mins}:0${counter.secs}`;
-    } else if (counter.mins >= 10 && counter.secs < 10) {
-      counter.message.textContent = `Time Remaining: ${mins}:0${secs}`;
-    } else if (counter.mins < 10 && counter.secs >= 10) {
-      counter.message.textContent = `Time Remaining: 0${counter.mins}:${counter.secs}`;
-    } else {
-      counter.message.textContent = `Time Remaining: ${counter.mins}:${counter.secs}`;
-    }
-  }, 1000);
+  ticker = setInterval(countdownTimer, 1000);
 }
-//setInterval(setAlarm,1000);
 
+function pauseAlarm() {
+  if (playing) {
+    clearInterval(ticker);
+    playing = false;
+    document.getElementById('pause').innerHTML = 'Resume Alarm';
+    document.getElementById('set').style.visibility = 'hidden';
+    document.getElementById('stop').style.visibility = 'hidden';
+  } else {
+    document.getElementById('set').style.visibility = 'visible';
+    document.getElementById('stop').style.visibility = 'visible';
+    playing = true;
+    document.getElementById('pause').innerHTML = 'Pause Alarm';
+    ticker = setInterval(countdownTimer, 1000);
+  }
+}
+function lightning() {
+  if (flashColor === 0) {
+    color = 'red';
+    flashColor = 1;
+  } else {
+    color = 'white';
+    flashColor = 0;
+  }
+  document.body.style.backgroundColor = color;
+}
+function countdownTimer() {
+  secs--;
+  //stop the countdown of the alarm and play the alarm
+  if (secs <= 0) {
+    playAlarm();
+    clearInterval(ticker);
+    secs = 0;
+    colorInterval = setInterval(lightning, 200);
+  }
+  // Calculate remaining time
+  hours = Math.floor(secs / 3600);
+  minutes = Math.floor((secs - hours * 3600) / 60);
+  secs = secs - hours * 3600 - minutes * 60;
+  // updating the HTML and setting up the time format on the heading message to 00:00:00
+
+  if (hours < 10) {
+    hours = '0' + hours;
+  }
+  if (minutes < 10) {
+    minutes = '0' + minutes;
+  }
+  if (secs < 10) {
+    secs = '0' + secs;
+  }
+  message.textContent = `Time Remaining: ${hours}:${minutes}:${secs}`;
+}
 // DO NOT EDIT BELOW HERE
 var audio = new Audio('alarmsound.mp3');
 function setup() {
@@ -42,13 +72,18 @@ function setup() {
     setAlarm();
   });
   document.getElementById('stop').addEventListener('click', () => {
+    stopAlarm();
+  });
+  document.getElementById('pause').addEventListener('click', () => {
     pauseAlarm();
   });
 }
 function playAlarm() {
   audio.play();
 }
-function pauseAlarm() {
+function stopAlarm() {
   audio.pause();
+  clearInterval(colorInterval);
+  document.body.style.backgroundColor = 'white';
 }
 window.onload = setup;
