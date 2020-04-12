@@ -490,3 +490,20 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+function showQuote()
+{
+  let myH1 = document.querySelector("#quote")
+  let myBtn = document.getElementById("btnChangeQoute");
+  let newQuote = pickFromArray(quotes);
+  myH1.innerText = newQuote.author;
+}
+
+showQuote();
+
+ myBtn.addEventListener("click", showQuote);
+  //event.preventDefault()
+
+
+ 

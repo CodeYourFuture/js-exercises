@@ -1,1 +1,24 @@
-/** Write your CSS in here **/
+    /** Write your CSS in here **/
+
+
+body{
+    background-color: #f3a83b;
+    display: flex;
+    align-items:center;
+    align-content: center;
+    padding: 20% 0 20% 0;
+     
+}
+
+main{
+    display: flex;
+    background-color: #fff;
+    width: 70%;
+    margin: 0 auto;
+   height: 400px;
+    align-items:center;
+    align-content: center;
+ 
+   
+    
+}

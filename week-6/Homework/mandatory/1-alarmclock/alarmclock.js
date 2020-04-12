@@ -23,3 +23,9 @@ function pauseAlarm() {
 }
 
 window.onload = setup;
+
+
+formatSeconds(seconds)
+{
+
+}
