@@ -29,8 +29,7 @@ document.getElementById("inputBtn").addEventListener("click", enterSpeed);
 function enterSpeed() {
   clearInterval(intervalId);
   let inputValue = document.getElementById("input").value;
-  console.log(inputValue);
-  if (inputValue == 0) {
+  if (inputValue == "") {
     alert("The preset value is 2 seconds!");
     secondsForInterval == 2000;
   } else {
@@ -59,10 +58,11 @@ function autoBackward() {
 document.getElementById("autoForward").addEventListener("click", autoForward);
 document.getElementById("autoBackward").addEventListener("click", autoBackward);
 document.getElementById("Stop").addEventListener("click", () => {
+  document.getElementById("input").value = "";
   clearInterval(intervalId);
 });
 
-//Active button
+//Active buttons
 
 let allBtns = document.getElementById("allBtns");
 let btns = allBtns.getElementsByClassName("btn");
