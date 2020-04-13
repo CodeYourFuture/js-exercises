@@ -9,7 +9,7 @@ img {
 }
 
 .container {
-  margin: auto;
+  bottom: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -24,7 +24,7 @@ img {
 
 .text {
   color: #f2f2f2;
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 8px 12px;
   position: absolute;
   bottom: 8em;
@@ -56,11 +56,6 @@ button:hover {
   width: 100%;
 }
 #div-input {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   margin: 10px;
 }
 
@@ -101,5 +96,11 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .text {
+    font-size: 2.5em;
+    bottom: 4em;
   }
 }

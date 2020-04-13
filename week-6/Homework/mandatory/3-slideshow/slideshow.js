@@ -22,7 +22,6 @@ function slideShow(n) {
 }
 slideShow(slideIndex);
 let intervalId;
-
 let secondsForInterval = 2000;
 document.getElementById("inputBtn").addEventListener("click", enterSpeed);
 
@@ -30,8 +29,8 @@ function enterSpeed() {
   clearInterval(intervalId);
   let inputValue = document.getElementById("input").value;
   if (inputValue == "") {
-    alert("The preset value is 2 seconds!");
-    secondsForInterval == 2000;
+    document.getElementById("input").value = 2;
+    alert(`You didn't enter any value! The preset value is 2 seconds!`);
   } else {
     secondsForInterval = inputValue * 1000;
   }
@@ -57,9 +56,16 @@ function autoBackward() {
 
 document.getElementById("autoForward").addEventListener("click", autoForward);
 document.getElementById("autoBackward").addEventListener("click", autoBackward);
+document.getElementById("Pause").addEventListener("click", () => {
+  document.getElementById("input").value = "";
+  clearInterval(intervalId);
+});
 document.getElementById("Stop").addEventListener("click", () => {
   document.getElementById("input").value = "";
   clearInterval(intervalId);
+  slideIndex = 1;
+  slideShow(slideIndex);
+  // location.reload();
 });
 
 //Active buttons
