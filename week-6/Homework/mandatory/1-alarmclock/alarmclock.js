@@ -51,11 +51,16 @@ function setAlarm() {
     timeRemain.textContent = `Time Remaining: 00:00`;
     document.getElementById("alarmSet").value = "";
     clearInterval(intervalId);
+    inputValue = "";
   });
 }
 function pauseResume() {
-  console.log(remainingTime);
   clearInterval(intervalId);
+  if (inputValue == "") {
+    timeRemain.textContent = `Time Remaining: 00:00`;
+    document.getElementById("alarmSet").value = "";
+    clearInterval(intervalId);
+  }
   if (intervalId == -1) {
     document.getElementById("pause").innerText = "Pause";
     document.getElementById("pause").style.backgroundColor = "rgb(0,128,128)";
@@ -83,7 +88,6 @@ function pauseResume() {
 let audio = new Audio("alarmsound.mp3");
 function setup() {
   document.getElementById("alarmSet").placeholder = "seconds";
-  console.log(document.getElementById("set"));
 
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();

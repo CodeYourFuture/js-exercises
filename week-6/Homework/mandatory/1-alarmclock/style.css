@@ -14,18 +14,14 @@ body {
   transform: translate(-50%, -50%);
 }
 
-h1 {
-  font-size: 4em;
-  color: aliceblue;
-}
 
 .textInsideInput {
-  font-size: 1.2em;
+  font-size: 1em;
   color: white;
 }
 
 input {
-  padding: 0.7em;
+  padding: 1em;
   width: 300px;
   border-radius: 15px;
   border: 1px solid white;
@@ -41,6 +37,8 @@ input:focus {
 }
 
 h1 {
+  font-size: 6em;
+  color: aliceblue;
   text-align: center;
   text-shadow: #474747 3px 5px 8px;
 }
@@ -50,7 +48,7 @@ button {
   height: 80px;
   outline: none;
   text-align: center;
-  font-size: 0.9em;
+  font-size: 1em;
   color: white;
   border: 0.5px solid white;
   margin: 20px 5px;
