@@ -29,16 +29,21 @@ function enterSpeed() {
   clearInterval(intervalId);
   let inputValue = document.getElementById("input").value;
   if (inputValue == "") {
-    document.getElementById("input").value = 2;
-    alert(`You didn't enter any value! The preset value is 2 seconds!`);
+    // document.getElementById("input").value = 2;
+    alert("You didn't enter any value!");
+    let pauseBtn = document.getElementById("Pause");
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    pauseBtn.className += " active";
+    clearInterval(intervalId);
   } else {
     secondsForInterval = inputValue * 1000;
+    let autoForwardBtn = document.getElementById("autoForward");
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    autoForwardBtn.className += " active";
+    autoForward();
   }
-  let autoForwardBtn = document.getElementById("autoForward");
-  let current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  autoForwardBtn.className += " active";
-  autoForward();
 }
 
 function autoForward() {

@@ -24,10 +24,10 @@ img {
 
 .text {
   color: #f2f2f2;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8em;
+  bottom: 10em;
   margin-left: 2em;
   text-shadow: 6px 4px 10px #333;
   background-color: rgba(0, 0, 0, 0.2);
@@ -68,11 +68,11 @@ input {
   margin-top: 10px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .text {
     /* display: none; */
-    bottom: 22em;
-    font-size: 0.9em;
+    bottom: 30em;
+    font-size: 0.8em;
   }
 
   #allBtns {
@@ -100,7 +100,7 @@ input {
 }
 @media only screen and (min-width: 1000px) {
   .text {
-    font-size: 2.5em;
-    bottom: 4em;
+    font-size: 2em;
+    bottom: 6em;
   }
 }
