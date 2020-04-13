@@ -1,1 +1,51 @@
 /** Write your CSS in here **/
+body {
+    background-image: url("https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    display: flex;
+    flex-direction: column;
+  }
+
+#quoteBox {
+    display: inline-block;
+    width: 1100px;
+    height: 400px;
+    background-color: rgb(255, 0, 0, 0.5);
+    border-radius: 25px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -550px;
+}
+
+#paraDiv  {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -500px;  
+}
+
+p {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-style: italic;
+    font-size: 35px;
+    margin-top: 5%;
+  }
+
+#myBtn {
+    position: absolute;
+    left: 50%;
+    font-weight: bold;
+    margin-left: -80px;
+    bottom: 10px;
+    width: 160px;
+    height: 40px;
+    color: wheat;
+    background-color: rgb(124, 45, 8);
+  }
+  
+
+"https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"

@@ -1,1 +1,50 @@
 /** Write your CSS in here **/
+/** Write your CSS in here **/
+body {
+    background-image: url("https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#imageBox {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90%;
+    height: 60%;
+    margin-top: 5%;
+    text-align: center;
+  }
+
+#pictures  {
+    text-align: center;
+    margin-top: 50;
+}
+#images  {
+  text-align: center;
+  margin-top: 50;
+  border-style: solid;
+  border-color: darkorange;
+  border-width: thick;
+  border-radius: 25px;
+}
+
+ #buttons {
+  margin-top: 750;
+}
+
+button {
+  background-color: #f997b0;
+  color: #4b030c;
+  font-weight: 500;
+  font-size: larger;
+  
+}
+
+p {
+  color: rgb(28, 43, 2);
+  font-weight: 900;
+  font-size: 22px;
+  }
+  

@@ -2,27 +2,34 @@
 <html>
   <head>
     <title>Alarm Clock</title>
-    <script src="alarmclock.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <audio id="myAudio">
+      <source src="alarmsound.mp3" type="audio/mpeg">
+    </audio>
     <div class="centre">
-      <h1 id="timeRemaining">Time Remaining: 00:00</h1>
-      <div>
+      <h1 id="timeRemaining">Time Remaining</h1>
+      <h1 id="time">00:00</h1>
+      <div id="set-time">
         Set Time to:
         <input id="alarmSet" type="number" />
       </div>
-      <div>
+      <div id="buttons">
         <button id="set" type="button">Set Alarm</button>
         <button id="stop" type="button">Stop Alarm</button>
+        <button id="reset" type="button">Reset alarm</button>
       </div>
     </div>
+    <script src="alarmclock.js"></script>
   </body>
 </html>
