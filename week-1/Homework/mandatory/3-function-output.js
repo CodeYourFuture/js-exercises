@@ -1,12 +1,32 @@
 // Add comments to explain what this function does. You're meant to use Google!
 function getNumber() {
-    return Math.random() * 10;
+    return Math.random() * 10; //this part "getting a random number between 0 (inclusive) and 1 (exclusive)"
 }
+console.log(0.156 * 10);
+/* The Math.random() function returns a floating-point, 
+pseudo-random number in the range 0 to less than 1 (inclusive of 0, but not 1)
+ with approximately uniform distribution over that range 
+ — which you can then scale to your desired range. 
+ The implementation selects the initial seed to the random number generation algorithm;
+  it cannot be chosen or reset by the user.  */
+
+
+
 
 // Add comments to explain what this function does. You're meant to use Google!
 function s(w1, w2) {
-    return w1.concat(w2);
+    let w1;
+    let w2;
+    return s = w1.concat(w2); 
+
+    /* The concat() method is used to join two or more strings.
+    This method does not change the existing strings,
+    but returns a new string containing the text of the joined strings. */
 }
+
+console.log("hello world");
+
+
 
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
