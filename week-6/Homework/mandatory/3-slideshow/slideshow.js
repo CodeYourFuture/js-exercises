@@ -24,17 +24,24 @@ slideShow(slideIndex);
 let intervalId;
 
 let secondsForInterval = 2000;
-document.getElementById("inputBtn").addEventListener("click", () => {
+document.getElementById("inputBtn").addEventListener("click", enterSpeed);
+
+function enterSpeed() {
   clearInterval(intervalId);
   let inputValue = document.getElementById("input").value;
   console.log(inputValue);
   if (inputValue == 0) {
+    alert("The preset value is 2 seconds!");
     secondsForInterval == 2000;
   } else {
     secondsForInterval = inputValue * 1000;
   }
+  let autoForwardBtn = document.getElementById("autoForward");
+  let current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  autoForwardBtn.className += " active";
   autoForward();
-});
+}
 
 function autoForward() {
   clearInterval(intervalId);
@@ -62,7 +69,6 @@ let btns = allBtns.getElementsByClassName("btn");
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
     let current = document.getElementsByClassName("active");
-    console.log(current);
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
   });
