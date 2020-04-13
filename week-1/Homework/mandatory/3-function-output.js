@@ -15,22 +15,24 @@ pseudo-random number in the range 0 to less than 1 (inclusive of 0, but not 1)
 
 // Add comments to explain what this function does. You're meant to use Google!
 function s(w1, w2) {
-    let w1;
-    let w2;
-    return s = w1.concat(w2); 
+   
+    
+    return w1.concat(w2); 
 
     /* The concat() method is used to join two or more strings.
     This method does not change the existing strings,
     but returns a new string containing the text of the joined strings. */
 }
 
-console.log("hello world");
+
 
 
 
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
+
+    return `${firstWord} ${secondWord} ${thirdWord}`;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
