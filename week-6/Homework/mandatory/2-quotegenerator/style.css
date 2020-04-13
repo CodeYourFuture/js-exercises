@@ -1,1 +1,49 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: orange;
+}
+#page-wrapper {
+	position: relative;
+}
+.cont {
+  width: 25cm;
+  height: 8cm;  
+  box-sizing: border-box;
+  position: fixed;
+  margin-top: 5cm;
+  margin-left: 5cm;
+  margin-right: 5cm;
+  margin-bottom: auto;
+  color: orange;
+  border-radius: 0;
+  background-color: rgb(231, 228, 216);
+}
+.leed1{
+    text-align: center;
+    margin-top: 2cm;
+    font-size: 12;
+}
+.leed2 {
+    font-size: medium;
+    text-align: right;
+    margin-right: 25px;
+}
+#btn {
+    opacity: 1;
+    float: right;
+    padding: 10px 50px;
+    text-align: center;
+    margin-right: 25px;
+    font-weight: 800;
+    color:  rgb(231, 228, 216);
+    text-transform: uppercase;
+    background: orange;
+    cursor: pointer;
+    border-radius: 12px;
+}
+#btn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    opacity: 1.5;
+}
+
 /** Write your CSS in here **/

@@ -17,13 +17,11 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
-const quotes = [
+let quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
     author: "Kevin Kruse",
@@ -490,3 +488,22 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function pickFromArray(choices) {
+  let choI = choices[Math.floor(Math.random() * choices.length)];
+  show(choI);
+  return choI;
+}
+
+function setup() {
+  document.getElementById("btn").addEventListener("click", () => {
+    pickFromArray(quotes);
+  });
+}
+function show (choI){
+console.log(choI.quote);
+console.log(choI.author);
+document.getElementById("led1").innerHTML= "“" + choI.quote;
+document.getElementById('led2').innerHTML= choI.author;
+};
+window.onload = setup;
