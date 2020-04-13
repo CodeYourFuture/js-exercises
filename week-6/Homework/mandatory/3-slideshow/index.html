@@ -1,50 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slideshow</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="container">
+      <div class="slideshow">
+        <img src="images/myColection.jpg" alt="myColection" />
+        <div class="text">My Collection</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/Dacia 1300.jpg" alt="Dacia 1300" />
+        <div class="text">Dacia 1300</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/Buick.jpg" alt="Buick" />
+        <div class="text">Buick</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/Cadillac.jpg" alt="Cadillac" />
+        <div class="text">Cadillac</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/CamaroSS.jpg" alt="CamaroSS" />
+        <div class="text">Camaro SS</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/Chevrolet.jpg" alt="Chevrolet" />
+        <div class="text">Chevrolet</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/Lamborghini.jpg" alt="Lamborghini" />
+        <div class="text">Lamborghini</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/Mustang.jpg" alt="Mustang" />
+        <div class="text">Mustang</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/Porche.jpg" alt="Porche" />
+        <div class="text">Porche</div>
+      </div>
+      <div id="allBtns">
+        <button type="button" id="autoBackward">Auto Backward</button>
+        <button type="button" id="Backward" onclick="plusSlide(-1)">
+          Backward
+        </button>
+        <button type="button" id="Stop">Stop</button>
+        <button type="button" id="Forward" onclick="plusSlide(1)">
+          Forward
+        </button>
+        <button type="button" id="autoForward">Auto Forward</button>
+      </div>
+      <div id="div-input">
+        <label for="input">Enter seconds for autoplay</label>
+        <input type="number" id="input" />
+        <button type="submit" id="inputBtn">Enter</button>
+      </div>
+    </div>
 
-<body>
-  <div class="container">
-    <div class="slideshow">
-      <img
-        src="https://images.unsplash.com/photo-1462910211773-a9847b1f0e40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-        alt="thunderbird">
-    </div>
-    <div class="slideshow">
-      <img
-        src="https://images.unsplash.com/photo-1520280955819-e019bcdc976a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-        alt="cadillac">
-    </div>
-    <div class="slideshow">
-      <img
-        src="https://images.unsplash.com/photo-1455098934982-64c622c5e066?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
-        alt="continental">
-    </div>
-    <div class="slideshow">
-      <img
-        src="https://images.unsplash.com/photo-1536048284960-eb628c365abb?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
-        alt="mustang">
-    </div>
-    <div id="allBtns">
-      <button type="button" id="autoBackward">Auto Backward</button>
-      <button type="button" id="Backward" onclick="plusSlide(-1)">Backward</button>
-      <button type="button" id="Stop">Stop</button>
-      <button type="button" id="Forward" onclick="plusSlide(1)">Forward</button>
-      <button type="button" id="autoForward">Auto Forward</button>
-    </div>
-    <div id="div-input">
-      <label for="input">Enter seconds for autoplay</label>
-      <input type="number" id="input">
-      <button type="submit" id="inputBtn"> Enter</button>
-    </div>
-  </div>
-
-  <script src="slideshow.js"></script>
-</body>
-
+    <script src="slideshow.js"></script>
+  </body>
 </html>
