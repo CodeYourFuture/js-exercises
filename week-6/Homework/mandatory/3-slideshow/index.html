@@ -46,19 +46,21 @@
         <div class="text">Porche</div>
       </div>
       <div id="allBtns">
-        <button type="button" id="autoBackward">Auto Backward</button>
-        <button type="button" id="Backward" onclick="plusSlide(-1)">
+        <button class="btn" type="button" id="autoBackward">
+          Auto Backward
+        </button>
+        <button class="btn" type="button" id="Backward" onclick="plusSlide(-1)">
           Backward
         </button>
-        <button type="button" id="Stop">Stop</button>
-        <button type="button" id="Forward" onclick="plusSlide(1)">
+        <button class="btn active" type="button" id="Stop">Stop</button>
+        <button class="btn" type="button" id="Forward" onclick="plusSlide(1)">
           Forward
         </button>
-        <button type="button" id="autoForward">Auto Forward</button>
+        <button class="btn" type="button" id="autoForward">Auto Forward</button>
       </div>
       <div id="div-input">
-        <label for="input">Enter seconds for autoplay</label>
-        <input type="number" id="input" />
+        <label for="input">Enter Speed: </label>
+        <input type="number" id="input" placeholder="seconds" />
         <button type="submit" id="inputBtn">Enter</button>
       </div>
     </div>

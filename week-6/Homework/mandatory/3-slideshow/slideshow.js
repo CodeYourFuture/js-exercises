@@ -34,9 +34,7 @@ document.getElementById("inputBtn").addEventListener("click", () => {
     secondsForInterval = inputValue * 1000;
   }
   autoForward();
-  console.log(secondsForInterval);
 });
-console.log(secondsForInterval);
 
 function autoForward() {
   clearInterval(intervalId);
@@ -56,3 +54,16 @@ document.getElementById("autoBackward").addEventListener("click", autoBackward);
 document.getElementById("Stop").addEventListener("click", () => {
   clearInterval(intervalId);
 });
+
+//Active button
+
+let allBtns = document.getElementById("allBtns");
+let btns = allBtns.getElementsByClassName("btn");
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function () {
+    let current = document.getElementsByClassName("active");
+    console.log(current);
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
