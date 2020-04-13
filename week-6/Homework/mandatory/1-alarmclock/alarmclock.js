@@ -9,7 +9,7 @@ function showClockFormat( inputNum){
     return `${newMinute}:${newSecond}`
 }
 function decrementEverySecond(){
-  time--
+  time--;
     if (time==0){
       document.body.style.background = 'orange';
       clearInterval(setClear)
