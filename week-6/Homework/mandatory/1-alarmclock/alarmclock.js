@@ -30,7 +30,11 @@ function setAlarm() {
   clearInterval(intervalId);
   let timeRemain = document.getElementById("timeRemaining");
   inputValue = document.getElementById("alarmSet").value;
+  if (inputValue == "") {
+    setAlarm(alarm);
+  }
   timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputValue)}`;
+
   intervalId = setInterval(function () {
     inputValue--;
     timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputValue)}`;
