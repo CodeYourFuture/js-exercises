@@ -12,7 +12,7 @@ function decrementEverySecond(){
   time--
     if (time==0){
       document.body.style.background = 'orange';
-      clearInterval(setClear )
+      clearInterval(setClear)
       playAlarm()
     }
     document.getElementById('timeRemaining'). innerText = showClockFormat(time)
