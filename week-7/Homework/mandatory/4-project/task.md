@@ -5,7 +5,7 @@ This project should consolidate knowledge from JS1 and HTML/CSS
 This could include
 
 - Setting up a website from scratch using semantic elements
--
+- Parsing a JSON file
 
 ## Example Website
 
