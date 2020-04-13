@@ -11,18 +11,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-   <div id="slideBox"></div>   
-   <div id="buttons">
-   <button id= "backButton", type= "button"><strong>❰</strong></button>
-   <button id= "forwardButton", type= "button"><strong>❱</strong></button>
-   <button id= "stop", type= "button"><strong>∎</strong></button>
-   <button id= "autoBack", type= "button"><strong>❰❰</strong></button>
-   <button id= "autoForward", type= "button"><strong>❱❱</strong></button>
-  </div>
-  <form id= "newPhoto">
-    <input id="nphoto" type="text" value = "Add new photo with URL here" /><br><br>
-    <input type="submit" id = "submitButton" value="Submit">
-  </form>  
-  <script src="slideshow.js"></script>
+    <div id="slideBox"></div>    
+    <div id="buttons">
+      <button id= "backButton", type= "button"><strong>❰</strong></button>
+      <button id= "forwardButton", type= "button"><strong>❱</strong></button>
+      <button id= "stop", type= "button"><strong>∎</strong></button>
+      <button id= "autoBack", type= "button"><strong>❰❰</strong></button>
+      <button id= "autoForward", type= "button"><strong>❱❱</strong></button>
+    </div>
+    <div id="changeInterval">
+      <p>SlideShow Speed</p>
+      <section>
+        <button id= "setInterval1", type= "button"><strong>❰❰</strong></button>
+        <P id="speedoMeter">1.00 sec</P>
+        <button id= "setInterval2",   type= "button"><strong>❱❱</strong></button>
+      </section>
+    </div>
+    <form id= "newPhoto">
+      <input id="nphoto" type="text" placeholder = "Add new photo with URL here" /><br><br>
+      <input type="submit" id = "submitButton" value="Submit">
+    </form>
+    <script src="slideshow.js"></script>
   </body>
 </html>

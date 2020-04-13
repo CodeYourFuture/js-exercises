@@ -1,7 +1,4 @@
 // Write your code here
-
-
-// Write your code here
 let photoArray = [
     "https://images.unsplash.com/photo-1564665759044-959473395029?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
@@ -20,6 +17,23 @@ let photoArray = [
   imageEl.src = photoArray[0];
   let i = 0;
   let j;
+  let timeInterval = 1000;
+  
+  let decrIntervalButton = document.querySelector("#setInterval1");
+  decrIntervalButton.addEventListener("click", function (){
+      timeInterval += 250;
+      document.querySelector("#speedoMeter").innerHTML = "<br>" +  (timeInterval/1000).toFixed(2) + " sec";
+      return timeInterval
+  })
+
+  let incrIntervalButton = document.querySelector("#setInterval2");
+  incrIntervalButton.addEventListener("click", function (){
+      timeInterval -= 250;
+      timeInterval < 250 ? timeInterval = 250: true;
+      document.querySelector("#speedoMeter").innerHTML = "<br>" +  (timeInterval/1000).toFixed(2) + " sec";
+      return timeInterval
+  })
+
   function forwardImg() {
     imageEl.src = photoArray[i];
     i++;
@@ -27,6 +41,7 @@ let photoArray = [
     console.log(i);
     i = i === photoArray.length ? 0 : i;
   }
+
   function backwardImg() {
     imageEl.src = photoArray[j];
     j--;
@@ -37,13 +52,13 @@ let photoArray = [
   fwdBtn.addEventListener("click", forwardImg);
   backBtn.addEventListener("click", backwardImg);
   autoFwdBtn.addEventListener("click", function() {
-    var myVar = setInterval(forwardImg, 1000);
+    var myVar = setInterval(forwardImg, timeInterval);
     stopBtn.addEventListener("click", function() {
       clearInterval(myVar);
     });
   });
   autoBackBtn.addEventListener("click", function() {
-    var myVar = setInterval(backwardImg, 1000);
+    var myVar = setInterval(backwardImg, timeInterval);
     stopBtn.addEventListener("click", function() {
       clearInterval(myVar);
     });

@@ -1,42 +1,47 @@
 /** Write your CSS in here **/
 body{
-    background-color: rgb(25, 54, 54);
+  background-color: rgb(25, 54, 54);
 }
 
 #slideBox {
-    position: absolute;
-    right: 46%;
-    bottom: 30%;   
-    border-width: 5px;
+  position: absolute;
+  right: 27%;
+  bottom: 25%;
+  width: 800px;
+  border-width: 5px;
+  margin: 15px 5px 5px;
 }
 
 img {
-  width: 150%;
- border-style: groove;
+  width: 100%;
+  border-style: groove;
+}
+
+#buttons {
+  position: absolute;
+  right: 38%;
+  bottom: 18%;
+  font-size: 20px;  
 }
 
 button {
 background-color: rgb(177, 222, 228);
 border-radius: 5px;
-padding: 10px 20px;
-}
+padding: 8px 30px;
 
-#buttons {
-position: absolute;
-right: 45%;
-bottom: 20%;
 }
 
 #newPhoto{
-    position: absolute;
-    right: 32%;
-    bottom: 5%;
+ position: absolute;
+ right: 28%;
+ bottom: 3%;
 }
 
 #nphoto{
     width: 778px;
     border-radius: 5px;
     text-align: center;
+    color: gray;
 }
 
 #submitButton{
@@ -50,3 +55,30 @@ bottom: 20%;
     transition-duration: 0.6s;
     background-color: teal;
 }
+
+#changeInterval{
+    position: absolute;
+    right: 10%;
+    bottom: 40%;
+    border: 7px solid white;
+    padding: 10px 10px;
+    color: white; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#setInterval1, #setInterval2 {
+    transform: rotate(90deg);
+    margin-bottom: 10px;
+    padding: 10px, 10px;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
