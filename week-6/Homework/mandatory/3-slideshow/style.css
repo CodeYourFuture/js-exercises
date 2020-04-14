@@ -19,18 +19,36 @@
 }
 #prev {
     position: absolute;
-    top: 50%;
+    top: 85%;
     z-index: 10;
-    left: 5%;
+    left: 32%;
     font-size: 30px;
     color: white;
     cursor: pointer;
 }
 #next {
     position: absolute;
-    top: 50%;
+    top: 85%;
     z-index: 10;
-    right: 5%;
+    right: 35%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#play {
+    position: absolute;
+    top: 85%;
+    z-index: 10;
+    right: 55%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#stop {
+    position: absolute;
+    top: 85%;
+    z-index: 10;
+    right: 45%;
     font-size: 30px;
     color: white;
     cursor: pointer;
