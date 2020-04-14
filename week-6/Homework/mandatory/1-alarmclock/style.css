@@ -1,3 +1,9 @@
+body {
+  background-image: url(https://images.unsplash.com/photo-1515415883846-e3431de1c20d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .centre {
   position: fixed;
   top: 50%;
@@ -9,7 +15,35 @@
 #alarmSet {
   margin: 20px;
 }
-
+#timeRemaining {
+  color: rgb(233, 14, 14);
+  background-color: yellow;
+}
 h1 {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #337bc4;
   text-align: center;
+}
+#settime {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+button {
+  margin-top: 10px;
+  box-shadow: 3px 4px 0px 0px #1564ad;
+  background: linear-gradient(to bottom, #e7ebee 5%, #378de5 100%);
+
+  border-radius: 5px;
+  border: 1px solid #337bc4;
+  display: inline-block;
+  cursor: pointer;
+  color: #d61010;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 44px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
 }

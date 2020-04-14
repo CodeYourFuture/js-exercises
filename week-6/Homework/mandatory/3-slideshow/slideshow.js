@@ -27,13 +27,14 @@ const autoFwdBtn = document.querySelector("#auto-forward");
 const autoBackBtn = document.querySelector("#auto-backward");
 const stopBtn = document.querySelector("#stop");
 let i = 0;
-let j;
+let j = 0;
 
 function forwardImg() {
   image.src = pictures[i];
   i++;
   j = i - 2;
   i == pictures.length ? (i = 0) : i;
+  console.log(i);
 }
 
 function backwardImg() {
