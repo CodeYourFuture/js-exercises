@@ -9,7 +9,7 @@ function tidyUpString(strArr) {
   for (let i = 0; i < strArr.length; i++ ) {
     strArr[i] = strArr[i].trim();
     strArr[i] = strArr[i].replace("/", "");
-    strArr[i] = strArr[i].toLowercase();
+    strArr[i] = strArr[i].toLowerCase();
   }
   return strArr;
 }
@@ -53,14 +53,18 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if ( arr[i] > 100 ) { arr[i] = 100 }
-        arr[i] = Math.ceil( arr[i] * 100 ) / 100 
+  
+  for (let i = 0; i < num.length; i++) {
+    let num = arr[i];
+    if ( num[i] > 100 ) { 
+      num[i] = 100 
+    }
+        num[i] = num.toFixed(2);
 
-        arr[i] = arr[i].toString();
-        arr[i] = arr[i].concat("%");
-     
-    return arr;
+        num[i] = num[i].toString();
+        num[i] = num[i].concat("%");
+   
+    return num;
   }
 }
 

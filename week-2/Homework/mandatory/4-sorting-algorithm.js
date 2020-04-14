@@ -78,4 +78,4 @@ test(
 test(
     "sortAges function works - case 2",
     arraysEqual(sortAges(agesCase2), [55, 60, 100])
-);
+)};
