@@ -1,1 +1,28 @@
 /** Write your CSS in here **/
+body{
+    background-color: peachpuff;
+}
+#img{
+    width: 500px;
+    height: 500px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5%;
+    opacity: 0.9;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 , h3{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 10px;
+}
+.round{
+    border-radius: 5%;
+    border: 0px;
+    background-color: lightgrey;
+    color: mediumblue;
+}
