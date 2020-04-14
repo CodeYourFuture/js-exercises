@@ -1,1 +1,37 @@
+
 /** Write your CSS in here **/
+*{
+    padding: opx;
+    margin: opx;
+    box-sizing: border-box;
+}
+
+.container{
+    margin-top: 2cm;
+    border: 5px solid black;
+    overflow: hidden;
+    position: relative;
+}
+.slide{
+    width : 1100px;
+    display: flex;
+    height: 500px;
+}
+#prev {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    left: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
