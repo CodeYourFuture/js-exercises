@@ -2,11 +2,9 @@
 // Look at the tests and see how you can fix them.
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
   
-
- // if (mood === isHappy) {
-   if (!isHappy){
+   if (isHappy){
     return "I am happy";
   } else {
     return "I am not happy";
@@ -32,18 +30,18 @@ function greaterThan10() {
 
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+
   let sortedLetters = letters.sort();
      return sortedLetters;
 }
-//let letters = ["a", "n", "c", "e", "z", "f"];
+
 
 
 
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+
   let sliced = numbers.slice(0,5);
 
   return sliced;
@@ -53,7 +51,7 @@ function first5() {
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+ 
   let element = arr [index];
 
   return element;
