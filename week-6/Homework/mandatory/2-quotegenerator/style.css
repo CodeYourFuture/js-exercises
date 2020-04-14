@@ -1,1 +1,45 @@
 /** Write your CSS in here **/
+
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: orange;
+
+}
+
+.container{
+    width: 70vw;
+    height: 50wh;
+    color: orange;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 50px;
+    margin: 15% 15%;
+}
+
+#quote{
+    font-size: 2em;
+}
+
+#quote::before{
+content: "\201D";
+font-size: 3em;
+font-weight: bold;
+
+}
+
+.btn{
+    background-color: orange;
+    color: white;
+    border: none;
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 5px;
+}
+
+
+

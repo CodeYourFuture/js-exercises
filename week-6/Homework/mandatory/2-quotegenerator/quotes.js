@@ -21,6 +21,12 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+
+
+
+
+
+
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
@@ -490,3 +496,45 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+const quoteText = document.querySelector('#quote');
+const authorText = document.querySelector('#author') 
+const button = document.querySelector('#button')
+const auto = document.querySelector('#auto')
+
+let quoteObject = pickFromArray(quotes)
+quoteText.innerHTML = quoteObject.quote
+authorText.innerText = quoteObject.author
+
+button.addEventListener('click', function(){
+  quoteObject = pickFromArray(quotes)
+  quoteText.innerHTML = quoteObject.quote
+  authorText.innerText = quoteObject.author
+})
+
+let myTimer = function(){
+  quoteObject = pickFromArray(quotes)
+  quoteText.innerHTML = quoteObject.quote
+  authorText.innerText = quoteObject.author
+}
+
+let status = true
+let myInterval
+
+auto.addEventListener('click', function(){
+
+if(status){
+
+  myInterval = setInterval(myTimer,1000);
+ status=!status
+ auto.innerText = "Auto ON"
+} else {
+  clearInterval(myInterval)
+  status=!status
+  auto.innerText = "Auto OFF"
+}
+
+
+
+})
+

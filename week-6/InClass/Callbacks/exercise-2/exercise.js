@@ -63,8 +63,57 @@ const movies = [
 
 // create showMovies function
 
+const showMovies = function(array, callback){
+setTimeout( function (){   
+let div = document.querySelector("#all-movies")
+let number = document.querySelector("#movies-number")
+
+array.forEach( movie => {
+  let p = document.createElement("p");
+  p.innerText= `${movie.title} and ${movie.director}`
+  div.appendChild(p)
+
+  number.innerText = array.length
+})
+}, 1000)
+}
+
+
+
+
+
 
 // create a new movie object for your favorite movie
 
+// Create a new function called "addMovie"
+// - it receives a movie object as an argument - your can create a new object for your favorite movie following using the "myMovies" objects as a guide 
+// - it adds the new movie to the list of movies after 2 seconds. Remember to setTimeout to achieve that
+// Call addMovies to add the new movie to the list and then showMovies to see the movies added on the screen.
+// How many movies can you see on your page?
+
+const myMovie = {
+  title: "The Invisible Man 2",
+  director: "Leigh Whannell",
+  type: "horror",
+  haveWatched: false,
+}
+
+
+const addMovie =  function(movie, callback){
+  setTimeout( function (){ 
+    movies.push(movie)
+    callback(movies);
+    
+  }, 2000)
+
+ 
+}
+addMovie(myMovie, showMovies)
+
 
 // create addMovies function
+
+
+let form = document.createElement("form")
+
+let input2 = document.createElement("input")

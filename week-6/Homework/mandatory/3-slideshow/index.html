@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,5 +13,17 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
+    <img id="image" src="http://www.cat-breed-info.com/images/catsphynx.jpg" alt="#">
+
+    <div id="count"></div> 
+    <input type="number" id="input">
+    <div class="buttons">
+      <button id="btnAutoBack" class="btn">Auto Back</button>
+      <button id="btnBack" class="btn">Back</button>
+      <button id="btnStop" class="btn">Stop</button>
+      <button id="btnForward" class="btn">Forward</button>
+      <button id="btnAutoForward" class="btn">Auto Forward</button>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>

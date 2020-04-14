@@ -1,1 +1,11 @@
 /** Write your CSS in here **/
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    border: 1px solid black;
+}
