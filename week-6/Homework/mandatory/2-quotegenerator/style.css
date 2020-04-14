@@ -1,29 +1,44 @@
 /** Write your CSS in here **/
 body{
-    background-color: #f7d794;
+    background-color: #cbab57;
+    display: flex;
+    justify-content: center;
 }
 main{
     display: flex;
     flex-direction: column;
-    justify-items: flex-end;
     background-color: white;
-    margin:200px;
-    justify-content: flex-end;
+    margin:100px;
     align-items: center;
+    opacity: 0.8;
+    border-radius: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1000px;
+    height: 500px;
+    color: #503c20;
     
 }
 #newBtn{
-    background-color: #f7d794;
-    color: white;
+    background-color: lightgray;
+    /* color: white; */
     width: 120px;
     font-size: 20px;
+    align-self: flex-end;
+    margin: 5px 40px 15px 0px;
+    padding: 2px;
+    border-radius: 10%;
+    box-shadow: aqua;
 }
 #quote{
-    color: #ffb142;
-    font-size: 32px;
+    font-size: 30px;
+    margin: 15px 40px;
+    padding: 15px 40px;
+    height: 60%;
 }
 #author{
-    color: #ffb142;
-    font-size: 32px;
+    font-size: 25px;
+    align-self: flex-end;
+    margin: 5px 40px 5px 0px;
+    padding: 5px;
 
 }
