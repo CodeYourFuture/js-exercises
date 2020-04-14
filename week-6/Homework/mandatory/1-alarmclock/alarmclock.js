@@ -15,7 +15,7 @@ function timeIt() {
     myTimeRemaining.innerHTML =
       "Time Remaining: " + convertSeconds(mySetTimeValue - counter);
   } else {
-    myTimeRemaining.innerHTML = "Time Remaining:" + convertSeconds(0) ;
+    myTimeRemaining.innerHTML = "Time Remaining:"+ convertSeconds(0);
     clearInterval(SetIntAlarm);
     playAlarm();
     setInterval(function () {
@@ -66,11 +66,11 @@ function convertSeconds(seconds) {
       return `${minutes}` + ":" + `${leftSeconds}`;
     }
   } else {
-    if (seconds < 10 && seconds > 0) {
+    if (seconds < 10 && seconds > 0 || seconds === 0) {
       return "00 :" + "0" + seconds;
     }
   }
-  return "00 :" + "0" + seconds;
+  return "00 :"  + seconds ;
 }
 mypauseButton.addEventListener("click", mypause);
 function mypause() {
