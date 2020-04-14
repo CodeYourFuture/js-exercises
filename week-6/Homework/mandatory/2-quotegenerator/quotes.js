@@ -533,6 +533,7 @@ function checkswitch(){
     switchPosition.innerHTML = "Auto-play:OFF";
     switchPosition.style.color = "red"
     clearInterval(autoQuotes);
+    
   }
 }
 

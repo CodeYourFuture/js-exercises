@@ -15,7 +15,7 @@ function timeIt() {
     myTimeRemaining.innerHTML =
       "Time Remaining: " + convertSeconds(mySetTimeValue - counter);
   } else {
-    myTimeRemaining.innerHTML = "Time Remaining: " + "00 : 00";
+    myTimeRemaining.innerHTML = "Time Remaining:" + convertSeconds(0) ;
     clearInterval(SetIntAlarm);
     playAlarm();
     setInterval(function () {
@@ -70,7 +70,7 @@ function convertSeconds(seconds) {
       return "00 :" + "0" + seconds;
     }
   }
-  return "00 :" + seconds;
+  return "00 :" + "0" + seconds;
 }
 mypauseButton.addEventListener("click", mypause);
 function mypause() {
