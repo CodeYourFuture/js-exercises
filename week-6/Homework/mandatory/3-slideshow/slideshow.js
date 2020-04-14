@@ -22,15 +22,24 @@ function back(){//This function will show the previous image
     currentImgNum.innerHTML = currentImgIndex +1;
 }
 let interval;
+let speed = 1000;
+
+
+
+
 let autoForward = document.querySelector("#autoForwardBtn");
 autoForward.addEventListener("click",()=>{//click on auto forward button will call the forward function  in every second by setInterval.
+    let speedValue = document.querySelector("#select-speed").value;
+    speedValue ? speed = speedValue* 1000 : {};
     clearInterval(interval);
-    interval = setInterval(forward, 1000);
+    interval = setInterval(forward, (speed));
 })
 let autoBack = document.querySelector("#autoBackBtn");
 autoBack.addEventListener("click",()=>{//click on auto back button will call the back function  in every second by setInterval.
+    let speedValue = document.querySelector("#select-speed").value;
+    speedValue ? speed = speedValue* 1000 : {};
     clearInterval(interval);
-    interval = setInterval(back, 1000);
+    interval = setInterval(back, speed);
 })
 let stop = document.querySelector("#stopBtn");
 stop.addEventListener("click",()=>{//click on stop button will stop calling the function by clearInterval.
