@@ -491,9 +491,6 @@ displayNewQuote()
 
 
 btn.addEventListener('click',displayNewQuote)
-
-
-
 checkBox.addEventListener('change',()=>{
   if(checkBox.checked){
     runCheckBox= setInterval(()=>{
