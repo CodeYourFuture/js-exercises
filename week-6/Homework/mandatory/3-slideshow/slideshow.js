@@ -1,4 +1,5 @@
 // Write your code here
+<<<<<<< Updated upstream
 let images= [
   { id:'001',
     src:'images/image-one.jpeg',
@@ -59,3 +60,13 @@ btnBackward.addEventListener('click',forward)
 //   setInterval(backward,3000)
 // })
 
+=======
+
+let images = {
+  imgId:'one',imgSrc:'images/image-one.jpeg',
+  imgId:'one',imgSrc:'images/image-one.jpeg',
+  imgId:'one',imgSrc:'images/image-one.jpeg',
+  imgId:'one',imgSrc:'images/image-one.jpeg'
+
+}
+>>>>>>> Stashed changes
