@@ -1,1 +1,8 @@
 /** Write your CSS in here **/
+body{
+    padding: 20px;
+}
+#imageHolder{
+     width:500px;
+     
+ }

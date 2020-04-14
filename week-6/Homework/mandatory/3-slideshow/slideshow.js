@@ -1,39 +1,95 @@
 // Write your code here
 const images = [{
- url:'./example-screenshots/cat1.jpg', 
+  url:'./example-screenshots/cat1.jpg',
+  num:0,
 },{
-  url:'./example-screenshots/cat2.jpg'
+  url:'./example-screenshots/cat2.jpg',
+  num:1,
 },{
-  url:'./example-screenshots/cat3.jpg'
-  }, {
-  url:'./example-screenshots/cat4.jpg'
-  }];
+  url:'./example-screenshots/cat3.jpg',
+  num:2,
+},{
+  url:'./example-screenshots/cat4.jpg',
+  num:3,
+}];
 
-let index = 0;
+let imageIndex = 0;
+ let numIndex = 0;
 
 function nextItem(){
-    index++;
-    index = index % images.length;
-     return images[index].url;
-}
+  imageIndex++;
+  imageIndex = imageIndex % images.length;
+  return images[imageIndex].url;
+  }
 
-function previousItem(){
-     if(index === 0){
-         index = images.length;
-     }
-        index--;
-      return images[index].url;
+  function previousItem(){
+    if (imageIndex === 0){
+      imageIndex = images.length;
     }
+    imageIndex--;
+    return images[imageIndex].url;
+  }
+  function nextImageIndex(){
+   numIndex++;
+    numIndex = numIndex % images.length;
+   return images[numIndex].num;
+  }
+function previousImageIndex() {
+  if (numIndex === 0) {
+    numIndex = images.length;
+  }
+  numIndex--;
+  return images[numIndex].num;
+}
     
-document.getElementById('imageHolder').textContent = images[index].url; 
-
+document.getElementById('imageHolder').src = images[imageIndex].url; 
+document.getElementById('num').textContent = images[numIndex].num;
 
 let forwBtn = document.getElementById('forwBtn');
    forwBtn.addEventListener('click',()=>{
-     document.getElementById('imageHolder').textContent = nextItem();
-   });
+     document.getElementById('imageHolder').src = nextItem();
+     document.getElementById('num').textContent = nextImageIndex();
+    });
     
 let backwBtn = document.getElementById('backwBtn');
    backwBtn.addEventListener('click',()=>{
-       document.getElementById('imageHolder').textContent = previousItem();
+       document.getElementById('imageHolder').src = previousItem();
+     document.getElementById('num').textContent = previousImageIndex();
    });
+
+   
+
+let autoForwBtn = document.getElementById('autoForwBtn');
+autoForwBtn.addEventListener('click',()=>{
+   let setforward = setInterval(autoForward,5000);
+})
+function autoForward(){
+       nextItem();
+         nextImageIndex();
+         document.getElementById('imageHolder').src = images[imageIndex].url;
+         document.getElementById('num').textContent = images[numIndex].num;
+     }
+
+let autoBackwBtn = document.getElementById('autoBackwBtn');
+autoBackwBtn.addEventListener('click', () => {
+  let setBackwards = setInterval(autoBackwards, 5000);
+
+})
+function autoBackwards() {
+  previousItem();
+  previousImageIndex();
+  document.getElementById('imageHolder').src = images[imageIndex].url;
+  document.getElementById('num').textContent = images[numIndex].num;
+}
+let stopBtn = document.getElementById('stopBtn');
+ stopBtn.addEventListener('click',()=>{
+    clearInterval(stop,1000);
+ })
+ function stop(){
+  clearInterval(setforward);
+  clearInterval(setBackwards);
+}
+
+
+
+ 
