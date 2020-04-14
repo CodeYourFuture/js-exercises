@@ -56,7 +56,8 @@ IF all the fields are valid, when you click **Submit** it should:
 */
 
 let allValid = 0;//used this variable to check all inputs valid.
-document.querySelectorAll(".btn-primary")[5].addEventListener("click", function(){// main function click the submit.
+let submit = document.querySelector("#submitBtn");
+submit.addEventListener("click", function(){// main function click the submit.
     let emlVal = document.querySelector("#exampleInputEmail1").value;//asigned the value of email input to emlVal.
     function ValidateEmail(inputText){//function to check the email format.
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
