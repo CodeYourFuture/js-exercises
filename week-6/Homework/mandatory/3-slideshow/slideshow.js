@@ -13,6 +13,7 @@ const images = [{
   num:3,
 }];
 
+  
 let imageIndex = 0;
  let numIndex = 0;
 
@@ -34,60 +35,61 @@ function nextItem(){
     numIndex = numIndex % images.length;
    return images[numIndex].num;
   }
-function previousImageIndex() {
+ function previousImageIndex(){
   if (numIndex === 0) {
     numIndex = images.length;
   }
   numIndex--;
   return images[numIndex].num;
 }
-    
-document.getElementById('imageHolder').src = images[imageIndex].url; 
-document.getElementById('num').textContent = images[numIndex].num;
+  
+preSetValues();
+function preSetValues(){
+  document.getElementById('imageHolder').src = images[imageIndex].url; 
+  document.getElementById('num').textContent = images[numIndex].num;
+}
 
 let forwBtn = document.getElementById('forwBtn');
-   forwBtn.addEventListener('click',()=>{
+     forwBtn.addEventListener('click',()=>{
      document.getElementById('imageHolder').src = nextItem();
      document.getElementById('num').textContent = nextImageIndex();
     });
     
 let backwBtn = document.getElementById('backwBtn');
-   backwBtn.addEventListener('click',()=>{
+       backwBtn.addEventListener('click',()=>{
        document.getElementById('imageHolder').src = previousItem();
-     document.getElementById('num').textContent = previousImageIndex();
+       document.getElementById('num').textContent = previousImageIndex();
    });
 
-   
+   let setforward;
 
 let autoForwBtn = document.getElementById('autoForwBtn');
-autoForwBtn.addEventListener('click',()=>{
-   let setforward = setInterval(autoForward,5000);
+ autoForwBtn.addEventListener('click',()=>{
+ setforward = setInterval(autoForward,5000);
 })
 function autoForward(){
        nextItem();
-         nextImageIndex();
-         document.getElementById('imageHolder').src = images[imageIndex].url;
-         document.getElementById('num').textContent = images[numIndex].num;
+       nextImageIndex();
+       preSetValues();
      }
-
+let setBackwards;
 let autoBackwBtn = document.getElementById('autoBackwBtn');
-autoBackwBtn.addEventListener('click', () => {
-  let setBackwards = setInterval(autoBackwards, 5000);
+ autoBackwBtn.addEventListener('click', () => {
+   setBackwards = setInterval(autoBackwards, 5000);
 
 })
 function autoBackwards() {
-  previousItem();
-  previousImageIndex();
-  document.getElementById('imageHolder').src = images[imageIndex].url;
-  document.getElementById('num').textContent = images[numIndex].num;
+     previousItem();
+     previousImageIndex();
+     preSetValues();
 }
 let stopBtn = document.getElementById('stopBtn');
  stopBtn.addEventListener('click',()=>{
-    clearInterval(stop,1000);
+    setTimeout(stop,1000);
  })
  function stop(){
-  clearInterval(setforward);
-  clearInterval(setBackwards);
+   clearInterval(setforward);
+   clearInterval(setBackwards);
 }
 
 
