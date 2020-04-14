@@ -32,6 +32,7 @@ let backButton = document.querySelector("#back");
 forwardButton.addEventListener("click", goforward);
 let i = 0;
 let myVar = null;
+let myColor = null;
 function goforward() {
   i = i + 1;
   image.src = images[i];
@@ -41,7 +42,10 @@ function goforward() {
     image.src = images[i];
     showpicnum.innerHTML = 0;
   }
-  myColor = setInterval(function () {
+}
+autoforwardButton.addEventListener("click", autoforward);
+function autoforward() {
+  myVar = setInterval(goforward, 1000);myColor = setInterval(function () {
     let colorArr = [
       "brown",
       "red",
@@ -58,10 +62,6 @@ function goforward() {
     document.body.style.backgroundColor = colorArr[randomNumber];
   }, 3000);
 }
-autoforwardButton.addEventListener("click", autoforward);
-function autoforward() {
-  myVar = setInterval(goforward, 1000);
-}
 backButton.addEventListener("click", goback);
 function goback() {
   i = i - 1;
@@ -72,6 +72,12 @@ function goback() {
     image.src = images[i];
     showpicnum.innerHTML = i;
   }
+}
+
+autobackButton.addEventListener("click", autoback);
+
+function autoback() {
+  myVar = setInterval(goback, 1000);
   myColor = setInterval(function () {
     let colorArr = [
       "brown",
@@ -87,13 +93,8 @@ function goback() {
   }, 3000);
 }
 
-autobackButton.addEventListener("click", autoback);
-
-function autoback() {
-  myVar = setInterval(goback, 1000);
-}
-
 stopButton.addEventListener("click", stop);
 function stop() {
   clearInterval(myVar);
+  clearInterval(myColor);
 }
