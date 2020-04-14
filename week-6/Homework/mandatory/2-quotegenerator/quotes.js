@@ -501,9 +501,9 @@ function setup() {
   });
 }
 function show (choI){
-console.log(choI.quote);
-console.log(choI.author);
-document.getElementById("led1").innerHTML= "“" + choI.quote;
-document.getElementById('led2').innerHTML= choI.author;
+  console.log(choI.quote);
+  console.log(choI.author);
+  document.getElementById("led1").innerHTML= "“" + choI.quote;
+  document.getElementById('led2').innerHTML= choI.author;
 };
 window.onload = setup;
