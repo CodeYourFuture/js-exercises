@@ -1,5 +1,4 @@
 // Write your code here
-<<<<<<< Updated upstream
 let images= [
   { id:'001',
     src:'images/image-one.jpeg',
@@ -22,7 +21,7 @@ let images= [
     
   },
 ]
-let i = 1;
+let i = 0;
 
 const holderEle = document.querySelector('.container')
 const imgEle = document.querySelector('.slide')
@@ -35,38 +34,29 @@ document.querySelector('.image-number').innerHTML= `${images[0].id}`
 imgEle.setAttribute('src',`${images[0].src}`)
 
 function forward() {
-  imgEle.setAttribute('src',`${images[i].src}`)
-  document.querySelector('.image-number').innerHTML= `${images[i].id}`
-
   i++;
   if ( i > images.length-1 ){
     i = 0;
   }
+  imgEle.setAttribute('src',`${images[i].src}`)
+  document.querySelector('.image-number').innerHTML= `${images[i].id}`
+
 }
 btnForward.addEventListener('click',forward)
 
 function backward() {
-  imgEle.setAttribute('src',`${images[i].src}`)
-  document.querySelector('.image-number').innerHTML= `${images[i].id}`
+  
   i--;
   if (i < 0){
     i = images.length -1
   }
+  imgEle.setAttribute('src',`${images[i].src}`)
+  document.querySelector('.image-number').innerHTML= `${images[i].id}`
 }
-btnBackward.addEventListener('click',forward)
+btnBackward.addEventListener('click',backward)
 
 
 // autoB.addEventListener('click',()=>{
 //   setInterval(backward,3000)
 // })
 
-=======
-
-let images = {
-  imgId:'one',imgSrc:'images/image-one.jpeg',
-  imgId:'one',imgSrc:'images/image-one.jpeg',
-  imgId:'one',imgSrc:'images/image-one.jpeg',
-  imgId:'one',imgSrc:'images/image-one.jpeg'
-
-}
->>>>>>> Stashed changes
