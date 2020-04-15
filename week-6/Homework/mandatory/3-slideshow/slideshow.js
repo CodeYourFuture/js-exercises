@@ -10,7 +10,7 @@ const playBt = document.getElementById('play');
 // counter
 let counter = 1; 
 const size = imgAll[0].clientWidth;
-console.log(imgAll[0]);
+console.log("image.length:" + imgAll.length);
 console.log(slideShow);
 console.log("next: " + nextBt);
 console.log("size: " +size);
@@ -47,12 +47,13 @@ function autoSlide(){
       if (n===0){  
         if(counter >= imgAll.length -1 )return;
         slideShow.style.transition = "transform 0.4s ease-in-out";
-        counter++;
+        console.log(counter);
         slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        counter++;
       }else{
         clearInterval(myVar);
-      } 
-    }
+    } 
+}
 
 // repeat:
 slideShow.addEventListener('transitionend', () => {
