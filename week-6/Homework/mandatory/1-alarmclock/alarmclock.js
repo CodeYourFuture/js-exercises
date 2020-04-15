@@ -1,21 +1,31 @@
 let inputField = document.querySelector("#timeRemaining");
 let alarmSet = document.querySelector("#alarmSet");
-let timerId = null
+let pauseAlarmButton = document.querySelector("#pause");
+let timerId = null;
+let paused = false;
 
 function setAlarm() {
-  let getTheValue = alarmSet.value
+  let getTheValue = alarmSet.value;
   inputField.innerHTML = `Time Remaining: 00:${getTheValue}`;
+
   const timeCountDown = setInterval(() => {
-    getTheValue--
-    let remainingTime = inputField.innerHTML = `Time Remaining: 00:${getTheValue}`
-    if (getTheValue === 0) {
-      playAlarm()
-      clearInterval(timeCountDown)
-      document.body.style.backgroundColor = "pink"
+    if (!paused) {
+      getTheValue--;
+      inputField.innerHTML = `Time Remaining: 00:${getTheValue}`;
+      if (getTheValue === 0) {
+        playAlarm();
+        clearInterval(timeCountDown);
+        document.body.style.backgroundColor = "pink";
+      }
     }
   }, 1000);
 }
 
+pauseAlarmButton.addEventListener("click", pauseAlarmBtn);
+
+function pauseAlarmBtn() {
+  paused = !paused;
+}
 // DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");
 
