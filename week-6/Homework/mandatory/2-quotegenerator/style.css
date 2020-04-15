@@ -20,20 +20,27 @@ main{
 }
 #newBtn{
     background-color: lightgray;
-    /* color: white; */
     width: 120px;
     font-size: 20px;
     align-self: flex-end;
-    margin: 5px 40px 15px 0px;
+    margin: 5px 40px 15px 20px;
     padding: 2px;
     border-radius: 10%;
     box-shadow: aqua;
+    
+    text-decoration: none;
+    border:1px solid #25729a; 
+    -webkit-border-radius: 3px; 
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-family:arial, helvetica, sans-serif;
+    
 }
 #quote{
     font-size: 30px;
     margin: 15px 40px;
     padding: 15px 40px;
-    height: 60%;
+    height: 80%;
 }
 #author{
     font-size: 25px;

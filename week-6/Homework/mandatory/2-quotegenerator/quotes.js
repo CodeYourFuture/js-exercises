@@ -499,7 +499,18 @@ function showQuote(){
   pEl.innerHTML= outAns.quote;
   let h4El = document.querySelector("#author");
    h4El.innerText= outAns.author;  
-  console.log("you called me");
 }
 showQuote();
 document.querySelector("#newBtn").addEventListener("click", showQuote);
+
+let interval;
+// function autoShow(){
+  
+// }
+// function stopAutoShow(){
+  
+// }
+function autoShowQuoteFunc(){
+  let autoShowQuote = document.querySelector("#autoShow");
+  autoShowQuote.checked == true ? interval = setInterval(showQuote, 1000):clearInterval(interval);
+}
