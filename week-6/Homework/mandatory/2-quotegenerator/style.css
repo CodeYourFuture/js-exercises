@@ -14,9 +14,8 @@ main{
     border-radius: 2%;
     font-family: Arial, Helvetica, sans-serif;
     width: 1000px;
-    height: 500px;
+    height: 600px;
     color: #503c20;
-    
 }
 #newBtn{
     background-color: lightgray;
@@ -25,16 +24,8 @@ main{
     align-self: flex-end;
     margin: 5px 40px 15px 20px;
     padding: 2px;
-    border-radius: 10%;
-    box-shadow: aqua;
-    
-    text-decoration: none;
     border:1px solid #25729a; 
-    -webkit-border-radius: 3px; 
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    font-family:arial, helvetica, sans-serif;
-    
+    border-radius: 3px;   
 }
 #quote{
     font-size: 30px;
@@ -47,5 +38,4 @@ main{
     align-self: flex-end;
     margin: 5px 40px 5px 0px;
     padding: 5px;
-
 }
