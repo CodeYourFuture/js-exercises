@@ -114,16 +114,7 @@ function exerciseThree(books) {
     }
   });
 }
-
-//
-//
-//
-//
 // DO NOT EDIT BELOW HERE
-//
-//
-//
-//
 
 let people = [
   { name: "Chris", job: "Teacher" },
