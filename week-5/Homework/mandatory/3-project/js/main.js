@@ -57,22 +57,22 @@ IF all the fields are valid, when you click **Submit** it should:
 
 let allValid = 0;//used this variable to check all inputs valid.
 let submit = document.querySelector("#submitBtn");
-submit.addEventListener("click", function(){// main function click the submit.
-    let emlVal = document.querySelector("#exampleInputEmail1").value;//asigned the value of email input to emlVal.
-    function ValidateEmail(inputText){//function to check the email format.
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-(inputText.match(mailformat)) ? allValid++ : document.querySelector("#exampleInputEmail1").style.backgroundColor = "red";
-}
-ValidateEmail(emlVal)//call the function validate email.
-let nameVal = document.querySelector("#example-text-input").value;//asigned the value of name input to nameVal.
-(nameVal.length > 0) ? allValid++ : document.querySelector("#example-text-input").style.backgroundColor = "red";
+let formEl = document.querySelector("form")
 
+formEl.addEventListener("submit", (event)=>{// main function click the submit.
+  let emlVal = document.querySelector("#exampleInputEmail1").value;//asigned the value of email input to emlVal.
 
-let describeVal = document.querySelector("#exampleTextarea").value;
-(describeVal.length > 0) ? allValid++ : document.querySelector("#exampleTextarea").style.backgroundColor = "red";
+  function ValidateEmail(inputText){//function to check the email format.
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    (inputText.match(mailformat)) ? allValid++ : document.querySelector("#exampleInputEmail1").style.backgroundColor = "red";
+  }
 
-(allValid === 3) ? alert("thank you for filling out the form") && document.event.preventDefault() : {};//condition to check all inputs are valid.
-
+  ValidateEmail(emlVal)//call the function validate email.
+  let nameVal = document.querySelector("#example-text-input").value;//asigned the value of name input to nameVal.
+  (nameVal.length > 0) ? allValid++ : document.querySelector("#example-text-input").style.backgroundColor = "red";
+  let describeVal = document.querySelector("#exampleTextarea").value;
+  (describeVal.length > 0) ? allValid++ : document.querySelector("#exampleTextarea").style.backgroundColor = "red";
+  (allValid === 3) ? alert("thank you for filling out the form") && event.preventDefault() : event.preventDefault();//condition to check all inputs are valid.
 });
 
 /*
