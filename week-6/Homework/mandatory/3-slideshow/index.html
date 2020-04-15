@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Slideshow</title>
+    <script src="slideshow.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <title>Slideshow</title>
-  <script src="slideshow.js" defer></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <!-- Write your HTML in here -->
-  <h1> Image Carousel Simplest Demo </h1>
-  <div class="container">
-    <img class= "slide" alt="">
-    <p class="image-number"></p>
-
-  </div>
-
-  <button class="btn btn-one">Forword</button>
-  <button class="btn btn-two">btntwo</button>
-  <button class="btn btn-three">autoForward</button>
-  <button class="btn btn-four">autoBackward</button>
-  
-</body>
-
+  <body>
+    <!-- Write your HTML in here -->
+    <h1>Image Carousel Simplest Demo</h1>
+    <div class="container">
+      <img class="slide" alt="" />
+      <p class="image-number"></p>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-four">autoBackward</button>
+      <button class="btn btn-two">Backword</button>
+      <button class="btn btn-five">Stop</button>
+      <button class="btn btn-one">Forword</button>
+      <button class="btn btn-three">autoForward</button>
+    </div>
+  </body>
 </html>

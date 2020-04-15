@@ -469,45 +469,39 @@ const quotes = [
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-  let container = document.createElement('div')
-  let para = document.createElement('p')
-  let btn = document.querySelector('.button')
-  let checkBox = document.getElementById('check')
-  let paraCheck=document.querySelector('.inputCheck')
+let container = document.createElement("div");
+let para = document.createElement("p");
+let btn = document.querySelector(".button");
+let checkBox = document.getElementById("check");
+let paraCheck = document.querySelector(".inputCheck");
 
-  let runCheckBox
-    container.classList.add('container')
-    document.body.append(container)
-    container.append(para,btn,paraCheck,checkBox)
-    
-function displayNewQuote(){
-  let chooseQuote = pickFromArray(quotes)
-  para.innerHTML = `<span>"${chooseQuote.quote }</span><span>-${chooseQuote.author}</span>`
-    document.getElementsByTagName('span')[0].classList.add('content')
-    document.getElementsByTagName('span')[1].classList.add('content-two')
+let runCheckBox;
+container.classList.add("container");
+document.body.append(container);
+container.append(para, btn, paraCheck, checkBox);
+
+function displayNewQuote() {
+  let chooseQuote = pickFromArray(quotes);
+  para.innerHTML = `<span>"${chooseQuote.quote}</span><span>-${chooseQuote.author}</span>`;
+  document.getElementsByTagName("span")[0].classList.add("content");
+  document.getElementsByTagName("span")[1].classList.add("content-two");
 }
 
-displayNewQuote()
+displayNewQuote();
 
-
-btn.addEventListener('click',displayNewQuote)
-checkBox.addEventListener('change',()=>{
-  if(checkBox.checked){
-    runCheckBox= setInterval(()=>{
-      displayNewQuote()
-      if(checkBox.checked==false){
-        clearInterval(runCheckBox)
+btn.addEventListener("click", displayNewQuote);
+checkBox.addEventListener("change", () => {
+  if (checkBox.checked) {
+    runCheckBox = setInterval(() => {
+      displayNewQuote();
+      if (checkBox.checked == false) {
+        clearInterval(runCheckBox);
       }
-    },2000)
+    }, 2000);
   }
-})
+});
 
-
-
-
- //window.location.reload(false);
-
-    
+//window.location.reload(false);
 
 // function showQuotes(){
 //   let para = document.createElement('p')
@@ -533,6 +527,5 @@ checkBox.addEventListener('change',()=>{
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-
 
 // A list of quotes you can use in your app.

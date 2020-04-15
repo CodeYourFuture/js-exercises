@@ -1,11 +1,28 @@
 /** Write your CSS in here **/
 img {
-  max-width: 300px;
+  max-width: 500px;
+  margin-top: 35px;
 }
-.btn{
+h1 {
+  text-align: center;
+}
+.image-number {
+  color: white;
+}
+.btn {
   background: grey;
-  margin:15px;
+  margin: 15px;
   padding: 15px 32px;
   text-align: center;
   font-size: 16px;
+}
+.container {
+  text-align: center;
+  background: black;
+  width: 600px;
+  height: 400px;
+  box-shadow: 15px -10px #888888;
+}
+.buttons {
+  text-align: center;
 }
