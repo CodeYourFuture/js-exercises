@@ -11,17 +11,16 @@
     position: relative;
 }
 .slide{
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: -15px;
     display: flex;
-    width : 1100px;
+    width : 1130px;
     height: 500px;
 }
 #prev {
     position: absolute;
     top: 85%;
     z-index: 10;
-    left: 32%;
+    left: 30%;
     font-size: 30px;
     color: white;
     cursor: pointer;

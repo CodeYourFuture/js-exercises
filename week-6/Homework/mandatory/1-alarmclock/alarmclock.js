@@ -1,6 +1,6 @@
 // set alarm button
 function setAlarm() {
-  let currentTime = document.getElementById("alarmSet").value;
+  let curren]Time = document.getElementById("alarmSet").value;
   let x = setInterval(function(){
     if (currentTime < 10 && currentTime >= 0){
       document.getElementById('timeRemaining').innerHTML= "00:0"+ currentTime ;
