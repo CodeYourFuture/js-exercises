@@ -15,7 +15,7 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-  arrayOfPeople.forEach(function(item) {
+  arrayOfPeople.forEach(function (item) {
     let h1tag = document.createElement("h1");
     let h2tag = document.createElement("h2");
 
@@ -38,7 +38,7 @@ function exerciseTwo(shopping) {
   let content = document.querySelector("#content");
   var list = document.createElement("ul");
   content.appendChild(list);
-  shopping.forEach(function(item) {
+  shopping.forEach(function (item) {
     var li = document.createElement("li");
     li.textContent = item;
     list.appendChild(li);
@@ -76,35 +76,12 @@ function exerciseTwo(shopping) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
-// const books = [
-//   {
-//     title: “The Design of Everyday Things”,
-//   author: “Don Norman”,
-//   alreadyRead: false
-//   },
-// {
-//   title: “The Most Human Human”,
-//   author: “Brian Christian”,
-//   alreadyRead: true
-// },
-// {
-//   title: “The Pragmatic Programmer”,
-//   author: “Andrew Hunt”,
-//   alreadyRead: true
-// }
-// ];
-let url1 =
-  "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg";
-let url2 =
-  "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg";
-let url3 =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvVg-9fpJlcF2GWF2Vd5c181LSCsT9VwZkT844SmzohNLtyRGcwIKvn43eLLx4biDzCfg_YwDi&usqp=CAc";
-let urls = [url1, url2, url3];
+// I deleted url array and added urls to the books array
+
 function exerciseThree(books) {
   let list = document.createElement("ul");
   let content = document.querySelector("#content");
   content.appendChild(list);
-  let urls = [url1, url2, url3];
   for (i = 0; i < books.length; i++) {
     let listItem = document.createElement("li");
     listItem.style.width = "400px";
@@ -114,27 +91,19 @@ function exerciseThree(books) {
     parEl.innerHTML = `${books[i].title} - ${books[i].author}`;
     let image = document.createElement("img");
     listItem.appendChild(image);
-    image.src = urls[i];
+    image.src = books[i].url;
     books[i].alreadyRead
       ? (listItem.style.backgroundColor = "green")
       : (listItem.style.backgroundColor = "red");
   }
 }
 
-//
-//
-//
-//
 // DO NOT EDIT BELOW HERE
-//
-//
-//
-//
 
 let people = [
   { name: "Chris", job: "Teacher" },
   { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+  { name: "Boris", job: "Prime Minister" },
 ];
 
 exerciseOne(people);
@@ -147,18 +116,24 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    url:
+      "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg",
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    url:
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg",
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
-  }
+    alreadyRead: true,
+    url:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRvVg-9fpJlcF2GWF2Vd5c181LSCsT9VwZkT844SmzohNLtyRGcwIKvn43eLLx4biDzCfg_YwDi&usqp=CAc",
+  },
 ];
 
 exerciseThree(books);
