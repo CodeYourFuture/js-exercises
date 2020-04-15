@@ -25,11 +25,34 @@ console.log(calculateSalesTax);
 
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
-
+/*
 function formatCurrency(priceOfTheProduct){
    let num = calculateSalesTax(priceOfTheProduct).toFixed(2);
+   let numToString = num.toString();
+   let convertToPound = ` £${numToString} `;
+
+   console.log(convertToPound);
+
+   return convertToPound;
+
+  
+
 }
-  console.log(formatCurrency);
+console.log(formatCurrency());
+  
+*/
+
+function formatCurrency(amount){
+
+  let totalAmount = amount + amount * 1.2;
+
+     return `£${totalAmount}`;
+    
+
+ console.log(formatCurrency());
+
+}
+
 
 
 

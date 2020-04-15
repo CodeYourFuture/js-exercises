@@ -80,6 +80,8 @@ function test(test_name, expr) {
 const validAnswers = [];
 function testAll() {
   const answer = shakeBall();
+
+  
   test(
     `shakeBall logs "The ball has shaken!"`,
     logged === "The ball has shaken!"
