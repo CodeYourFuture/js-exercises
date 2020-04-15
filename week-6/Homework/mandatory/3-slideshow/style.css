@@ -1,1 +1,11 @@
 /** Write your CSS in here **/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divMain {
+    padding: 5px;
+}
