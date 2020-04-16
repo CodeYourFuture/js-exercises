@@ -1,7 +1,8 @@
 body{
+  display: flex;
   font-family: 'Rye', cursive;
   font-size: xx-large;
-  background-color:#fce703;
+  background-color:#f06588 ;
 }
 .centre {
   position: fixed;
@@ -10,6 +11,10 @@ body{
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.settime_font{
+  display: flex;
+  justify-content: space-evenly;
 }
 
 #alarmSet {
@@ -25,3 +30,56 @@ body{
 #buttons{
   margin-top: 10%;
 }
+@media(max-width:800px){
+  #timeRemaining{
+    font-size:x-large;
+    display: inline-flex;
+  }
+  #buttons{
+    display: inline-flex;
+    margin-top:5%; 
+    font-size: medium; 
+  }
+  .settime_font{
+    display: inline-flex;
+    justify-content: space-around;
+    font-size:medium;
+  }
+  div.settime_font{
+    display:inline-flexbox;
+  }
+}
+@media(min-width:800px) and (max-width:1500px){
+  #timeRemaining{
+    font-size:110%;
+    margin-bottom: 3rem;
+    display: inline-flex;
+  }
+  #buttons{
+    display: inline-flex;
+    margin-top:5%; 
+    font-size: large; 
+  }
+  .settime_font{
+    display: inline-flex;
+    justify-content: space-around;
+    font-size:large;
+  }
+  .centre{
+    display:grid;
+  }
+  div.settime_font{
+    display:inline-flexbox;
+  }
+  #set{
+    margin-right: 0.5rem;
+  }
+  #pause{
+    margin-right: 0.5rem;
+  }
+  #restart{
+    margin-right: 0.5rem;
+  }
+}
+
+
