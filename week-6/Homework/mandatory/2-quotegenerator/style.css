@@ -85,3 +85,15 @@ img {
     color: white;
     border-radius: 2em;
 }
+
+
+
+@media (max-width: 600px) {
+    .container #div-background {
+        width: 100%;
+    }
+
+    #newqoute {
+        margin-left: 15em;
+    }
+}
