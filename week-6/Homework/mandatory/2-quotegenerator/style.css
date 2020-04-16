@@ -112,7 +112,7 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 60%;
 }
-@media(min-width:80px) and (max-width:800px){
+@media(min-width:80px) and (max-width:1000px){
   body{
     margin-right: 30%;
     margin-left: auto;
