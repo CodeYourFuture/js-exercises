@@ -1,5 +1,5 @@
 /** Write your CSS in here **/
-@media(max-width:600px){
+@media(max-width:800px){
 body {
   background-color: #0352fc;
 }
@@ -62,8 +62,8 @@ body {
 .switch {
   position: relative;
   display: inline-block;
-  width: 15%;
-  height:3rem;
+  height: 70%;
+  width: 50%;
 }
 .switch input { 
   opacity: 0;
@@ -85,8 +85,8 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 70%;
+  width: 50%;
   left: 4px;
   bottom: 4px;
   background-color:rgb(2, 5, 2);
@@ -164,7 +164,8 @@ body {
   justify-content:center;
   align-self:center;
   position:relative;
-  margin-left: 10%
+  margin-right: auto;
+  margin-left:15%;
 }
 
 .button {
@@ -199,8 +200,8 @@ body {
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
+  height: 70%;
+  width: 50%;
   left: 4px;
   bottom: 4px;
   background-color:rgb(2, 5, 2);
@@ -223,6 +224,8 @@ input:checked + .slider:before {
 
 .slider.round {
   border-radius: 34px;
+  width: 80px;
+  margin-right:300;
 }
 
 .slider.round:before {

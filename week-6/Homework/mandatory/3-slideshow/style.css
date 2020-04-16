@@ -30,8 +30,61 @@ h1 {
   font-family: "Indie Flower", cursive;
   font-size: x-large;
   width: 50%;
-  margin-left: 25%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 #autoback {
   margin-left: 5%;
+}
+
+@media(min-width:2000px){
+  #buttons{
+    margin-left: 32%;
+    margin-right: auto;
+}
+body{
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+}
+@media(min-width:300px) and (max-width:600px){
+  body{
+    margin-right: 15%;
+    margin-top: 30%;
+  }
+  #images{
+    width:60%;
+  }
+  #buttons{
+    margin-left:26%;
+    font-size: small;
+    width: 10%;
+}
+ div#buttons{
+   display: inline-flex;
+ }
+
+}
+@media(min-width : 600px) and (max-width:1999px){
+  body{
+    margin-right: auto;
+    margin-top:auto;
+  }
+  #images{
+    width:60%;
+  } 
+
+ div#buttons{
+   display: inline-flex;
+ }
+
+  #buttons{
+    margin-left:auto;
+    margin-right: auto;
+    width: auto;
+    font-size:120%;
+  }
+ 
 }
