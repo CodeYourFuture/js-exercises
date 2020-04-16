@@ -427,21 +427,26 @@ let paragQut2 = document.createElement('p');
 // }), 3000);
             
 
-            function loadPage(myArr1) {
-                let objArr = pickFromArray(myArr1);
+            function loadNewQuote() {
+                let objArr = pickFromArray(quotes);
                 let text = document.createTextNode(objArr.quote);
                 let textAuthor = document.createTextNode(objArr.author);
+                paragQut.innerHTML = "";
+                paragQut2.innerHTML = "";
                 paragQut.appendChild(text);
                 paragQut2.appendChild(textAuthor);
             }
+            loadNewQuote();
+        
 
-            loadPage(quotes)
+    btnQut.addEventListener("click", loadNewQuote);
+
             //styling-------------------------------------------
-
+let body = document.body;
             myBady.style.backgroundColor = 'blue';
             mainDiv.style.backgroundColor = 'white';
-            document.body.style.display = 'flex';
-            document.body.style.flexDirection = "column"
+            body.style.display = 'flex';
+            body.style.flexDirection = "column"
             document.body.style.alignItems = 'center';
             document.body.style.justifyContent = 'center';
             document.body.style.height = '100%';
