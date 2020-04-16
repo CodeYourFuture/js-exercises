@@ -40,12 +40,11 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = (travelDestinations.filter(Element=> Element.distanceKms <= 500)).map(Element=>Element.destinationName);
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry = (travelDestinations.filter(Element=> Element.transportations.indexOf("ferry") >=0)).map(Element=>Element.destinationName);
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
-
+let destinationNamesMoreThan300KmsAwayByTrain = (travelDestinations.filter(Element=> Element.transportations.indexOf("train") >=0 && Element.distanceKms > 300)).map(Element=>Element.destinationName);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

@@ -22,7 +22,7 @@ let restaurant1 = {
         city: "Glasgow",
         area: "center"
     },
-    menu: ["pizza", "calzone", "salad"]
+    menu: ["pizza", "calzone", "salad"]    
 };
 
 let restaurant2 = {
@@ -60,13 +60,13 @@ let restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-        // Complete here
+        return (restaurants.filter(Element=> (Element.totalSeats - Element.numberOfCustomers) >= numberOfPeople)).map(Element=> Element.name);
     },
     findRestaurantServingDish: function (dishName) {
-        // Complete here
+        return restaurants.filter(Element=> (Element.menu.indexOf(dishName) >= 0 )).map(Element=> Element.name);
     },
     countNumberOfRestaurantsInArea: function (area) {
-        // Complete here
+        return restaurants.filter(Element=> Element.address.area == area ).length;
     }
 };
 

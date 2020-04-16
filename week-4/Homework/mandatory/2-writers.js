@@ -42,3 +42,8 @@ let writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+console.clear();
+console.log(`----------------------------------------------------------------------------`);
+console.log(writers.map(Element=> `Hi, my name is ${Element.firstName} ${Element.lastName}. I am ${Element.age} years old, and work as a ${Element.occupation}.`));
+console.log(`----------------------------------------------------------------------------`);
+console.log(writers.filter(Element=>Element.alive).map(Element=> `Hi, my name is ${Element.firstName} ${Element.lastName}. I am ${Element.age} years old, and work as a ${Element.occupation}.`));
