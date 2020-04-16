@@ -1,4 +1,4 @@
-quote-generator-cyf.netlify.app
+https://quote-generator-cyf.netlify.app/
 
 # Make a Quote Generator
 
