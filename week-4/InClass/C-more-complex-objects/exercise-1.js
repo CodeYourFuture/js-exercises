@@ -1,5 +1,5 @@
 /*
-  Given the following house - follow the instructions below.
+  Given the following house - follow the instructions below. 
 
   Make sure you run the file after and it outputs the correct results.
 */
@@ -22,7 +22,10 @@ let house = {
 // - change the address of "house" to '51 Berkley Road'
 // - change the previous owners of "house" to ["Brian M.", "Fiona S."]
 // - change the last name of the current owner of "house" to "Montgomery"
-
+house.address = '51 Berkley Road';
+house.previousOwners[0] = "Brian M.";
+house.previousOwners[1] = "Fiona S.";
+house.currentOwner.lastName = "Montgomery";
 
 /*
   DO NOT EDIT ANYTHING BELOW THIS LINE
