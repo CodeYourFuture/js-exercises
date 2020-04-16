@@ -9,7 +9,7 @@
 //using `playAlarm()`.  === function created in the test
 // You can stop the alarm sound by pressing the `Stop Alarm` button.
 
-//problem with this is the counter is not correct, need to google this. 
+//problem with this is the counter is not correct, need to google this. Did a separate test-time-format.js file to create a separate function to test the minute and seconds format.
 function setAlarm() {
   let inputValue = document.getElementById("alarmSet").value
   let countDown = window.setInterval(alarmCount, 1000)

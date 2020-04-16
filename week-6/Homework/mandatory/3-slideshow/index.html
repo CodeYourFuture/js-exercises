@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Slideshow</title>
-    <script src="slideshow.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Write your HTML in here -->
-  </body>
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="carousel"> 
+    <img class="carousel-image active" id="cat-image1" src="https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg"> 
+    <h1 id="imageNo">1</h1>
+  </div>
+
+  <div class="buttons">
+    <button id="autoBackward" type="button">auto-Backward</button>
+    <button id="back" type="button">back</button>
+    <button id="stop" type="button">stop</button>
+    <button id="forward" type="button">forward</button>
+    <button id="autoForward" type="button">auto-Forward</button>
+  </div>
+
+  <script src="slideshow.js"></script>
+
+</body>
 </html>
