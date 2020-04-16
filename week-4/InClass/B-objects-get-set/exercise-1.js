@@ -10,7 +10,7 @@ let kitten = {
 
 // YOUR CODE GOES BELOW HERE
 
-
+console.log(Object.values(kitten))
 
 
 
