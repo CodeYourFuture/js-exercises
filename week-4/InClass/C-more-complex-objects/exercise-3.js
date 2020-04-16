@@ -1,7 +1,7 @@
 /*
     Given the same "house" object again
 
-    Write the code for the functions as per the description above them
+    Write the code for the functions as per the description above them 
 */
 
 let kinningParkHouse = {
@@ -32,16 +32,27 @@ let parkAvenueHouse = {
 
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
-
+let firstName = house.currentOwner.firstName;
+let lastName = house.currentOwner.lastName;
+return `${firstName} ${lastName}`;
 }
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
-
+  let email =[];
+  email.push(house1.currentOwner.email);
+  email.push(house2.currentOwner.email);
+return email
 }
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
+  // (house1.price < house2.price) ? return house1.address : return house2.address;
+  if(house1.price < house2.price){
+    return house1.address;
+  }else{
+    return house2.address;
+  }
 
 }
 
