@@ -493,43 +493,48 @@ const quotes = [
   },
 ];
 
+//styling of the DOM using js
 
+//white box - div
+const outerDiv = document.querySelector(".whiteContainer");
+  outerDiv.style.display = "flex";
+  outerDiv.style.flexDirection = "column";
+  outerDiv.style.paddingLeft = "40px";
+  outerDiv.style.color = "hsl(39, 100%, 50%)";
+
+const quoteSymbol = document.createElement("span");
+  quoteSymbol.style.fontSize = "120px";
+  quoteSymbol.style.fontFamily = "sans-serif";
+  quoteSymbol.style.position = "absolute";
+  quoteSymbol.textContent = "“";  //unicode character
+  outerDiv.appendChild(quoteSymbol);
+
+  //quote
 const quoteParagraph = document.createElement("p");
+  quoteParagraph.style.height = "40%";
+  quoteParagraph.style.margin= "55px";
+  quoteParagraph.style.padding = "5px";
+  quoteParagraph.style.fontSize = "30px";
+ 
+  //author
 const authorParagraph = document.createElement("p");
-
+  authorParagraph.style.alignSelf = "flex-end"; 
+  authorParagraph.style.marginRight= "40px";
+  authorParagraph.style.fontSize = "25px";
+  
 document.getElementById("myBtn").addEventListener("click", quoteShow);
 
+// start of the function
 function quoteShow() {
   let text = pickFromArray(quotes);
   let quote = text.quote;
   let author = text.author; 
 
-  const outerDiv = document.querySelector(".whiteContainer");
   quoteParagraph.textContent = quote;
   outerDiv.appendChild(quoteParagraph);
 
   authorParagraph.textContent = author;
   outerDiv.appendChild(authorParagraph);
-  
-  //styling
-  //white box - div
-  outerDiv.style.display = "flex";
-  outerDiv.style.flexDirection = "column";
-  outerDiv.style.alignItems = "center"; 
-
-  //quote
-  quoteParagraph.style.height = "40%";
-  quoteParagraph.style.margin= "50px";
-  quoteParagraph.style.padding = "0px 5px";
-  quoteParagraph.style.fontSize = "30px";
-  quoteParagraph.style.color = "hsl(39, 100%, 50%)";
- 
-  //author
-  authorParagraph.style.alignSelf = "flex-end"; 
-  authorParagraph.style.marginRight= "170px";
-  authorParagraph.style.fontSize = "20px";
-  authorParagraph.style.color = "hsl(39, 100%, 50%)";
-
 };
 quoteShow();
 

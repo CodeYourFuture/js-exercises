@@ -5,27 +5,25 @@ body {
 /* white rectangle box with all the text */
 .whiteContainer {
   position: relative;
-  top: 150px;
+  top: 140px;
   right: 0;
   width: 1000px;
   height: 400px;
   margin: 0px 200px;
   background-color: white;
-}
-/*text content with all the quote*/
- 
+} 
 
 /* button */
 #myBtn {
   position: absolute;
-  top: 310px;
-  right: 50px;
+  bottom: 25px;
+  right: 40px;
   width: 200px;
   height: 60px;
-  margin-right: 15px;
-  margin-left: 130px;
   border-radius: 5%;
   background-color: hsl(39, 98%, 51%);
   color: white;
   font-size: 20px; 
 }
+
+/* in future write all the CSS and only update using javaScript */
