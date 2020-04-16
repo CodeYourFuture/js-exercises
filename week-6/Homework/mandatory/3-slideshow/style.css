@@ -1,1 +1,12 @@
 /** Write your CSS in here **/
+.main-img {
+    margin: 20px auto;
+}
+
+#current-img {
+    margin: 20 px auto;
+}
+
+.buttons {
+    margin: 20px auto;
+}
