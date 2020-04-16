@@ -18,6 +18,7 @@ let pic8 =
   "https://images.wallpaperscraft.com/image/vincent_van_gogh_wheat_field_with_cypresses_wheat_fields_120692_960x544.jpg";
 
 let pictures = [pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8];
+console.log(pictures.length);
 let slide = document.querySelector("#slideBox");
 let image = document.createElement("img");
 slide.appendChild(image);
@@ -26,14 +27,34 @@ const backBtn = document.querySelector("#backward");
 const autoFwdBtn = document.querySelector("#auto-forward");
 const autoBackBtn = document.querySelector("#auto-backward");
 const stopBtn = document.querySelector("#stop");
+
+// let i = 0;
+// image.src = pictures[i];
+
+// function forwardImg() {
+//   image.src = pictures[i];
+//   i++;
+
+//   i > pictures.length - 1 ? (i = 0) : i;
+//   console.log(i);
+// }
+// function backwardImg() {
+//   image.src = pictures[i];
+//   i--;
+
+//   i < 0 ? (i = pictures.length - 1) : i;
+//   console.log(i);
+// }
+
 let i = 0;
 let j = 0;
+image.src = pictures[i];
 
 function forwardImg() {
   image.src = pictures[i];
   i++;
   j = i - 2;
-  i == pictures.length ? (i = 0) : i;
+  i > pictures.length - 1 ? (i = 0) : i;
   console.log(i);
 }
 
@@ -44,22 +65,21 @@ function backwardImg() {
   j < 0 ? (j = pictures.length - 1) : j;
   console.log(j);
 }
+
 fwdBtn.addEventListener("click", forwardImg);
 backBtn.addEventListener("click", backwardImg);
 
+let myVar;
 autoFwdBtn.addEventListener("click", function () {
-  var myVar = setInterval(forwardImg, 1000);
-  stopBtn.addEventListener("click", function () {
-    clearInterval(myVar);
-  });
+  clearInterval(myVar);
+  myVar = setInterval(forwardImg, 1000);
 });
-autoBackBtn.addEventListener("click", function () {
-  var myVar = setInterval(backwardImg, 1000);
-  stopBtn.addEventListener("click", function () {
-    clearInterval(myVar);
-  });
-});
-// stopBtn.addEventListener("click", myStopBtn);
-// function myStopBtn(){
 
-//
+autoBackBtn.addEventListener("click", function () {
+  clearInterval(myVar);
+  myVar = setInterval(backwardImg, 1000);
+});
+
+stopBtn.addEventListener("click", function () {
+  clearInterval(myVar);
+});
