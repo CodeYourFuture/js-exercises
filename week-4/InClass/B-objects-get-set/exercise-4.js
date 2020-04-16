@@ -1,5 +1,5 @@
 /*
-    Write code in the space provided so that the expected values output
+    Write code in the space provided so that the expected values output 
 */
 
 let dog = {
@@ -8,7 +8,8 @@ let dog = {
 };
 
 // WRITE CODE BELOW THIS LINE
-
+dog.name = "Rex";
+dog.wantsToPlay = true;
 
 
 // WRITE CODE ABOVE THIS LINE
