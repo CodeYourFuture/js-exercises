@@ -7,13 +7,10 @@ const nextBt = document.getElementById('next');
 const prevBt = document.getElementById('prev');
 const stopBt = document.getElementById('stop');
 const playBt = document.getElementById('play');
+
 // counter
 let counter = 1; 
 const size = imgAll[0].clientWidth;
-console.log("image.length:" + imgAll.length);
-console.log(slideShow);
-console.log("next: " + nextBt);
-console.log("size: " +size);
 slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 //button
@@ -22,7 +19,7 @@ nextBt.addEventListener('click',()=>{
   slideShow.style.transition = "transform 0.4s ease-in-out";
   counter++;
   slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
-  console.log("count:" + counter);
+  repeat();
 });
 
 prevBt.addEventListener('click',()=>{
@@ -30,6 +27,7 @@ prevBt.addEventListener('click',()=>{
     slideShow.style.transition = "transform 0.4s ease-in-out";
     counter--;
     slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    repeat();
 });
 
 playBt.addEventListener('click',()=>{
@@ -38,34 +36,38 @@ playBt.addEventListener('click',()=>{
 
 stopBt.addEventListener('click',()=>{
     autoSlide(n = 1);
-  
 });
 // autoplay function :
 
 function autoSlide(){
-    var myVar = setInterval(autoSlide, 3000);
-      if (n===0){  
-        if(counter >= imgAll.length -1 )return;
-        slideShow.style.transition = "transform 0.4s ease-in-out";
-        console.log(counter);
-        slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        counter++;
-      }else{
-        clearInterval(myVar);
-    } 
+    var myVar = setInterval (function(){
+        if (n===0){  
+            if(counter >= imgAll.length  )return;
+            slideShow.style.transition = "transform 0.4s ease-in-out";
+            slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            counter ++;
+            repeat();
+        }else{
+            clearInterval(myVar);
+        } 
+    }, 3000);
+      
 }
 
 // repeat:
-slideShow.addEventListener('transitionend', () => {
-    if(imgAll[counter].id === 'last-one') {
-       slideShow.style.transition = "none";
-       counter= imgAll.length - 2;
-       slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    }
-    if(imgAll[counter].id === 'first-one') {
-        slideShow.style.transition = "none";
-        counter= imgAll.length - counter;
-        slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
-     }
-});
+function repeat(){
+    slideShow.addEventListener('transitionend', () => {
+        if(imgAll[counter].id === 'last-one') {
+           slideShow.style.transition = "none";
+           counter= imgAll.length - 2;
+           slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+        if(imgAll[counter].id === 'first-one') {
+            slideShow.style.transition = "none";
+            counter= imgAll.length - counter;
+            slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        }
+    });
+}
+
  

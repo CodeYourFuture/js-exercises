@@ -52,3 +52,22 @@
     color: white;
     cursor: pointer;
 }
+
+@media only screen and (min-width: 400px) {
+    body{
+        background-color: rgb(32, 32, 32);
+    };
+    .container{
+        margin-top: 2cm;
+        border: 3px solid black;
+        overflow: hidden;
+        position: relative;
+       
+    }
+    .slide{
+        margin-left: -15px;
+        display: flex;
+        width: 70%;
+        height: 500px;
+    }
+    }
