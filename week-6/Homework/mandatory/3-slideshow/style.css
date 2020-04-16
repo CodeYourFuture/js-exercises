@@ -4,8 +4,16 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 .btn{
     border: 1px solid black;
+}
+
+@media only screen and (max-width: 300px){
+    .imageClass{
+        width: 100%;
+    }
 }
