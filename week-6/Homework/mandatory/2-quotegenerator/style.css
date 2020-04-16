@@ -1,7 +1,136 @@
 /** Write your CSS in here **/
+@media(max-width:600px){
 body {
   background-color: #0352fc;
 }
+#autogenerator{
+  background-color: #c8ccc9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: x-large;
+  margin-left: 6em;
+  margin-right: 8em;
+  font-family:'Rubik Mono One', sans-serif;
+}
+
+#container {
+  background-color: #c8ccc9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 12em;
+  margin-left: 10em;
+  margin-right: 12em;
+  width: 100%;
+}
+
+#bookname {
+  margin: 0;
+  font-size: 15px;
+  color: black;
+  font-family: "Fredericka the Great", cursive;
+  margin-right: 12em;
+  height: 100%;
+  width: 80%;
+}
+#author {
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-right: 3em;
+  font-size: 1em;
+  color: red;
+  font-family: "Fredericka the Great", cursive;
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content:center;
+  align-self:center;
+  position:relative;
+  margin-right:2%;
+  margin-left:20%;
+}
+
+.button {
+  background: #53d9e0;
+  height:40%;
+  margin-right:30%;
+  font-family:'Rubik Mono One', sans-serif;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 15%;
+  height:3rem;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgb(194, 17, 17);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color:rgb(2, 5, 2);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: rgb(36, 33, 224);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 60%;
+}
+}
+
+
+body {
+  background-color: #0352fc;
+}
+#autogenerator{
+  background-color: #c8ccc9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: x-large;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family:'Rubik Mono One', sans-serif;
+}
+
 #container {
   background-color: #c8ccc9;
   height: 20em;
@@ -11,7 +140,7 @@ body {
   align-items: center;
   margin-top: 12em;
   margin-left: 10em;
-  margin-right: 12em;
+  width: 80%;
 }
 
 #bookname {
@@ -26,37 +155,29 @@ body {
   margin-right: 3em;
   font-size: 1em;
   color: red;
+  font-size: large;
   font-family: "Fredericka the Great", cursive;
-}
-#autogenerator{
-  background-color: #c8ccc9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: x-large;
-  margin-left: 6em;
-  margin-right: 8em;
-  font-family:'Rubik Mono One', sans-serif;
 }
 
 #buttonContainer {
   display: flex;
-  justify-content: flex-end;
-  position: relative;
-  margin-right: 12em;
+  justify-content:center;
+  align-self:center;
+  position:relative;
+  margin-left: 10%
 }
 
 .button {
   background: #53d9e0;
-  height: 50px;
-  margin-right:30%;
+  margin-right:70%;
   font-family:'Rubik Mono One', sans-serif;
 }
 .switch {
   position: relative;
   display: inline-block;
-  width: 70px;
-  height: 40px;
+  width: 5%;
+  margin-right: auto;
+  height:3rem;
 }
 .switch input { 
   opacity: 0;
