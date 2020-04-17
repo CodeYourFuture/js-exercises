@@ -18,19 +18,18 @@ function setAlarm() {
 
   function countDown(){
 
-    if (input >= 10 && input < 60) {
-    timeRemaining.textContent = `Time Remaining: 00:${input}`;
-    input--;
-    } else if (input > 0 && input < 10) {
-      timeRemaining.textContent =`Time Remaining: 00:0${input}`;
+    if (input>= 1 && input <= 3600){
+      let minutes = Math.floor(input / 60);
+      let seconds = input - minutes * 60;
+      seconds < 10 ? seconds = ('0' + seconds.toString()).slice(-2) : 0
+      minutes < 10 ? minutes = ('0' + minutes.toString()).slice(-2) : 0
+      timeRemaining.textContent = `Time Remaining: ${minutes}:${seconds}`;
       input--;
-    
-    } else if (input === 0) {
+    }
+    else if (input === 0) {
       timeRemaining.textContent = `Time Remaining: 00:00`;
       audio.play();
       clearInterval(setAlarm)
-      // document.body.style.backgroundColor = "red"
-
     }
   }
 
@@ -43,7 +42,7 @@ function setAlarm() {
 
   stop.addEventListener('click', () => {
     audio.pause();
-    alarmSet.value = ''
+
     audio.src='';
     setBtn.disabled = false
     stopBtn.disabled = true
