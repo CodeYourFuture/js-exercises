@@ -1,8 +1,9 @@
 let isPaused = false;
 let intervalId;
+let timeLeft;
 
 function setAlarm() {
-  let timeLeft = document.getElementById("alarmSet").value;
+  timeLeft = document.getElementById("alarmSet").value;
   displayTimeRemaining(timeLeft);
   intervalId = window.setInterval(intervalCallback, 1000);
   function intervalCallback() {
@@ -47,6 +48,8 @@ function setup() {
   document.getElementById("stop").addEventListener("click", () => {
     clearInterval(intervalId);
     pauseAlarm();
+    timeLeft = 0;
+    displayTimeRemaining(timeLeft);
   });
   document.getElementById("pause").addEventListener("click", () => {
     pauseAlarm();
