@@ -1,9 +1,5 @@
 
 
-<<<<<<< HEAD
-var audio = new Audio("alarmsound.mp3");
-
-=======
 function setMinsAndSecs(timeEntry){
 let convertToMin = Math.floor(timeEntry/60);
 let remainderSec = (timeEntry - convertToMin * 60);
@@ -42,7 +38,6 @@ function setAlarm() {
 
 // DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");
->>>>>>> Week-6
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
@@ -51,17 +46,9 @@ function setup() {
     pauseAlarm();
   });
 }
-<<<<<<< HEAD
-
 function playAlarm() {
   audio.play();
 }
-
-=======
-function playAlarm() {
-  audio.play();
-}
->>>>>>> Week-6
 function pauseAlarm() {
   audio.pause();
 }
