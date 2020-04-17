@@ -493,7 +493,7 @@ const quotes = [
   },
 ];
 
-//styling of the DOM using js
+//styling of the DOM using js for practice - otherwise use CSS 
 
 //white box - div
 const outerDiv = document.querySelector(".whiteContainer");
@@ -502,6 +502,7 @@ const outerDiv = document.querySelector(".whiteContainer");
   outerDiv.style.paddingLeft = "40px";
   outerDiv.style.color = "hsl(39, 100%, 50%)";
 
+// quote symbol - unicode character
 const quoteSymbol = document.createElement("span");
   quoteSymbol.style.fontSize = "120px";
   quoteSymbol.style.fontFamily = "sans-serif";
