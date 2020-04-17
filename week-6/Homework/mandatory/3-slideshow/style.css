@@ -1,12 +1,14 @@
 /** Write your CSS in here **/
-.main-img {
-    margin: 20px auto;
-}
+.main-img {}
 
 #current-img {
-    margin: 20 px auto;
+    margin: 10%;
+    width: 80%;
+    margin-left: 10%;
+    border: 5px solid black;
+    border-radius: 10%;
 }
 
 .buttons {
-    margin: 20px auto;
+    margin: 0 auto;
 }
