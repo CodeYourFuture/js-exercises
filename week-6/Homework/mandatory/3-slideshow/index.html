@@ -2,8 +2,7 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
-    <link
+      <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
@@ -11,7 +10,27 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- Write your HTML in here -->
+  <body>`1
+    <div id="slideBox"></div>    
+    <div id="buttons">
+      <button id= "backButton", type= "button"><strong>❰</strong></button>
+      <button id= "forwardButton", type= "button"><strong>❱</strong></button>
+      <button id= "stop", type= "button"><strong>∎</strong></button>
+      <button id= "autoBack", type= "button"><strong>❰❰</strong></button>
+      <button id= "autoForward", type= "button"><strong>❱❱</strong></button>
+    </div>
+    <div id="changeInterval">
+      <p>SlideShow Speed</p>
+      <section>
+        <button id= "setInterval1", type= "button"><strong>❰❰</strong></button>
+        <P id="speedoMeter">1.00 sec</P>
+        <button id= "setInterval2",   type= "button"><strong>❱❱</strong></button>
+      </section>
+    </div>
+    <form id= "newPhoto">
+      <input id="nphoto" type="text" placeholder = "Add new photo with URL here" /><br><br>
+      <input type="submit" id = "submitButton" value="Submit">
+    </form>
+    <script src="slideshow.js"></script>
   </body>
 </html>

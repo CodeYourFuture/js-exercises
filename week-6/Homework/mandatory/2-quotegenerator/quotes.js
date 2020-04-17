@@ -17,9 +17,8 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
@@ -490,3 +489,24 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+const quoteParagraph = document.createElement("p");
+const authorParagraph = document.createElement("p");
+let quoteGeneratorButton = document.getElementById("myBtn");
+let colors = ['yellow', 'blue', 'white', 'orange', 'lightgray'];
+
+quoteGeneratorButton.addEventListener("click", function () {
+  
+  let random_color = colors[Math.floor(Math.random() * colors.length)];
+  const { quote, author } = pickFromArray(quotes);
+  quoteParagraph.innerHTML = "&ldquo;" + quote + "&rdquo;";
+  document.getElementById("quoteBox").appendChild(quoteParagraph)
+  quoteParagraph.style.color = random_color;
+  
+  authorParagraph.textContent = author;
+  document.getElementById("quoteBox").appendChild(authorParagraph)
+})

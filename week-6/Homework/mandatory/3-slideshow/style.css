@@ -1,1 +1,83 @@
 /** Write your CSS in here **/
+body{
+  background-color: rgb(25, 54, 54);
+}
+
+#slideBox {
+  position: absolute;
+  right: 27%;
+  bottom: 25%;
+  width: 800px;
+  border-width: 5px;
+  margin: 15px 5px 5px;
+}
+
+img {
+  width: 100%;
+  border-style: groove;
+}
+
+#buttons {
+  position: absolute;
+  right: 38%;
+  bottom: 18%;
+  font-size: 20px;  
+}
+
+button {
+background-color: rgb(177, 222, 228);
+border-radius: 5px;
+padding: 8px 30px;
+
+}
+
+#newPhoto{
+ position: absolute;
+ right: 28%;
+ bottom: 3%;
+}
+
+#nphoto{
+    width: 778px;
+    border-radius: 5px;
+    text-align: center;
+    color: gray;
+}
+
+#submitButton{
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 5px 10px ;
+}
+
+#submitButton:hover{
+    color: white;
+    transition-duration: 0.6s;
+    background-color: teal;
+}
+
+#changeInterval{
+    position: absolute;
+    right: 10%;
+    bottom: 40%;
+    border: 7px solid white;
+    padding: 10px 10px;
+    color: white; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#setInterval1, #setInterval2 {
+    transform: rotate(90deg);
+    padding: 10px, 10px 10px;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
