@@ -9,3 +9,13 @@ main {
 .divMain {
     padding: 5px;
 }
+#btnId {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btnn {
+    border-style: solid;
+    border-color: black;
+    background-color: red;
+}
