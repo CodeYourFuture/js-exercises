@@ -3,6 +3,7 @@
 let slideIndex = 1;
 
 function plusSlide(n) {
+  clearInterval(intervalId);
   slideShow((slideIndex += n));
 }
 
@@ -29,7 +30,6 @@ function enterSpeed() {
   clearInterval(intervalId);
   let inputValue = document.getElementById("input").value;
   if (inputValue == "") {
-    // document.getElementById("input").value = 2;
     alert("You didn't enter any value!");
     let pauseBtn = document.getElementById("Pause");
     let current = document.getElementsByClassName("active");
@@ -70,7 +70,6 @@ document.getElementById("Stop").addEventListener("click", () => {
   clearInterval(intervalId);
   slideIndex = 1;
   slideShow(slideIndex);
-  // location.reload();
 });
 
 //Active buttons
