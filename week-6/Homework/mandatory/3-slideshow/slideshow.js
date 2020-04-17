@@ -1,20 +1,87 @@
 // Write your code here
-var arr = [];
-arr[0] = "https://sqphja.dm.files.1drv.com/y4mkhcpNjTL2IMIOIhCp0aj9wBzqWmYemU2oxmLFbEEjeRfQQARKjdwYmYtkyum7_5ynWvJWbm0MVtFKLJ0DZCquRE0rSjv-4aU60JWdanDSdvf1WGRn3fSBLRGX6_SIcVQlDwy7GYnpKXRl7gYYIk0fc09jsRPs04panHcZ_rARaYndZtM4LGB14PUYcAFssUQlbPWeFPuILkSZISUFFnKvA?width=5228&height=3485&cropmode=none";
-arr[1] = "https://sqpooa.dm.files.1drv.com/y4m3k36HJuIhV7zd9YS3Bi-H7bNzTYdw7Gt3IXceM9oA7r808FBzKiuaYnJ8PJ1dXGE4Bf7c8nRP5fe1eI7mc0g3Pnd_jY0BOTcx6DBxBFpRQ9TZvzbFKlgMKtJJ_yiYZMi1COj_CySK45pdpbjR1J_U4G8ydoI97I-KmRrLOCALhrpg-owKb2gkhfwzn8PQnqQm74Ze-0uhDw5PxSzMFgbzg?width=3787&height=5050&cropmode=none"
-arr[2] = "https://sqniaq.dm.files.1drv.com/y4mv0ywXCYISaRIUGkicSDUY17FJM2v6cdag81q9jxcSiEOGo2eh441uD_YVkEvIHsNj0GD6_zax-zhJE7uAP7ydKYtrv15gcpVPJfVVaCZ8zEkgv6irozY7mFqR8V_kvuicDKDlOMkDspv4tBjLcp3e4ds5h7T68OuSjrmgZoAnozCy2dh1EGc19v8_IKBa5hcF8tUlj-t4YUYcj1hUnbwAQ?width=5304&height=7952&cropmode=none"
+// var arr = [];
+// arr[0] = "https://sqphja.dm.files.1drv.com/y4mkhcpNjTL2IMIOIhCp0aj9wBzqWmYemU2oxmLFbEEjeRfQQARKjdwYmYtkyum7_5ynWvJWbm0MVtFKLJ0DZCquRE0rSjv-4aU60JWdanDSdvf1WGRn3fSBLRGX6_SIcVQlDwy7GYnpKXRl7gYYIk0fc09jsRPs04panHcZ_rARaYndZtM4LGB14PUYcAFssUQlbPWeFPuILkSZISUFFnKvA?width=5228&height=3485&cropmode=none";
+// arr[1] = "https://sqpooa.dm.files.1drv.com/y4m3k36HJuIhV7zd9YS3Bi-H7bNzTYdw7Gt3IXceM9oA7r808FBzKiuaYnJ8PJ1dXGE4Bf7c8nRP5fe1eI7mc0g3Pnd_jY0BOTcx6DBxBFpRQ9TZvzbFKlgMKtJJ_yiYZMi1COj_CySK45pdpbjR1J_U4G8ydoI97I-KmRrLOCALhrpg-owKb2gkhfwzn8PQnqQm74Ze-0uhDw5PxSzMFgbzg?width=3787&height=5050&cropmode=none"
+// arr[2] = "https://sqniaq.dm.files.1drv.com/y4mv0ywXCYISaRIUGkicSDUY17FJM2v6cdag81q9jxcSiEOGo2eh441uD_YVkEvIHsNj0GD6_zax-zhJE7uAP7ydKYtrv15gcpVPJfVVaCZ8zEkgv6irozY7mFqR8V_kvuicDKDlOMkDspv4tBjLcp3e4ds5h7T68OuSjrmgZoAnozCy2dh1EGc19v8_IKBa5hcF8tUlj-t4YUYcj1hUnbwAQ?width=5304&height=7952&cropmode=none"
 
-setInterval(() => {
+// setInterval(() => {
 
-    if (i < arr.length - 1) {
-        i++;
+//     if (i < arr.length - 1) {
+//         i++;
 
-    } else {
-        i = 0
+//     } else {
+//         i = 0
+//     }
+//     document.getElementById("images").src = arr[i];
+// }, 2000);
+var arr;
+arr = [
+    'https://sqphja.dm.files.1drv.com/y4mkhcpNjTL2IMIOIhCp0aj9wBzqWmYemU2oxmLFbEEjeRfQQARKjdwYmYtkyum7_5ynWvJWbm0MVtFKLJ0DZCquRE0rSjv-4aU60JWdanDSdvf1WGRn3fSBLRGX6_SIcVQlDwy7GYnpKXRl7gYYIk0fc09jsRPs04panHcZ_rARaYndZtM4LGB14PUYcAFssUQlbPWeFPuILkSZISUFFnKvA?width=5228&height=3485&cropmode=none',
+    'https://sqpooa.dm.files.1drv.com/y4m3k36HJuIhV7zd9YS3Bi-H7bNzTYdw7Gt3IXceM9oA7r808FBzKiuaYnJ8PJ1dXGE4Bf7c8nRP5fe1eI7mc0g3Pnd_jY0BOTcx6DBxBFpRQ9TZvzbFKlgMKtJJ_yiYZMi1COj_CySK45pdpbjR1J_U4G8ydoI97I-KmRrLOCALhrpg-owKb2gkhfwzn8PQnqQm74Ze-0uhDw5PxSzMFgbzg?width=3787&height=5050&cropmode=none',
+    'https://sqniaq.dm.files.1drv.com/y4mv0ywXCYISaRIUGkicSDUY17FJM2v6cdag81q9jxcSiEOGo2eh441uD_YVkEvIHsNj0GD6_zax-zhJE7uAP7ydKYtrv15gcpVPJfVVaCZ8zEkgv6irozY7mFqR8V_kvuicDKDlOMkDspv4tBjLcp3e4ds5h7T68OuSjrmgZoAnozCy2dh1EGc19v8_IKBa5hcF8tUlj-t4YUYcj1hUnbwAQ?width=5304&height=7952&cropmode=none',
+];
+
+let imgIndex = 0;
+let imgShow = document.getElementById('images');
+imgShow.src = arr[imgIndex];
+let imgNumber = document.getElementById('imgNumber');
+imgNumber.innerHTML = imgIndex + 1;
+
+let interval;
+
+
+//forward executing
+let btnForward = document.getElementById('btnForward');
+btnForward.addEventListener('click', forward);
+
+function forward() {
+    if (imgIndex >= arr.length - 1) {
+        imgIndex = -1;
     }
-    document.getElementById("images").src = arr[i];
-}, 2000);
+    imgIndex++;
+    imgShow.src = arr[imgIndex];
+    imgNumber.innerHTML = imgIndex + 1;
+}
 
+let btnBackward = document.getElementById('btnBackward');
+btnBackward.addEventListener('click', backward);
+
+function backward() {
+    if (imgIndex == 0) {
+        imgIndex = arr.length;
+    }
+    imgIndex--;
+    imgShow.src = arr[imgIndex];
+    imgNumber.innerHTML = imgIndex + 1;
+}
+
+//autoforward executing
+let btnAutF = document.getElementById('btnAutF');
+btnAutF.addEventListener('click', autoForward);
+
+function autoForward() {
+    stop();
+    interval = setInterval(forward, 3000);
+    imgNumber.innerHTML = imgIndex + 1;
+}
+
+//autoBackward executing
+let btnAutB = document.getElementById('btnAutB');
+btnAutB.addEventListener('click', autoBackward);
+
+function autoBackward() {
+    stop();
+    interval = setInterval(backward, 3000);
+    imgNumber.innerHTML = imgIndex + 1;
+}
+
+//stop execting
+let btnStop = document.getElementById('btnStop');
+btnStop.addEventListener('click', stop);
+
+function stop() {
+    clearInterval(interval);
+}
 
 // function sliderShow() {
 //     document.getElementById("images").src = arr[i];
