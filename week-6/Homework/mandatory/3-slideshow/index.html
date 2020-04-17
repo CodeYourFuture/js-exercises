@@ -3,7 +3,6 @@
 
 <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -20,15 +19,14 @@
         </div>
 
         <div class="divMain">
-            <h2></h2>
+            <h2 id="imgNumber"></h2>
         </div>
-        <div class="divMain">
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
-            <button></button>
+        <div id="btnId" class="divMain">
+            <button id="btnForward" class="btnn" type="button">forward</button>
+            <button id="btnBackward" class="btnn" type="button">backward</button>
+            <button id="btnAutF" class="btnn" type="button">autoforward</button>
+            <button id="btnAutB" class="btnn" type="button">autobackward</button>
+            <button id="btnStop" class="btnn" type="button">stop</button>
         </div>
     </main>
     <script src="slideshow.js"></script>
