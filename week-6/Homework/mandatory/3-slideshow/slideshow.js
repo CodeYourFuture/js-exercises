@@ -29,10 +29,19 @@ let autobackButton = document.querySelector("#autoback");
 let autoforwardButton = document.querySelector("#autoforward");
 let stopButton = document.querySelector("#stop");
 let backButton = document.querySelector("#back");
-forwardButton.addEventListener("click", goforward);
+let container = document.querySelector("#container")
 let i = 0;
-let myVar = null;
+let myAutoforward = null;
+let myAutobackward = null;
 let myColor = null;
+
+function color() {
+  let colorArr = ["brown", "red", "orange", "green", "blue", "purple", "pink"];
+  let randomNumber = Math.floor(Math.random() * colorArr.length);
+  container.style.backgroundColor = colorArr[randomNumber];
+}
+
+forwardButton.addEventListener("click", goforward);
 function goforward() {
   i = i + 1;
   image.src = images[i];
@@ -43,25 +52,7 @@ function goforward() {
     showpicnum.innerHTML = 0;
   }
 }
-autoforwardButton.addEventListener("click", autoforward);
-function autoforward() {
-  myVar = setInterval(goforward, 1000);myColor = setInterval(function () {
-    let colorArr = [
-      "brown",
-      "red",
-      "orange",
-      "green",
-      "blue",
-      "purple",
-      "yellow",
-      "pink",
-      "red",
-      "AQUAMARINE",
-    ];
-    let randomNumber = Math.floor(Math.random() * colorArr.length);
-    document.body.style.backgroundColor = colorArr[randomNumber];
-  }, 3000);
-}
+
 backButton.addEventListener("click", goback);
 function goback() {
   i = i - 1;
@@ -74,27 +65,21 @@ function goback() {
   }
 }
 
-autobackButton.addEventListener("click", autoback);
+autoforwardButton.addEventListener("click", autoforward);
+function autoforward() {
+  clearInterval(myAutobackward);
+  myAutoforward = setInterval(goforward,1000);
+}
 
+autobackButton.addEventListener("click", autoback);
 function autoback() {
-  myVar = setInterval(goback, 1000);
-  myColor = setInterval(function () {
-    let colorArr = [
-      "brown",
-      "red",
-      "orange",
-      "green",
-      "blue",
-      "purple",
-      "pink",
-    ];
-    let randomNumber = Math.floor(Math.random() * colorArr.length);
-    document.body.style.backgroundColor = colorArr[randomNumber];
-  }, 3000);
+  clearInterval(myAutoforward);
+  myAutobackward = setInterval(goback, 3000);
 }
 
 stopButton.addEventListener("click", stop);
 function stop() {
-  clearInterval(myVar);
-  clearInterval(myColor);
+  clearInterval(myAutoforward);
+  clearInterval(myAutobackward);
+
 }

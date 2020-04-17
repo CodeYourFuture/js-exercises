@@ -37,6 +37,7 @@ function timeIt() {
 }
 
 function setAlarm() {
+  clearInterval(SetIntAlarm);
   mySetTimeValue = Number(document.querySelector("#alarmSet").value);
   myTimeRemaining = document.querySelector("#timeRemaining");
   SetIntAlarm = setInterval(timeIt, 1000);
