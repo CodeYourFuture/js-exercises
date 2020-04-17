@@ -1,4 +1,4 @@
-https://alarm-clock-cyf.netlify.app/
+https://cyf-alexeybrambalov-alarm-clock.netlify.app/
 
 # Make an Alarm Clock
 

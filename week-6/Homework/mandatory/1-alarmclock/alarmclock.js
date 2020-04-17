@@ -10,7 +10,8 @@ function setAlarm() {
   setBtn.disabled = true
   let stopBtn = document.getElementById("stop")
   stopBtn.disabled = false
-
+  let pauseBtn = document.getElementById("pause")
+  pauseBtn.disabled = false
 
 
 
@@ -40,7 +41,7 @@ function setAlarm() {
   }
 
 
-  stop.addEventListener('click', () => {
+  stopBtn.addEventListener('click', () => {
     audio.pause();
 
     audio.src='';
@@ -49,9 +50,23 @@ function setAlarm() {
     clearInterval(setAlarm)
     clearInterval(setColor)
     document.body.style.backgroundColor = "white"
-
-   
+    pauseBtn.disabled = true;
   });
+
+  pauseBtn.addEventListener('click', () => {
+    if (setAlarm == -1){
+     
+      setAlarm = setInterval(countDown, 1000);
+      pauseBtn.innerText = "Pause"
+    }else{
+      pauseBtn.innerText = "Start"
+      clearInterval(setAlarm)
+      setAlarm = -1
+    }
+  
+
+
+  })
  
 
 }

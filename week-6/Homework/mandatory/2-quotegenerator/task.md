@@ -1,4 +1,4 @@
-https://quote-generator-cyf.netlify.app/
+https://cyf-alexeybrambalov-quotes.netlify.app/
 
 # Make a Quote Generator
 

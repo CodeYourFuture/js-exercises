@@ -1,4 +1,4 @@
-https://slideshow-cyf.netlify.app/
+https://cyf-alexeybrambalov-slideshow.netlify.app/
 
 # Challenge: "Image Carousel"
 

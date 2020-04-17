@@ -1,3 +1,5 @@
+https://cyf-alexeybrambalov-quotes.netlify.app/
+
 # Extra Task for Slideshow
 
 ## Optional: Add UI for delay time
