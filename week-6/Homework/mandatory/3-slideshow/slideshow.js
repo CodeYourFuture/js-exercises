@@ -14,6 +14,7 @@ const divPicture = document.querySelector(".picture");
 const divAutoBack = document.querySelector(".autoBack");
 const divAutoForward = document.querySelector(".autoForward");
 const stopButton = document.querySelector(".stopButton");
+const inputField = document.querySelector(".input");
 const backButton = document.createElement("button");
 const forwardButton = document.createElement("button");
 const autoForwardButton = document.createElement("button");
@@ -30,6 +31,15 @@ backButton.innerText = "Back";
 const img = document.createElement("img");
 divPicture.appendChild(img);
 
+let timeBetweenSlides = 2000;
+inputField.addEventListener("input", (e) => {
+  const userInput = parseInt(e.target.value);
+  if (userInput > 0) {
+    timeBetweenSlides = userInput;
+  }
+  console.log(timeBetweenSlides);
+});
+
 let index = 0;
 img.src = slides[index];
 let autoInterval = null;
@@ -42,14 +52,14 @@ autoForwardButton.addEventListener("click", function () {
     //true
     stopBtn();
   }
-  autoInterval = setInterval(forwardBtn, 2000);
+  autoInterval = setInterval(forwardBtn, timeBetweenSlides);
 });
 
 autoBackButton.addEventListener("click", function () {
   if (autoInterval) {
     stopBtn();
   }
-  autoInterval = setInterval(backBtn, 2000);
+  autoInterval = setInterval(backBtn, timeBetweenSlides);
 });
 
 stopButton.addEventListener("click", stopBtn);
