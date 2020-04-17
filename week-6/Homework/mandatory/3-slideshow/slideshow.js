@@ -22,26 +22,35 @@ const currentImg = document.querySelector("#current-img");
 
 let index = 0;
 currentImg.src = images[index];
+currentImg.alt = alts[index];
 
 function moveForward() {
   index = index + 1 < images.length ? index + 1 : 0;
   currentImg.src = images[index];
+  currentImg.alt = alts[index];
   console.log(index);
 }
 
 function moveBack() {
   index = index - 1 >= 0 ? index - 1 : images.length - 1;
   currentImg.src = images[index];
+  currentImg.alt = alts[index];
   console.log(index);
 }
 
+let autoInterval;
+
 const forwardBtn = document.querySelector("#forward-btn");
-forwardBtn.addEventListener("click", moveForward);
+forwardBtn.addEventListener("click", () => {
+  clearInterval(autoInterval);
+  moveForward();
+});
 
 const backBtn = document.querySelector("#back-btn");
-backBtn.addEventListener("click", moveBack);
-
-let autoInterval;
+backBtn.addEventListener("click", () => {
+  clearInterval(autoInterval);
+  moveBack();
+});
 
 const autoForwardBtn = document.querySelector("#auto-forward-btn");
 autoForwardBtn.addEventListener("click", () => {
