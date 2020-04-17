@@ -473,8 +473,8 @@ const quotes = [
 ];
 let quoteRefresh = newQuote();
 function newQuote() {
+  // A new quote is selected
   let randomQuote = pickFromArray(quotes);
-
   // Ensure new quote is selected
   // If it is new, print it out
   // If not, run function again
@@ -488,6 +488,7 @@ function newQuote() {
 
 refreshBtn.addEventListener('click', newQuote);
 
+// here it does ensure the AutoPlay is ON when it is checked
 checkbox.addEventListener('change', function() {
   if (checkbox.checked) {
     blockquote.querySelector('h2').innerHTML = 'Auto-Play : ON ';

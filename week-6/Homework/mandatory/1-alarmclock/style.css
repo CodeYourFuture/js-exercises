@@ -5,11 +5,42 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+body {
+  background-color: #E9F3F5;
+}
 
 #alarmSet {
   margin: 20px;
+  padding:5px; 
+  border:2px solid #ccc; 
+  border-radius: 10px;
+}
+div {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px #ce5937;
 }
 
 h1 {
   text-align: center;
+  padding: 20px;
+}
+.btn {
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #bad2e0;
+  color: black;
+  font-size: 16px;
+  margin: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+margin-left: 40px;
+  text-shadow: 2px 2px 2px #ce5937;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
 }

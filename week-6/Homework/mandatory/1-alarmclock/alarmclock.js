@@ -19,11 +19,11 @@ function pauseResumeAlarm() {
     clearInterval(ticker);
     playing = false;
     document.getElementById('pause').innerHTML = 'Resume Alarm';
-    document.getElementById('set').style.visibility = 'hidden';
-    document.getElementById('stop').style.visibility = 'hidden';
+    document.getElementById('set').disabled = true;
+    document.getElementById('stop').disabled = true;
   } else {
-    document.getElementById('set').style.visibility = 'visible';
-    document.getElementById('stop').style.visibility = 'visible';
+    document.getElementById('set').disabled = false;
+    document.getElementById('stop').disabled = false;
     playing = true;
     document.getElementById('pause').innerHTML = 'Pause Alarm';
     ticker = setInterval(countdownTimer, 1000);
