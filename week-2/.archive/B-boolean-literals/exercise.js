@@ -1,5 +1,5 @@
 /*
-  BOOLEAN  LITERALS
+  BOOLEAN LITERALS
   ----------------
   This program needs some variables to log the expected result.
   Add the required variables with the correct boolean values assigned.
