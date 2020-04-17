@@ -1,6 +1,6 @@
 function setAlarm() {
   let timeLeft = Number(document.getElementById("alarmSet").value);
-  const intervalID = window.setInterval(intervalCallback, 1000);
+  const intervalId = window.setInterval(intervalCallback, 1000);
 
   function intervalCallback() {
     displayTimeRemaining(timeLeft);
@@ -8,10 +8,14 @@ function setAlarm() {
       timeLeft -= 1;
     } else {
       playAlarm();
-      clearInterval(intervalID);
+      clearInterval(intervalId);
     }
   }
 }
+
+// function stopTimer() {
+//   clearInterval(intervalId);
+// }
 
 function displayTimeRemaining(timeLeft) {
   document.getElementById(
@@ -19,14 +23,14 @@ function displayTimeRemaining(timeLeft) {
   ).innerText = `Time Remaining: ${formatTime(timeLeft)}`;
 }
 
-function pad(num) {
-  return num < 10 ? "0" + num : num.toString();
-}
-
 function formatTime(numOfSecs) {
   let minsToDisplay = Math.floor(numOfSecs / 60);
   let secsToDisplay = numOfSecs % 60;
   return pad(minsToDisplay) + ":" + pad(secsToDisplay);
+}
+
+function pad(num) {
+  return num < 10 ? "0" + num : num.toString();
 }
 
 // DO NOT EDIT BELOW HERE
