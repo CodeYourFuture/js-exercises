@@ -1,4 +1,12 @@
-# Thinking like a Programmer
+# Tasks
+
+## 1. Install JSHint
+
+Using JSHint can make debugging a lot easier. If you haven't already you should install it now.
+
+https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint
+
+## 2. Thinking like a Programmer
 
 During these past weeks you have gotten a taste of what programming is: the various concepts, what it looks like in code and the way it's used. However, having written some code doesn't make you a programmer. Thinking like a programmer makes you into a programmer. But what does that mean, 'thinking like a programmer'?
 
