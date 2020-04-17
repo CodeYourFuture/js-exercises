@@ -6,7 +6,14 @@ function setAlarm() {
   audio.src = './alarmsound.mp3';
   let input = alarmSet.value;
   let setAlarm = setInterval(countDown, 1000);
-  
+  let setBtn = document.getElementById("set")
+  setBtn.disabled = true
+  let stopBtn = document.getElementById("stop")
+  stopBtn.disabled = false
+
+
+
+
   let setColor = setInterval(colorChange, 100)
 
   function countDown(){
@@ -38,7 +45,8 @@ function setAlarm() {
     audio.pause();
     alarmSet.value = ''
     audio.src='';
-
+    setBtn.disabled = false
+    stopBtn.disabled = true
     clearInterval(setAlarm)
     clearInterval(setColor)
     document.body.style.backgroundColor = "white"
