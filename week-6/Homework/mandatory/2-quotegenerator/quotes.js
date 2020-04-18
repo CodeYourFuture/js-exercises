@@ -490,3 +490,49 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+let divEL = document.createElement('div');
+divEL.className = 'quote-container';
+document.body.appendChild(divEL);
+divEL.innerHTML = `<em>Quote Generator</em>`
+// let pEl = document.querySelectorAll('p')
+// let classN = pEl.forEach(el => el.classList.add('para'));
+let btnEl = document.createElement('button');
+divEL.appendChild(btnEl);
+btnEl.innerHTML= "<strong>New quote</strong>";
+btnEl.className = 'btn';
+
+var tst = function MyqotGn(){
+let randomQuotes = Math.floor(Math.random() * quotes.length);
+divEL.innerHTML = `<p><span>&ldquo;</span> ${quotes[randomQuotes].quote}</p><p>${quotes[randomQuotes].author}</p>`;
+let pEl = document.querySelectorAll('p')
+let classN = pEl.forEach(el => el.classList.add('para'));
+let btnEl = document.createElement('button');
+divEL.appendChild(btnEl);
+btnEl.innerHTML= "<strong>New quote</strong>";
+btnEl.className = 'btn';
+btnEl.onclick = tst;
+
+}
+
+btnEl.onclick = tst;
+// const quotesShow = () => {
+	
+// 	location.reload();
+// }
+let check = document.getElementById("myCheck")
+
+
+let myFunction = check.addEventListener('click', function(){
+	
+	if(check.checked){
+		var myVar =	setInterval(function(){
+			tst();
+			if(check.checked == false){
+				clearInterval(myVar);
+
+			}
+		},2000);
+	  
+}
+
+}) 
