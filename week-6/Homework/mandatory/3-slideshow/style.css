@@ -1,1 +1,48 @@
 /** Write your CSS in here **/
+body{
+    background-color: rgb(15, 155, 124);
+  }
+
+  h1{
+      color: antiquewhite;
+  }
+  .title{
+      position: absolute;
+      right: 25%;
+    
+      margin: 35px 45px 25px 25px;
+  }
+  #slideBox {
+    position: absolute;
+    right: 30%;
+    bottom: 50%;
+    width: 800px;
+    border-width: 10px;
+    margin: 15px 5px 5px;
+  }
+  
+  img {
+    width: 100%;
+    border-style: groove;
+  }
+  
+  #buttons {
+    position: absolute;
+    right: 35%;
+    bottom: 40%;
+    font-size: 20px;  
+  }
+  
+  button {
+  background-color: rgb(241, 216, 106);
+  border-radius: 10px;
+  padding: 5px 20px;
+  
+  }
+  
+  section{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 10px;
+  }

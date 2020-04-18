@@ -1,1 +1,55 @@
 /** Write your CSS in here **/
+body{
+    background: rgb(245, 171, 33);
+  }
+  h3{
+      color:  rgb(245, 171, 33);
+      font-size: 24px;
+      text-align: end;
+  }
+  p{
+  
+    margin:100px 90px;
+    padding:30px 30px;
+    color:rgb(245, 171, 33);
+    align-self: flex-end;
+    margin:0px 20px 10px 0px;
+    
+  
+  }
+  #container{
+    background: white;
+    margin:100px 90px;
+    padding:40px 50px;
+    display:flex;
+    flex-direction: column;
+  
+  
+  }
+
+  #quoteBox{
+      background-color: white;
+      width: 95%;
+      position: center;
+      margin:30px
+  }
+  #content{
+    
+    align-content: center;
+    font-size: 35px;
+    background-color: white;
+    margin-right:10px;
+    align-self: flex-end;
+    margin:30px 20px 10px 10px;
+  }
+
+  
+  button{
+  
+    width: 250px;
+    height: 60px;
+    color:white;
+    align-self: end;
+    background-color:rgb(245, 171, 33);
+    margin:10px 220px 10px 10px;
+  }

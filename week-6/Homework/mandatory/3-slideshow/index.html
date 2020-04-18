@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+    <!-- <script src="slideshow.js"></script> -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,5 +13,20 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
+    <div class = "title">
+      <h1> Here are some of the banners I created for a website.</h1>
+    </div>
+    <div id="slideBox">
+      <img id="slide" alt="" />
+      <p id="image-number"></p>
+    </div>    
+    <div id="buttons">
+      <button id= "backBtn", type= "button"><strong>back</strong></button>
+      <button id= "forwardBtn", type= "button"><strong>forward</strong></button>
+      <button id= "stop", type= "button"><strong>stop</strong></button>
+      <button id= "autoBack", type= "button"><strong>autoback</strong></button>
+      <button id= "autoForward", type= "button"><strong>autoforward</strong></button>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>

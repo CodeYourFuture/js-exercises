@@ -1,9 +1,9 @@
 .centre {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  background-color: crimson;
+  padding: 40px;
+  margin: 250px;
+
 }
 
 #alarmSet {

@@ -20,7 +20,21 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+const quoteParagraph = document.createElement("p");
+const authorParagraph = document.createElement("h3");
+let quoteGeneratorButton = document.getElementById("myBtn");
 
+
+quoteGeneratorButton.addEventListener("click", function () {
+
+
+  const { quote, author } = pickFromArray(quotes);
+  quoteParagraph.innerHTML = "&ldquo;" + quote + "&rdquo;"; //adds Double quotes 
+  document.getElementById("quoteBox").appendChild(quoteParagraph)
+  
+  authorParagraph.textContent = author;
+  document.getElementById("quoteBox").appendChild(authorParagraph)
+}) 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
