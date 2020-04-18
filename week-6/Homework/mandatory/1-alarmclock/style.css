@@ -7,32 +7,19 @@
 }
 
 #alarmSet {
-  margin: 20px;
+  margin: 10% 25%;
+  width: 50%;
 }
 
 .buttons {
   margin: 20px auto;
   display: flex;
-  /* align-items: space-between; */
   justify-content: space-evenly;
 }
 
 h1 {
-  /* font-family: 'Ubuntu',
-    sans-serif; */
-  /* font-family: 'Roboto Slab',
-    serif; */
-  /* font-family: 'Pacifico',
-    cursive; */
-  /* font-family: 'Bangers',
-    cursive; */
   font-family: 'Fredoka One',
     cursive;
-
-
-
-
-
   text-align: center;
 }
 
@@ -41,7 +28,6 @@ body {
 }
 
 #timeRemaining {
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   font-size: 3rem;
 }
 
@@ -49,33 +35,22 @@ body {
 #pause,
 #stop {
   background-color: #F5E07D;
-  /* font-family: 'Pacifico',
-    cursive; */
   font-family: 'Fredoka One',
     cursive;
-
-
-
-
-  ;
-  /* border: 1px solid gray; */
+  border: 1px solid black;
+  box-shadow: 2px -1px grey;
   border-radius: 50%;
   height: 80px;
   width: 120px;
   margin: 10px;
 }
 
-
-/* #set,
-#stop {
-  background-color: #F1D041;
-}
-
-*/
-
 #pause {
-
   height: 80px;
   width: 80px;
-  border-radius: 50%;
+}
+
+#set:hover,
+#stop:hover {
+  background-color: #B5C07F;
 }
