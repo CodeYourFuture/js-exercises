@@ -22,6 +22,10 @@ body{
   margin: 20px;
   border: none;
   color: gray;
+  padding: 10px 10px;
+  background: none;
+  border: 1px solid rgb(61, 24, 60);
+  width: 8em;
 }
 
 h1 {
