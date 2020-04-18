@@ -11,6 +11,10 @@
   text-align: center;
 }
 
+#timeRemaining {
+  font-size: 3rem;
+}
+
 #alarmSet {
   margin: 10% 25%;
   padding: 2% 1%;
@@ -19,24 +23,28 @@
   border-radius: 10px;
 }
 
+.red-background {
+  background-color: #DE3D36;
+}
+
+.green-background {
+  background-color: #1B9D81;
+}
+
+body,
+.blue-background {
+  background-color: #1485B0;
+}
+
 .buttons {
   margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
 }
 
-body {
-  background-color: #1485b0;
-}
-
-#timeRemaining {
-  font-size: 3rem;
-}
-
 #set,
 #pause,
 #stop {
-  background-color: #f5e07d;
   border: 2px solid black;
   box-shadow: 1px 1px black;
   border-radius: 50%;
@@ -50,7 +58,15 @@ body {
   width: 80px;
 }
 
+.btn-color {
+  background-color: #f5e07d;
+}
+
 #set:hover,
 #stop:hover {
   background-color: #b5c07f;
+}
+
+.pasued {
+  background-color: #E75D1D;
 }

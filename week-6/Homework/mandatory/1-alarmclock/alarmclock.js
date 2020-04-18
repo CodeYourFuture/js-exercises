@@ -17,8 +17,8 @@ function setAlarm() {
       timeLeft -= 1;
     } else if (timeLeft === 0) {
       playAlarm();
-      clearInterval(intervalId);
       flashingIntervalId = window.setInterval(flashBackgroundColor, 500);
+      clearInterval(intervalId);
     }
     displayTimeRemaining(timeLeft);
   }
@@ -55,9 +55,9 @@ function pauseResumeTimer() {
   document.getElementById("pause").innerHTML = isPaused
     ? '<i class="fa fa-play"></i>'
     : '<i class="fa fa-pause"></i>';
-  document.getElementById("pause").style.backgroundColor = isPaused
-    ? "#E75D1D"
-    : "#F5E07D";
+  document.getElementById("pause").className = isPaused
+    ? "pasued"
+    : "btn-color";
 }
 
 function reset() {
@@ -66,19 +66,19 @@ function reset() {
   timeLeft = 0;
   displayTimeRemaining(timeLeft);
   pauseAlarm();
-  document.querySelector("body").style.backgroundColor = "#1485B0";
+  document.querySelector("body").className = "blue-background";
 }
 
 function flashBackgroundColor() {
   if (isBlueBackground) {
-    document.querySelector("body").style.backgroundColor = "#DE3D36";
+    document.querySelector("body").className = "red-background";
     isRedBackground = !isRedBackground;
     isBlueBackground = !isBlueBackground;
   } else if (isRedBackground) {
-    document.querySelector("body").style.backgroundColor = "#1B9D81";
+    document.querySelector("body").className = "green-background";
     isRedBackground = !isRedBackground;
   } else {
-    document.querySelector("body").style.backgroundColor = "#1485B0";
+    document.querySelector("body").className = "blue-background";
     isBlueBackground = !isBlueBackground;
   }
 }
