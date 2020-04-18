@@ -77,12 +77,14 @@ function reset() {
   document.querySelector("body").style.backgroundColor = "#1485B0";
 }
 
-// Pause & Resume when (Spacebar) key is pressed, Set Alarm when (Enter) key is pressed.
+// Pause & Resume when (Spacebar) key is pressed, Set Alarm when (Enter) key is pressed, Stop Alarm when (Escape) key is pressed.
 window.onkeydown = function (event) {
   if (event.keyCode === 32) {
     document.getElementById("pause").click();
   } else if (event.keyCode === 13) {
     document.getElementById("set").click();
+  } else if (event.keyCode === 27) {
+    document.getElementById("stop").click();
   }
 };
 
