@@ -13,7 +13,7 @@ function setAlarm() {
 
   intervalId = window.setInterval(intervalCallback, 1000);
   function intervalCallback() {
-    if (!isPaused && timeLeft > 0) {
+    if (!isPaused && timeLeft > 0 && timeLeft < 9999999999999999) {
       timeLeft -= 1;
     } else if (timeLeft === 0) {
       playAlarm();
@@ -21,6 +21,12 @@ function setAlarm() {
       flashingIntervalId = window.setInterval(flashBackgroundColor, 500);
     }
     displayTimeRemaining(timeLeft);
+  }
+
+  if (timeLeft < 0 || timeLeft > 999999999999999) {
+    alert("Number must be between 0 and 999999999999999");
+    reset();
+    document.getElementById("alarmSet").value = "";
   }
 }
 
