@@ -4,16 +4,15 @@ body{
   }
 
   h1{
-      color: antiquewhite;
+    color: antiquewhite;
   }
-  .title{
 
-      right: 25%;
-    
-      margin: 35px 45px 25px 25px;
+  .title{
+    right: 25%;
+    margin: 35px 45px 25px 25px;
   }
+
   #slideBox {
-    
     right: 30%;
     bottom: 50%;
     width: 800px;
@@ -27,7 +26,6 @@ body{
   }
   
   #buttons {
-    position: absolute;
     right: 35%;
     bottom: 40%;
     font-size: 20px;  
