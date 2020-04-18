@@ -32,17 +32,19 @@ prevBt.addEventListener('click',()=>{
 });
 
 playBt.addEventListener('click',()=>{
-    autoSlide(n = 0);
+   clearInterval(myVar);
+   autoSlide(n = 0);
 });
 
 stopBt.addEventListener('click',()=>{
     autoSlide(n = 1);
 });
 // autoplay function :
-
+var myVar;
 function autoSlide(){
-    var myVar = setInterval (function(){
+    myVar = setInterval (function(){
         if (n===0){  
+            console.log("start");
             if(counter >= imgAll.length  )return;
             slideShow.style.transition = "transform 0.4s ease-in-out";
             slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -50,6 +52,7 @@ function autoSlide(){
             repeat();
         }else{
             clearInterval(myVar);
+            console.log("stop");
         } 
     }, x);
       
