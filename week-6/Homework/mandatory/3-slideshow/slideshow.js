@@ -34,6 +34,7 @@ prevBt.addEventListener('click',()=>{
 playBt.addEventListener('click',()=>{
    clearInterval(myVar);
    autoSlide(n = 0);
+   
 });
 
 stopBt.addEventListener('click',()=>{
