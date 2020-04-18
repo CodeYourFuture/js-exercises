@@ -8,35 +8,39 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="container">
-      <h1>Image Carousel Simplest Demo</h1>
+      <div class="container">
+      <div class="slideshow">
+        <h1>Image Carousel Simplest Demo</h1>
       <div>
-        <img src="images/image1.jpg" id="images">
+        <img src="images/image1.jpg" id="images" class="images">
       </div>
-      <div id="showpicnum">
+      <div id="showpicnum" class="showpicnum">
       </div>
-      <div id="buttons">
-      <button id="autoback">
+      <div id="buttons" class="buttons">
+      <button id="autoback" class="fix_margin">
         <p>Auto Back</p>
       </button>
-      <button id="back"> 
+      <button id="back" class="fix_margin"> 
         <p>Back</p>
       </button>
-      <button id="stop">
+      <button id="stop" class="fix_margin">
         <p>Stop</p>
       </button>
-      <button id="forward">
+      <button id="forward" class="fix_margin">
         <p>Forward</p>
       </button>
-      <button id="autoforward">
+      <button id="autoforward" class="fix_margin">
         <p>Auto Forward</p>
       </button>
+     </div>
       </div>
-    </div>
+      </div>
     <script src="slideshow.js"></script>
-  </body>
+    </body>
 </html>

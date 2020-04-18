@@ -29,16 +29,19 @@ let autobackButton = document.querySelector("#autoback");
 let autoforwardButton = document.querySelector("#autoforward");
 let stopButton = document.querySelector("#stop");
 let backButton = document.querySelector("#back");
-let container = document.querySelector("#container")
+let container = document.querySelector(".slideshow")
 let i = 0;
 let myAutoforward = null;
 let myAutobackward = null;
 let myColor = null;
 
 function color() {
-  let colorArr = ["brown", "red", "orange", "green", "blue", "purple", "pink"];
+  let colorArr = ["MEDIUMAQUAMARINE","LIGHTSEAGREEN","DARKGREEN","AQUAMARINE","CADETBLUE","OLIVE","YELLOWGREEN","DARKGREEN","SPRINGGREEN"];
   let randomNumber = Math.floor(Math.random() * colorArr.length);
   container.style.backgroundColor = colorArr[randomNumber];
+  let colorArr2 = ["STEELBLUE","LIGHTSTEELBLUE","LIGHTBLUE","blue","CYAN","DEEPSKYBLUE"];
+  let randomNumber2 = Math.floor(Math.random() * colorArr2.length);
+  document.body.style.backgroundColor = colorArr2[randomNumber2];
 }
 
 forwardButton.addEventListener("click", goforward);
@@ -51,6 +54,7 @@ function goforward() {
     image.src = images[i];
     showpicnum.innerHTML = 0;
   }
+  myColor = setInterval(color,2000);
 }
 
 backButton.addEventListener("click", goback);
@@ -63,6 +67,7 @@ function goback() {
     image.src = images[i];
     showpicnum.innerHTML = i;
   }
+  myColor = setInterval(color,2000);
 }
 
 autoforwardButton.addEventListener("click", autoforward);
@@ -81,5 +86,5 @@ stopButton.addEventListener("click", stop);
 function stop() {
   clearInterval(myAutoforward);
   clearInterval(myAutobackward);
-
+  clearInterval(myColor);
 }

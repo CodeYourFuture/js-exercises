@@ -1,90 +1,81 @@
 body {
   background-color: #e76bad;
-  margin: auto;
+  margin: 5%;
+  font-family: 'Fredericka the Great', cursive;
 }
-#container {
+h1 {
+  display: flex;
+  font-size: 40px;
+  padding: 10px;
+  align-self: center;
+  font-family: 'Fredericka the Great', cursive;
+}
+.container{
+  width: 100%;
+}
+.slideshow {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 90%;
+  width: 100%;
   background-color: #f0fa62;
-  margin: 80px 80px;
-}
-h1 {
-  display: flex;
-  align-self: center;
-  font-family: "Indie Flower", cursive;
-}
-#images {
-  width: 50%;
-  margin-left: 25%;
+  height: fit-content;
+  padding: 10px 10px;
 }
 
-#showpicnum {
-  font-size: xx-large;
-  align-self: center;
+.images {
+  width: 80%;
+  margin-left:8%;
 }
-#buttons {
-  align-self: stretch;
-  font-family: "Indie Flower", cursive;
-  font-size: x-large;
-  width: 50%;
+
+.showpicnum {
+  font-size: 200%;
   margin-left: auto;
   margin-right: auto;
+  align-self: center;
+  text-align: center;
+}
+.buttons {
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
 }
 
-#autoback {
-  margin-left: 5%;
+.fix_margin{
+  display: inline-flexbox;
+  border-bottom: 50px solid pink;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 17%;
+  font-size:15px;
+  padding: 5px 5px; 
 }
 
-@media(min-width:2000px){
-  #buttons{
-    margin-left: 32%;
-    margin-right: auto;
-}
+
+@media(max-width:600px){
   body{
-  margin-right: 10%;
-  margin-left: 10%;
-  margin-top: 10%;
-}
-}
-@media(min-width:300px) and (max-width:600px){
-  body{
-    margin-right: 15%;
-    margin-top: 30%;
+    margin-top: 20%;
   }
-  #images{
-    width:60%;
+  .images{
+    width:90%;
+    margin: 5%;
   }
-  #buttons{
-    margin-left:26%;
-    font-size: small;
-    width: 10%;
+  .buttons{
+    font-size: large;
+    height: fit-content;
+    margin-left:0;
+  
 }
- div#buttons{
+.fix_margin{
+  font-size: small;
+  text-align: center;
+  padding: 5px 2px;
+  margin: auto;
+}
+ div.buttons{
    display: inline-flex;
  }
-
 }
-@media(min-width : 600px) and (max-width:1999px){
-  body{
-    margin-right: auto;
-    margin-top:auto;
-  }
-  #images{
-    width:60%;
-  } 
 
- div#buttons{
-   display: inline-flex;
- }
-
-  #buttons{
-    margin-left:auto;
-    margin-right: auto;
-    width: auto;
-    font-size:120%;
-  }
- 
-}
