@@ -1,12 +1,6 @@
-# Project - Part 2
+# Project - Part 3
 
-This project should consolidate knowledge from JS2
-
-This could include
-
-- DOM Manipulation
-- Working with an API
-- Get & Post Requests
+This project should consolidate knowledge from JS2 and push you to learn more about JavaScript
 
 ## Project Details
 
