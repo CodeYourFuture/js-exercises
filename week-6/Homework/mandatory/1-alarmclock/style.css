@@ -1,67 +1,78 @@
-body{
-  display: flex;
-  font-family: 'Rye', cursive;
-  font-size: xx-large;
-  background-color:#f06588 ;
-}
-.centre {
-  position: fixed;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.settime_font{
-  display: flex;
-  justify-content: space-evenly;
-}
+  body{
+    background-image: url(https://images.unsplash.com/photo-1528968620-57e0257ff360?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:55%; 
+    display: flex;
+    font-family: 'Rye', cursive;
+    font-size:200%;
+    background-color: lightblue;
+  }
+  html{
+    height: 100%;
+  }
+  .centre {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .alarmSetInput {
+    margin-bottom:5%;
+    margin-right: 5%;
+  }
 
-#alarmSet {
-  margin-bottom:5%;
-  margin-right: 5%;
-}
-
-#timeRemaining{
-  margin-bottom: 15%;
-  font-family: 'Rye', cursive;
-  font-size: 200%;
-}
-#buttons{
-  margin-top: 10%;
-}
-@media(max-width:800px){
-  #timeRemaining{
+  .alarm_remaining{
     font-size:x-large;
     display: inline-flex;
+    margin-bottom: 15%;
+    font-family: 'Rye', cursive;
   }
-  #buttons{
+
+  .myButtons{
     display: inline-flex;
     margin-top:5%; 
     font-size: medium; 
+  }
+  .border_radius{
+    display: inline-flexbox;
+    border-radius: 50%;
+    padding:2px;
+    font-size: 0.75rem;
+    background-color:lightpink;
+    margin-left: 1rem;
+    box-shadow: 5px 1px whitesmoke;
+
   }
   .settime_font{
     display: inline-flex;
     justify-content: space-around;
     font-size:medium;
+    color:rgb(14, 12, 12);
   }
+
   div.settime_font{
     display:inline-flexbox;
   }
-}
+  .fix_margin{
+    margin-right: 0 rem;
+  }
+
 @media(min-width:800px) and (max-width:1500px){
-  #timeRemaining{
+  .alarm_remaining{
     font-size:110%;
     margin-bottom: 3rem;
     display: inline-flex;
   }
-  #buttons{
-    display: inline-flex;
+  .myButtons{
+    display: inline-flexbox;
     margin-top:5%; 
     font-size: large; 
   }
   .settime_font{
-    display: inline-flex;
+    display: inline-flexbox;
     justify-content: space-around;
     font-size:large;
   }
@@ -71,15 +82,53 @@ body{
   div.settime_font{
     display:inline-flexbox;
   }
-  #set{
+  .fix_margin{
     margin-right: 0.5rem;
   }
-  #pause{
-    margin-right: 0.5rem;
-  }
-  #restart{
-    margin-right: 0.5rem;
+  .border_radius{
+    display: inline-flexbox;
+    border-radius: 50%;
+    padding:5px;
+    font-size: 1rem;
+    background-color:lightpink;
+    box-shadow: 5px 1px whitesmoke;
+
   }
 }
+@media(min-width:1500px){
+  .settime_font{
+    display: flex;
+    justify-content: initial;
+    padding-left: 4.5rem;
+    font-size: 1.5rem;
+    font-size: 25px;
 
-
+  }
+  
+  .alarmSetInput {
+    margin-bottom:5%;
+    margin-right: 5%;
+  }
+  
+  .alarm_remaining{
+    margin-bottom: 15%;
+    font-family: 'Rye', cursive;
+    font-size: 3rem;
+  }
+  .myButtons{
+    margin-top: 10%;
+    margin-left: 1.5rem;
+    font-size: 30px;
+  }
+  .fix_margin{
+    margin-right: 0rem;
+  }
+  .border_radius{
+    border-radius: 80%;
+    padding:10px;
+    font-size: 1.5rem;
+    background-color:lightpink;
+    margin-left: 1rem;
+    box-shadow: 5px 1px whitesmoke;
+  }
+}

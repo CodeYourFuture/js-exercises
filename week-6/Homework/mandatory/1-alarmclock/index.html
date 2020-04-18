@@ -15,18 +15,18 @@
 
   <body>
     <div class="centre">
-      <h1 id="timeRemaining">
+      <h1 id="timeRemaining" class="alarm_remaining">
         Time Remaining:00:00
       </h1>
       <div class="settime_font">
-        SetTime:&nbsp;
-        <input id="alarmSet" type="number" />
+        SetTime: &nbsp;
+        <input id="alarmSet" class="alarmSetInput" type="number" />
       </div>
-      <div id="buttons">
-        <button id="set" type="button">Set Alarm</button>
-        <button id="pause" type="button">Pause</button>
-        <button id="restart" type="button">Restart</button>
-        <button id="stop" type="button">Stop Alarm</button>
+      <div id="buttons" class="myButtons">
+        <button id="set" type="button" class="fix_margin border_radius">Set Alarm</button>
+        <button id="pause" type="button" class="fix_margin border_radius">Pause</button>
+        <button id="restart" type="button" class="fix_margin border_radius">Restart</button>
+        <button id="stop" type="button" class="border_radius">Stop Alarm</button>
       </div>
     </div>
     <script src="alarmclock.js"></script>
