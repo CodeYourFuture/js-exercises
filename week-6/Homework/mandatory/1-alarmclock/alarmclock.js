@@ -56,7 +56,7 @@ function pauseResumeTimer() {
     ? '<i class="fa fa-play"></i>'
     : '<i class="fa fa-pause"></i>';
   document.getElementById("pause").className = isPaused
-    ? "pasued"
+    ? "pasued-color"
     : "btn-color";
 }
 
