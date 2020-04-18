@@ -22,7 +22,7 @@ h1 {
 }
 
 body {
-  background-color: #75455D;
+  background-color: #AABBA6;
 }
 
 #timeRemaining {
@@ -33,7 +33,7 @@ body {
 #set,
 #pause,
 #stop {
-  background-color: #F46120;
+  background-color: #E5C627;
   /* border: 1px solid gray; */
   border-radius: 50%;
   height: 100px;

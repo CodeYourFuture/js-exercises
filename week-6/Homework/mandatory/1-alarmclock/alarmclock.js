@@ -2,6 +2,7 @@ let timeLeft;
 let isPaused = false;
 let intervalId;
 let isRedBackground = false;
+let isBlueBackground = false;
 let flashingIntervalId;
 
 function setAlarm() {
@@ -54,12 +55,17 @@ function pauseResumeTimer() {
 }
 
 function flashBackgroundColor() {
-  if (!isRedBackground) {
+  if (!isRedBackground && !isBlueBackground) {
     document.querySelector("body").style.backgroundColor = "#DE3D36";
-  } else {
-    document.querySelector("body").style.backgroundColor = "#15A0B4";
+    isRedBackground = !isRedBackground;
+  } else if (isRedBackground) {
+    document.querySelector("body").style.backgroundColor = "#1485B0";
+    isBlueBackground = !isBlueBackground;
+    isRedBackground = !isRedBackground;
+  } else if (isBlueBackground) {
+    document.querySelector("body").style.backgroundColor = "#1B9D81";
+    isBlueBackground = !isBlueBackground;
   }
-  isRedBackground = !isRedBackground;
 }
 
 function reset() {
