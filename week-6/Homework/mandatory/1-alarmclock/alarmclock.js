@@ -54,6 +54,15 @@ function pauseResumeTimer() {
     : "#F5E07D";
 }
 
+function reset() {
+  clearInterval(intervalId);
+  clearInterval(flashingIntervalId);
+  timeLeft = 0;
+  displayTimeRemaining(timeLeft);
+  pauseAlarm();
+  document.querySelector("body").style.backgroundColor = "#1485B0";
+}
+
 function flashBackgroundColor() {
   if (!isRedBackground && isBlueBackground) {
     document.querySelector("body").style.backgroundColor = "#DE3D36";
@@ -66,15 +75,6 @@ function flashBackgroundColor() {
     document.querySelector("body").style.backgroundColor = "#1B9D81";
     isBlueBackground = !isBlueBackground;
   }
-}
-
-function reset() {
-  clearInterval(intervalId);
-  clearInterval(flashingIntervalId);
-  timeLeft = 0;
-  displayTimeRemaining(timeLeft);
-  pauseAlarm();
-  document.querySelector("body").style.backgroundColor = "#1485B0";
 }
 
 // Pause & Resume when (Spacebar) key is pressed, Set Alarm when (Enter) key is pressed, Stop Alarm when (Escape) key is pressed.
