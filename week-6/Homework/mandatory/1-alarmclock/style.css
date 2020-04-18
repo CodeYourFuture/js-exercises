@@ -10,6 +10,42 @@
   margin: 20px;
 }
 
+.buttons {
+  margin: 20px auto;
+  display: flex;
+  /* align-items: space-between; */
+  justify-content: space-evenly;
+}
+
 h1 {
   text-align: center;
 }
+
+body {
+  background-color: #75455D;
+}
+
+#timeRemaining {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+}
+
+#set,
+#pause,
+#stop {
+  background-color: #F46120;
+  /* border: 1px solid gray; */
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 10px;
+}
+
+/* #set,
+#stop {
+  background-color: #F1D041;
+}
+
+#pause {
+  background-color: F1D041;
+} */

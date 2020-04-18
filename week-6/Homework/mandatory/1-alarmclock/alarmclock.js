@@ -1,10 +1,17 @@
+let timeLeft;
 let isPaused = false;
 let intervalId;
-let timeLeft;
+let isRedBackground = false;
+let flashingIntervalId;
 
 function setAlarm() {
-  timeLeft = document.getElementById("alarmSet").value;
+  reset();
+  clearInterval(intervalId);
+  clearInterval(flashingIntervalId);
+
+  timeLeft = Number(document.getElementById("alarmSet").value);
   displayTimeRemaining(timeLeft);
+
   intervalId = window.setInterval(intervalCallback, 1000);
   function intervalCallback() {
     if (!isPaused && timeLeft > 0) {
@@ -12,6 +19,7 @@ function setAlarm() {
     } else if (timeLeft === 0) {
       playAlarm();
       clearInterval(intervalId);
+      flashingIntervalId = window.setInterval(flashBackgroundColor, 500);
     }
     displayTimeRemaining(timeLeft);
   }
@@ -20,7 +28,7 @@ function setAlarm() {
 function displayTimeRemaining(time) {
   document.getElementById(
     "timeRemaining"
-  ).innerText = `Time Remaining: ${formatTime(time)}`;
+  ).innerText = `Time Remaining:\n ${formatTime(time)}`;
 }
 
 function formatTime(numOfSecs) {
@@ -36,25 +44,53 @@ function formatTime(numOfSecs) {
 function pad(num) {
   return num < 10 ? "0" + num : num.toString();
 }
-console.log(isPaused);
+
+function pauseResumeTimer() {
+  isPaused = !isPaused;
+  document.getElementById("pause").innerHTML = isPaused ? "Resume" : "Pause";
+  document.getElementById("pause").style.backgroundColor = isPaused
+    ? "#2CC484"
+    : "#F1D041";
+}
+
+function flashBackgroundColor() {
+  if (!isRedBackground) {
+    document.querySelector("body").style.backgroundColor = "#DE3D36";
+  } else {
+    document.querySelector("body").style.backgroundColor = "#15A0B4";
+  }
+  isRedBackground = !isRedBackground;
+}
+
+function reset() {
+  clearInterval(intervalId);
+  clearInterval(flashingIntervalId);
+  timeLeft = 0;
+  displayTimeRemaining(timeLeft);
+  pauseAlarm();
+  document.querySelector("body").style.backgroundColor = "#2CC484";
+}
+
+//  flashingBackgroundInterval = setInterval(() => {
+//   document.querySelector("body").style.backgroundColor = "red";
+// }, 500);
+//  clearInterval(flashingBackgroundInterval);
+
+// clearInterval(intervalId);
+// pauseAlarm();
 
 // DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
-    clearInterval(intervalId);
     setAlarm();
   });
   document.getElementById("stop").addEventListener("click", () => {
-    clearInterval(intervalId);
     pauseAlarm();
-    timeLeft = 0;
-    displayTimeRemaining(timeLeft);
+    reset();
   });
   document.getElementById("pause").addEventListener("click", () => {
-    pauseAlarm();
-    isPaused = !isPaused;
-    document.getElementById("pause").innerHTML = isPaused ? "Resume" : "Pause";
+    pauseResumeTimer();
   });
 }
 function playAlarm() {
