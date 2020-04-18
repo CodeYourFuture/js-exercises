@@ -48,7 +48,9 @@ function pad(num) {
 
 function pauseResumeTimer() {
   isPaused = !isPaused;
-  document.getElementById("pause").innerHTML = isPaused ? "Resume" : "Pause";
+  document.getElementById("pause").innerHTML = isPaused
+    ? '<i class="fa fa-play"></i>'
+    : '<i class="fa fa-pause"></i>';
   document.getElementById("pause").style.backgroundColor = isPaused
     ? "#E75D1D"
     : "#F5E07D";
