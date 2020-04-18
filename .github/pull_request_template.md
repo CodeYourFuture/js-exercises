@@ -6,5 +6,5 @@ Your Slack Name: ShahdAlhaj
 
 # Homework Details
 
-Module: javascript
+Module: js
 Week:1
