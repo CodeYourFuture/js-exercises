@@ -18,12 +18,25 @@
 // You DO NOT need to understand how this function works.
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-let quoteBtn = document.getElementById("myBtn").addEventListener("click", pickFromArray)
+// let div = document.querySelector(".whiteContainer")
+// div.appendChild(quoteBtn)
+ quoteLine = document.createElement("p");
+let authorLine = document.createElement("p");
+document.getElementById("myBtn").addEventListener("click", function () {
+  let { quote, author } = pickFromArray(quotes);
 
+  let div = document.querySelector(".whiteContainer")
+  quoteLine.textContent = quote;
+  div.appendChild(quoteLine)
+
+  authorLine.textContent = author;
+  div.appendChild(authorLine);
+})
 
 
 // A list of quotes you can use in your app.

@@ -38,3 +38,10 @@ body {
   color: white;
   font-size: 20px; 
 }
+
+p {
+  text-align: center;
+  padding: 50px;
+  font-size: 20px;
+  font-family: Cambria;
+}
