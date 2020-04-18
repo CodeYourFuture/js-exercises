@@ -10,12 +10,12 @@ I'd like you to search online around these topics
 
 Here are some to get started:
 _Synchronous and Asynchronous Transmission_
-https://www.youtube.com/watch?v=SLjjgjp2bAA
+https://www.youtube.com/watch?v=SLjjgjp2bAA : done
 
 _The Client Server Model | Clients and Servers_
-https://www.youtube.com/watch?v=L5BlpPU_muY
+https://www.youtube.com/watch?v=L5BlpPU_muY : done
 
 _How the Internet Works in 5 Minutes_
-https://www.youtube.com/watch?v=7_LPdttKXPc
+https://www.youtube.com/watch?v=7_LPdttKXPc : done
 
 Be sure to share what you find in your class channel!
