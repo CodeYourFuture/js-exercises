@@ -1,7 +1,6 @@
 let myLibrary = [];
 
 window.addEventListener("load", function (e) {
-  myLibrary = [];
   populateStorage();
   render();
 });
@@ -77,7 +76,7 @@ function render() {
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == 1) {
+    if (myLibrary[i].check == false) {
       readStatus = "Yes";
     } else {
       readStatus = "No";

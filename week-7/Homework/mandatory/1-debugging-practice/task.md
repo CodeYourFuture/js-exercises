@@ -15,5 +15,8 @@ My website should be able to:
 3. Error in console when you try to add a book
 4. It uses the title name as the author name.
 5. Delete button is broken
+6. When I add a book that I say I've read - it saves the wrong answer
 
-I think there are other some other small bugs in my code...but I'm lazy so I can't fix them all. I wish somebody would help me!
+I think there are other some other small bugs in my code...but I'm lazy so I can't fix them all.
+
+I wish somebody would help me!
