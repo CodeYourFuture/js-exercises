@@ -469,6 +469,11 @@ const quotes = [
     author: "Abraham Lincoln",
   },
   {
+  quote:
+      "think befor you speak.",
+    author: "NAder CYF",
+  },
+  {
     quote: "Change your thoughts and you change your world.",
     author: "Norman Vincent Peale",
   },
@@ -490,3 +495,19 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+let slectedQuote = document.querySelector("#quote")
+let authorName = document.querySelector("#author")
+let button = document.querySelector("#button")
+let quoteObjects = pickFromArray(quotes)
+
+slectedQuote.innerText = quoteObjects.quote;
+authorName.innerText = quoteObjects.author;
+button.addEventListener("click", function(){
+  quoteObjects = pickFromArray(quotes)
+  slectedQuote.innerText = quoteObjects.quote;
+  authorName.innerText = quoteObjects.author;
+});
+
+
+
