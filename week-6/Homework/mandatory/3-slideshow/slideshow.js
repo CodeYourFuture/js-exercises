@@ -9,6 +9,7 @@ const stopBt = document.getElementById('stop');
 const playBt = document.getElementById('play');
 
 // counter
+let x = 3000;
 let counter = 1; 
 const size = imgAll[0].clientWidth;
 slideShow.style.transform = 'translateX(' + (-size * counter) + 'px)';
@@ -50,7 +51,7 @@ function autoSlide(){
         }else{
             clearInterval(myVar);
         } 
-    }, 3000);
+    }, x);
       
 }
 
