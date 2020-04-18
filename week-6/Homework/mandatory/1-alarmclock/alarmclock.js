@@ -29,7 +29,7 @@ function setAlarm() {
 function displayTimeRemaining(time) {
   document.getElementById(
     "timeRemaining"
-  ).innerText = `Time Remaining:\n ${formatTime(time)}`;
+  ).innerText = `Time Remaining\n ${formatTime(time)}`;
 }
 
 function formatTime(numOfSecs) {

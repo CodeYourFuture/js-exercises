@@ -18,6 +18,21 @@
 }
 
 h1 {
+  /* font-family: 'Ubuntu',
+    sans-serif; */
+  /* font-family: 'Roboto Slab',
+    serif; */
+  /* font-family: 'Pacifico',
+    cursive; */
+  /* font-family: 'Bangers',
+    cursive; */
+  font-family: 'Fredoka One',
+    cursive;
+
+
+
+
+
   text-align: center;
 }
 
@@ -26,7 +41,7 @@ body {
 }
 
 #timeRemaining {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   font-size: 3rem;
 }
 
@@ -34,18 +49,33 @@ body {
 #pause,
 #stop {
   background-color: #F5E07D;
+  /* font-family: 'Pacifico',
+    cursive; */
+  font-family: 'Fredoka One',
+    cursive;
+
+
+
+
+  ;
   /* border: 1px solid gray; */
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 120px;
   margin: 10px;
 }
+
 
 /* #set,
 #stop {
   background-color: #F1D041;
 }
 
+*/
+
 #pause {
-  background-color: F1D041;
-} */
+
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
