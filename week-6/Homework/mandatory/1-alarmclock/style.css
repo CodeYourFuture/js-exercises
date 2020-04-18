@@ -54,17 +54,3 @@ body {
 #stop:hover {
   background-color: #b5c07f;
 }
-
-/* @media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
-  .centre {
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-  }
-
-  * {
-    font-size: 1rem;
-  }
-} */
