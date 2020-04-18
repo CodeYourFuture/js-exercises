@@ -70,7 +70,7 @@ function reset() {
 }
 
 function flashBackgroundColor() {
-  if (isBlueBackground && !isRedBackground) {
+  if (isBlueBackground) {
     document.querySelector("body").style.backgroundColor = "#DE3D36";
     isRedBackground = !isRedBackground;
     isBlueBackground = !isBlueBackground;
