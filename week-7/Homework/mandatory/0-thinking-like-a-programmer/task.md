@@ -1,10 +1,10 @@
 # Tasks
 
-## 1. Install JSHint
+## 1. Install ESLint
 
-Using JSHint can make debugging a lot easier. If you haven't already you should install it now.
+Using ESLint can make debugging a lot easier. If you haven't already you should install it now.
 
-https://marketplace.visualstudio.com/items?itemName=dbaeumer.jshint
+https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 
 ## 2. Thinking like a Programmer
 
