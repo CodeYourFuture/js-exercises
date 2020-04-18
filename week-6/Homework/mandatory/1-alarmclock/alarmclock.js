@@ -17,6 +17,7 @@ function setMinsAndSecs(timeEntry){
     document.getElementById("daytime").innerHTML = n}, 1000)
   
     let input = document.getElementById("alarmSet");
+
   function setAlarm() {
     clearInterval(setClear);
     time = input.value;
@@ -50,7 +51,16 @@ function setMinsAndSecs(timeEntry){
   clearInterval(setClear)
 })
 
-
+var setBtn = document.getElementById("alarmSet");
+setBtn.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("set").click();
+  }
+});
 
 // When you click the `Set Alarm` button the counter at the top of the screen should change to the number you entered in the `input` field. For example, if the `input` field says `10` then the title should say `Time Remaining: 00:10`.
 
