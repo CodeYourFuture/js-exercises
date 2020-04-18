@@ -70,15 +70,15 @@ function reset() {
 }
 
 function flashBackgroundColor() {
-  if (!isRedBackground && isBlueBackground) {
+  if (isBlueBackground && !isRedBackground) {
     document.querySelector("body").style.backgroundColor = "#DE3D36";
     isRedBackground = !isRedBackground;
-  } else if (isRedBackground) {
-    document.querySelector("body").style.backgroundColor = "#1485B0";
     isBlueBackground = !isBlueBackground;
+  } else if (isRedBackground) {
+    document.querySelector("body").style.backgroundColor = "#1B9D81";
     isRedBackground = !isRedBackground;
   } else {
-    document.querySelector("body").style.backgroundColor = "#1B9D81";
+    document.querySelector("body").style.backgroundColor = "#1485B0";
     isBlueBackground = !isBlueBackground;
   }
 }
