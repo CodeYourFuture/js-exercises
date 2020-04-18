@@ -23,8 +23,8 @@ function setAlarm() {
     displayTimeRemaining(timeLeft);
   }
 
-  if (timeLeft < 0 || timeLeft > 999999999999999) {
-    alert("Number must be between 0 and 999999999999999");
+  if (timeLeft <= 0 || timeLeft > 999999999999999) {
+    alert("Please enter a number between 1 and 999999999999999");
     reset();
     document.getElementById("alarmSet").value = "";
   }
