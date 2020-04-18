@@ -7,8 +7,6 @@ let isBlueBackground = true;
 
 function setAlarm() {
   reset();
-  clearInterval(intervalId);
-  clearInterval(flashingIntervalId);
 
   timeLeft = Number(document.getElementById("alarmSet").value);
   displayTimeRemaining(timeLeft);
@@ -88,6 +86,7 @@ function setup() {
   document.getElementById("stop").addEventListener("click", () => {
     pauseAlarm();
     reset();
+    document.getElementById("alarmSet").value = "";
   });
   document.getElementById("pause").addEventListener("click", () => {
     pauseResumeTimer();
