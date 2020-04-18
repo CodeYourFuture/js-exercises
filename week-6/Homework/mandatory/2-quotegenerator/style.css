@@ -1,1 +1,40 @@
 /** Write your CSS in here **/
+body {
+  background-color: hsl(39, 100%, 50%);
+}
+/* white rectangle box with all the text */
+
+/* .whiteContainer { - starting to modify to use flexbox instead of right, top etc. 
+   position: relative;
+  top: 140px;
+  right: 0;
+  width: 1000px; 
+  height: 400px;
+  margin: 75px 200px;
+  display: flex;
+  justify-content: center;
+  background-color: white; 
+}   */
+
+.whiteContainer {
+  position: relative;
+  top: 140px;
+  right: 0;
+  width: 1000px;
+  height: 400px;
+  margin: 0px 200px;
+  background-color: white;
+} 
+
+/* button */
+#myBtn {
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  width: 200px;
+  height: 60px;
+  border-radius: 5%;
+  background-color: hsl(39, 98%, 51%);
+  color: white;
+  font-size: 20px; 
+}
