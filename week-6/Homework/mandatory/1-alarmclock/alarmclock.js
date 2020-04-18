@@ -1,30 +1,54 @@
 
 
 function setMinsAndSecs(timeEntry){
-let convertToMin = Math.floor(timeEntry/60);
-let remainderSec = (timeEntry - convertToMin * 60);
-let stringMins = convertToMin.toString().padStart(2, "0")
-let stringSecs = remainderSec.toString().padStart(2, "0")
-console.log(convertToMin, remainderSec)
-return `${stringMins}:${stringSecs}`
-}
-
-
-function setAlarm() {
+  let convertToMin = Math.floor(timeEntry/60);
+  let remainderSec = (timeEntry - convertToMin * 60);
+  let stringMins = convertToMin.toString().padStart(2, "0")
+  let stringSecs = remainderSec.toString().padStart(2, "0")
+  return `${stringMins}:${stringSecs}`
+  }
   
-  let getValue = document.getElementById('alarmSet').value;
-  let timeRemain = document.getElementById('timeRemaining'); 
-  const timeSet = setInterval(function () {
-    
-    if (getValue > 0) {
-      getValue--;
-      timeRemain.innerText = "Time Remaining:" + setMinsAndSecs(getValue);
-    } else {
-      clearInterval(timeSet);
+  let time;
+  let setClear = -1
+  
+  setInterval(function myFunction() {
+    var d = new Date();
+    var n = d.toLocaleTimeString();
+    document.getElementById("daytime").innerHTML = n}, 1000)
+  
+    let input = document.getElementById("alarmSet");
+  function setAlarm() {
+    clearInterval(setClear);
+    time = input.value;
+    setClear = setInterval(decrementEverySecond, 1000);
+  }
+  
+  function decrementEverySecond() {
+    time--;
+    if (time == 0) {
+      clearInterval(setClear);
       playAlarm();
     }
-  }, 1000);
-}
+    document.getElementById("timeRemaining").innerText = setMinsAndSecs(time);
+  }
+  
+  let btnPause = document.querySelector('#pause')
+  btnPause.addEventListener('click',()=>{
+    if (setClear == -1){
+      document.querySelector('#pause').innerHTML= '&#10074 &#10074'
+      setClear = setInterval(decrementEverySecond, 1000);
+    }else{
+      document.querySelector('#pause').innerHTML= '&#9658'
+      clearInterval(setClear)
+      setClear = -1
+    }
+  })
+
+  let btnClear = document.querySelector('#stop')
+  btnClear.addEventListener('click',()=>{input.value = "";
+  document.getElementById("timeRemaining").innerText = "00:00";
+  clearInterval(setClear)
+})
 
 
 

@@ -1,15 +1,55 @@
+body{
+  background-image: url(https://images.unsplash.com/photo-1481189421626-9ab38078efc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIxMTIzfQ&auto=format&fit=crop&w=1500&q=80);
+  background-position: top; 
+ }
+
+#content{
+  display: flex;
+}
+
 .centre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 20%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 #alarmSet {
   margin: 20px;
+  border: none;
+  color: gray;
 }
 
 h1 {
   text-align: center;
 }
+
+#daytime{
+  font-size: 7rem;
+}
+
+#timeRemaining{
+  /* height: 250px;
+  width: 250px; */
+  color: rgb(97, 25, 85);
+  padding: 2rem 2rem;
+  align-self: center;
+  font-size: 5rem;
+}
+
+button{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  background: none;
+  width: 2em;
+  height: 2em;
+}
+
+#stop{
+  width: auto;
+}
+
