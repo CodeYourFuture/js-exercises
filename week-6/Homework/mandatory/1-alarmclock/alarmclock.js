@@ -1,35 +1,37 @@
-let ticker, colorInterval, message, secs, hours, minutes;
-let playing = true,
-  flashColor = 0;
-function setAlarm() {
+let ticker = -1, colorInterval, message, secs, hours, minutes;
+let playing = true, flashColor = 0;
+function setAlarm () {
+  clearInterval (ticker);
   // getting the html elements
-  secs = document.querySelector('#alarmSet').value;
-  message = document.querySelector('#timeRemaining');
+  secs = document.querySelector ('#alarmSet').value;
+  document.querySelector ('#alarmSet').value = '';
+  message = document.querySelector ('#timeRemaining');
   // if a negative number is entered , changing it to positive
   if (secs < 0) {
     secs *= -1;
   }
   // start the alarm countdown
 
-  ticker = setInterval(countdownTimer, 1000);
+  ticker = setInterval (countdownTimer, 1000);
 }
 
-function pauseResumeAlarm() {
+function pauseResumeAlarm () {
   if (playing) {
-    clearInterval(ticker);
+    clearInterval (ticker);
     playing = false;
-    document.getElementById('pause').innerHTML = 'Resume Alarm';
-    document.getElementById('set').disabled = true;
-    document.getElementById('stop').disabled = true;
+    document.getElementById ('pause').innerHTML = 'Resume Alarm';
+    document.getElementById ('set').disabled = true;
+    document.getElementById ('stop').disabled = true;
   } else {
-    document.getElementById('set').disabled = false;
-    document.getElementById('stop').disabled = false;
+    document.getElementById ('set').disabled = false;
+    document.getElementById ('stop').disabled = false;
     playing = true;
-    document.getElementById('pause').innerHTML = 'Pause Alarm';
-    ticker = setInterval(countdownTimer, 1000);
+    document.getElementById ('pause').innerHTML = 'Pause Alarm';
+    ticker = setInterval (countdownTimer, 1000);
   }
 }
-function lightning() {
+// ths function flashes the backgroundcolor 
+function lightning () {
   if (flashColor === 0) {
     color = 'red';
     flashColor = 1;
@@ -39,18 +41,18 @@ function lightning() {
   }
   document.body.style.backgroundColor = color;
 }
-function countdownTimer() {
+function countdownTimer () {
   secs--;
   //stop the countdown of the alarm and play the alarm
   if (secs <= 0) {
-    playAlarm();
-    clearInterval(ticker);
+    playAlarm ();
+    clearInterval (ticker);
     secs = 0;
-    colorInterval = setInterval(lightning, 200);
+    colorInterval = setInterval (lightning, 200);
   }
   // Calculate remaining time
-  hours = Math.floor(secs / 3600);
-  minutes = Math.floor((secs - hours * 3600) / 60);
+  hours = Math.floor (secs / 3600);
+  minutes = Math.floor ((secs - hours * 3600) / 60);
   secs = secs - hours * 3600 - minutes * 60;
   // updating the HTML and setting up the time format on the heading message to 00:00:00
 
@@ -67,28 +69,28 @@ function countdownTimer() {
 }
 // DO NOT EDIT BELOW HERE
 
-var audio = new Audio('alarmsound.mp3');
+var audio = new Audio ('alarmsound.mp3');
 
-function setup() {
-  document.getElementById('set').addEventListener('click', () => {
-    setAlarm();
+function setup () {
+  document.getElementById ('set').addEventListener ('click', () => {
+    setAlarm ();
   });
 
-  document.getElementById('stop').addEventListener('click', () => {
-    pauseAlarm();
+  document.getElementById ('stop').addEventListener ('click', () => {
+    pauseAlarm ();
   });
-  document.getElementById('pause').addEventListener('click', () => {
-    pauseResumeAlarm();
+  document.getElementById ('pause').addEventListener ('click', () => {
+    pauseResumeAlarm ();
   });
 }
 
-function playAlarm() {
-  audio.play();
+function playAlarm () {
+  audio.play ();
 }
 
-function pauseAlarm() {
-  audio.pause();
-  clearInterval(colorInterval);
+function pauseAlarm () {
+  audio.pause ();
+  clearInterval (colorInterval);
   document.body.style.backgroundColor = 'white';
 }
 window.onload = setup;
