@@ -1,67 +1,85 @@
 body {
   background-color: #0352fc;
+  margin-left: auto;
+  margin-top: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
 }
-#autogenerator{
-  background-color: #c8ccc9;
+html {
+  height: 100%;
+}
+.myAutogenerator {
   display: flex;
+  background-color: #c8ccc9;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-size: x-large;
-  margin-left: 25%;
-  margin-right: 25%;
-  font-family:'Rubik Mono One', sans-serif;
+  width: 60%;
+  margin: auto;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
-#container {
+.myContainer {
   background-color: #c8ccc9;
+  padding: 10px 10px;
   height: 20em;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  margin-right: auto;
+
   margin-top: 12em;
-  margin-left: 10em;
+  margin-left: auto;
   width: 80%;
+  height: fit-content;
 }
 
-#bookname {
+.myBookname {
   margin: 0;
   font-size: 35px;
   color: black;
   font-family: "Fredericka the Great", cursive;
 }
-#author {
+.myAuthor {
   justify-content: flex-end;
   align-self: flex-end;
   margin-right: 3em;
+  margin-bottom: 1.5em;
   font-size: 1em;
   color: red;
+  padding: auto;
   font-size: large;
   font-family: "Fredericka the Great", cursive;
 }
 
-#buttonContainer {
+.myButtonContainer {
   display: flex;
-  justify-content:center;
-  align-self:center;
-  position:relative;
-  margin-right: auto;
-  margin-left:15%;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  margin-right: 20%;
+  margin-left: 20%;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 .button {
   background: #53d9e0;
-  margin-right:70%;
-  font-family:'Rubik Mono One', sans-serif;
+  margin-right: 70%;
+  font-family: "Rubik Mono One", sans-serif;
 }
 .switch {
   position: relative;
   display: inline-block;
   width: 5%;
   margin-right: auto;
-  height:3rem;
+  margin-left: auto;
+  height: 3rem;
 }
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -73,9 +91,9 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color:rgb(194, 17, 17);
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: rgb(194, 17, 17);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -85,16 +103,16 @@ body {
   width: 50%;
   left: 4px;
   bottom: 4px;
-  background-color:rgb(2, 5, 2);
-  -webkit-transition: .4s;
-  transition: .4s;
+  background-color: rgb(2, 5, 2);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 input:checked + .slider {
   background-color: rgb(36, 33, 224);
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -106,38 +124,25 @@ input:checked + .slider:before {
 .slider.round {
   border-radius: 34px;
   width: 80px;
-  margin-right:300;
+  margin-right: 300;
 }
 
 .slider.round:before {
   border-radius: 60%;
 }
-@media(min-width:80px) and (max-width:1000px){
-  body{
-    margin-right: 30%;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: 30%;
+@media (max-width: 800px) {
+  .myContainer {
+    height: fit-content;
   }
-  #container{
-    height:fit-content;
-  }
-  div#buttonContainer{
-    display: inline-flexbox;
-  }
-  .button{
-    margin-left:50%;
+  .button {
+    margin-left: 50%;
     margin-right: 0;
     width: 30%;
     font-size: 11px;
   }
-  #autogenerator{
-    display:flexbox;
+  .myAutogenerator {
+    display: flexbox;
     font-size: 25px;
-    width: 80%;
-    margin-left:5em;
-    margin-right: 0rem;
-    margin-bottom: 0rem;
+    width: 70%;
   }
-
 }
