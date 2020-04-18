@@ -1,9 +1,9 @@
 let timeLeft;
-let isPaused = false;
 let intervalId;
+let flashingIntervalId;
+let isPaused = false;
 let isRedBackground = false;
 let isBlueBackground = true;
-let flashingIntervalId;
 
 function setAlarm() {
   reset();
@@ -78,14 +78,6 @@ function reset() {
   pauseAlarm();
   document.querySelector("body").style.backgroundColor = "#1485B0";
 }
-
-//  flashingBackgroundInterval = setInterval(() => {
-//   document.querySelector("body").style.backgroundColor = "red";
-// }, 500);
-//  clearInterval(flashingBackgroundInterval);
-
-// clearInterval(intervalId);
-// pauseAlarm();
 
 // DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");

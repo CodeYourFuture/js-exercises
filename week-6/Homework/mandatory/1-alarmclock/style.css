@@ -6,21 +6,24 @@
   transform: translate(-50%, -50%);
 }
 
+* {
+  font-family: 'Fredoka One',
+    cursive;
+  text-align: center;
+}
+
 #alarmSet {
   margin: 10% 25%;
+  padding: 2%;
   width: 50%;
+  border: 2px solid white;
+  border-radius: 10px;
 }
 
 .buttons {
   margin: 20px auto;
   display: flex;
   justify-content: space-evenly;
-}
-
-h1 {
-  font-family: 'Fredoka One',
-    cursive;
-  text-align: center;
 }
 
 body {
@@ -35,8 +38,6 @@ body {
 #pause,
 #stop {
   background-color: #F5E07D;
-  font-family: 'Fredoka One',
-    cursive;
   border: 2px solid black;
   box-shadow: 1px 1px black;
   border-radius: 50%;
