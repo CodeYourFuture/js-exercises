@@ -50,7 +50,7 @@ function pauseResumeTimer() {
   isPaused = !isPaused;
   document.getElementById("pause").innerHTML = isPaused ? "Resume" : "Pause";
   document.getElementById("pause").style.backgroundColor = isPaused
-    ? "#2CC484"
+    ? "#4EDC93"
     : "#F1D041";
 }
 
@@ -74,7 +74,7 @@ function reset() {
   timeLeft = 0;
   displayTimeRemaining(timeLeft);
   pauseAlarm();
-  document.querySelector("body").style.backgroundColor = "#2CC484";
+  document.querySelector("body").style.backgroundColor = "#1B9D81";
 }
 
 //  flashingBackgroundInterval = setInterval(() => {
