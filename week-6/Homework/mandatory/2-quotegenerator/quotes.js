@@ -491,19 +491,18 @@ const quotes = [
   },
 ];
 
+let myBtn = document.getElementById("btnChangeQoute");
 
-function showQuote()
-{
-  let myH1 = document.querySelector("#quote")
-  let myBtn = document.getElementById("btnChangeQoute");
+function showQuote() {
+  let myH1 = document.querySelector("#quote");
+  let myP = document.getElementById("author");
   let newQuote = pickFromArray(quotes);
-  myH1.innerText = newQuote.author;
+  myH1.innerText = newQuote.quote;
+  myP.innerText = "- " + newQuote.author;
+  // console.log("you called me ");
 }
 
 showQuote();
 
- myBtn.addEventListener("click", showQuote);
-  //event.preventDefault()
-
-
- 
+myBtn.addEventListener("click", showQuote);
+//event.preventDefault()

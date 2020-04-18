@@ -1,24 +1,42 @@
-    /** Write your CSS in here **/
+/** Write your CSS in here **/
 
-
-body{
-    background-color: #f3a83b;
-    display: flex;
-    align-items:center;
-    align-content: center;
-    padding: 20% 0 20% 0;
-     
+body {
+  background-color: #f3a83b;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 20% 0 20% 0;
 }
 
-main{
-    display: flex;
-    background-color: #fff;
-    width: 70%;
-    margin: 0 auto;
-   height: 400px;
-    align-items:center;
-    align-content: center;
- 
-   
-    
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 70%;
+  margin: 0 auto;
+  min-height: 300px;
+  align-items: center;
+  align-content: center;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #f3a83b;
+  font-weight: 300;
+}
+
+button {
+  align-self: flex-end;
+  background-color: #f3a83b;
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  margin: 20px 30px 10px 0;
+}
+
+p {
+  align-self: flex-end;
+  margin: 20px 30px 10px 0;
+  color: #f3a83b;
 }
