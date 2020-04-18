@@ -9,11 +9,18 @@
 </head>
 
 <body>
-  <!-- Write your HTML in here -->
   <div id="quote-area">
-    <h1><span id="quote-marks">&#8223</span> <span id="quote"></span> </h1>
+    <h2><span id="quote-marks">&#8223</span> <span id="quote"></span> </h2>
+    </br>
+    </br>
     <h5 id="author"></h5>
-    <button id="new-quote-btn" type="button">New quote</button>
+    <div class="controls">
+      <button id="new-quote-btn" type="button" class="control-item">New quote</button>
+      <label class="switch control-item">
+        <input id="auto-play" type="checkbox" />
+        <span class="slider round"></span>
+      </label>
+    </div>
   </div>
   <script src="quotes.js"></script>
 </body>

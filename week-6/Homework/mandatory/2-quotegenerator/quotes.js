@@ -1,3 +1,28 @@
+function displayRandomQuote(event) {
+  const randomQuoteObj = pickFromArray(quotes);
+  const quoteHolder = document.querySelector("#quote");
+  quoteHolder.textContent = randomQuoteObj.quote;
+  const quoteAuthor = document.querySelector("#author");
+  quoteAuthor.textContent = "- " + randomQuoteObj.author;
+  console.log(event);
+}
+
+const newQuoteBtn = document.querySelector("#new-quote-btn");
+newQuoteBtn.addEventListener("click", displayRandomQuote);
+
+let isAutoPlayOn = false;
+let autoPlayInterval = -1;
+
+const autoPlaySwitch = document.querySelector("#auto-play");
+autoPlaySwitch.addEventListener("input", () => {
+  isAutoPlayOn = !isAutoPlayOn;
+  if (isAutoPlayOn) {
+    autoPlayInterval = window.setInterval(displayRandomQuote, 1000);
+  } else {
+    clearInterval(autoPlayInterval);
+  }
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -20,18 +45,6 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-
-function displayRandomQuote(event) {
-  const randomQuoteObj = pickFromArray(quotes);
-  const quoteHolder = document.querySelector("#quote");
-  quoteHolder.textContent = randomQuoteObj.quote;
-  const quoteAuthor = document.querySelector("#author");
-  quoteAuthor.textContent = "- " + randomQuoteObj.author;
-  console.log(event);
-}
-
-const btn = document.querySelector("#new-quote-btn");
-btn.addEventListener("click", displayRandomQuote);
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
