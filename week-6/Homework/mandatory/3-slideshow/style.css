@@ -1,1 +1,10 @@
 /** Write your CSS in here **/
+img {
+  width: 500px;
+  height: 500px;
+}
+.number {
+  font-size: 32px;
+  color: blue;
+  margin-left: 30%;
+}
