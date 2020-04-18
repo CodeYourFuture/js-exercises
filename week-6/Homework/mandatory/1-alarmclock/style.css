@@ -14,7 +14,8 @@
 
 #alarmSet {
   margin: 10% 25%;
-  padding: 2%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   width: 50%;
   border: 2px solid white;
   border-radius: 10px;
