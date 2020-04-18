@@ -18,6 +18,9 @@ function setAlarm(){
   let body = document.querySelector('body')
   let set = inputField.value*1000
   let countdown = setInterval(timer, 1000)
+  let setRepeat = document.getElementById("set").addEventListener("click", () => {
+    location.reload()
+  });
 
     function timer() {
       let min = Math.floor((set % (1000 * 60 * 60)) / (1000 * 60));
@@ -27,13 +30,13 @@ function setAlarm(){
       set = set-1000
       if (set < 10000) {
         let red = setTimeout(function () {
-          time.style.color = 'white'
-          title.style.color = 'white'
-        }, 700)
-        let white= setTimeout(function white () {
           time.style.color = 'red'
           title.style.color = 'red'
         }, 300)
+        let white= setTimeout(function white () {
+          time.style.color = 'white'
+          title.style.color = 'white'
+        }, 600)
         if (set < 0) {
           clearTimeout(red)
           clearTimeout(white)
@@ -47,14 +50,20 @@ function setAlarm(){
         playAlarm(audioEl);
       }
     }
+  if (setRepeat) {
+    //alert('Please enter a new value then press "Set Alarm" button')
+    clearInterval(countdown)
+  }
+  if (set <= 0 || null) {
+    alert('Please enter a value bigger than 0')
+    clearInterval(countdown)
+  }
 }
 
 reset.addEventListener('click', ()=>{
   location.reload(true)
 })
 
-
-// DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
