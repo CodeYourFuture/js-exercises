@@ -493,6 +493,7 @@ const quotes = [
 ];
 
 let interval;
+let autoShowQuote = document.querySelector("#autoShow");
 
 function showQuote(){//This function will show one quote.
   let outAns = pickFromArray(quotes);
@@ -506,10 +507,10 @@ function showQuote(){//This function will show one quote.
 showQuote();//At the first run will call the function show quote.
 document.querySelector("#newBtn").addEventListener("click", ()=>{//if click on new quote button will call the show quote function.
   clearInterval(interval);
+  autoShowQuote.checked == true ? autoShowQuote.checked = false:{};
   showQuote();
 });
 
 function autoShowQuoteFunc(){//This function will check the check box, if its checked? will run the setInterval,if not will stop the setInterval. 
-  let autoShowQuote = document.querySelector("#autoShow");
   autoShowQuote.checked == true ? interval = setInterval(showQuote, 1000):clearInterval(interval);
 }
