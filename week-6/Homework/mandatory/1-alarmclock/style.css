@@ -37,8 +37,8 @@ body {
   background-color: #F5E07D;
   font-family: 'Fredoka One',
     cursive;
-  border: 1px solid black;
-  box-shadow: 2px -1px grey;
+  border: 2px solid black;
+  box-shadow: 1px 1px black;
   border-radius: 50%;
   height: 80px;
   width: 120px;
