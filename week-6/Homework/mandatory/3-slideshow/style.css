@@ -7,13 +7,13 @@ body{
       color: antiquewhite;
   }
   .title{
-      position: absolute;
+
       right: 25%;
     
       margin: 35px 45px 25px 25px;
   }
   #slideBox {
-    position: absolute;
+    
     right: 30%;
     bottom: 50%;
     width: 800px;
@@ -42,7 +42,7 @@ body{
   
   section{
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between;
       margin-top: 10px;
   }
