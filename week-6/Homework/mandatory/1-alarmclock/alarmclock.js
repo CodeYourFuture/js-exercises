@@ -77,6 +77,15 @@ function reset() {
   document.querySelector("body").style.backgroundColor = "#1485B0";
 }
 
+// Pause & Resume when (Spacebar) key is pressed, Set Alarm when (Enter) key is pressed.
+window.onkeydown = function (event) {
+  if (event.keyCode === 32) {
+    document.getElementById("pause").click();
+  } else if (event.keyCode === 13) {
+    document.getElementById("set").click();
+  }
+};
+
 // DO NOT EDIT BELOW HERE
 var audio = new Audio("alarmsound.mp3");
 function setup() {
