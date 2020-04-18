@@ -17,45 +17,30 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-//new code
-const outerDiv = document.createElement("canvas");
-const innerDiv = document.createElement("div");
-//this works from line 27 - 30
 
-outerDiv.appendChild(innerDiv)
-innerDiv.style.backgroundColor = "black"
-innerDiv.style.margin = "10px 10px 100px 100px"
-innerDiv.style.padding = "50px 50px 50px 50px"
+//p tags
+let quoteParagraph = document.createElement("p");
+let authorParagraph = document.createElement("p");
 
-document.body.appendChild(outerDiv)
-outerDiv.style.backgroundColor = "	#FED8B1"
-outerDiv.style.margin = "150px 250px 150px 250px"
-outerDiv.style.padding = "200px 250px 100px 250px"
-
-
-
-
-
-const quoteParagraph = document.createElement("p");
-const authorParagraph = document.createElement("p");
+//button
 document.getElementById("myBtn").addEventListener("click", function () {
-  const { quote, author } = pickFromArray(quotes);
-  //new code line 31 - 35
+  let { quote, author } = pickFromArray(quotes);
 
-  //code that works
-  quoteParagraph.textContent = quote;
-  document.body.appendChild(quoteParagraph)
+  //quote
+  let quoteContainer = document.getElementsByClassName("quoteContainer")[0]
+  quoteContainer.appendChild(quoteParagraph)
+  quoteParagraph.innerHTML = "“" + quote;
+  quoteParagraph.className = "quoteContent"
 
+  //author name
   authorParagraph.textContent = author;
-  document.body.appendChild(authorParagraph)
+  quoteContainer.appendChild(authorParagraph);
+  authorParagraph.className = "authorName"
 })
-//The aim of this file is to create two divs one orange and white
-//The white box will contain the quotation and a button
-//https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_div_create
-
 
 
 // A list of quotes you can use in your app.

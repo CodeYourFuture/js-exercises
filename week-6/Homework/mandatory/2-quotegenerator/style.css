@@ -1,1 +1,54 @@
 /** Write your CSS in here **/
+#container {
+  width: 1200px;
+  background-color: orange;
+  margin: auto;
+  margin-top: 50px;
+  height: 600px;
+  border-radius: 30px;
+}
+.quoteContainer {
+  position: relative;
+  top: 80px;
+  width: 1000px;
+  height: 400px;
+  margin-right: 30px;
+  margin-left: 200px;
+  background-color: white;
+  text-align: center;
+  padding-top: 200px;
+  width: 70%;
+  border-radius: 50px;
+}
+/*paragraph with quote*/
+.quoteContent {
+  margin-left: 160px;
+  margin-top: -160px;
+  font-size: 25px;
+  text-align: start;
+  text-justify: auto;
+  max-width: 900px;
+  color: hsl(39, 98%, 51%);
+}
+#myBtn {
+  position: absolute;
+  top: 320px;
+  right: 0;
+  width: 120px;
+  height: 60px;
+  margin-right: 60px;
+  margin-left: 150px;
+  background-color: hsl(39, 98%, 51%);
+  border-radius: 15px;
+}
+.authorName {
+  position: absolute;
+  top: 400px;
+  width: 200px;
+  max-height: 65px;
+  margin-left: 610px;
+  padding: 40px;
+  border: none;
+  margin-top: -190px;
+  color: hsl(39, 98%, 51%);
+}
