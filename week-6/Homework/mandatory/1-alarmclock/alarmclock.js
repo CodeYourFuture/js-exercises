@@ -6,32 +6,33 @@ function setMinsAndSecs(timeEntry){
   let stringMins = convertToMin.toString().padStart(2, "0")
   let stringSecs = remainderSec.toString().padStart(2, "0")
   return `${stringMins}:${stringSecs}`
-  }
+}
   
-  let time;
-  let setClear = -1
-  
-  setInterval(function myFunction() {
-    var d = new Date();
-    var n = d.toLocaleTimeString();
-    document.getElementById("daytime").innerHTML = n}, 1000)
-  
-    let input = document.getElementById("alarmSet");
+let time;
+let setClear = -1
 
-  function setAlarm() {
-    clearInterval(setClear);
-    time = input.value;
-    setClear = setInterval(decrementEverySecond, 1000);
-  }
+setInterval(function myFunction() {
+  let d = new Date();
+  let n = d.toLocaleTimeString();
+  document.getElementById("daytime").innerHTML = n}, 1000)
+
+let input = document.getElementById("alarmSet");
+
+function setAlarm() {
+  if (input.value > 0){
+  clearInterval(setClear);
+  time = input.value;
+  setClear = setInterval(decrementEverySecond, 1000)};
+}
   
-  function decrementEverySecond() {
-    time--;
-    if (time == 0) {
-      clearInterval(setClear);
-      playAlarm();
-    }
-    document.getElementById("timeRemaining").innerText = setMinsAndSecs(time);
+function decrementEverySecond() {
+  time--;
+  if (time == 0) {
+    clearInterval(setClear);
+    playAlarm();
   }
+  document.getElementById("timeRemaining").innerText = setMinsAndSecs(time)
+}
   
   let btnPause = document.querySelector('#pause')
   btnPause.addEventListener('click',()=>{
@@ -45,10 +46,10 @@ function setMinsAndSecs(timeEntry){
     }
   })
 
-  let btnClear = document.querySelector('#stop')
-  btnClear.addEventListener('click',()=>{input.value = "";
-  document.getElementById("timeRemaining").innerText = "00:00";
-  clearInterval(setClear)
+let btnClear = document.querySelector('#stop')
+btnClear.addEventListener('click',()=>{input.value = "";
+document.getElementById("timeRemaining").innerText = "00:00";
+clearInterval(setClear)
 })
 
 var setBtn = document.getElementById("alarmSet");
