@@ -16,6 +16,7 @@ function setAlarm() {
         playAlarm();
         clearInterval(timeCountDown);
         document.body.style.backgroundColor = "pink";
+        getTheValue = 0;
       }
     }
   }, 1000);
