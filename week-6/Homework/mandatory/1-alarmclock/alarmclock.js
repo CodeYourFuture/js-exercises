@@ -1,4 +1,7 @@
 let backgroundColors;
+let intervalId = -1;
+let inputValue = 0;
+let remainingTime = 0;
 
 function changeBackgroundColor() {
   backgroundColors = setInterval(changeColor, 500);
@@ -22,16 +25,12 @@ function fancyTimeFormat(time) {
   return newTime;
 }
 
-let intervalId = -1;
-let inputValue = 0;
-let remainingTime = 0;
-
 function setAlarm() {
   clearInterval(intervalId);
   let timeRemain = document.getElementById("timeRemaining");
   inputValue = document.getElementById("alarmSet").value;
   if (inputValue == "") {
-    setAlarm(alarm);
+    setAlarm();
   }
   timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputValue)}`;
 
@@ -49,9 +48,8 @@ function setAlarm() {
     document.querySelector("body").style.backgroundColor = "#0083B0";
     stopChangeBackgroundColor();
     timeRemain.textContent = `Time Remaining: 00:00`;
-    document.getElementById("alarmSet").value = "";
+    inputValue = 0;
     clearInterval(intervalId);
-    inputValue = "";
   });
 }
 function pauseResume() {
