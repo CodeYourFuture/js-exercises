@@ -1,8 +1,8 @@
-function setAlarm() {}
+// ## How the clock should work
 
-<<<<<<< Updated upstream
+
 // DO NOT EDIT BELOW HERE
-=======
+
 // When you click the `Set Alarm` button the counter at the top of the screen should change to the number you entered in the `input` field. For example, if the `input` field says `10` then the title should say `Time Remaining: 00:10`.
 
 // Every one second the title should count down by one.
@@ -22,6 +22,9 @@ function setAlarm(){
   let body = document.querySelector('body')
   let set = inputField.value*1000
   let countdown = setInterval(timer, 1000)
+  let setRepeat = document.getElementById("set").addEventListener("click", () => {
+    location.reload()
+  });
 
     function timer() {
       let min = Math.floor((set % (1000 * 60 * 60)) / (1000 * 60));
@@ -64,7 +67,6 @@ function setAlarm(){
 reset.addEventListener('click', ()=>{
   location.reload(true)
 })
->>>>>>> Stashed changes
 
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
@@ -75,11 +77,25 @@ input.addEventListener("keyup", function(event) {
 
 var audio = new Audio("alarmsound.mp3");
 
+  if (setRepeat) {
+    //alert('Please enter a new value then press "Set Alarm" button')
+    clearInterval(countdown)
+  }
+  if (set <= 0 || null) {
+    alert('Please enter a value bigger than 0')
+    clearInterval(countdown)
+  }
+}
+
+reset.addEventListener('click', ()=>{
+  location.reload(true)
+})
+
+var audio = new Audio("alarmsound.mp3");
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
   });
-
   document.getElementById("stop").addEventListener("click", () => {
     pauseAlarm();
   });
@@ -89,8 +105,10 @@ function playAlarm() {
   audio.play();
 }
 
+function playAlarm() {
+  audio.play();
+}
 function pauseAlarm() {
   audio.pause();
 }
-
-window.onload = setup;
+window.onload = setup

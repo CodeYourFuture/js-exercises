@@ -21,6 +21,21 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+let quotebox = document.querySelector("#paraDiv")
+let quoteParagraph = document.createElement("p");
+let authorParagraph = document.createElement("p")
+
+authorParagraph.style.textAlign = 'right';
+
+document.querySelector("#myBtn").addEventListener("click", function () {
+  const obj = pickFromArray(quotes);
+
+  paraDiv.appendChild(quoteParagraph)
+  quoteParagraph.textContent = obj.quote
+  paraDiv.appendChild(authorParagraph)
+  authorParagraph.textContent = obj.author
+})
+
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
@@ -490,3 +505,8 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+paraDiv.appendChild(quoteParagraph)
+quoteParagraph.textContent = quotes[0].quote
+paraDiv.appendChild(authorParagraph)
+authorParagraph.textContent = quotes[0].author

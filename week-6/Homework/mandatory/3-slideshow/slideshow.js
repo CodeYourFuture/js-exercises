@@ -1,6 +1,5 @@
 // Write your code here
-<<<<<<< Updated upstream
-=======
+
 let a = "https://alicerosehome.files.wordpress.com/2020/02/bikejpg.jpg?w=816&h=9999"
 let b = "https://alicerosehome.files.wordpress.com/2019/12/20191203_164312-1-copy.jpg?w=906"
 let c = "https://alicerosehome.files.wordpress.com/2019/12/img-20191219-wa0008-1.jpg?w=616"
@@ -45,6 +44,8 @@ backBtn.addEventListener("click", backwardImg);
 
 autoFrw.addEventListener("click", function() {
   let setFrwInt = setInterval(forwardImg, 1500);
+
+  let setFrwInt = setInterval(forwardImg, 1000);
   stopBtn.addEventListener("click", function() {
     clearInterval(setFrwInt);
   });
@@ -64,6 +65,10 @@ autoFrw.addEventListener("click", function() {
 
 autoBack.addEventListener('click', function() {
   let setBackInt = setInterval(backwardImg, 1500)
+});
+
+autoBack.addEventListener('click', function() {
+  let setBackInt = setInterval(backwardImg, 1000)
   stopBtn.addEventListener('click', function() {
     clearInterval(setBackInt)
   })
@@ -80,4 +85,3 @@ autoBack.addEventListener('click', function() {
     clearInterval(setBackInt)
   })
 })
->>>>>>> Stashed changes

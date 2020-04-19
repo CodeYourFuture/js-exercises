@@ -1,1 +1,64 @@
 /** Write your CSS in here **/
+/** Write your CSS in here **/
+body {
+    background-image: url("https://images.pexels.com/photos/259915/pexels-photo-259915.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#imageBox {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 90%;
+    height: 60%;
+    margin-top: 5%;
+    text-align: center;
+  }
+
+#pictures  {
+    text-align: center;
+    margin-top: 50;
+}
+#images  {
+  text-align: center;
+  margin-top: 50;
+  border-style: solid;
+  border-color: darkorange;
+  border-width: thick;
+  border-radius: 25px;
+}
+
+ #buttons {
+  margin-top: 750;
+}
+
+button {
+  background-color: #f997b0;
+  color: #4b030c;
+  font-weight: 500;
+  font-size: larger;
+}
+
+button {
+  display:inline-block;
+  padding:0.7em 1.7em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.2em;
+  box-sizing: border-box;
+  font-family:'Roboto',sans-serif;
+  font-weight:800;
+  color:#FFFFFF;
+  background-color:#5086eb;
+  box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+  text-align:center;
+  position:relative;
+}
+
+p {
+  color: rgb(28, 43, 2);
+  font-weight: 900;
+  font-size: 22px;
+  }
+  
