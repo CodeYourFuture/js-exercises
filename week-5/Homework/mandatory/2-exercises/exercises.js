@@ -16,6 +16,7 @@
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
 }
+var submit = document.getElById("button");
 
 /**
  *
