@@ -45,17 +45,41 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+
+
+
+// Declared a Global variable ( Array ) to hold all possible answers
+var posAnswr = ["It is certain.","It is decidedly so.","Without a doubt.","Yes - definitely.","You may rely on it.","As I see it, yes.","Most likely.","Outlook good.","Yes.","Signs point to yes.","Reply hazy, try again.","Ask again later.","Better not tell you now.","Cannot predict now.","Concentrate and ask again.","Don't count on it.",
+"My reply is no.","My sources say no.","Outlook not so good.","Very doubtful."]
+
+function shakeBall() {
+  console.log("The ball has shaken!") // whenever the function is called, this will be printed in cosole
+  const result = posAnswr[Math.floor(Math.random() * posAnswr.length)]; // selecting an answer from the global array by passing a random index
+  return result // returning the selected answer value
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall(); // asigning a random answer returned by shaekBall function call to the variable answer
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) { // declaring the function checkAnswer
+  if (posAnswr.indexOf(answer) <= 4) { // checking the index of the passed value in the global array if it's less than or equals 4 it will returen very positive 
+    return "very positive"
+  }
+  else if (posAnswr.indexOf(answer) >= 5 && posAnswr.indexOf(answer) <= 9) { // same here if the index of the value is in the range of 5 to 9 (included) will retuen positive
+    return "positive"
+  }
+  else if (posAnswr.indexOf(answer) >=10 && posAnswr.indexOf(answer) <= 14) { // again here if the index of the value is in the range of 10 to 14 (included) will retuen negative
+    return "negative"
+  }
+  else { // if non of the above is true then return very negative
+    return "very negative"
+  }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
