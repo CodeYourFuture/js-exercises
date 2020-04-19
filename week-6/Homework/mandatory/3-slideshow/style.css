@@ -1,0 +1,36 @@
+body {
+    background-color: #D8D2E1;
+}
+
+#natureImage {
+    height: 30em;
+    border: 0.3em inset black;
+    border-radius: 5%;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    padding: 2%;
+    border: 0.5em double black;
+    border-radius: 30%;
+    background-color: #6369D1;
+}
+
+.allButtons {
+    border: 0.1em inset black;
+    border-radius: 15%;
+    padding:1%;
+    margin: 2%;
+    background-color: #D8D2E1;
+}
+
+button {
+    border-radius: 20%;
+    background-color: #B88E8D;
+    color: black;
+    border: 0.1em inset black;
+    margin: 1em;
+}

@@ -1,28 +1,3 @@
-// DO NOT EDIT BELOW HERE
-
-// A function which will return one item, at
-// random, from the given array.
-//
-// Parameters
-// ----------
-// choices: an array of items to pick from.
-//
-// Returns
-// -------
-// One item of the given array.
-//
-// Examples of use
-// ---------------
-// pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
-
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +465,21 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+generateQuote(quotes);
+
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+
+function generateQuote() {
+  let targetH1 = document.querySelector(".quote");
+  let targetH2 = document.querySelector(".author");
+  let oneQuote = pickFromArray(quotes);
+  targetH1.textContent += `"${oneQuote.quote}"`;
+  targetH2.textContent += `-${oneQuote.author}-`;
+}
+
+let targetBtn = document.querySelector(".newQuote");
+targetBtn.addEventListener("click", () => {
+  location.reload();
+});

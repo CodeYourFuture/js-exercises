@@ -1,1 +1,40 @@
 /** Write your CSS in here **/
+body {
+    background-color: #FA7921;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 10%;
+    padding: 5%;
+    background-color:  #5BC0EB;
+}
+
+.quote {
+    color: rgb(235, 222, 222);
+    font-weight: 900;
+    text-shadow: 2px 2px black;
+    font-family: 'Indie Flower', cursive;
+}
+
+.author {
+    color: black;
+    margin-top: 5%;
+    margin-left: 25%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.newQuote {
+    background-color: #FA7921;
+    color: black;
+    font-weight: 500;
+    padding: 5px;
+    margin-left: 70%;
+    margin-top: 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
