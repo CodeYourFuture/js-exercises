@@ -6,10 +6,12 @@
 */
 
 function calculateSalesTax(price, taxPercent) {
-
-  return price + (0.2 * price);
+  const taxRate = 20 / 100;
+  const  afterTaxPrice = taxRate * price;
+  return finalPrice = price + afterTaxPrice;
 }
-
+const newPrice = calculateSalesTax(34);
+console.log(newPrice);
 /*
   CURRENCY FORMATTING
   ===================
@@ -20,29 +22,41 @@ function calculateSalesTax(price, taxPercent) {
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency(calculateSalesTax) {
+function formatCurrency(price) {
+   
+  let priceFormat = calculateSalesTax(price).toFixed(2);
+   return '£'+ priceFormat;
+   }
 
-  return calculateSalesTax.toFixed(2);
-  let totalPrice = `£ ${calculateSalesTax}`
-}
+  let priceFormat = formatCurrency(34);
+console.log(priceFormat);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18)
-test("calculateSalesTax function - case 2 works", calculateSalesTax(17.5) === 21)
-test("calculateSalesTax function - case 3 works", calculateSalesTax(34) === 40.8)
+test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18);
+test(
+  "calculateSalesTax function - case 2 works",
+  calculateSalesTax(17.5) === 21
+);
+test(
+  "calculateSalesTax function - case 3 works",
+  calculateSalesTax(34) === 40.8
+);
 
-test("formatCurrency function - case 1 works", formatCurrency(15) === "£18.00")
-test("formatCurrency function - case 2 works", formatCurrency(17.5) === "£21.00")
-test("formatCurrency function - case 3 works", formatCurrency(34) === "£40.80")
+test("formatCurrency function - case 1 works", formatCurrency(15) === "£18.00");
+test(
+  "formatCurrency function - case 2 works",
+  formatCurrency(17.5) === "£21.00"
+);
+test("formatCurrency function - case 3 works", formatCurrency(34) === "£40.80");

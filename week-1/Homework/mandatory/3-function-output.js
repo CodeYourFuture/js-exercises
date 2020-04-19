@@ -1,6 +1,6 @@
 // Returns a number less then 1
 function getNumber() {
-    return Math.random() * 10;
+    return Math.random() * 10; // this funtion returns a random number then multiplys by 10
 }
 
 // is used to join two or more strings
@@ -12,7 +12,7 @@ function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
 
-    return firstWord.concat(secondWord, thirdWord);
+    return `${firstWord} ${secondWord} ${thirdWord}`;
     
 }
 

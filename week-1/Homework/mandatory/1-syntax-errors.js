@@ -5,10 +5,9 @@ function addNumbers(a, b, c) {
 }
 console.log(addNumbers(3,6,10))
 
-function introduceMe(name, age){
-return '"Hello, my name is " + name + " " + "and I am" + " " + " "+ age + "years old"';
-}
 
+function introduceMe(name, age){
+        return "Hello, my name is " + name +  " and I am " +age + " years old"; }
 
 function getRemainder(a, b) {
     let remainder = a % b;
