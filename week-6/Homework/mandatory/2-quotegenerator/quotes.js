@@ -1,23 +1,24 @@
-function displayRandomQuote(event) {
-  const randomQuoteObj = pickFromArray(quotes);
-  const quoteHolder = document.querySelector("#quote");
-  quoteHolder.textContent = randomQuoteObj.quote;
-  const quoteAuthor = document.querySelector("#author");
-  quoteAuthor.textContent = "- " + randomQuoteObj.author;
-  console.log(event);
-}
-
 const newQuoteBtn = document.querySelector("#new-quote-btn");
 newQuoteBtn.addEventListener("click", displayRandomQuote);
+
+function displayRandomQuote() {
+  const randomQuoteObj = pickFromArray(quotes);
+
+  const quoteHolder = document.querySelector("#quote");
+  quoteHolder.textContent = randomQuoteObj.quote;
+
+  const quoteAuthorHolder = document.querySelector("#author");
+  quoteAuthorHolder.textContent = "- " + randomQuoteObj.author;
+}
 
 let autoPlayOn = false;
 let autoPlayInterval = -1;
 
-const autoPlaySwitch = document.querySelector("#auto-play");
-
 const autoPlayText = document.createElement("p");
-document.querySelector("#quote-area").appendChild(autoPlayText);
 autoPlayText.className = "auto-play-text";
+document.querySelector(".switch").appendChild(autoPlayText);
+
+const autoPlaySwitch = document.querySelector("#auto-play");
 
 autoPlaySwitch.addEventListener("input", () => {
   autoPlayOn = !autoPlayOn;
@@ -29,6 +30,14 @@ autoPlaySwitch.addEventListener("input", () => {
     autoPlayText.innerText = "";
   }
 });
+
+window.onkeydown = function (event) {
+  if (event.keyCode === 13) {
+    newQuoteBtn.click();
+  } else if (event.keyCode === 32) {
+    autoPlaySwitch.click();
+  }
+};
 
 // DO NOT EDIT BELOW HERE
 
@@ -240,7 +249,7 @@ const quotes = [
   {
     quote:
       "Certain things catch your eye, but pursue only those that capture the heart.",
-    author: " Ancient Indian Proverb",
+    author: "Ancient Indian Proverb",
   },
   {
     quote: "Believe you can and you’re halfway there.",
@@ -370,7 +379,7 @@ const quotes = [
   },
   {
     quote: "A person who never made a mistake never tried anything new.",
-    author: " Albert Einstein",
+    author: "Albert Einstein",
   },
   {
     quote:
@@ -511,7 +520,7 @@ const quotes = [
   },
   {
     quote: "Nothing is impossible, the word itself says, “I’m possible!”",
-    author: "–Audrey Hepburn",
+    author: "Audrey Hepburn",
   },
   {
     quote: "The only way to do great work is to love what you do.",

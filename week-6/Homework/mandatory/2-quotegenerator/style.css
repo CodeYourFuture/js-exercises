@@ -3,27 +3,31 @@ body {
     background-color: orange;
 }
 
-#quote-area {
+.container {
     max-width: 80vw;
     height: 80vh;
     margin: 10% auto;
-    padding: 20px;
+    padding: 2%;
     background: url(https://images.unsplash.com/photo-1501349800519-48093d60bde0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
+.quote-area {}
+
 h2 {
-    margin-left: 32%;
+    margin-left: 31%;
 }
 
 .controls {
     display: flex;
     align-self: flex-end;
-    position: absolute;
-    bottom: 10%;
+    position: relative;
+    bottom: 20px;
+    right: 20px;
 }
 
 .control-item {
@@ -36,18 +40,13 @@ h2 {
 }
 
 #author {
-    align-self: flex-end;
+    text-align: end;
 }
 
 .auto-play-text {
-    align-self: flex-end;
-    position: absolute;
-    bottom: 5%;
-    right: 10%
+    inline-size: max-content;
+    margin-top: 20px;
 }
-
-#quote {}
-
 
 /* The switch - the box around the slider */
 .switch {
