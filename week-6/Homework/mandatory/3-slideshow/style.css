@@ -1,4 +1,7 @@
-/** Write your CSS in here **/
+body {
+    background-color: peru;
+}
+
 .main-img {
     margin: auto;
 }
