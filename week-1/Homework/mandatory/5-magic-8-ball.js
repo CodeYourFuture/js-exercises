@@ -76,7 +76,7 @@ let answer = [
   "Very doubtful",
 ];
 let randomAnswer = answer[Math.floor(Math.random() * answer.length)];
-console.log(answer);
+console.log(randomAnswer);
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
@@ -85,17 +85,15 @@ console.log(answer);
 // - very negative
 
 function checkAnswer() {
-  const mood = randomAnswer;
-  if (mood[0]) {
+  if (answer.indexOf < 5) {
     console.log("very positive");
-  } else if (mood[1]) {
+  } else if (answer.indexOf < 10) {
     console.log("positive");
-  } else if (answer[2]) {
+  } else if (answer.indexOf < 15) {
     console.log("negative");
-  } else if (answer[3]) {
+  } else {
     console.log("very negative");
   }
-  return mood;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
