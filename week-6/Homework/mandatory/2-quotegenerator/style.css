@@ -42,6 +42,13 @@ body {
     align-self: flex-end;
 }
 
+.auto-play-text {
+    align-self: flex-end;
+    position: absolute;
+    bottom: 5%;
+    right: 10%
+}
+
 #quote {}
 
 

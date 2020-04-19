@@ -10,16 +10,23 @@ function displayRandomQuote(event) {
 const newQuoteBtn = document.querySelector("#new-quote-btn");
 newQuoteBtn.addEventListener("click", displayRandomQuote);
 
-let isAutoPlayOn = false;
+let autoPlayOn = false;
 let autoPlayInterval = -1;
 
 const autoPlaySwitch = document.querySelector("#auto-play");
+
+const autoPlayText = document.createElement("p");
+document.querySelector("#quote-area").appendChild(autoPlayText);
+autoPlayText.className = "auto-play-text";
+
 autoPlaySwitch.addEventListener("input", () => {
-  isAutoPlayOn = !isAutoPlayOn;
-  if (isAutoPlayOn) {
+  autoPlayOn = !autoPlayOn;
+  if (autoPlayOn) {
     autoPlayInterval = window.setInterval(displayRandomQuote, 1000);
+    autoPlayText.innerText = "Auto Play: ON";
   } else {
     clearInterval(autoPlayInterval);
+    autoPlayText.innerText = "";
   }
 });
 
