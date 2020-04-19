@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Slideshow</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="main-img">
-      <img id="current-img" src="" alt="" />
+<head>
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="main-img">
+    <img id="current-img" src="" alt="" />
+  </div>
+  <div>
+    <div class="buttons">
+      <button id="auto-back-btn" type="button">Auto Back</button>
+      <button id="back-btn" type="button">Back</button>
+      <button id="stop-btn" type="button">Stop</button>
+      <button id="forward-btn" type="button">Forward</button>
+      <button id="auto-forward-btn" type="button">Auto Forward</button>
     </div>
-    <div>
-      <div class="buttons">
-        <button id="auto-back-btn" type="button">Auto Back</button>
-        <button id="back-btn" type="button">Back</button>
-        <button id="stop-btn" type="button">Stop</button>
-        <button id="forward-btn" type="button">Forward</button>
-        <button id="auto-forward-btn" type="button">Auto Forward</button>
-      </div>
-    </div>
-    <div>
-      Time between slides for auto play:
-      <input id="input" type="number" placeholder="Seconds" />
-    </div>
-    <script src="slideshow.js"></script>
-  </body>
+  </div>
+  <div>
+    Time between slides for auto play:
+    <input id="input" type="number" placeholder="Seconds" />
+  </div>
+  <script src="slideshow.js"></script>
+</body>
+
 </html>
