@@ -1,1 +1,22 @@
+.centre {
+    position: absolute;
+   
+}
+#center {
+    top: 3cm;
+    padding-top: 3cm;
+    position: relative;
+    left: 100%;
+    align-content: center;
+}
+#timeRemaining{
+    top : 3010mm;
+    left: 4%;
+    color: rgb(6, 6, 70);
+    margin: 130px;
+}
+button{
+   padding-left: 1cm;
+    margin: 10px;
+}
 
