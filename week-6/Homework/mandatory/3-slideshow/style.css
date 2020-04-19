@@ -16,20 +16,21 @@
     width : 1130px;
     height: 500px;
 }
-#prev {
-    position: absolute;
-    top: 85%;
-    z-index: 10;
-    left: 30%;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
+
 #next {
     position: absolute;
     top: 85%;
     z-index: 10;
-    right: 35%;
+    right: 33%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#forward {
+    position: absolute;
+    top: 85%;
+    z-index: 10;
+    right: 40%;
     font-size: 30px;
     color: white;
     cursor: pointer;
@@ -38,7 +39,7 @@
     position: absolute;
     top: 85%;
     z-index: 10;
-    right: 55%;
+    right: 47%;
     font-size: 30px;
     color: white;
     cursor: pointer;
@@ -47,12 +48,50 @@
     position: absolute;
     top: 85%;
     z-index: 10;
-    right: 45%;
+    right: 54%;
     font-size: 30px;
     color: white;
     cursor: pointer;
 }
 
+#backward {
+    position: absolute;
+    top: 85%;
+    z-index: 10;
+    right: 61%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#prev {
+    position: absolute;
+    top: 85%;
+    z-index: 10;
+    right: 68%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#play-music {
+    position: absolute;
+    top: 85%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;  
+    color: white;
+    cursor: pointer;
+    
+}
+#pause_music {
+    position: absolute;
+    top: 85%;
+    z-index: 10;
+    right: 5%;
+    font-size: 30px;
+    color: white;  
+    cursor: pointer;
+    visibility: hidden; 
+}
 @media only screen and (min-width: 400px) {
     body{
         background-color: rgb(32, 32, 32);
