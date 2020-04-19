@@ -1,4 +1,5 @@
 function setAlarm() {
+  clearInterval(x);
   let inputField = document.querySelector("#alarmSet");
   let title = document.querySelector("#timeRemaining");
   let counter = inputField.value;
@@ -31,10 +32,6 @@ function setAlarm() {
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
-<<<<<<< HEAD
-
-=======
->>>>>>> week-6
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
@@ -43,17 +40,9 @@ function setup() {
     pauseAlarm();
   });
 }
-<<<<<<< HEAD
-
 function playAlarm() {
   audio.play();
 }
-
-=======
-function playAlarm() {
-  audio.play();
-}
->>>>>>> week-6
 function pauseAlarm() {
   audio.pause();
 }
