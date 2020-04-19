@@ -11,6 +11,7 @@ body {
     border-radius: 25px;
     margin: 1% 20%;
     align-content: center;
+    max-width: 60%;
 }
 
 .controls {
