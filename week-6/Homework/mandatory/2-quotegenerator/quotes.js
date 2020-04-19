@@ -2,9 +2,9 @@
     function randomQuotesPicker() {
       let theParagraph = document.getElementById('quoteHolder');
       let randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-      theParagraph.textContent = randomQuote.quote;
+    theParagraph.textContent = `"${randomQuote.quote}`;
       let theArthur = document.getElementById('authurHolder');
-      theArthur.textContent= randomQuote.author;
+      theArthur.textContent = `-${randomQuote.author}`;
     }
     let theButton = document.getElementById('btn');
     theButton.addEventListener('click', randomQuotesPicker)

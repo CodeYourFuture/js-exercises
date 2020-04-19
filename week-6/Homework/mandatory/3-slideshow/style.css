@@ -1,8 +1,31 @@
 /** Write your CSS in here **/
 body{
     padding: 20px;
+    background-color:skyblue;
 }
 #imageHolder{
      width:500px;
      
  }
+
+ #autoBackwBtn{
+   background-color: rgba(0, 191, 255, 0.913);
+   color: white;
+}
+#backwBtn{
+  background-color:green ;
+  color: white;
+}
+#stopBtn{
+ background-color:red ;
+  color: white;
+}
+#forwBtn{
+background-color:green ;
+  color: white;
+
+}
+#autoForwBtn{
+ background-color: rgba(0, 191, 255, 0.913);
+   color: white;
+}

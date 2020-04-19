@@ -11,16 +11,18 @@ function setAlarm() {
   /*3. Work out how to update the `Time Remaining` title every second set interval funtion will update the counter every second*/
   setInterval(finalCountDown,1000);
   function finalCountDown(){
+    --userInput
+
     if (userInput>10 && userInput<60) {
     
   /*2. When you have the input field value, set the title to the correct value*/
-    getTimeRemaing.textContent = `Time Remaining: 00:${--userInput}`;
-    }else if(userInput>0 && userInput <=10){
-    getTimeRemaing.textContent =`Time Remaining: 00:0${--userInput}`;
+      getTimeRemaing.textContent = `Time Remaining: 00:${userInput}`;
+    } else if (userInput>0 && userInput <=10) {
+      getTimeRemaing.textContent =`Time Remaining: 00:0${userInput}`;
     
   /*4. When the remaining time left is 0, play the alarm sound*/
-    }else if(userInput===0){
-    getTimeRemaing.textContent = `Time Remaining: 00:0${userInput}`;
+    } else if (userInput===0) {
+      getTimeRemaing.textContent = `Time Remaining: 00:0${userInput}`;
       audioFile.play();
     } 
     

@@ -1,3 +1,6 @@
+ body{
+   background-color: black;
+ }
 .centre {
   position: fixed;
   top: 50%;
@@ -12,4 +15,26 @@
 
 h1 {
   text-align: center;
+  color: yellow;
+}
+.disc{
+  color: white;
+}
+.timer{
+  color: red;
+}
+.btn-container{
+   position: absolute;
+   left: 27%;  
+}
+ 
+.setAlarm{
+  background-color: red;
+  color: yellow;
+  border:1px solid red;
+}
+.stopAlarm{
+  background-color: green;
+  color: yellow;
+  border: 1px solid green;
 }

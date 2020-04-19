@@ -1,8 +1,38 @@
 /** Write your CSS in here **/
 body{
   padding: 20px;
+   background-color: orange;
+    color: orange;
+  }
+.container{
+ width: 50%;
+ height: 35%;
+ background-color: white;
+ padding: 30px ;
+ position: absolute;
+ top: 30%;
+ left:25%;
 }
-
 #quoteHolder{
    height: 50px;
 }
+
+#btn{
+  
+   background-color: orange;
+   color: white;
+   border: 1px solid orange;
+   position: absolute;
+   top: 70%;
+   left:75% ;
+  } 
+#quoteHolder{
+  font-size: 25px;
+   
+}
+#authurHolder{
+   position: absolute;
+   top: 50%;
+   left:75% ;
+  }
+

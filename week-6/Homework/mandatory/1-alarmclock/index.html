@@ -14,14 +14,14 @@
 
   <body>
     <div class="centre">
-      <h1 id="timeRemaining">Time Remaining: 00:00</h1>
-      <div>
+      <h1 id="timeRemaining">Time Remaining:<span class="timer">00:00</span></h1>
+      <div class="disc">
         Set Time to:
         <input id="alarmSet" type="number" />
       </div>
-      <div>
-        <button id="set" type="button">Set Alarm</button>
-        <button id="stop" type="button">Stop Alarm</button>
+      <div class="btn-container">
+        <button class="setAlarm" id="set" type="button">Set Alarm</button>
+        <button class="stopAlarm" id="stop" type="button">Stop Alarm</button>
       </div>
     </div>
   </body>
