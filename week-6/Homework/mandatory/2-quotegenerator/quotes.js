@@ -25,7 +25,7 @@ function pickFromArray(choices) {
 
 // let div = document.querySelector(".whiteContainer")
 // div.appendChild(quoteBtn)
- quoteLine = document.createElement("p");
+let quoteLine = document.createElement("p");
 let authorLine = document.createElement("p");
 document.getElementById("myBtn").addEventListener("click", function () {
   let { quote, author } = pickFromArray(quotes);
