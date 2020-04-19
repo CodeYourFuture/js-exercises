@@ -1,17 +1,23 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
 function trimWord(word) {
-  return wordtrim();
+  
+  return word.trim();
 }
+console.log(trimWord("   Salut  "));
 
 function getWordLength(word) {
-  return "word".length()
+  
+  return word.length;
 }
+console.log(getWordLength("coucou"));
+
 
 function multiply(a, b, c) {
-  a * b * c;
-  return;
+  return a * b * c;
 }
+
+console.log(multiply(1,1,1));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
