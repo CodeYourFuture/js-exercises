@@ -45,22 +45,36 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  const message = "The ball has shaken!"
+  console.log(message)
+  return message
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+
+function checkAnswer() {
+  const answers = [
+    'very positive',
+    'positive',
+    'negative',
+    'very negative',
+  ]
+
+  return answers[Math.floor(Math.random() * 4)]
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };
