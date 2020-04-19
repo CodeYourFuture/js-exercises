@@ -23,7 +23,7 @@ const autoPlaySwitch = document.querySelector("#auto-play");
 autoPlaySwitch.addEventListener("input", () => {
   autoPlayOn = !autoPlayOn;
   if (autoPlayOn) {
-    autoPlayInterval = window.setInterval(displayRandomQuote, 1000);
+    autoPlayInterval = window.setInterval(displayRandomQuote, 6000);
     autoPlayText.innerText = "Auto Play: ON";
   } else {
     clearInterval(autoPlayInterval);
