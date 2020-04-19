@@ -15,11 +15,28 @@
 // ---------------
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
 // You DO NOT need to understand how this function works.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+let paragraph1 = document.createElement("p");
+let paragraph2 = document.createElement("p");
+document.querySelector("#quoteBox").appendChild(paragraph1);
+document.querySelector("#quoteBox").appendChild(paragraph2);
+//styling author (paragraph 2)
+paragraph2.style.textAlign = "right";
+paragraph2.style.marginRight = "40px";
+
+// when the page is loaded first quote appears
+(paragraph1.innerHTML =
+  "“Life isn’t about getting and having, it’s about giving and being.”"),
+  (paragraph2.innerHTML = "Kevin Kruse"),
+  //Quote generate button
+  document.querySelector("#generateBtn").addEventListener("click", function () {
+    paragraph1.innerHTML = "“" + pickFromArray(quotes).quote + "”";
+    paragraph2.innerHTML = pickFromArray(quotes).author;
+  });
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
