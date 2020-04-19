@@ -1,1 +1,22 @@
 /** Write your CSS in here **/
+img {
+  text-align: center;
+  width: 640px;
+  height: 427px;
+}
+h1 {
+  text-align: center;
+}
+.btn {
+  background: rgb(202, 198, 198);
+  padding: 1em;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.container {
+  text-align: center;
+}
+.buttons {
+  text-align: center;
+}

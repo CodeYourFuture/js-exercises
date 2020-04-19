@@ -1,1 +1,27 @@
 /** Write your CSS in here **/
+body {
+  background-color: orange;
+}
+.container {
+  position: relative;
+  width: 70%;
+  height: 40%;
+  color: orange;
+  background-color: white;
+  padding: 50px;
+  margin-top: 20%;
+}
+
+#myBtn {
+  position: absolute;
+  right: 5%;
+  background-color: orange;
+  color: white;
+  font-size: 20px;
+}
+
+p {
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: orange;
+}
