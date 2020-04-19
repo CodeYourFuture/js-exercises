@@ -63,34 +63,54 @@ const movies = [
 ];
 
 // create showMovies function
-
 function showMovies() {
   setTimeout(function () {
-    document.querySelector("#all-movies").innerText = "";
-
     movies.forEach((movie) => {
       let pElement = document.createElement("p");
-      document.querySelector("#all-movies").append(pElement);
       pElement.innerText = `${movie.title} by ${movie.director}`;
+      document.querySelector("#all-movies").appendChild(pElement);
     });
-    let allMovies = document.querySelector("#movies-number");
-    allMovies.textContent = movies.length;
+    let movieNumbers = document.querySelector("#movies-number");
+    movieNumbers.innerText = `${movies.length}`;
   }, 1000);
 }
-// create a new movie object for your favorite movie
 
-const newMovie = {
-  title: "the Irishman",
+// create a new movie object for your favorite movie
+const objectMovie = {
+  title: "The Irishman",
   director: "Martin Scorsese",
   type: "drama",
   haveWatched: true,
 };
-
-// create addMovies function
-function addMovies(movie, callback) {
+function addMovie(newMovie) {
   setTimeout(function () {
-    movies.push(movie);
-    callback();
-  }, 3000);
+    movies.push(newMovie);
+  }, 1000);
 }
+addMovie(objectMovie);
 showMovies();
+// create addMovies function
+
+let button = document.getElementById("form-button");
+button.addEventListener("click", clickButton);
+
+function clickButton(event) {
+  event.preventDefault();
+  let userMovie = {
+    title: document.getElementById("form-title").value,
+    director: document.getElementById("form-director").value,
+    genre: document.getElementById("form-genre").value,
+    // watched: function () {
+    //   let watched = document.getElementById("form-watched").value;
+    //   watched.toLowercase();
+    //   if (watched === "yes") {
+    //     return (watched = true);
+    //   } else if (watched === "no") {
+    //     return (watched = false);
+    //   }
+    // },
+  };
+
+  addMovies(userMovie, showMovies);
+  document.querySelector("form").reset();
+}
