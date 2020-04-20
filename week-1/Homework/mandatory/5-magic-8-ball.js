@@ -95,40 +95,6 @@ function checkAnswer(answer) {
   }
 }
 
-/*function checkAnswer(level) {
-  switch (level) {
-    case "It is certain.":
-    case "It is decidedly so.":
-    case "Without a doubt.":
-    case "Yes - definitely.":
-    case "You may rely on it.":
-      console.log("very positive");
-      break;
-    case "As I see it, yes.":
-    case "Most likely.":
-    case "Outlook good.":
-    case "Yes.":
-    case "Signs point to yes.":
-      console.log("positive");
-      break;
-    case "Reply hazy, try again.":
-    case "Ask again later.":
-    case "Better not tell you now.":
-    case "Cannot predict now.":
-    case "Concentrate and ask again.":
-      console.log("negative");
-      break;
-    case "Don't count on it.":
-    case "My reply is no.":
-    case "My sources say no.":
-    case "Outlook not so good.":
-    case "Very doubtful.":
-      console.log("very negative");
-      break;
-  }
-  return checkAnswer();
-}*/
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
