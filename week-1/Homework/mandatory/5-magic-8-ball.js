@@ -15,52 +15,55 @@ and have different levels of positivity or negativity.
 Below are the possible answers:
 
 ## Very positive
-It is certain.
-It is decidedly so.
-Without a doubt.
-Yes - definitely.
-You may rely on it.
+**/
+let arr = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes - definitely",
+  "You may rely on it",
 
-## Positive
-As I see it, yes.
-Most likely.
-Outlook good.
-Yes.
-Signs point to yes.
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
 
-## Negative
-Reply hazy, try again.
-Ask again later.
-Better not tell you now.
-Cannot predict now.
-Concentrate and ask again.
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
 
-## Very negative
-Don't count on it.
-My reply is no.
-My sources say no.
-Outlook not so good.
-Very doubtful.
-*/
-
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful",
+];
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  console.log(answer);
+  return answer;
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = "The ball has shaken!";
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  return "very positive";
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };

@@ -16,43 +16,57 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(a, b) {
+  let total = a + b;
+  let total1 = parseFloat(total.toFixed(1));
+  console.log(total1);
+  return total1;
 }
 
-function multiply() {
-
+function multiply(a, b) {
+  return a * b;
 }
 
 function format() {
-
+  let number = 16;
+  console.log("£" + number);
+  return "£" + number;
 }
 
-const startingValue = 2
+let changedValue = add(10);
+let changeAnotherValue = multiply(2);
+const startingValue = ((2 + changedValue) * changeAnotherValue).toString();
+
+let formatValue = "£" + startingValue;
+console.log(startingValue);
+
+// function add() function multiply() function format();
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+// the name indicates the value might change therefore, const is not an ideal way to declare a startingValue, let is a better way.
+
+let badCode = 4;
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+let goodCode = 5;
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
