@@ -1,16 +1,3 @@
-// ## How the clock should work
-
-
-// DO NOT EDIT BELOW HERE
-
-// When you click the `Set Alarm` button the counter at the top of the screen should change to the number you entered in the `input` field. For example, if the `input` field says `10` then the title should say `Time Remaining: 00:10`.
-
-// Every one second the title should count down by one.
-
-// When the `Time Remaining` reaches `00:00` the alarm should play a sound. You can make the sound happen by using `playAlarm()`.
-
-// You can stop the alarm sound by pressing the `Stop Alarm` button.
-
 let reset = document.querySelector('#reset')
 let input = document.querySelector('#alarmSet')
 
@@ -22,9 +9,6 @@ function setAlarm(){
   let body = document.querySelector('body')
   let set = inputField.value*1000
   let countdown = setInterval(timer, 1000)
-  let setRepeat = document.getElementById("set").addEventListener("click", () => {
-    location.reload()
-  });
 
     function timer() {
       let min = Math.floor((set % (1000 * 60 * 60)) / (1000 * 60));
@@ -37,7 +21,7 @@ function setAlarm(){
           time.style.color = 'red'
           title.style.color = 'red'
         }, 300)
-        let white= setTimeout(function white () {
+        let white = setTimeout(function white () {
           time.style.color = 'white'
           title.style.color = 'white'
         }, 600)
@@ -57,16 +41,11 @@ function setAlarm(){
   document.getElementById("set").addEventListener("click", () => {
     clearInterval(countdown)
   });
-
   if (set <= 0 || null) {
     alert('Please enter a value bigger than 0')
     clearInterval(countdown)
   }
 }
-
-reset.addEventListener('click', ()=>{
-  location.reload(true)
-})
 
 input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
@@ -74,18 +53,6 @@ input.addEventListener("keyup", function(event) {
     document.getElementById("set").click();
   }
 });
-
-var audio = new Audio("alarmsound.mp3");
-
-  if (setRepeat) {
-    //alert('Please enter a new value then press "Set Alarm" button')
-    clearInterval(countdown)
-  }
-  if (set <= 0 || null) {
-    alert('Please enter a value bigger than 0')
-    clearInterval(countdown)
-  }
-}
 
 reset.addEventListener('click', ()=>{
   location.reload(true)
@@ -100,11 +67,6 @@ function setup() {
     pauseAlarm();
   });
 }
-
-function playAlarm() {
-  audio.play();
-}
-
 function playAlarm() {
   audio.play();
 }

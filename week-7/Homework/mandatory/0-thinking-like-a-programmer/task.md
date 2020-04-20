@@ -26,12 +26,14 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
-<!-- Write your answer here -->
+The most important skill for a programmer is the problem-solving skills. As a programmer we will come across many problems
+and in that situation which makes the most difference will be the problem-solving skills. Practising is the key to get that skill.
 
 ## 2. When trying to solve a challenge, what should you do first?
 
-<!-- Write your answer here -->
+The first thing to do is understanding the problem. There are ways to do that like visualising the problem by drawing. doodling etc or explaining it to a rubber duck.
 
 ## 3. What should you do if you get stuck?
 
-<!-- Write your answer here -->
+Everyone can get stuck but only the ones who do not give up can go ahead. Be curious about the bugs/errors and try to solve them one by one.
+
