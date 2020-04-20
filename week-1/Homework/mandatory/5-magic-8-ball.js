@@ -101,45 +101,13 @@ let answer;
 // - negative
 // - very negative
 function checkAnswer() {
-  if (number === 1) {
+  if (number < 6) {
     return "verr positive";
-  } else if (number === 2) {
-    return "verr positive";
-  } else if (number === 3) {
-    return "verr positive";
-  } else if (number === 4) {
-    return "verr positive";
-  } else if (number === 5) {
-    return "verr positive";
-  } else if (number === 6) {
+  } else if (number < 11) {
     return "positive";
-  } else if (number === 7) {
-    return "positive";
-  } else if (number === 8) {
-    return "positive";
-  } else if (number === 9) {
-    return "positive";
-  } else if (number === 10) {
-    return "Positive";
-  } else if (number === 11) {
+  } else if (number < 16) {
     return "negative";
-  } else if (number === 12) {
-    return "negative";
-  } else if (number === 13) {
-    return "negative";
-  } else if (number === 14) {
-    return "negative";
-  } else if (number === 15) {
-    return "negative";
-  } else if (number === 16) {
-    return "verr negative";
-  } else if (number === 17) {
-    return "verr negative";
-  } else if (number === 18) {
-    return "verr negative";
-  } else if (number === 19) {
-    return "verr negative";
-  } else if (number === 20) {
+  } else if (number < 21) {
     return "verr negative";
   }
 }
@@ -149,7 +117,7 @@ function checkAnswer() {
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };
