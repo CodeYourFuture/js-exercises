@@ -36,14 +36,14 @@ let describe = document.querySelector("#exampleTextarea");
 let emailInput = document.querySelector("#exampleInputEmail1");
 submit.addEventListener("click", function () {
   event.preventDefault();
-  if (yourName.value.length === 0) {
+  if (emailInput.value.length === 0 || !emailInput.value.includes("@")) {
+    emailInput.style.backgroundColor = "red";
+    return false;
+  } else if (yourName.value.length === 0) {
     yourName.style.backgroundColor = "red";
     return false;
   } else if (describe.value.length === 0) {
     describe.style.backgroundColor = "red";
-    return false;
-  } else if (emailInput.value.length === 0 || !emailInput.value.includes("@")) {
-    emailInput.style.backgroundColor = "red";
     return false;
   } else {
     alert("Thank you for filling out the form");
