@@ -5,7 +5,11 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
+function calculateSalesTax(price) {
+    let taxRate = 20 / 100;
+    let salesTax = price * taxRate;
+    return salesTax + price;
+}
 
 /*
   CURRENCY FORMATTING
@@ -17,19 +21,21 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(price) {
+    return `£` + calculateSalesTax(price).toFixed(2);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
-  let status;
-  if (expr) {
-      status = "PASSED"
-  } else {
-      status = "FAILED"
-  }
+    let status;
+    if (expr) {
+        status = "PASSED"
+    } else {
+        status = "FAILED"
+    }
 
-  console.log(`${test_name}: ${status}`)
+    console.log(`${test_name}: ${status}`)
 }
 
 test("calculateSalesTax function - case 1 works", calculateSalesTax(15) === 18)
