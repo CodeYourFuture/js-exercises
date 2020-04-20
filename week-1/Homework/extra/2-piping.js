@@ -16,26 +16,32 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(num1 ,num2) {
+const sum=(num1+num2);
+return sum;
+}
+
+function multiply(num1 ,num2) {
+  const mul=(num1*num2);
+  return  mul;
+}
+
+function format(number) {
+  var string =num.toString();
+  return("£"+string);
 
 }
 
-function multiply() {
-
-}
-
-function format() {
-
-}
-
-const startingValue = 2
+const startingValue = 2;
+var res=startingValue+=10;
+var number=res*2;
 
 // Why can this code be seen as bad practice? Comment your answer.
 let badCode = 
 
 /* BETTER PRACTICE */
 
-let goodCode = 
+//let goodCode = 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
