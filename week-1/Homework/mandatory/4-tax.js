@@ -7,8 +7,8 @@
 
 function calculateSalesTax(price, taxPercent) {
   const taxRate = 20 / 100;
-  const  afterTaxPrice = taxRate * price;
-  return finalPrice = price + afterTaxPrice;
+  const afterTaxPrice = taxRate * price;
+  return (finalPrice = price + afterTaxPrice);
 }
 const newPrice = calculateSalesTax(34);
 console.log(newPrice);
@@ -23,12 +23,11 @@ console.log(newPrice);
 */
 
 function formatCurrency(price) {
-   
   let priceFormat = calculateSalesTax(price).toFixed(2);
-   return '£'+ priceFormat;
-   }
+  return "£" + priceFormat;
+}
 
-  let priceFormat = formatCurrency(34);
+let priceFormat = formatCurrency(34);
 console.log(priceFormat);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
