@@ -55,12 +55,12 @@ function shakeBall() {
 
 let answer = shakeBall();
 
-// When checking the answer, we should tell someone if the answer is
-// let message = ["very positive", "positive", "negative", "very negative"];
+//When checking the answer, we should tell someone if the answer is
+let message = ["very positive", "positive", "negative", "very negative"];
 
 function checkAnswer() {
   if (possibleAnswers.indexOf(answer) >= 4) {
-    return "very positive";
+    return message[0];
   }
 }
 /* ======= TESTS - DO NOT MODIFY ===== */
