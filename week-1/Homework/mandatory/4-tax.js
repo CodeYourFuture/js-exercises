@@ -23,7 +23,12 @@ console.log(calculateSalesTax(15));
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function myMethod(number) {
+  var myNumber = number.toFixed(2);
+  var sign = "£";
+  var result = sign + myNumber;
+  return result;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

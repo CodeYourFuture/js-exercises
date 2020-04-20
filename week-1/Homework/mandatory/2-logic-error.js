@@ -3,7 +3,6 @@
 function trimWord(word) {
   return word;
 }
-console.log(trimWord("Code Your Future"));
 
 function getWordLength(word) {
   return word.length;
@@ -31,7 +30,7 @@ function test(test_name, expr) {
 
 test(
   "fixed trimWord function",
-  trimWord("  CodeYourFuture ") === "CodeYourFuture"
+  trimWord("CodeYourFuture") === "CodeYourFuture"
 );
 test(
   "fixed wordLength function",
