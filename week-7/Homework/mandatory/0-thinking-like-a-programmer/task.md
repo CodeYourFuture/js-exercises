@@ -26,12 +26,14 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
-<!-- Write your answer here -->
+<!-- I think the most important quality for a programmer is to have problem-solving skills. A programmer should be able define the problems first. Then after clarifying the problems next step would be to define the solutions and taking steps. A programmer should be a good problem solver. We need to understand the problem first. We need to build a framework or structure before handling the problem so that we can visualize the problem. We can not do anything without understanding the problem entirely. Another useful technique is to speak out loud and trying to tell the problem ourselves. Like speaking to a rubber ducky, an imaginary friend listening to us.  -->
 
 ## 2. When trying to solve a challenge, what should you do first?
 
-<!-- Write your answer here -->
+<!-- First we need to understand the challenge. Then we need a plan which includes steps we will be taking. Next step is to divide the big problem into smaller chunks so that we can handle each small problem at each time. Reducing the problem to something easier or simpler makes problem solving easier. These small problems is much manageable to solve than solving the whole big problem. If we can solve the simpler task we can go on with the complex one. We need to identify patterns and trends within problems as well. Then last of all we need to combine the dots.   -->
 
 ## 3. What should you do if you get stuck?
 
-<!-- Write your answer here -->
+<!-- First one is debugging. We need to go step by step through our solution and trying to find what went wrong with the code. We need to see if the code is doing what I want.
+Second one is Reassesing. This means we need to reconsider what is the problem. We can give a break and think again what we are being asked. Sometimes dealing with too much detail may cause tunnel viewing. We need to take a step back and look again.
+Third one is research. We can make online research for our problem. But we should not look for big problem instead looking for small problems is better. We can search for answers even if we solved the problem. Because there are a lot we can learn from others. -->
