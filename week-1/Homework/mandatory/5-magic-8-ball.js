@@ -58,8 +58,10 @@ let answer = shakeBall();
 // When checking the answer, we should tell someone if the answer is
 // let message = ["very positive", "positive", "negative", "very negative"];
 
-function checkAnswer(answer) {
-  return "very positive";
+function checkAnswer() {
+  if (possibleAnswers.indexOf(answer) >= 4) {
+    return "very positive";
+  }
 }
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
