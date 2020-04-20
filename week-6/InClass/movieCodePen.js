@@ -87,8 +87,8 @@ const movies = [
   };
 //showMovies();  This function is being called by setTimeout asyncronous calling function
   const newMovie = {   // create a new movie object for your favorite movie
-    title: "x",
-    director: "y",
+    title: "Little Miss Sunshine",
+    director: "Jonathan Dayton, Valerie Faris",
     type: "comedy",
     haveWatched: true,
   }

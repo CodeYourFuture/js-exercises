@@ -1,11 +1,11 @@
 // Advanced Callbacks
-//set the color of the body
+//set the color of the body one time using setTimeout
 
 // setTimeout(function (){
 //   document.body.style.backgroundColor = "red"
-// }, 5000)
+// }, 3000)
 
-//====== the example below uses a function for randomising background color
+//====== change the background several times, see example below uses a function for randomising background color
 //https://stackoverflow.com/questions/51628092/random-rgb-color-generator-with-javascript
 
 let myBody = document.body;
@@ -78,14 +78,16 @@ let button3 = document.querySelector("#button3")
     return "CYF!"
   }));
 
-function exercise4(items) {
+    function exercise4(items) {
   // Write a function that *returns a function*
   // that puts the text of every item in items
-  // in #exercise4 when the button is clicked
+  // in #exercise4 when the button is clicked   
+      return function(){
+       let newParagraph = document.getElementById("exercise4")
+       newParagraph.textContent = items 
+       newParagraph = exercise4()
+       }
+    }
+    let clickBtn4 = document.querySelector('#button4')
+    clickBtn4.addEventListener("click",exercise4(["Apple", "Banana", "Carrot"]))    
 
-}
-document
-  .querySelector('#button4')
-  .addEventListener(
-    "click",
-    exercise4(["Apple", "Banana", "Carrot"]))
