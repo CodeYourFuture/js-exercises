@@ -20,3 +20,15 @@ My website should be able to:
 I think there are other some other small bugs in my code...but I'm lazy so I can't fix them all.
 
 I wish somebody would help me!
+
+
+
+errors line 57 missing ')'
+
+line 93 should be DelButton
+
+line 97  eventlistener function should be 'click'
+
+line 84 if statement has to be No : Yes;
+
+line 45  need to be author.value
