@@ -53,26 +53,26 @@ function shakeBall() {
 
 // The answer should come from shaking the ball
 let answer = [
-  "It is certain",
-  "It is decidedly so",
-  "Without a doubt",
-  "Yes - definitely",
-  "You may rely on it",
-  "As I see it, yes",
-  "Most likely",
-  "Outlook good",
-  "Yes",
-  "Signs point to yes",
-  "Reply hazy, try again",
-  "Ask again later",
-  "Better not tell you now",
-  "Cannot predict now",
-  "Concentrate and ask again",
-  "Don't count on it",
-  "My reply is no",
-  "My sources say no",
-  "Outlook not so good",
-  "Very doubtful",
+  "It is certain.",
+  "It is decidedly so.",
+  "Without a doubt.",
+  "Yes - definitely.",
+  "You may rely on it.",
+  "As I see it, yes.",
+  "Most likely.",
+  "Outlook good.",
+  "Yes.",
+  "Signs point to yes.",
+  "Reply hazy, try again.",
+  "Ask again later.",
+  "Better not tell you now.",
+  "Cannot predict now.",
+  "Concentrate and ask again.",
+  "Don't count on it.",
+  "My reply is no.",
+  "My sources say no.",
+  "Outlook not so good.",
+  "Very doubtful.",
 ];
 let randomAnswer = answer[Math.floor(Math.random() * answer.length)];
 console.log(randomAnswer);
@@ -84,45 +84,45 @@ console.log(randomAnswer);
 // - very negative
 
 function checkAnswer(answer) {
-  if (answer.indexOf < 5) {
-    console.log("very positive");
-  } else if (answer.indexOf < 10) {
-    console.log("positive");
-  } else if (answer.indexOf < 15) {
-    console.log("negative");
+  if (answer.indexOf(randomAnswer) <= 5) {
+    return "very positive";
+  } else if (answer.indexOf(randomAnswer) <= 10) {
+    return "positive";
+  } else if (answer.indexOf(randomAnswer) <= 15) {
+    return "negative";
   } else {
-    console.log("very negative");
+    return "very negative";
   }
 }
 
 /*function checkAnswer(level) {
   switch (level) {
-    case "It is certain":
-    case "It is decidedly so":
-    case "Without a doubt":
-    case "Yes - definitely":
-    case "You may rely on it":
+    case "It is certain.":
+    case "It is decidedly so.":
+    case "Without a doubt.":
+    case "Yes - definitely.":
+    case "You may rely on it.":
       console.log("very positive");
       break;
-    case "As I see it, yes":
-    case "Most likely":
-    case "Outlook good":
-    case "Yes":
-    case "Signs point to yes":
+    case "As I see it, yes.":
+    case "Most likely.":
+    case "Outlook good.":
+    case "Yes.":
+    case "Signs point to yes.":
       console.log("positive");
       break;
-    case "Reply hazy, try again":
-    case "Ask again later":
-    case "Better not tell you now":
-    case "Cannot predict now":
-    case "Concentrate and ask again":
+    case "Reply hazy, try again.":
+    case "Ask again later.":
+    case "Better not tell you now.":
+    case "Cannot predict now.":
+    case "Concentrate and ask again.":
       console.log("negative");
       break;
-    case "Don't count on it":
-    case "My reply is no":
-    case "My sources say no":
-    case "Outlook not so good":
-    case "Very doubtful":
+    case "Don't count on it.":
+    case "My reply is no.":
+    case "My sources say no.":
+    case "Outlook not so good.":
+    case "Very doubtful.":
       console.log("very negative");
       break;
   }
