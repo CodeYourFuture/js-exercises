@@ -5,25 +5,25 @@ function setAlarm() {
   let audioFile = document.createElement('audio');
   audioFile.src = './alarmsound.mp3';
   
-  /*1. When the `Set Alarm` button is clicked, get the value of the input field*/
-  let userInput = getSetTimeTo.value;
   
+  /*1. When the `Set Alarm` button is clicked, get the value of the input field*/
+   let userInput = getSetTimeTo.value;
   /*3. Work out how to update the `Time Remaining` title every second set interval funtion will update the counter every second*/
-  setInterval(finalCountDown,1000);
-  function finalCountDown(){
-    --userInput
+   
+  let countDown = setInterval(finalCountDown,1000);
+   function finalCountDown(){
+    let minutes = Math.floor(userInput/60); // to get the minutes the user input has to be divided by 60
+    let seconds = userInput % 60;// to get the secound the I need to get remainder of the division by 60
+      minutes = minutes<10?'0'+ minutes: minutes; // if minutes less 10 add a 0 to the left side of minutes
+     seconds = seconds < 10 ? '0' + seconds : seconds;// if seconds less 10 add a 0 to the left side of seconds
+   /*2. When you have the input field value, set the title to the correct value*/
 
-    if (userInput>10 && userInput<60) {
-    
-  /*2. When you have the input field value, set the title to the correct value*/
-      getTimeRemaing.textContent = `Time Remaining: 00:${userInput}`;
-    } else if (userInput>0 && userInput <=10) {
-      getTimeRemaing.textContent =`Time Remaining: 00:0${userInput}`;
-    
-  /*4. When the remaining time left is 0, play the alarm sound*/
-    } else if (userInput===0) {
-      getTimeRemaing.textContent = `Time Remaining: 00:0${userInput}`;
-      audioFile.play();
+       getTimeRemaing.textContent = `Time Remaining: ${minutes}:${seconds}`;
+    --userInput;
+    /*4. When the remaining time left is 0, play the alarm sound*/
+    if (userInput<0) {
+        clearInterval(countDown);
+       audioFile.play();
     } 
     
   }
@@ -47,7 +47,7 @@ function setAlarm() {
 // DO NOT EDIT BELOW HERE
 
 var audio = new Audio("alarmsound.mp3");
-=======
+
 
 
 function setup() {
