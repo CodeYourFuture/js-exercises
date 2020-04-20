@@ -45,10 +45,23 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  
+  const message = "The ball has shaken";
+  
+  return message;
+}
+console.log(shakeBall);
+//console.log(shakeBall);
+
+
 
 // The answer should come from shaking the ball
-let answer;
+
+let answer = ['It is certain', 'It is decidedly so', 'Without a doubt', 'Yes - definitely', 'You may rely on it'];
+console.log(answer.length);
+
+
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
