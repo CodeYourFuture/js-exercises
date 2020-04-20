@@ -6,10 +6,11 @@
 */
 
 function calculateSalesTax(priceofProduct) {
-  var result=(20/priceofProduct*100);
-  return(result
-  );
-  
+ 
+
+const salesTax=priceofProduct*20/100;
+const Total=salesTax+priceofProduct;
+return Total;
 
 }
 
