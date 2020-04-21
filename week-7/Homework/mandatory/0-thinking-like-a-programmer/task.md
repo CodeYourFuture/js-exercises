@@ -26,12 +26,12 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
-<!-- Write your answer here -->
+Problem Solving skill is an essential quality for a programmer, and as we know, nowadays, employers look for problem-solving skills.
 
 ## 2. When trying to solve a challenge, what should you do first?
 
-<!-- Write your answer here -->
+The first step we have to do is to understand the challenge and express it in simple steps.
 
 ## 3. What should you do if you get stuck?
 
-<!-- Write your answer here -->
+When we get stuck, we should take a step back, and look onto the solution trying to figure out what went wrong, which is called debugging.
