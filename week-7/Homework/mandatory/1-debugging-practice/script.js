@@ -97,9 +97,8 @@ function render() {
     delBut.innerHTML = "Delete";
     delBut.addEventListener("click", function () {
       // should be "click" not "clicks"
-      myLibrary.splice(i, 1);
       alert(`You've deleted title: ${myLibrary[i].title}`);
-
+      myLibrary.splice(i, 1);
       render();
     });
   }
