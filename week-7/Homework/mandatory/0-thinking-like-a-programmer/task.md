@@ -26,12 +26,35 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
-<!-- Write your answer here -->
+Problem-solving skills are almost unanimously the most important qualification that employers look for….more than programming languages proficiency, debugging, and system design.
+
 
 ## 2. When trying to solve a challenge, what should you do first?
 
-<!-- Write your answer here -->
+<!-- From first video :  -->
+1.Understand what do you want to do and what do you want to code
+2.understand the problem
+3.divide the problem to some pices(smaller problems)
+4.be curious how to fix the bug (unstuck)
+5.if none of those worked restart again
+Practice primarely,computer science 
+<!-- From second link -->
+1.Understand:
+when you can explain it in plain english
+2.Plan :
+plan your solution.Comments is a great tool to help you
+3.Divide:
+Reduce the problem to the point where you know how to solve it and write the solution. Then expand the problem slightly and rewrite the solution to match, and keep going until you are back where you started.
+4.Debug / Reassess / Research
+5.Practice
+
+
 
 ## 3. What should you do if you get stuck?
 
-<!-- Write your answer here -->
+1.Debug : 
+ Go step by step through your solution trying to find where you went wrong. Programmers call this debugging
+2.Reassess:
+Take a step back. Look at the problem from another perspective. Is there anything that can be abstracted to a more general approach?
+3.Research:
+ No matter what problem you have, someone has probably solved it. Find that person/ solution. In fact, do this even if you solved the problem! (You can learn a lot from other people’s solutions).
