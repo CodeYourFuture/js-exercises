@@ -12,7 +12,7 @@
     height: 100%;
   }
   .centre {
-    position: fixed;
+    position: absolute;
     text-align: center;
     top: 50%;
     left: 50%;
