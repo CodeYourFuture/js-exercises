@@ -30,15 +30,15 @@ const check = document.getElementById("check");
 function submit() {
   if (
     title.value == null ||
-    title.value == "" ||
+    author.value == "" ||// I changed title to author  5
     pages.value == null ||
     pages.value == ""
   ) {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    let book = new Book(title.value, author.value, pages.value, check.checked); // I changed title to author 6
+    myLibrary.push(book);//Changerd library to myLibrry   3
     render();
   }
 }
@@ -54,7 +54,7 @@ function render() {
   let table = document.getElementById("display");
   let rowsNumber = table.rows.length;
   //delete old table
-  for (let n = rowsNumber - 1; n > 0; n-- {
+  for (let n = rowsNumber - 1; n > 0; n--) {//added closed parentheses  1
     table.deleteRow(n);
   }
   //insert updated row and cells
@@ -76,7 +76,7 @@ function render() {
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == false) {
+    if (myLibrary[i].check) {//i changed the condition from false to true   4
       readStatus = "Yes";
     } else {
       readStatus = "No";
@@ -89,12 +89,12 @@ function render() {
     });
 
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
+    let delBut = document.createElement("button");//changed delButton todelBut 2
     delBut.id = i + 5;
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
     delBut.innerHTML = "Delete";
-    delBut.addEventListener("clicks", function () {
+    delBut.addEventListener("click", function () { // i changed clicks to click  7
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
