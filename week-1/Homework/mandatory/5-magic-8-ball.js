@@ -84,16 +84,17 @@ console.log(randomAnswer);
 // - very negative
 
 function checkAnswer(answer) {
-  if (answer.indexOf(randomAnswer) <= 5) {
+  if (answer.indexOf(randomAnswer) <= 4) {
     return "very positive";
-  } else if (answer.indexOf(randomAnswer) <= 10) {
+  } else if (answer.indexOf(randomAnswer) <= 9) {
     return "positive";
-  } else if (answer.indexOf(randomAnswer) <= 15) {
+  } else if (answer.indexOf(randomAnswer) <= 14) {
     return "negative";
   } else {
     return "very negative";
   }
 }
+console.log(checkAnswer(answer));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
