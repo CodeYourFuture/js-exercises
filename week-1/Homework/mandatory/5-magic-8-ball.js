@@ -42,20 +42,76 @@ My sources say no.
 Outlook not so good.
 Very doubtful.
 */
-
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+
+function shakeBall() {
+  console.log("The ball has shaken!");
+  return answer[Math.floor(Math.random())];
+};
 
 // The answer should come from shaking the ball
-let answer;
+
+let answer  = [
+  //very positive
+  "It is certain.", "It is decidedly so.","Without a doubt.", 
+  "Yes - definitely.", "You may rely on it.", 
+  ///positive
+  "As I see it, yes.", 
+  "Most likely.", 
+  "Outlook good.", 
+  "Yes.", 
+  "Signs point to yes.",
+//negative
+    "Reply hazy, try again." ,
+    "Ask again later.", 
+    "Better not tell you now.", 
+    "Cannot predict now.", 
+    "Concentrate and ask again.", 
+    //very negative
+    "Don't count on it.", 
+    "My reply is no.",  
+    "My sources say no.", 
+    "Outlook not so good.", ];
+
+
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+let answer; if ("It is certain.", "It is decidedly so.","Without a doubt.", 
+"Yes - definitely.", "You may rely on it.") {
+  answer = "very positive"
+} else {
+  if ("As I see it, yes.", 
+  "Most likely.", 
+  "Outlook good.", 
+  "Yes.", 
+  "Signs point to yes.")  {
+    answer = "positive"
+  } else {
+    if ("Reply hazy, try again." ,
+    "Ask again later.", 
+    "Better not tell you now.", 
+    "Cannot predict now.", 
+    "Concentrate and ask again."){
+      answer = "negative"
+    } else {
+      if ("Don't count on it.", 
+      "My reply is no.",  
+      "My sources say no.", 
+      "Outlook not so good.") {
+        answer = "very negative"
+      }
+    }
+  }
+}
+  return answer;
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;

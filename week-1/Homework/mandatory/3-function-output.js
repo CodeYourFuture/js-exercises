@@ -1,9 +1,12 @@
 // Add comments to explain what this function does. You're meant to use Google!
+//Here Math.random() returns a random number between 0 and 10....eg 5.156564545
 function getNumber() {
     return Math.random() * 10;
 }
 
+
 // Add comments to explain what this function does. You're meant to use Google!
+//concat() joins two or more strings together. eg. w1='Hi ', w2='there'....> w1.concat(w2)=== 'Hi there'
 function s(w1, w2) {
     return w1.concat(w2);
 }
@@ -11,6 +14,7 @@ function s(w1, w2) {
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
+   return firstWord.concat(' ', secondWord,' ', thirdWord);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -22,8 +26,8 @@ function test(test_name, expr) {
     } else {
         status = "FAILED"
     }
-  
-    console.log(`${test_name}: ${status}`)
+
+    console.log(`${test_name}: ${status}`);
 }
   
 test("concatenate function - case 1 works", concatenate('code', 'your', 'future') === "code your future")
