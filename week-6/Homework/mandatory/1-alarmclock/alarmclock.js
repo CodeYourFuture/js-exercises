@@ -53,6 +53,7 @@ function setup() {
 }
 
 function playAlarm() {
+  audio.volume = 0.05;
   audio.play();
 }
 
