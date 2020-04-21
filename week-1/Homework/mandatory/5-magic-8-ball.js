@@ -46,7 +46,8 @@ Very doubtful.
 // This should log "The ball has shaken!"
 // and return the answer.
 function shakeBall() {
-  return console.log("The ball has shaken!");
+  let x = console.log("The ball has shaken!");
+  return (x = "The ball has shaken!");
 }
 
 // The answer should come from shaking the ball
@@ -79,20 +80,20 @@ let answer = [
 // - negative
 // - very negative
 function checkAnswer(answer) {
-  let i = Math.floor(Math.random() * 20) + 1;
+  let i = Math.floor(Math.random() * answer.length) + 1;
+
   if (i >= 0 && i <= 4) {
-    console.log("the answer is very positive");
+    return "very positive";
   }
   if (i >= 5 && i <= 9) {
-    console.log("the answer is positive");
+    return "positive";
   }
   if (i >= 10 && i <= 14) {
-    console.log("the answer is negative");
+    return "negative";
   }
   if (i >= 15 && i <= 19) {
-    console.log("the answer is very negative");
+    return "very negative";
   }
-  return i;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
