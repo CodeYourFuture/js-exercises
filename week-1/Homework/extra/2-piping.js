@@ -16,43 +16,50 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(a, b) {
+  return (a * 10 + b * 10) / 10;
 }
 
-function multiply() {
-
+function multiply(a, b) {
+  return a * b;
 }
 
-function format() {
-
+function format(a) {
+  return "£" + a;
 }
 
-const startingValue = 2
+const startingValue = 10;
 
+function all() {
+  let add = (startingValue * 10 + 2 * 10) / 10;
+  let multi = add * 2;
+  let form = "£" + multi;
+  return form;
+}
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+let badCode = all();
 
 /* BETTER PRACTICE */
-
-let goodCode = 
-
+function allGood() {
+  return "£" + ((startingValue * 10 + 2 * 10) / 10) * 2;
+}
+let goodCode = allGood();
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
