@@ -1,19 +1,19 @@
 // Write your code here
 // Array of images
-const images = ["https://i.ytimg.com/vi/3EIbWjkimAs/maxresdefault.jpg",
-    "http://i.ytimg.com/vi/5VBriRtl_aM/maxresdefault.jpg",
-    "https://i.ytimg.com/vi/vqc8oezvs8I/maxresdefault.jpg",
-    "https://previews.123rf.com/images/asae/asae1408/asae140800118/31122898-the-cat-weigh-oneself.jpg",
-    "https://i.ytimg.com/vi/jcIgnP8D2KE/maxresdefault.jpg"
+const images = ["https://static.twentytwowords.com/cdn-cgi/image/width=800,quality=85,fit=scale-down,format=auto,onerror=redirect/https://static.twentytwowords.com/wp-content/uploads/FlameLily_Shutterstock.jpg",
+    "http://static.twentytwowords.com/wp-content/uploads/bleedingheart.jpg",
+    "https://p0.pikrepo.com/preview/436/1003/blue-roses-thumbnail.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/c/cc/Nerium_oleander_flowers_leaves.jpg",
+    "http://static.twentytwowords.com/wp-content/uploads/rsz_bird-of-paradise-flower-1.jpg"
 ];
 let imageNo = document.querySelector("#imageNo");
 //This loads the page - line 10 - 13
-let catPhoto = document.querySelector("#cat-image1");
+let flowerPhoto = document.querySelector("#flower-image1");
 //This current image index starting at zero
 let currentIndex = 0;
 imageNo.innerHTML = currentIndex + 1;
 //This assigns the first image address to the first src image
-catPhoto.src = images[currentIndex];
+flowerPhoto.src = images[currentIndex];
 
 //Below is the beginning of the functions for all the buttons. All these functions change the images per index
 
@@ -23,7 +23,7 @@ function goForward() {
         currentIndex = -1;
     }
     currentIndex++;
-    catPhoto.src = images[currentIndex];
+    flowerPhoto.src = images[currentIndex];
     imageNo.innerHTML = currentIndex + 1;
 }
 
@@ -36,7 +36,7 @@ function goBack() {
         currentIndex = images.length;
     }
     currentIndex--;
-    catPhoto.src = images[currentIndex];
+    flowerPhoto.src = images[currentIndex];
     imageNo.innerHTML = currentIndex + 1;
 }
 
