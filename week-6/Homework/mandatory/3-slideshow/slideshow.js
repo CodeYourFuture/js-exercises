@@ -2,23 +2,54 @@
 let number = 425;
 let slider = document.getElementById("slider");
 slider.src = `https://unsplash.it/g/640/${number}`;
+let forwardInterval;
+let backwardInterval;
+let isRunning = false;
+
 function forward() {
+  clearInterval(backwardInterval);
+  clearInterval(forwardInterval);
   slider.src = `https://unsplash.it/g/640/${number}`;
   number++;
+  isRunning = false;
 }
 function backward() {
+  clearInterval(forwardInterval);
+  clearInterval(backwardInterval);
   slider.src = `https://unsplash.it/g/640/${number}`;
   number--;
+  isRunning = false;
 }
+
 function autoForward() {
-  setInterval(forward, 1000);
+  console.log(forwardInterval);
+  if (isRunning) {
+    return;
+  }
+  clearInterval(backwardInterval);
+  forwardInterval = setInterval(function () {
+    slider.src = `https://unsplash.it/g/640/${number}`;
+    number++;
+  }, 1000);
+  isRunning = true;
 }
+
 function autoBackward() {
-  setInterval(backward, 1000);
+  clearInterval(forwardInterval);
+  if (isRunning) {
+    return;
+  }
+  backwardInterval = setInterval(function () {
+    slider.src = `https://unsplash.it/g/640/${number}`;
+    number--;
+  }, 1000);
+  isRunning = true;
 }
+
 function stop() {
-  clearInterval(autoForward());
-  clearInterval(autoBackward());
+  clearInterval(forwardInterval);
+  clearInterval(backwardInterval);
+  isRunning = false;
 }
 let forwardbtn = document.getElementById("forward");
 forwardbtn.addEventListener(`click`, forward);
