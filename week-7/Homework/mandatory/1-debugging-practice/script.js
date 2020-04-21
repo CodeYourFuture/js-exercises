@@ -29,16 +29,22 @@ const check = document.getElementById("check");
 //via Book function and start render function
 function submit() {
   if (
-    title.value == null ||
-    author.value == "" ||// I changed title to author  5
-    pages.value == null ||
-    pages.value == ""
+    title.value === null ||
+    author.value === "" ||// I changed title to author  5
+    pages.value === null ||
+    pages.value === ""
   ) {
     alert("Please fill all fields!");
     return false;
   } else {
     let book = new Book(title.value, author.value, pages.value, check.checked); // I changed title to author 6
     myLibrary.push(book);//Changerd library to myLibrry   3
+    //makes the form empty after submit.
+    title.value = "";
+    author.value= "" ;
+    pages.value= null;
+    check.checked= false;
+
     render();
   }
 }
@@ -76,7 +82,7 @@ function render() {
     changeBut.className = "btn btn-success";
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check) {//i changed the condition from false to true   4
+    if (myLibrary[i].check ) {//I changed the condition from false to true   4
       readStatus = "Yes";
     } else {
       readStatus = "No";
@@ -94,7 +100,7 @@ function render() {
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
     delBut.innerHTML = "Delete";
-    delBut.addEventListener("click", function () { // i changed clicks to click  7
+    delBut.addEventListener("click", function () { // I changed clicks to click  7
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
