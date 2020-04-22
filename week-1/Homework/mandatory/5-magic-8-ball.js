@@ -44,20 +44,34 @@ let arr = [
 // This should log "The ball has shaken!"
 // and return the answer.
 function shakeBall() {
+  // console.log(answer);
+  // return answer;``
+  let answer = arr[Math.floor(Math.random() * arr.length)];
   console.log(answer);
+  console.log("The ball has shaken!");
   return answer;
 }
 
 // The answer should come from shaking the ball
-let answer = "The ball has shaken!";
-
+// let answer = "The ball has shaken!";
+let answer = shakeBall();
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer(answer) {
-  return "very positive";
+
+function checkAnswer() {
+  let returnedMessages = [
+    "very positive",
+    "positive",
+    "negative",
+    "very negative",
+  ];
+
+  if ((answer = returnedMessages)) {
+    return returnedMessages[1];
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
