@@ -2,28 +2,23 @@
 body{
   background: orange;
 }
-p{
-  
+.container p{
   margin:100px 90px;
   padding:40px 50px;
   color:orange;
-  align-self: flex-end;
+  
   margin:0px 20px 10px 0px;
   display:flex;
   flex-direction: column;
-  
 }
 .container{
+  max-width: 80%;
   background: white;
-  margin:100px 90px;
-  padding:40px 50px;
   display:flex;
-  flex-direction: column;
-  
-  
+  flex:wrap row;
+  align-items: center;
 }
 .content{
-  
   font-size: 35px;
   margin-right:20px;
   align-self: flex-end;
@@ -35,11 +30,10 @@ p{
 }
 
 button{
-  
   width: 150px;
   height: 50px;
   color:white;
-  align-self:flex-end ;
+
   background-color:orange;
   margin:0px 20px 10px 0px;
 }
@@ -48,11 +42,31 @@ button{
   margin:0px 20px 10px 0px;
 }
 
-input.bigcheck{
-  width:100px;
-  height:40px;
-}
+
 .inputCheck{
   font-size: 20px;
   color:black;
+}
+.control{
+  background-color: white;
+  width:80%;
+  display:flex;
+  flex:wrap row;
+  align-items:center;
+  justify-content: flex-end;
+  margin:0 auto;
+  margin-top:40px;
+
+}
+label{
+  background-color: orange;
+  width:200px;
+  height:50px;
+  text-align: center;
+  padding: 15px;
+  
+}
+input{
+ height:40px;
+
 }

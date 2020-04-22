@@ -478,7 +478,7 @@ let paraCheck = document.querySelector(".inputCheck");
 let runCheckBox;
 container.classList.add("container");
 document.body.append(container);
-container.append(para, btn, paraCheck, checkBox);
+container.append(para);
 
 function displayNewQuote() {
   let chooseQuote = pickFromArray(quotes);
@@ -501,12 +501,7 @@ checkBox.addEventListener("change", () => {
   }
 });
 
-//window.location.reload(false);
 
-// function showQuotes(){
-//   let para = document.createElement('p')
-//   para. innerHTML = " hello World"
-// }
 
 // DO NOT EDIT BELOW HERE
 
