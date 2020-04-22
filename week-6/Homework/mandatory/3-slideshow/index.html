@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+    <title>Slideshow</title>    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,6 +11,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <div id="mainDiv">
+      <img id="imgShow">
+      <p id="imgNumber"></p>
+      <div id="buttonsDiv">
+        <button id="autoBackward" class="buttons" type="button">Auto Backward</button>
+        <button id="back" class="buttons" type="button">Back</button>
+        <button id="stop" class="buttons" type="button">Stop</button>
+        <button id="forward" class="buttons" type="button">Forward</button>
+        <button id="autoForward" class="buttons" type="button">Auto Forward</button>
+      </div>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>
