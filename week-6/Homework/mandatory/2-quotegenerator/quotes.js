@@ -17,12 +17,14 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
+// A list of quotes you can use in your app.
+// Feel free to edit them, and to add your own favourites.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +492,17 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// quoteGenerate is a function to generate a quote with autor
+function quoteGenerate(){
+  let quotePEl = document.querySelector('#quote');
+  let authorPEl = document.querySelector('#author');
+  quotePEl.innerHTML=`<strong>&#10077;&nbsp;</strong>${pickFromArray(quotes).quote}`;
+  authorPEl.innerHTML=`${pickFromArray(quotes).author}`;
+}
+// autoPlay is a interval to show quote every second
+let autoPlay = setInterval(quoteGenerate,1000);
+let quoteBtEl = document.querySelector('#quoteGenerator');
+quoteBtEl.addEventListener('click',function(){
+  quoteGenerate();
+});
