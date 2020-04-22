@@ -80,7 +80,7 @@ let answer = [
 // - negative
 // - very negative
 function checkAnswer(answer) {
-  let i = Math.floor(Math.random() * answer.length) + 1;
+  let i = Math.floor(Math.random() * answer.length);
 
   if (i >= 0 && i <= 4) {
     return "very positive";
