@@ -12,7 +12,8 @@ function getRemainder(a, b) {
     remainder = a % b;
 
     // Use string interpolation here
-    return "The remainder is "+remainder
+    return `The remainder is ${remainder}`;
+    
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
