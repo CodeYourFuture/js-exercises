@@ -48,10 +48,14 @@ function backward() {
 btnBackward.addEventListener("click", backward);
 
 autoB.addEventListener("click", () => {
-  slideB = setInterval(backward, 500);
+  clearInterval(window.slideB )
+  clearInterval(window.slideF)
+  slideB = setInterval(backward, 1000);
 });
 autoF.addEventListener("click", () => {
-  slideF = setInterval(forward, 500);
+  clearInterval(window.slideB )
+  clearInterval(window.slideF)
+  slideF = setInterval(forward, 1000);
 });
 console.log(btnStop);
 btnStop.addEventListener("click", () => {
