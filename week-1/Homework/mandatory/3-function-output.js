@@ -1,5 +1,5 @@
 // Add comments to explain what this function does. You're meant to use Google!
-// this function gives us a number between 0 to 1 and then multiple 10. it means at the end we have a random number betwen 1 to 10.
+// this function gives us a number between 0 to 1(exclude 1) and then multiple 10. it means at the end we have a random number betwen 1 to 9.
 function getNumber() {
   return Math.random() * 10;
 }
