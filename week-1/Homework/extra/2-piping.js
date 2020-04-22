@@ -16,7 +16,7 @@
 */
 
 function add(a, b) {
-  let sum = (a + b).valueOf();
+  let sum = (a * 10 + b * 10) / 10;
 
   return sum;
 }
@@ -31,7 +31,7 @@ function multiply(a, b) {
 console.log(multiply(2, 3));
 
 function format(num) {
-  let addStr = "£" + num.toString();
+  let addStr = "£" + num;
   return addStr;
 }
 console.log(format(16));
@@ -41,9 +41,9 @@ const startingValue = 2;
 // Why can this code be seen as bad practice? Comment your answer.
 let badCode = format(multiply(add(10, startingValue), 2));
 /* BETTER PRACTICE */
-// let goodCode = format();
-// multiply(2);
-// add(10, startingValue);
+let goodCode = format();
+multiply(2);
+add(10, startingValue);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
