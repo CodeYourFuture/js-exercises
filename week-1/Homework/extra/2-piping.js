@@ -5,7 +5,6 @@
   - one that adds 2 numbers together
   - one that multiplies 2 numbers together
   - one that formats a number so it's returned as a string with a £ sign before it (e.g. 20 -> £20)
-
   2. Using the variable startingValue as input, perform the following operations using your functions all
   on one line (assign the result to the variable badCode):
   - add 10 to startingValue
@@ -16,43 +15,51 @@
   the final result to the variable goodCode
 */
 
-function add() {
-return 1 + 3
+function add(a, b) {
+  let sum = (a + b).valueOf();
+
+  return sum;
 }
+console.log(add(1, 3));
+console.log(add(2.4, 5.3));
 
-function multiply() {
+function multiply(a, b) {
+  let multi = a * b;
 
+  return multi;
 }
+console.log(multiply(2, 3));
 
-function format() {
-
+function format(num) {
+  let addStr = "£" + num.toString();
+  return addStr;
 }
+console.log(format(16));
 
-const startingValue = 2
+const startingValue = 2;
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
-
+let badCode = format(multiply(add(10, startingValue), 2));
 /* BETTER PRACTICE */
-
-let goodCode = 
-
+// let goodCode = format();
+// multiply(2);
+// add(10, startingValue);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
