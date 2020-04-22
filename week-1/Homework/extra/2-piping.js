@@ -17,9 +17,8 @@
 */
 
 function add(a, b) {
-  let total = a + b;
-  let total1 = parseFloat(total.toFixed(1));
-  console.log(total1);
+  // let total = a + b;
+  let total1 = parseFloat((a + b).toFixed(1));
   return total1;
 }
 
@@ -27,29 +26,30 @@ function multiply(a, b) {
   return a * b;
 }
 
-function format() {
-  let number = 16;
-  console.log("£" + number);
+function format(number) {
+  // let number = 16;
+  // console.log("£" + number);
   return "£" + number;
 }
-
-let changedValue = add(10);
-let changeAnotherValue = multiply(2);
-const startingValue = ((2 + changedValue) * changeAnotherValue).toString();
-
-let formatValue = "£" + startingValue;
-console.log(startingValue);
-
-// function add() function multiply() function format();
+// format(16);
+///////////////////////
+let changedValue = "£" + (add(2, 10) * 2).toString();
+// console.log(changedValue);
+// console.log(typeof changedValue);
 
 // Why can this code be seen as bad practice? Comment your answer.
 // the name indicates the value might change therefore, const is not an ideal way to declare a startingValue, let is a better way.
 
-let badCode = 4;
+let badCode = changedValue;
 
 /* BETTER PRACTICE */
 
-let goodCode = 5;
+let addValue = add(2, 10);
+let newValue = addValue * 2;
+let formattedValue = "£" + newValue.toString();
+let goodCode = formattedValue;
+
+// Not sure why?
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -5,9 +5,9 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {
-  let prices = 32 * 1.4;
-  return prices;
+function convertToUSD(prices) {
+  // let prices = 32 * 1.4;
+  return prices * 1.4;
 }
 
 /*
@@ -18,11 +18,15 @@ function convertToUSD() {
   They have also decided that they should add a 1% fee to all foreign transactions
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
-
+function taxRate(rate) {
+  return rate * 1.01 * 5.7;
+}
+taxRate(30);
 function convertToBRL() {
-  let taxRate = 0.01 * 5.7 * 30;
-  let newPrice = 5.7 * 30;
-  return taxRate + newPrice;
+  // let taxRate = 0.01 * 5.7 * 30;
+  let newPrice = taxRate(30);
+  // console.log(newPrice);
+  return newPrice;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
