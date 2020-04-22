@@ -15,17 +15,17 @@ and have different levels of positivity or negativity.
 Below are the possible answers:
 */
 
-
+//variables delared outside functions so it is accessible by both functions.  
+//Math.random generates a random number between 0 and 1. *20 brings the range to between 0 and 20. 
+const randomNumber= Math.random()*20; 
+//Math.floor rounds the random numbers down.
+const randomNumberFloor= Math.floor(randomNumber);
 
 1. // This should log "The ball has shaken!"
 // and return the answer.
 function shakeBall() {
 console.log("The ball has shaken!")
 
-//Math.random generates a random number between 0 and 1. *20 brings the range to between 0 and 20. 
-const randomNumber= Math.random()*20; 
-//Math.floor rounds the random numbers down.
-const randomNumberFloor= Math.floor(randomNumber);
 //Array of all possible answers
 let answers = [
 
@@ -57,20 +57,41 @@ let answers = [
   "Outlook not so good.",
   "Very doubtful."];
 
-return `${answers[randomNumberFloor]}`;
+  
+  //2. return the answer.
+return `${answers[randomNumberFloor]}`;//string interpolation - pass variables inside a string.
 }
-
-2. // The answer should come from shaking the ball
+// The answer should come from shaking the ball
 console.log(shakeBall());
 
 3. // When checking the answer, we should tell someone if the answer is
-//answerLevelMessage = ["very positive", "positive", "negative", "very negative"];
+// - very positive
+// - positive
+// - negative
+// - very negative
 
 function checkAnswer() {
+  //Very positive
+  if (randomNumberFloor === 0 || randomNumberFloor === 1 || randomNumberFloor === 2 || randomNumberFloor === 3) {
+    return "very positive";
+  }
+
+  //Positive
+  if (randomNumberFloor === 4 || randomNumberFloor === 5 || randomNumberFloor === 6 || randomNumberFloor === 7 || randomNumberFloor === 8) {
+    return "positive";
+  }
+
+  //Negative
+  if (randomNumberFloor === 9 || randomNumberFloor === 10 || randomNumberFloor === 11 || randomNumberFloor === 12 || randomNumberFloor === 13) {
+    return "negative";
+  }
+  // very Negative
+  if (randomNumberFloor === 14 || randomNumberFloor === 15 || randomNumberFloor === 16 || randomNumberFloor === 17 || randomNumberFloor === 18) {
+    return "very negative";
+  }
 }
 
-
-
+console.log(checkAnswer());
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
