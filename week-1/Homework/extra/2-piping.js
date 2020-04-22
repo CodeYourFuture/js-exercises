@@ -32,9 +32,7 @@ function format(number) {
 
 }
 
-var startingValue = 2;
-startingValue=startingValue+=10;
-var number=res*2;
+
 
 
 // Why can this code be seen as bad practice? Comment your answer.
