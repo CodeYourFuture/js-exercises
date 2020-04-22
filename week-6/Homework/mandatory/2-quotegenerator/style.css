@@ -1,22 +1,26 @@
 /** Write your CSS in here **/
 body{
-  background: orange;
+  background:#be9b7b ;
 }
 .container p{
   margin:100px 90px;
   padding:40px 50px;
-  color:orange;
+  color:black;
   
   margin:0px 20px 10px 0px;
   display:flex;
   flex-direction: column;
+  
 }
 .container{
   max-width: 80%;
-  background: white;
+  background-image: radial-gradient( yellow, green);
+  
   display:flex;
   flex:wrap row;
   align-items: center;
+  border-radius: 20px;
+  
 }
 .content{
   font-size: 35px;
@@ -34,8 +38,9 @@ button{
   height: 50px;
   color:white;
 
-  background-color:orange;
+  background-color:black;
   margin:0px 20px 10px 0px;
+  border-radius: 20px;
 }
 #check{
   align-self: flex-end;
@@ -48,7 +53,7 @@ button{
   color:black;
 }
 .control{
-  background-color: white;
+  background-color:#be9b7b;
   width:80%;
   display:flex;
   flex:wrap row;
@@ -59,12 +64,13 @@ button{
 
 }
 label{
-  background-color: orange;
+  background-color:black;
   width:200px;
   height:50px;
   text-align: center;
   padding: 15px;
-  
+  color: white;
+  border-radius: 20px;
 }
 input{
  height:40px;
