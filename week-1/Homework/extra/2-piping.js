@@ -16,26 +16,32 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(num1,num2) {
+ // num = (num1 + num2).toFixed(1);
+  //console.log(num);
+  return num1 + num2;
 
 }
 
-function multiply() {
-
+function multiply(num1,num2) {
+return num1*num2;
 }
 
-function format() {
+function format(num) {
+  return "£"+num;
 
 }
 
 const startingValue = 2
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
-
+let badCode = "£" + (startingValue + 10 )*2;
+// It is bad practice because this operations only limited to these number and it is not reusable and the probability  of a wrong result is much bigger and hardder to be tracked
 /* BETTER PRACTICE */
 
-let goodCode = 
+let goodCode = add(startingValue,10);
+goodCode = multiply(goodCode,2);
+goodCode = format(goodCode);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
