@@ -9,9 +9,7 @@ function s(w1, w2) {
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
-  // return `${firstWord} ${secondWord} ${thirdWord}`;
-  return firstWord.concat(secondWord, thirdWord);
-  // I had to use template string method here
+  return firstWord.concat(" ", secondWord, " ", thirdWord);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
