@@ -11,8 +11,7 @@ function introduceMe(name, age) {
 }
 
 function getRemainder(a, b) {
-  remainder = a % b;
-
+  const remainder = a % b;
   // Use string interpolation here
   return `The remainder is ${remainder}`;
 }
