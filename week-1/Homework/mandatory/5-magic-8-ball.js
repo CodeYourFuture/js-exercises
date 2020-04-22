@@ -12,55 +12,75 @@ There are a few steps to being able view the future though:
 The question can be anything, but the answers are fixed,
 and have different levels of positivity or negativity.
 
-Below are the possible answers:
+Below are the possible answers:*/
 
-## Very positive
-It is certain.
-It is decidedly so.
-Without a doubt.
-Yes - definitely.
-You may rely on it.
+let answer = [
+  // ## Very positive
+  "It is certain.",
+  "It is decidedly so.",
+  "Without a doubt.",
+  "Yes - definitely.",
+  "You may rely on it.",
+  // ## Positive
+  "As I see it, yes.",
+  "Most likely.",
+  "Outlook good.",
+  "Yes.",
+  "Signs point to yes.",
 
-## Positive
-As I see it, yes.
-Most likely.
-Outlook good.
-Yes.
-Signs point to yes.
+  // ## Negative
+  "Reply hazy, try again.",
+  "Ask again later.",
+  "Better not tell you now.",
+  "Cannot predict now.",
+  "Concentrate and ask again.",
 
-## Negative
-Reply hazy, try again.
-Ask again later.
-Better not tell you now.
-Cannot predict now.
-Concentrate and ask again.
-
-## Very negative
-Don't count on it.
-My reply is no.
-My sources say no.
-Outlook not so good.
-Very doubtful.
-*/
+  // ## Very negative
+  "Don't count on it.",
+  "My reply is no.",
+  "My sources say no.",
+  "Outlook not so good.",
+  "Very doubtful.",
+];
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+function shakeBall() {
+  let number = Math.floor(Math.random() * answer.length);
+  console.log("The ball has shaken!");
+
+  return answer[number];
+}
 
 // The answer should come from shaking the ball
-let answer;
+// let answer;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer() {
+  if ((answer == 0, (answer = 1), (answer = 2), (answer = 3))) {
+    return (answer = "very positive");
+  }
+  if ((answer == 4, (answer = 5), (answer = 6), (answer = 7))) {
+    return (answer = "positive");
+  }
+  if ((answer == 8, (answer = 9), (answer = 10), (answer = 11))) {
+    return (answer = "negative");
+  }
 
+  if ((answer == 12, (answer = 13), (answer = 14), (answer = 15))) {
+    return (answer = "very negative");
+  }
+}
+
+console.log(checkAnswer());
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };
