@@ -82,7 +82,7 @@ let answer = [
 
 function checkAnswer() {
   var randomNumber = Math.random();
-  var randomAnswer = Math.floor(randomNumber * answer.length + 1);
+  var randomAnswer = Math.floor(randomNumber * answer.length);
 
   if (randomAnswer >= 0 && randomAnswer <= 4) {
     return "very positive";
