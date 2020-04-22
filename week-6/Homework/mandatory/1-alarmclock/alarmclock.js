@@ -1,7 +1,6 @@
 function convertion(input) {
   let minutes = Math.floor(input / 60);
   let seconds = input - minutes * 60;
-  //if remainder is 1 digit, put a zero before it
   if (seconds < 10) {
     seconds = `0${seconds}`;
   }
@@ -16,8 +15,10 @@ function colors() {
   let randomColorIndex = Math.floor(Math.random() * 5);
   document.body.style.backgroundColor = colors[randomColorIndex];
 }
-//makeBlank is here to stop the timer to repead with every time push the button of Set Alarm.
+//makeBlank is here to stop the timer to repeat with every time push the button of Set Alarm.
 let makeBlank = true;
+let colorRunning;
+let timerRunning = false;
 function setAlarm() {
   if (makeBlank) {
     let alarmSet = document.querySelector("#alarmSet").value;
@@ -28,20 +29,38 @@ function setAlarm() {
     let pause = document.querySelector("#pause");
     let timer = window.setInterval(function alarmCount() {
       if (alarmSet > 0) {
+        timerRunning = true;
         alarmSet -= 1;
         timeRemaining.innerText = `Time Remaining: ${convertion(alarmSet)} `;
         if (alarmSet === 0) {
+          timerRunning = false;
           audio.play();
-          setInterval(colors, 150);
-          clearInterval(alarmCount);
+          colorRunning = setInterval(colors, 150);
+          clearInterval(timer);
         }
       }
     }, 1000);
     stop.addEventListener("click", () => {
+      timerRunning = false;
       audio.pause();
       clearInterval(setAlarm);
+      clearInterval(colorRunning);
+      document.body.style.backgroundColor = `white`;
+      // alarmSet.remove();
     });
-    pause.addEventListener("click", () => {});
+    console.log();
+    pause.addEventListener("click", () => {
+      let pausePlay = document.querySelector(`#pause`);
+      if (timerRunning && pausePlay.innerText === `Pause`) {
+        timerRunning = false;
+        clearInterval(timer);
+        pausePlay.innerText = `Play`;
+        timeRemaining.innerText = `Time Remaining: ${convertion(alarmSet)} `;
+        console.log(timeRemaining);
+      } else {
+        timerRunning = true;
+      }
+    });
     makeBlank = false;
   }
 }
@@ -50,8 +69,6 @@ function setAlarm() {
 
 function setup() {
   var audio = new Audio("alarmsound.mp3");
-
-  console.log(document.getElementById("set"));
 
   document.getElementById("set").addEventListener("click", () => {
     setAlarm();
