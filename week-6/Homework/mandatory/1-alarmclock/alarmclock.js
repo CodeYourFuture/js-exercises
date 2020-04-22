@@ -11,13 +11,20 @@ function showClockFormat(inputNum) {
 }
 
 function setAlarm() {
+  
   let input = document.getElementById("alarmSet");
-  clearInterval(setClear);
+  if (input.value <=0){
+    alert('set alarm please')
+  }else{
+    clearInterval(setClear);
   time = input.value;
   setClear = setInterval(decrementEverySecond, 1000);
+  }
+  
 
 }
 function decrementEverySecond() {
+  
   time--;
   if (time == 0) {
     document.body.style.background = "orange";
@@ -33,10 +40,10 @@ let btnPause = document.querySelector('#pause')
 btnPause.addEventListener('click',()=>{
 
   if (setClear == -1){
-    // document.querySelector('#pause').innerHTML= 'pause'
+     document.querySelector('#pause').innerHTML= 'pause alarm'
     setClear = setInterval(decrementEverySecond, 1000);
   }else{
-    // document.querySelector('#pause').innerHTML= 'start'
+     document.querySelector('#pause').innerHTML= 'start alarm'
     clearInterval(setClear)
     setClear = -1
   }
@@ -65,6 +72,6 @@ function pauseAlarm() {
   document.getElementById("timeRemaining").innerText = "Time Remaining: 00:00"
 
   
-  document.body.style.background = 'white'
+  document.body.style.background = 'cornsilk' 
 }
 window.onload = setup;

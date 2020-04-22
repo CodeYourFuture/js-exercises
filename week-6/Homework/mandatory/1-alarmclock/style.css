@@ -13,3 +13,20 @@
 h1 {
   text-align: center;
 }
+.btn{
+  border-radius: 50%;
+  background-image: radial-gradient( yellow, green);
+  margin: 10px;
+  border: 2px solid cadetblue;
+  box-shadow: 0 4px 6px rgba(0,0,20,0.8);
+  font-variant: small-caps;
+}
+body{
+  background-color: cornsilk;
+}
+h1{
+  text-shadow:  0 4px 6px rgba(0,0,20,0.8);
+}
+.timeholder{
+font-variant: small-caps;
+}
