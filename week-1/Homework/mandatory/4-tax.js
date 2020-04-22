@@ -6,8 +6,8 @@
 */
 
 function calculateSalesTax(price) {
-  var salesTax = price / 5;
-  var finalprice = price + salesTax;
+  let salesTax = price / 5;
+  let finalprice = price + salesTax;
 return finalprice;
 }
 

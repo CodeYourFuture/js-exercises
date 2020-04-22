@@ -13,62 +13,64 @@ The question can be anything, but the answers are fixed,
 and have different levels of positivity or negativity.
 
 Below are the possible answers:
-
-## Very positive
-It is certain.
-It is decidedly so.
-Without a doubt.
-Yes - definitely.
-You may rely on it.
-
-## Positive
-As I see it, yes.
-Most likely.
-Outlook good.
-Yes.
-Signs point to yes.
-
-## Negative
-Reply hazy, try again.
-Ask again later.
-Better not tell you now.
-Cannot predict now.
-Concentrate and ask again.
-
-## Very negative
-Don't count on it.
-My reply is no.
-My sources say no.
-Outlook not so good.
-Very doubtful.
 */
 
-// This should log "The ball has shaken!"
+
+
+1. // This should log "The ball has shaken!"
 // and return the answer.
 function shakeBall() {
+console.log("The ball has shaken!")
+
+//Math.random generates a random number between 0 and 1. *20 brings the range to between 0 and 20. 
+const randomNumber= Math.random()*20; 
+//Math.floor rounds the random numbers down.
+const randomNumberFloor= Math.floor(randomNumber);
+//Array of all possible answers
+let answers = [
+
+  //## Very positive
+  "It is certain.",
+  "It is decidedly so.",
+  "Without a doubt.",
+  "Yes - definitely.",
+  "You may rely on it.",
   
-  const message = "The ball has shaken";
+  //## Positive
+  "As I see it, yes.",
+  "Most likely.",
+  "Outlook good.",
+  "Yes.",
+  "Signs point to yes.",
   
-  return message;
+  //## Negative
+  "Reply hazy, try again.",
+  "Ask again later.",
+  "Better not tell you now.",
+  "Cannot predict now.",
+  "Concentrate and ask again.",
+  
+  //## Very negative
+  "Don't count on it.",
+  "My reply is no.",
+  "My sources say no.",
+  "Outlook not so good.",
+  "Very doubtful."];
+
+return `${answers[randomNumberFloor]}`;
 }
-console.log(shakeBall);
-//console.log(shakeBall);
+
+2. // The answer should come from shaking the ball
+console.log(shakeBall());
+
+3. // When checking the answer, we should tell someone if the answer is
+//answerLevelMessage = ["very positive", "positive", "negative", "very negative"];
+
+function checkAnswer() {
+}
 
 
 
-// The answer should come from shaking the ball
-
-let answer = ['It is certain', 'It is decidedly so', 'Without a doubt', 'Yes - definitely', 'You may rely on it'];
-console.log(answer.length);
-
-
-
-// When checking the answer, we should tell someone if the answer is
-// - very positive
-// - positive
-// - negative
-// - very negative
-function checkAnswer() {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
