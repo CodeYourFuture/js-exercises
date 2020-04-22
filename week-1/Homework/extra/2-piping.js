@@ -17,7 +17,7 @@
 */
 
 function add(num1 ,num2) {
-const sum=(num1+num2);
+const sum=(num1*10+num2*10)/10;
 return sum;
 }
 
@@ -32,9 +32,10 @@ function format(number) {
 
 }
 
-const startingValue = 2;
-var res=startingValue+=10;
+var startingValue = 2;
+startingValue=startingValue+=10;
 var number=res*2;
+
 
 // Why can this code be seen as bad practice? Comment your answer.
 let badCode = 

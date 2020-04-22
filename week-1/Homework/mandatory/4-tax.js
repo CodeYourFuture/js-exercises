@@ -24,7 +24,11 @@ return Total;
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(price) {
+  var currency=calculateSalesTax(price).toFixed(2);
+  return "£" + currency;
+  
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

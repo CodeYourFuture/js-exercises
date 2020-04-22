@@ -5,17 +5,20 @@ function addNumbers(a ,b ,c) {
 }
 
 function introduceMe(name, age){
-return "Hello, my name is" +name 
- "and I am" +age "years old";
+return `Hello, my name is ${name} and I am ${age} years old`;
+
 }
+console.log(introduceMe('Taslima',23))
 
 function getRemainder(a, b) {
     remainder = a % b;
+   
+
 
     // Use string interpolation here
-    return "The remainder is " +remainder;
+    return `The remainder is ${remainder}`;
 }
-
+console.log(getRemainder(21,6));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
