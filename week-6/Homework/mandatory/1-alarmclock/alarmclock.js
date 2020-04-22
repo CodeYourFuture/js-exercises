@@ -1,39 +1,43 @@
 
 let time;
+let setClear = -1
 function showClockFormat(inputNum) {
   const minute = Math.floor(inputNum / 60);
   const second = inputNum - minute * 60;
   let newMinute = minute.toString().padStart(2, "0");
   let newSecond = second.toString().padStart(2, "0");
 
-  return `${newMinute}:${newSecond}`;
+  return `Time Remaining:${newMinute}:${newSecond}`;
+}
+
+function setAlarm() {
+  let input = document.getElementById("alarmSet");
+  clearInterval(setClear);
+  time = input.value;
+  setClear = setInterval(decrementEverySecond, 1000);
+
 }
 function decrementEverySecond() {
   time--;
   if (time == 0) {
     document.body.style.background = "orange";
-    clearInterval(window.setClear);
+    clearInterval(setClear);
     playAlarm();
+
   }
   document.getElementById("timeRemaining").innerText = showClockFormat(time);
 }
-function setAlarm() {
-  let input = document.getElementById("alarmSet");
-  clearInterval(window.setClear);
-  time = input.value;
-  setClear = setInterval(decrementEverySecond, 1000);
-
-}
 
 let btnPause = document.querySelector('#pause')
+
 btnPause.addEventListener('click',()=>{
 
   if (setClear == -1){
-    time--;
+    // document.querySelector('#pause').innerHTML= 'pause'
     setClear = setInterval(decrementEverySecond, 1000);
   }else{
-    
-    clearInterval(window.setClear)
+    // document.querySelector('#pause').innerHTML= 'start'
+    clearInterval(setClear)
     setClear = -1
   }
   
@@ -55,6 +59,12 @@ function playAlarm() {
   audio.play();
 }
 function pauseAlarm() {
+  
+  clearInterval(setClear)
   audio.pause();
+  document.getElementById("timeRemaining").innerText = "Time Remaining: 00:00"
+
+  
+  document.body.style.background = 'white'
 }
 window.onload = setup;
