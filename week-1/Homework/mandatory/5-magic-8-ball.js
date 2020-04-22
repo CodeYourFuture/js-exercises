@@ -15,18 +15,18 @@ and have different levels of positivity or negativity.
 Below are the possible answers:
 */
 
-
+//Math.random generates a random number between 0 and 1. *20 brings the range to between 0 and 20. 
+const randomNumber= Math.random()*20; 
+//Math.floor rounds the random numbers down.
+const randomNumberFloor= Math.floor(randomNumber);
+//Array of all possible answers
 
 1. // This should log "The ball has shaken!"
 // and return the answer.
 function shakeBall() {
 console.log("The ball has shaken!")
 
-//Math.random generates a random number between 0 and 1. *20 brings the range to between 0 and 20. 
-const randomNumber= Math.random()*20; 
-//Math.floor rounds the random numbers down.
-const randomNumberFloor= Math.floor(randomNumber);
-//Array of all possible answers
+
 let answers = [
 
   //## Very positive
@@ -64,10 +64,36 @@ return `${answers[randomNumberFloor]}`;
 console.log(shakeBall());
 
 3. // When checking the answer, we should tell someone if the answer is
-//answerLevelMessage = ["very positive", "positive", "negative", "very negative"];
+	// - very positive
+	// - positive
+	// - negative
+	// - very negative
 
 function checkAnswer() {
+  //Very positive
+  if (randomNumberFloor === 0 || randomNumberFloor === 1 || randomNumberFloor === 2 || randomNumberFloor === 3 || randomNumberFloor === 4) {
+    return "very positive";
+  }
+
+
+  //Positive
+  if (randomNumberFloor === 5 || randomNumberFloor === 6 || randomNumberFloor === 7 || randomNumberFloor === 8 || randomNumberFloor === 9) {
+    return "positive";
+  }
+
+
+  //Negative
+  if (randomNumberFloor === 10 || randomNumberFloor === 11 || randomNumberFloor === 12 || randomNumberFloor === 13 || randomNumberFloor === 14) {
+    return "negative";
+  }
+  // very Negative
+  if (randomNumberFloor === 15 || randomNumberFloor === 16 || randomNumberFloor === 17 || randomNumberFloor === 18 || randomNumberFloor === 19) {
+    return "very negative";
+  }
 }
+
+
+console.log(checkAnswer());
 
 
 
