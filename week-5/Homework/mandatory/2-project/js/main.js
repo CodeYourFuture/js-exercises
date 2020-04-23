@@ -62,7 +62,33 @@ let greenButton = document.querySelector("#greenBtn");
 
 
 
-let alertButton = document.querySelector("#alertBtn");
-alertButton.addEventListener("click", function () {
-    alert("Thank you for visiting Bikes for Refugees!");
-});
+// let alertButton = document.querySelector("#alertBtn");
+// alertButton.addEventListener("click", function () {
+//     alert("Thank you for visiting Bikes for Refugees!");
+// });
+
+function emailValidate(email) {
+  if (email.includes("@") && email.length>0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+function clickListener(event) {
+  event.preventDefault();
+  let emailInput = document.querySelector("#exampleInputEmail1");
+  let messageInput = document.querySelector("#exampleTextarea");
+
+  let emailText = emailInput.value;
+  let messageText = messageInput.value;
+
+  if (emailValidate(emailText) !== true) {
+   alert(document.querySelector("exampleInputEmail1").style.backgroundColor = "#FF0000");
+  } else
+  alert("Thank you for filling out the form");
+}
+
+let submitButton = document.querySelector("#submit-button");
+submitButton.addEventListener("click", clickListener);
