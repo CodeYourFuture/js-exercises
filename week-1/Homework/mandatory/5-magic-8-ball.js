@@ -46,50 +46,43 @@ Very doubtful.
 // This should log "The ball has shaken!"
 // and return the answer.
 
-let answerIndx = 0;
-
-function shakeBall() {
-    console.log("The ball has shaken!")
-    answerIndx = Math.floor(Math.random() * 20);
-    // console.log(answerIndx);
-    // console.log(answer[answerIndx]);
-    return answer[answerIndx];
-}
-
-// The answer should come from shaking the ball
-let answer = ["It is certain", "As I see it, yes", "Reply hazy, try again", "Don't count on it",
+let possibleAnswers = ["It is certain", "As I see it, yes", "Reply hazy, try again", "Don't count on it",
     "It is decidedly so", "Most likely", "Ask again later", "My reply is no",
     "Without a doubt", "Outlook good", "Better not tell you now", "My sources say no",
     "Yes - definitely", "Yes", "Cannot predict now", "Outlook not so good",
     "You may rely on it", "Signs point to yes", "Concentrate and ask again", "Very doubtful"
 ]
 
+function shakeBall() {
+    console.log("The ball has shaken!")
+    let answerIndx = Math.floor(Math.random() * possibleAnswers.length);
+    // console.log(answerIndx);
+    // console.log(answer[answerIndx]);
+    return possibleAnswers[answerIndx];
+}
 
+let answer = shakeBall();
+// The answer should come from shaking the ball
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
 
-function checkAnswer() {
-    console.log(shakeBall());
-    const result = answer.indexOf(`${shakeBall()}`);
+function checkAnswer(answer) {
+    const result = possibleAnswers.indexOf(answer);
+    let message;
     if (result % 4 === 1) {
-        console.log("very positive")
-        return `very positive`
+        message = `very positive`;
     } else if (result % 4 === 2) {
-        console.log("positive")
-        return `positive`
+        message = `positive`
     } else if (result % 4 === 3) {
-        console.log("negative")
-        return `negative`
+        message = `negative`
     } else {
-        console.log("very negative")
-        return `very negative`
+        message = `very negative`
     }
+    return message;
 }
-
-
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
@@ -110,8 +103,6 @@ function test(test_name, expr) {
     logged = undefined;
     console.log(`${test_name}: ${status}`);
 }
-
-const validAnswers = [];
 
 function testAll() {
     const answer = shakeBall();
