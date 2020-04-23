@@ -9,32 +9,35 @@ To be safe, they need to land on the first unamed planet that has Oxygen levels 
 Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
 */
 
-function safeLevels() {
-
+function safeLevels(oxygenLevels) {
+  let safePlanet = oxygenLevels.find(
+    (oxygen) => oxygen > "19.5%" && oxygen < "23.5%"
+  );
+  return safePlanet;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]
-const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]
+const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
+const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"];
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
-    "safeLevels function works - case 2",
-    safeLevels(oxygenLevels1) === "19.9%"
+  "safeLevels function works - case 2",
+  safeLevels(oxygenLevels1) === "19.9%"
 );
 
 test(
-    "safeLevels function works - case 2",
-    safeLevels(oxygenLevels2) === "20.2%"
+  "safeLevels function works - case 2",
+  safeLevels(oxygenLevels2) === "20.2%"
 );
