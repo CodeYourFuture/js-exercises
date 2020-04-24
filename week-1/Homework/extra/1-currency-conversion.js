@@ -28,8 +28,8 @@ function convertToBRL(amountInPound) {
    function addFee(amount){
        const fee=0.01;
        const amountWithFee=amount*(1+fee);
-       return amountWithFee;
-   }
+       return amountWithFee
+   };
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
