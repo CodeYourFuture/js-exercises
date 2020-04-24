@@ -25,10 +25,11 @@ function convertToBRL(priceInPound) {
   return convertedToBrlWithFee;
 }
 
-// function addFee(amount) {
-//   const priceWithFee = amount * 1.01;
-//   return priceWithFee;
-// }
+/* function addFee(amount) {
+   const priceWithFee = amount * 1.01;
+   return priceWithFee;
+  }
+*/
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
