@@ -10,17 +10,16 @@ We made a start on this for you here:
 
 let bottle = {
   volume: 0,
-  fill: function() {
-    if (volume === 0){
-      return false
-    } else {
-      return 100;
+  fill: function(volume) {
+    if(volume !== 0) {
+      return volume = 100;
     }
-
     // calling this function should make you bottles volume = 100;
   },
+
+  bottle.fill();
   drink: function() {
-    bottle.volume = fill - 10;
+    bottle.volume = bottle.fill - 10;
     return volume;
     // calling this function should decrease your bottles volume by 10;
   },
@@ -31,7 +30,7 @@ let bottle = {
     } else {
       return false;
     }
-    // this function should return true if your bottles volume = 0
+    this function should return true if your bottles volume = 0
   }
 };
 
