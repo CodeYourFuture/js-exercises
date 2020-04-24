@@ -72,7 +72,6 @@ let allAnswers  = [
 function shakeBall() {
   console.log("The ball has shaken!");
   let answer = allAnswers[Math.floor(Math.random()* allAnswers.length)];
-  console.log(`The ball has shaken!`);
   return answer;
 };
 
