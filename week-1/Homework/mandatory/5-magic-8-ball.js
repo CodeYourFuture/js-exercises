@@ -46,36 +46,38 @@ Very doubtful.
 // This should log "The ball has shaken!"
 // and return the answer.
 
-function shakeBall() {
-  let answer = [
-    "It is certain.",
-    "It is decidedly so.",
-    "Without a doubt.",
-    "Yes - definitely.",
-    "You may rely on it.",
-    "As I see it, yes.",
-    "Most likely.",
-    "Outlook good.",
-    "Yes.",
-    "Signs point to yes.",
-    "Reply hazy, try again.",
-    "Ask again later.",
-    "Better not tell you now.",
-    "Cannot predict now.",
-    "Concentrate and ask again.",
-    "Don't count on it.",
-    "My reply is no.",
-    "My sources say no.",
-    "Outlook not so good.",
-    "Very doubtful.",
-  ];
+let answer = [
+  "It is certain.",
+  "It is decidedly so.",
+  "Without a doubt.",
+  "Yes - definitely.",
+  "You may rely on it.",
+  "As I see it, yes.",
+  "Most likely.",
+  "Outlook good.",
+  "Yes.",
+  "Signs point to yes.",
+  "Reply hazy, try again.",
+  "Ask again later.",
+  "Better not tell you now.",
+  "Cannot predict now.",
+  "Concentrate and ask again.",
+  "Don't count on it.",
+  "My reply is no.",
+  "My sources say no.",
+  "Outlook not so good.",
+  "Very doubtful.",
+];
 
+function shakeBall() {
   let randomAnswer = answer[Math.floor(Math.random() * answer.length)];
   console.log("The ball has shaken!");
   return randomAnswer;
 }
 
 // The answer should come from shaking the ball
+
+let randomAnswer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
@@ -84,11 +86,12 @@ function shakeBall() {
 // - very negative
 
 function checkAnswer(answer) {
-  if (answer.indexOf(shakeBall) <= 4) {
+  let answerLevelList = answer.indexOf(randomAnswer);
+  if (answerLevelList <= 4) {
     return "very positive";
-  } else if (answer.indexOf(shakeBall) <= 9) {
+  } else if (answerLevelList > 4 && answerLevelList <= 9) {
     return "positive";
-  } else if (answer.indexOf(shakeBall) <= 14) {
+  } else if (answerLevelList > 9 && answerLevelList <= 14) {
     return "negative";
   } else {
     return "very negative";
