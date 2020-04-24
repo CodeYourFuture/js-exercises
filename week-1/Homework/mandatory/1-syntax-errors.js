@@ -14,7 +14,7 @@ function getRemainder(a, b) {
   remainder = a % b;
 
   // Use string interpolation here
-  return "The remainder is" + " " + remainder;
+  return `The remainder is ${remainder}`;
 }
 console.log(getRemainder(23, 5));
 /* ======= TESTS - DO NOT MODIFY ===== */

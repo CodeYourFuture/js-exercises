@@ -60,18 +60,31 @@ function shakeBall() {
 // - positive
 // - negative
 // - very negative
+// function checkAnswer() {
+//   if ((answer == 0, (answer = 1), (answer = 2), (answer = 3))) {
+//     return (answer = "very positive");
+//   }
+//   if ((answer == 4, (answer = 5), (answer = 6), (answer = 7))) {
+//     return (answer = "positive");
+//   }
+//   if ((answer == 8, (answer = 9), (answer = 10), (answer = 11))) {
+//     return (answer = "negative");
+//   }
+
+//   if ((answer == 12, (answer = 13), (answer = 14), (answer = 15))) {
+//     return (answer = "very negative");
+//   }
+// }
 function checkAnswer() {
-  if ((answer == 0, (answer = 1), (answer = 2), (answer = 3))) {
+  if (answer >= 0 && answer <= 4) {
     return (answer = "very positive");
   }
-  if ((answer == 4, (answer = 5), (answer = 6), (answer = 7))) {
-    return (answer = "positive");
+  if (answer > 5 && answer <= 9) {
+    return (answer = " positive");
   }
-  if ((answer == 8, (answer = 9), (answer = 10), (answer = 11))) {
+  if (answer > 9 && answer <= 14) {
     return (answer = "negative");
-  }
-
-  if ((answer == 12, (answer = 13), (answer = 14), (answer = 15))) {
+  } else {
     return (answer = "very negative");
   }
 }
