@@ -5,8 +5,10 @@
   Sales tax is 20% of the price of the product
 */
 
-function calculateSalesTax() {}
-
+function calculateSalesTax(price) {
+return price * 0.2 + price;
+}
+console.log(calculateSalesTax(15));
 /*
   CURRENCY FORMATTING
   ===================
@@ -17,7 +19,11 @@ function calculateSalesTax() {}
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(formating) {
+  const tax = formating * 0.2 + formating;
+  return `£${tax.toFixed (2)}`;
+}
+console.log(formatCurrency(15));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
