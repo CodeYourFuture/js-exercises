@@ -5,8 +5,11 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
-
+function convertToUSD(priceInPound) {
+  const convertedPrice = 1.4 * priceInPound;
+  return convertedPrice;
+}
+console.log(convertToBRL(30));
 /*
   CURRENCY FORMATTING
   ===================
@@ -16,20 +19,29 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(priceInPound) {
+  const convertedToReal = 5.7 * priceInPound;
+  const convertedToBrlWithFee = convertedToReal * 1.01;
+  return convertedToBrlWithFee;
+}
+
+// function addFee(amount) {
+//   const priceWithFee = amount * 1.01;
+//   return priceWithFee;
+// }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('convertToUSD function works', convertToUSD(32) === 44.8)
-test('convertToBRL function works', convertToBRL(30) === 172.71)
+test("convertToUSD function works", convertToUSD(32) === 44.8);
+test("convertToBRL function works", convertToBRL(30) === 172.71);
