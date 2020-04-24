@@ -1,5 +1,5 @@
 // Add comments to explain what this function does. You're meant to use Google!
-//Here Math.random() returns a random number between 0 and 10....eg 5.156564545
+//Here Math.random() returns a random number between 0 and 9.999....eg 5.156564545
 function getNumber() {
     return Math.random() * 10;
 }

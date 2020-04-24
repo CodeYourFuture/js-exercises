@@ -44,18 +44,13 @@ Very doubtful.
 */
 // This should log "The ball has shaken!"
 // and return the answer.
-
-function shakeBall() {
-  console.log("The ball has shaken!");
-  return answer[Math.floor(Math.random())];
-};
-
-// The answer should come from shaking the ball
-
-let answer  = [
+let allAnswers  = [
   //very positive
-  "It is certain.", "It is decidedly so.","Without a doubt.", 
-  "Yes - definitely.", "You may rely on it.", 
+  "It is certain.", 
+  "It is decidedly so."
+  ,"Without a doubt.", 
+  "Yes - definitely.", 
+  "You may rely on it.", 
   ///positive
   "As I see it, yes.", 
   "Most likely.", 
@@ -72,44 +67,36 @@ let answer  = [
     "Don't count on it.", 
     "My reply is no.",  
     "My sources say no.", 
-    "Outlook not so good.", ];
+    "Outlook not so good." ]
 
+function shakeBall() {
+  console.log("The ball has shaken!");
+  let answer = allAnswers[Math.floor(Math.random()* allAnswers.length)];
+  console.log(`The ball has shaken!`);
+  return answer;
+};
 
+// The answer should come from shaking the ball
+
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {
-let answer; if ("It is certain.", "It is decidedly so.","Without a doubt.", 
-"Yes - definitely.", "You may rely on it.") {
-  answer = "very positive"
-} else {
-  if ("As I see it, yes.", 
-  "Most likely.", 
-  "Outlook good.", 
-  "Yes.", 
-  "Signs point to yes.")  {
-    answer = "positive"
-  } else {
-    if ("Reply hazy, try again." ,
-    "Ask again later.", 
-    "Better not tell you now.", 
-    "Cannot predict now.", 
-    "Concentrate and ask again."){
-      answer = "negative"
-    } else {
-      if ("Don't count on it.", 
-      "My reply is no.",  
-      "My sources say no.", 
-      "Outlook not so good.") {
-        answer = "very negative"
-      }
-    }
-  }
-}
-  return answer;
+function checkAnswer(answer) {
+let indexOfAnswer = allAnswers.indexOf(answer); 
+  
+  if (indexOfAnswer <= 4) {
+    return "very positive"
+   } else if (indexOfAnswer > 4 && indexOfAnswer <= 9){
+    return "positive"
+   }  else if (indexOfAnswer > 9 && indexOfAnswer <= 14){
+    return "negative"
+   }  else { 
+    return "very negative"
+   }  
 
 }
 

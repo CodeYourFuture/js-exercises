@@ -6,7 +6,9 @@
 */
 
 function calculateSalesTax(price) {
-  return price + (price*0.2)
+  let tax = price*0.2 ;
+  let total = price + tax;
+  return total; 
 }
 
 /*
@@ -20,9 +22,9 @@ function calculateSalesTax(price) {
 */
 
 
-function formatCurrency(formated) {
+function formatCurrency(price) {
    
-  return "£" + (formated + formated*0.2).toFixed(2);
+  return "£" + calculateSalesTax(price).toFixed(2);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
