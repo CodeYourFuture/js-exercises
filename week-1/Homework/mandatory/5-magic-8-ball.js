@@ -43,22 +43,60 @@ Outlook not so good.
 Very doubtful.
 */
 
-// This should log "The ball has shaken!"
-// and return the answer.
+let possibleAnswers = ["It is certain",
+    "It is decidedly so",
+    "Without a doubt",
+    "Yes - definitely",
+    "You may rely on it",
+
+    "As I see it, yes",
+    "Most likely",
+    "Outlook good",
+    "Yes",
+    "Signs point to yes",
+
+    "Reply hazy, try again",
+    "Ask again later",
+    "Better not tell you now",
+    "Cannot predict now",
+    "Concentrate and ask again",
+
+    "Don't count on it",
+    "My reply is no",
+    "My sources say no",
+    "Outlook not so good",
+    "Very doubtful"];
+
+
 function shakeBall() {
-  console.log(answer);
-  return answer;
+    //floor as array index start from 0, length from 1
+    let answer = possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+    console.log(`The ball has shaken!`);
+    return answer;
 }
 
 // The answer should come from shaking the ball
-let answer = "The ball has shaken!";
-
+let answer = shakeBall();
+ 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+    let answerIndexinList = possibleAnswers.indexOf(answer);
+    if (answerIndexinList <= 4) {
+        return `very positive`;
+    } else if (answerIndexinList > 4 && answerIndexinList <= 9) {
+        return `positive`;
+    } else if (answerIndexinList > 9 && answerIndexinList <= 14) {
+        return `negative`;
+    } else {
+        return "very negative";
+    }
+
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
