@@ -27,11 +27,16 @@ After you've watched these videos I'd like you to answer these questions
 ## 1. What do you think the most important quality for a programmer is?
 
 <!-- Write your answer here -->
+Problem-solving skills are almost important asset wanted by employers.
 
 ## 2. When trying to solve a challenge, what should you do first?
 
 <!-- Write your answer here -->
+Understand the problem.
+Divide it into smaller bits.
+Fix bugs and errors.
 
 ## 3. What should you do if you get stuck?
 
 <!-- Write your answer here -->
+Debug with console log or inspect from chrome browser.
