@@ -21,7 +21,7 @@ console.log(calculateSalesTax(15));
 
 function formatCurrency(formatig) {
   const tax = formatig * 0.2 + formatig;
-  return `£${tax.toFixed(2)}`;
+  return `£ ${tax.toFixed(2)}`;
 }
 
 console.log(formatCurrency(15));

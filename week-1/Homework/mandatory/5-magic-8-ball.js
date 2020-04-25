@@ -46,73 +46,73 @@ Very doubtful.
 // This should log "The ball has shaken!"
 // and return the answer.
 let answer;
-let ans = Math.floor(Math.random() * 17);
+let Randomnumber = Math.floor(Math.random() * 17);
 function shakeBall() {
   console.log("The ball has shaken!");
 
-  if (ans === 0) {
+  if (Randomnumber === 0) {
     return (answer = " It is certain");
   }
-  if (ans === 1) {
+  if (Randomnumber === 1) {
     return (answer = "Without a doubt");
   }
-  if (ans === 2) {
+  if (Randomnumber === 2) {
     return (answer = "Yes - definitely");
   }
-  if (ans === 3) {
+  if (Randomnumber === 3) {
     return (answer = "You may rely on it");
   }
   //very positive
-  if (ans === 4) {
+  if (Randomnumber === 4) {
     return (answer = " As I see it, yes");
   }
-  if (ans === 5) {
+  if (Randomnumber === 5) {
     return (answer = "Most likely");
   }
-  if (ans === 6) {
+  if (Randomnumber === 6) {
     return (answer = "Yes");
   }
-  if (ans === 7) {
+  if (Randomnumber === 7) {
     return (answer = "Signs point to yes");
   }
 
-  if (ans === 8) {
+  if (Randomnumber === 8) {
     return (answer = "Outlook good");
   }
 
   //Negative
-  if (ans === 9) {
+  if (Randomnumber === 9) {
     return (answer = " Reply hazy, try again");
   }
-  if (ans === 10) {
+  if (Randomnumber === 10) {
     return (answer = "Ask again later");
   }
-  if (ans === 11) {
+  if (Randomnumber === 11) {
     return (answer = "Better not tell you nows");
   }
-  if (ans === 12) {
+  if (Randomnumber === 12) {
     return (answer = "Cannot predict now");
   }
 
-  if (ans === 13) {
+  if (Randomnumber === 13) {
     return (answer = "Concentrate and ask again");
   }
 
   //Very negative
-  if (ans === 14) {
+  if (Randomnumber === 14) {
     return (answer = "Don't count on it");
   }
-  if (ans === 15) {
+  if (Randomnumber === 15) {
     return (answer = "My reply is no");
   }
-  if (ans === 16) {
+  if (Randomnumber === 16) {
     return (answer = "My sources say no");
   }
-  if (ans === 17) {
+  if (Randomnumber === 17) {
     return (answer = "Outlook not so good");
   }
 
-  if (ans === 18) {
+  if (Randomnumber === 18) {
     return (answer = "Very doubtful");
   }
 }
@@ -127,21 +127,44 @@ function shakeBall() {
 
 function checkAnswer() {
   //Very positive
-  if (ans === 0 || ans === 1 || ans === 2 || ans === 3) {
+  if (
+    Randomnumber === 0 ||
+    Randomnumber === 1 ||
+    Randomnumber === 2 ||
+    Randomnumber === 3
+  ) {
     return (answer = "very positive");
   }
 
   //Positive
-  if (ans === 4 || ans === 5 || ans === 6 || ans === 7 || ans === 8) {
+  if (
+    Randomnumber === 4 ||
+    Randomnumber === 5 ||
+    Randomnumber === 6 ||
+    Randomnumber === 7 ||
+    Randomnumber === 8
+  ) {
     return (answer = "positive");
   }
 
   //Negative
-  if (ans === 9 || ans === 10 || ans === 11 || ans === 12 || ans === 13) {
+  if (
+    Randomnumber === 9 ||
+    Randomnumber === 10 ||
+    Randomnumber === 11 ||
+    Randomnumber === 12 ||
+    Randomnumber === 13
+  ) {
     return (answer = "negative");
   }
   // very Negative
-  if (ans === 14 || ans === 15 || ans === 16 || ans === 17 || ans === 18) {
+  if (
+    Randomnumber === 14 ||
+    Randomnumber === 15 ||
+    Randomnumber === 16 ||
+    Randomnumber === 17 ||
+    Randomnumber === 18
+  ) {
     return (answer = "very negative");
   }
 }
