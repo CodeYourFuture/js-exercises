@@ -25,13 +25,25 @@ Take a look at the following resources to learn more about problem solving as ap
 After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
+The most important quality is by far the problem solving skill. 
+Also being a visual learner makes the problem solving easier. 
 
 <!-- Write your answer here -->
 
 ## 2. When trying to solve a challenge, what should you do first?
-
+You have to to first understand the problem.
+Plan your solution!
+Once you understand, split into small pieces 
+Unstuck bugs/ understanding how to fix the bug is a challenge. Explain it to rubber duck again. ut it loudly to someone.
+Try to problem solve on anything, not only coding but math, science, sudoku e.g.
+Keep practising/ 
 <!-- Write your answer here -->
 
 ## 3. What should you do if you get stuck?
+
+You can explain the problem to a rubber duck. Or you cab speak to Ted Talk
+Think; Computational Problem Solving
+Divide into smaller pieces / Decomposition
+This is always an opportunity to a Ask a friend
 
 <!-- Write your answer here -->
