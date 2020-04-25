@@ -5,8 +5,9 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD(priceInPound) {
-return (priceInPound * 1.4);
+function convertToUSD(priceInUSD) {
+  let finalPrice;
+return finalPrice = priceInUSD * 1.4;
 }
 
 console.log(convertToUSD(32));
@@ -20,7 +21,7 @@ console.log(convertToUSD(32));
 */
 
 function convertToBRL(priceInPound) {
-let priceInBRL = (priceInPound * 5.7);
+let priceInBRL = priceInPound * 5.7;
 let fee = priceInBRL * 0.01;
 return priceInBRL + fee;
 }
