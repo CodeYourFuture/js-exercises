@@ -37,8 +37,8 @@ function submit() {
     alert("Please fill all fields!");
     return false;
   } else {
-    let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    let book = new Book(author.value, title.value, pages.value, check.checked);
+    myLibrary.push(book);
     render();
   }
 }
@@ -66,18 +66,19 @@ function render() {
     let cell3 = row.insertCell(2);
     let cell4 = row.insertCell(3);
     let cell5 = row.insertCell(4);
-    cell1.innerHTML = myLibrary[i].title;
-    cell2.innerHTML = myLibrary[i].author;
+    cell1.innerHTML = myLibrary[i].author;
+    cell2.innerHTML = myLibrary[i].title;
     cell3.innerHTML = myLibrary[i].pages;
 
     //add and wait for action for read/unread button
     let changeBut = document.createElement("button");
     changeBut.id = i;
-    changeBut.className = "btn btn-success";
+    
     cell4.appendChild(changeBut);
     let readStatus = "";
-    if (myLibrary[i].check == false) {
+    if (myLibrary[i].check == true) {
       readStatus = "Yes";
+      changeBut.className = "btn btn-success";
     } else {
       readStatus = "No";
     }
@@ -94,7 +95,7 @@ function render() {
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
     delBut.innerHTML = "Delete";
-    delBut.addEventListener("clicks", function () {
+    delBut.addEventListener("click", function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
