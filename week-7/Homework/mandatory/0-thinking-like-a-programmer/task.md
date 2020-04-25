@@ -26,12 +26,18 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
+The most important quality for a programmer is thinking. Thinking to the last small detail and be able to organize the thoughts into a structure, an "algorithm". And from here the abstract thinking and problem solving skills develops.
+
 <!-- Write your answer here -->
 
 ## 2. When trying to solve a challenge, what should you do first?
 
+First you have to UNDERSTAND. And then de-frag the challenge in chapters.
+
 <!-- Write your answer here -->
 
 ## 3. What should you do if you get stuck?
+
+You have to go to the begging and analyze step by step , comment the parts that it's working, maybe export chunks of code and test them in another environment and if you don't find the problem, DELETE all and start again from question number 1.
 
 <!-- Write your answer here -->
