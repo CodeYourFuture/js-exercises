@@ -6,14 +6,14 @@ Today, you will be applying the sorting algorithm you used in that exercise in c
 
 Create a function called sortAges which:
 - takes an array of mixed data types as input
-- removes any non-number data types without using the built-in javascript filter method
+- removes any non-number data types without using the built-in javascript filter method 
 - returns an array of sorted ages in ascending order 
   - HARD MODE - without using the built-in javascript sort method 😎
 
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
-
+//Think about nested loops
 function sortAges(arr) {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
