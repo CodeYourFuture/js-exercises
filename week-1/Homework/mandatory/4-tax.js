@@ -21,11 +21,9 @@ calculateSalesTax(15);
 */
 
 function formatCurrency(price) {
-  var num = calculateSalesTax(price);
-  var num2 = num.toFixed(2)
-  return "£" + num2;
+  var convertPriceTo2Decimal = calculateSalesTax(price).toFixed(2)
+  return "£" + convertPriceTo2Decimal
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
