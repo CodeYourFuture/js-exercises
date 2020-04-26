@@ -20,7 +20,7 @@ function calculateSalesTax(sales) {
 */
 
 function formatCurrency(sales) {
-  var sales1 = sales * 1.2;
+  var sales1 = sales *  1.2;
   console.log("£" + sales1.toFixed(2));
   return "£" + sales1.toFixed(2);
 }
