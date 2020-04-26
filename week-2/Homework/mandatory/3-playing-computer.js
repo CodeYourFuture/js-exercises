@@ -1,3 +1,9 @@
+// Playing computer
+//
+// Aim: to understand and predict the answers of loops, and if statmetns
+//
+// You need write the answers of the below questions  1-7
+
 /*
   You have to predict the output of this program WITHOUT EXECUTING IT.
 
@@ -18,11 +24,11 @@
 let x = 2;
 let a = 6;
 
-const f1 = function(a, b) {
+const f1 = function (a, b) {
   return a + b;
 };
 
-const f2 = function(a, b) {
+const f2 = function (a, b) {
   return a + b + x;
 };
 
