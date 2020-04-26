@@ -12,7 +12,7 @@ For your homework, we'll be using [**test driven development**](https://medium.c
 
 ## Reading List
 
-To challenge yourself even further, you can get ahead for next week's class by reading some of the below documentation:
+To challenge yourself even further, you ca n get ahead for next week's class by reading some of the below documentation:
 
 - [ ] More on the node REPL: https://hackernoon.com/know-node-repl-better-dbd15bca0af6
 - [ ] `while` loops: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while
