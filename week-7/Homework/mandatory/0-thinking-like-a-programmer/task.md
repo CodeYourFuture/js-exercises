@@ -39,11 +39,11 @@ After you've watched these videos I'd like you to answer these questions
  
 <!-- Write your answer here -->
 Following are the steps what i will do
-Understand what is the challenge.
-Repeat myself again and again until I can explain someone what is my challenge.
-Breakdown the challenge into small tasks.
-Research similar solution and understand the solution. 
-Solve the challenge piece by piece.
+- Understand what is the challenge.
+- Repeat myself again and again until I can explain someone what is my challenge.
+- Breakdown the challenge into small tasks.
+- Research similar solution and understand the solution. 
+- Solve the challenge piece by piece.
 
 
 
@@ -51,3 +51,4 @@ Solve the challenge piece by piece.
 
 <!-- Write your answer here -->
 If I get suck , I will write down and draw what is my problem . Then I read out line by line what I did to solve the problem.Explain to rubber Duck what I done and what I want to do. 
+
