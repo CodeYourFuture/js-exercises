@@ -19,19 +19,22 @@ The second skill, problem solving, is the most important one. If you get good at
 Take a look at the following resources to learn more about problem solving as applied to programming:
 
 [How to THINK like a programmer](https://www.youtube.com/watch?v=NNazO2tMHno)
-[Lessons in problem solving](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/)
+[Lessons in problem solving](https://www.freecodecamp.org/news/how-to-think-like-a-programm
+er-lessons-in-problem-solving-d1d8bf1de7d2/)
 [Computational thinking](https://www.youtube.com/watch?v=qbnTZCj0ugI)
 
 After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
-<!-- Write your answer here -->
+The most important quality for a programmer is Problem solving skills
 
 ## 2. When trying to solve a challenge, what should you do first?
 
-<!-- Write your answer here -->
+Try to Understand the question, such that you will be able to write it in plain language
 
 ## 3. What should you do if you get stuck?
 
-<!-- Write your answer here -->
+1. Debug the solution to identify the problem
+2. Reassess the the problem, look at the problem from another perspective or write new code
+3. Research about the problem on google
