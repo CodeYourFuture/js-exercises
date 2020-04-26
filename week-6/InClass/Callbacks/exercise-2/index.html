@@ -3,16 +3,14 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <title>CodeYourFuture - Callbacks</title>
   <meta name="description" content="Callbacks">
   <meta name="author" content="CodeYourFuture">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      padding: 30px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+   
 </head>
 
 <body>
@@ -20,30 +18,37 @@
     <div class="jumbotron">
       <h1>My movies</h1>
       <div id="all-movies">
-        <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
       </div>
+      <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
     </div>
-    <form>
-      <h3>Add your movie</h3>
-      <div class="form-input">
+
+    <form class="form">
+      <h3>create your movie</h3>
+
+      <div>
         <label> Title</label>
-        <input id="form-title" type=text; placeholder="enter title">
+        <input type=text id="form-title"  placeholder="title">
       </div>
-      <div class="form-input">
+
+      <div>
         <label> Director</label>
-        <input id="form-director" type=text; placeholder="enter director">
+        <input type=text id="form-director"  placeholder="director">
       </div>
-      <div class="form-input">
+
+      <div>
         <label>Type</label>
-        <input id="form-type" type=text; placeholder="enter type">
+        <input type=text id="form-type" placeholder="film type">
       </div>
-      <div class="form-input">
-        <label> Have you watched the movie?</label>
-        <input id="form-watched" type=text; placeholder="enter yes/no">
+
+      <div>
+        <label>Have you watched?</label>
+        <input type=text id="form-watched"  placeholder="yes/no">
       </div>
-      <button id="form-button">Save</button>
     </form>
+
+<button id="form-button">Save</button>
     <script src="exercise.js"></script>
+
 </body>
 
 </html>

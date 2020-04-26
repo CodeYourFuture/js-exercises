@@ -64,6 +64,7 @@ const movies = [
 
 // create showMovies function
 function showMovies() {
+  document.getElementById("all-movies").textContent = "";
   setTimeout(function () {
     movies.forEach((movie) => {
       let pElement = document.createElement("p");
@@ -92,25 +93,18 @@ showMovies();
 // create addMovies function
 
 let button = document.getElementById("form-button");
-button.addEventListener("click", clickButton);
+button.addEventListener("click", clickSaveButton);
 
-function clickButton(event) {
-  event.preventDefault();
+function clickSaveButton() {
   let userMovie = {
     title: document.getElementById("form-title").value,
     director: document.getElementById("form-director").value,
-    genre: document.getElementById("form-genre").value,
-    // watched: function () {
-    //   let watched = document.getElementById("form-watched").value;
-    //   watched.toLowercase();
-    //   if (watched === "yes") {
-    //     return (watched = true);
-    //   } else if (watched === "no") {
-    //     return (watched = false);
-    //   }
-    // },
+    type: document.getElementById("form-type").value,
+    haveWatched: true,
   };
-
-  addMovies(userMovie, showMovies);
-  document.querySelector("form").reset();
+  console.log(userMovie);
+  addMovie(userMovie);
+  showMovies();
 }
+
+//addMovie(userMovie);
