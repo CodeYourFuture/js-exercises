@@ -17,6 +17,7 @@
 */
 
 function add(num1, num2) {
+  //  return (num1 * 10 + num2 * 10) / 10; or use parseFloat
   return num1 + num2;
 }
 

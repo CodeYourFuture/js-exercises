@@ -1,3 +1,20 @@
+/*we will have it on gist github
+share it with all
+*/
+
+//#region Concepts
+
+/*
+1-what they want
+2-input
+3-output
+4-logic
+5-test
+*/
+//#endregion
+//#region Mandatory
+
+//#region Ex1_solved
 // There are syntax errors in this code - can you fix it to pass the tests?
 
 function addNumbers(a, b, c) {
@@ -5,13 +22,13 @@ function addNumbers(a, b, c) {
 }
 
 function introduceMe(name, age) {
-  const greeting =
-    "Hello, my name is " + name + " and I am " + age + " years old";
-  return greeting;
+  //Don't need () around return, only when multi lines
+  return `Hello, my name is ${name} and I am ${age} years old`;
 }
 
 function getRemainder(a, b) {
   const remainder = a % b;
+  //String interpolation= easy to read,speed and memory save in case of many lines
   // Use string interpolation here
   return `The remainder is ${remainder}`;
 }
