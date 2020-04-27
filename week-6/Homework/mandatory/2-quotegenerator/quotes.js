@@ -491,29 +491,25 @@ const quotes = [
   },
 ];
 
-document.getElementById("newqoute").addEventListener("click", changeQoute);
-let title = document.getElementById("qoute");
+document.getElementById("newquote").addEventListener("click", changeQuote);
+let title = document.getElementById("quote");
 let p = document.getElementById("author");
-let qouteObject = pickFromArray(quotes);
-title.innerHTML = qouteObject.quote;
-p.innerText = qouteObject.author;
+changeQuote();
 
-function changeQoute() {
-  let qouteObject = pickFromArray(quotes);
-  title.innerHTML = qouteObject.quote;
-  p.innerText = qouteObject.author;
+function changeQuote() {
+  let quoteObject = pickFromArray(quotes);
+  title.innerText = quoteObject.quote;
+  p.innerText = quoteObject.author;
 }
 let switchButton = document
   .getElementById("switch")
   .addEventListener("click", switchAuto);
 
-let intervalId = -1;
+let intervalId;
 function switchAuto() {
   if (intervalId == -1) {
     intervalId = setInterval(() => {
-      let qouteObject = pickFromArray(quotes);
-      title.innerHTML = qouteObject.quote;
-      p.innerText = qouteObject.author;
+      changeQuote();
     }, 2000);
     document.getElementById("switch").style.backgroundColor = "red";
     document.getElementById("switch").innerText = "Off";

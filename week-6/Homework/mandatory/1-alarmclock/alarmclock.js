@@ -1,15 +1,29 @@
 let backgroundColors;
-let intervalId = -1;
-let inputValue = 0;
-let remainingTime = 0;
+let intervalId;
+let remainingTime;
+let timeRemain;
 
+function displayTime(inputTime) {
+  timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputTime)}`;
+}
+function setIntervalTime(inputValueTime) {
+  intervalId = setInterval(function () {
+    inputValueTime--;
+    remainingTime = inputValueTime;
+    displayTime(inputValueTime);
+    if (Number(inputValueTime) === 0) {
+      changeBackgroundColor();
+      playAlarm(audio);
+      clearInterval(intervalId);
+    }
+  }, 1000);
+}
 function changeBackgroundColor() {
   backgroundColors = setInterval(changeColor, 500);
 }
 function changeColor() {
-  let body = document.querySelector("body");
-  body.style.backgroundColor =
-    body.style.backgroundColor == "crimson" ? "#0083B0" : "crimson";
+  document.body.style.backgroundColor =
+    document.body.style.backgroundColor == "crimson" ? "#0083B0" : "crimson";
 }
 function stopChangeBackgroundColor() {
   clearInterval(backgroundColors);
@@ -18,82 +32,58 @@ function stopChangeBackgroundColor() {
 function fancyTimeFormat(time) {
   let minutes = Math.floor(time / 60);
   let seconds = time - minutes * 60;
-  let newTime = "";
-  newTime +=
-    "" + minutes.toString().padStart(2, "0") + ":" + (seconds < 10 ? "0" : "");
-  newTime += "" + seconds;
+  let newTime =
+    minutes.toString().padStart(2, "0") +
+    ":" +
+    seconds.toString().padStart(2, "0");
   return newTime;
 }
 
 function setAlarm() {
+  timeRemain = document.getElementById("timeRemaining");
   clearInterval(intervalId);
-  let timeRemain = document.getElementById("timeRemaining");
   inputValue = document.getElementById("alarmSet").value;
-  if (inputValue == "") {
-    setAlarm();
+  displayTime(inputValue);
+  if (Number(inputValue) === 0) {
+    alert("Please set the time");
+  } else {
+    setIntervalTime(inputValue);
   }
-  timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputValue)}`;
-
-  intervalId = setInterval(function () {
-    inputValue--;
-    timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(inputValue)}`;
-    if (inputValue == 0) {
-      changeBackgroundColor();
-      playAlarm(audio);
-      clearInterval(intervalId);
-    }
-    remainingTime = inputValue;
-  }, 1000);
   document.getElementById("stop").addEventListener("click", () => {
-    document.querySelector("body").style.backgroundColor = "#0083B0";
+    document.body.style.backgroundColor = "#0083B0";
     stopChangeBackgroundColor();
-    timeRemain.textContent = `Time Remaining: 00:00`;
-    inputValue = 0;
-    clearInterval(intervalId);
-  });
-}
-function pauseResume() {
-  clearInterval(intervalId);
-  if (inputValue == "") {
     timeRemain.textContent = `Time Remaining: 00:00`;
     document.getElementById("alarmSet").value = "";
     clearInterval(intervalId);
-  }
-  if (intervalId == -1) {
-    document.getElementById("pause").innerText = "Pause";
-    document.getElementById("pause").style.backgroundColor = "rgb(0,128,128)";
-    let timeRemain = document.getElementById("timeRemaining");
-    intervalId = setInterval(() => {
-      remainingTime--;
-      timeRemain.textContent = `Time Remaining: ${fancyTimeFormat(
-        remainingTime
-      )}`;
-      if (remainingTime == 0) {
-        changeBackgroundColor();
-        playAlarm(audio);
-        clearInterval(intervalId);
-      }
-    }, 1000);
+    pauseAlarm(audio);
+  });
+  document.getElementById("pause").innerText = "Pause";
+  document.getElementById("pause").style.backgroundColor = "rgb(0,128,128)";
+}
+function pauseResume() {
+  // clearInterval(intervalId);
+  if (Number(remainingTime) === 0) {
   } else {
-    clearInterval(intervalId);
-    intervalId = -1;
-    document.getElementById("pause").innerText = "Resume";
-    document.getElementById("pause").style.backgroundColor = "green";
+    if (intervalId == -1) {
+      document.getElementById("pause").innerText = "Pause";
+      document.getElementById("pause").style.backgroundColor = "rgb(0,128,128)";
+      setIntervalTime(remainingTime);
+    } else {
+      clearInterval(intervalId);
+      intervalId = -1;
+      document.getElementById("pause").innerText = "Resume";
+      document.getElementById("pause").style.backgroundColor = "green";
+    }
   }
 }
+
 // DO NOT EDIT BELOW HERE
 
 let audio = new Audio("alarmsound.mp3");
 function setup() {
   document.getElementById("alarmSet").placeholder = "seconds";
 
-  document.getElementById("set").addEventListener("click", () => {
-    setAlarm();
-  });
-
-  document.getElementById("stop").addEventListener("click", () => {
-    pauseAlarm(audio);
-  });
+  document.getElementById("set").addEventListener("click", setAlarm);
 
   document.getElementById("pause").addEventListener("click", pauseResume);
 }

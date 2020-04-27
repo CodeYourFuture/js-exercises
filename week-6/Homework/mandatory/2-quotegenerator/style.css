@@ -25,7 +25,7 @@ body {
     align-items: center;
 }
 
-#newqoute {
+#newquote {
     position: fixed;
     border: none;
     background-color: #ed213a;
@@ -37,13 +37,14 @@ body {
     margin-top: 9em;
     margin-left: 25em;
     border-radius: 2em;
+    cursor: pointer;
 }
 
-#newqoute:focus {
+#newquote:focus {
     border: 2px solid white;
 }
 
-#newqoute:hover {
+#newquote:hover {
     background: #93291e
 }
 
@@ -71,6 +72,7 @@ img {
 #switch-button {
     text-align: center;
     margin-bottom: 2em;
+
 }
 
 #switch-button p {
@@ -84,6 +86,7 @@ img {
     background-color: green;
     color: white;
     border-radius: 2em;
+    cursor: pointer;
 }
 
 
@@ -93,7 +96,7 @@ img {
         width: 100%;
     }
 
-    #newqoute {
+    #newquote {
         margin-left: 15em;
     }
 }

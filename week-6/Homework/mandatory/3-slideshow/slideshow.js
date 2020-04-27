@@ -1,8 +1,11 @@
 // Write your code here
 
 let slideIndex = 1;
+let current = document.getElementsByClassName("active");
+let pauseBtn = document.getElementById("Pause");
+let autoForwardBtn = document.getElementById("autoForward");
 
-function plusSlide(n) {
+function forwardSlide(n) {
   clearInterval(intervalId);
   slideShow((slideIndex += n));
 }
@@ -31,21 +34,19 @@ function enterSpeed() {
   let inputValue = document.getElementById("input").value;
   if (inputValue == "") {
     alert("You didn't enter any value!");
-    let pauseBtn = document.getElementById("Pause");
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    activeBtn(current);
     pauseBtn.className += " active";
     clearInterval(intervalId);
   } else {
     secondsForInterval = inputValue * 1000;
-    let autoForwardBtn = document.getElementById("autoForward");
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    activeBtn(current);
     autoForwardBtn.className += " active";
     autoForward();
   }
 }
-
+function activeBtn(btn) {
+  btn[0].className = btn[0].className.replace(" active", "");
+}
 function autoForward() {
   clearInterval(intervalId);
   intervalId = setInterval(() => {
@@ -78,8 +79,7 @@ let allBtns = document.getElementById("allBtns");
 let btns = allBtns.getElementsByClassName("btn");
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
+    activeBtn(current);
     this.className += " active";
   });
 }
