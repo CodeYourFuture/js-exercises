@@ -24,7 +24,7 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+<!-- Write your answer here-->
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
