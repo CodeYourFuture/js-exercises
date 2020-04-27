@@ -7,11 +7,16 @@ Write a function that:
 */
 
 function tidyUpString(strArr) {
-  // var wordTrim = strArr.trim("");
-  // var wordLower = wordTrim.toLowerCase();
-  // var wordClean = wordLower.replace(/\/$/, "");
-  // return wordClean;
+  for (i = 0; i < strArr.length; i++) {
+    strArr[i] = strArr[i].trim();
+    strArr[i] = strArr[i].replace("/", "");
+    strArr[i] = strArr[i].toLowerCase();
+  }
+  console.log(strArr[i]);
+  return strArr;
 }
+
+//try map method.....
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -38,7 +43,9 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  let newArr = arr.splice(index, 1);
+  return newArr; // complete this statement
+  console.log(newArr);
 }
 
 /*
