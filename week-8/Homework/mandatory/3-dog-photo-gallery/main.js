@@ -6,6 +6,7 @@ fetch(`https://dog.ceo/api/breeds/image/random`)
 .then(function(pic){
     console.log(pic)
     let ul=document.querySelector("ul");
+    ul.style.listStyleType=("none");
     let newLi = document.createElement("li");
     ul.appendChild(newLi);
     
@@ -15,6 +16,7 @@ fetch(`https://dog.ceo/api/breeds/image/random`)
 });
 };
 let btn = document.querySelector("button");
+    btn.textContent = "make a dog please"
     btn.addEventListener("click", newTile);
 
 

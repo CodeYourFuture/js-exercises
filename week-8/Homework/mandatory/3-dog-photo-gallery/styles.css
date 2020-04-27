@@ -1,0 +1,18 @@
+ul{
+    display:flex;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+}
+li{
+    width:30vw;
+    height:20vh;
+    
+}
+img{
+    width:30vw;
+    height:20vh;
+    object-fit:cover;
+}
+button{
+    margin-left:2.5vw;
+}
