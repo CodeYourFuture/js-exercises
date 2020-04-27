@@ -22,6 +22,7 @@
   .alarmSetInput {
     margin-bottom:5%;
     margin-right: 5%;
+    width: 70%;
   }
 
   .alarm_remaining{
@@ -33,7 +34,7 @@
 
   .myButtons{
     display: inline-flex;
-    margin-top:5%; 
+    margin-top:5%;
     font-size: medium; 
   }
   .border_radius{
@@ -49,12 +50,19 @@
   .settime_font{
     display: inline-flex;
     justify-content: space-around;
-    font-size:medium;
+    font-size:large;
+    padding-right: 6%;
+    padding-top: 5%;
     color:rgb(14, 12, 12);
   }
 
-  div.settime_font{
-    display:inline-flexbox;
+  .settime_container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .fix_margin{
     margin-right: 0 rem;
@@ -65,22 +73,38 @@
     font-size:110%;
     margin-bottom: 3rem;
     display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .alarmSetInput {
+    margin-bottom:5%;
+    margin-right: 5%;
+    text-align: center;
   }
   .myButtons{
     display: inline-flexbox;
     margin-top:5%; 
-    font-size: large; 
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto; 
   }
   .settime_font{
     display: inline-flexbox;
     justify-content: space-around;
     font-size:large;
+    margin-left: auto;
   }
   .centre{
     display:grid;
   }
-  div.settime_font{
-    display:inline-flexbox;
+  .settime_container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: medium;
   }
   .fix_margin{
     margin-right: 0.5rem;
@@ -107,6 +131,15 @@
   
   .alarmSetInput {
     margin-bottom:5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+  .settime_container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-left: 5%;
     margin-right: 5%;
   }
   
