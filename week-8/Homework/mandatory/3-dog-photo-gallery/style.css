@@ -1,0 +1,9 @@
+ul {
+  list-style-type: none;
+}
+#content {
+  text-align: center;
+}
+#image {
+  border: 3px groove black;
+}
