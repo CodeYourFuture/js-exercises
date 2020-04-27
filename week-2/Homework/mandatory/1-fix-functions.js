@@ -46,7 +46,7 @@ function sortArray() {
   return sortedLetters;
 }
 
-// 4) first5 function shold return the first 5 elements of array
+// 4) first5 function should return the first 5 elements of array
 //    Hint: use the Array method splice()
 //    Remember to Google how to use splice()
 
@@ -57,7 +57,7 @@ function first5() {
   return sliced;
 }
 
-// 5) get3rdIndex function needs to take an array `arr` give 
+// 5) get3rdIndex function needs to take an array `arr` and give 
 //    back third element value.
 //    For example with array `[1, 2, 3, 4, 5]` it needs to return `4`
 //
