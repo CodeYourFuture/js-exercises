@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(15, 41, 41);
+}
+.container{
+ justify-content: center;
+ align-content: center;
+}
+
+.card{
+    width: 80%;
+}
+
+.card-header{
+    font-size: 50px;
+    font-family: 'Libre Baskerville', serif;
+}
+.card-title{
+    text-align: center;
+    border-radius: 10%;
+}
+.btn{
+    display: flex;
+    width: 50%;
+    text-align: center;
+}
+ul{
+    display: list-item;
+    justify-content:space-around;
+    list-style-type: none;
+}
