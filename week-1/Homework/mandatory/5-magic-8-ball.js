@@ -45,22 +45,66 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+let possibleAnswers = [
+  "It is certain.",
+  "It is decidedly so.",
+  "Without a doubt.",
+  "Yes - definitely.",
+  "You may rely on it.",
 
+  "As I see it, yes.",
+  "Most likely.",
+  "Outlook good.",
+  "Yes.",
+  "Signs point to yes.",
+
+  "Reply hazy, try again.",
+  "Ask again later.",
+  "Better not tell you now.",
+  "Cannot predict now.",
+  "Concentrate and ask again.",
+
+  "Don't count on it.",
+  "My reply is no.",
+  "My sources say no.",
+  "Outlook not so good.",
+  "Very doubtful",
+];
+function shakeBall() {
+  console.log("The ball has shaken!");
+
+  const answerOfShaking =
+    possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+  return answerOfShaking;
+}
+
+let answer = shakeBall();
 // The answer should come from shaking the ball
-let answer;
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  let indexOfAnswer = possibleAnswers.indexOf(answer);
 
+  let message;
+  if (indexOfAnswer <= 4) {
+    return "very positive";
+  } else if (indexOfAnswer <= 9) {
+    return "positive";
+  } else if (indexOfAnswer <= 14) {
+    return "Negative";
+  } else {
+    return "very Negative";
+  }
+}
+console.log(checkAnswer(answer));
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };

@@ -1,5 +1,5 @@
 // Add comments to explain what this function does. You're meant to use Google!
-// The Math. random() function is used to return a floating-point pseudo-random number between range [0,1)
+// The Math. random() function is used to return a floating-point pseudo-random number between range [0,1]
 function getNumber() {
   return Math.random() * 10;
 }
