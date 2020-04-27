@@ -24,6 +24,11 @@ function convertToBRL(pound) {
   return total + final;
 }
 
+function addExtra(money){ 
+
+  return money*1.01;
+  
+  }
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
