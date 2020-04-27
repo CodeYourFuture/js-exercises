@@ -24,8 +24,16 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+   https://api.github.com/repos/CodeYourFuture/js-exercises/pulls/699
+   Amazing, this is my pull request in CodeYourFuture / js-exercises and my pull request number in #699
+   Actuly comments doesnt work for me inested comments I used commits an show me all my commits in my pull request
+   https://api.github.com/repos/CodeYourFuture/js-exercises/pulls/699/commits
+
+   Or this one is my tv show project api
+   https://api.github.com/repos/AKaramifar/tv-show-dom-project
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+   owner : user login
+   repo : repository 
+   pull_number : pull request number (for me it was #699 for week 7 pull request)
