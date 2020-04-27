@@ -24,8 +24,10 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+Answer:
+it will return all comments inside the mentioned  pull_number
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
-
-<!-- Write your answer here -->
+`{owner}` : person 's github Id
+`{repo}` : specific repo we want
+ `{pull_number}` : the specific pull number we want
