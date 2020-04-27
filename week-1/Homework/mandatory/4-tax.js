@@ -11,7 +11,7 @@ function calculateSalesTax(price) {
 return finalprice;
 }
 
-console.log(calculateSalesTax(10));
+console.log(calculateSalesTax(17.5));
 
 
 
@@ -32,7 +32,7 @@ let number = calculateSalesTax(price);
 return currency + number.toFixed(2);
 }
 
-console.log(formatCurrency(10));
+console.log(formatCurrency(15));
 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
