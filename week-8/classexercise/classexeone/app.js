@@ -1,4 +1,3 @@
-
 const display = document.getElementById('show')
 fetch("users.json")
 .then( res => res.json())
