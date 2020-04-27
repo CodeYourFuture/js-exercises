@@ -1,10 +1,10 @@
 # Your Details
 
-Your Name:
-Your City:
-Your Slack Name:
+Your Name: Nawal
+Your City: Manchester
+Your Slack Name: Nawal C
 
 # Homework Details
 
-Module:
-Week:
+Module: JS1
+Week:1
