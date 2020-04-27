@@ -5,11 +5,17 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-
+body {
+  background-color: black;
+}
 #alarmSet {
   margin: 20px;
 }
 
 h1 {
-  text-align: center;
+  min-width: 600px;
+  text-align: left;
+  font-family: "Orbitron", sans-serif;
+  color: red;
+  text-shadow: 2px 2px 5px red;
 }

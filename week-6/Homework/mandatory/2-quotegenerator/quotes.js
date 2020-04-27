@@ -1,3 +1,17 @@
+window.onload = function () {
+  let runThePhylosopher = function () {
+
+  
+    let quo = pickFromArray(quotes);
+    document.querySelector("h1").innerHTML = `"${quo.quote}"`;
+    document.querySelector("h2").innerHTML = `${quo.author}`;
+  };
+
+  let button = document.querySelector("#generate");
+  button.addEventListener("click", runThePhylosopher);
+
+  runThePhylosopher();
+};
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
