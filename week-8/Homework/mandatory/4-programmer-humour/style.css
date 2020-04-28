@@ -1,0 +1,8 @@
+.body_CSS{
+    display: flex;
+    justify-content: center;
+    background-color: #3c40c6;
+}
+.image_CSS{
+    margin: 50px;
+}
