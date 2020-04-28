@@ -11,7 +11,7 @@ function setIntervalTime(inputValueTime) {
     inputValueTime--;
     remainingTime = inputValueTime;
     displayTime(inputValueTime);
-    if (Number(inputValueTime) === 0) {
+    if (inputValueTime === 0) {
       changeBackgroundColor();
       playAlarm(audio);
       clearInterval(intervalId);
@@ -42,9 +42,9 @@ function fancyTimeFormat(time) {
 function setAlarm() {
   timeRemain = document.getElementById("timeRemaining");
   clearInterval(intervalId);
-  inputValue = document.getElementById("alarmSet").value;
+  inputValue = Number(document.getElementById("alarmSet").value);
   displayTime(inputValue);
-  if (Number(inputValue) === 0) {
+  if (inputValue === 0) {
     alert("Please set the time");
   } else {
     setIntervalTime(inputValue);
@@ -62,7 +62,7 @@ function setAlarm() {
 }
 function pauseResume() {
   // clearInterval(intervalId);
-  if (Number(remainingTime) === 0) {
+  if (remainingTime === 0) {
   } else {
     if (intervalId == -1) {
       document.getElementById("pause").innerText = "Pause";
