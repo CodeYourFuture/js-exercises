@@ -1,0 +1,18 @@
+body {
+  background-color: turquoise;
+}
+#container {
+  text-align: center;
+}
+img {
+  background-color: rgb(218, 198, 195);
+  width: 500px;
+  /* height: 600px; */
+}
+button {
+  background-color: rgb(68, 192, 31);
+  font-size: 25px;
+}
+#dog {
+  list-style-type: none;
+}

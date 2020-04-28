@@ -1,0 +1,18 @@
+#container {
+  margin-top: 10%;
+  text-align: center;
+
+  background-color: rgb(32, 32, 31);
+}
+img {
+  background-color: rgb(218, 198, 195);
+  width: 800px;
+  height: 500px;
+}
+button {
+  background-color: rgb(68, 192, 31);
+  font-size: 25px;
+}
+#dog {
+  list-style-type: none;
+}
