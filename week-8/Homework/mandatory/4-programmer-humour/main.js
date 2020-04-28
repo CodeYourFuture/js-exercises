@@ -11,7 +11,7 @@ function getFetchData() {
     .then((data) => {
       console.log(data);
       let img = document.createElement("img");
-      document.getElementById("root").appendChild(img);
+      root.appendChild(img);
       img.src = data.img;
     })
     .catch((error) => console.log(error));
