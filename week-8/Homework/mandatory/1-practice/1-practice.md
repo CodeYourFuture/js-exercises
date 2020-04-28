@@ -20,12 +20,19 @@ Enjoy!
 
 The following endpoint is publicly available from Github
 
-    GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
+    GET https://api.github.com/repos/CodeYourFuture/js-exercise/pulls/688/comments
 
 1. Describe in a sentence what this API endpoint returns.
 
 <!-- Write your answer here -->
+<!--This API return an array of objects from pull_number of repo of owner-->
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
 <!-- Write your answer here -->
+<!-- 
+    {owner}: CodeYourFuture
+    {repo}: js-exercises
+    {pull_number}: 660
+
+-->
