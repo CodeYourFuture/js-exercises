@@ -10,10 +10,10 @@
 // 1) mood function does this return `"I am not happy"`
 //    Only make edits inside the function
 
-function mood() {
-  let isHappy = true;
+function mood(isHappy) {
+   isHappy === "I am not happy";
 
-  if (isHappy) {
+  if (false) {
     return "I am happy";
   } else {
     return "I am not happy";
@@ -24,7 +24,7 @@ function mood() {
 //    Hint: use constant `num` and only change isBigEnough.
 //    Variable isBigEnough needs to evaluate to a boolean
 
-function greaterThan10() {
+function greaterThan10(num) {
   const num = 10;
   const isBigEnough;
 
