@@ -24,9 +24,9 @@ function mood(isHappy) {
 //    Hint: use constant `num` and only change isBigEnough.
 //    Variable isBigEnough needs to evaluate to a boolean
 
-function greaterThan10(num) {
+function greaterThan10() {
   const num = 10;
-  const isBigEnough;
+  const isBigEnough = num;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -34,7 +34,7 @@ function greaterThan10(num) {
     return "num is not big enough";
   }
 }
-
+/*
 // 3) For any numerical value greater or equal to 10
 //    Hint: use the Array method sort()
 //    Remember to Google how to use sort method
