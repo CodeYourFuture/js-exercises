@@ -34,14 +34,14 @@ function greaterThan10() {
     return "num is not big enough";
   }
 }
-/*
+
 // 3) For any numerical value greater or equal to 10
 //    Hint: use the Array method sort()
 //    Remember to Google how to use sort method
 
-function sortArray() {
+function sortArray(num) {
   const letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
