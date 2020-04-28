@@ -12,7 +12,6 @@ function tidyUpString(strArr) {
     strArr[i] = strArr[i].replace("/", "");
     strArr[i] = strArr[i].toLowerCase();
   }
-  console.log(strArr[i]);
   return strArr;
 }
 
@@ -43,9 +42,8 @@ The function must:
 */
 
 function remove(arr, index) {
-  let newArr = arr.splice(index, 1);
-  return newArr; // complete this statement
-  console.log(newArr);
+  let removed = arr.splice(index, 1);
+  return arr; // complete this statement
 }
 
 /*
