@@ -26,6 +26,10 @@ The following endpoint is publicly available from Github
 
 <!-- Write your answer here-->
 
+It returns an 404 status (Not found) witch contains an object with a message and documentation_url with a link to the Github documentation page
+
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
 <!-- Write your answer here -->
+
+CodeYourFuture, js-exercises, 660
