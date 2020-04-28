@@ -11,7 +11,7 @@
 //    Only make edits inside the function
 
 function mood() {
-  let isHappy = true;
+  let isHappy = fasle;
 
   if (isHappy) {
     return "I am happy";
@@ -20,42 +20,60 @@ function mood() {
   }
 }
 
-// 2) For any numerical value greater or equal to 10
-//    Hint: use constant `num` and only change isBigEnough.
+// 2) For any numerical value greater or equal to 10,
+//    Hint: use constant `num` and only change isBigEnough.,
 //    Variable isBigEnough needs to evaluate to a boolean
 
-function greaterThan10() {
+function greaterThan10(isBigEnough) {
   const num = 10;
-  const isBigEnough;
+  
 
-  if (isBigEnough) {
+  if (isBigEnough >= num) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
 }
 
+console.log(greaterThan10(10));
+
+
+
 // 3) For any numerical value greater or equal to 10
 //    Hint: use the Array method sort()
 //    Remember to Google how to use sort method
 
 function sortArray() {
-  const letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
 
+
+  const letters = ["a", "n", "c", "e", "z", "f"];
+  
+  //use arr.sort() and pass a function that takes two arguments and compare them (comparator)
+  let sortedLetters = letters.sort(function(a, b){  
+   // it should return 
+    if(a < b) { return -1; } //something negative if first argument is less than second (should be placed before the second in resulting array)
+    if(a > b) { return 1; } //something positive if first argument is greater (should be placed after second one)
+    return 0; //0 if those two elements are equal.
+   })
   return sortedLetters;
 }
+
+sortArray();
 
 // 4) first5 function shold return the first 5 elements of array
 //    Hint: use the Array method splice()
 //    Remember to Google how to use splice()
 
 function first5() {
+
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+
+  let sliced = numbers.slice(0, 5);
 
   return sliced;
 }
+
+first5();
 
 // 5) get3rdIndex function needs to take an array `arr` give 
 //    back third element value.
@@ -64,11 +82,18 @@ function first5() {
 //    Hint: remember that arrays are zero-index based
 
 function get3rdIndex(arr) {
-  let index = 3;
-  let element;
+
+  let index = 2;
+
+  arr = [1, 2, 3, 4, 5, 6];
+  
+  let element = arr.slice(index, 3);
 
   return element;
 }
+
+get3rdIndex();
+/*
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -95,6 +120,8 @@ function arraysEqual(a, b) {
   return true;
 }
 
+
+
 test("mood function works", mood() === "I am not happy");
 test(
   "greaterThanTen function works",
@@ -115,3 +142,5 @@ test(
   "get3rdIndex function works - case 2",
   get3rdIndex([11, 37, 62, 18, 19, 3, 30]) === 18
 );
+
+
