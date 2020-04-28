@@ -41,9 +41,16 @@ The function must:
 - remove the item at the specified index
 */
 
-function remove(arr, index) {
+/*function remove(arr, index) {
+  let newArr = arr;
   let removed = arr.splice(index, 1);
-  return arr; // complete this statement
+  return newArr; // complete this statement
+}*/
+
+function remove(arr, index) {
+  let removed = arr;
+  removed.splice(index, 1);
+  return removed;
 }
 
 /*
