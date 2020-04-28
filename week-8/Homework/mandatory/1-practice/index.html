@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        #fact{
+            display: none;
+        }
+    </style>
+    <title>Number-facts</title>
+</head>
+<body class=bg-dark>
+    <div class="container">
+    <div class="row"></div>
+    </div class='col-md-6 mx-auto'>
+    <div class="card bg-primary text-white mt-5 p-4">
+        <h1>Number Facts</h1>
+        <p>Enter a Number and get random fact </p>
+        <input type="number" class='form-control form-control-lg' id='number-input' placeholder="Enter a number">
+       <div id="fact" class="card-body">
+           <h4 class="card-title">
+               Number facts
+           </h4>
+           <p id="factText" class="cardText"></p>
+        </div>
+     </div>
+    </div>
+<script>
+    let fact= document.querySelector('#fact');
+    let factText = document.querySelector('#factText');
+    let theNumberInput = document.getElementById('number-input');
+    theNumberInput.addEventListener('input',()=>{
+       let number =theNumberInput.value;
+        fetch('http://numbersapi.com/'+number)
+        .then(response=>response.text)
+        .then(data=>{
+            if(number !=''){
+               fact.style.display='block';
+                factText.innerText = data;
+            }
+        }).catch(err=>console.log(err));
+    });
+</script>
+</body>
+</html>

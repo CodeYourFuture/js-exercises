@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <ul class ='list'>
+     
+  </ul>
+   <div class="btnContainer">
+       <button class="forBtn">forwards</button>
+       <button class='backBtn'>backwards</button>
+  </div>
+      
+
+ 
+<script>
+    let theList= document.querySelector('.list');
+    let forwardBtn = document.querySelector('.forBtn');
+    let backBtn = document.querySelector('.backBtn');
+    let createListElement = document.createElement('li');
+    let createImage = document.createElement('img');
+    let theImageClass = createImage.setAttribute('class','img');
+     let imageId = createImage.id='img';
+    theList.appendChild(createListElement);
+    
+    createListElement.appendChild(createImage);
+    let getImageClass = document.getElementById('img');
+    forwardBtn.addEventListener('click',async e =>{
+     const result = await fetch('https://dog.ceo/api/breeds/image/random')
+     const blob =  await result.blob();
+       imageId.src= URL.createObjectURL(blob);  
+
+     });
+    
+    
+</script>
+</body>
+</html>

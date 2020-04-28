@@ -24,8 +24,12 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+<!-- Write your answer here -->  it returns not found message
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+<!-- Write your answer here --> ` === https://github.com/CodeYourFuture/js-exercises-tdd/pull/61
+
+`{owner}`CodeYourFuture
+`{repo}`js-exercises-tdd
+ `{pull_number}`pull/61
