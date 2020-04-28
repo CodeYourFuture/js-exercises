@@ -19,7 +19,8 @@ function newImage(images) {
   let callBtn = document.querySelector("#imgBtn");
   let imgShow = document.querySelector("#image");
   callBtn.addEventListener("click", () => {
-    imgShow.src = images;
+    imgShow.src = 'https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+    //imgShow.src = images;
   });
 }
 
