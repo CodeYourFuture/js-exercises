@@ -1,5 +1,7 @@
+// Setup my page for onload
 window.onload = setup;
 let unOrdredList_El;
+// Setup function for create elements and fetch data
 function setup(){   
     let body_El = document.querySelector('body')
     let callApi_El = document.createElement('button');
@@ -20,32 +22,34 @@ function setup(){
     
     callApi_El.textContent = ' Call Api ';
     addNewRandom_El.textContent = ' Add New Random Image';
-    p_El.textContent = 'Connected to the API';
+    p_El.textContent = 'Connected to the API Server';
 
     body_El.appendChild(callApi_El);
     body_El.appendChild(addNewRandom_El);
     body_El.appendChild(br_El);    
-
+    // Fetch data from API Server
     callApi_El.addEventListener('click',()=>{
+        // Promise fetch data from this URL
         fetch('https://dog.ceo/api/breeds/image/random')    
-        .then((response)=>{
+        .then((response)=>{ // if fetch it was success return jason file(objects)
             return response.json();
         })
-        .then((data)=>{
+        .then((data)=>{ // Then If data recived show message and declare click event for addNewRandom
             body_El.appendChild(p_El);
             body_El.appendChild(unOrdredList_El);
+            // Call showImage in click event
             addNewRandom_El.addEventListener('click',showImage);
         });                
     });
 }
-
+// showImage function
 function showImage(){
+    // Promise fetch data from this URL
     fetch('https://dog.ceo/api/breeds/image/random')    
     .then((response)=>{
         return response.json();
     })
-    .then((data)=>{                
-        // console.log(data.message)
+    .then((data)=>{                        
         let li_El = document.createElement('li');
         let img_El = document.createElement('img');
         img_El.className = 'img_CSS';
