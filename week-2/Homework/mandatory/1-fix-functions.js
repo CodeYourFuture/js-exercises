@@ -64,11 +64,11 @@ function first5() {
 //    Hint: remember that arrays are zero-index based
 
 function get3rdIndex(arr) {
-  let index = ["fruit", "banana", "apple", "strawberry", "raspberry"];
-  let element = index;
-
-  return element[3];
+  let index = [3];
+  let element = arr[index];
+  return element;
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
