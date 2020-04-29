@@ -1,0 +1,24 @@
+body{
+    background-color:  #6600CC;
+}
+
+.card-header{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+ 
+.card{
+    background-color: #C3C3E5;
+}
+
+.card-title{
+    font-size: 1.5rem;
+    font-family: 'Indie Flower', cursive;
+}
