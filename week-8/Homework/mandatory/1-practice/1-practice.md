@@ -21,11 +21,14 @@ Enjoy!
 The following endpoint is publicly available from Github
 
     GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
+    
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+It returns the comments to the respective repo.  
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
+
+https://api.github.com/repos/CodeYourFuture/js-exercises/pull/555/comments
 
 <!-- Write your answer here -->
