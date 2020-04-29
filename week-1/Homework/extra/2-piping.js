@@ -16,26 +16,35 @@
   the final result to the variable goodCode
 */
 
-function add() {
+function add(num1,num2) {
+  const sum = Math.round((num1+num2)*10)/10;
+  return sum;
+}
+
+function multiply(num1,num2) {
+  const multply= num1*num2;
+  return multply;
+}
+
+function format(num) {
+
+   return "£"+num;
 
 }
 
-function multiply() {
-
-}
-
-function format() {
-
-}
-
-const startingValue = 2
+const startingValue = 2;
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+//we need to create a new value for each calculation, this way makes coding so long
+let value1 = add(startingValue,10);
+let value2 = multiply(value1,2);
+let value3= format(value2)
+let badCode = value3;
+
 
 /* BETTER PRACTICE */
-
-let goodCode = 
+ let goodCode = format(multiply(add(startingValue,10),2));
+ 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
