@@ -57,11 +57,10 @@ Write a function that:
 
 function formatPercentage(arr) {
   for (let i = 0; i < arr.length; i++) {
+    arr[i] = Number(arr[i].toFixed(2));
     if (arr[i] > 100) {
       arr[i] = 100;
     }
-    arr[i] = arr[i].toFixed(2);
-    arr[i] = parseFloat(arr[i]);
     arr[i] = arr[i] + "%";
   }
   return arr;

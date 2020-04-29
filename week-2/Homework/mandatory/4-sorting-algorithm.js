@@ -31,9 +31,9 @@ function sortAges(arr) {
   for (i = 0; i < sortedArr.length; i++) {
     for (j = 0; j < sortedArr.length; j++) {
       if (sortedArr[j] > sortedArr[j + 1]) {
-        let target = sortedArr[j];
+        let temp = sortedArr[j];
         sortedArr[j] = sortedArr[j + 1];
-        sortedArr[j + 1] = target;
+        sortedArr[j + 1] = temp;
       }
     }
   }
