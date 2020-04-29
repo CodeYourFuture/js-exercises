@@ -5,7 +5,34 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+let strArr = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
+
+function tidyUpString(strArr) {
+  const newStrArr = strArr.map((string) => {
+    const letters = string.trim().split("");
+    return letters
+      .map((letter) => {
+        if (letter === "/") return "";
+        return letter.toLowerCase();
+      })
+      .join("");
+  });
+  return newStrArr;
+}
+console.log(tidyUpString(strArr));
+
+// let strArr = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
+
+// function tidyUpString(strArr) {
+//   let newstrArr = [];
+//   for (i = 0; i <= strArr.length; i++) {
+//     newstrArr[i] = strArr[i].trim().replace("/", "").toLowerCase();
+//     console.log(newstrArr);
+//   }
+
+//   return newstrArr;
+// }
+// tidyUpString(strArr);
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,8 +42,18 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
-
+function validate(num) {
+  if (num === num && num % 2 == 0 && num <= 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(validate(10));
+console.log(validate(18));
+console.log(validate(17));
+console.log(validate("Ten"));
+console.log(validate(108));
 /* 
 Write a function that removes an element from an array
 The function must:
@@ -25,9 +62,16 @@ The function must:
 - remove the item at the specified index
 */
 
+let arr = ["a", "b", "c", "d", "e", "f", "g"];
 function remove(arr, index) {
-  return; // complete this statement
+  arr.splice(index, 1);
+
+  return arr;
+
+  // complete this statement
 }
+
+console.log(remove(arr, 2));
 
 /*
 Write a function that:
@@ -37,7 +81,20 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  let newarr = [];
+  let finalarr = [];
+  for (i = 0; i < arr.length; i++) {
+    newarr[i] = parseFloat(arr[i].toFixed(2));
+    if (newarr[i] > 100) {
+      newarr[i] = 100;
+    }
+    finalarr[i] = newarr[i].toString() + "%";
+  }
+  return finalarr;
+}
+
+console.log(formatPercentage([23, 18, 187.2, 0.372]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
