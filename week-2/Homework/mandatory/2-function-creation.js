@@ -34,6 +34,7 @@ The function must:
 */
 
 function remove(arr, index) {
+  
   return; // complete this statement
 }
 
@@ -45,7 +46,16 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  for(let i = 0; i < arr.length; i++){
+    arr[i] = Number(arr[i].toFixed(2));
+    if(arr[i] > 100)
+    arr[i] = 100;
+    arr[i] = arr[i] + "%";
+    console.log(arr[i]);
+  }
+  return arr
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
