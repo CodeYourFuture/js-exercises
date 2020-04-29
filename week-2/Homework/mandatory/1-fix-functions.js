@@ -25,8 +25,9 @@ function mood() {
 //    Variable isBigEnough needs to evaluate to a boolean
 
 function greaterThan10() {
+  let input = 20
   const num = 10;
-  const isBigEnough = true ;
+  const isBigEnough =(input > num) ;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";

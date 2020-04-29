@@ -15,7 +15,7 @@ function findSmallestNum(arr) {
     }
     return min
 }
-// console.log(findSmallestNum([354, 15, 114, 2]));
+console.log(findSmallestNum([1]));
 
 findSmallestNum([354, 15, 114, 2]); //Expected: 2
 
@@ -71,6 +71,6 @@ function getSumOfItems(arr) {
     }
     return result
 }
-console.log(getSumOfItems([-2, 84, 23]));
+// console.log(getSumOfItems([-2, 84, 23]));
 
 getSumOfItems([-2, 84, 23]); //Expected: 105

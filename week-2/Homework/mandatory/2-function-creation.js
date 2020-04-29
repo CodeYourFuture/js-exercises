@@ -47,12 +47,13 @@ The function must:
 function remove(arr, index) {
   let newArray = [];
   for (i in arr){
-    if (!(arr[i] == arr[index])){
+    if (!(i == index)){
        newArray.push(arr[i]);
     }
-  };
-  return newArray;
+  };  
+  return newArray; 
 }
+console.log(remove(["a", "a", "a", "a", "a", "a", "a"], 5));
 
 /*
 Write a function that:
@@ -77,6 +78,7 @@ function formatPercentage(arr) {
   }
   return finalArr
 }
+// console.log(formatPercentage([23, 18, 187.2, 0.372,12.2]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
