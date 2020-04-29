@@ -1,9 +1,10 @@
 body{
-    background-color: rgb(15, 41, 41);
+    background-color: rgb(202, 212, 155);
 }
 .container{
  justify-content: center;
  align-content: center;
+ margin-left: auto;
 }
 
 .card{
@@ -13,18 +14,35 @@ body{
 .card-header{
     font-size: 50px;
     font-family: 'Libre Baskerville', serif;
+    padding-left: 10%;
+    padding-right: auto;
+    background-color: rgb(185, 116, 187);
 }
 .card-title{
     text-align: center;
-    border-radius: 10%;
+    font-family: 'Libre Baskerville', serif;
+    background-color: rgb(138, 51, 11);
+    margin-left: auto;
+    margin-right: auto;
 }
 .btn{
     display: flex;
-    width: 50%;
+    background-color: rgb(172, 119, 103);
+    width: 20%;
     text-align: center;
+    padding-left: 6%;
+    font-size: 2rem;
+    border-radius: 100%;
 }
 ul{
     display: list-item;
     justify-content:space-around;
     list-style-type: none;
+}
+@media(max-width:800px){
+    .btn{
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
