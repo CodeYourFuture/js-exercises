@@ -25,13 +25,13 @@ Take a look at the following resources to learn more about problem solving as ap
 After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
-
+ I thinks the most important quality for a programmer is trying to thinking as programer. 
 <!-- Write your answer here -->
 
 ## 2. When trying to solve a challenge, what should you do first?
-
+Firstly,try to break the challenge to small pice ,secondly i
 <!-- Write your answer here -->
 
 ## 3. What should you do if you get stuck?
-
+in the stuck the best thinks they can help us is leave the computer for minutes or short break then the brain can get fresh air to be fresh and came back to job and try for first solution if the first solution does not works go for second solution to fix the issues.
 <!-- Write your answer here -->
