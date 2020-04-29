@@ -22,7 +22,26 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 //1)Create the function inside, Think about nested loops
 function sortAges(arr) {
   //create function here
-}
+  //removes any non-number element from the array
+  
+  function bubbleSort(arr){
+    var newArr=arr.map(key=>key.trim().replace("/", ""))
+    var len = newArr.length;
+    for (var i = len-1; i>=0; i--){
+      for(var j = 1; j<=i; j++){
+        if(arr[j-1]>arr[j]){
+            var temp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = temp;
+         }
+      }
+    }
+    return newArr;
+ }
+ 
+console.log(sortAges([' Taslima', '/Khadija ']))
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -74,5 +93,5 @@ test(
 
 test(
   "sortAges function works - case 2",
-  arraysEqual(sortAges(agesCase2), [55, 60, 100])
-);
+  arraysEqual(sortAges(agesCase2), [55, 60, 100]));
+
