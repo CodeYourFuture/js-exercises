@@ -15,7 +15,7 @@ function tidyUpString(strArr) {
   return strArr;
 }
 
-//try map method.....
+//try map method....?
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -41,12 +41,6 @@ The function must:
 - remove the item at the specified index
 */
 
-/*function remove(arr, index) {
-  let newArr = arr;
-  let removed = arr.splice(index, 1);
-  return newArr; // complete this statement
-}*/
-
 function remove(arr, index) {
   let removed = arr;
   removed.splice(index, 1);
@@ -63,25 +57,15 @@ Write a function that:
 
 function formatPercentage(arr) {
   for (let i = 0; i < arr.length; i++) {
-    arr[i] = parseFloat(arr[i].toFixed(2));
-    if (arr[i] > 100) arr[i] = 100;
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    arr[i] = arr[i].toFixed(2);
+    arr[i] = parseFloat(arr[i]);
     arr[i] = arr[i] + "%";
-    console.log(arr[i]);
   }
   return arr;
 }
-
-// function formatPercentage(arr) {
-//   let newArr = [];
-//   for (i = 0; i < arr.length; i++) {
-//     if (arr[i] > 100) {
-//       arr[i] = 100;
-//     }
-//     newArr[i] = arr[i].toFixed(2);
-//     arr[i] = newArr[i] + "%";
-//   }
-//   return arr;
-// }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
