@@ -16,9 +16,9 @@
   2. Remove the line that throws the error. //removed//
   3. What is printed to the console?
   //i= 0 , a = 7 , f2 = 4
- i= 1 , a = 8 , f2 = 9
+ i= 1 , a = 8 , f1 = 9
  i= 2 , a = 9 , f2 = 6
- i= 3 , a = 10 , f2 = 13
+ i= 3 , a = 10 , f1 = 13
  i= 4 , a = 11 , f2 = 8//
 
   4. How many times is "f1" called?        //2//
