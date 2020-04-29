@@ -20,8 +20,20 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 //1)Create the function inside, Think about nested loops
+
 function sortAges(arr) {
   //create function here
+  let newArr = [];
+  for (i = 1; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      console.log(newArr);
+      newArr.push(arr[i]);
+    }
+  }
+  console.log(newArr);
+  return newArr.sort(function (a, b) {
+    return a - b;
+  });
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

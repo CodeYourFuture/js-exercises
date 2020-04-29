@@ -23,7 +23,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  return (checkNumber = typeof num === "number" && num % 2 === 0 && num <= 100);
+  return typeof num === "number" && num % 2 === 0 && num <= 100;
 }
 console.log(validate(300));
 /* 
@@ -48,12 +48,12 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  if (arr[i] > 100) {
-    arr[i] = 100;
-  } else {
-    arr[i] = parseFloat(arr[i].toFixed(2));
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = Number(arr[i].toFixed(2));
+    if (arr[i] >= 100) arr[i] = 100;
+    arr[i] = arr[i] + "%";
   }
-  newArr.push(`${arr[i]}%`);
+  return arr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
