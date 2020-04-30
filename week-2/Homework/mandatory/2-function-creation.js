@@ -1,43 +1,76 @@
 /*
-Write a function that:
+1- Write a function that:
 - takes an array of strings as input
 - removes any spaces in the beginning or end of the strings
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  let stringTrim = strArr.trim();
+  let stringLowerCase = stringTrim.toLowerCase();
+  let stringClean = stringLowerCase.replace(/\//g, " ");
+  return stringClean;
+}
+console.log(tidyUpString(" Code /youR fUtuRe/ "));
 
 /*
-Complete the function to check if the variable `num` satisfies the following requirements:
+2- Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
 - is even
 - is less than or equal to 100
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if ((num = Number && num % 2 === 0 && num <= 100)) {
+    return "true";
+  } else {
+    return "false";
+  }
+}
+
+console.log(validate(10));
+console.log(validate(18));
+console.log(validate(17));
+console.log(validate("10"));
+console.log(validate(108));
 
 /* 
-Write a function that removes an element from an array
+3- Write a function that removes an element from an array
 The function must:
 - NOT change the original array
 - return a new array with the item removed
 - remove the item at the specified index
 */
-
 function remove(arr, index) {
-  return; // complete this statement
+  newArr = arr.splice(3, 1);
+
+  return newArr;
 }
 
+console.log(remove([10, 293, 292, 176, 29], 3));
+
 /*
-Write a function that:
+4- Write a function that:
 - takes an array of numbers as input
 - returns an array of strings formatted as percentages (e.g. 10 => "10%")
 - the numbers must be rounded to 2 decimal places
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  let newArr = [];
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      arr[i] = 100;
+    }
+    newArr[i] = arr[i].toFixed(2);
+    arr[i] = newArr[i] + "%";
+  }
+  return arr;
+}
+
+console.log(formatPercentage([23, 18, 187.2, 0.372]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
