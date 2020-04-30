@@ -15,8 +15,9 @@
 
 // `getAllFrequencies` goes here
 function gettAllFrequencies(){
-  frequencies=[87,90,98,108];
+  var frequencies=[89,90,91,92,93,94,95,96,97,98,99,100,101,102];
   return frequencies;
+  
 }
 
 
@@ -32,8 +33,13 @@ function gettAllFrequencies(){
 // `getStations` goes here
 function getStations()
 {
-  
+ var availableFrequencies= gettAllFrequencies();
+ if(isRadioStation)
+ {
+ return availableFrequencies;
+ }
 }
+console.log(getStations());
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function getAvailableStations() {

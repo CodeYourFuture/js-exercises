@@ -60,21 +60,21 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-  // for(var i=0;i<arr.length;i++){
-  //   arr[i]=Math.round(arr[i].toString() +'%'); 
-  //   if(arr[i]>=100){
-  //     arr[i]==100;
-  //   }
-  //   else
-  //   {
-  //     arr[i]=arr[i]
-  //   }
-  // }
-  
-  return arr;
-  
+  for(var i=0;i<arr.length;i++)
+  {
+  arr[i]=Number(arr[i].toFixed(2));
+  if(arr[i]>=100){
+
+    arr[i]=100;
+  }
+    arr[i]=arr[i]+'%';
+  }  console.log(arr);
+return arr;
 }
-console.log(formatPercentage([233.0000,18,102,2000]));
+
+
+
+console.log(formatPercentage([233.0000,18,102,0.890]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

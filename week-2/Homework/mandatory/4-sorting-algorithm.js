@@ -22,76 +22,70 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 //1)Create the function inside, Think about nested loops
 function sortAges(arr) {
   //create function here
-  //removes any non-number element from the array
-  
-  function bubbleSort(arr){
-    var newArr=arr.map(key=>key.trim().replace("/", ""))
-    var len = newArr.length;
-    for (var i = len-1; i>=0; i--){
-      for(var j = 1; j<=i; j++){
-        if(arr[j-1]>arr[j]){
-            var temp = arr[j-1];
-            arr[j-1] = arr[j];
-            arr[j] = temp;
-         }
-      }
-    }
-    return newArr;
- }
+ //node removes any non-number element from the array
+  var sortedResult=arr.filter((item)=>
+  {
+  return(typeof item ==='number')
+  });
+   return sortedResult;
+  }
  
-console.log(sortAges([' Taslima', '/Khadija ']))
+
+
+console.log(sortAges([20,30,'Tasliam',67,90]));
 
 
 
-/* ======= TESTS - DO NOT MODIFY ===== */
+// /* ======= TESTS - DO NOT MODIFY ===== */
 
-const agesCase1 = [
-  "🎹",
-  100,
-  "💩",
-  55,
-  "🥵",
-  "🙈",
-  45,
-  "🍕",
-  "Sanyia",
-  66,
-  "James",
-  23,
-  "🎖",
-  "Ismeal",
-];
-const agesCase2 = ["28", 100, 60, 55, "75", "🍕", "Elamin"];
+// const agesCase1 = [
+//   "🎹",
+//   100,
+//   "💩",
+//   55,
+//   "🥵",
+//   "🙈",
+//   45,
+//   "🍕",
+//   "Sanyia",
+//   66,
+//   "James",
+//   23,
+//   "🎖",
+//   "Ismeal",
+// ];
+// const agesCase2 = ["28", 100, 60, 55, "75", "🍕", "Elamin"];
 
-function arraysEqual(a, b) {
-  if (a === b) return true;
-  if (a == null || b == null) return false;
-  if (a.length != b.length) return false;
+// function arraysEqual(a, b) {
+//   if (a === b) return true;
+//   if (a == null || b == null) return false;
+//   if (a.length != b.length) return false;
 
-  for (let i = 0; i < a.length; ++i) {
-    if (a[i] !== b[i]) return false;
-  }
+//   for (let i = 0; i < a.length; ++i) {
+//     if (a[i] !== b[i]) return false;
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
-function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+// function test(test_name, expr) {
+//   let status;
+//   if (expr) {
+//     status = "PASSED";
+//   } else {
+//     status = "FAILED";
+//   }
 
-  console.log(`${test_name}: ${status}`);
-}
+//   console.log(`${test_name}: ${status}`);
+// }
 
-test(
-  "sortAges function works - case 1",
-  arraysEqual(sortAges(agesCase1), [23, 45, 55, 66, 100])
-);
+// test(
+//   "sortAges function works - case 1",
+//   arraysEqual(sortAges(agesCase1), [23, 45, 55, 66, 100])
+// );
 
-test(
-  "sortAges function works - case 2",
-  arraysEqual(sortAges(agesCase2), [55, 60, 100]));
+// test(
+//   "sortAges function works - case 2",
+//   arraysEqual(sortAges(agesCase2), [55, 60, 100])
+// );
 

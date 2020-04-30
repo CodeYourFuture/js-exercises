@@ -68,7 +68,7 @@ function first5() {
 
 function get3rdIndex (arr) {
   
-  let element = arr[2];
+  let element = arr[3];
 
   return element;
   

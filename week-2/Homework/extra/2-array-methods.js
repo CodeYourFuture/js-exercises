@@ -37,10 +37,16 @@ console.log(checkAllEven([2, 4, 6])); //Expected: true
 //3)Half, Quarter and Eighth
 //Create a function that takes a number and return an array of three numbers: half of the number, quarter of the number and an eighth of the number.
 function getHalfQuarterEighth(number) {
-var newArr=number/2;
-var newArr=number/4;
-var newArr=number/8;
+var newArr=[];
+var newArr2=number/2;
+var newArr4=number/4;
+var newArr8=number/8;
+newArr.push(newArr2);
+newArr.push(newArr4);
+newArr.push(newArr8);
+
 return newArr;
+
 
 }
 console.log(getHalfQuarterEighth(6)); //Expected:[3, 1.5, 0.75]
@@ -48,12 +54,12 @@ console.log(getHalfQuarterEighth(6)); //Expected:[3, 1.5, 0.75]
 //4)Add the index to the number
 //Given an array of numbers, create a function which returns the same array but with each element's index in the array added to itself. This means you add 0 to the number at index 0, add 1 to the number at index 1, etc...
 function addIndexes(arr) {
-    for(i=0;i<arr.length;i++){
-       var newArr=  arr.indexOf.arr[i] + arr[i];
-    }
-    return newArr
+    
+     var newArr= arr.indexOf();
+     return newArr;
 }
 console.log(addIndexes([1, 4, 3, 4, 5])); //Expected: [1, 5, 5, 7, 9]
+
 
 
 
