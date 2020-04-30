@@ -12,6 +12,7 @@
 
 function mood() {
   let isHappy = true;
+  const food = '';
 
   if (isHappy) {
     return "I am happy";
