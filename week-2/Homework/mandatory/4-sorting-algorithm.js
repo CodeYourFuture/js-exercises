@@ -27,12 +27,28 @@ function sortAges(arr) {
   {
   return(typeof item ==='number')
   });
+   //bubble sort
+   //code is from https://khan4019.github.io/front-end-Interview-Questions/sort.html.
+
+   
+   var len = arr.length;
+   for (var i = len-1; i>=0; i--){
+     for(var j = 1; j<=i; j++){
+       if(sortedResult[j-1]>sortedResult[j]){
+           var temp = sortedResult[j-1];
+           sortedResult[j-1] = sortedResult[j];
+           sortedResult[j] = temp;
+        }
+     }
+   }
+   return sortedResult;
+   
    return sortedResult;
   }
  
 
 
-console.log(sortAges([20,30,'Tasliam',67,90]));
+console.log(sortAges([20,30,'Tasliam',67,90,89,78,1]));
 
 
 
