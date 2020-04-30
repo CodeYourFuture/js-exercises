@@ -15,7 +15,7 @@ function getRemainder(a, b) {
     return `The remainder is ${remainder}`; 
 }
 
-/* ======= TESTS - DO NOT MODIFY ===== */
+/* ======= TESTS - DO NOT MODIFY  ===== */
 
 function test(test_name, expr) {
     let status;
