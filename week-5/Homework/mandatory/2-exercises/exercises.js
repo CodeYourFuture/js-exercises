@@ -13,8 +13,23 @@
  *      .....
  * </div>
  */
+
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  console.log(document);
+
+ for(let i = 0; i < arrayOfPeople.length; i++) {
+  let myEle1 = document.createElement("h1");
+  let myEle2 = document.createElement("h2");
+  myEle1.innerHTML = arrayOfPeople[i].name;
+  myEle2.innerHTML = arrayOfPeople[i].job;
+  console.log(myEle1);
+  content.appendChild(myEle1)
+  content.appendChild(myEle2)
+  
+  
+  }
+
 }
 
 /**
@@ -26,6 +41,19 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  console.log(document);
+  let myUl = document.createElement("ul");
+  content.appendChild(myUl);
+ for(let i = 0; i < shopping.length; i++) {
+  let myEle1 = document.createElement("li");
+  myEle1.innerHTML = shopping[i];
+  console.log(myEle1);
+  myUl.appendChild(myEle1);
+
+  
+  
+  }
 }
 
 /**
@@ -59,6 +87,22 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  console.log(document);
+  let paragraphEle = document.createElement("p");
+  content.appendChild(paragraphEle);
+  let ulEle = document.createElement("ul");
+  paragraphEle.appendChild(ulEle);
+  for(let i = 0; i < books.length; i++) {
+  let liEleTitle = document.createElement("li");
+  let liEleAuthor = document.createElement("li")
+  liEleTitle.innerHTML = books[i].title;
+  liEleAuthor.innerHTML = books[i].author;
+  console.log(liEleTitle);
+  ulEle.appendChild(liEleTitle);
+  ulEle.appendChild(liEleAuthor);
+
+  }
 }
 
 //

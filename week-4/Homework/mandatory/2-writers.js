@@ -39,6 +39,17 @@ let writers = [
   }
 ];
 
+
+for(let i = 0; i < writers.length; i++) {
+  
+  let firstNameResult = writers[i].firstName;
+  let lastNameResult = writers[i].lastName;
+  let occupationResult = writers[i].occupation;
+  let ageResult = writers[i].age;
+  let aliveResult = writers[i].alive;
+  console.log("Hi, my name is" + " "+ firstNameResult + " " + lastNameResult + ". I am" + " " + ageResult + " " + "years old, and work as a" + occupationResult + ".") 
+}
+
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */

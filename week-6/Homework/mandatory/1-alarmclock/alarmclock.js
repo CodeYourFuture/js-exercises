@@ -1,3 +1,25 @@
+function setAlarm() {
+
+    var timmer = document.getElementById("timeRemaining")
+    var counter = document.getElementById("alarmSet").value
+    console.log(counter);
+    timmer.innerHTML = "00:" + counter
+
+
+    setInterval(() => {
+        if (counter > 0) {
+            counter--
+            timmer.innerHTML = "00:" + counter
+            if (counter == 0) {
+                playAlarm()
+            }
+        }
+    }, 1000);
+}
+
+
+ 
+
 function setAlarm() {}
 
 // DO NOT EDIT BELOW HERE
