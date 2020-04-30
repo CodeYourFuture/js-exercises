@@ -13,7 +13,9 @@
   Answer the following questions:
 
   1. This program throws an error. Why? (If you can't find it, try executing it).
+  // the program tries to print b which is not declared as avariable but parameter. so, it is undefined. 
   2. Remove the line that throws the error.
+  // I removed the line "console.log(b);"
   3. What is printed to the console?
   4. How many times is "f1" called?
   5. How many times is "f2" called?
@@ -34,7 +36,6 @@ const f2 = function (a, b) {
 
 console.log(x);
 console.log(a);
-console.log(b);
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
