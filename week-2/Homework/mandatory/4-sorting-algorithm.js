@@ -21,7 +21,23 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 */
 //1)Create the function inside, Think about nested loops
 function sortAges(arr) {
-  //create function here
+  sortedArr=[];
+  for(let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number"){
+      sortedArr.push(arr[i]);
+    }
+  }
+  for( let i = 0; i < sortedArr.length; i++) {
+    for(let j = 0; j < sortedArr.length; j++) {
+      if (sortedArr[j] > sortedArr[j+1]) {
+        temp = sortedArr[j];
+        sortedArr[j] = sortedArr[j+1];
+        sortedArr[j+1] = temp;
+      }
+    }
+  }
+  console.log(sortedArr);
+  return sortedArr;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
