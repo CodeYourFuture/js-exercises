@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog-Photo</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li id="dogImg">
+                <img />
+            </li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+        function getPhoto() {
+            fetch('https://dog.ceo/api/breeds/image/random')
+                .then(response => {
+                    console.log(response);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log(data);
+                    const element = data.message;
+                    let dogImg = document.getElementsByTagName('img')[0];
+                    dogImg.src = element;
+                });
+        }
+        getPhoto();
+    </script>
+</body>
+
+</html>
