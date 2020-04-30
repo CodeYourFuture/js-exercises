@@ -54,10 +54,15 @@ console.log(getHalfQuarterEighth(6)); //Expected:[3, 1.5, 0.75]
 //4)Add the index to the number
 //Given an array of numbers, create a function which returns the same array but with each element's index in the array added to itself. This means you add 0 to the number at index 0, add 1 to the number at index 1, etc...
 function addIndexes(arr) {
-    
-     var newArr= arr.indexOf();
-     return newArr;
-}
+    var indexArray=[];
+     for(i=0;i<arr.length;i++){
+         var indexArray=arr[i]+arr.indexOf();
+         console.log('index values' +arr.indexOf(i));
+         console.log('arr[i]' +arr[i]);
+     }
+     return indexArray;
+     }
+
 console.log(addIndexes([1, 4, 3, 4, 5])); //Expected: [1, 5, 5, 7, 9]
 
 

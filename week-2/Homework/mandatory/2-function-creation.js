@@ -28,15 +28,12 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if(typeof isNaN(num) && num%2==0 && num<=100)
+  if (typeof isNaN (num) && num%2==0 && num<=100)
   {
-    return true;
-
-  }
+  return true;}
   else{
-    return false;
+  return false;}
   }
-}
 /* 
 Write a function that removes an element from an array
 The function must:
@@ -45,8 +42,8 @@ The function must:
 - remove the item at the specified index
 */
 
-function remove(arr, index) {
-  arr.splice(index,1);
+function remove (arr, index) {
+  arr.splice (index,1);
   return arr;
    // complete this statement
 }
@@ -59,16 +56,14 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {
+function formatPercentage (arr) {
   for(var i=0;i<arr.length;i++)
   {
-  arr[i]=Number(arr[i].toFixed(2));
+  arr[i]=Number (arr[i].toFixed(2));
   if(arr[i]>=100){
-
-    arr[i]=100;
+  arr[i]=100;
   }
-    arr[i]=arr[i]+'%';
-  }  console.log(arr);
+
 return arr;
 }
 

@@ -13,7 +13,7 @@
 function mood() {
   let isHappy = false;
 
-  if(isHappy) {
+  if (isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
@@ -26,10 +26,8 @@ console.log(mood(true));
 //    Hint: use constant `num` and only change isBigEnough.
 //    Variable isBigEnough needs to evaluate to a boolean
 
-function greaterThan10() {
-  
-  const isBigEnough=10;
-
+function greaterThan10 () {
+const isBigEnough=10;
   if (isBigEnough) {
     return "num is greater than or equal to 10";
   } else {
@@ -41,22 +39,19 @@ function greaterThan10() {
 //    Hint: use the Array method sort()
 //    Remember to Google how to use sort method
 
-function sortArray() {
-  const letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters=letters.sort();
-
-  return sortedLetters;
+function sortArray () {
+    const letters = ["a", "n", "c", "e", "z", "f"];
+    let sortedLetters=letters.sort();
+    return sortedLetters;
 }
 
 // 4) first5 function should return the first 5 elements of array
 //    Hint: use the Array method splice()
 //    Remember to Google how to use splice()
 
-function first5() {
+function first5 () {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
- let sliced= numbers.splice(0,5,1,2,3,4,5);
-
-
+  let sliced= numbers.splice (0,5,1,2,3,4,5);
   return sliced;
 }
 
@@ -67,10 +62,8 @@ function first5() {
 //    Hint: remember that arrays are zero-index based
 
 function get3rdIndex (arr) {
-  
   let element = arr[3];
-
-  return element;
+   return element;
   
 }
 console.log(get3rdIndex('Hello','Hi','Bye','Byeeee!'));
