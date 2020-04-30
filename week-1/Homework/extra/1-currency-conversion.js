@@ -5,10 +5,11 @@
   Write a function that converts a price to USD (exchange rate is 1.4 $ to £)
 */
 
-function convertToUSD() {}
+function convertToUSD(pricePound) {
+  return pricePound * 1.4;
+}
 
 /*
-  CURRENCY FORMATTING
   ===================
   The business is now breaking into the Brazilian market
   Write a new function for converting to the Brazilian real (exchange rate is 5.7 BRL to £)
@@ -16,7 +17,9 @@ function convertToUSD() {}
   Find a way to add 1% to all currency conversions (think about the DRY principle)
 */
 
-function convertToBRL() {}
+function convertToBRL(pricePound) {
+  return (pricePound * 1.01) * 5.7;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
