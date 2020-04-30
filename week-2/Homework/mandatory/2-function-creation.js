@@ -20,12 +20,14 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (num = 100 && num < 100) {
-    return num;
+  if (typeof num === "number" && num % 2 === 0 && num <= 100) {
+    return true;
+  }
+  else {
+    return false;
   }
 }
-
-/* 
+/*
 Write a function that removes an element from an array
 The function must:
 - NOT change the original array
