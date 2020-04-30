@@ -16,11 +16,20 @@ Expected result
 Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
-
-fetch('*** Write the API address here ***')
+let url = "https://codeyourfuture.herokuapp.com/api/greetings";
+fetch(url)
     .then(function(response) {
         return response.text();
     })
     .then(function(greeting) {
+        showFunction(greeting);
+        console.log("data:" +greeting );
         // Write the code to display the greeting text here
-    });
+    })
+    .catch((error) => console.error(error));
+
+function showFunction(greeting){
+  let show = document.getElementById("greeting-text");
+  show.textContent = `
+  ${greeting}`;
+}

@@ -23,9 +23,13 @@ The following endpoint is publicly available from Github
     GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
 
 1. Describe in a sentence what this API endpoint returns.
-
+this is return 404 error means Not Find .
 <!-- Write your answer here -->
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
-
+ https://github.com/CodeYourFuture/js-exercises/tree/master/week-8
+ its works like this line :
+ {owner} is CodeYourFuture 
+ {repo} is name of repo js-exercises
+ {pull_number} is number of pull 
 <!-- Write your answer here -->
