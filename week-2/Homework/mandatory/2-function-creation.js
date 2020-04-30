@@ -34,8 +34,11 @@ The function must:
 */
 
 function remove(arr, index) {
-  
-  return; // complete this statement
+  let removed = arr.indexOf(index);
+  if (index > -1) {
+    arr.splice(index, 1);
+}
+  return arr; // complete this statement
 }
 
 /*
