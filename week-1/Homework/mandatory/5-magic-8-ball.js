@@ -45,16 +45,48 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
+const veryPositive = [
+  "It is certain. Very positive",
+  "It is decidedly so.Very positive",
+  "Without a doubt. Very positive",
+  "Yes - definitely. Very positive",
+  "You may rely on it. Very positive.",
+];
+
+const positive = [
+  "As I see it, yes. Positive",
+  "Most likely. Positive",
+  "Outlook good. Positive",
+  "Yes. Positive",
+  "Signs point to yes. Positive",
+];
+
+const negative = [
+  "Reply hazy, try again. Negative",
+  "Ask again later. Negative ",
+  "Better not tell you now. Negative",
+  "Cannot predict now. Negative ",
+  "Concentrate and ask again. Negative ",
+];
+
+const veryNegative = [
+  "Don't count on it. Very negative",
+  "My reply is no. Very negative ",
+  "My sources say no. Very negative",
+  "Outlook not so good. Very negative ",
+  "Very doubtful. Very negative ",
+];
+
 function shakeBall() {
-  const firstSentence = "The ball has shaken!";
-  console.log(firstSentence);
-  const returnAnswer = "Outlook not so good.";
-  return returnAnswer;
+  console.log("The ball has shaken!");
+  const answers = veryPositive.concat(positive, negative, veryNegative);
+  const randomAnswer = answers[Math.floor(Math.random() * answers.length)];
+  return randomAnswer;
 }
 
 // The answer should come from shaking the ball
 
-let answer = shakeBall();
+let answer = console.log(shakeBall());
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
@@ -62,10 +94,11 @@ let answer = shakeBall();
 // - negative
 // - very negative
 function checkAnswer() {
-  const checkingAnswer = "very negative";
-  return checkingAnswer;
+  const randomAnswers = "negative";
+  return randomAnswers;
 }
 checkAnswer();
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
