@@ -12,12 +12,12 @@
 
   Answer the following questions:
 
-  1. This program throws an error. Why? (If you can't find it, try executing it).
-  2. Remove the line that throws the error.
-  3. What is printed to the console?
-  4. How many times is "f1" called?
-  5. How many times is "f2" called?
-  6. What value does the "a" parameter take in the first "f1" call?
+  1. This program throws an error. Why? (If you can't find it, try executing it). VAR B HAS NOT BEEN DEFINED. 
+  2. Remove the line that throws the error. REMOVED: console.log(b); 
+  3. What is printed to the console? 2 6
+  4. How many times is "f1" called? 4 TIMES
+  5. How many times is "f2" called? 2 TIMES 
+  6. What value does the "a" parameter take in the first "f1" call? // I HAVE TRIED HARD BUT CANNOT UNDERSTAND THE LAST 2 QUESTIONS, CAN SOMEONE EXPLAIN PLEASE?  
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
 */
 
@@ -34,7 +34,6 @@ const f2 = function (a, b) {
 
 console.log(x);
 console.log(a);
-console.log(b);
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
