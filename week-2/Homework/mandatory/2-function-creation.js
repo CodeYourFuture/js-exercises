@@ -5,7 +5,18 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+let months = [" /January", "     /February", "    /March", "    /April"]
+
+function tidyUpString(strArr) {
+strArr.forEach(function(month) {
+
+    console.log(month.trim().replace("/", "").toLowerCase())
+    
+})
+}
+
+tidyUpString(months)
+
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,7 +26,13 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+
+  if (num % 2 === 0 && typeof num === 'number'&& num <= 100)
+  return "number meets all requirements"
+  }
+  
+  validate(6)
 
 /* 
 Write a function that removes an element from an array
@@ -25,9 +42,20 @@ The function must:
 - remove the item at the specified index
 */
 
+let newNumberList = [1, 2, 3]
+
 function remove(arr, index) {
-  return; // complete this statement
-}
+  
+    let newNumberList = arr;
+    newNumberList.splice(index);
+    
+    return newNumberList;
+    //console.log(newNumberList);
+    
+    }
+  
+    remove(newNumberList, 1)
+    
 
 /*
 Write a function that:
@@ -37,7 +65,19 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  for (i = 0; i < arr.length; i++) {
+       if (arr[i] > 100) {                 //arr[i] is currentArrayValue 
+           arr[i] = 100;
+ }
+       arr[i] = arr[i].toFixed(2) + "%"; 
+ } 
+       return arr;
+ }
+ 
+ formatPercentage(numbers) 
+ console.log(numbers)
+ 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

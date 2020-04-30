@@ -11,12 +11,13 @@
 //    Only make edits inside the function
 
 function mood() {
-  let isHappy = fasle;
+  let isHappy = false;   //I'm not happy because isHappy is false. 
 
   if (isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
+    
   }
 }
 
@@ -35,7 +36,7 @@ function greaterThan10(isBigEnough) {
   }
 }
 
-console.log(greaterThan10(10));
+console.log(greaterThan10(9));
 
 
 
@@ -68,9 +69,10 @@ function first5() {
 
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-  let sliced = numbers.slice(0, 5);
+  let sliced = numbers.splice(0, 5);
 
   return sliced;
+  console.log(sliced)
 }
 
 first5();
@@ -81,19 +83,22 @@ first5();
 //
 //    Hint: remember that arrays are zero-index based
 
+
+arr = [1, 2, 3, 4, 5, 6]; 
+
 function get3rdIndex(arr) {
 
-  let index = 2;
+  let newArr = [];
 
-  arr = [1, 2, 3, 4, 5, 6];
+  newArr = arr.splice(2, 1);
+
+  return newArr;
   
-  let element = arr.slice(index, 3);
-
-  return element;
 }
 
-get3rdIndex();
-/*
+get3rdIndex(arr);
+console.log(get3rdIndex(arr))
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
