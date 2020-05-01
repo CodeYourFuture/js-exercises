@@ -5,13 +5,16 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
+// let String = Arr.map((tidy) => tidy.trim().toLowerCase().replace("/", ""));
 
-function under(name) {
-  return name.trim().toLowerCase().replace("/", "");
-}
+// function under(name) {
+//   return name.trim().toLowerCase().replace("/", "");
+// }
 function tidyUpString(strArr) {
-  var understr = strArr.map(under);
-  return understr;
+  let String = strArr.map((key) => key.trim().toLowerCase().replace("/", ""));
+  // var understr = strArr.map(under);
+  // console.log(understr);
+  return String;
 }
 // strArr.toLowerCase().trim().replace(/\//g, "");
 /*
@@ -23,7 +26,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (num === 10 || (num % 2 == 0 && num <= 100)) {
+  if (num === 10 && num % 2 == 0 && num <= 100) {
     return true;
   } else {
     return false;
@@ -59,6 +62,7 @@ function formatPercentage(arr) {
     arr[i] = arr[i] + "%";
   }
   return arr;
+  console.log(arr);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

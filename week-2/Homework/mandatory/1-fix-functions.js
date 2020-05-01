@@ -11,13 +11,13 @@
 function mood() {
   let isHappy = true;
 
-  if (isHappy === false) {
-    return "I am happy";
-  } else {
+  if (isHappy) {
     return "I am not happy";
+  } else {
+    return "I am  happy";
   }
 }
-
+console.log(mood());
 // 2) For any numerical value greater or equal to 10
 //    Hint: use constant `num` and only change isBigEnough.
 //    Variable isBigEnough needs to evaluate to a boolean
@@ -26,13 +26,15 @@ function greaterThan10() {
   const num = 10;
   const isBigEnough = true;
 
-  if (isBigEnough) {
+  if (num === 10) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
 }
-
+// if (isBigEnough === num) {
+//   return "num is greater than or equal to 10";
+console.log(greaterThan10());
 // 3) For any numerical value greater or equal to 10
 //    Hint: use the Array method sort()
 //    Remember to Google how to use sort method
@@ -51,7 +53,7 @@ function sortArray() {
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   let sliced = numbers.splice(0, 5);
-
+  console.log(sliced);
   return sliced;
 }
 
