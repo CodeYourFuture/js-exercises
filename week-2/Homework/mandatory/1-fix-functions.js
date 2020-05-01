@@ -38,19 +38,18 @@ function greaterThan10() {
 //    Remember to Google how to use sort method
 
 function sortArray() {
-  const letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+  let letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters = letters.sort();
 
   return sortedLetters;
 }
-
 // 4) first5 function should return the first 5 elements of array
 //    Hint: use the Array method splice()
 //    Remember to Google how to use splice()
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+  let sliced = numbers.slice(0, 5);
 
   return sliced;
 }
@@ -63,7 +62,7 @@ function first5() {
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element = arr[index];
 
   return element;
 }
