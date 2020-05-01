@@ -25,7 +25,12 @@ The following endpoint is publicly available from Github
 1. Describe in a sentence what this API endpoint returns.
 
 <!-- Write your answer here -->
+ 
+Comments about the repository.
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
 <!-- Write your answer here -->
+{owner} : shows the owner of repo
+{repo }: repository
+{pull_number} : shows the pull request numbers
