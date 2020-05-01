@@ -59,7 +59,7 @@ function first5() {
 
 // 5) get3rdIndex function needs to take an array `arr` and give 
 //    back third element value.
-//    For example with array `[1, 2, 3, 4, 5]` it needs to return `4`
+//    For example with array `[1, 2, 3, 4, 5]` it needs ..to return `4`
 //
 //    Hint: remember that arrays are zero-index based
 

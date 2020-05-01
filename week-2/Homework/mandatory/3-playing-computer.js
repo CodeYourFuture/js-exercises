@@ -18,7 +18,7 @@
   4. How many times is "f1" called?
   5. How many times is "f2" called?
   6. What value does the "a" parameter take in the first "f1" call?
-  7. What is the value of the "a" outer variable when "f1" is called for the first time?
+  7. What is the value of the "a" outer variable when "f1" is called for the first time?..
 */
 
 let x = 2;

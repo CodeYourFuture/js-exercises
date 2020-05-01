@@ -11,7 +11,7 @@ function tidyUpString(strArr) {}
 Complete the function to check if the variable `num` satisfies the following requirements:
 - is a number
 - is even
-- is less than or equal to 100
+- is less than or equal to 100..
 Tip: use logical operators
 */
 
