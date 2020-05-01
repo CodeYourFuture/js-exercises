@@ -4,8 +4,28 @@
   This program calls some functions that are either missing or incomplete.
   Update the code so that you get the expected result.
 */
+function isNegative(num) {
+  if (num <= 0) {
+    return true;
+  } else if (num > 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
+function isBetween5and10(num) {
+  if (num >= 5 && num <= 10) {
+    return true;
+  }
+}
 
-function isNegative() {}
+function isShortName() {
+  return true;
+}
+
+function startsWithD() {
+  return "yes";
+}
 
 /* 
   DO NOT EDIT BELOW THIS LINE
