@@ -35,7 +35,7 @@ function sortAges(arr) {
   let position = 0,
     min = arr[0],
     max = arr[0];
-  //get maximum item of arr.
+  //get maximum item of arr...
   for (let x = 0; x < arr.length; x++) {
     if (max < arr[x]) {
       max = arr[x];

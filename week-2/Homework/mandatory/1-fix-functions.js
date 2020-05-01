@@ -59,7 +59,7 @@ function first5() {
 //    back third element value.
 //    For example with array `[1, 2, 3, 4, 5]` it needs to return `4`
 //
-//    Hint: remember that arrays are zero-index based
+//    Hint: remember that arrays are zero-index based...
 
 function get3rdIndex(arr) {
   let index = 3;
