@@ -30,6 +30,7 @@ function sortAges(arr) {
   }
   for (i = 0; i < sortedArr.length; i++) {
     for (j = 0; j < sortedArr.length; j++) {
+      console.log(sortedArr);
       if (sortedArr[j] > sortedArr[j + 1]) {
         let temp = sortedArr[j];
         sortedArr[j] = sortedArr[j + 1];
