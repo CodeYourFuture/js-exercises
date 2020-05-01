@@ -12,9 +12,15 @@
 
   Answer the following questions:
 
-  1. This program throws an error. Why? (If you can't find it, try executing it).
+  1. This program throws an error. Why? (If you can't find it, try executing it). 
+   A. console.log(b) as that is not a global variable
+
   2. Remove the line that throws the error.
+  A. Removed 
+
   3. What is printed to the console?
+  A. Value of a,x,d,e
+
   4. How many times is "f1" called?
   5. How many times is "f2" called?
   6. What value does the "a" parameter take in the first "f1" call?
@@ -34,7 +40,6 @@ const f2 = function (a, b) {
 
 console.log(x);
 console.log(a);
-console.log(b);
 
 for (let i = 0; i < 5; ++i) {
   a = a + 1;
