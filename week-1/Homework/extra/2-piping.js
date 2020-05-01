@@ -28,13 +28,18 @@ function multiply(b, c) {
 function format(d) {
   return "£" + d;
 }
-
+console.log(add(1, 3));
+console.log(add(2.4, 5.3));
 const startingValue = 2;
+
+// Why can this code be seen as bad practice? Comment your answer.
+
+let badCode = format(multiply(add(10, startingValue), 2));
+
+/* BETTER PRACTICE */
+
 addValue = add(startingValue, 10);
 multiplayValue = multiply(addValue, 2);
-// Why can this code be seen as bad practice? Comment your answer.
-let badCode = format(multiplayValue);
-/* BETTER PRACTICE */
 
 let goodCode = format(multiplayValue);
 /* ======= TESTS - DO NOT MODIFY ===== */
