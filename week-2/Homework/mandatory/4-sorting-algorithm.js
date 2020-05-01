@@ -20,10 +20,47 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 //1)Create the function inside, Think about nested loops
+function takeNumbers(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
 function sortAges(arr) {
-  //create function here
+  arr = takeNumbers(arr);
+  for (let i = 0; (i = arr.length - 1); i++) {
+    for (j = 0; (j = arr.length - 1); j++) {
+      if (arr[j] > arr[j + 1]) {
+        let newNum = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = newNum;
+      }
+    }
+    return arr;
+  }
 }
 
+console.log(
+  sortAges(
+    "🎹",
+    100,
+    "💩",
+    55,
+    "🥵",
+    "🙈",
+    45,
+    "🍕",
+    "Sanyia",
+    66,
+    "James",
+    23,
+    "🎖",
+    "Ismeal"
+  )
+);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [
