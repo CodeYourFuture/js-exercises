@@ -20,10 +20,10 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
-  if num === "number" && num % 2 ===0 && num <= 100 {
-    return true
-  }
+function validate(num) {
+  if (typeof num == 'number') && (num % 2 === 0) && (num <= 100) return true
+}
+    
 /* 
 Write a function that removes an element from an array
 The function must:
@@ -33,13 +33,11 @@ The function must:
 */
 
 function remove(arr, index) {
-  const index = arr.indexOf(5);
   if (index > -1) {
     arr.splice(index, 1);
   }
-  return; // complete this statement
+  return arr; // complete this statement
 }
-
 
 /*
 Write a function that:
@@ -50,16 +48,13 @@ Write a function that:
 */
 
 function formatPercentage(arr) {
-   for (let i = 0; i<arr.length; i++){
-     arr[i] = Number(arr[i] . toFixed(2));
-     if(arr[i] >100)
-     arr[i] = 100;
-     arr[i] = arr[i] + "%";
-     console.log(arr[i]);
-   }
-   return arr
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i].toFixed(2);
+    if (arr[i] > 100) arr[i] = 100;
+    arr[i] = arr[i] + "%";
+  }
+  return arr;
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function arraysEqual(a, b) {
