@@ -22,9 +22,16 @@
   A. Value of a,x,d,e
 
   4. How many times is "f1" called?
+  A.  2 times
+
   5. How many times is "f2" called?
+  A. 3 times
+
   6. What value does the "a" parameter take in the first "f1" call?
+  A. value of odd i=1
+
   7. What is the value of the "a" outer variable when "f1" is called for the first time?
+  A. 4
 */
 
 let x = 2;
