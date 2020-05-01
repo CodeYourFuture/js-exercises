@@ -6,7 +6,10 @@
 */
 
 var codeYourFutureIsGreat = true;
-
+var mozafarIsCool = false;
+var calculationCorrect = true;
+var moreThan10Students = false;
+var oneMoreAnswer = true; //i added this example
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -15,7 +18,7 @@ console.log("Is Code Your Future great?", codeYourFutureIsGreat);
 console.log("Is Mozafar cool?", mozafarIsCool);
 console.log("Does 1 + 1 = 2?", calculationCorrect);
 console.log("Are there more than 10 students?", moreThan10Students);
-
+console.log("Is today Tuesday?", oneMoreAnswer); //i added this example
 /* 
   EXPECTED RESULT
   ---------------
