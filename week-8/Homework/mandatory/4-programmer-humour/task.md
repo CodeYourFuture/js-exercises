@@ -12,3 +12,4 @@ Write an function that makes an API call to `https://xkcd.com/info.0.json`
 - Log the received data to the console
 - Render the `img` property into an `<img>` tag in the DOM
 - Incorporate error handling
+

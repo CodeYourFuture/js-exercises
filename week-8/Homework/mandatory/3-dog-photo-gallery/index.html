@@ -4,17 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  <style>
+      ul{
+      list-style-type: none;
+        
+      }
+      #dog{
+          width: 50%;
+      }
+    h1{
+        color: red;
+    }
+    .forBtn{
+        background-color: green;
+        color: white;
+        height: 30px;
+    }
+    .backBtn{
+      background-color: red;
+      color: white;
+      height: 30px;
+    }
+  </style>
 </head>
 <body>
-  <ul class ='list'>
-     
-  </ul>
+     <h1>Alisina's dog gallery</h1>
+    <ul class ='list'></ul>
    <div class="btnContainer">
        <button class="forBtn">forwards</button>
        <button class='backBtn'>backwards</button>
   </div>
       
-
+    
  
 <script>
     let theList= document.querySelector('.list');
@@ -22,18 +43,43 @@
     let backBtn = document.querySelector('.backBtn');
     let createListElement = document.createElement('li');
     let createImage = document.createElement('img');
-    let theImageClass = createImage.setAttribute('class','img');
-     let imageId = createImage.id='img';
+    let createFigure = document.createElement('figure');
     theList.appendChild(createListElement);
-    
-    createListElement.appendChild(createImage);
-    let getImageClass = document.getElementById('img');
-    forwardBtn.addEventListener('click',async e =>{
-     const result = await fetch('https://dog.ceo/api/breeds/image/random')
-     const blob =  await result.blob();
-       imageId.src= URL.createObjectURL(blob);  
+    createListElement.appendChild(createFigure);
+    createFigure.appendChild(createImage);
+    createImage.src='';
+    let photoId =createImage.id ='dog'
+     
+     window.addEventListener('load',()=>{
+          let image;
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response=>response.json())
+        .then(data=>{
+         image=data.message;
+         document.getElementById('dog').src=image 
+        }).catch(err=>console.error(err));
+     })
 
-     });
+    forwardBtn.addEventListener('click',() =>{
+         let image;
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response=>response.json())
+        .then(data=>{
+         image=data.message;
+         document.getElementById('dog').src=image 
+        }).catch(err=>console.error(err));
+    });
+    
+       backBtn.addEventListener('click',() =>{
+         let image;
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response=>response.json())
+        .then(data=>{
+         image=data.message;
+         document.getElementById('dog').src=image 
+        }).catch(err=>console.error(err));
+    });
+    
     
     
 </script>
