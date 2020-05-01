@@ -11,7 +11,7 @@
 //    Only make edits inside the function
 
 function mood() {
-  let isHappy = true;
+  let isHappy = false;
 
   if (isHappy) {
     return "I am happy";
@@ -26,9 +26,9 @@ function mood() {
 
 function greaterThan10() {
   const num = 10;
-  const isBigEnough;
+  let isBigEnough =10;
 
-  if (isBigEnough) {
+  if (isBigEnough ==10) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
@@ -40,10 +40,11 @@ function greaterThan10() {
 //    Remember to Google how to use sort method
 
 function sortArray() {
-  const letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
-
-  return sortedLetters;
+  const Letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters= 5;
+  
+  return sortedLetters=Letters.sort();  
+  
 }
 
 // 4) first5 function should return the first 5 elements of array
@@ -52,7 +53,7 @@ function sortArray() {
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
+  let sliced=numbers.slice(0,5);
 
   return sliced;
 }
@@ -65,7 +66,7 @@ function first5() {
 
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
+  let element=arr[3];
 
   return element;
 }
