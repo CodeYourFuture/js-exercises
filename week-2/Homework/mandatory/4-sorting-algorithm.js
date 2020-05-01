@@ -20,9 +20,44 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 //1)Create the function inside, Think about nested loops
+
+// THAT IS WHAT I GOT SO FAR FOR EXERCISE 4. I KIND OF UNDERSTAND
+//THE SELECTION SORTING METHOD NOW, IN THAT MY FUNCTION BELOW IS SORTING THE NUMBERS
+//CORRECTLY, HOWEVER I HAVE NUMBERS THERE. I HAVE BEEN TYRING TO INTRODUCE STRINGS
+//TO REMOVE THEM BEFORE SORTING AS REQUESTED.
+
 function sortAges(arr) {
-  //create function here
+  var minIdx, temp;
+
+  for (var i = 0; i < arr.length; i++) {
+    minIdx = i;
+
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[minIdx]) {
+        minIdx = j;
+      }
+    }
+    temp = arr[i];
+    arr[i] = arr[minIdx];
+    arr[minIdx] = temp;
+  }
+  return arr;
 }
+
+console.log(sortAges([70, 28, 100, 60, 55, 18, 2, 17]));
+
+// TRYING TO UNDERSTAND HOW TO SORT ONLY NUMBERS
+
+// function numbersOnly(arr) {
+//   var newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr === Number) {
+//       numbersOnly.push(newArr);
+//     }
+//   }
+// }
+
+// console.log(numbersOnly([15, 28, 100, 60, "james", "55", "Suzy", 18]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
