@@ -5,7 +5,34 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidyUpString(strArr) {}
+function tidyUpString(strArr) {
+  
+  var stringArray = strArr.map(key=>key.trim().toLowerCase().replace("/",""));
+  return stringArray;
+  //for (let i = 0; i <= strArr.length; i++ ){
+  // let item = strArr[i].trim();
+   //    item = item.replace("/"," ");
+    //   item = item.toLowerCase();
+    //strArr.push(item);
+  // }
+   
+  
+   //let trimedArr = strArr.map(str => str.trim());
+  // return trimedArr;
+    //for (var i = 0; i <= strArr.length ; i++ ) {
+    //let takeOffSpaces = strArr[i].trim();
+   // let removeSlashes = takeOffSpaces.replace("/","");
+    //removeSlashes = removeSlashes.toLowerCase();
+    //strArr.push(removeSlashes)
+    //}
+
+   // let removeSpacese = strArr.trim();
+   // l//et slashes = removeSpacese.replace("/","");
+   /// let smallLetters = slashes.toLowerCase();
+    
+//re//turn smallLetters;
+// return strArr.trim().toLowerCase().replace("/"," ");
+}
 
 /*
 Complete the function to check if the variable `num` satisfies the following requirements:
@@ -15,8 +42,20 @@ Complete the function to check if the variable `num` satisfies the following req
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
 
+  if (typeof  isNaN(num) && num % 2 === 0 && num <= 100){
+    return true;
+  } else  {
+    return false;
+  }
+
+}
+console.log(validate(100));
+//console.log(validate(9));
+
+
+//console.log(validate(8))
 /* 
 Write a function that removes an element from an array
 The function must:
@@ -25,8 +64,18 @@ The function must:
 - remove the item at the specified index
 */
 
-function remove(arr, index) {
-  return; // complete this statement
+function remove(arr,index) {
+
+  
+  arr.splice(index, 1);
+
+  // for(index = 0 ; index <= arr.length ; index++){
+ //  arr = arr[index].splice(index,1);
+ // }
+
+  //return arr[index].splice(index, 1); 
+  
+ return arr;// complete this statement
 }
 
 /*
@@ -37,7 +86,17 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  
+  for(let i = 0; i < arr.length; i++){
+    arr[i] = Number(arr[i].toFixed(2));
+    if(arr[i] > 100) arr[i] = 100;
+   arr[i] = arr[i] + "%";
+    console.log(arr[i]);
+  }
+  return arr
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

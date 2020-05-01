@@ -11,9 +11,9 @@
 //    Only make edits inside the function
 
 function mood() {
-  let isHappy = true;
+  let isHappy = Boolean;
 
-  if (isHappy) {
+  if (isHappy === true) {
     return "I am happy";
   } else {
     return "I am not happy";
@@ -26,7 +26,7 @@ function mood() {
 
 function greaterThan10() {
   const num = 10;
-  const isBigEnough;
+  const isBigEnough = true;
 
   if (isBigEnough) {
     return "num is greater than or equal to 10";
@@ -40,11 +40,12 @@ function greaterThan10() {
 //    Remember to Google how to use sort method
 
 function sortArray() {
-  const letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+ const letters = ["a", "n", "c", "e", "z", "f"];
+  let sortedLetters = letters.sort();
 
-  return sortedLetters;
+ return sortedLetters ;
 }
+
 
 // 4) first5 function shold return the first 5 elements of array
 //    Hint: use the Array method splice()
@@ -52,10 +53,12 @@ function sortArray() {
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  let sliced;
-
+  let sliced = numbers.splice(0, 5);
+  console.log(sliced)
   return sliced;
 }
+
+//console.log(first5)
 
 // 5) get3rdIndex function needs to take an array `arr` give 
 //    back third element value.
@@ -64,11 +67,13 @@ function first5() {
 //    Hint: remember that arrays are zero-index based
 
 function get3rdIndex(arr) {
-  let index = 3;
-  let element;
+ let index = 3;
+ let element = arr[index];
 
-  return element;
+ return element;
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
