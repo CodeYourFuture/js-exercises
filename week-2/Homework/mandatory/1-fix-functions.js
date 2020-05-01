@@ -32,8 +32,7 @@ function greaterThan10() {
     return "num is not big enough";
   }
 }
-// if (isBigEnough === num) {
-//   return "num is greater than or equal to 10";
+
 console.log(greaterThan10());
 // 3) For any numerical value greater or equal to 10
 //    Hint: use the Array method sort()
