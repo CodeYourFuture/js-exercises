@@ -2,10 +2,9 @@
 
 You should complete all of these FreeCodeCamp exercises - https://www.freecodecamp.org/learn
 
-> Go to **JavaScript Algorithms and Data Structures Certification (300 hours)** \
-> Then open **Basic Data Structures**
+Go to **JavaScript Algorithms and Data Structures Certification (300 hours)**
 
-Do the following exercises
+Open section **Basic Data Structures** and do the following exercises
 
 - Introduction to the Basic Data Structure Challenges
 - Use an Array to Store a Collection of Data
@@ -21,7 +20,7 @@ Do the following exercises
 - Iterate Through All an Array's Items Using For Loops
 - Create complex multi-dimensional arrays
 
-and you should attempt all of these
+Then open **Basic Algorithm Scripting** and attempt all of these 
 
 - Convert Celsius to Fahrenheit
 - Reverse a String
