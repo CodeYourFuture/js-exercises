@@ -13,8 +13,8 @@ function dataBase(message) {
   addPicButton(message);
 }
 
-let ulList = document.getElementById(`ul`);
 function dogyPic(message) {
+  let ulList = document.getElementById(`ul`);
   let liList = document.createElement(`li`);
   let img = document.createElement(`img`);
   ulList.appendChild(liList);
