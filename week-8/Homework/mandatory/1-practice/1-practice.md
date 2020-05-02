@@ -28,7 +28,10 @@ The following endpoint is publicly available from Github
 and documentation_url ({
 message: "Not Found",
 documentation_url: "https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request"
-}) -->
+}) {owner} - github username,
+{repo} - repository name,
+{pull_number} - details of a pull request ,
+/comments  -  comments of a pull request-->
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
