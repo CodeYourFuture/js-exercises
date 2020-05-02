@@ -19,3 +19,16 @@ Exercise 1:
   const hungry = 6;
   
   // add your code here, start with: while(...) {...}
+
+
+  
+     /* 
+    EXPECTED RESULT
+    ---------------
+    eating 1 slice of pizza
+    eating 1 slice of pizza
+    eating 1 slice of pizza
+    eating 1 slice of pizza
+    eating 1 slice of pizza
+    eating 1 slice of pizza
+    */
