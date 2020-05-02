@@ -24,8 +24,9 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+the comments of a specific pull request, what is that pull, who and when left that comment and many other details
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+https://api.github.com/repos/CodeYourFuture/js-exercises/pulls/580/comments this is the last comment I received.
+owner is CYF and for the js-exercises repository and that is my pull number(580)

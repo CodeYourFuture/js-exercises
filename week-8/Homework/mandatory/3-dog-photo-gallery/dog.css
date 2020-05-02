@@ -1,0 +1,16 @@
+.button {
+  position: relative;
+  left: 50%;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+img {
+  width: 15em;
+  height: 15em;
+  margin: 0.5em 0.5em;
+  border: 3px solid black;
+  border-radius: 5px;
+}
