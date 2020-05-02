@@ -28,24 +28,26 @@
 
 /* ======= TESTS - DO NOT MODIFY ======= */
 
-function getAvailableStations() {
-  // Using `stations` as a property as defining it as a global variable wouldn't
-  // always make it initialized before the function is called
-  if (!getAvailableStations.stations) {
-    const stationCount = 4;
-    getAvailableStations.stations = new Array(stationCount)
-      .fill(undefined)
-      .map(function () {
-        return Math.floor(Math.random() * (108 - 87 + 1) + 87);
-      })
-      .sort(function (frequencyA, frequencyB) {
-        return frequencyA - frequencyB;
-      });
+function getAllFrequencies(){
+  let arrOfFreq = [];
+  for(let i = 87; i<=108 ;i++ ){
+    arrOfFreq.push(i);
   }
-
-  return getAvailableStations.stations;
+  return arrOfFreq;
 }
+/////////////////
+function getStations(){
+  let freqArr = getAllFrequencies();
+  let radioArr=[];
 
+  for(let i = 0; i < freqArr.length ;i++ ){
+    if(isRadioStation(freqArr[i])){
+    radioArr.push(freqArr[i]);
+  }
+  }
+  return radioArr;
+}
+////////////////////////////
 function isRadioStation(frequency) {
   return getAvailableStations().includes(frequency);
 }

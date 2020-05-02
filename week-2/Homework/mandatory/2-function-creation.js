@@ -5,11 +5,8 @@ Write a function that:
 - removes any forward slashes (/) in the strings
 - makes the string all lowercase
 */
-function tidy(name) {
-  return name.trim().toLowerCase().replace("/", "");
-}
- function tidyUpString(strArr) {
-  var tidystr = strArr.map(tidy);
+ function tidyUpString(name) {
+  var tidystr = name.map(key=>key.trim().toLowerCase().replace("/", ""));
  return tidystr
  }
 
@@ -22,7 +19,7 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (num===Number || num % 2 ===0 && num<=100){
+  if (typeof num ===Number || num % 2 ===0 && num<=100){
     return true
   } else { 
     return false
@@ -38,8 +35,9 @@ The function must:
 */
 
 function remove(arr, index) {
-arr.splice(index, 1);
-  return arr;
+var arrRemove = arr
+arrRemove.splice(index, 1);
+return arr
 }
 
 /*
