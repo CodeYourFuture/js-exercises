@@ -1,34 +1,8 @@
 /*
-  WHILE LOOPS
+  While Loops
   ---------------------------------
-  Using while loops complete the exercises to output the correct results.
-*/
-​
-// This while loop outputs "Hello" 10 times. Change the code so it only outputs "Hello" 5 times
-let i = 0;
-while(i < 10){
-    console.log("Hello");
-    i++;
-}
-​
-// This while loop doesn't do anything! Change the code so it outputs the sentence "Coding is easy" 3 times
-i = 0;
-while(i < 5){
-​
-    i++;
-}
-​
-// This while loop uses the variable loopLimit in its condition.
-// Change the code below so it outputs "Goodbye" 5 times
-let loopLimit = 2;
-i = 0;
-while(i < loopLimit){       // don't change this line!
-    console.log("Goodbye");
-    i++;
-}
+Exercise 1:
 
-
-/*
   Write a while loop that prints "eating 1 slice of pizza" 6 times to the console.
 
   Use the variables slices and hungry to create a condition.
