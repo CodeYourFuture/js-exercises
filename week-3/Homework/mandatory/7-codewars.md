@@ -6,7 +6,7 @@ Today, you'll be using a platform called [CodeWars](https://codewars.com) to hel
 
 2. Signup to [CodeWars](https://codewars.com) and work on these challenges:
 
-3. You need to finish a minimum of 3 Exercises from [functions part](Section_1) and a minimum of 3 Exercises from [Arrays part](Section_2)
+3. You need to finish a minimum of **3 Exercises from [functions part](Section_1)** and a minimum of **3 Exercises from [Arrays part](Section_2)**
 
 (Section*1)
 \_Functions, types, conditionals etc...*
