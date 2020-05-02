@@ -1,8 +1,13 @@
 /*
 
- Complete the code to create a simple ATM machine.
+ Create a simple ATM machine.
 
- You should start with a balance of 100 pounds.
+ Your ATM should allow you to:
+ - Deposit money
+ - Withdraw money
+ - Check your balance.
+
+ You should start with a balance of 100.0 pounds in your account.
 
  */
 
@@ -17,4 +22,4 @@ atm.make_deposit(200);
 atm.check_balance();
 atm.make_withdrawl(100);
 
-atm.make_withdrawl(500);
+atm.make_withdrawl(500); // Your ATM should be able to handle this scenario
