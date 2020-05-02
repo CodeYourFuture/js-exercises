@@ -51,12 +51,12 @@ function checkCodeIsThere(stringText) {
     ["London Eye", "tube", "river boat", "bus"]
   ]
 
-  Finish up the body of journeyPlanner function that should tell where I can go if I only want to use a specific mode of transport.
+  You have to finish up the body of journeyPlanner function that should tell where I can go if I only
+  want to use a specific mode of transport. But before jumping straight to the main function, we will
+  break down the whole task into smaller steps that make our job easier.
 
-  Before jumping straight to the journeyPlanner, we will break down the whole task into smaller steps that make our job easier.
-
-  (This technic is also referred as problem decomposition. It helps you to reduce scope of the problem 
-   by only focusing on a small chunk of the whole problem at a time.)
+  This technic is also referred as problem decomposition. It helps you to reduce scope of the problem 
+  by only focusing on a small chunk of the whole problem at a time.)
 */
 
 /*
