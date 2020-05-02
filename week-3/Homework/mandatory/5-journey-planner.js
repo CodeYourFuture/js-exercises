@@ -35,9 +35,9 @@ function checkCodeIsThere(stringText) {
   The input provided contains a list of locations in London. Each of locations is followed by a list
   of transport modes that can be used to get there.
 
-  Let's an example how your input will look. To take to Tower Bridge, you can use tube or river boat.
-
-  This information will represented as 
+  Let's see an example:
+  
+  To take to Tower Bridge, you can use tube or river boat. This information will represented as 
     ["Tower Bridge", "tube", "river boat"]
 
   Where
