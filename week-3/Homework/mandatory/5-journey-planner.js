@@ -7,11 +7,11 @@ https://javascript.info/string#quotes
 
 
 Now let's do this small exercise
-Using string mapulation methods update the checkCodeIsThere() function 
+Using string methods update the checkCodeIsThere() function 
 - The function will have a string as a paramter
 -The function should check if the string has the word "code" exists in the string
 - If it does exist, return the index of it, if not return not found 
-Hint: search string methods like Includes, IndexOF can be helpful 
+Hint: search string methods like Includes,and IndexOf
 */
 
 function checkCodeIsThere(stringText) {
