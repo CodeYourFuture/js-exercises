@@ -6,4 +6,5 @@ ul {
 }
 #image {
   border: 3px groove black;
+  margin: 10px;
 }

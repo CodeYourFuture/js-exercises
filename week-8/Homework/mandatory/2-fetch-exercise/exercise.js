@@ -4,5 +4,5 @@ fetch ('https://codeyourfuture.herokuapp.com/api/greetings')
     return response.text ();
   })
   .then (function (greeting) {
-    document.querySelector ('#greeting-text').innerHTML = greeting;
+    document.querySelector ('#greeting-text').textContent = greeting;
   });
