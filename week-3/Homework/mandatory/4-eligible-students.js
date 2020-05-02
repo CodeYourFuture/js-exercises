@@ -7,8 +7,8 @@
 
  Only students who have attended enough classes are eligible to join the research teams.
 
- Implement the body of function called "eligibleStudents" which:
-  - Accepts an array which contains all the students' names and their attendance counts.
+ Implement the body of function called "getEligibleStudents" which:
+  - Accepts an array which contains all the students' names and their attendance counts
     For example:
     [
       ["Hunor", 10],
@@ -21,7 +21,7 @@
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
 */
 
-function eligibleStudents(candidates) {
+function getEligibleStudents(candidates) {
   // You have to implement this function body
 }
 
@@ -29,9 +29,9 @@ function eligibleStudents(candidates) {
  
  Later leaders of Alpha planet decided to change the rule as below:
 
- Only students whose name starts with the same letter than the name of the planer are eligible to join.
+ Only students whose name starts with the same letter of the name of the planet are eligible to join.
 
- Implement the body of function called "eligibleStudents2" which:
+ Implement the body of function called "getEligibleStudents2" which:
   - Accepts an array in the same structure as before.
   - Returns an array containing only the names that satisfies the new rule.
   
@@ -39,7 +39,7 @@ function eligibleStudents(candidates) {
   Unfortunately, administrators messed up the letter casing of names, sometimes it starts with small letter.
 */
 
-function eligibleStudents2(candidates) {
+function getEligibleStudents2(candidates) {
   // You have to implement this function body
 }
 
@@ -87,25 +87,25 @@ function test(test_name, expr) {
 }
 
 test("eligibleStudents function works",
-  arraysEqual(eligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"])
+  arraysEqual(getEligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"])
 )
 
 test("eligibleStudents function without eligible candidates",
-  arraysEqual(eligibleStudents(deltaStudentGroup), [])
+  arraysEqual(getEligibleStudents(deltaStudentGroup), [])
 )
 
 test("eligibleStudents function with no candidates",
-  arraysEqual(eligibleStudents([]), [])
+  arraysEqual(getEligibleStudents([]), [])
 )
 
 test("eligibleStudents2 function works",
-  arraysEqual(eligibleStudents2(alphaStudentGroup), ["Ahmed", "Adam"])
+  arraysEqual(getEligibleStudents2(alphaStudentGroup), ["Ahmed", "Adam"])
 )
 
 test("eligibleStudents2 function without eligible candidates",
-  arraysEqual(eligibleStudents2(deltaStudentGroup), ["amy"])
+  arraysEqual(getEligibleStudents2(deltaStudentGroup), ["amy"])
 )
 
 test("eligibleStudents2 function with no candidates",
-  arraysEqual(eligibleStudents2([]), [])
+  arraysEqual(getEligibleStudents2([]), [])
 )
