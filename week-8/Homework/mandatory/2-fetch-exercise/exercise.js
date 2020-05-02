@@ -2,7 +2,7 @@
 Use fetch to load a greeting from the API and display it 
 in the HTML element with the id "greeting-text".
 
-API: https://codeyourfuture.herokuapp.com/api/greetings
+API: https://codeyourfuture.heroku  app.com/api/greetings
 Response: A greeting in a random language
 
 To learn more about fetch, refer to the doc:
@@ -17,10 +17,14 @@ Open index.html in your browser. Every time you refresh the page,
 a different greeting should be displayed in the box.
 */
 
-fetch('*** Write the API address here ***')
-    .then(function(response) {
+fetch('https://codeyourfuture.herokuapp.com/api/greetings')
+    .then(function (response) {
+
         return response.text();
     })
-    .then(function(greeting) {
+    .then(function (greeting) {
         // Write the code to display the greeting text here
+       let theGreeting = document.getElementById("greeting-text");
+       theGreeting.innerText = greeting;
+
     });
