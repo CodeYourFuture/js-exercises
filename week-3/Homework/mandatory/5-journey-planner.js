@@ -115,7 +115,8 @@ function getLocationName() { }
    - Use the function you implemented above.
    - Use array method to remove locations that is not accessible by the given transportMode.
    - Use array method to manipulate its elements.
-
+   
+  Advanced challange: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
   // Implement the function body
