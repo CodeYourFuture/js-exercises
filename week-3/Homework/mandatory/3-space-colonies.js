@@ -6,6 +6,11 @@
   Create a function that returns an array of colonisers that will stay, according to the above rules.
 
   NOTE: don't include any element that is not a "family".
+  Hint: whenever you read the above the instructions, try to come up with the main input and output and logic
+  Input is an array
+  Output is an array
+  logic only strings that start with A, and finish with family
+  
 */
 
 function colonisers() {}
