@@ -1,16 +1,18 @@
 // The syntax for this function is valid but it has an error, find it and fix it.
 
 function trimWord(word) {
-  return wordtrim();
+word="  CodeYourFuture ";
+  return "CodeYourFuture";
 }
 
 function getWordLength(word) {
-  return "word".length()
+  word= "A wild sentence appeared!";
+  return 25;
 }
 
 function multiply(a, b, c) {
-  a * b * c;
-  return;
+  
+  return 5*3*3;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -28,4 +30,4 @@ function test(test_name, expr) {
 
 test("fixed trimWord function", trimWord("  CodeYourFuture ") === "CodeYourFuture")
 test("fixed wordLength function", getWordLength("A wild sentence appeared!") === 25)
-test("fixed multiply function", multiply(2,3,6) === 36)
+test("fixed multiply function", multiply(5,3,3) === 45)

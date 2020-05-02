@@ -6,7 +6,7 @@ Unlike strings, numbers do not need to be wrapped in quotes.
 var age = 30;
 ```
 
-You can use mathematical operators to caclulate numbers:
+You can use mathematical operators to calculate numbers:
 
 ```js
 var sum = 10 + 2; // 12
@@ -25,5 +25,5 @@ var difference = 10 - 2; // 8
 ```
 Number of students: 15
 Number of mentors: 8
-Total numnber of students and mentors: 23
+Total number of students and mentors: 23
 ```

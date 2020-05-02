@@ -48,14 +48,19 @@ Very doubtful.
 function shakeBall() {}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
+
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  let answerIndexinList = possibleAnswers.indexOf(Answer);
+  if (answerIndexinList<=)
+}
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
