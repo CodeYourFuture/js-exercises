@@ -6,26 +6,35 @@
     <title>Document</title>
   </head>
   <style>
+    body {
+      width: 95%;
+      justify-content: center;
+    }
     #container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 500px;
+      width: 90%;
       background-color: rgb(108, 108, 153);
-      margin: 30px;
+      margin: 0;
     }
     #imgBtn {
       width: 100px;
+    }
+    #imglist {
+      list-style: none;
+    }
+    img {
+      width: 500px;
     }
   </style>
   <body>
     <div id="container">
       <button id="imgBtn">Get image</button>
       <ul id="imglist">
-        <img src="" alt="" id="image" />
+        <!-- <img src="" alt="" id="image" /> -->
       </ul>
     </div>
-
-    <script>src="script.js"</script>
+    <script src="script.js"></script>
   </body>
 </html>

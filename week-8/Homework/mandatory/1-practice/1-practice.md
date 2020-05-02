@@ -22,10 +22,16 @@ The following endpoint is publicly available from Github
 
     GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
 
+  GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
+
+  fetch('https://api.github.com/repos/SCavus/js-exercises/pull/667/comments').then((response) => {
+    return response.json();
+    })
+
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+Lists commit comments for a repository
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+https://api.github.com/repos/CodeYourFuture/js-exercises/pulls/555/comments
