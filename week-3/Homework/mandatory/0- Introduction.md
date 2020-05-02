@@ -2,9 +2,9 @@
 
 You should complete all of these FreeCodeCamp exercises - https://www.freecodecamp.org/learn
 
-> -Go to JavaScript Algorithms and Data Structures Certification (300 hours)
-> -Then oepn Basic Data Structures
-> Do the following exercises
+> >>Go to JavaScript Algorithms and Data Structures Certification (300 hours)
+> >>Then oepn Basic Data Structures
+> >>Do the following exercises
 
 - Introduction to the Basic Data Structure Challenges
 - Use an Array to Store a Collection of Data
