@@ -24,8 +24,14 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- -->
+<!--It returns a message which is not found(404) and object message
+and documentation_url ({
+message: "Not Found",
+documentation_url: "https://developer.github.com/v3/pulls/comments/#list-comments-on-a-pull-request"
+}) -->
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+<!-- {owner}: CodeYourFuture
+     {repo}: js-exercises
+    {pull_number}: 730-->
