@@ -5,7 +5,11 @@ Following are set of small functions that you need to create using loops and arr
 //1)Find the Smallest Number in an Array
 //Create a function that takes an array of numbers and return the smallest number in it
 
-function findSmallestNum(arr) {}
+function findSmallestNum(arr) {
+  //   arr.sort().reduce((a, b) => Math.min(a, b));
+  arr.sort((a, b) => a - b);
+  console.log(arr[0]);
+}
 
 findSmallestNum([354, 15, 114, 2]); //Expected: 2
 
@@ -13,8 +17,9 @@ findSmallestNum([-76, 1, -79, 1, 0]); //Expected: -79
 
 //2)Checking Even Numbers
 //Create a function that takes in an array and returns true if all its values are even, and false otherwise.
-function checkAllEven(arr) {}
-
+function checkAllEven(arr) {
+  console.log(arr.every((p) => p % 2 === 0));
+}
 checkAllEven([1, 2, 2, 6, 9, 4]); //Expected: false
 
 checkAllEven([2, 4, 6]); //Expected: true
