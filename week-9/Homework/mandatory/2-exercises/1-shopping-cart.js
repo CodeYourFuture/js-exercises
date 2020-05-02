@@ -4,7 +4,7 @@ Complete the rest of this code to create an online shopping cart.
 
 The output of running your code should be:
 
-    Your shopping cart has 3 items: toilet roll, pasta, eggs
+    Your shopping cart has 3 items: Toilet Roll, Pasta, Eggs
 */
 
 class ShoppingCart {
