@@ -25,6 +25,24 @@ function eligibleStudents(candidates) {
   // You have to implement this function body
 }
 
+/*
+ 
+ Later leaders of Alpha planet decided to change the rule as below:
+
+ Only students whose name starts with the same letter than the name of the planer are eligible to join.
+
+ Implement the body of function called "eligibleStudents2" which:
+  - Accepts an array in the same structure as before.
+  - Returns an array containing only the names that satisfies the new rule.
+  
+  Note:
+  Unfortunately, administrators messed up the letter casing of names, sometimes it starts with small letter.
+*/
+
+function eligibleStudents2(candidates) {
+  // You have to implement this function body
+}
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const alphaStudentGroup = [
@@ -41,7 +59,8 @@ const alphaStudentGroup = [
 const deltaStudentGroup = [
   ["Zoidber", 6],
   ["Bender", 5],
-  ["Zapp", 7]
+  ["Zapp", 7],
+  ["amy", 0]
 ]
 
 function arraysEqual(a, b) {
@@ -68,9 +87,7 @@ function test(test_name, expr) {
 }
 
 test("eligibleStudents function works",
-  arraysEqual(
-    eligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"]
-  )
+  arraysEqual(eligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"])
 )
 
 test("eligibleStudents function without eligible candidates",
@@ -79,4 +96,16 @@ test("eligibleStudents function without eligible candidates",
 
 test("eligibleStudents function with no candidates",
   arraysEqual(eligibleStudents([]), [])
+)
+
+test("eligibleStudents2 function works",
+  arraysEqual(eligibleStudents2(alphaStudentGroup), ["Ahmed", "Adam"])
+)
+
+test("eligibleStudents2 function without eligible candidates",
+  arraysEqual(eligibleStudents2(deltaStudentGroup), ["amy"])
+)
+
+test("eligibleStudents2 function with no candidates",
+  arraysEqual(eligibleStudents2([]), [])
 )
