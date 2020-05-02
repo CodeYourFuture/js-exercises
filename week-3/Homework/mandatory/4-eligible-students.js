@@ -1,5 +1,5 @@
 /*
- Colonisers would like to bring some researchers to the planet to scrunise the surface. 
+ Colonisers would like to bring some researchers to the planet to scrutinise the surface. 
   
  They also need pupils who would act as assistants. Unfortunately, the number
  of seats is limited on the spaceship therefore they set the following algorithm
@@ -7,7 +7,7 @@
 
  Only students who have attended enough classes are eligible to join the research teams.
 
- Implement the body of function called "getEligibleStudents" which:
+ Finish the "getEligibleStudents" function which:
   - Accepts an array which contains all the students' names and their attendance counts
     For example:
     [
@@ -15,14 +15,29 @@
       ["Magor", 1]
     ]
     See that each student's information is stored separately as an embedded array.
-    
     This is also called as 2 dimensional array when you can find array inside of array.
 
   - Returns an array containing only the names of the who have attended AT LEAST 8 classes
+
 */
 
-function getEligibleStudents(candidates) {
-  // You have to implement this function body
+// Remember how to access to embedded arrays
+let twoDimensionalArray = [
+  ["cat", "dog"],
+  ["giraffe", "lion", "elephant"]
+];
+
+let pets = twoDimensionalArray[0]; // this reads the first embedded array 
+console.log(pets[1]) // this prints "cat" to the console
+
+// you can also read straight the embedded array
+console.log(twoDimensionalArray[1][2]);
+// this reads the second embedded array and then reads its last element and finally prints "elephant" to the console
+
+/* + + + + + + + */
+/* Now try the exercise */
+
+function getEligibleStudents() {
 }
 
 /*
@@ -37,10 +52,11 @@ function getEligibleStudents(candidates) {
   
   Note:
   Unfortunately, administrators messed up the letter casing of names, sometimes it starts with small letter.
+
+  Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2(candidates) {
-  // You have to implement this function body
+function getEligibleStudents2() {
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

@@ -61,7 +61,7 @@ function checkCodeIsThere(stringText) {
 
 /*
   Implement the function getTransportModes that
-   - Should accepts an array containing the location and available transport modes
+   - Accepts an array containing the location and available transport modes
      e.g: ["Tower Bridge", "tube", "river boat"]
    - Returns an array including the available transport modes to the given location
      e.g: ["tube", "river boat"]
@@ -72,7 +72,7 @@ function getTransportModes() { }
 
 /*
   Implement the function isAccessibleByTransportMode that
-   - Should accept two parameters:
+   - Accepts two parameters:
      1) First parameter is an array of transport modes
         e.g: ["tube", "river boat"]
      2) Second parameter is a string containing a transport mode
@@ -88,7 +88,7 @@ function isAccessibleByTransportMode() { }
 
 /*
   Implement the function getLocationName that
-   - Should accepts a location and available transports in an array
+   - Accepts a location and available transports in an array
      e.g:["Tower Bridge", "tube", "river boat"]
    - Returns the name of the location
      e.g: "Tower Bridge"
@@ -100,16 +100,17 @@ function getLocationName() { }
 
  Finish up the implemention of the function journeyPlanner that
   - Accepts two parameters:
-    1) An array with a list of locations
+    1) An array with a list of locations' and their transports
        e.g:
        [
          ["Angel", "tube", "bus"],
-         ["London Bridge", "tube", "river boat"],
+         ["London Bridge", "tube", "river boat"]
        ]
     2) A string containing a transport mode
+       e.g: "bus"
 
   - Returns an array of where I can go if I only want to use a specific mode of transport.
-    NOTE: only the names should be returned, not the name of transports.
+    NOTE: only the location names should be returned, not the name of transports.
 
   Hint:
    - Use the function you implemented above.
