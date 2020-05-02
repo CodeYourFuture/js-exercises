@@ -69,7 +69,7 @@ function test(test_name, expr) {
 
 test("eligibleStudents function works",
   arraysEqual(
-    eligibleStudents(attendances), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"]
+    eligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"]
   )
 )
 
