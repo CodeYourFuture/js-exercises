@@ -76,11 +76,11 @@ function showMovies() {
   }, 1000);
 }
 
-// create a new movie object for your favorite movie
+// // create a new movie object for your favorite movie
 const objectMovie = {
   title: "The Irishman",
   director: "Martin Scorsese",
-  type: "drama",
+  type: "Drama",
   haveWatched: true,
 };
 function addMovie(newMovie) {
@@ -90,7 +90,8 @@ function addMovie(newMovie) {
 }
 addMovie(objectMovie);
 showMovies();
-// create addMovies function
+
+// // create addMovies function
 
 let button = document.getElementById("form-button");
 button.addEventListener("click", clickSaveButton);
@@ -102,7 +103,7 @@ function clickSaveButton() {
     type: document.getElementById("form-type").value,
     haveWatched: true,
   };
-  console.log(userMovie);
+  //console.log(userMovie);
   addMovie(userMovie);
   showMovies();
 }

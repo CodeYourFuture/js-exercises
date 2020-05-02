@@ -15,14 +15,7 @@
 // ---------------
 // pickFromArray([1,2,3,4])     //maybe returns 2
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
-//
-// You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
 
-// A list of quotes you can use in your app.
-// Feel free to edit them, and to add your own favourites.
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
@@ -490,3 +483,20 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function pickFromArray(choices) {
+  return choices[Math.floor(Math.random() * choices.length)];
+}
+function generateQuote(abc) {
+  let oneQuote = pickFromArray(abc);
+  let targetH1 = document.getElementById("quote");
+  let targetH2 = document.getElementById("author");
+  targetH1.textContent += `'${oneQuote.quote}'`;
+  targetH2.textContent += `***${oneQuote.author}***`;
+}
+
+generateQuote(quotes);
+let targetBttn = document.getElementById("randomQuote");
+targetBttn.addEventListener("click", () => {
+  return location.reload();
+});

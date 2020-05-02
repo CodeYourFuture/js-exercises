@@ -6,7 +6,9 @@ console.log("Testing JS file loaded!");
 
 let sections = document.querySelectorAll("section");
 
-sections.forEach((sect) => (sect.style.backgroundColor = "white"));
+sections.forEach((sect) => {
+  sect.style.backgroundColor = "white";
+});
 
 // Task 2
 
@@ -16,7 +18,7 @@ sections.forEach((sect) => (sect.style.backgroundColor = "white"));
 
 let allImgs = document.querySelectorAll("img");
 
-allImgs.forEach(function (imgs) {
+allImgs.forEach( (imgs) => {
   imgs.classList.add("content-title");
 });
 // Task 3
@@ -25,7 +27,7 @@ allImgs.forEach(function (imgs) {
 
 let birthDate = ["9 December 1906", "26 August 1918", " 10 December 1815"];
 
-sections.forEach(function (section, i) {
+sections.forEach( (section, i) => {
   let p = document.createElement("p");
   section.appendChild(p);
   p.innerHTML = birthDate[i];

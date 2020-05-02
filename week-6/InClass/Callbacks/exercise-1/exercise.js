@@ -17,7 +17,7 @@ Update your code to make the colour change every 5 seconds to something differen
 */
 setInterval(function () {
   colors = ["pink", "red", "blue", "black"];
-  randomColors = Math.floor(Math.random() * 4);
+  var randomColors = Math.floor(Math.random() * 4);
   changeColor.style.backgroundColor = colors[randomColors];
 }, 500);
 /*
