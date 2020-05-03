@@ -15,6 +15,20 @@
 
 // `getAllFrequencies` goes here
 
+
+
+function getAllFrequencies() {
+    const frqStrt = 87;
+    const frqEnd = 108
+    let possibleFrequencies = [];
+    for (let i = frqStrt; i <= frqEnd; i++) {
+        possibleFrequencies.push(i);
+    }
+    console.log(possibleFrequencies)
+    return possibleFrequencies
+}
+
+
 /**
  * Next, let's write a function that gives us only the frequencies that are radio stations.
  * Call this function `getStations`.
@@ -26,72 +40,82 @@
  */
 // `getStations` goes here
 
+function getStations() {
+    let allRadioStations = getAllFrequencies();
+    let validRadioStations = [];
+    for (i = 0; i <= allRadioStations.length; i++) {
+        if (isRadioStation(allRadioStations[i])) {
+            validRadioStations.push(allRadioStations[i]);
+        }
+    }
+    return validRadioStations;
+}
+
 /* ======= TESTS - DO NOT MODIFY ======= */
 
 function getAvailableStations() {
-  // Using `stations` as a property as defining it as a global variable wouldn't
-  // always make it initialized before the function is called
-  if (!getAvailableStations.stations) {
-    const stationCount = 4;
-    getAvailableStations.stations = new Array(stationCount)
-      .fill(undefined)
-      .map(function () {
-        return Math.floor(Math.random() * (108 - 87 + 1) + 87);
-      })
-      .sort(function (frequencyA, frequencyB) {
-        return frequencyA - frequencyB;
-      });
-  }
-
-  return getAvailableStations.stations;
+    // Using `stations` as a property as defining it as a global variable wouldn't
+    // always make it initialized before the function is called
+    if (!getAvailableStations.stations) {
+        const stationCount = 4;
+        getAvailableStations.stations = new Array(stationCount)
+            .fill(undefined)
+            .map(function() {
+                return Math.floor(Math.random() * (108 - 87 + 1) + 87);
+            })
+            .sort(function(frequencyA, frequencyB) {
+                return frequencyA - frequencyB;
+            });
+    }
+    return getAvailableStations.stations;
 }
 
 function isRadioStation(frequency) {
-  return getAvailableStations().includes(frequency);
+    return getAvailableStations().includes(frequency);
 }
 
 const assert = require("assert");
 
 function test(testName, fn) {
-  try {
-    fn();
-    console.log(`\n✅ ${testName}: PASS`);
-  } catch (error) {
-    console.log(
-      `\n❌ ${testName}: FAIL (see details below)\n\n${error.message}`
-    );
-  }
+    try {
+        fn();
+        console.log(`\n✅ ${testName}: PASS`);
+    } catch (error) {
+        console.log(
+            `\n❌ ${testName}: FAIL (see details below)\n\n${error.message}`
+        );
+    }
 }
 
-test("getAllFrequencies() returns all frequencies between 87 and 108", function () {
-  const frequencies = getAllFrequencies();
-  assert.deepStrictEqual(frequencies, [
-    87,
-    88,
-    89,
-    90,
-    91,
-    92,
-    93,
-    94,
-    95,
-    96,
-    97,
-    98,
-    99,
-    100,
-    101,
-    102,
-    103,
-    104,
-    105,
-    106,
-    107,
-    108,
-  ]);
+test("getAllFrequencies() returns all frequencies between 87 and 108", function() {
+    const frequencies = getAllFrequencies();
+    assert.deepStrictEqual(frequencies, [
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+    ]);
 });
 
 test("getStations() returns all the available stations", () => {
-  const stations = getStations();
-  assert.deepStrictEqual(stations, getAvailableStations());
+    const stations = getStations();
+    assert.deepStrictEqual(stations, getAvailableStations());
 });

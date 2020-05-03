@@ -67,16 +67,18 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-
-
 function formatPercentage(arr) {
     let newArr = [];
     for (i = 0; i < arr.length; i++) {
         if (arr[i] > 100) {
             arr[i] = 100;
         }
-        newArr[i] = arr[i].toFixed(2);
-        arr[i] = newArr[i] + "%";
+        if (arr[i] == arr[i].toFixed(2)) {
+            newArr[i] = arr[i]
+        } else {
+            newArr[i] = arr[i].toFixed(2)
+        }
+        arr[i] = newArr[i] + "%"
     }
     return arr;
 }
@@ -148,9 +150,9 @@ test(
 test(
     "formatPercentage function works - case 1",
     arraysEqual(formatPercentage([23, 18, 187.2, 0.372]), [
-        "23.00%",
-        "18.00%",
-        "100.00%",
+        "23%",
+        "18%",
+        "100%",
         "0.37%"
     ])
 );
