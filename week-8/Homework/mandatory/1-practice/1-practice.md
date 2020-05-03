@@ -21,11 +21,14 @@ Enjoy!
 The following endpoint is publicly available from Github
 
     GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
+    GET https://api.github.com/repos/octocat/Hello-World/pulls/1347
+    GET https://api.github.com/repos/octocat/Hello-World/pulls/1347
+    GET https://http.cat/
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+This API endpoint returns a comment "message": "Not Found",
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+octocat, Hello-world, 1347
