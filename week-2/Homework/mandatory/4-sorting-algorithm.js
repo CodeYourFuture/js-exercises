@@ -14,8 +14,18 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
-
+function sortAges(arr) {
+  let newArr = [];
+  for (i in arr) {
+    if (typeof arr[i] == "number") {
+      newArr.push(arr[i]);
+    }
+  }
+  newArr = newArr.sort(function (a, b) {
+    return a - b;
+  });
+  return newArr;
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const agesCase1 = [
