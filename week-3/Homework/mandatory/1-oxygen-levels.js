@@ -21,17 +21,18 @@ let dessert = "ice cream and pancakes";
 
 let newdessert = dessert.substring(0, 9);
 
-console.log(newdessert); // returns ice cream
+// console.log(newdessert); // returns ice cream
 
 /* + + + + + + + */
 /* Now try the exercise */
 
 function safeLevels(levels) {
-  const safeLevel = levels.find((level) => level < "23.5" && level >= "19.6");
+  const safeLevel = levels.find((level) => level < "23.5%" && level > "19.5%");
+  console.log(safeLevel);
   return safeLevel;
 }
 
-console.log(safeLevels(["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]));
+// console.log(safeLevels(["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
