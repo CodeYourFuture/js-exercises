@@ -14,7 +14,7 @@
   match what you're looking for and returns true or false. .every() will only return true 
   if all values match watch you're looking for. Let's first look at an example that will 
   teach you how to use these methods.
- */
+  */
 
 let array = [12, 73, 92, 45, 100, 14, 61];
 
