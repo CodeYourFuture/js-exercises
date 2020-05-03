@@ -26,17 +26,18 @@ console.log(newdessert); // returns ice cream
 /* + + + + + + + */
 /* Now try the exercise */
 
-// let found = oxygenLevels1.find((Element) => Element > "19.5");
-// console.log(found);
-// let oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
+let arrayStr = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
+
 function safeLevels(num) {
-  return num > "19.5%";
+  return num > 19.5 && num < 23.5;
 }
+let found = arrayStr.find(safeLevels).replace("%", "19.5");
+console.log(found);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-// const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
-// const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"];
+const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
+const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"];
 
 function test(test_name, expr) {
   let status;
