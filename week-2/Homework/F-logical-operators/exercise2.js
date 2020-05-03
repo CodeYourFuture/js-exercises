@@ -5,8 +5,35 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(x) {
+  if (x < 0) {
+    return true;
+  } else if (x > 0) {
+    return false;
+  }
+}
+function isBetween5and10(y) {
+  if (5 <= y <= 10) {
+    return true;
+  } else {
+    return false;
+  }
+}
+function isShortName(name) {
+  if (name.length <= 6) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
+function startsWithD(z) {
+  if (z.charAt(0) === "D") {
+    return true;
+  } else {
+    return false;
+  }
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
