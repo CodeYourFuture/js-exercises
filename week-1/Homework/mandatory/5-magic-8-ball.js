@@ -1,40 +1,32 @@
 /**
-
 Let's peer into the future using a Magic 8 Ball!
 https://en.wikipedia.org/wiki/Magic_8-Ball 
-
 There are a few steps to being able view the future though:
 * Ask a question
 * Shake the ball
 * Get an answer
 * Decide if it's positive or negative
-
 The question can be anything, but the answers are fixed,
 and have different levels of positivity or negativity.
-
 Below are the possible answers:
-
-## Very positive
+## Very positive
 It is certain.
 It is decidedly so.
 Without a doubt.
 Yes - definitely.
 You may rely on it.
-
 ## Positive
 As I see it, yes.
 Most likely.
 Outlook good.
 Yes.
 Signs point to yes.
-
 ## Negative
 Reply hazy, try again.
 Ask again later.
 Better not tell you now.
 Cannot predict now.
 Concentrate and ask again.
-
 ## Very negative
 Don't count on it.
 My reply is no.
@@ -45,22 +37,65 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
+let possibleAnswers = [
+  "It is certain",
+  "It is decidedly so",
+  "Without a doubt",
+  "Yes - definitely",
+  "You may rely on it",
+
+  "As I see it, yes",
+  "Most likely",
+  "Outlook good",
+  "Yes",
+  "Signs point to yes",
+
+  "Reply hazy, try again",
+  "Ask again later",
+  "Better not tell you now",
+  "Cannot predict now",
+  "Concentrate and ask again",
+
+  "Don't count on it",
+  "My reply is no",
+  "My sources say no",
+  "Outlook not so good",
+  "Very doubtful",
+];
+
+function shakeBall() {
+  //floor as array index start from 0, length from 1
+  let answer =
+    possibleAnswers[Math.floor(Math.random() * possibleAnswers.length)];
+  console.log(`The ball has shaken!`);
+  return answer;
+}
 
 // The answer should come from shaking the ball
-let answer;
+let answer = shakeBall();
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(answer) {
+  let answerIndexinList = possibleAnswers.indexOf(answer);
+  if (answerIndexinList <= 4) {
+    return `very positive`;
+  } else if (answerIndexinList > 4 && answerIndexinList <= 9) {
+    return `positive`;
+  } else if (answerIndexinList > 9 && answerIndexinList <= 14) {
+    return `negative`;
+  } else {
+    return "very negative";
+  }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
 let logged;
-console.log = function() {
+console.log = function () {
   log(...arguments);
   logged = arguments[0];
 };
