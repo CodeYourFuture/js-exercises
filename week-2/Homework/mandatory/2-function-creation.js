@@ -6,19 +6,33 @@ Write a function that:
 - makes the string all lowercase
 */
 function tidyUpString(strArr) {
-  let slashes = strArr.replace(/\\/g, "");
+  let tidy = [];
+  let tidy1 = [];
+  let lower = [];
 
-  return slashes;
+  for (let i = 0; i < strArr.length; i++) {
+    tidy[i] = strArr[i].trim();
+    tidy1[i] = tidy[i].replace(/\//g, "");
+    lower[i] = tidy1[i].toLowerCase();
+  }
+  return lower;
 }
+
 /*
-Complete the function to check if the variable `num` satisfies the following requirements:
+Complete the function to check if the variable `num` satisfies the following requirements:..
 - is a number
 - is even
-- is less than or equal to 100..
+- is less than or equal to 100
 Tip: use logical operators
 */
 
-function validate(num) {}
+function validate(num) {
+  if (typeof num === "number" && num <= 100 && num % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /* 
 Write a function that removes an element from an array
@@ -29,7 +43,8 @@ The function must:
 */
 
 function remove(arr, index) {
-  return; // complete this statement
+  const removed = arr.splice(index, 1); // complete this statement
+  return arr;
 }
 
 /*
@@ -40,7 +55,21 @@ Write a function that:
 - numbers greater 100 must be replaced with 100
 */
 
-function formatPercentage(arr) {}
+function formatPercentage(arr) {
+  let newarray = [];
+  let temp;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      arr[i] = 100;
+      temp = (arr[i].toFixed(2) * 100) / 100;
+      newarray[i] = temp.toString() + "%";
+    } else {
+      temp = (arr[i].toFixed(2) * 100) / 100;
+      newarray[i] = temp.toString() + "%";
+    }
+  }
+  return newarray;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

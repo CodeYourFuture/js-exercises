@@ -2,7 +2,7 @@
 
 // Aim: to understand the change code inside functions
 //
-// The below functions are syntactically correct but not outputting the right results.
+// The below functions are syntactically correct but not outputting the right results..
 // Look at the tests and see how you can fix them.
 
 // 1) mood function does this return `"I am not happy"`

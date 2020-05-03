@@ -1,6 +1,6 @@
 // Sorting Algorithms
 //
-// Aim: to understand the work of loops and nested loops and array methods
+// Aim: to understand the work of loops and nested loops and array methods.
 //
 // You need to create the function sortAges that takes one array as parameter input
 
