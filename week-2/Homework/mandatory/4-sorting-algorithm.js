@@ -9,7 +9,7 @@ At the start of the course, you worked in teams to sort your team members, label
 numbers, in ascending or descending order.
 
 Today, you will be applying the sorting algorithm you used in that exercise in code! 
-
+/*
 Create a function called sortAges which:
 - takes an array of mixed data types as input
 - removes any non-number data types without using the built-in javascript filter method 
@@ -19,9 +19,45 @@ Create a function called sortAges which:
 You don't have to worry about making this algorithm work fast! The idea is to get you to
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
-//1)Create the function inside, Think about nested loops.
+//1)Create the function inside, Think about nested loops
+let newarrey = [];
 function sortAges(arr) {
-  //create function here
+  let i = 0;
+  while (i < arr.length) {
+    if (typeof arr[i] == "string") {
+      arr.splice(i, 1);
+    } else {
+      ++i;
+    }
+  }
+
+  const newarrey = [];
+  let position = 0,
+    min = arr[0],
+    max = arr[0];
+  //get maximum item of arr.
+  for (let x = 0; x < arr.length; x++) {
+    if (max < arr[x]) {
+      max = arr[x];
+    }
+  }
+
+  //sorting
+
+  for (let a = 0; a < arr.length; a++) {
+    for (let b = 0; b < arr.length; b++) {
+      if (arr[b] != null) {
+        if (min > arr[b]) {
+          min = arr[b];
+          position = b;
+        }
+      }
+    }
+    newarrey[a] = min;
+    arr[position] = null;
+    min = max;
+  }
+  return newarrey;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
