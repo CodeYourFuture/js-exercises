@@ -24,4 +24,10 @@ fetch("*** Write the API address here ***")
   .then(function (greeting) {
     // Write the code to display the greeting text here
   });
-console.log();
+fetch("https://codeyourfuture.herokuapp.com/api/greetings")
+  .then(function (response) {
+    return response.text();
+  })
+  .then(function (greeting) {
+    document.getElementById("greeting-text").innerText = greeting;
+  });
