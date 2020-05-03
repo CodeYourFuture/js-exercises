@@ -43,7 +43,7 @@ const f1 = function (a, b) {
                                 
 };
 
-const f2 = function (a, b) {     //will it just ignore the x? or error? 
+const f2 = function (a, b) {      
   return a + b + x;
   
 };                              //returns sum of 3 parameters
@@ -60,7 +60,7 @@ for (let i = 0; i < 5; ++i) {  // for loop where i starts at zero, i < 5 is true
                               // At the start, a is 6, at the end of the loop a is 11
 
   if (i % 2 === 0) {          // if i is even is true, run code. 
-    const d = f2(i, x);       // d = i + 2. 1st, 3rd and 5th loop i is an even number is true. 
+    const d = f2(i, x);       // d = 0 + 2 . 1st, 3rd and 5th loop i is an even number is true. 
                               // 1st loop: d is 2 (0 + 2). 3rd loop d is 4 (2 + 2), 5th loop d is 6 (4 + 2). 
     console.log(d);           // what will log? 2, 4, 6. 
   } else {                    // if i is even is false, run this code.  
