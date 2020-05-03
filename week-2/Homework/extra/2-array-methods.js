@@ -12,7 +12,6 @@ function findSmallestNum(arr) {
 }
 
 findSmallestNum([354, 15, 114, 2]); //Expected: 2
-
 findSmallestNum([-76, 1, -79, 1, 0]); //Expected: -79
 
 //2)Checking Even Numbers
