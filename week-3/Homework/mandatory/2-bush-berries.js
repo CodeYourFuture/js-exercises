@@ -8,7 +8,25 @@
   Create a function which checks if the bush has ALL PINK berries and is safe for the astronauts to eat from the bush.
 
   Use the tests to confirm which message to return
-*/
+
+  This exercise can be solved in a few different ways. One way might include the array methods
+  .some() and .every(). The .some() method tests to see if some of the values (at least 1) in an array 
+  match what you're looking for and returns true or false. .every() will only return true 
+  if all values match watch you're looking for. Let's first look at an example that will 
+  teach you how to use these methods.
+ */
+
+let array = [12, 73, 92, 45, 100, 14, 61];
+
+array.some((value) => {return (value % 2 == 0)}); /* this will return true as SOME values 
+will have a remainder of 0 i.e. they are even numbers*/
+
+array.every((value) => {return (value % 2 == 0)}); /* this will return false as not ALL 
+values will have a remainder of 0 i.e. there are some odd numbers in the array too*/
+
+/* + + + + + + + + + + + + + + */
+
+/* Now try to complete the exercise */
 
 function bushChecker() {
 

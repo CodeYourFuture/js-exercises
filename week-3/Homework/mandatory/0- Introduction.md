@@ -2,6 +2,10 @@
 
 You should complete all of these FreeCodeCamp exercises - https://www.freecodecamp.org/learn
 
+Go to **JavaScript Algorithms and Data Structures Certification (300 hours)**
+
+Open section **Basic Data Structures** and do the following exercises
+
 - Introduction to the Basic Data Structure Challenges
 - Use an Array to Store a Collection of Data
 - Access an Array's Contents Using Bracket Notation
@@ -15,16 +19,8 @@ You should complete all of these FreeCodeCamp exercises - https://www.freecodeca
 - Check For The Presence of an Element With indexOf()
 - Iterate Through All an Array's Items Using For Loops
 - Create complex multi-dimensional arrays
-- Add Key-Value Pairs to JavaScript Objects
-- Modify an Object Nested Within an Object
-- Access Property Names with Bracket Notation
-- Use the delete Keyword to Remove Object Properties
-- Check if an Object has a Property
-- Iterate Through the Keys of an Object with a for...in Statement
-- Generate an Array of All Object Keys with Object.keys()
-- Modify an Array Stored in an Object
 
-and you should attempt all of these
+Then open **Basic Algorithm Scripting** and attempt all of these 
 
 - Convert Celsius to Fahrenheit
 - Reverse a String
