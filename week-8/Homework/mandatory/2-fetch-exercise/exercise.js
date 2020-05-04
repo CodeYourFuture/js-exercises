@@ -18,16 +18,10 @@ a different greeting should be displayed in the box.
 */
 
 fetch('https://codeyourfuture.herokuapp.com/api/greetings')
-    // .then(function (response) {
-    //     return response.text();
-    // })
-    // .then(function (greeting) {
-    //     console.log(greeting);
-    // });
-    .then((response) => {
-        return response.text()
+    .then(response => {
+        return response.text();
     })
-    .then((greeting) => {
+    .then(greeting => {
         console.log(greeting);
         let randomGreeting = document.getElementById("greeting-text").innerText = greeting;
         return randomGreeting;

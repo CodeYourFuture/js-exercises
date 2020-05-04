@@ -28,6 +28,7 @@ The following endpoint is publicly available from Github
 1. Describe in a sentence what this API endpoint returns.
 
 This API endpoint returns a comment "message": "Not Found",
+The API would return comments from the webserver or web application if the address was correct
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 

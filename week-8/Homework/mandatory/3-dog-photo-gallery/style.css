@@ -1,15 +1,17 @@
+.body {
+  background-color: rgb(196, 202, 255);
+}
 .btn {
   padding: 10px;
-  margin-left: 200px;
-  margin-top: 60px;
+  margin-left: 220px;
+  margin-top: 250px;
   width: 100px;
+  background-color: rgb(226, 110, 43);
 }
-.dogImage {
-  padding: 150px 250px 150px 250px;
-  margin-left: 200px;
-  margin-top: 50px;
-  width: 1200px;
-  border: 5px solid red;
+#dogImage {
+  width: 300px;
+  top: 100px;
+  margin-left: 250px;
 }
 ul {
   list-style-type: none;
