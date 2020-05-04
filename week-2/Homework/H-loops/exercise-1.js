@@ -9,7 +9,7 @@
 //The while loop outputs "Hello" 10 times. Change the code so it only outputs "Hello" 5 times
 
 let i = 0;
-while(i < 10) {
+while(i < 5) {
   console.log("Hello");
   i++
 }
@@ -17,15 +17,15 @@ while(i < 10) {
 //This while loop doesn't do anything! Change the code so it outputs the sentence "Coding is easy" 3 times
 
 let j = 0;
-while(j < 5) {
-
+while(j < 3) {
+  console.log("Coding is easy");
   j++
 } 
 
 // This while loop uses the variable loopLimit in its condition.
 // Change the code below so it outputs "Goodbye" 5 times
 
-let loopLimit = 2; 
+let loopLimit = 5; 
 k = 0;
 while(k < loopLimit) { //don't change this line
   console.log("Goodbye");
