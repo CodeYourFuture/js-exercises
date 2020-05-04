@@ -62,9 +62,11 @@ class RunningTotal {
 
     add(n) {
         // Implement this method
+        this.currentTotal(n)
     }
     getTotal() {
         // Implement this method
+        
     }
 }
 

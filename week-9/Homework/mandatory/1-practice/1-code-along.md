@@ -1,6 +1,6 @@
 # Code Along
 
-In the following "code along" you'll be building a complete Weather App that makes use of the [Darksky API](https://darksky.net).
+In the following "code along" you'll be building a complete Weather App that makes use of the [Darksky API](https://darkskyIn the following "code along" you'll be building a complete Weather App that makes use of the [Darksky API](https://darksky.net)..net).
 
 Enjoy!
 
