@@ -14,7 +14,6 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-dsadas
 
 ## Question 2
 
