@@ -1,6 +1,5 @@
 /*
  Colonisers would like to bring some researchers to the planet to scrutinise the surface. 
-  
  They also need pupils who would act as assistants. Unfortunately, the number
  of seats is limited on the spaceship therefore they set the following algorithm
  to select students:
@@ -57,11 +56,11 @@ console.log(arrayLengths);
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents(pupils) {
-  const eligiblePupils = pupils.filter((names) => names[1] >= 8);
-  console.log(eligiblePupils);
-  return eligiblePupils;
-}
+function getEligibleStudents()
+
+// function getEligibleStudents(pupils) {
+//   return pupils.filter((names) => names[1] >= 8);
+// }
 
 /*
  
