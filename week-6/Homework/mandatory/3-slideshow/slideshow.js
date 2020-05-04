@@ -43,7 +43,6 @@ function goBack() {
 let btn = document.getElementById("back");
 btn.addEventListener("click", goBack);
 
-//This is a callback function calls the goForward function multiple times using setInterval - from line 20 - 25
 //https://www.w3schools.com/jsref/met_win_setinterval.asp
 
 let interval;
