@@ -13,7 +13,13 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  let output = arr.filter(function (item) {
+    return item.charAt(0) === "A" && item.includes("family");
+  });
+  console.log(output);
+  return output;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
