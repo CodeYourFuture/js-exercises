@@ -4,12 +4,10 @@ document.getElementById("imgBtn").addEventListener("click", function (){
         console.log(response);
         return response.json();
 })
-
 .then(data => {
     console.log(data);
     let element = data.message
     console.log(element)
-
     let ul = document.getElementById("list")
     let imgList = document.createElement("li")
     let dogImg = document.createElement("img")
@@ -18,5 +16,3 @@ document.getElementById("imgBtn").addEventListener("click", function (){
     ul.appendChild(imgList)
 })
 })
-
-
