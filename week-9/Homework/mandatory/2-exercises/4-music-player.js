@@ -1,18 +1,57 @@
 class MusicPlayer {
   // Add your code here
   constructor() {
-    this.playlist = [];
-    let current = this.playlist[0];
+    this.playlist = {
+      songs: [],
+      currentSong: 0,
+    };
   }
 
   add(song, artist) {
-    this.playlist.push([`${song} by ${artist}`]);
+    this.playlist.songs.push([`${song} by ${artist}`]);
   }
   play() {
-    console.log(`Currently playing: ${current}`);
+    if (this.playlist.songs.length === 0) {
+      console.log("Playlist is empty! Please add a song!");
+    } else {
+      console.log(
+        `Currently playing: ${this.playlist.songs[this.playlist.currentSong]}`
+      );
+    }
   }
-  skip() {}
-  previous() {}
+  skip() {
+    if (this.playlist.songs.length - 1 <= this.playlist.currentSong) {
+      this.playlist.currentSong = 0;
+      console.log(
+        `Currently playing: ${this.playlist.songs[this.playlist.currentSong]}`
+      );
+    } else {
+      this.playlist.currentSong++;
+      console.log(
+        `Currently playing: ${this.playlist.songs[this.playlist.currentSong]}`
+      );
+    }
+  }
+  previous() {
+    this.playlist.currentSong--;
+    console.log(
+      `Currently playing: ${this.playlist.songs[this.playlist.currentSong]}`
+    );
+  }
+  repeat() {
+    this.playlist.currentSong = 0;
+    console.log(
+      `Currently playing: ${this.playlist.songs[this.playlist.currentSong]}`
+    );
+  }
+  shuffle() {
+    this.playlist.currentSong = Math.floor(
+      Math.random() * Math.floor(this.playlist.songs.length)
+    );
+    console.log(
+      `Currently playing: ${this.playlist.songs[this.playlist.currentSong]}`
+    );
+  }
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
@@ -31,6 +70,11 @@ myMusicPlayer.previous(); // Output: "Currently playing: Bohemian Rhapsody by Qu
 myMusicPlayer.skip(); // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip(); // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.skip();
+myMusicPlayer.repeat();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
 
 /*
 
