@@ -27,11 +27,15 @@ After you've watched these videos I'd like you to answer these questions
 ## 1. What do you think the most important quality for a programmer is?
 
 <!-- Write your answer here -->
+Problem-solving skills, knowing how to breakdown the problems and tackle one thing at a time.
 
 ## 2. When trying to solve a challenge, what should you do first?
 
 <!-- Write your answer here -->
+I should read the challenge carefully in order to understand what I am trying to do. A challenge should be breakdown into pieces and I should write useful comments to avoid problems and save times. 
+
 
 ## 3. What should you do if you get stuck?
 
 <!-- Write your answer here -->
+If I get stuck, initially I should try to understand the problem I am solving. Read out line by line and apply Rubber Duck Method. I will type my problems into Google search and look for my answers in the forums or good resources. And then try to approach the problems one thing at a time. Check syntax and use debugger.   
