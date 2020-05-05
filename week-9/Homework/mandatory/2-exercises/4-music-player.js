@@ -3,6 +3,7 @@ class MusicPlayer {
         this.songList = [];
         this.i = 0;
     }
+    
     add(song, singer){
       this.musicList = {song, singer} 
       this.songList.push(this.musicList)
@@ -25,7 +26,8 @@ class MusicPlayer {
         this.play()
     }
 
-    // shuffle(){
+    // STILL WORKING ON THIS PART
+    // shuffle(){  
     //     let a = this.songList.length
     //     let temp = this.i
     //     this.i = Math.floor(Math.random() * a)
