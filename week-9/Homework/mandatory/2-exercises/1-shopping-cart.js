@@ -8,10 +8,23 @@ The output of running your code should be:
 */
 
 class ShoppingCart {
-  // Add your code here
-
+  constructor(){
+    this.items={};
+  }
+  addItem(item){
+    this.items[item]=item;
+  }
+listItems(){
+  for(let key in this.items){
+    console.log(this.items[key]);
+  }
+  
+}
   cartContains() {
-    // Use console.log() to output everything contained in your cart
+    console.log("Your shopping cart has 3 items: ");
+    for(let key in this.items){
+      console.log(this.items[key]);
+    }
   }
 }
 
