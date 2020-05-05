@@ -27,7 +27,7 @@ class Person {
   }
 
   greeting = () => {
-    console.log("Hi! I'm " + this.name + ".");
+    console.log(`Hi! I'm ${this.name}.`);
     return this.name;
   };
 }
