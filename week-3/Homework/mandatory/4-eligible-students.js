@@ -23,44 +23,44 @@
 
 // Remember how to access to embedded arrays
 
-let twoDimensionalArray = [
-  ["cat", "dog"],
-  ["giraffe", "lion", "elephant"],
-];
+// let twoDimensionalArray = [
+//   ["cat", "dog"],
+//   ["giraffe", "lion", "elephant"],
+// ];
 
 // Examples accessing to array element directly
 // Example 1
-let pets = twoDimensionalArray[0]; // this reads the first embedded array
-console.log(pets[1]); // this prints "cat" to the console
+//let pets = twoDimensionalArray[0]; // this reads the first embedded array
+//console.log(pets[1]); // this prints "cat" to the console
 
 // Example 2
 // You can also read straight the element of an embedded array:
-console.log(twoDimensionalArray[1][2]);
+// console.log(twoDimensionalArray[1][2]);
 // This reads the second embedded array and then reads its last element and finally prints "elephant" to the console
 
 // Examples accessing to array element through array methods
 // Example 1
-let moreThanTwoArrays = twoDimensionalArray.filter(
-  (embeddedArray) => embeddedArray.length > 2
-);
-console.log(moreThanTwoArrays);
+// let moreThanTwoArrays = twoDimensionalArray.filter(
+//   (embeddedArray) => embeddedArray.length > 2
+// );
+// console.log(moreThanTwoArrays);
 // This filter only keeps embededd arrays that have more than 3 elements
 
 // Example 2
-let arrayLengths = twoDimensionalArray.map(
-  (embeddedArray) => embeddedArray.length
-);
-console.log(arrayLengths);
+// let arrayLengths = twoDimensionalArray.map(
+//   (embeddedArray) => embeddedArray.length
+// );
+// console.log(arrayLengths);
 // This gives back how many elements of each array have
 
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents()
-
-// function getEligibleStudents(pupils) {
-//   return pupils.filter((names) => names[1] >= 8);
-// }
+function getEligibleStudents(arr) {
+  let newArr = arr.filter((classes) => classes[1] >= 8);
+  const goodStudents = newArr.map((p) => p[0]);
+  return goodStudents;
+}
 
 /*
  
@@ -78,13 +78,14 @@ function getEligibleStudents()
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-// function getEligibleStudents2(array) {
-//   const newEligiblePupils = array.filter(
-//     (name) => name[0].charAt(0) == "A" || name[0].charAt(0) == "a"
-//   );
-//   console.log(newEligiblePupils);
-//   return newEligiblePupils;
-// }
+function getEligibleStudents2(arr) {
+  const newEligiblePupils = arr.filter(
+    (name) => name[0].charAt(0) === "A" || name[0].charAt(0) === "a"
+  );
+  const newArr = newEligiblePupils.map((p) => p[0]);
+  console.log(newArr);
+  return newArr;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
