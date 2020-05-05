@@ -25,7 +25,11 @@ The following endpoint is publicly available from Github
 1. Describe in a sentence what this API endpoint returns.
 
 <!-- Write your answer here -->
+The above API endpoint return lists of review comments for a pull request. 
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
 <!-- Write your answer here -->
+github username
+github repository
+pull request # number
