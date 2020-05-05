@@ -9,9 +9,7 @@ try {
   fetchData();
 } catch (e) {
   console.error(e);
- } finally {
-  console.log('clean here');
-}
+ } 
 
 function displayImg(data){
   const showDiv =document.querySelector('.show')
