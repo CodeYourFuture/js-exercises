@@ -1,7 +1,16 @@
 /*
-    Convert the Function here into a JavaScript Class called 'Person'
+    Convert the Function here into a JavaScript Class called 'Person'*/
 
-    ```
+    class Person{
+        constructor(name){
+            this.obj = name;
+        }
+        greeting(){
+            console.log("Hi! I\'m " + this.obj + ".")
+        }
+    }
+
+    /*```
         function createNewPerson(name) {
             const obj = {};
             obj.name = name;
@@ -24,7 +33,7 @@
 // Write your code here
 
 // Do not edit this section
-const simon = Person("simon");
-console.log(simon.name);
+const simon = new Person("simon");
+// console.log(simon.name);
 simon.greeting();
 // Do not edit this section

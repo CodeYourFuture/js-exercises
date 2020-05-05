@@ -1,6 +1,36 @@
 class MusicPlayer {
-    // Add your code here
+    constructor() {
+        this.songList = [];
+        this.i = 0;
+    }
+    add(song, singer){
+      this.musicList = {song, singer} 
+      this.songList.push(this.musicList)
+      console.log(this.songList)
+    }
 
+    play(){
+        console.log(`Currently playing: ${this.songList[this.i].song} by ${this.songList[this.i].singer}`)
+    }
+
+    skip(){
+      this.i++;
+      this.i > this.songList.length-1 ? this.i =0 : true
+      this.play()
+    }
+
+    previous(){
+        this.i--;
+        this.i < 0 ? this.i = this.songList.length-1: true
+        this.play()
+    }
+
+    // shuffle(){
+    //     let a = this.songList.length
+    //     let temp = this.i
+    //     this.i = Math.floor(Math.random() * a)
+    //     this.i !== temp ? true : false
+    // }
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
@@ -14,11 +44,11 @@ myMusicPlayer.play();      // Output: "Currently playing: Bohemian Rhapsody by Q
 
 myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
 
-myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Queen"
+ myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Queen"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
+ myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
+ myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
 
 
 /*
