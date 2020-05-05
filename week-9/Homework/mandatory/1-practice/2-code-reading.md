@@ -14,6 +14,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+Because we have different scopes for our variables. The first one on line 1 is stored in global scope and the other one is stored in the block scope
 
 ## Question 2
 
@@ -33,6 +34,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+The first output will be 10, because in the console.log on line 32 we call the function witch will execute a console.log.
+The second output will be undefined, because the variable y is "living" in the block scope of the function and we don't have access to her from outside the function.
 
 ## Question 3
 
@@ -61,3 +64,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+First output will be 9 because we only console.log the variable x witch is equal with 9
+Second output will an object with a key x witch has a value of 9
