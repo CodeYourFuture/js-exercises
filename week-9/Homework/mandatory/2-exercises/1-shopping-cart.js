@@ -8,10 +8,16 @@ The output of running your code should be:
 */
 
 class ShoppingCart {
-  // Add your code here
-
+  // constructor() {
+    
+  // }
   cartContains() {
     // Use console.log() to output everything contained in your cart
+    let myShoppingCart = []
+    console.log(myShoppingCart)
+  }
+  addItem(item) {
+    myShoppingCart.push(item)
   }
 }
 
