@@ -27,9 +27,28 @@ console.log(newdessert); // returns ice cream
 /* + + + + + + + */
 /* Now try the exercise */
 
-function safeLevels() {
+const oxygenLs1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
+const oxygenLs2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"];
+
+function safeLevels(strArr) {
+
+  let convertedArr = strArr.map( function (oxyLevel){
+    let sub = oxyLevel.substring(0,4);
+    return parseFloat(sub);
+    }
+  );
+
+  function findFirstPlanet(allLevels){
+    return allLevels > 19.5 && allLevels < 23.5;
+  }
+
+ return `${convertedArr.find(findFirstPlanet)}%`;
 
 }
+
+console.log(safeLevels(oxygenLs1));
+console.log(safeLevels(oxygenLs2));
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
