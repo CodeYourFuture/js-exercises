@@ -9,8 +9,22 @@ The output of running your code should be:
 
 class ShoppingCart {
   // Add your code here
+  constructor() {
+    this.cart = [];
+  }
+
+  addItem = (item) => {
+    this.cart.push(item);
+  };
+
+  listItems = () => {
+    console.log(`Your shopping cart has ${this.cart.length} items: `);
+  };
 
   cartContains() {
+    this.cart.forEach((item, index) => {
+      console.log(index + 1 + ": " + item);
+    });
     // Use console.log() to output everything contained in your cart
   }
 }
