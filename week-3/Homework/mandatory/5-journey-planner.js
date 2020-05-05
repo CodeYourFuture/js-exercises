@@ -69,8 +69,6 @@ function checkCodeIsThere(string) {
   Hint: Use the corresponding array method to split the array.
 */
 function getTransportModes(arr) {
-  // arr.shift();
-
   return arr.slice(1);
 }
 
@@ -89,11 +87,17 @@ function getTransportModes(arr) {
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
 function isAccessibleByTransportMode(arr, string) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].includes(string)) {
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i].includes(string)) {
+  //     return true;
+  //   }
+  // }
+  // return false;
+  arr.forEach(function (item) {
+    if (item.includes(string)) {
       return true;
     }
-  }
+  });
   return false;
 }
 
@@ -133,13 +137,22 @@ function getLocationName(arr) {
   Advanced challange: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
-  let arr1 = [];
-  for (let i = 0; i < locations.length; i++) {
-    if (locations[i].includes(transportMode)) {
-      arr1.push(locations[i][0]);
+  // let arr1 = [];
+  // for (let i = 0; i < locations.length; i++) {
+  //   if (locations[i].includes(transportMode)) {
+  //     arr1.push(locations[i][0]);
+  //   }
+  // }
+  // return arr1;
+  let output = locations.filter(function (item) {
+    if (item.includes(transportMode)) {
+      return item[0];
     }
-  }
-  return arr1;
+  });
+  let output1 = output.map(function (item) {
+    return item[0];
+  });
+  return output1;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

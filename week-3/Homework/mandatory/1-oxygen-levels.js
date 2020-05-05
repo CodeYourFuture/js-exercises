@@ -27,11 +27,18 @@ console.log(newdessert); // returns ice cream
 /* Now try the exercise */
 
 function safeLevels(arr) {
-  let output = arr.find(function (item) {
-    return item > "19.5%" && item < "23.5%";
+  let output = arr.map(function (item) {
+    return parseFloat(item);
   });
+  // console.log(output);
+  let output1 = output.find(function (item1) {
+    return item1 > 19.5 && item1 < 23.5;
+  });
+  // console.log(output1);
 
-  return output;
+  let output2 = output1.toFixed(1) + "%";
+  // console.log(output2);
+  return output2;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

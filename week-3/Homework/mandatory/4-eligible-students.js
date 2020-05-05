@@ -58,15 +58,21 @@ console.log(arrayLengths);
 /* Now try the exercise */
 
 function getEligibleStudents(arr) {
-  let arr1 = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i][1] >= 8) {
-      arr1.push(arr[i][0]);
-    }
-  }
-  return arr1;
+  // let arr1 = [];
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i][1] >= 8) {
+  //     arr1.push(arr[i][0]);
+  //   }
+  // }
+  // return arr1;
+  let output = arr.filter(function (item) {
+    return item[1] >= 8;
+  });
+  let output2 = output.map(function (item) {
+    return item[0];
+  });
+  return output2;
 }
-
 /*
  
  Later leaders of Alpha planet decided to change the rule as below:
@@ -84,13 +90,22 @@ function getEligibleStudents(arr) {
 */
 
 function getEligibleStudents2(arr) {
-  let arr1 = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i][0].toLowerCase().charAt(0) === "A".toLowerCase()) {
-      arr1.push(arr[i][0]);
-    }
-  }
-  return arr1;
+  // let arr1 = [];
+  // for (let i = 0; i < arr.length; i++) {
+  //   if (arr[i][0].toLowerCase().charAt(0) === "A".toLowerCase()) {
+  //     arr1.push(arr[i][0]);
+  //   }
+  // }
+  // return arr1;
+  let output = arr.filter(function (item) {
+    return item[0].toLowerCase().charAt(0) === "A".toLowerCase();
+  });
+  // console.log(output);
+
+  let output2 = output.map(function (item) {
+    return item[0];
+  });
+  return output2;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
