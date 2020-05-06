@@ -13,7 +13,12 @@
   
 */
 
-function colonisers() {}
+function colonisers(chooseFamily) {
+  let families = chooseFamily.filter(
+    (members) => members.charAt(0) === "A" && members.includes("family")
+  );
+  return families;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
