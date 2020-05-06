@@ -14,7 +14,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+// in line 4 x is local variable variable and in line 6 x is global variable.
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +33,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+//The output should be 10 for line 31 and refrence erorre for line 32 . When we call f1() it'll use of global variable x and console it but in line 32 when we console the y variable it shoud return an refrence error because y is a local variable and it's not accesable outside of function f1().
 
 ## Question 3
 
@@ -61,3 +62,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+//for the first function it's just get the x as an argument and then return a a value and when we console x it's do nothing with x.
+in the second function we got object y as an argument and just modify the property x and wehe we console y we didnt reasign it and we have an object with property x:10;
