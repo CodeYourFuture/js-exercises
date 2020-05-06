@@ -10,12 +10,12 @@ Write a function that finds the oxygen level of the first safe planet - Oxygen b
 
 Some string methods that might help you here are .replace() and .substring(). Let's look at a quick
 example before trying the exercise.
+
 */
 
 /* .replace() allows us to add something where we removed something*/
 let greeting = "Good Morning";
-greeting.replace('Morning', 'Evening'); // outputs Good Evening
-
+greeting.replace("Morning", "Evening"); // outputs Good Evening
 
 /* .substring() allows us to remove things from strings */
 let dessert = "ice cream and pancakes";
@@ -27,32 +27,35 @@ console.log(newdessert); // returns ice cream
 /* + + + + + + + */
 /* Now try the exercise */
 
-function safeLevels() {
-
+function safeLevels(oxygenLevels) {
+  let safePlanet = oxygenLevels.find(function (oxygen) {
+    return oxygen > "19.5%" && oxygen < "23.5%";
+  });
+  return safePlanet;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]
-const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]
+const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
+const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"];
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
-    "safeLevels function works - case 2",
-    safeLevels(oxygenLevels1) === "19.9%"
+  "safeLevels function works - case 2",
+  safeLevels(oxygenLevels1) === "19.9%"
 );
 
 test(
-    "safeLevels function works - case 2",
-    safeLevels(oxygenLevels2) === "20.2%"
+  "safeLevels function works - case 2",
+  safeLevels(oxygenLevels2) === "20.2%"
 );
