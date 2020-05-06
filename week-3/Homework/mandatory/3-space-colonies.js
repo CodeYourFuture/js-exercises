@@ -13,7 +13,12 @@
   
 */
 
-function colonisers() {}
+function colonisers(families) {
+  const colonisingFamilies = families.filter(function (coloniser) {
+    return coloniser.charAt(0) === "A" && coloniser.includes("family");
+  });
+  return colonisingFamilies;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
