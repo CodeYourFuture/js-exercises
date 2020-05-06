@@ -13,7 +13,15 @@
   
 */
 
-function colonisers() {}
+// function includeFamily(lastName) {
+//   return lastName.startsWith("A");
+// }
+
+function colonisers(voyager) {
+  return voyager.filter(
+    (name) => name.charAt(0) === "A" && name.includes("family")
+  );
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
