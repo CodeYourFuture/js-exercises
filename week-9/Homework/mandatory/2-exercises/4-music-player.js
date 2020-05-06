@@ -1,63 +1,30 @@
 class MusicPlayer {
   constructor() {
-    this.trackList = []
-    this.trackListLength = 0
+    this.tracksList = []
+    this.trackListNumber = 0
   }
   add(track, name) {
-    this.trackList.push({ track, name })
+    this.tracksList.push({ track, name })
   }
   play() {
     console.log(
       'Currently playing: ' +
-        this.trackList[this.trackListLength].track +
+        this.tracksList[this.trackListNumber].track +
         ' by ' +
-        this.trackList[this.trackListLength].name +
+        this.tracksList[this.trackListNumber].name +
         '.',
     )
   }
   skip() {
-    this.trackListLength += 1
-    if (this.trackListLength<=this.trackList.length ) {
-       
-      console.log(
-        'Currently playing: ' +
-          this.trackList[this.trackListLength].track +
-          ' by ' +
-          this.trackList[this.trackListLength].name +
-          '.',
-      )
-    } else {
-        this.trackListLength = 0
-      console.log(
-        'Currently playing: ' +
-          this.trackList[this.trackListLength].track +
-          ' by ' +
-          this.trackList[this.trackListLength].name +
-          '.',
-      )
-    }
+    this.trackListNumber += 1
+    this.trackListNumber > this.tracksList.length - 1 ? (this.trackListNumber = 0) : true
+    this.play()
   }
 
   previous() {
-    this.trackListLength -= 1
-    if (this.trackListLength>=0) {
-      console.log(
-        'Currently playing: ' +
-          this.trackList[this.trackListLength].track +
-          ' by ' +
-          this.trackList[this.trackListLength].name +
-          '.',
-      )
-    } else {
-      this.trackListLength = 2
-      console.log(
-        'Currently playing: ' +
-          this.trackList[this.trackListLength].track +
-          ' by ' +
-          this.trackList[this.trackListLength].name +
-          '.',
-      )
-    }
+    this.trackListNumber -= 1
+    this.trackListNumber < 0 ? (this.trackListNumber = this.tracksList.length - 1) : true
+    this.play()
   }
 }
 
