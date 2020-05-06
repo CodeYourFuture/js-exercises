@@ -5,8 +5,12 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
-function getLanes() {
-
+function getLanes(listOflondonStreet) {
+    let laneStreet = [];
+    laneStreet = listOflondonStreet . filter( street => street.includes ("Lane") );
+    console.log(laneStreet);
+    
+return laneStreet
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

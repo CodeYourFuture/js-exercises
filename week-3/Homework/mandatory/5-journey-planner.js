@@ -23,8 +23,8 @@
 function checkCodeIsThere(stringText) {
   let magicWord = "code";
   //edit code below
-  if (stringText) {
-    return stringText;
+  if (stringText.includes(magicWord)) {
+    return stringText.indexOf(magicWord);
   } else {
     return "Not found";
   }
@@ -68,7 +68,11 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() { }
+function getTransportModes(arraysOfLocAndTransport) { 
+  let transportMode = arraysOfLocAndTransport.slice(1);
+  return transportMode
+  
+}
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -84,7 +88,14 @@ function getTransportModes() { }
 
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() { }
+function isAccessibleByTransportMode(arraysOfTransport,transportMode) { 
+  if (arraysOfTransport.find(item => item ===transportMode) === transportMode){
+    return true
+  }
+  else{
+    return false
+  }
+}
 
 /*
   Implement the function getLocationName that
@@ -93,7 +104,11 @@ function isAccessibleByTransportMode() { }
    - Returns the name of the location
      e.g: "Tower Bridge"
 */
-function getLocationName() { }
+function getLocationName(arraysOfLocAndTransport) {
+  let location = arraysOfLocAndTransport.slice(0,1);
+  
+  return location[0];
+ }
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -120,6 +135,24 @@ function getLocationName() { }
   Advanced challange: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
+  let isAccessiblePlaces=[];
+  let placesIcanGo=[];
+  let transport = locations . map (getTransportModes);
+  
+  for( var i = 0; i < transport.length;i++ ){
+   
+    if (isAccessibleByTransportMode(transport[i],transportMode)) { 
+      isAccessiblePlaces.push(locations[i]);
+     
+    }
+  }
+  
+  for( var i = 0; i < isAccessiblePlaces.length;i++ ){
+    placesIcanGo .push( getLocationName( isAccessiblePlaces[i]));
+  }
+ 
+  return placesIcanGo
+
   // Implement the function body
 }
 

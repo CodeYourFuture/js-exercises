@@ -13,8 +13,14 @@
   
 */
 
-function colonisers() {}
+function colonisers(voyagers) {
 
+var theSetteledvoyagers = voyagers.filter(name=>
+  {return ((name.charAt(0)==="A")&&(name .slice(name.length-"family".length)=== "family")) })
+
+console.log(theSetteledvoyagers);
+return theSetteledvoyagers
+}
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
@@ -60,6 +66,6 @@ test(
   arraysEqual(colonisers(voyagers), [
     "Adam family",
     "Avery family",
-    "Archer family",
-  ])
+    "Archer family"])
 );
+

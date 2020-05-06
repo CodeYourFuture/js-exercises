@@ -28,7 +28,13 @@ values will have a remainder of 0 i.e. there are some odd numbers in the array t
 
 /* Now try to complete the exercise */
 
-function bushChecker() {
+function bushChecker(bushBerryColours) {
+ if( bushBerryColours.some((colour) => { return (colour !== "pink")})){
+   return "Toxic! Leave bush alone!"
+ }
+else{
+ return "Bush is safe to eat from"
+}
 
 }
 
