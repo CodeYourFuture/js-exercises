@@ -12,8 +12,22 @@
   logic only strings that start with A, and finish with family
   
 */
+//another solution
+// function colonisers(list) {
+//   let familiesToStay = list.filter((listOfFamilies) => {
+//     return (
+//       listOfFamilies.charAt(0) === "A" && listOfFamilies.includes("family")
+//     );
+//   });
+//   return familiesToStay;
+// }
 
-function colonisers() {}
+function colonisers(names) {
+  let findFamily = names.filter(function (element) {
+    return element.includes("family") && element.startsWith("A");
+  });
+  return findFamily;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
