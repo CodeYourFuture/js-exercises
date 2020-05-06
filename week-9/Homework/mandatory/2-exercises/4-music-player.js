@@ -26,13 +26,6 @@ class MusicPlayer {
         this.play()
     }
 
-    // STILL WORKING ON THIS PART
-    // shuffle(){  
-    //     let a = this.songList.length
-    //     let temp = this.i
-    //     this.i = Math.floor(Math.random() * a)
-    //     this.i !== temp ? true : false
-    // }
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
