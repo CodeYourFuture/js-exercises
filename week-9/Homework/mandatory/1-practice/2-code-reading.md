@@ -15,6 +15,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+In line 4 we are logging the value of the variable x declared on line 3 which is local to the code block between lines 2 and 5. However, on line 6 we are logging the value of global variable x which is declared on line 1.
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +35,10 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+Variable x is global, therefore it could be accessed by the f1() function so we can log it from within the function:
+The first console.log will show the value of x i.e. 10.
+The second console.log will show y is not defined as we declared it inside the function and it could not be accessed globally.
 
 ## Question 3
 
