@@ -30,7 +30,7 @@ function safeLevels(arr) {
   const numOnly = arr.map(function (p) {
     return p.substring(0, 4);
   });
-  const safeLevel = numOnly.find((n) => n < "23.5" && n > "19.5");
+  const safeLevel = numOnly.find((n) => n < 23.5 && n > 19.5);
   return safeLevel + "%";
 }
 

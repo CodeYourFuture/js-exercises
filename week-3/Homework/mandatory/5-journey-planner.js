@@ -87,9 +87,7 @@ function getTransportModes(arr) {
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
 function isAccessibleByTransportMode(arr, str) {
-  if (arr.includes(str)) {
-    return true;
-  } else return false;
+  return arr.includes(str);
 }
 
 /*

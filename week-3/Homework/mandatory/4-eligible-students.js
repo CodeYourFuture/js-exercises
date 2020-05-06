@@ -79,12 +79,9 @@ function getEligibleStudents(arr) {
 */
 
 function getEligibleStudents2(arr) {
-  const newEligiblePupils = arr.filter(
-    (name) => name[0].charAt(0) === "A" || name[0].charAt(0) === "a"
-  );
-  const newArr = newEligiblePupils.map((p) => p[0]);
-  console.log(newArr);
-  return newArr;
+  const capArr = arr.map((p) => p[0].charAt(0).toUpperCase() + p[0].slice(1));
+  const newEligiblePupils = capArr.filter((name) => name[0].charAt(0) === "A");
+  return newEligiblePupils;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

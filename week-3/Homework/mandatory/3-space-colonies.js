@@ -17,7 +17,6 @@ function colonisers(array) {
   const lastNames = array.filter(
     (name) => name.charAt(0) == "A" && name.includes("family")
   );
-  console.log(lastNames);
   return lastNames;
 }
 
