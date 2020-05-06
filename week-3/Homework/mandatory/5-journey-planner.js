@@ -22,9 +22,8 @@
 
 function checkCodeIsThere(stringText) {
   let magicWord = "code";
-  //edit code below
-  if (stringText) {
-    return stringText;
+  if (stringText.includes(magicWord)) {
+    return stringText.indexOf(magicWord);
   } else {
     return "Not found";
   }
@@ -68,7 +67,18 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() { }
+
+function getTransportModes(arraysOfLocAndTransport) {
+  let transportMode = arraysOfLocAndTransport.slice(1);
+  return transportMode;
+}
+
+//AND
+
+function getTransportModes(transportMode) {
+  let transport = transportMode.splice(1, 2);
+  return transport;
+}
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -84,7 +94,13 @@ function getTransportModes() { }
 
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() { }
+function isAccessibleByTransportMode(element, transport) {
+  if (transport.includes(element)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /*
   Implement the function getLocationName that
@@ -93,7 +109,12 @@ function isAccessibleByTransportMode() { }
    - Returns the name of the location
      e.g: "Tower Bridge"
 */
-function getLocationName() { }
+
+function getLocationName(famousAttractions) {
+  let locationName = famousAttractions.slice(0, 1);
+
+  return locationName[0];
+}
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -114,13 +135,27 @@ function getLocationName() { }
 
   Hint:
    - Use the function you implemented above.
-   - Use array method to remove locations that is not accessible by the given transportMode.
+   - Use array method to remove locations that is not accessible by the given transportMode. 
    - Use array method to manipulate its elements.
    
   Advanced challange: try to use arrow function when invoking an array method.
 */
+
+// function journeyPlanner(locations, transport) {
+//   const modeOfTransport = locations.filter(function (location) {
+//     return location.includes(transport);
+//   });
+//   return modeOfTransport.map((element) => element[0]);
+// }
+// console.log(journeyPlanner(["Angel", "tube", "bus"]));
+////////////////
+
 function journeyPlanner(locations, transportMode) {
-  // Implement the function body
+  let availableLocations = locations.filter((transport) =>
+    transport.includes(transportMode)
+  );
+  let landmark = availableLocations.map((item) => item[0]);
+  return landmark;
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -190,19 +225,24 @@ test(
 
 test(
   "isAccessibleByTransportMode function works - negative case 2",
-  arraysEqual(isAccessibleByTransportMode(["tube", "bus", "river boat"], "boat"), false)
+  arraysEqual(
+    isAccessibleByTransportMode(["tube", "bus", "river boat"], "boat"),
+    false
+  )
 );
 
 test(
   "getLocationName function works - case 1",
-  arraysEqual(getLocationName(["London Bridge", "tube", "river boat"]), "London Bridge")
+  arraysEqual(
+    getLocationName(["London Bridge", "tube", "river boat"]),
+    "London Bridge"
+  )
 );
 
 test(
   "getLocationName function works - case 2",
   arraysEqual(getLocationName(["Angel", "tube", "bus"]), "Angel")
 );
-
 
 test(
   "journeyPlanner function works - case 1",
