@@ -14,6 +14,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+The first console will display 2 as x scoped to its block while the second console will display 1 as x is a global in that case.
 
 ## Question 2
 
@@ -33,6 +34,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+After the function is called the console inside the function will display 10 then te last console will display undefined as y can not be accessed outside its block.
+
 
 ## Question 3
 
@@ -61,3 +64,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+ console.log(x) will display 9 on the screen as x is a global, while console.log(y) will display {x:10}  as val.x will refer to the same reference of x on object y then it will add 1 to it  as y is global.
