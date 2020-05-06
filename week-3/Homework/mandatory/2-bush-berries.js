@@ -28,8 +28,12 @@ values will have a remainder of 0 i.e. there are some odd numbers in the array t
 
 /* Now try to complete the exercise */
 
-function bushChecker() {
-
+function bushChecker(pink) {
+  if (pink.every((x)=> {return x === "pink"})){
+    return "Bush is safe to eat from"
+  } else {
+    return "Toxic! Leave bush alone!"
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

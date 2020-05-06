@@ -11,9 +11,13 @@
   Output is an array
   logic only strings that start with A, and finish with family
   
-*/
-
-function colonisers() {}
+*/ 
+function colonisers(voy) {
+  var stay = voy.filter(function(item){
+    return item.includes("family") && item.startsWith("A");
+   })
+   return stay
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -31,7 +35,7 @@ const voyagers = [
   "Avery family",
   "Archer family",
 ];
-
+console.log(colonisers(voyagers))
 function arraysEqual(a, b) {
   if (a === b) return true;
   if (a == null || b == null) return false;

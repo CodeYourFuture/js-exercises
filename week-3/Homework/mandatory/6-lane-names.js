@@ -5,8 +5,9 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
-function getLanes() {
-
+function getLanes(name) {
+    var lane = name.filter(n=>n.includes("Lane"))
+return lane
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -18,7 +19,7 @@ const streetNames = [
     "Addle Lane",
     "Alban Highwalk"
 ]
-
+console.log(getLanes(streetNames))
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;

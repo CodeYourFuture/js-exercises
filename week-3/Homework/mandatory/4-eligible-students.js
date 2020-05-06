@@ -53,7 +53,9 @@ console.log(arrayLengths);
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents() {
+function getEligibleStudents(classes) {
+  let numOfClasses = classes.filter(item=> item[1] >= 8)
+ return numOfClasses.map(arr => arr[0]);
 }
 
 /*
@@ -72,8 +74,12 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
+function getEligibleStudents2(names) {
+  let numOfClasses = names.filter(item=> item[0].startsWith("A") || item[0].startsWith("a"))
+  return numOfClasses.map(arr => arr[0]);
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -94,7 +100,6 @@ const deltaStudentGroup = [
   ["Zapp", 7],
   ["amy", 0]
 ]
-
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
