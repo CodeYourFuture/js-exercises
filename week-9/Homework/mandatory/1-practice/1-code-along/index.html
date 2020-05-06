@@ -2,17 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <div class="location">
+    <h1 class="location-timezone">Timezone</h1>
+    <canvas class="icon" id="icon1" width="128" height="128"></canvas>
+  </div>
+  <div class="temperature">
+    <div class="degree-section">
+      <h2 class="temperature-degree">34</h2>
+      <span>F</span>
+    </div>
+    <div class="temperature-description">It's hot</div>
+  </div>
 
-
-
-    <script src="app.js"></script>
+  <script src="app.js"></script>
+  <script src="skycons.js"></script>
 </body>
 
 </html>
