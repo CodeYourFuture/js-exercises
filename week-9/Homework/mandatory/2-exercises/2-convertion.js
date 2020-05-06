@@ -8,7 +8,12 @@ class Person {
 }
 
 // Do not edit this section
+
 const simon = new Person('simon')
 console.log(simon.name)
 simon.greeting()
+
+const simon = new Person("simon");
+console.log(simon.name);
+simon.greeting();
 // Do not edit this section
