@@ -28,9 +28,30 @@ values will have a remainder of 0 i.e. there are some odd numbers in the array t
 
 /* Now try to complete the exercise */
 
-function bushChecker() {
+function bushChecker(berries) {
+
+  let convertTonumber = berries.map(function (berry){
+    return berry.charCodeAt();
+  });
+
+  function findPinkBerries(convertedArr){
+    let safeToEat = convertedArr.every((berry) => {return berry === 112});
+    if (safeToEat === true){
+        return "Bush is safe to eat from";
+    } else {
+        return "Toxic! Leave bush alone!";
+    }
+}
+
+return findPinkBerries(convertTonumber);
 
 }
+
+let bushBerry1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
+let bushBerry2 = ["pink", "pink", "pink", "pink"]
+
+console.log(bushChecker(bushBerry1));
+//console.log(bushChecker(bushBerry2));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
