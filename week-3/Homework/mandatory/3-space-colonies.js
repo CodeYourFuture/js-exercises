@@ -13,7 +13,20 @@
   
 */
 
-function colonisers() {}
+function colonisers(listOfNames) {
+  function makeSubArr(listOfNames){
+    return listOfNames.includes('family');
+}
+
+let familyArr = listOfNames.filter(makeSubArr);
+//return familyArr;
+function findFamiliesA(subArr){
+    return subArr.includes('A');
+}
+
+let requiredList = familyArr.filter(findFamiliesA);
+return requiredList;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
