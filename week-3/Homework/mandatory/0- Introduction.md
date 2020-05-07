@@ -20,7 +20,7 @@ Open section **Basic Data Structures** and do the following exercises
 - Iterate Through All an Array's Items Using For Loops
 - Create complex multi-dimensional arrays
 
-Then open **Basic Algorithm Scripting** and attempt all of these 
+Then open **Basic Algorithm Scripting** and attempt all of these
 
 - Convert Celsius to Fahrenheit
 - Reverse a String
@@ -38,3 +38,7 @@ Then open **Basic Algorithm Scripting** and attempt all of these
 - Where do I Belong
 - Mutations
 - Chunky Monkey
+
+FreeCodeCamp link : https://www.freecodecamp.org/fcc79d1d88a-d198-48ad-b35a-c7565509ffda
+
+<!-- I didn't complete all I am missing "Basic Algorithm Scripting" but I will finish for the week that remains -->
