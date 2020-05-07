@@ -53,8 +53,26 @@ console.log(arrayLengths);
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents() {
+function getEligibleStudents(twoDArr) {
+
+  function attendedMinEightClasses(listOfNames){
+    return listOfNames[1] >= 8;
+  }
+  
+  let result = twoDArr.filter(attendedMinEightClasses);
+
+  let requiredStudentNames = result.map(function (sortNames){
+
+    for(let i = 0; i < sortNames.length; i++){
+
+    return sortNames[i];
+    }
+  }
+  );
+  return requiredStudentNames;
 }
+
+
 
 /*
  
@@ -72,8 +90,49 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
+function getEligibleStudents2(groupOfStudents) {
+
+  let namesArr = groupOfStudents.map(function (listOfNames){
+    for(let i = 0; i < listOfNames.length; i++){
+        return listOfNames[i];
+    }
+  }
+  );
+
+  let capitalised = namesArr.map(function (strArr){
+  return strArr.charAt(0).toUpperCase() + strArr.slice(1);
+  }
+  );
+
+  function findRequiredStudents(capArr){
+    return capArr.includes('A');
+  }
+
+  let requiredList = capitalised.filter(findRequiredStudents);
+  return requiredList;
 }
+
+
+const alphaGroup = [
+  ["Ahmed", 8],
+  ["Clement", 10],
+  ["Elamin", 6],
+  ["Adam", 7],
+  ["Tayoa", 11],
+  ["Nina", 10],
+  ["Bob", 9],
+  ["Lee", 1]
+]
+
+const deltaGroup = [
+  ["Zoidber", 6],
+  ["Bender", 5],
+  ["Zapp", 7],
+  ["amy", 0]
+]
+
+console.log(getEligibleStudents(alphaGroup));  
+console.log(getEligibleStudents2(deltaGroup));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
