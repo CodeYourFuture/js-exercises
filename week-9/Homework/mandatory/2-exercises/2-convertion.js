@@ -17,14 +17,23 @@
     ```
 
     When you run this code using `node 2-convertion.js` you should be able to
-    
+     
 
 */
+class Person {
+  constructor(newName) {
+    this.name = newName;
+  }
+
+  greeting() {
+    console.log("Hi! I'm " + this.name + ".");
+  }
+}
 
 // Write your code here
 
 // Do not edit this section
-const simon = Person("simon");
+const simon = new Person("simon");
 console.log(simon.name);
 simon.greeting();
-// Do not edit this section
+//Do not edit this section
