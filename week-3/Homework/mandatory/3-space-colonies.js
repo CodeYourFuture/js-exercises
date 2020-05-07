@@ -13,7 +13,13 @@
   
 */
 
-function colonisers() {}
+function colonisers(names) {
+  const newColonisers = names.filter(function (name) {
+    const newResidents = name.match("^A") && name.match("family$");
+    return newResidents;
+  });
+  return newColonisers;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
