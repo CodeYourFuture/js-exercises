@@ -13,7 +13,15 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  let newArr = []
+  for (i = 0; i <arr.length; i++){
+    if (arr[i].charAt(0).toLowerCase() == 'a' && arr[i].endsWith("family")){
+      newArr.push(arr[i])
+    }
+  }
+  return newArr
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

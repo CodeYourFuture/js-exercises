@@ -5,8 +5,14 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
-function getLanes() {
-
+function getLanes(arr) {
+    let newArr = []
+    for (i =0;i < arr.length; i++) {
+        if (arr[i].includes("Lane")) {
+            newArr.push(arr[i])
+        }
+    }
+    return newArr
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

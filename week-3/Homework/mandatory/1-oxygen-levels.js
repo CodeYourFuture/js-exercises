@@ -12,23 +12,30 @@ Some string methods that might help you here are .replace() and .substring(). Le
 example before trying the exercise.
 */
 
-/* .replace() allows us to add something where we removed something*/
-let greeting = "Good Morning";
-greeting.replace('Morning', 'Evening'); // outputs Good Evening
+/* .replace() allows us to add something where we removed something*/ 
+// let greeting = "Good Morning";
+// greeting.replace('Morning', 'Evening'); // outputs Good Evening
 
 
-/* .substring() allows us to remove things from strings */
-let dessert = "ice cream and pancakes";
+// /* .substring() allows us to remove things from strings */
+// let dessert = "ice cream and pancakes";
 
-let newdessert = dessert.substring(0, 9);
+// let newdessert = dessert.substring(0, 9);
 
-console.log(newdessert); // returns ice cream
+// console.log(newdessert); // returns ice cream
 
 /* + + + + + + + */
 /* Now try the exercise */
+function between(x, min, max) {
+  return x >= min && x <= max;
+}
 
-function safeLevels() {
-
+function safeLevels(arr) {
+  for (i = 0; i < arr.length; i ++){
+    if (between(arr[i].replace('%',''),19.6,23.4)){
+      return arr[i]
+    } 
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
