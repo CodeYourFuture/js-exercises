@@ -78,19 +78,18 @@ function render () {
     changeBut.className = 'btn btn-success';
     cell4.appendChild (changeBut);
     let readStatus = '';
-    if (myLibrary[i].check == false) {
-      readStatus = 'Yes';
+    if (myLibrary[i].check == true) {
+      readStatus = "Yes";
+      changeBut.className = "btn btn-success";
     } else {
-      readStatus = 'No';
+      readStatus = "No";
+      changeBut.className = "btn btn-danger";
     }
     changeBut.innerHTML = readStatus;
 
     changeBut.addEventListener ('click', function () {
       myLibrary[i].check = !myLibrary[i].check;
-      if (myLibrary[i].innerHTML === 'No') {
-        changeBut.style.backgroundColor = 'red';
-      }
-      render ();
+          render ();
     });
 
     //add delete button to every row and render again
