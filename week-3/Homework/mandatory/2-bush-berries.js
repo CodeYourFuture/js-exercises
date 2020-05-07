@@ -26,7 +26,7 @@ values will have a remainder of 0 i.e. there are some odd numbers in the array t
 
 /* Now try to complete the exercise */
 
-function bushChecker(arr, berrieColor) {
+function bushChecker(arr) {
     let result = arr.every(berrieColor => berrieColor === "pink");
     return result ? "Bush is safe to eat from" : "Toxic! Leave bush alone!";
 }

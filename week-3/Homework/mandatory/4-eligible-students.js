@@ -52,7 +52,7 @@
 function getEligibleStudents(arr) {
     let names = [];
     let newArr = arr.filter(p => p[1] >= 8);
-    names = newArr.map(p => p = p[0]);
+    names = newArr.map(p => p[0]);
     return names;
 }
 
@@ -71,7 +71,7 @@ Hint: To complete the function, search how to change text to lower or upper case
 
 function getEligibleStudents2(arr) {
     newArr = arr.filter(p => p[0].charAt(0) === "Alpha planet".charAt(0) || p[0].charAt(0) === "Alpha planet".charAt(0).toLowerCase());
-    names = newArr.map(p => p = p[0]);
+    names = newArr.map(p => p[0]);
     return names;
 }
 

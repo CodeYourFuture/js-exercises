@@ -140,7 +140,7 @@ function journeyPlanner(locations, transportMode) {
     accessbileLocations = locations.filter(p => {
         return p.includes(transportMode);
     })
-    locationNames = accessbileLocations.map(p => p = p[0])
+    locationNames = accessbileLocations.map(p => p[0])
     return locationNames;
 }
 
