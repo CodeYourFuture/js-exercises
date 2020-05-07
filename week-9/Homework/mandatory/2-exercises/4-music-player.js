@@ -1,5 +1,24 @@
 class MusicPlayer {
-    // Add your code here
+    constructor() {
+        this.musicList = []
+        this.index = 0
+    }
+    add=(song, singer) => {
+        this.track = {song,singer}
+        this.musicList.push(this.track)
+    }
+    play = () => {
+        console.log(`Currently playing: ${this.musicList[this.index].song} by ${this.musicList[this.index].singer}`)
+    }
+    skip = () => {
+        this.index++
+        console.log(`Currently playing: ${this.musicList[this.index].song} by ${this.musicList[this.index].singer}`)
+    }
+    previous = () => {
+        this.index--
+        console.log(`Currently playing: ${this.musicList[this.index].song} by ${this.musicList[this.index].singer}`)
+    }
+
 
 }
 

@@ -8,16 +8,20 @@ The output of running your code should be:
 */
 
 class ShoppingCart {
-  // constructor() {
-    
-  // }
+  constructor() {
+    this.myShoppingCart = []
+  }
   cartContains() {
     // Use console.log() to output everything contained in your cart
-    let myShoppingCart = []
-    console.log(myShoppingCart)
+    console.log(this.myShoppingCart)
   }
   addItem(item) {
-    myShoppingCart.push(item)
+    this.myShoppingCart.push(item)
+  }
+  listItems() {
+    this.myShoppingCart.map((item)=> {
+      console.log(item)
+    })
   }
 }
 
@@ -30,3 +34,13 @@ myCart.addItem("Eggs");
 myCart.listItems();
 
 myCart.cartContains();
+
+class Person {
+  constructor() {
+      this.obj = {}
+  }
+  greeting(name) {
+      this.obj.name = name
+      console.log(`Hi! I'm ${this.obj.name} + '.')
+  }
+}

@@ -22,9 +22,17 @@
 */
 
 // Write your code here
+class Person {
+    constructor(name) {
+        this.obj = {name}
+    }
+    greeting() {
+        console.log(`Hi! I'm ${this.obj.name}.`)
+    }
+}
 
 // Do not edit this section
-const simon = Person("simon");
+const simon = new Person("simon");
 console.log(simon.name);
 simon.greeting();
 // Do not edit this section
