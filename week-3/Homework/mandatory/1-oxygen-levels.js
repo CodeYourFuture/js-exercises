@@ -3,33 +3,33 @@ Many years into the future, a team of Space Voyagers find their ship is low on O
 somewhere safe while they call home for help.
   
 Their computer detects a list of nearby planets that have Oxygen in their atmosphere.
-
 To be safe, they need to land on the first unamed planet that has Oxygen levels between 19.5% and 23.5%.
-
 Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
-
 Some string methods that might help you here are .replace() and .substring(). Let's look at a quick
 example before trying the exercise.
 */
 
-/* .replace() allows us to add something where we removed something*/
-let greeting = "Good Morning";
-greeting.replace('Morning', 'Evening'); // outputs Good Evening
+// /* .replace() allows us to add something where we removed something*/
+// let greeting = "Good Morning";
+// greeting.replace('Morning', 'Evening'); // outputs Good Evening
 
 
-/* .substring() allows us to remove things from strings */
-let dessert = "ice cream and pancakes";
+// /* .substring() allows us to remove things from strings */
+// let dessert = "ice cream and pancakes";
 
-let newdessert = dessert.substring(0, 9);
+// let newdessert = dessert.substring(0, 9);
 
-console.log(newdessert); // returns ice cream
+// console.log(newdessert); // returns ice cream
 
 /* + + + + + + + */
 /* Now try the exercise */
 
-function safeLevels() {
-
-}
+function safeLevels(arr) {
+    let newArr = [];
+    newArr = arr.map(p => p.replace("%", ""));
+    arr = newArr.find(p => p > 19.5 && p < 23.5)
+    return `${arr}%`
+};
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -39,11 +39,11 @@ const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]
 function test(test_name, expr) {
     let status;
     if (expr) {
-      status = "PASSED";
+        status = "PASSED";
     } else {
-      status = "FAILED";
+        status = "FAILED";
     }
-  
+
     console.log(`${test_name}: ${status}`);
 }
 
