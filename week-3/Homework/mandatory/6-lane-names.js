@@ -5,6 +5,7 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
+
 function getLanes(names) {
   let findLane = names.filter(function (street) {
     return street.includes("Lane");
