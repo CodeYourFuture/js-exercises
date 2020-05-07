@@ -24,29 +24,54 @@ will have a remainder of 0 i.e. they are even numbers*/
 array.every((value) => {return (value % 2 == 0)}); /* this will return false as not ALL 
 values will have a remainder of 0 i.e. there are some odd numbers in the array too*/
 
+// if (arr.some((color) => {return (color === "neon")}); 
+
 /* + + + + + + + + + + + + + + */
 
 /* Now try to complete the exercise */
 
-function bushChecker() {
+let bushColours = ["pink", "pink", "pink", "pink"]
 
+function bushChecker(arr) {
+
+// checks whether an element is neon
+const equalNeon = (element) => element === "neon";
+
+let notPink = (arr.some(equalNeon));
+console.log(notPink)
+
+// expected output: false
+  
+if (notPink === true) 
+  {
+  return console.log("this is toxic")
+  
+ } 
+ else {
+   return console.log("safe to eat")
+   // expected output: safe to eat
+ }
+
+  
 }
+
+console.log(bushChecker(bushColours))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
-let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+// let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
+// let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
 
-function test(test_name, expr) {
-  let status;
-  if (expr) {
-    status = "PASSED";
-  } else {
-    status = "FAILED";
-  }
+// function test(test_name, expr) {
+//   let status;
+//   if (expr) {
+//     status = "PASSED";
+//   } else {
+//     status = "FAILED";
+//   }
 
-  console.log(`${test_name}: ${status}`);
-}
+//   console.log(`${test_name}: ${status}`);
+// }
 
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
+// test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
+// test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")

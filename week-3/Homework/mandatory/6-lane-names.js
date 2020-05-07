@@ -5,11 +5,6 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
-function getLanes() {
-
-}
-
-/* ======= TESTS - DO NOT MODIFY ===== */
 
 const streetNames = [
     "Abchurch Lane",
@@ -18,6 +13,28 @@ const streetNames = [
     "Addle Lane",
     "Alban Highwalk"
 ]
+
+function getLanes(arr) {
+
+    let newArr = arr.filter (function (lane) {
+      if (lane.includes("Lane")) {
+          return lane
+      }
+})
+return newArr
+}
+
+console.log(getLanes(streetNames))
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+// const streetNames = [
+//     "Abchurch Lane",
+//     "Adam's Court",
+//     "Addle Hill",
+//     "Addle Lane",
+//     "Alban Highwalk"
+// ]
 
 function arraysEqual(a, b) {
     if (a === b) return true;

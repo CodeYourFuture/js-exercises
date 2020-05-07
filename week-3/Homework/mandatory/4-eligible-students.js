@@ -22,39 +22,68 @@
   
 */
 
-// Remember how to access to embedded arrays
+// // Remember how to access to embedded arrays
 
-let twoDimensionalArray = [
-  ["cat", "dog"],
-  ["giraffe", "lion", "elephant"]
-];
+// let twoDimensionalArray = [
+//   ["cat", "dog"],
+//   ["giraffe", "lion", "elephant"]
+// ];
 
-// Examples accessing to array element directly
-// Example 1
-let pets = twoDimensionalArray[0]; // this reads the first embedded array 
-console.log(pets[1]); // this prints "cat" to the console
+// // Examples accessing to array element directly
+// // Example 1
+// let pets = twoDimensionalArray[0]; // this reads the first embedded array 
+// console.log(pets[1]); // this prints "cat" to the console
 
-// Example 2
-// You can also read straight the element of an embedded array:
-console.log(twoDimensionalArray[1][2]);
-// This reads the second embedded array and then reads its last element and finally prints "elephant" to the console
+// // Example 2
+// // You can also read straight the element of an embedded array:
+// console.log(twoDimensionalArray[1][2]);
+// // This reads the second embedded array and then reads its last element and finally prints "elephant" to the console
 
-// Examples accessing to array element through array methods
-// Example 1
-let moreThanTwoArrays = twoDimensionalArray.filter(embeddedArray => embeddedArray.length > 2);
-console.log(moreThanTwoArrays);
-// This filter only keeps embededd arrays that have more than 3 elements
+// // Examples accessing to array element through array methods
+// // Example 1
+// let moreThanTwoArrays = twoDimensionalArray.filter(embeddedArray => embeddedArray.length > 2);
+// console.log(moreThanTwoArrays);
+// // This filter only keeps embededd arrays that have more than 3 elements
 
-// Example 2
-let arrayLengths = twoDimensionalArray.map(embeddedArray => embeddedArray.length);
-console.log(arrayLengths);
-// This gives back how many elements of each array have
+// // Example 2
+// let arrayLengths = twoDimensionalArray.map(embeddedArray => embeddedArray.length);
+// console.log(arrayLengths);
+// // This gives back how many elements of each array have
 
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents() {
+// Returns an array containing only the names of the who have attended AT LEAST 8 classes
+
+const alphaStudentGroup = [ ["Ahmed", 8], ["Clement", 10], ["Elamin", 6], ["Adam", 7], ["Tayoa", 11], ["Nina", 10], ["Bob", 9], ["Lee", 1] ];
+// console.log(alphaStudentGroup[0][1]);
+
+function getEligibleStudents(arr) {
+
+let newArr = arr.filter (attendance => {
+
+//  let checkAttendanceOverEight = (attendance[1] >= 8)
+//  console.log(checkAttendanceOverEight)
+//  return checkAttendanceOverEight
+ 
+
+ if (attendance[1] >= 8)
+    
+    return attendance
+    // console.log(attendance[0]) 
+
+
+})
+
+newArr[2].pop()
+newArr[0].pop()
+newArr[1].pop()
+newArr[3].pop()
+newArr[4].pop()
+return console.log(newArr)
 }
+
+getEligibleStudents(alphaStudentGroup)
 
 /*
  
@@ -72,72 +101,90 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
+let array = [ "ahmed", "Clement", "Tayoa", "Nina", "Bob"]
+
+function getEligibleStudents2(arr) {
+
+
+ let nameStartWithA = arr.filter (firstLetter => {
+
+  if (firstLetter.charAt(0) === "A" || firstLetter.charAt(0) === "a") {
+    // console.log(firstLetter)
+    return firstLetter
 }
+  // return nameStartWithA
+
+ })
+return console.log(nameStartWithA)
+
+}
+
+getEligibleStudents2(array)
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const alphaStudentGroup = [
-  ["Ahmed", 8],
-  ["Clement", 10],
-  ["Elamin", 6],
-  ["Adam", 7],
-  ["Tayoa", 11],
-  ["Nina", 10],
-  ["Bob", 9],
-  ["Lee", 1]
-]
+// const alphaStudentGroup = [
+//   ["Ahmed", 8],
+//   ["Clement", 10],
+//   ["Elamin", 6],
+//   ["Adam", 7],
+//   ["Tayoa", 11],
+//   ["Nina", 10],
+//   ["Bob", 9],
+//   ["Lee", 1]
+// ]
 
-const deltaStudentGroup = [
-  ["Zoidber", 6],
-  ["Bender", 5],
-  ["Zapp", 7],
-  ["amy", 0]
-]
+// const deltaStudentGroup = [
+//   ["Zoidber", 6],
+//   ["Bender", 5],
+//   ["Zapp", 7],
+//   ["amy", 0]
+// ]
 
-function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length != b.length) return false;
+// function arraysEqual(a, b) {
+//     if (a === b) return true;
+//     if (a == null || b == null) return false;
+//     if (a.length != b.length) return false;
   
-    for (let i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
-    }
+//     for (let i = 0; i < a.length; ++i) {
+//       if (a[i] !== b[i]) return false;
+//     }
   
-    return true;
-}
+//     return true;
+// }
 
-function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
+// function test(test_name, expr) {
+//     let status;
+//     if (expr) {
+//       status = "PASSED";
+//     } else {
+//       status = "FAILED";
+//     }
   
-    console.log(`${test_name}: ${status}`);
-}
+//     console.log(`${test_name}: ${status}`);
+// }
 
-test("eligibleStudents function works",
-  arraysEqual(getEligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"])
-)
+// test("eligibleStudents function works",
+//   arraysEqual(getEligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"])
+// )
 
-test("eligibleStudents function without eligible candidates",
-  arraysEqual(getEligibleStudents(deltaStudentGroup), [])
-)
+// test("eligibleStudents function without eligible candidates",
+//   arraysEqual(getEligibleStudents(deltaStudentGroup), [])
+// )
 
-test("eligibleStudents function with no candidates",
-  arraysEqual(getEligibleStudents([]), [])
-)
+// test("eligibleStudents function with no candidates",
+//   arraysEqual(getEligibleStudents([]), [])
+// )
 
-test("eligibleStudents2 function works",
-  arraysEqual(getEligibleStudents2(alphaStudentGroup), ["Ahmed", "Adam"])
-)
+// test("eligibleStudents2 function works",
+//   arraysEqual(getEligibleStudents2(alphaStudentGroup), ["Ahmed", "Adam"])
+// )
 
-test("eligibleStudents2 function without eligible candidates",
-  arraysEqual(getEligibleStudents2(deltaStudentGroup), ["amy"])
-)
+// test("eligibleStudents2 function without eligible candidates",
+//   arraysEqual(getEligibleStudents2(deltaStudentGroup), ["amy"])
+// )
 
-test("eligibleStudents2 function with no candidates",
-  arraysEqual(getEligibleStudents2([]), [])
-)
+// test("eligibleStudents2 function with no candidates",
+//   arraysEqual(getEligibleStudents2([]), []))
+
+

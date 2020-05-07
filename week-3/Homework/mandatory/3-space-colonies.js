@@ -13,24 +13,44 @@
   
 */
 
-function colonisers() {}
+//input is a list of names of all voyagers [an array]
+// I want to check each element for the following conditions
+// if the element contains the string 'family' is true, put in the new array (push??) (include??)
+// if the string starts with A. is true, put the item in the new array (push??) charAt.
+// I'll have to create a new array 
+
+
+// to find first letter of a string 
+// let string = "hellow world"
+// let firstLetter = string.charAt(0)
+// console.log(firstLetter)
+//return firstLetter - might not need a return
+// output is h
+
+const voyagers = ["Adam family", "Potter family", "Eric", "Aldous", "Button family", "Jude", "Carmichael", "Bunny", "Asimov", "Oscar family",
+  "Avery family", "Archer family"];
+
+function colonisers(arr) {
+
+let newArr = arr.filter (function check (name) {
+
+  if (name.charAt(0) === "A" && name.includes("family")) {
+    return name
+   }
+   else {
+     return 
+   }
+
+});
+return newArr
+
+}
+
+const checkFirstLetter = (colonisers(voyagers))
+console.log(checkFirstLetter)
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-const voyagers = [
-  "Adam family",
-  "Potter family",
-  "Eric",
-  "Aldous",
-  "Button family",
-  "Jude",
-  "Carmichael",
-  "Bunny",
-  "Asimov",
-  "Oscar family",
-  "Avery family",
-  "Archer family",
-];
 
 function arraysEqual(a, b) {
   if (a === b) return true;
@@ -63,3 +83,5 @@ test(
     "Archer family",
   ])
 );
+
+

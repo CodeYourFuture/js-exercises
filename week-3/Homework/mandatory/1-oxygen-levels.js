@@ -27,9 +27,17 @@ console.log(newdessert); // returns ice cream
 /* + + + + + + + */
 /* Now try the exercise */
 
-function safeLevels() {
+const oxygenLevels = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]
 
+function safeLevels(arr) {
+for (let i = 0; i < arr.length; i++)
+ if (arr[i] > "19.5%" && arr[i] < "23.5%") {
+  return arr[i]
 }
+  
+}
+
+console.log(safeLevels(oxygenLevels))
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
