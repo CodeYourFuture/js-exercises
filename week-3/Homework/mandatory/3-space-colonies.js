@@ -13,7 +13,12 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  const newArray = arr.filter(
+    (word) => word.startsWith("A") && word.includes("family")
+  );
+  return newArray;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
