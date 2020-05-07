@@ -1,17 +1,15 @@
 let myLibrary = [];
-
-window.addEventListener("load", function (e) {
+window.addEventListener('load', function (e) {
   populateStorage();
   render();
 });
-
 function populateStorage() {
   if (myLibrary.length == 0) {
-    let book1 = new Book("Robison Crusoe", "Daniel Defoe", "252", true);
+    let book1 = new Book('Robison Crusoe', 'Daniel Defoe', '252', true);
     let book2 = new Book(
-      "The Old Man and the Sea",
-      "Ernest Hemingway",
-      "127",
+      'The Old Man and the Sea',
+      'Ernest Hemingway',
+      '127',
       true
     );
     myLibrary.push(book1);
@@ -19,48 +17,44 @@ function populateStorage() {
     render();
   }
 }
-
-const title = document.getElementById("title");
-const author = document.getElementById("author");
-const pages = document.getElementById("pages");
-const check = document.getElementById("check");
-
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const pages = document.getElementById('pages');
+const check = document.getElementById('check');
 //check the right input from forms and if its ok -> add the new book (object in array)
 //via Book function and start render function
 function submit() {
   if (
     title.value == null ||
-    title.value == "" ||
+    title.value == '' ||
+    author.value == null ||
+    author.value == '' ||
     pages.value == null ||
-    pages.value == ""
+    pages.value == ''
   ) {
-    alert("Please fill all fields!");
+    alert('Please fill all fields!');
     return false;
   } else {
-
-    let book = new Book(title.value, title.value, pages.value, check.checked);
+    let book = new Book(title.value, author.value, pages.value, check.value);
     myLibrary.push(book);
     render();
   }
 }
-
 function Book(title, author, pages, check) {
   this.title = title;
   this.author = author;
   this.pages = pages;
   this.check = check;
 }
-
 function render() {
-  let table = document.getElementById("display");
+  let table = document.getElementById('display');
   let rowsNumber = table.rows.length;
   //delete old table
-  for (let n = rowsNumber - 1; n < 0; n--) {
-    let del = n--
-    console.log(table.deleteRow(del));
+  for (let n = rowsNumber - 1; n > 0; n--) {
+    table.deleteRow(n);
   }
   //insert updated row and cells
-  length = myLibrary.length;
+  let length = myLibrary.length;
   for (let i = 0; i < length; i++) {
     let row = table.insertRow(1);
     let cell1 = row.insertCell(0);
@@ -71,32 +65,31 @@ function render() {
     cell1.innerHTML = myLibrary[i].title;
     cell2.innerHTML = myLibrary[i].author;
     cell3.innerHTML = myLibrary[i].pages;
-
     //add and wait for action for read/unread button
-    let changeBut = document.createElement("button");
+    let changeBut = document.createElement('button');
     changeBut.id = i;
-    changeBut.className = "btn btn-success";
+    changeBut.className = 'btn btn-success';
     cell4.appendChild(changeBut);
-    let readStatus = "";
+    let readStatus = '';
     if (myLibrary[i].check == false) {
       readStatus = "Yes";
+      changeBut.className = "btn btn-success";
     } else {
       readStatus = "No";
+      changeBut.className = "btn btn-danger";
     }
     changeBut.innerHTML = readStatus;
-
-    changeBut.addEventListener("click", function () {
+    changeBut.addEventListener('click', function () {
       myLibrary[i].check = !myLibrary[i].check;
       render();
     });
-
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
-    delButton.id = i + 5;
-    cell5.appendChild(delButton);
-    delButton.className = "btn btn-warning";
-    delButton.innerHTML = "Delete";
-    delButton.addEventListener("clicks", function () {
+    let delBut = document.createElement('button');
+    delBut.id = i + 5;
+    cell5.appendChild(delBut);
+    delBut.className = 'btn btn-warning';
+    delBut.innerHTML = 'Delete';
+    delBut.addEventListener('click', function () {
       alert(`You've deleted title: ${myLibrary[i].title}`);
       myLibrary.splice(i, 1);
       render();
