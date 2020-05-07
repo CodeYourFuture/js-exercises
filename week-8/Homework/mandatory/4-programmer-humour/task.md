@@ -2,7 +2,7 @@
 
 Who knew programmers could be funny?
 
-Write an function that makes an API call to `https://xkcd.now.sh/?comic=latest`
+Write a function that makes an API call to `https://xkcd.now.sh/?comic=latest`
 
 1. Create a `HTML`, `CSS` and `JavaScript` file to write your code in
 

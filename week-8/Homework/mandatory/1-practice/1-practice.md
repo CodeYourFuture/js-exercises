@@ -21,14 +21,12 @@ Enjoy!
 The following endpoint is publicly available from Github
 
     GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
-    GET https://api.github.com/repos/octocat/Hello-World/pulls/1347
-    GET https://api.github.com/repos/octocat/Hello-World/pulls/1347
-    GET https://http.cat/
 
 1. Describe in a sentence what this API endpoint returns.
 
 This API endpoint returns a comment "message": "Not Found",
-The API would return comments from the webserver or web application if the address was correct
+This
+The API would return a response, which is a stream of data from the webserver or web application if the address was correct
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 

@@ -9,9 +9,11 @@ function getImage() {
         })
         .then(data => {
             console.log(data);
-            let img = document.getElementById('dogImage');
+            let list = document.createElement("li")
+            document.querySelector("#imageList").appendChild(list);
+            let img = document.createElement("img");
+            list.appendChild(img);
             img.src = data.message;
-            console.log(img)
         })
         .catch(err => {
             console.log(err);
