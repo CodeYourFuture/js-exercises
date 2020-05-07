@@ -13,7 +13,14 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  let familiesToStay = arr.filter(
+    (listOfFamilies) =>
+      listOfFamilies.charAt(0) === "A" && listOfFamilies.includes("family")
+  );
+
+  return familiesToStay;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -31,7 +38,8 @@ const voyagers = [
   "Avery family",
   "Archer family",
 ];
-
+var arr = [];
+console.log(colonisers(arr));
 function arraysEqual(a, b) {
   if (a === b) return true;
   if (a == null || b == null) return false;
