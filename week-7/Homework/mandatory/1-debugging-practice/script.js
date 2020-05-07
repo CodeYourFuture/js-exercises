@@ -37,8 +37,9 @@ function submit() {
     alert("Please fill all fields!");
     return false;
   } else {
+
     let book = new Book(title.value, title.value, pages.value, check.checked);
-    library.push(book);
+    myLibrary.push(book);
     render();
   }
 }
@@ -54,11 +55,12 @@ function render() {
   let table = document.getElementById("display");
   let rowsNumber = table.rows.length;
   //delete old table
-  for (let n = rowsNumber - 1; n > 0; n--) {
-    table.deleteRow(n);
+  for (let n = rowsNumber - 1; n < 0; n--) {
+    let del = n--
+    console.log(table.deleteRow(del));
   }
   //insert updated row and cells
-  let length = myLibrary.length;
+  length = myLibrary.length;
   for (let i = 0; i < length; i++) {
     let row = table.insertRow(1);
     let cell1 = row.insertCell(0);
