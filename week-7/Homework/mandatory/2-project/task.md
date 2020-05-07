@@ -13,3 +13,4 @@ You should complete up to and including Level 300
 It is very important that you make sure you project is setup correctly.
 
 You should follow all of the setup steps [here](https://github.com/CodeYourFuture/syllabus/blob/london/js-core-3/tv-show-dom-project/getting-started.md)
+It is in progressing.
