@@ -6,7 +6,8 @@
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
 function getLanes() {
-
+let getLanes2=str.indexOf()
+}
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

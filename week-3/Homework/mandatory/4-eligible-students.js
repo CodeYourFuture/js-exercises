@@ -53,8 +53,12 @@ console.log(arrayLengths);
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents() {
-}
+function getEligibleStudents(classes) {
+  
+  const getEligible = classes.filter(alphaStudentGroup=> alphaStudentGroup.length));
+return alphaStudentGroup.str.toUpperCase()
+})
+console.log(getEligible);
 
 /*
  
@@ -72,9 +76,12 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
-}
-
+function getEligibleStudents2(classes) {
+  let nonEligible = classes.map(deltaStudentGroup => deltaStudentGroup.length)
+  return deltaStudentGroup.charAt(0) === "A" && namesStart.includes(0,3);
+ 
+} 
+console.log(nonEligible);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const alphaStudentGroup = [
