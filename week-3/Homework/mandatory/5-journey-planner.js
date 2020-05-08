@@ -23,8 +23,9 @@
 function checkCodeIsThere(stringText) {
   let magicWord = "code";
   //edit code below
-  if (stringText) {
-    return stringText;
+   
+  if (stringText.includes(magicWord) === true) {
+    return stringText.indexOf(magicWord);
   } else {
     return "Not found";
   }
@@ -68,7 +69,13 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() { }
+
+function getTransportModes(namesOfPlacesAndTransport) {
+  let transport = namesOfPlacesAndTransport.slice(-2);
+    return transport;
+ }
+
+
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -84,7 +91,15 @@ function getTransportModes() { }
 
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() { }
+function isAccessibleByTransportMode(transportArr , requiredTransport) { 
+  let meansOfTransport = requiredTransport;
+
+  if(transportArr.includes(meansOfTransport) === true){
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /*
   Implement the function getLocationName that
@@ -93,7 +108,10 @@ function isAccessibleByTransportMode() { }
    - Returns the name of the location
      e.g: "Tower Bridge"
 */
-function getLocationName() { }
+function getLocationName(locationAndTransportArr) { 
+  let nameOfLocation = locationAndTransportArr.shift();
+  return nameOfLocation;
+}
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -120,8 +138,27 @@ function getLocationName() { }
   Advanced challange: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
-  // Implement the function body
+
+  let destination = locations.map(function (transportation) {
+    if(transportation.includes(transportMode) === true){
+      return getLocationName(transportation);
+    } else{
+      return;
+    }
+        
+  });
+  return destination;
 }
+
+const londonPlaces = [
+  ["Angel", "tube", "bus"],
+  ["London Bridge", "tube", "river boat"],
+  ["Tower Bridge", "tube", "bus"],
+  ["Greenwich", "bus", "river boat"],
+];
+
+console.log(journeyPlanner(londonPlaces, "bus"));
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

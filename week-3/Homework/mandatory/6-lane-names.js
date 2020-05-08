@@ -5,7 +5,13 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
-function getLanes() {
+function getLanes(streetArr) {
+    function makeSubArr(streetArr){
+        return streetArr.includes('Lane');
+      }
+    
+      let requiredLanes = streetArr.filter(makeSubArr);
+      return requiredLanes;
 
 }
 
