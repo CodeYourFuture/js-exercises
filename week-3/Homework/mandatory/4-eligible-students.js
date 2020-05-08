@@ -63,6 +63,21 @@ function getEligibleStudents(namesArr) {
   return studentCandidates;
 }
 /*
+function getEligibleStudents(studentsEligible) {
+  let studentAttendancyCheck = studentsEligible.filter(
+    (attendancyCheck) => attendancyCheck[1] >= 8
+  );
+  let NameOfStudentAttendancyChecked = studentAttendancyCheck.map(
+    (attendancyCheck) => attendancyCheck[0]
+  );
+  return NameOfStudentAttendancyChecked;
+  /*another solution *
+  // return studentsEligible.filter(attendancyCheck => attendancyCheck[1] >= 8).map(attendancyCheck => attendancyCheck[0]);
+}
+
+*/
+
+/*
  
  Later leaders of Alpha planet decided to change the rule as below:
 
@@ -86,6 +101,15 @@ function getEligibleStudents2(names) {
   return candidates;
 }
 
+/*function getEligibleStudents2(sameNameStudent) {
+  return sameNameStudent
+    .filter((checkStudentsNames) =>
+      checkStudentsNames[0].toUpperCase().startsWith("A")
+    )
+    .map((studentWithLetterA) => studentWithLetterA[0]);
+  /*another solution 
+  //   return sameNameStudent.filter(checkStudentsNames => checkStudentsNames[0].toUpperCase().charAt(0) === "A").map(studentWithLetterA => studentWithLetterA[0])
+}*/
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const alphaStudentGroup = [

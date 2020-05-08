@@ -42,6 +42,24 @@ function bushChecker(bushArr) {
     return "Toxic! Leave bush alone!";
   }
 }
+/*
+function bushChecker(colourBush) {
+  let checkPink = colourBush.every((berriesPink) => berriesPink === "pink");
+  if (checkPink) {
+    //you can also write  if (arr.every(pinkBerries => pinkBerries === "pink"))
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
+  }
+  /*another solution */
+/*let checkPinkArray = colourBush.filter((p) => p === "pink");
+if (checkPinkArray.length === colourBush.length) {
+return "Bush is safe to eat from";
+} else {
+return "Toxic! Leave bush alone!";
+}
+}
+*/
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

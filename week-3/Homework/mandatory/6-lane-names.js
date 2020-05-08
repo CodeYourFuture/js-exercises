@@ -12,7 +12,10 @@ function getLanes(namesOfStreet) {
   });
   return checkLanes;
 }
-
+/*function getLanes(names) {
+  const targetName = "Lane"; // string 'Lane' needs to be used
+  return names.filter((name) => name.includes(targetName));
+}*/
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const streetNames = [

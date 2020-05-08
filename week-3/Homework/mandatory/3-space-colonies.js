@@ -20,6 +20,16 @@ function colonisers(names) {
   });
   return newColonisers;
 }
+/*
+function colonisers(families) {
+  return families.filter(
+    (checkNames) =>
+      checkNames.charAt(0) === "A" && checkNames.includes("family")
+  );
+  /*another solution 
+  // return vs.filter(v => v.startsWith("A") && v.endsWith(" family"));
+}
+*/
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -31,6 +31,17 @@ function checkCodeIsThere(stringText) {
   }
 }
 
+/*function checkCodeIsThere(stringText) {
+  let magicWord = "code";
+  //edit code below
+  if (stringText.includes(magicWord)) {
+    // you can also use if(stringText.indexOf(magicWord)>=0)
+    return stringText.indexOf(magicWord);
+  } else {
+    return "Not found";
+  }
+}*/
+
 /*
   I am new to London and would like to know what transport I can take to different famous locations.
   The input provided contains a list of locations in London. Each of locations is followed by a list
@@ -73,6 +84,9 @@ function getTransportModes(locationName) {
   let availableTransport = locationName.slice(1, locationName.length);
   return availableTransport;
 }
+/*function getTransportModes(travelDetails) {
+  return travelDetails.slice(1); // returns last 2 items of the array, does not have the first item
+}*/
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -93,7 +107,9 @@ function isAccessibleByTransportMode(arr, str) {
   let checkTrnasport = arr.includes(str);
   return checkTrnasport;
 }
-
+/*function isAccessibleByTransportMode(transportModes, transport) {
+  return transportModes.includes(transport); // returns a boolean value
+}*/
 /*
   Implement the function getLocationName that
    - Accepts a location and available transports in an array
@@ -105,6 +121,9 @@ function getLocationName(nameOfPlace) {
   let getTrnsport = nameOfPlace[0];
   return getTrnsport;
 }
+/*function getLocationName(travelDetails) {
+  return travelDetails[0]; // "Tower Bridge" - student must return this string
+}*/
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -137,6 +156,18 @@ function journeyPlanner(locations, transportMode) {
   });
   return locName;
 }
+/*function journeyPlanner(locations, transportMode) {
+  // Implement the function body
+  const travelablelocations = locations
+    .filter((location) => location.includes(transportMode)) // filter correct location details
+    .map((location) => {
+      const locationName = location[0]; // grab the string name, which is the first string at the start
+      return locationName;
+    });
+
+  return travelablelocations;
+}*/
+
 // Implement the function body
 
 /* ======= TESTS - DO NOT MODIFY ===== */

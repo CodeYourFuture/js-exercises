@@ -38,6 +38,24 @@ function safeLevels(planet) {
   return nearestPlanet;
 }
 
+/*function safeLevels(arrStr) {
+  //first solution
+  let levelNumber = arrStr.map((level) => {
+    let removingPercentage = level.replace("%", ""); //you can also use level.substring(0, 4);
+    let stringToNumber = parseFloat(removingPercentage);
+    return stringToNumber;
+  });
+  let findOxyArray = levelNumber.find(
+    (findOxy) => findOxy > 19.5 && findOxy < 23.5
+  );
+  return findOxyArray + "%";*/
+
+/* refactored solution*/
+/* return levels.find(percent => {
+  let number = Number(percent.substring(0, percent.length - 1));
+  return number > 19.5 && number < 23.5;
+  })
+}*/
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
