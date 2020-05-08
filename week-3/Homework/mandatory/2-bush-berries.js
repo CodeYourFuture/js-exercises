@@ -40,6 +40,14 @@ function bushChecker(berryColours) {
   }
 }
 
+//Using Conditional (ternary) operator
+
+function bushChecker(berryColours) {
+  let(berryColours.every((colour) => colour === "pink"))
+    ? "Bush is safe to eat from"
+    : "Toxic! Leave bush alone!";
+}
+
 //OR
 
 function bushChecker(bushBerryColours) {

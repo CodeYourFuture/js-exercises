@@ -20,6 +20,15 @@ function colonisers(families) {
   return colonisingFamilies;
 }
 
+//Using Arrow Functions
+
+function colonisers(families) {
+  const colonisingFamilies = families.filter(
+    (coloniser) => coloniser.charAt(0) === "A" && coloniser.includes("family")
+  );
+  return colonisingFamilies;
+}
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [

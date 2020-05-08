@@ -131,7 +131,7 @@ function test(test_name, expr) {
 
 test(
   "eligibleStudents function works",
-  arraysEqual(getEligibleStudents2(alphaStudentGroup), [
+  arraysEqual(getEligibleStudents(alphaStudentGroup), [
     "Ahmed",
     "Clement",
     "Tayoa",
@@ -142,12 +142,12 @@ test(
 
 test(
   "eligibleStudents function without eligible candidates",
-  arraysEqual(getEligibleStudents2(deltaStudentGroup), [])
+  arraysEqual(getEligibleStudents(deltaStudentGroup), [])
 );
 
 test(
   "eligibleStudents function with no candidates",
-  arraysEqual(getEligibleStudents2([]), [])
+  arraysEqual(getEligibleStudents([]), [])
 );
 
 test(

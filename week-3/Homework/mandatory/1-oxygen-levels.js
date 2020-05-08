@@ -34,6 +34,15 @@ function safeLevels(oxygenLevels) {
   return safePlanet;
 }
 
+// OR  USING ARROW FUNCTIONS
+
+function safeLevels(oxygenLevels) {
+  let safePlanet = oxygenLevels.find(
+    (oxygen) => oxygen > "19.5%" && oxygen < "23.5%"
+  );
+  return safePlanet;
+}
+
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
