@@ -13,8 +13,17 @@
  *      .....
  * </div>
  */
+
 function exerciseOne(arrayOfPeople) {
     let content = document.querySelector("#content");
+    arrayOfPeople.forEach((person) => {
+        let name = document.createElement("h1");
+        let job = document.createElement("h2");
+        name.innerText = person.name;
+        job.innerText = person.job;
+        content.appendChild(name);
+        content.appendChild(job);
+    });
 }
 
 /**
@@ -24,8 +33,17 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
+
 function exerciseTwo(shopping) {
-    //Write your code in here
+    let content = document.querySelector("#content");
+    let ul = document.createElement("ul");
+    content.appendChild(ul);
+
+    shopping.forEach((item) => {
+        let li = document.createElement("li");
+        li.innerText = item;
+        ul.appendChild(li);
+    });
 }
 
 /**
@@ -58,7 +76,36 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-    //Write your code in here
+    let content = document.querySelector("#content");
+    let ul = document.createElement("ul");
+    ul.setAttribute("class", "books");
+    content.appendChild(ul);
+
+    books.forEach((book) => {
+        let li = document.createElement("li");
+        let p = document.createElement("p");
+        let img = document.createElement("img");
+        img.setAttribute("width", "182");
+        img.setAttribute("height", "277");
+        p.innerText = book.title + " " + "-" + " " + book.author;
+        li.appendChild(p);
+        li.appendChild(img);
+        ul.appendChild(li);
+
+        if (book.title == "The Design of Everyday Things") {
+            img.src =
+                "https://images-na.ssl-images-amazon.com/images/I/41bWcNdTGmL._SX330_BO1,204,203,200_.jpg";
+            li.style.backgroundColor = "red";
+        } else if (book.title == "The Most Human Human") {
+            img.src =
+                "https://images-na.ssl-images-amazon.com/images/I/51aKPFuUy1L._SX324_BO1,204,203,200_.jpg";
+            li.style.backgroundColor = "green";
+        } else {
+            img.src =
+                "https://images-na.ssl-images-amazon.com/images/I/418M2053aNL._SX396_BO1,204,203,200_.jpg";
+            li.style.backgroundColor = "green";
+        }
+    });
 }
 
 //
