@@ -22,9 +22,16 @@
 */
 
 // Write your code here
-
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greeting = () => {
+    alert(`HI! I\'m\ ${this.name}.`);
+  };
+}
 // Do not edit this section
-const simon = Person("simon");
+const simon = new Person("simon");
 console.log(simon.name);
 simon.greeting();
 // Do not edit this section
