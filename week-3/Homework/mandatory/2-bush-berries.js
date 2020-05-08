@@ -36,11 +36,10 @@ function bushChecker(bushArr) {
   let pinkBerries = bushArr.every((item) => {
     return item === "pink";
   });
-}
- if (pinkBerries === true) {
-   return "Bush is safe to eat from";
-  }else{
-   return "Toxic! Leave bush alone!";
+  if (pinkBerries) {
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
   }
 }
 
