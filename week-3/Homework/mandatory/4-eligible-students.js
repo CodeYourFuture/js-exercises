@@ -26,12 +26,12 @@
 
 let twoDimensionalArray = [
   ["cat", "dog"],
-  ["giraffe", "lion", "elephant"]
+  ["giraffe", "lion", "elephant"],
 ];
 
 // Examples accessing to array element directly
 // Example 1
-let pets = twoDimensionalArray[0]; // this reads the first embedded array 
+let pets = twoDimensionalArray[0]; // this reads the first embedded array
 console.log(pets[1]); // this prints "cat" to the console
 
 // Example 2
@@ -41,19 +41,26 @@ console.log(twoDimensionalArray[1][2]);
 
 // Examples accessing to array element through array methods
 // Example 1
-let moreThanTwoArrays = twoDimensionalArray.filter(embeddedArray => embeddedArray.length > 2);
+let moreThanTwoArrays = twoDimensionalArray.filter(
+  (embeddedArray) => embeddedArray.length > 2
+);
 console.log(moreThanTwoArrays);
 // This filter only keeps embededd arrays that have more than 3 elements
 
 // Example 2
-let arrayLengths = twoDimensionalArray.map(embeddedArray => embeddedArray.length);
+let arrayLengths = twoDimensionalArray.map(
+  (embeddedArray) => embeddedArray.length
+);
 console.log(arrayLengths);
 // This gives back how many elements of each array have
 
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents() {
+function getEligibleStudents(arr) {
+  let newArr = arr.filter((classes) => classes[1] >= 8);
+  const goodStudents = newArr.map((p) => p[0]);
+  return goodStudents;
 }
 
 /*
@@ -72,7 +79,11 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
+function getEligibleStudents2(names) {
+  let numOfClasses = names.filter(
+    (item) => item[0].startsWith("A") || item[0].startsWith("a")
+  );
+  return numOfClasses.map((arr) => arr[0]);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -85,59 +96,71 @@ const alphaStudentGroup = [
   ["Tayoa", 11],
   ["Nina", 10],
   ["Bob", 9],
-  ["Lee", 1]
-]
+  ["Lee", 1],
+];
 
 const deltaStudentGroup = [
   ["Zoidber", 6],
   ["Bender", 5],
   ["Zapp", 7],
-  ["amy", 0]
-]
+  ["amy", 0],
+];
 
 function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length != b.length) return false;
-  
-    for (let i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
-    }
-  
-    return true;
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
 }
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
-test("eligibleStudents function works",
-  arraysEqual(getEligibleStudents(alphaStudentGroup), ["Ahmed", "Clement", "Tayoa", "Nina", "Bob"])
-)
+test(
+  "eligibleStudents function works",
+  arraysEqual(getEligibleStudents(alphaStudentGroup), [
+    "Ahmed",
+    "Clement",
+    "Tayoa",
+    "Nina",
+    "Bob",
+  ])
+);
 
-test("eligibleStudents function without eligible candidates",
+test(
+  "eligibleStudents function without eligible candidates",
   arraysEqual(getEligibleStudents(deltaStudentGroup), [])
-)
+);
 
-test("eligibleStudents function with no candidates",
+test(
+  "eligibleStudents function with no candidates",
   arraysEqual(getEligibleStudents([]), [])
-)
+);
 
-test("eligibleStudents2 function works",
+test(
+  "eligibleStudents2 function works",
   arraysEqual(getEligibleStudents2(alphaStudentGroup), ["Ahmed", "Adam"])
-)
+);
 
-test("eligibleStudents2 function without eligible candidates",
+test(
+  "eligibleStudents2 function without eligible candidates",
   arraysEqual(getEligibleStudents2(deltaStudentGroup), ["amy"])
-)
+);
 
-test("eligibleStudents2 function with no candidates",
+test(
+  "eligibleStudents2 function with no candidates",
   arraysEqual(getEligibleStudents2([]), [])
-)
+);
