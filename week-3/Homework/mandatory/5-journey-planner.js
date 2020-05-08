@@ -23,8 +23,9 @@
 function checkCodeIsThere(stringText) {
   let magicWord = "code";
   //edit code below
-  if (stringText) {
-    return stringText;
+  if (stringText.includes(magicWord)) {
+    let positionOfCode = stringText.indexOf(magicWord);
+    return positionOfCode;
   } else {
     return "Not found";
   }
@@ -68,7 +69,10 @@ function checkCodeIsThere(stringText) {
   
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() { }
+function getTransportModes(locationName) {
+  let availableTransport = locationName.slice(1, locationName.length);
+  return availableTransport;
+}
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -79,12 +83,16 @@ function getTransportModes() { }
         e.g: "river boat"
      
    - Returns 
-     * True if the location in the first parameter is accessible by the transport mode given in second parameter
+     * True if the location in the first parameter is accessible by the transport mode given in
+      second parameter
      * Otherwise, returns false
 
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() { }
+function isAccessibleByTransportMode(arr, str) {
+  let checkTrnasport = arr.includes(str);
+  return checkTrnasport;
+}
 
 /*
   Implement the function getLocationName that
@@ -93,7 +101,10 @@ function isAccessibleByTransportMode() { }
    - Returns the name of the location
      e.g: "Tower Bridge"
 */
-function getLocationName() { }
+function getLocationName(nameOfPlace) {
+  let getTrnsport = nameOfPlace[0];
+  return getTrnsport;
+}
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -120,8 +131,13 @@ function getLocationName() { }
   Advanced challange: try to use arrow function when invoking an array method.
 */
 function journeyPlanner(locations, transportMode) {
-  // Implement the function body
+  let locName = locations.filter(function (Arr) {
+    let selectedPlace = Arr.includes(transportMode);
+    return selectedPlace;
+  });
+  return locName;
 }
+// Implement the function body
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -190,19 +206,24 @@ test(
 
 test(
   "isAccessibleByTransportMode function works - negative case 2",
-  arraysEqual(isAccessibleByTransportMode(["tube", "bus", "river boat"], "boat"), false)
+  arraysEqual(
+    isAccessibleByTransportMode(["tube", "bus", "river boat"], "boat"),
+    false
+  )
 );
 
 test(
   "getLocationName function works - case 1",
-  arraysEqual(getLocationName(["London Bridge", "tube", "river boat"]), "London Bridge")
+  arraysEqual(
+    getLocationName(["London Bridge", "tube", "river boat"]),
+    "London Bridge"
+  )
 );
 
 test(
   "getLocationName function works - case 2",
   arraysEqual(getLocationName(["Angel", "tube", "bus"]), "Angel")
 );
-
 
 test(
   "journeyPlanner function works - case 1",
