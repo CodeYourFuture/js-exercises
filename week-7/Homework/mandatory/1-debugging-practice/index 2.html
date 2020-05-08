@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> </title>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Library</h1>
+      <p>Add books to your virtual library</p>
+    </div>
+
+    <button data-toggle="collapse" data-target="#demo" class="btn btn-info">
+      Add new book
+    </button>
+
+    <div id="demo" class="collapse">
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input
+          type="title"
+          class="form-control"
+          id="title"
+          name="title"
+          required
+        />
+        <label for="author">Author: </label>
+        <input
+          type="author"
+          class="form-control"
+          id="author"
+          name="author"
+          required
+        />
+        <label for="pages">Pages:</label>
+        <input
+          type="number"
+          class="form-control"
+          id="pages"
+          name="pages"
+          required
+        />
+        <label class="form-check-label">
+          <input
+            type="checkbox"
+            class="form-check-input"
+            id="check"
+            value=""
+          />Read
+        </label>
+        <input
+          type="submit"
+          value="Submit"
+          class="btn btn-primary"
+          onclick="submit();"
+        />
+      </div>
+    </div>
+
+    <table class="table" id="display">
+      <thead class="thead-dark">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Number of Pages</th>
+          <th>Read</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
