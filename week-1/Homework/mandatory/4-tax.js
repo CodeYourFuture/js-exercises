@@ -21,7 +21,16 @@ function calculateSalesTax(productPrice) {
   Remember that the prices must include the sales tax (hint: you already wrote a function for this!)
 */
 
-function formatCurrency() {}
+function formatCurrency(productPrice) {
+    let price = calculateSalesTax(productPrice)
+    let nString = price.toString();
+    if (nString.match(/[.]/g)) {
+        return "£" + nString
+    } else {
+        return "£" + nString + ".00"
+    }
+
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
