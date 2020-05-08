@@ -10,9 +10,10 @@
   Use the tests to confirm which message to return
 */
 
-function bushChecker() {
-
+function bushChecker(berryColor) {
+  return (berryColor.filter(Element => Element != "pink")).length > 0 ? "Toxic! Leave bush alone!" : "Bush is safe to eat from"; 
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

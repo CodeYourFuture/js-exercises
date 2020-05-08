@@ -8,9 +8,13 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
-}
+function colonisers(str) {
+  let checkFamily = str.filter(function (string){
+    return string.includes("family") && string.startsWith("A");
+  })
+ return checkFamily;
+} 
+ 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

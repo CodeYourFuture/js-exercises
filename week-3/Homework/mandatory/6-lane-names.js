@@ -4,9 +4,13 @@
   Write a function that will return all street names which contain 'Lane' in their name.
 */
 
-function getLanes() {
-
+function getLanes(name){
+    let checkStreet = name.filter(function  (street)   {
+        return street.includes("Lane")
+    })
+   return checkStreet
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -17,7 +21,6 @@ const streetNames = [
     "Addle Lane",
     "Alban Highwalk"
 ]
-
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;

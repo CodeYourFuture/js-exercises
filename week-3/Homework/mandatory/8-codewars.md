@@ -13,7 +13,7 @@ Today, you'll be using a platform called [CodeWars](https://codewars.com) to hel
 - [secret message](https://www.codewars.com/kata/jennys-secret-message/train/javascript)
 - [convert boolean](https://www.codewars.com/kata/convert-boolean-values-to-strings-yes-or-no/train/javascript)
 - [opposite number](https://www.codewars.com/kata/opposite-number/train/javascript)
-- [return negative](https://www.codewars.com/kata/return-negative/train/javascript)
+- [return negative](https://www.codewars.com/kata/opposite-number/train/javascript)
 - [hydrated](https://www.codewars.com/kata/keep-hydrated-1/train/javascript)
 - [bonus](https://www.codewars.com/kata/do-i-get-a-bonus/train/javascript)
 - [remove string spaces](https://www.codewars.com/kata/remove-string-spaces/train/javascript)

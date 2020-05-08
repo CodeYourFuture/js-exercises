@@ -7,8 +7,9 @@
   NOTE: only the names should be returned, not the means of transport.
 */
 
-function journeyPlanner() {
-
+function journeyPlanner(place, transport) {
+  let newArray = place.filter(Element => Element.includes(transport)); 
+  return (newArray.map(Element => Element[0]));
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
