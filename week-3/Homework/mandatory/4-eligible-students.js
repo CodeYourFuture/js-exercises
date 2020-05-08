@@ -57,12 +57,10 @@ console.log(arrayLengths);
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents(names) {
-  const candidates = names.filter(function (name) {
-    let eligibles = name[1] >= 8;
-    return eligibles;
-  });
-  return candidates;
+function getEligibleStudents(namesArr) {
+  let candidatesArr = namesArr.filter((name) => name[1] >= 8);
+  let studentCandidates = candidates.map((name) => name[0]);
+  return studentCandidates;
 }
 /*
  
