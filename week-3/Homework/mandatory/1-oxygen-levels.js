@@ -33,7 +33,6 @@ function safeLevels(arr) {
   const safeLevel = numOnly.find((n) => n < 23.5 && n > 19.5);
   return safeLevel + "%";
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"];
