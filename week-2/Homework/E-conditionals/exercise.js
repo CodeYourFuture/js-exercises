@@ -6,8 +6,15 @@
   If Daniel is a student, print out "Hi, I'm Daniel, I'm a student."
 */
 
-var name = "Daniel";
-var danielsRole = "mentor";
+let name = "Daniel";
+let danielsRole = "mentor";
+
+if (danielsRole === "mentor") {
+ console.log("Hi, I'm Daniel, I'm a mentor.") 
+}
+if (danielsRole === "student") {
+  console.log("Hi, I'm Daniel, I'm a student.") 
+ }
 
 /* 
 EXPECTED RESULT
