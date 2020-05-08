@@ -52,9 +52,36 @@ console.log(arrayLengths);
 
 /* + + + + + + + */
 /* Now try the exercise */
+//refrence -https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Array_destructuring
+function getData(people){
+  let studentAttednded8Class=people.filter(function(personalInfo){
+    return (personalInfo[1]>=8);
+  
+ });
+      return studentAttednded8Class;
 
-function getEligibleStudents() {
 }
+function getEligibleStudents(people) {
+      let studentData=getData(people);
+     var names=studentData.map(function(info){
+     return info[0]
+});
+    
+  return names ;
+}
+
+
+console.log(getEligibleStudents([
+  ["Ahmed", 8],
+  ["Clement", 10],
+  ["Elamin", 6],
+  ["Adam", 7],
+  ["Tayoa", 11],
+  ["Nina", 10],
+  ["Bob", 9],
+  ["Lee", 1]
+])
+);
 
 /*
  
@@ -72,8 +99,30 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
+function getEligibleStudents2(eligibleStudentNameWithA) {
+  let studentName=getEligibleStudents(eligibleStudentNameWithA);
+  let correctNames=studentName.filter(function(allNames){
+    return allNames.startsWith('A' || 'a');
+  });
+  return correctNames;
 }
+
+
+  
+  
+
+ console.log(getEligibleStudents2([["Ahmed", 8],
+ ["Clement", 10],
+ ["Elamin", 6],
+ ["Adam", 7],
+ ["Tayoa", 11],
+ ["Nina", 10],
+ ["Bob", 9],
+ ["Lee", 1]]));
+
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -28,10 +28,15 @@ values will have a remainder of 0 i.e. there are some odd numbers in the array t
 
 /* Now try to complete the exercise */
 
-function bushChecker() {
+function bushChecker(arr) {
+if(arr.every(value=>value==='pink'))
+return "Bush is safe to eat from"; 
+else
+return "Toxic! Leave bush alone!"
 
 }
 
+console.log(bushChecker["pink", "pink", "pink", "pink"]);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]

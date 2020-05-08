@@ -26,11 +26,22 @@ console.log(newdessert); // returns ice cream
 
 /* + + + + + + + */
 /* Now try the exercise */
-
-function safeLevels() {
-
+function removePercentagerSign(arr){
+var newArr=arr.map(key=>key.replace('%',''));
+return newArr;
 }
 
+
+console.log(removePercentagerSign(["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]));
+
+function safeLevels(newArr1) {
+  var castedArray=removePercentagerSign(newArr1);
+  var safeOxy=castedArray.find(key=>key>19.5 && key<23.5);
+  return safeOxy + '%';
+
+ }
+
+console.log(safeLevels(["24.2", "11.3", "19.9", "23.1", "29.3", "20.2"]));
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]

@@ -20,44 +20,48 @@
  Hint: search for string methods like Includes and IndexOf.
 */
 
-function checkCodeIsThere(stringText) {
-  let magicWord = "code";
-  //edit code below
-  if (stringText) {
-    return stringText;
-  } else {
-    return "Not found";
-  }
+function checkCodeIsThere (stringText) {
+var checkCodeExists=stringText.includes('code')
+if(checkCodeExists===true){
+  var codePosition=stringText.indexOf('code');
+  return codePosition
 }
+else{
+  return 'Not found';
+}
+}
+console.log(checkCodeIsThere("I Love coding and perfect code makes me happy"));
 
-/*
-  I am new to London and would like to know what transport I can take to different famous locations.
-  The input provided contains a list of locations in London. Each of locations is followed by a list
-  of transport modes that can be used to get there.
 
-  Let's see an example:
+
   
-  To take to Tower Bridge, you can use tube or river boat. This information will represented as 
-    ["Tower Bridge", "tube", "river boat"]
+//   I am new to London and would like to know what transport I can take to different famous locations.
+//   The input provided contains a list of locations in London. Each of locations is followed by a list
+//   of transport modes that can be used to get there.
 
-  Where
-    the 1st element says the name of the location,
-    and rest of them says the transport modes.
+//   Let's see an example:
+  
+//   To take to Tower Bridge, you can use tube or river boat. This information will represented as 
+//     ["Tower Bridge", "tube", "river boat"]
 
-  You will then get a list of these information, e.g:
-  [
-    ["Tower Bridge", "tube", "river boat"],
-    ["Abbey road", "double decker"],
-    ["London Eye", "tube", "river boat", "bus"]
-  ]
+//   Where
+//     the 1st element says the name of the location,
+//     and rest of them says the transport modes.
 
-  You have to finish up the body of journeyPlanner function that should tell where I can go if I only
-  want to use a specific mode of transport. But before jumping straight to the main function, we will
-  break down the whole task into smaller steps that make our job easier.
+//   You will then get a list of these information, e.g:
+//   [
+//     ["Tower Bridge", "tube", "river boat"],
+//     ["Abbey road", "double decker"],
+//     ["London Eye", "tube", "river boat", "bus"]
+//   ]
 
-  This technic is also referred as problem decomposition. It helps you to reduce scope of the problem 
-  by only focusing on a small chunk of the whole problem at a time.)
-*/
+//   You have to finish up the body of journeyPlanner function that should tell where I can go if I only
+//   want to use a specific mode of transport. But before jumping straight to the main function, we will
+//   break down the whole task into smaller steps that make our job easier.
+
+//   This technic is also referred as problem decomposition. It helps you to reduce scope of the problem 
+//   by only focusing on a small chunk of the whole problem at a time.)
+// */
 
 /*
   Implement the function getTransportModes that
@@ -66,9 +70,18 @@ function checkCodeIsThere(stringText) {
    - Returns an array including the available transport modes to the given location
      e.g: ["tube", "river boat"]
   
-  Hint: Use the corresponding array method to split the array.
-*/
-function getTransportModes() { }
+  Hint: Use the corresponding array method to split the array.*/
+
+
+function getTransportModes(meansOfTransport) {
+  var newArr=meansOfTransport.splice(1,2);
+  return newArr;
+  }
+
+  
+ 
+ console.log(getTransportModes(["Tower Bridge", "tube", "river boat"]));
+ 
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -84,7 +97,14 @@ function getTransportModes() { }
 
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
-function isAccessibleByTransportMode() { }
+function isAccessibleByTransportMode(newArr,transport) { 
+  if(newArr.includes(transport)){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
 
 /*
   Implement the function getLocationName that
@@ -93,7 +113,11 @@ function isAccessibleByTransportMode() { }
    - Returns the name of the location
      e.g: "Tower Bridge"
 */
-function getLocationName() { }
+function getLocationName(newArr) { 
+  var nameOfLocation=newArr.slice(0,1).shift();
+  return nameOfLocation;
+}
+console.log(getLocationName["Tower Bridge", "tube", "river boat"]);
 
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
@@ -121,7 +145,15 @@ function getLocationName() { }
 */
 function journeyPlanner(locations, transportMode) {
   // Implement the function body
+  return locations.filter(b => b===transportMode);
 }
+//console.log(getLocationName["Tower Bridge", "tube", "river boat"]);
+console.log(journeyPlanner( [
+  ["Angel", "tube", "bus"],
+  ["London Bridge", "tube", "river boat"]
+]
+
+,"bus") +'journey planner output');
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -13,7 +13,10 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  var newArr=arr.filter(key=>key.startsWith('A') && key.endsWith('family'));
+  return newArr;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

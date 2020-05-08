@@ -5,9 +5,16 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
-function getLanes() {
+function getLanes(arr) {
+    var newArr=arr.filter(key=>key.includes('Lane'));
+    return newArr;
 
 }
+console.log(getLanes(["Abchurch Lane",
+"Adam's Court",
+"Addle Hill",
+"Addle Lane",
+"Alban Highwalk"]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
