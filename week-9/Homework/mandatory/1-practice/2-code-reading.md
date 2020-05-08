@@ -14,6 +14,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+Because of differentscopes. line 4 is local scope to the block and line 1 is more global.
 
 ## Question 2
 
@@ -31,6 +32,8 @@ function f1()
 console.log(f1())
 console.log(y)
 ```
+
+y is unreachable for the console from line 29. It is outside of line 32 scope; And x is reachable and ptinted from outside of the function from glkobal scope
 
 What will be the output of this code. Explain your answer in 50 words or less.
 
@@ -61,3 +64,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+x is declared as a constant which is supposed not to change in global scope and passed to thefunction which can acces x from outside but anything we do inside of the functionis not changing x becaus we change whateverwe change infunction scope and x is constant and expected not to change =9.
+In last piece ofcode wechange the value of a property called x not x so its 10;
