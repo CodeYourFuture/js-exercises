@@ -24,7 +24,7 @@
 // Write your code here
 
 // Do not edit this section
-const simon = Person("simon");
+const simon = new Person("simon");
 console.log(simon.name);
 simon.greeting();
 // Do not edit this section
