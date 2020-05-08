@@ -13,7 +13,16 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  function alloewd(element) {
+    if (element.startsWith("A") && element.endsWith("family")) {
+      return true;
+    }
+    return false;
+  }
+
+  return arr.filter(alloewd);
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
