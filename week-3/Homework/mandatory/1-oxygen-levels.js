@@ -28,13 +28,11 @@ let newdessert = dessert.substring(0, 9);
 
 function safeLevels(arr) {
   const numOnly = arr.map(function (p) {
-    return p.substring(0, 4);
+    return p.substring(0, p.length-1 );
   });
   const safeLevel = numOnly.find((n) => n < 23.5 && n > 19.5);
   return safeLevel + "%";
 }
-
-// console.log(safeLevels(["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
