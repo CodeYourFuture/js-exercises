@@ -17,15 +17,15 @@ class ATM {
     }
 
     make_deposit(money){
-        console.log(this.balance += money)
+        this.balance += money
     }
 
     check_balance(){
-        console.log(this.balance)
+        this.balance
     }
 
     make_withdrawl(money){
-    console.log(this.balance -= money)
+    this.balance -= money
     // Add your code here
     }
 }
