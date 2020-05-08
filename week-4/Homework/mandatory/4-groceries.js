@@ -11,4 +11,6 @@ let groceryList = {
   item3: "Rice"
 };
 
-console.log();
+groceriesToBuy = Object.values(groceryList)
+
+console.log(groceriesToBuy);
