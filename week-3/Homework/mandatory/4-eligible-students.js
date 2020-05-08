@@ -21,7 +21,7 @@ function eligibleStudents(arr) {
     return arrElegible
 }
 
-
+//
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const attendances = [
