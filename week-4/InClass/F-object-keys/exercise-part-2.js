@@ -35,14 +35,17 @@ let storeBranches = {
 
 // # 1
 // prints [ 'glasgow', 'edinburgh' ]
-console.log()
+let getTheObjectsCity = Object.keys(storeBranches).map(x => x.toUpperCase())
+console.log(getTheObjectsCity)
 
 // # 2
 // prints [ 'manager', 'assistant', 'interns' ]
-console.log()
+let getTheObjectsCityKeys = Object.keys(storeBranches.glasgow).map(x => x.toUpperCase())
+console.log(getTheObjectsCityKeys)
 
 // # 3
 // prints [ 'head_intern', 'intern' ]
-console.log()
+let getTheObjectsCityKeysFacts = Object.keys(storeBranches.glasgow.interns).map(x =>x.toUpperCase())
+console.log(getTheObjectsCityKeysFacts)
 
 // ONLY EDIT ABOVE THIS LINE

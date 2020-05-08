@@ -40,7 +40,9 @@ WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms =travelDestinations.filter((x)=>{
+    x.distanceKms<500;
+}) // Complete here
 
 let destinationNameReachableByFerry = // Complete here
 

@@ -17,10 +17,14 @@ let coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function (amount) {
-
+        this.insertedAmount = amount;
     },
     getCoffee: function (coffee) {
-
+        if(this.insertedAmount >= this.prices[coffee]){
+            return `please take your ${coffee}`
+        }else{
+           return `Sorry, you dont have enough balance for a ${coffee}`
+        }
     }
 };
 
@@ -41,3 +45,8 @@ console.log(`Expected result: 'Please take your flatWhite'. Actual result: ${cof
 coffeeMachine.insertMoney(2.40);
 console.log(`Expected result: 'Sorry you don't have enough money for a flatWhite'. Actual result: ${coffeeMachine.getCoffee('flatWhite')}`);
 
+coffeeMachine.insertMoney(1.25);
+console.log("Expected result: 'Sorry you don't have enough money for a blackCoffee'. Actual result: " + coffeeMachine.getCoffee("blackCoffee"));
+
+coffeeMachine.insertMoney(5);
+console.log("Expected result: 'Please take your cappuccino'. Actual result: " +coffeeMachine.getCoffee("cappuccino"));

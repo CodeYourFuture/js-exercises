@@ -3,8 +3,8 @@
 */
 
 let dog = {
-    name: 'Billy',
-    wantsToPlay: false
+    name: 'Rex',
+    wantsToPlay: true
 };
 
 // WRITE CODE BELOW THIS LINE

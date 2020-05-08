@@ -60,17 +60,15 @@ let restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-        // Complete here
+        return this.restaurants.filter(y => y.totalSeats - y.numberOfCustomers >= numberOfPeople).map(x => x.name)
     },
     findRestaurantServingDish: function (dishName) {
-        // Complete here
+     return this.restaurants.filter(x => x.menu.includes(dishName)).map(y=>y.name)
     },
     countNumberOfRestaurantsInArea: function (area) {
-        // Complete here
+
     }
 };
-
-
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
