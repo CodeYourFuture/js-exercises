@@ -8,9 +8,24 @@ The output of running your code should be:
 */
 
 class ShoppingCart {
+  constructor(){
+    this.cart=[];
+
+  
+  }
   // Add your code here
+  addItem(item){
+    this.cart.push(item)
+  }
+
+  listItems(){
+    this.cart.forEach(item => console.log(item))
+  }
+
 
   cartContains() {
+    console.log(this.cart)
+
     // Use console.log() to output everything contained in your cart
   }
 }
