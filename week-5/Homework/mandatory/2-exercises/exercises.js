@@ -13,8 +13,26 @@
  *      .....
  * </div>
  */
+//loop over the array of people
+//for each of these people is to create a h1 with name of person
+//add h2 for job of person after looping through
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
+  //creating a variable called content this stores the element of id content
+ let content = document.getElementById("content");
+ //parameter of function called arrayOfPeople
+ arrayOfPeople.forEach(
+   person => {
+
+   let nameOfPerson = document.createElement("h1");
+   let jobOfPerson = document.createElement("h2");
+   nameOfPerson.textContent = person.name;
+   jobOfPerson.textContent = person.job;
+   content.appendChild(nameOfPerson);
+   content.appendChild(jobOfPerson);
+
+    }
+ );
+
 }
 
 /**
@@ -25,8 +43,21 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
+  let contentOne = document.getElementById("content");
+  let Createcontent = document.createElement("ul");
+  contentOne.appendChild(Createcontent);
+  for(let i = 0; i<shopping.length; i++)
+  {
+      let shoppingItems = document.createElement("li");
+      shoppingItems.innerHTML = shopping[i];
+      Createcontent.appendChild(shoppingItems);
+  
+  } 
+    
 }
+  
+ 
+
 
 /**
     I'd like to display my three favorite books inside a nice webpage!
@@ -58,6 +89,21 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
+  var bookList = document.createElement('ul');
+  for (var i = 0; i < books.length; i++) {
+    var bookItem = document.createElement('li');
+    var bookImg = document.createElement('img');
+    bookImg.src = books[i].img;
+    bookItem.appendChild(bookImg);
+    var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+    bookItem.appendChild(bookDescription);
+    if (books[i].alreadyRead) {
+      bookItem.style.color = 'grey';
+    }
+    bookList.appendChild(bookItem);
+  }
+  document.body.appendChild(bookList);
+
   //Write your code in here
 }
 
