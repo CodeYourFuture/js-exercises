@@ -6,7 +6,14 @@
 let groceriesToBuy = [];
 
 let groceryList = {
-  item1: "",
-  item2: "",
-  item3: ""
+  item1: "Potatoes",
+  item2: "Orange Juice",
+  item3: "Rice"
 };
+
+groceriesToBuy.push(groceryList);
+console.log(groceriesToBuy);
+/*
+var update = groceriesToBuy.map(obj => "need to buy " + obj.item1);
+console.log(update);
+*/
