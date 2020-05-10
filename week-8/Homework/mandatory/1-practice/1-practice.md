@@ -25,7 +25,13 @@ The following endpoint is publicly available from Github
 1. Describe in a sentence what this API endpoint returns.
 
 <!-- Write your answer here -->
+Promise {<rejected>: TypeError: Failed to fetch
+    at <anonymous>:1:1}
+__proto__: Promise
+[[PromiseStatus]]: "rejected"
+[[PromiseValue]]: TypeError: Failed to fetch at <anonymous>:1
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
 <!-- Write your answer here -->
+nothing because the prosise of my fetch function was REJECTED(sadly)

@@ -1,0 +1,13 @@
+body{
+    margin: 0.2%;
+    background-color: black;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#the-image{
+    border-radius: 20px;
+    border: 60px solid;
+    border-color: chocolate;
+}

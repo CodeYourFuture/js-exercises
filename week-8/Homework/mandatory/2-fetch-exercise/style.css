@@ -1,0 +1,24 @@
+body{
+    background-color: red;
+    margin: 8%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: white;
+}
+
+ #greeting-text{
+    font-size: 20px;
+    border: 5px solid;
+    border-radius: 5px;
+    background-color:white;
+    width: 20%;
+    text-align: center;
+    padding: 10px;
+
+  } 
