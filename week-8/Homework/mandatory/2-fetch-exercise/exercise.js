@@ -19,12 +19,10 @@ a different greeting should be displayed in the box.
 
 fetch('https://codeyourfuture.herokuapp.com/api/greetings')
     .then(function (response) {
-
         return response.text();
     })
     .then(function (greeting) {
         // Write the code to display the greeting text here
        let theGreeting = document.getElementById("greeting-text");
        theGreeting.innerText = greeting;
-
     });

@@ -3,22 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     margin: 0px;
     background-color: black;
     height: 20vh;
     display: flex;
     justify-content: center;
-     /* align-items: center; */
-    /* flex-direction: row;  */
 }
 img{
     width: 50%;
     height: auto;
 
 }
-
 #btn1{
     margin: 5%;
     font-size: 20px;

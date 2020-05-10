@@ -1,6 +1,5 @@
 const image = document.getElementById("the-image");
 console.dir(image);
-//console.dir(theDayProp)
 
 function fetchData(){
     fetch("https://xkcd.com/info.0.json")
