@@ -26,6 +26,12 @@ The following endpoint is publicly available from Github
 
 <!-- Write your answer here -->
 
+404 status (Not found) returns
+
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
 <!-- Write your answer here -->
+
+CodeYourFuture, js-exercises, 602
+
+https://api.github.com/repos/CodeYourFuture/js-exercises/pulls/602/comments
