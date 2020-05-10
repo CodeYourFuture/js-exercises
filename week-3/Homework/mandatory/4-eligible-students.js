@@ -53,7 +53,14 @@ console.log(arrayLengths);
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents() {
+function getEligibleStudents(studentsEligible) {
+  let studentAttendancyCheck = studentsEligible.filter(
+    (attendancyCheck) => attendancyCheck[1] >= 8
+  );
+  let NameOfStudentAttendancyChecked = studentAttendancyCheck.map(
+    (attendancyCheck) => attendancyCheck[0]
+  );
+  return NameOfStudentAttendancyChecked;
 }
 
 /*
@@ -72,7 +79,12 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
+function getEligibleStudents2(sameNameStudent) {
+  return sameNameStudent
+    .filter((checkStudentsNames) =>
+      checkStudentsNames[0].toUpperCase().startsWith("A")
+    )
+    .map((studentWithLetterA) => studentWithLetterA[0]);
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
