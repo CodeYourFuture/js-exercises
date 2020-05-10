@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CodeYourFuture/js-exercises/issues"
   },
-  "homepage": "https://github.com/CodeYourFuture/js-exercises#readme"
+  "homepage": "https://github.com/CodeYourFuture/js-exercises#readme",
+  "devDependencies": {
+    "prettier": "2.0.5"
+  }
 }
