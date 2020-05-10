@@ -16,43 +16,51 @@
   the final result to the variable goodCode
 */
 
-function add() {
-
+function add(num1, num2) {
+  const addingTheNumbers = Math.round((num1 + num2) * 10) / 10;
+  return addingTheNumbers;
 }
 
-function multiply() {
-
+function multiply(a, b) {
+  return a * b;
 }
 
-function format() {
-
+function format(number) {
+  const formattedNumber = "£" + number;
+  return formattedNumber;
 }
 
-const startingValue = 2
+const startingValue = 2;
+const sum = add(startingValue, 10);
+const multiplication = multiply(sum, 2);
+const formattingTheNumber = format(multiplication);
 
 // Why can this code be seen as bad practice? Comment your answer.
-let badCode = 
+//Because the above code is unnecessarily long and this will make the code slower while running.
+//We do not need writing functions and call them in this case.
+let badCode = formattingTheNumber;
+console.log(badCode);
 
 /* BETTER PRACTICE */
-
-let goodCode = 
+const newSteps = format((startingValue + 10) * 2);
+let goodCode = newSteps;
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 function test(test_name, expr) {
   let status;
   if (expr) {
-      status = "PASSED"
+    status = "PASSED";
   } else {
-      status = "FAILED"
+    status = "FAILED";
   }
 
-  console.log(`${test_name}: ${status}`)
+  console.log(`${test_name}: ${status}`);
 }
 
-test('add function - case 1 works', add(1,3) === 4)
-test('add function - case 2 works', add(2.4,5.3) === 7.7)
-test('multiply function works', multiply(2,3) === 6)
-test('format function works', format(16) === "£16")
-test('badCode variable correctly assigned', badCode === "£24")
-test('goodCode variable correctly assigned', goodCode === "£24")
+test("add function - case 1 works", add(1, 3) === 4);
+test("add function - case 2 works", add(2.4, 5.3) === 7.7);
+test("multiply function works", multiply(2, 3) === 6);
+test("format function works", format(16) === "£16");
+test("badCode variable correctly assigned", badCode === "£24");
+test("goodCode variable correctly assigned", goodCode === "£24");
