@@ -13,8 +13,29 @@
   
 */
 
-function colonisers() {}
+function colonisers(families) {
+  return families.filter(
+    (checkNames) =>
+      checkNames.charAt(0) === "A" && checkNames.includes("family")
+  );
+}
 
+console.log(
+  colonisers([
+    "Adam family",
+    "Potter family",
+    "Eric",
+    "Aldous",
+    "Button family",
+    "Jude",
+    "Carmichael",
+    "Bunny",
+    "Asimov",
+    "Oscar family",
+    "Avery family",
+    "Archer family",
+  ])
+);
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
