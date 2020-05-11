@@ -1,59 +1,4 @@
-/* First Exercises*/
-// // 1.
-// function one() {
-//     var a = 10;
-// }
-// one();
-// console.log(a); // what is the value of a
-
-// // 2.
-// function two() {
-//     let b = 10;
-//     let b = 20;
-// }
-// two();
-// console.log(b); // what is the value of b and why
-
-// // 3.
-// let c;
-// function three() {
-//     c = 25;
-// }
-// three();
-// console.log(c); // what is the value of c and why
-
-// // 4.
-// function four() {
-//     d = 25;
-// }
-// four();
-// console.log(d); // what is the value of d and why
-
-// // 5.
-// let e;
-// function five() {
-//     const greeting = "Hello";
-
-//     function greet() {
-//         let name = "Eddie";
-//         e = `${greeting} ${name}`;
-//     }
-//     greet();
-// }
-// five();
-// console.log(e); // what is the value of e and why
-
-// // 6.
-// function six() {
-//     if (true) {
-//         let f = 50;
-//     }
-//     console.log(f); // what is the value of f and why
-// }
-
-// six();
-
-/* Second Exercises*/
+/* Exercise 1*/
 
 class RunningTotal {
     constructor() {
@@ -62,11 +7,11 @@ class RunningTotal {
 
     add(n) {
         // Implement this method
-        this.currentTotal(n)
+        this.currentTotal+= n;
     }
     getTotal() {
         // Implement this method
-        
+        return this.currentTotal;
     }
 }
 
@@ -75,4 +20,61 @@ const runningTotal = new RunningTotal();
 runningTotal.add(3);
 runningTotal.add(7);
 runningTotal.add(7);
-runningTotal.getTotal();
+console.log(runningTotal.getTotal());
+
+// /*Exercise 2*/
+
+class StopWatch {
+    constructor() {
+        this.secondsElapsed = 0;
+
+        //Finish implementing the rest of the constructor so that secondsElapsed is updated
+        setInterval(() =>{this.secondsElapsed++;},1000)
+    }
+
+    getTime() {
+        return `Seconds elapsed: ${this.secondsElapsed}`;
+    }
+}
+
+const stopWatch = new StopWatch();
+
+// Wait a few seconds...
+
+stopWatch.getTime();
+// 'Seconds elapsed: 3'
+
+// Wait a few more seconds...
+
+console.log(stopWatch.getTime());
+// 'Seconds elapsed: 7'
+
+/* Exercise 3 */
+
+class AddressBook {
+  // Implement the constructor method
+  // Implement the store method
+  // Implement the lookup method
+  constructor() {
+    this.addressBook = {};
+  }
+
+  store(name, email) {
+    this.addressBook[name] = email;
+    console.log(this.addressBook);
+  }
+  lookup(name) {
+    return this.addressBook[name] || "not found";
+  }
+}
+
+const myAddressBook = new AddressBook();
+
+myAddressBook.store("bart", "bart@simpsons.com");
+myAddressBook.store("maggie", "maggie@simpsons.com");
+
+console.log(myAddressBook.lookup("bart"));
+// 'bart@simpsons.com'
+
+console.log(myAddressBook.lookup("homer"));
+// 'address not found'
