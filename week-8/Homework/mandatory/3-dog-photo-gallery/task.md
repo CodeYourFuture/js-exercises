@@ -9,3 +9,4 @@ Write a function that makes an API call to `https://dog.ceo/api/breeds/image/ran
 - When the button is clicked it should make an API call to `https://dog.ceo/api/breeds/image/random`
 - After receiving the data, append to the `<ul>` a `<li>` that contains an `<img>` element with the dog image
 - Incorporate error handling
+

@@ -24,8 +24,8 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+This API endpoint returns a response, in this case error message and documentation url.
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+These fields shuld include the username of the repo owner, the repo name and the pull request number.

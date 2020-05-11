@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } 
+  
+        img {
+          height: 25%;
+          border: 1em double blue;
+        } 
+      </style>
+</head>
+<body>
+    
+    <div class="content"> </div>
+
+    <script>
+        const content = document.querySelector("div");
+
+function getPhoto() {
+  fetch("https://xkcd.now.sh/?comic=latest")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+      content.innerHTML = `<img src=${data.img}>`;
+    }).catch((error) => console.log("error"))
+}
+
+getPhoto()
+    </script>
+</html>
