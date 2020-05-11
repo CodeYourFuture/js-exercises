@@ -1,6 +1,10 @@
 class MusicPlayer {
-    // Add your code here
-
+    constructor(){
+        this.playlist=[]
+    }
+    add(title, artist){
+        
+    }
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
