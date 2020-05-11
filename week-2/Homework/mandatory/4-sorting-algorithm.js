@@ -20,7 +20,19 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 //1)Create the function inside, Think about nested loops
+
+let arr = [23, "jhon", 30, "tim", 35];
+let newarr = [];
 function sortAges(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if ([i] === Number) {
+      newarr[i] = arr[i];
+    }
+    return newarr[i];
+  }
+
+  console.log(sortAges(arr[(23, "jhon", 30, "tim", 35)]));
+
   //create function here
 }
 

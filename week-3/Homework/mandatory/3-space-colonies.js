@@ -13,7 +13,13 @@
   
 */
 
-function colonisers() {}
+function colonisers(voyagers) {
+  let checkFamily = voyagers.filter((i) => i.includes("family"));
+
+  let startA = checkFamily.filter((i) => i.charAt(0) === "A");
+  return startA;
+}
+console.log(colonisers);
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

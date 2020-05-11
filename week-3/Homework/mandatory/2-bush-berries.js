@@ -18,24 +18,38 @@
 
 let array = [12, 73, 92, 45, 100, 14, 61];
 
-array.some((value) => {return (value % 2 == 0)}); /* this will return true as SOME values 
+array.some((value) => {
+  return value % 2 == 0;
+}); /* this will return true as SOME values 
 will have a remainder of 0 i.e. they are even numbers*/
 
-array.every((value) => {return (value % 2 == 0)}); /* this will return false as not ALL 
+array.every((value) => {
+  return value % 2 == 0;
+}); /* this will return false as not ALL 
 values will have a remainder of 0 i.e. there are some odd numbers in the array too*/
 
 /* + + + + + + + + + + + + + + */
 
 /* Now try to complete the exercise */
+// let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"];
 
-function bushChecker() {
+function bushChecker(color) {
+  let result = color.every((value) => {
+    return value === "pink";
+  });
+  console.log(result);
+  // console.log(bushBerryColours1.every(bushChecker));
 
+  if (result === true) {
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
+  }
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
-let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"];
+let bushBerryColours2 = ["pink", "pink", "pink", "pink"];
 
 function test(test_name, expr) {
   let status;
@@ -48,5 +62,11 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!")
-test("bushChecker funtion works - case 1", bushChecker(bushBerryColours2) === "Bush is safe to eat from")
+test(
+  "bushChecker funtion works - case 1",
+  bushChecker(bushBerryColours1) === "Toxic! Leave bush alone!"
+);
+test(
+  "bushChecker funtion works - case 1",
+  bushChecker(bushBerryColours2) === "Bush is safe to eat from"
+);
