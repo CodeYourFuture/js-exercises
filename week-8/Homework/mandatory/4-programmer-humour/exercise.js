@@ -5,4 +5,7 @@ fetch('https://xkcd.now.sh/?comic=latest').then(response => {
 
 .then(data => {
     console.log(data);
+    let imgSrc = data.img
+    let image = document.createElement("img")
+    image.src = imgSrc
 })
