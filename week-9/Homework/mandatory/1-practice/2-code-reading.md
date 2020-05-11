@@ -15,6 +15,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+Explanation 1: Line 4 has logged a local variable. But line 6 does not see the local, it execute the global one. So they both work with different vairables.
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +35,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+Explanation 2 : the result of line 33 is 10. It takes global variable x and log it in the function, then call the function. But line 34 will be undefined, despite it seems defined in the function, it is not accessible outside of the function.
 
 ## Question 3
 
@@ -61,3 +65,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+Explanation 3 :
+Basically, We are doing the same thing. But the result was not affected by function at the first one in contrast to second one. Because we assign a number at the first, an object at the second. line 64 is 10: line 54 is 9.
