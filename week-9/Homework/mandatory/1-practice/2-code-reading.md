@@ -15,7 +15,7 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
-<!-- in Line 4 when we console.log(x) x value is 2 because it is inside block scope between {} but outside of block x value is 1 because
+<!-- in Line 4 when we console.log(x) x value is 2 because it is local and inside block scope between {} but outside of block x value is 1 because
 x has a global value outside of scope  -->
 
 ## Question 2
@@ -67,3 +67,9 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+<!-- 
+f1 function takes x as an argument and returing val, console.log(x) throws x=9,
+But f2 function takes y object as an argument and modifies and returns {x:10}. console.log(y) throws {x:10} because y has been modified. 
+
+>
