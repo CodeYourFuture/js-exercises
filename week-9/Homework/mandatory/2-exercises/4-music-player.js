@@ -1,6 +1,25 @@
 class MusicPlayer {
     // Add your code here
-
+    constructor(){
+       this.songName =[],
+       this.songSinger = [] 
+        this.num = 0 ;  
+    }
+    add(newSong,newSinger){
+        this.songName.push(newSong);
+        this.songSinger.push(newSinger);
+    }
+    play(){
+        console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+    }
+    skip(){
+        this.num += 1;
+        console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+    }
+    previous(){
+        this.num -= 1;
+        console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+    }
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist

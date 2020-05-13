@@ -45,5 +45,6 @@ atm.make_deposit(200);
 atm.check_balance();
 atm.make_withdrawl(100);
 atm.make_withdrawl(500); // Your ATM should be able to handle this scenario
+// my codes for trying different situation
 atm.make_deposit(700);
 atm.make_withdrawl(500);
