@@ -3,9 +3,26 @@ class MusicPlayer {
         this.playlist=[]
     }
     add(title, artist){
-        
+        this.playlist.push({title, artist})
+    }
+
+    play(){
+        if(this.playlist.length === 0){
+            return "Your playlist is empty. Add songs now!"
+        }
+        else {
+            return `Currently playing: ${this.playlist.title} by ${this.playlist.artist}`
+        }
+    }
+
+    skip(){
+
+    }
+    previous(){
+
     }
 }
+
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
 
