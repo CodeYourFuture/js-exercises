@@ -82,3 +82,42 @@ console.log(createGreeting());
 console.log(createGreeting("John"));
 console.log(createGreeting("Paul", 30));
 
+
+
+//example 1 LOOPS//
+let num = 5;
+num = num + 5;
+console.log(num);
+
+// example 2//
+
+console.log("starting");
+let i=0;
+while(i < 5){
+    console.log("Hello");
+    i=i + 1;
+}
+console.log("finishing");
+ 
+//example 3//
+
+
+// const n = 3;
+
+function num(n){
+    while(n>0){
+        console.log(n+"");
+        n++;
+    }
+}
+
+console.log(num(n));
+
+
+const greetingStart = "Hello, my name is ";
+const name = "Daniel";
+
+const greeting = greetingStart + name;
+
+console.log(greeting);
+

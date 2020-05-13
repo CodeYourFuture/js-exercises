@@ -45,6 +45,17 @@ Exercise 2-b:
   */
 
   let glass = 0;
+  while (glass <= 4){
+    console.log("drinking a glass of water");
+    glass++;
+  }
+
+  
+
+
+  
+
+
 
   // add your code here, starting with: for(...) {...}
 
