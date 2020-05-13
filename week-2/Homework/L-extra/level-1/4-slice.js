@@ -5,8 +5,13 @@
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-var first5Numbers = first5(numbers);
 
+
+function first5(numbers){
+  return numbers.slice(0,5);
+  
+}
+var first5Numbers = first5(numbers);
 console.log(first5Numbers);
 
 /*
