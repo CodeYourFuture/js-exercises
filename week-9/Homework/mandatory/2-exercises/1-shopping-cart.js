@@ -6,17 +6,26 @@ The output of running your code should be:
 
     Your shopping cart has 3 items: Toilet Roll, Pasta, Eggs
 */
+ // Creates an empty shopping cart
 
 class ShoppingCart {
-  // Add your code here
-
+  constructor(){
+    this.listOfShopping = [];
+    this.shoppings = "";
+  }
+  addItem(item){
+    this.listOfShopping.push(item)
+  }
+  listItems(){
+    this.listOfShopping.forEach(element => this.shoppings += element + ", ")
+  }
   cartContains() {
-    // Use console.log() to output everything contained in your cart
+    console.log(this.shoppings);
   }
 }
 
-let myCart = new ShoppingCart(); // Creates an empty shopping cart
 
+let myCart = new ShoppingCart();
 myCart.addItem("Toilet Roll");
 myCart.addItem("Pasta");
 myCart.addItem("Eggs");
