@@ -14,7 +14,7 @@
   3. Write a more readable version of what you wrote in step 2 under the BETTER PRACTICE comment. Assign
   the final result to the variable goodCode
 */
-let a, b, c, d;
+
 function add(a, b) {
   let summa = Math.round((a + b) * 10) / 10;
   return summa;

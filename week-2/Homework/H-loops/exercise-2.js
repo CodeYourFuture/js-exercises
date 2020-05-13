@@ -44,7 +44,7 @@ Exercise 2-b:
 let glass = 0;
 
 // add your code here, starting with: for(...) {...}
-for (glass = 0; glass < 4; glass++) {
+for (; glass < 4; glass++) {
   console.log("drinking a glass of water");
 }
 /* 

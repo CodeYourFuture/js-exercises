@@ -13,24 +13,18 @@ function isNegative(number) {
 }
 
 function isBetween5and10(number) {
-  if (number <= 5 && number >= 10) {
+  if ((number) => 5 && number <= 10) {
     return true;
   }
   return false;
 }
 
 function isShortName(name) {
-  if (name === "Daniel") {
-    return true;
-  }
-  return false;
+  return name === "Daniel";
 }
 
 function startsWithD(name) {
-  if (name[0] === "D") {
-    return true;
-  }
-  return false;
+  return name[0] === "D";
 }
 /* 
   DO NOT EDIT BELOW THIS LINE
