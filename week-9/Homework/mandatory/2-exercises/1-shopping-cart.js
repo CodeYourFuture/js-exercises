@@ -9,9 +9,19 @@ The output of running your code should be:
 
 class ShoppingCart {
   // Add your code here
+  constructor(){
+    this.itemList = [];
+  }
 
   cartContains() {
     // Use console.log() to output everything contained in your cart
+    console.log(this.itemList);
+  }
+  addItem(item){
+    this.itemList.push(item);
+  }
+  listItems(){
+    return this.itemList
   }
 }
 

@@ -13,6 +13,25 @@
 
 class ATM {
     // Add your code here
+    constructor(){
+        this.acount = 100;
+    }
+
+    make_deposit(amount){
+        this.acount += amount;
+    }
+
+    check_balance(){
+        console.log(this.acount);
+    }
+
+    make_withdrawl(amount){
+        if(this.acount < amount){
+            console.log(`Your balance is ${this.acount} and not enough for this action`);
+        } else{
+            this.acount -= amount;
+        }
+    }
 
 }
 

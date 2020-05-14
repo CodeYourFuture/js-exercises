@@ -22,6 +22,14 @@
 */
 
 // Write your code here
+class Person{
+    constructor(name){
+        this.name = name;
+        this.greeting = function(){
+            console.log(`Hi my name is ${this.name}`)
+        }
+    }
+}
 
 // Do not edit this section
 const simon = new Person("simon");
