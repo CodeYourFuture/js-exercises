@@ -1,18 +1,5 @@
-/*
-
- Create a simple ATM machine.
-
- Your ATM should allow you to:
- - Deposit money
- - Withdraw money
- - Check your balance.
-
- You should start with a balance of 100.0 pounds in your account.
-
- */
-
 class ATM {
-    // Add your code here
+        // Add your code here
     constructor(){
         this.balance = 100;
          this.myDeposit = 0;

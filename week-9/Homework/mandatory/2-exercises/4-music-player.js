@@ -10,15 +10,39 @@ class MusicPlayer {
         this.songSinger.push(newSinger);
     }
     play(){
+        if(this.songName.length == 0){
+            console.log("You don't have any song to play")
+        }
         console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
     }
     skip(){
-        this.num += 1;
-        console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+    this.num += 1;
+    if(this.num < this.songName.length){
+    console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+    }
+    else if(this.num >= this.songName.length || this.songName.length == 0){
+        console.log("You don't have any song to skip")
+    }
+
     }
     previous(){
         this.num -= 1;
         console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+    }
+
+    repeat(){
+        this.num = 0
+       this.play();
+    }
+    shuffle(){
+        let songNum = Math.floor(Math.random() * (this.songName.length))
+        for(let i=0;i < this.songName.length; i++){
+            console.log("Currently playing: " + this.songName[songNum] + " by " + this.songSinger[songNum])
+            this.songName.splice(songNum,1)
+            if(this.songName.length == 0){
+                console.log("ALL PLAYED")
+            }
+        }
     }
 }
 
@@ -38,6 +62,17 @@ myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Q
 myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
+
+myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.previous();      // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.repeat();      // Output: "Currently playing: Vogue by Madonna"
+
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+
 
 
 /*
