@@ -17,30 +17,39 @@ class MusicPlayer {
     }
     skip(){
     this.num += 1;
-    if(this.num < this.songName.length){
+    if(this.num <= this.songName.length){
     console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
     }
-    else if(this.num >= this.songName.length || this.songName.length == 0){
+    if(this.num > this.songName.length || this.songName.length == 0){
         console.log("You don't have any song to skip")
     }
 
     }
     previous(){
+        if(this.num > 0 && this.num < this.songName.length){
         this.num -= 1;
         console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+        }
+        else{
+            this.num = 0;
+            console.log("Currently playing: " + this.songName[this.num] + " by " + this.songSinger[this.num])
+        }
     }
 
     repeat(){
-        this.num = 0
+       this.num = 0
        this.play();
     }
     shuffle(){
         let songNum = Math.floor(Math.random() * (this.songName.length))
         for(let i=0;i < this.songName.length; i++){
+            console.log(this.songName)
+            this.num = songNum
             console.log("Currently playing: " + this.songName[songNum] + " by " + this.songSinger[songNum])
             this.songName.splice(songNum,1)
             if(this.songName.length == 0){
                 console.log("ALL PLAYED")
+            this.num = 0;
             }
         }
     }
@@ -69,9 +78,12 @@ myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
 myMusicPlayer.repeat();      // Output: "Currently playing: Vogue by Madonna"
 
 myMusicPlayer.shuffle();
+myMusicPlayer.skip()
 myMusicPlayer.shuffle();
+myMusicPlayer.previous();      // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.skip()
 myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
+
 
 
 
