@@ -8,7 +8,8 @@
 function isEmpty(arr) {
  if(arr.length === 0){
     return true;
-  } else{
+  } 
+  else{
     return false;
   } // complete this statement
   }
