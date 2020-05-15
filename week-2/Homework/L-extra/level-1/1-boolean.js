@@ -1,7 +1,7 @@
 // The code is valid but the program does not produce the expected result
 // Fix it.
 
-var isHappy = false; //boolean
+var isHappy = false; //boolean type
 
 if (!isHappy) {
   console.log("I am happy");
