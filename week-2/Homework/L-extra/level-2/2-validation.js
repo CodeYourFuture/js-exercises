@@ -4,7 +4,27 @@
 // - is less than or equal to 100
 // Tip: write other small functions for each requirement
 
-function validate(num) {}
+
+
+function isNumber(v) {
+  return typeof v === "number";
+}
+
+function isPositive(v) {
+  return v > 0;
+}
+
+function upTo100(v) {
+  return v <= 100;
+}
+
+function validate(num) {
+  if (isNumber(num) && isPositive(num) && upTo100(num)) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /*
   DO NOT EDIT BELOW THIS LINE
