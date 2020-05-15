@@ -27,9 +27,21 @@ console.log(newdessert); // returns ice cream
 /* + + + + + + + */
 /* Now try the exercise */
 
-function safeLevels() {
+function safeLevels(arr) {
+  let output = arr.map((item) => parseFloat(item))
 
+  console.log(output);
+  let output1 = output.find(function (item1) {
+    return item1 > 19.5 && item1 < 23.5;
+  });
+  console.log(output1);
+
+  let output2 = output1 + "%";
+  // console.log(output2);
+  return output2;
 }
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -37,22 +49,22 @@ const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]
 const oxygenLevels2 = ["30.8%", "23.5%", "18.8%", "19.5%", "20.2%", "31.6%"]
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
 test(
-    "safeLevels function works - case 2",
-    safeLevels(oxygenLevels1) === "19.9%"
+  "safeLevels function works - case 2",
+  safeLevels(oxygenLevels1) === "19.9%"
 );
 
 test(
-    "safeLevels function works - case 2",
-    safeLevels(oxygenLevels2) === "20.2%"
+  "safeLevels function works - case 2",
+  safeLevels(oxygenLevels2) === "20.2%"
 );

@@ -18,19 +18,47 @@
 
 let array = [12, 73, 92, 45, 100, 14, 61];
 
-array.some((value) => {return (value % 2 == 0)}); /* this will return true as SOME values 
+array.some((value) => { return (value % 2 == 0) }); /* this will return true as SOME values 
 will have a remainder of 0 i.e. they are even numbers*/
 
-array.every((value) => {return (value % 2 == 0)}); /* this will return false as not ALL 
+array.every((value) => { return (value % 2 == 0) }); /* this will return false as not ALL 
 values will have a remainder of 0 i.e. there are some odd numbers in the array too*/
 
 /* + + + + + + + + + + + + + + */
 
 /* Now try to complete the exercise */
 
-function bushChecker() {
+function bushChecker(array) {
+  var isAllPink = array.every((colour) => { return (colour === "pink") })
+  if (isAllPink) {
 
+
+
+    return "Bush is safe to eat from"
+  }
+  else {
+
+    return "Toxic! Leave bush alone!"
+  }
 }
+
+// function bushChecker(array) {
+//   if (array.some((colour) => { return (colour !== "pink") })) {
+
+//     return "Toxic! Leave bush alone!"
+//   }
+//   else {
+
+//     return " Bush is safe to eat from"
+//   }
+// }
+
+
+
+
+
+
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -53,7 +53,14 @@ console.log(arrayLengths);
 /* + + + + + + + */
 /* Now try the exercise */
 
-function getEligibleStudents() {
+function getEligibleStudents(twoDimensionalArray1) {
+  let check = twoDimensionalArray1.filter(embeddedArray1 =>
+    embeddedArray1[1] >= 8
+
+  );
+  let newArr = check.map(student => student[0])
+  return newArr
+
 }
 
 /*
@@ -72,8 +79,21 @@ function getEligibleStudents() {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
-function getEligibleStudents2() {
+function getEligibleStudents2(arr) {
+  let arr1 = arr.filter(A =>
+    A[0].toUpperCase().charAt(0) === "A"
+
+  )
+  // console.log(arr1);
+
+
+  arr2 = arr1.map(f => f[0])
+  // console.log(arr2);
+  return arr2
+
 }
+// return studentsEligible.filter(attendancyCheck => attendancyCheck[1] >= 8).map(attendancyCheck => attendancyCheck[0]);
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -96,26 +116,26 @@ const deltaStudentGroup = [
 ]
 
 function arraysEqual(a, b) {
-    if (a === b) return true;
-    if (a == null || b == null) return false;
-    if (a.length != b.length) return false;
-  
-    for (let i = 0; i < a.length; ++i) {
-      if (a[i] !== b[i]) return false;
-    }
-  
-    return true;
+  if (a === b) return true;
+  if (a == null || b == null) return false;
+  if (a.length != b.length) return false;
+
+  for (let i = 0; i < a.length; ++i) {
+    if (a[i] !== b[i]) return false;
+  }
+
+  return true;
 }
 
 function test(test_name, expr) {
-    let status;
-    if (expr) {
-      status = "PASSED";
-    } else {
-      status = "FAILED";
-    }
-  
-    console.log(`${test_name}: ${status}`);
+  let status;
+  if (expr) {
+    status = "PASSED";
+  } else {
+    status = "FAILED";
+  }
+
+  console.log(`${test_name}: ${status}`);
 }
 
 test("eligibleStudents function works",

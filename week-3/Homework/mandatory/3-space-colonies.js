@@ -13,7 +13,13 @@
   
 */
 
-function colonisers() {}
+
+function colonisers(familyList) {
+  let output = familyList.filter((word) =>
+    word.charAt(0) === "A" && word.includes("family")
+  )
+  return output
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
@@ -45,6 +51,7 @@ function arraysEqual(a, b) {
 }
 
 function test(test_name, expr) {
+
   let status;
   if (expr) {
     status = "PASSED";
