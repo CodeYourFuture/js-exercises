@@ -10,19 +10,25 @@ The output of running your code should be:
 class ShoppingCart {
   // Add your code here
    constructor(){
-        this.cart= [];
+        this.cart = [];// empty array in the constructor function
    }
-     whenClicked(){
-        this.cart.push(myCart.addItem())
-        console.log(`Your Items has been added to ${this.cart}`)
+    
+      addItem(item){// add Item function  item that are in our basket
+      this.cart.push(item)// pushes the items into our card
+        
      }
-     
-  }
+     listItems(){
+       console.log(`${this.cart} is in your basket`);// console.logs the item that are present in the function
+     }
+    }
+  
 
 let myCart = new ShoppingCart(); // Creates an empty shopping cart
    
-myCart.addItem("toilet roll");
+ /*calls add item function with an item passed on*/
+
+ myCart.addItem("toilet roll");
 myCart.addItem("pasta");
 myCart.addItem("eggs");
-
+myCart.addItem("bread");
 myCart.listItems();
