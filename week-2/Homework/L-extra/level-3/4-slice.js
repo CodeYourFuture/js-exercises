@@ -5,7 +5,7 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+  return `${arr.slice(0, index)} ${value} ${arr.slice(index + 1)}`; // complete this statement
 }
 
 /*

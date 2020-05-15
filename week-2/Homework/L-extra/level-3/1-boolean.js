@@ -3,9 +3,12 @@
 // What was wrong with the original code?
 // Leave comments above your changes to explain
 
-var isHappy = "false";
 
-if (isHappy == true) {
+// boolean value, quotes aren't needed
+var isHappy = false; 
+
+ //boolean value is taken as true if another isn't stated
+if (isHappy) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
