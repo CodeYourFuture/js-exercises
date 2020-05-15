@@ -4,7 +4,14 @@
 //    - each item in `percentages` formatted by your function
 
 var percentages = [1, 23, 92, 18];
-
+function percentageFormat(array) {
+  length = array.length;
+  const string = array.join("% ");
+  const newArr = string.split(" ");
+  newArr[length - 1] = newArr[length - 1] + "%";
+  return newArr;
+}
+percentagesFormatted = percentageFormat(percentages);
 console.log(percentagesFormatted);
 
 /*

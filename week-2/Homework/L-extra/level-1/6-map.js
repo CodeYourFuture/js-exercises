@@ -4,14 +4,11 @@
 // TIP: Use the .map() method
 
 function tidyUpString(str) {
-  return str
-    .trim()
-    .toLowerCase()
-    .replace("/", "");
+  return str.trim().toLowerCase().replace("/", "");
 }
 
 var mentors = ["/Daniel ", "irina ", " Gordon", "ashleigh "];
-var mentorsTidy; // ONLY EDIT THIS LINE
+var mentorsTidy = mentors.map(tidyUpString); // ONLY EDIT THIS LINE
 
 console.log(mentorsTidy);
 
