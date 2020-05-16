@@ -35,12 +35,12 @@ myCart.listItems();
 
 myCart.cartContains();
 
-class Person {
-  constructor() {
-      this.obj = {}
-  }
-  greeting(name) {
-      this.obj.name = name
-      console.log(`Hi! I'm ${this.obj.name} + '.')
-  }
-}
+// class Person {
+//   constructor() {
+//       this.obj = {}
+//   }
+//   greeting(name) {
+//       this.obj.name = name
+//       console.log(`Hi! I'm ${this.obj.name} + '.')
+//   }
+// }

@@ -8,11 +8,23 @@ class MusicPlayer {
         this.musicList.push(this.track)
     }
     play = () => {
-        console.log(`Currently playing: ${this.musicList[this.index].song} by ${this.musicList[this.index].singer}`)
+        if (this.musicList[this.index] !== undefined) {
+            console.log(`Currently playing: ${this.musicList[this.index].song} by ${this.musicList[this.index].singer}`);
+          } else {
+            console.log("Please add music to playlist to play");
+          }        
     }
     skip = () => {
-        this.index++
-        console.log(`Currently playing: ${this.musicList[this.index].song} by ${this.musicList[this.index].singer}`)
+        if (this.musicList[this.index + 1] !== undefined) {
+            this.index++;
+            console.log(
+              `Currently playing: ${this.musicList[this.index]["song"]} by ${
+                this.musicList[this.index]["singer"]
+              }`
+            );
+          } else {
+            console.log("no songs to skip");
+          }
     }
     previous = () => {
         this.index--
@@ -38,7 +50,9 @@ myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Q
 myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
-
+myMusicPlayer.skip();  
+myMusicPlayer.skip();  
+myMusicPlayer.skip();  
 
 /*
 
