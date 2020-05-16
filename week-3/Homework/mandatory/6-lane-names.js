@@ -5,9 +5,12 @@
   
 */
 //hint: string and array methods that could be helpful (indexOf, filter)
-function getLanes() {
 
-}
+    function getLanes(names) {
+        const targetName = "Lane"; 
+        return names.filter((name) => name.includes(targetName));
+      }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

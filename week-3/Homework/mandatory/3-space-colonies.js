@@ -13,7 +13,12 @@
   
 */
 
-function colonisers() {}
+function colonisers(families) {
+  return families.filter(
+    (checkNames) =>
+      checkNames.charAt(0) === "A" && checkNames.includes("family")
+  ); 
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

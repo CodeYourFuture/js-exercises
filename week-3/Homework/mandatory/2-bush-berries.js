@@ -28,8 +28,14 @@ values will have a remainder of 0 i.e. there are some odd numbers in the array t
 
 /* Now try to complete the exercise */
 
-function bushChecker() {
-
+function bushChecker(colourBush) {
+  let checkPink = colourBush.every((berriesPink) => berriesPink === "pink");
+  if (checkPink) {
+    //you can also write  if (arr.every(pinkBerries => pinkBerries === "pink"))
+    return "Bush is safe to eat from";
+  } else {
+    return "Toxic! Leave bush alone!";
+  }
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */

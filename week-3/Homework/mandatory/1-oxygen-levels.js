@@ -27,8 +27,16 @@ console.log(newdessert); // returns ice cream
 /* + + + + + + + */
 /* Now try the exercise */
 
-function safeLevels() {
-
+function safeLevels(arrStr) {
+  let levelNumber = arrStr.map((level) => {
+    let removingPercentage = level.replace("%", ""); //you can also use level.substring(0, 4);
+    let stringToNumber = parseFloat(removingPercentage);
+    return stringToNumber;
+  });
+  let findOxyArray = levelNumber.find(
+    (findOxy) => findOxy > 19.5 && findOxy < 23.5
+  );
+  return findOxyArray + "%";
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
