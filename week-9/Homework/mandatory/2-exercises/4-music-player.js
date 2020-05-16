@@ -1,27 +1,35 @@
 class MusicPlayer {
     constructor(){
         this.playlist=[]
+        this.index = 0;
     }
     add(title, artist){
         this.playlist.push({title, artist})
     }
-
+    
     play(){
         if(this.playlist.length === 0){
-            return "Your playlist is empty. Add songs now!"
+            console.log("Your playlist is empty. Add songs now!")
         }
         else {
-            return `Currently playing: ${this.playlist.title} by ${this.playlist.artist}`
+            console.log(`Currently playing: ${this.playlist[this.index].title} by ${this.playlist[this.index].artist}`)
         }
     }
 
     skip(){
-
-    }
-    previous(){
-
+    this.index ++;
+    if(this.index <= this.playlist.length - 1){
+    console.log(`Currently playing: ${this.playlist[this.index].title} by ${this.playlist[this.index].artist}`)
     }
 }
+
+    previous(){
+    this.index-= 1;
+    console.log(`Currently playing: ${this.playlist[this.index].title} by ${this.playlist[this.index].artist}`)
+    }
+    
+}
+
 
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
