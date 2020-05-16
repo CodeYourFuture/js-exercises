@@ -14,6 +14,8 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+beacuse line number 6 excuting line number 1 as they both out of the block{}
+meanwhile line number 4 excuting line number 3 as they both in the same block
 
 ## Question 2
 
@@ -33,6 +35,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+10 
+then the output is not definde 
 
 ## Question 3
 
@@ -61,3 +65,10 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+fi(x) will output 9 
+its a primitive value. In JS when you provide primitives to a function they are copied in the memory. Meaning that the val inside of the second function have nothing with the val in the scope above
+
+second example 
+f2(y) will output 10
+y is a parameter to a function called f2, y been declared and initialised in line one is an object with one prooerty equle to 9
+the function added 1 to x property, updating the object called by y so console.log(y) is 10

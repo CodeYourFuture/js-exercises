@@ -1,7 +1,51 @@
 class MusicPlayer {
     // Add your code here
+    constructor(){
+        this.playList = [];
+        this.currentPlay = 0
+    }
+    add(song, band){
+        this.playList.push({song, band})
+    }
+    play(){
+        if(this.currentPlay > this.playList.length-1){
+            this.currentPlay=0;
+            console.log(`Currently playing: ${this.playList[this.currentPlay].song} by ${this.playList[this.currentPlay].band}`)
+        }else{
+            console.log(`Currently playing: ${this.playList[this.currentPlay].song} by ${this.playList[this.currentPlay].band}` )
+        }
+    }
+    skip(){
+        if(this.currentPlay = this.playList.length -1){
+          this.currentPlay = 0;
+          console.log(`Currently playing: ${this.playList[this.currentPlay].song} by ${this.playList[this.currentPlay].band}`)
+        }else{
+            this.currentPlay+=1
+            console.log(`Currently playing: ${this.playList[this.currentPlay].song} by ${this.playList[this.currentPlay].band}`)
+        }
+    }
+    previous(){
+        if(this.currentPlay = this.playList[0]){
+            this.currentPlay = this.playList.length-1;
+            console.log(`Currently playing: ${this.playList[this.currentPlay].song} by ${this.playList[this.currentPlay].band}`)
+        }else{
+        this.currentPlay-=1
+        console.log(`Currently playing: ${this.playList[this.currentPlay].song} by ${this.playList[this.currentPlay].band}`)
+    }}
+    shuffle(){
+        shufflePlayList(this.playList);
+        console.log(`Currently playing: ${this.playList[this.currentPlay].song} by ${this.playList[this.currentPlay].band}`)
+    }
 
 }
+
+
+function shufflePlayList(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
 
@@ -19,6 +63,10 @@ myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Q
 myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.skip();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
 
 
 /*

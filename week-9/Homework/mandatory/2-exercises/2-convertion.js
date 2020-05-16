@@ -22,9 +22,18 @@
 */
 
 // Write your code here
-
+class Person{
+    constructor(name){
+        this.name = name;
+        this.greeting = function() {
+            console.log('Hi! I\'m ' + name + '.');
+    }
+}
+}
 // Do not edit this section
-const simon = new Person("simon");
-console.log(simon.name);
-simon.greeting();
+const person1 = new Person("simon");
+console.log(person1.name);
+person1.greeting();
+ const person2 = new Person("Sara");
+ person2.greeting()
 // Do not edit this section
