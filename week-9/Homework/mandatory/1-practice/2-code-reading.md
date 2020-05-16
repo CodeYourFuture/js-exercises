@@ -14,6 +14,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+Because second console.log is out of the curly bracket block which means different scope.
 
 ## Question 2
 
@@ -33,6 +34,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+console.log(f1()) gives 10 as the value of x because it is global variable and function f1 can reach it. However, console.log(y) gives reference error as it is out of function block.
 
 ## Question 3
 
@@ -61,3 +64,6 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+x is argument of f1 function
+f1(x) is 10 as x = x+1, console.log(x) is 9 as x is defined as the value 9. f2(y) gives { x: 9 }
+f2(y) returns as {x: 10} and console.log(y) throws { x: 9 }

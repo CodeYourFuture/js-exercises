@@ -22,7 +22,14 @@
 */
 
 // Write your code here
-
+class Person {
+  constructor(newName) {
+    this.name = newName;
+  }
+  greeting() {
+    console.log("hi I am " + this.name);
+  }
+}
 // Do not edit this section
 const simon = new Person("simon");
 console.log(simon.name);
