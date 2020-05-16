@@ -13,10 +13,17 @@ class MusicPlayer {
   }
 
   play() {
-    console.log(
-      `"Currently playing:${this.playlist[this.counter].song}    by  
+    
+      if ( this.playlist.length == 0){
+        console.log('there is no playlist ')
+      }else{
+        console.log(
+          `"Currently playing:${this.playlist[this.counter].song}    by  
       ${this.playlist[this.counter].singer}"`
-    );
+        )
+      }
+      
+  
   }
   skip() {
     this.counter++;

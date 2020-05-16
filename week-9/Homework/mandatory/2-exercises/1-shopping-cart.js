@@ -20,7 +20,7 @@ class ShoppingCart {
 
   cartContains() {
     // Use console.log() to output everything contained in your cart
-    console.log(this.shoppingList)
+    console.log(this.shoppingList.trim())
   }
 }
 
