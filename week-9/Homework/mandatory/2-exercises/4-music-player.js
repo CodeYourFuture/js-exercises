@@ -1,5 +1,60 @@
 class MusicPlayer {
     // Add your code here
+    constructor(){
+        this.playList = [];
+        this.count = 0;
+
+    }
+
+    add(track, singer){
+        this.playList.push([track,"by", singer])
+
+    }
+
+    play(){
+        if(this.playList.length <= 0){
+            console.log("There is no song to play in the playList")
+
+        }else if(this.playList.length > 0){
+            console.log("Currently playing:" +" " + this.playList[this.count].join(" "))
+        }     
+    
+    }
+
+    skip(){
+        this.count++;
+        if(this.count >= this.playList.length){
+
+            // console.log("There is no more songs left to play in the playList")
+            this.repeat();
+        }else{
+
+        this.play();
+
+        }
+    }
+        
+    
+    previous(){
+        this.count--;
+        this.play();
+
+    }
+
+    shuffle(){
+        if(this.playList.length > 0){
+        console.log("Currently playing:" +" " + this.playList[Math.floor(Math.random() * this.playList.length)].join(" "))
+        }
+    }
+    
+    repeat(){
+        if(this.count >= (this.playList.length - 1)){
+            this.count = 0;
+            this.play();
+        }
+        
+    }
+
 
 }
 
@@ -19,6 +74,13 @@ myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Q
 myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
+
+myMusicPlayer.repeat();
+myMusicPlayer.skip();
+myMusicPlayer.skip();
+myMusicPlayer.skip();
+myMusicPlayer.skip();
+myMusicPlayer.shuffle();
 
 
 /*
