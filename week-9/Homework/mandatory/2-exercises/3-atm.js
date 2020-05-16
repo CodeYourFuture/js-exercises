@@ -12,9 +12,8 @@
  */
 
 class ATM {
-    constructor(){
-        this.balance = 0;
-    }
+    
+        balance = 0;
 
     make_deposit(amount){
         this.balance += amount;
