@@ -33,15 +33,15 @@ let storeBranches = {
 
 // ONLY EDIT BELOW THIS LINE
 
-// # 1
+// # 1 get the names of the cities 
 // prints [ 'glasgow', 'edinburgh' ]
 console.log()
 
-// # 2
+// # 2 get the positions in Glasgow
 // prints [ 'manager', 'assistant', 'interns' ]
 console.log()
 
-// # 3
+// # 3 get the positions for internt in Glasgow
 // prints [ 'head_intern', 'intern' ]
 console.log()
 
