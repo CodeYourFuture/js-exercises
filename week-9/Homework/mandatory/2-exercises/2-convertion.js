@@ -15,7 +15,6 @@
         simon.name;
         simon.greeting()
     ```
-
     When you run this code using `node 2-convertion.js` you should be able to
     
 

@@ -28,7 +28,6 @@ class ATM {
           }
         }
     }
-
     // Add your code here
 let atm = new ATM(100); // Create the ATM
 atm.deposit(200);
