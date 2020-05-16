@@ -73,7 +73,7 @@ else console.warn(`Not quite right! Bottle should not be empty but it is already
 bottle.pour();
 
 // CHECKS
-if (bottle.volume > 100) console.log(`That's correct. Bottle is alread full water volume cannot go beyond.`);
+if (bottle.volume === 100) console.log(`That's correct. Bottle is already full water volume cannot go beyond.`);
 else console.warn(`Whoops!!! Looks like you've changed your bottle to a bigger one, it went beyond its maximum capacity up to ${bottle.volume} unit.`);
 
 if (bottle.isFull()) console.log(`That's correct! Bottle is still full.`);
@@ -110,14 +110,14 @@ bottle.drink();
 if (bottle.isEmpty()) console.log(`That's correct! Bottle is finally emptied.`);
 else console.warn(`Not quite right. Bottle should be already empty but it is not.`);
 
+if (bottle.volume === 0) console.log(`That's correct! Empty bottle volume is repesented as zero.`);
+else console.warn(`Not quite right. Volume should be zero instead of ${bottle.volume}.`);
+
 // ACTIONS
 bottle.drink();
 
 // CHECKS
-if (bottle.volume === 0) console.log(`That's correct! Empty bottle valome is repesented as zero.`);
-else console.warn(`Not quite right. Volume should be zero instead of ${bottle.volume}.`);
-
-if (bottle.volume < 0) console.log(`That's correct! Water volume cannot go below zero.`);
+if (bottle.volume === 0) console.log(`That's correct! Water volume cannot go below zero.`);
 else console.warn(`Whoops!!! Looks like your water volume went negative. Your water volume is ${bottle.volume} unit.`);
 
 if (bottle.isEmpty()) console.log(`That's correct! Bottle is still empty.`);

@@ -59,4 +59,4 @@ let numberOfItemsPerWeak = {
   fridray: 0,
   saturday: 0,
   sunday: 0
-}
+};
