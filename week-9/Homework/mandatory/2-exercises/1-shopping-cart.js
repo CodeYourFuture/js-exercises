@@ -9,9 +9,22 @@ The output of running your code should be:
 
 class ShoppingCart {
   // Add your code here
+  constructor(){
+		this.newArr = [];
+
+	}
+	addItem(item){
+		this.newArr.push(item);
+
+	}
+	listItems(){
+		console.log(this.newArr.length);
+
+	}
 
   cartContains() {
     // Use console.log() to output everything contained in your cart
+    console.log(this.newArr)
   }
 }
 

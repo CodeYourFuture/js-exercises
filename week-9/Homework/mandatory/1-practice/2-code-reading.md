@@ -13,7 +13,7 @@ Take a look at the following code:
 6    console.log(x);
 ```
 
-Explain why line 4 and line 6 output different numbers.
+Explain why line 4 and line 6 output different numbers.re
 
 ## Question 2
 
