@@ -5,7 +5,11 @@
 // - insert the replacement value at the provided index
 
 function replace(arr, index, value) {
-  return; // complete this statement
+  let newArrayOne = arr.slice(0, index);
+  let newArrayTwo = arr.slice(index + 1);
+  let removing = newArrayOne.concat(newArrayTwo);
+  let adding = removing.splice(index, 0, value);
+  return removing; // complete this statement
 }
 
 /*
