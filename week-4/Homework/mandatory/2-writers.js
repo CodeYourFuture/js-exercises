@@ -58,7 +58,7 @@ Exercise 1:
 
 /*
 Exercise 2:
-  Only `console.log()` the writers who are in their 40 with us anymore with the sentence:
+  Only `console.log()` the writers who are in their 40s with us anymore with the sentence:(meaning between 40 and 49)
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
