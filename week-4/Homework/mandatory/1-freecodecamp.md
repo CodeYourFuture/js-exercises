@@ -4,7 +4,7 @@ You should complete all of these FreeCodeCamp exercises - https://www.freecodeca
 
 Go to **JavaScript Algorithms and Data Structures Certification (300 hours)**
 
-Open section **Object Oriented Programming** and do the following exercises
+Open section **Object Oriented Programming** and do the following exercises (if you have not done already in the previous homework)
 
 - Introduction to the Object Oriented Programming Challenges
 - Create a Basic JavaScript Object
