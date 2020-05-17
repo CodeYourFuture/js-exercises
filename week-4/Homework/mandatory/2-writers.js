@@ -58,7 +58,8 @@ Exercise 1:
 
 /*
 Exercise 2:
-  Only `console.log()` the writers who are in their 40s with us anymore with the sentence:(meaning between 40 and 49)
+  Only `console.log()` out the writers who are in their 40s (meaning between 40 and 49)
+  and not with us anymore using the below sentence format:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
@@ -66,6 +67,6 @@ Exercise 2:
 
 /*
 Exercise 3:
-  Only `console.log()` contemporary writers who are in their forties:
+  Only `console.log()` out contemporary (meaning still alive) writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
