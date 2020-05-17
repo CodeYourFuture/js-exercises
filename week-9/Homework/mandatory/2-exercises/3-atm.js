@@ -13,6 +13,20 @@
 
 class ATM {
     // Add your code here
+    constructor(){
+        this.balance += 100.0;
+    }
+
+    make_deposit(addNum){
+        this.balance + addNum
+    }
+
+    make_withdrawl(WithdrawSum) {
+        this.balance - WithdrawSum
+    }
+    check_balance(total){
+        console.log(this.balance > 0 ? this.balance : "not enough money left")
+    }
 
 }
 
