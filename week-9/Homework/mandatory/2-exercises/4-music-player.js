@@ -24,7 +24,7 @@ class MusicPlayer {
 }
 
     previous(){
-    this.index-= 1;
+    this.index -= 1;
     console.log(`Currently playing: ${this.playlist[this.index].title} by ${this.playlist[this.index].artist}`)
     }
     
