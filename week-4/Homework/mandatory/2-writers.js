@@ -49,7 +49,7 @@ let writers = [
 
 /*
 Exercise 1:
-  Loop through the Array, and for each object, `console.log()` out the sentence and
+  Loop through the Array, and for each object, `console.log()` out the below sentence and
   insert corresponding values to the place holder that are indicated in courle braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
@@ -59,7 +59,7 @@ Exercise 1:
 /*
 Exercise 2:
   Only `console.log()` out the writers who are in their 40s (meaning between 40 and 49)
-  and not with us anymore using the below sentence format:
+  and not with us anymore, use the below sentence format:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
