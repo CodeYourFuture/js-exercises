@@ -9,12 +9,11 @@ Exercise 2-a:
   Can you change so that it counts down from 10 to 1?
   */
 
-  for(let number = 1; number <= 10; number++) {
-      console.log(number);
-  }
+for (let number = 10; number >= 1; number--) {
+  console.log(number);
+}
 
-
-   /* 
+/* 
     EXPECTED RESULT
     ---------------
     10
@@ -29,13 +28,11 @@ Exercise 2-a:
     1
     */
 
-
-
-  /*
+/*
 Exercise 2-b:
 ---------------------------------
 
-   Great work! :) Now create a for loop the prints "drinking a glass of water" 4 times to the console.
+   Great work! :) Now create a for loop that prints "drinking a glass of water" 4 times to the console.
 
    Use the glass variable inside the for loop. 
    If the value of glass is smaller than 4, then print "drinking a glass of water"
@@ -44,12 +41,14 @@ Exercise 2-b:
 
   */
 
-  let glass = 0;
+let glass = 0;
+for (let glass = 0; glass < 4; glass++) {
+  console.log("drinking a glass of water");
+}
 
-  // add your code here, starting with: for(...) {...}
+// add your code here, starting with: for(...) {...}
 
- 
-     /* 
+/* 
     EXPECTED RESULT
     ---------------
     drinking a glass of water

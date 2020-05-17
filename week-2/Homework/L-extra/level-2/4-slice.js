@@ -5,9 +5,10 @@
 // - remove the item at the specified index
 
 function remove(arr, index) {
-  return; // complete this statement
+  let newArrayOne = arr.slice(0, index);
+  let newArrayTwo = arr.slice(index + 1);
+  return newArrayOne.concat(newArrayTwo);
 }
-
 /*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
@@ -24,5 +25,5 @@ console.log(newNames);
   EXPECTED RESULT
   ---------------
   [1, 2]
-  [Irina, Mozafar]
-*/
+  [Irina, Mozafar] 
+  */
