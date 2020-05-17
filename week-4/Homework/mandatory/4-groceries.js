@@ -90,3 +90,4 @@ for (let day in weeklyMealPlan) {
     })
 }
 console.log(numberOfItemsPerWeak);
+// finish work
