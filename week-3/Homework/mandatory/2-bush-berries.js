@@ -35,7 +35,7 @@ values will have a remainder of 0 i.e. there are some odd numbers in the array t
 function bushChecker(array) {
   let berriesToEat = array.every((edibleBerry) => edibleBerry === "pink");
 
-  if (berriesToEat === true) {
+  if (berriesToEat) {
     return "Bush is safe to eat from";
   } else {
     return "Toxic! Leave bush alone!";

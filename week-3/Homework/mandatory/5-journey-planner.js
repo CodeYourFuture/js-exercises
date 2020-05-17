@@ -69,10 +69,10 @@ function checkCodeIsThere(stringText) {
   Hint: Use the corresponding array method to split the array.
 */
 function getTransportModes(mode) {
-  let transportMode = mode.slice(1);
-  return transportMode;
+  // let transportMode = mode.slice(1);
+  // return transportMode;
 
-  return availableTranspot;
+  return mode.slice(1); // returns last 2 items of the array, does not have the first item
 }
 
 /*
