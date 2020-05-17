@@ -16,36 +16,40 @@ The only extra is that you have to use values inside Objects.
 */
 
 // We've created an array of objects for you here:
-let writers = [
-  {
-    firstName: "Virginia",
-    lastName: "Woolf",
-    occupation: "writer",
-    age: 59,
-    alive: false
-  },
-  {
-    firstName: "Zadie",
-    lastName: "Smith",
-    occupation: "writer",
-    age: 41,
-    alive: true
-  },
-  {
-    firstName: "Jane",
-    lastName: "Austen",
-    occupation: "writer",
-    age: 41,
-    alive: false
-  },
-  {
-    firstName: "bell",
-    lastName: "hooks",
-    occupation: "writer",
-    age: 64,
-    alive: true
-  }
+let writers = [{
+        firstName: "Virginia",
+        lastName: "Woolf",
+        occupation: "writer",
+        age: 59,
+        alive: false
+    },
+    {
+        firstName: "Zadie",
+        lastName: "Smith",
+        occupation: "writer",
+        age: 41,
+        alive: true
+    },
+    {
+        firstName: "Jane",
+        lastName: "Austen",
+        occupation: "writer",
+        age: 41,
+        alive: false
+    },
+    {
+        firstName: "bell",
+        lastName: "hooks",
+        occupation: "writer",
+        age: 64,
+        alive: true
+    }
 ];
+
+
+writers.forEach(writer =>
+    console.log("Hi, my name is " + writer.firstName + " " + writer.lastName + ". I am " + writer.age + " years old, and work as a " + writer.occupation + "."));
+
 
 /*
 Exercise 1:
@@ -55,12 +59,19 @@ Exercise 1:
 */
 
 
-
+writers
+    .filter(writer => (writer.age < 50) && (writer.age >= 40) && (!writer.alive))
+    .forEach(writer =>
+        console.log("Writer " + writer.firstName + " " + writer.lastName + " died at " + writer.age + " years old."));
 /*
 Exercise 2:
   Only `console.log()` the writers who are in their 40s with us anymore with the sentence:(meaning between 40 and 49)
   "Writer {firstName} {lastName} died at {age} years old."
 */
+writers
+    .filter(writer => (writer.age < 50) && (writer.age >= 40) && (writer.alive))
+    .forEach(writer =>
+        console.log("Hi, my name is " + writer.firstName + " " + writer.lastName + ". I am " + writer.age + " years old."));
 
 
 
