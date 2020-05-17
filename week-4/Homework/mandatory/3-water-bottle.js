@@ -19,22 +19,32 @@ You have to implement the missing features according to the specification.
 
 // Here is your starting point:
 let bottle = {
-  volume: 0,
-  fillUp: function() {
-    // calling this function should pour your bottle full (volume = 100);
-  },
-  pour: function () {
-    // calling this function should increase your bottle volume by 10 unit;
-  },
-  drink: function() {
-    // calling this function should decrease your bottle volume by 10 unit;
-  },
-  isFull: function () {
-    // this function should return true if your bottle is empty;
-  },
-  isEmpty: function() {
-    // this function should return true if your bottle is full;
-  }
+    volume: 0,
+    fillUp: function() {
+        return this.volume = 100
+            // calling this function should pour your bottle full (volume = 100);
+    },
+    pour: function() {
+        if (this.volume <= 90)
+            return this.volume += 10
+                // calling this function should increase your bottle volume by 10 unit;
+    },
+    drink: function() {
+        if (this.volume >= 10)
+            return this.volume -= 10
+        else
+            return this.volume = 0
+                // calling this function should decrease your bottle volume by 10 unit;
+    },
+    isFull: function() {
+
+        return (this.volume == 100)
+            // this function should return true if your bottle is empty;
+    },
+    isEmpty: function() {
+        return (this.volume === 0)
+            // this function should return true if your bottle is full;
+    }
 };
 
 /*
@@ -51,7 +61,7 @@ Extra question:
 */
 
 // HERE COMES YOUR ANSWER
-
+// it is easier than keeping typying the name of the object and if we decide to change the name of the object ,the corresponded funtictions will not be affected
 /*
 Once you have completed your object run the following 
 and see if your answer matches the expected result at the bottom :)
