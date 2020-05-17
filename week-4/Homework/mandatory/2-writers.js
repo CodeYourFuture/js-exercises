@@ -22,29 +22,29 @@ let writers = [
     lastName: "Woolf",
     occupation: "writer",
     age: 59,
-    alive: false
+    alive: false,
   },
   {
     firstName: "Zadie",
     lastName: "Smith",
     occupation: "writer",
     age: 41,
-    alive: true
+    alive: true,
   },
   {
     firstName: "Jane",
     lastName: "Austen",
     occupation: "writer",
     age: 41,
-    alive: false
+    alive: false,
   },
   {
     firstName: "bell",
     lastName: "hooks",
     occupation: "writer",
     age: 64,
-    alive: true
-  }
+    alive: true,
+  },
 ];
 
 /*
@@ -53,19 +53,36 @@ Exercise 1:
   insert corresponding values to the place holder that are indicated in courle braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
-
-
+console.log(
+  writers.map(
+    (p) =>
+      `Hi, my name is ${p.firstName}  ${p.lastName}. I am ${p.age} years old, and work as a ${p.occupation}.`
+  )
+);
 
 /*
 Exercise 2:
   Only `console.log()` the writers who are in their 40s with us anymore with the sentence:(meaning between 40 and 49)
   "Writer {firstName} {lastName} died at {age} years old."
 */
-
-
+console.log(
+  writers
+    .filter((age) => age.age < 49 && age.age > 40 && age.alive === false)
+    .map(
+      (p) => `Writer ${p.firstName} ${p.lastName} dies at ${p.age} years old.`
+    )
+);
 
 /*
 Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+console.log(
+  writers
+    .filter((age) => age.age < 49 && age.age > 40 && age.alive === true)
+    .map(
+      (p) =>
+        `Hi, my name is ${p.firstName} ${p.lastName}. I am ${p.age} years old`
+    )
+);
