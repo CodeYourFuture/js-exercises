@@ -35,12 +35,17 @@ console.log(newdessert); // returns ice cream
 // }
 //   }}
 function safeLevels(levels) {
-  var O2 = levels.map(arr => arr.substring(0, 4))
-  var levelNum = O2.find(function(item){
+  var o2 = levels.map(arr => Number(arr.substring(0, 4)))
+  //parseFloat(o2)
+ 
+  var levelNum = o2.find(function(item){
    return item > 19.5 && item < 23.5
   });
-  return levelNum.concat("%")
+  var typeOfResult = levelNum +"%" 
+
+  return  typeOfResult
 }
+console.log(safeLevels(["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]))
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const oxygenLevels1 = ["24.2%", "11.3%", "19.9%", "23.1%", "29.3%", "20.2%"]

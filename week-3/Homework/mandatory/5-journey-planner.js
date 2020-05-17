@@ -88,13 +88,9 @@ function getTransportModes(transport) {
   Hint: Use the corresponding array method to decide if an element is member of an array.
 */
 function isAccessibleByTransportMode(mode, strMode) { 
-  if (mode.includes(strMode)){
-    return true 
-  } else {
-    return false
-  }
+   var result = (mode.includes(strMode))
+   return result; 
 }
-
 /*
   Implement the function getLocationName that
    - Accepts a location and available transports in an array
@@ -132,7 +128,7 @@ function getLocationName(location) {
 */
 function journeyPlanner(locations, transportMode) {
   var availableTransports = locations.filter(a=>a.includes(transportMode))
-  // Implement the function body
+  // Implement the function body//
   return availableTransports.map(getLocationName)
 }
 
@@ -148,7 +144,7 @@ const londonLocations = [
   ["Tower Bridge", "tube", "bus"],
   ["Greenwich", "bus", "river boat"],
 ];
-console.log(journeyPlanner(londonLocations,"bus"))
+console.log(journeyPlanner(londonLocations,"river boat"))
 function arraysEqual(a, b) {
   if (a === b) return true;
   if (a == null || b == null) return false;

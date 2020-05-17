@@ -74,8 +74,12 @@ function getEligibleStudents(classes) {
   Hint: To complete the function, search how to change text to lower or upper case by using string method.
 */
 
+// function getEligibleStudents2(names) {
+//   let numOfClasses = names.filter(item=> item[0].startsWith("A") || item[0].startsWith("a"))
+//   return numOfClasses.map(arr => arr[0]);
+// }
 function getEligibleStudents2(names) {
-  let numOfClasses = names.filter(item=> item[0].startsWith("A") || item[0].startsWith("a"))
+  let numOfClasses = names.filter(item=> item[0].toLowerCase().charAt(0) === "a")
   return numOfClasses.map(arr => arr[0]);
 }
 
@@ -100,6 +104,16 @@ const deltaStudentGroup = [
   ["Zapp", 7],
   ["amy", 0]
 ]
+console.log(getEligibleStudents2([
+  ["Ahmed", 8], ["amy", 0],
+  ["Clement", 10],
+  ["Elamin", 6],
+  ["Adam", 7],
+  ["Tayoa", 11],
+  ["Nina", 10],
+  ["Bob", 9],
+  ["Lee", 1]
+]))
 function arraysEqual(a, b) {
     if (a === b) return true;
     if (a == null || b == null) return false;
