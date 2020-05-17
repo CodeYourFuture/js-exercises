@@ -12,8 +12,8 @@
 */
 
 function colonisers(arr) {
-    let newArr = arr.filter(p => p.startsWith("A") && p.includes("family"));
-    return newArr;
+    let families = arr.filter(p => p.startsWith("A") && p.includes("family"));
+    return families;
 }
 
 

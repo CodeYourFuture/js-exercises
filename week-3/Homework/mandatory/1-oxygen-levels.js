@@ -25,10 +25,9 @@ example before trying the exercise.
 /* Now try the exercise */
 
 function safeLevels(arr) {
-    let newArr = [];
-    newArr = arr.map(p => p.replace("%", ""));
-    arr = newArr.find(p => p > 19.5 && p < 23.5)
-    return `${arr}%`
+
+    let firstPlanet = arr.map(p => p.replace("%", "")).find(p => p > 19.5 && p < 23.5)
+    return `${firstPlanet}%`
 };
 
 /* ======= TESTS - DO NOT MODIFY ===== */
