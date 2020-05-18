@@ -13,13 +13,13 @@ Complete the exercises below.
 
 // Here is your 
 let weeklyMealPlan = {
-  monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
-  tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
-  wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
-  thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
-  fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
-  saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: []
+    monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
+    tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
+    wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
+    thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
+    fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
+    saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
+    sunday: []
 };
 
 /*
@@ -28,8 +28,20 @@ Exercise 1:
   Then use console.log() to print out the list.
 */
 // Gather all week item names into this array
-let weeklyGroceriesToBuy = [];
 
+// Solution 1
+let weeklyGroceriesToBuy = [];
+for (let key in weeklyMealPlan) {
+    let values = weeklyMealPlan[key]
+    for (let item of values) {
+        weeklyGroceriesToBuy.push(item)
+    }
+}
+console.log(weeklyGroceriesToBuy)
+
+//Solution 2 
+
+// let weeklyGroceriesToBuy = Array.from([].concat(...Object.values(weeklyMealPlan)))
 
 
 /*
@@ -38,8 +50,18 @@ Exercise 2:
   Then use console.log() to print out the list.
 */
 // Gather weekend item names into this array
-let weekendGroceriesToBuy = [];
 
+let weekendGroceriesToBuy = []
+let weekendDays = ["saturday", "sunday"]
+for (let key in weeklyMealPlan) {
+    if (weekendDays.includes(key)) {
+        let values = weeklyMealPlan[key]
+        for (let item of values) {
+            weekendGroceriesToBuy.push(item)
+        }
+    }
+}
+console.log(weekendGroceriesToBuy)
 
 
 /*
@@ -52,11 +74,16 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let numberOfItemsPerWeak = {
-  monday: 0,
-  tuesday: 0,
-  wednesday: 0,
-  thursday: 0,
-  fridray: 0,
-  saturday: 0,
-  sunday: 0
+    monday: 1,
+    tuesday: 2,
+    wednesday: 3,
+    thursday: 0,
+    fridray: 0,
+    saturday: 0,
+    sunday: 0
 };
+
+for (let day in weeklyMealPlan) {
+    numberOfItemsPerWeak[day] = weeklyMealPlan[day].length
+}
+console.log(numberOfItemsPerWeak)

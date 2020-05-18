@@ -16,35 +16,34 @@ The only extra is that you have to use values inside Objects.
 */
 
 // We've created an array of objects for you here:
-let writers = [
-  {
-    firstName: "Virginia",
-    lastName: "Woolf",
-    occupation: "writer",
-    age: 59,
-    alive: false
-  },
-  {
-    firstName: "Zadie",
-    lastName: "Smith",
-    occupation: "writer",
-    age: 41,
-    alive: true
-  },
-  {
-    firstName: "Jane",
-    lastName: "Austen",
-    occupation: "writer",
-    age: 41,
-    alive: false
-  },
-  {
-    firstName: "bell",
-    lastName: "hooks",
-    occupation: "writer",
-    age: 64,
-    alive: true
-  }
+let writers = [{
+        firstName: "Virginia",
+        lastName: "Woolf",
+        occupation: "writer",
+        age: 59,
+        alive: false
+    },
+    {
+        firstName: "Zadie",
+        lastName: "Smith",
+        occupation: "writer",
+        age: 41,
+        alive: true
+    },
+    {
+        firstName: "Jane",
+        lastName: "Austen",
+        occupation: "writer",
+        age: 41,
+        alive: false
+    },
+    {
+        firstName: "bell",
+        lastName: "hooks",
+        occupation: "writer",
+        age: 64,
+        alive: true
+    }
 ];
 
 /*
@@ -54,6 +53,9 @@ Exercise 1:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
 
+for (let writer of writers) {
+    console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`)
+}
 
 
 /*
@@ -63,6 +65,11 @@ Exercise 2:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
+for (let writer of writers) {
+    if (50 > writer.age && writer.age >= 40 && writer.alive === false) {
+        console.log(`Writer ${writer.firstName} ${writer.lastName} died at ${writer.age} years old`)
+    }
+}
 
 
 /*
@@ -70,3 +77,9 @@ Exercise 3:
   Only `console.log()` out contemporary (meaning still alive) writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+
+for (let writer of writers) {
+    if (50 > writer.age && writer.age >= 40 && writer.alive === true) {
+        console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old`)
+    }
+}
