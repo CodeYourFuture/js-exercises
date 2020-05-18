@@ -9,6 +9,22 @@
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
+arr.forEach(function (name) {
+  let newName = name;
+  if (name % 3 === 0) {
+    newName = "Fizz";
+  }
+
+  if (name % 5 === 0) {
+    newName = "Buzz";
+  }
+
+  if (name % 3 === 0 && name % 5 === 0) {
+    newName = "FizzBuzz";
+  }
+
+  console.log(newName);
+});
 /* EXPECTED OUTPUT */
 
 /*

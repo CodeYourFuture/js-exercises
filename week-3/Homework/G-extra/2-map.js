@@ -11,10 +11,18 @@ var attendanceCounts = [
   ["Elamin", 6],
   ["Adam", 7],
   ["Tayoa", 11],
-  ["Nina", 10]
+  ["Nina", 10],
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+var eligibleStudentNames = attendanceCounts
+  .map((pair) => {
+    let name = pair[0];
+    let attendance = pair[1];
+    if (attendance >= 8) return name;
+  })
+  .filter((name) => {
+    return name != undefined;
+  }); // TODO: Complete this line.
 
 console.log(eligibleStudentNames);
 
