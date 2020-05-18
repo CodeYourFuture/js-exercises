@@ -39,8 +39,8 @@ let writers = [
     alive: false,
   },
   {
-    firstName: "bell",
-    lastName: "hooks",
+    firstName: "Bell",
+    lastName: "Hooks",
     occupation: "writer",
     age: 64,
     alive: true,
@@ -54,11 +54,20 @@ Exercise 1:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
 
+// -------- forEach method -----------
 writers.forEach((obj) =>
   console.log(
     `Hi, my name is ${obj.firstName} ${obj.lastName}. I am ${obj.age} years old, and work as a ${obj.occupation}.`
   )
 );
+
+// --------- for loop --------------
+
+for (let i = 0; i < writers.length; i++) {
+  console.log(
+    `Hi, my name is ${writers[i].firstName} ${writers[i].lastName}. I am ${writers[i].age} years old, and work as a ${writers[i].occupation}.`
+  );
+}
 
 /*
 Exercise 2:
@@ -73,6 +82,15 @@ writers.forEach(function (obj) {
     );
   }
 });
+
+// for (let i = 0; i < writers.length; i++) {
+//   if (writers.age <= 49 && writers.age >= 40 && writers.alive === false) {
+//     console.log(
+//       `Writer ${writers[i].firstName} ${writers[i].lastName} died at ${writers[i].age} years old.`
+//     );
+//   }
+// }
+
 /*
 Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
