@@ -60,15 +60,45 @@ let restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-        // Complete here
+        let condition = this.restaurants.filter(function (rest) {
+            return (rest.totalSeats - rest.numberOfCustomers) > numberOfPeople
+        })
+        let acceptedPeople = condition.map(function (people) {
+            return people.name;
+        })
+
+        return acceptedPeople
     },
     findRestaurantServingDish: function (dishName) {
-        // Complete here
+        let condition = this.restaurants.filter(function (food) {
+            return food.menu.includes(dishName)
+
+        })
+        let nameOfResturant = condition.map(function (rest) {
+            return rest.name;
+        })
+        console.log(nameOfResturant);
+        return nameOfResturant
     },
+
     countNumberOfRestaurantsInArea: function (area) {
-        // Complete here
+        let howManyRestaurant = this.restaurants.filter(place2 => place2.address.area === area)
+        if (howManyRestaurant) {
+            return howManyRestaurant.length
+        }
+
+
+
+        console.log(howManyRestaurant.length)
     }
-};
+
+
+
+}
+
+// console.log(restaurant1.address.area);
+
+
 
 
 /*

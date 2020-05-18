@@ -14,3 +14,16 @@ Make sure you use words like:
 - etc.
 
 */
+let facts = {
+    BushraUniversityDegree: "Engineering of IT",
+    MentorAhmadVeryHelpful: true,
+    languageFatimaCanSpeak: 3,
+    turkishColleagues: ["Halit", "Orhan"],
+    mentorAhmadCallsSchedule: {
+        Friday: 'for his Group at 5pm ',
+        Tuesday: 'on Main Channel at 4:30pm',
+    }
+
+}
+
+console.log(facts.mentorAhmadCallsSchedule.Tuesday);

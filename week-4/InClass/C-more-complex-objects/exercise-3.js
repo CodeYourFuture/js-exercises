@@ -5,23 +5,23 @@
 */
 
 let kinningParkHouse = {
-    address: "1 Kinning Park",
-    price: 180000,
-    currentOwner: {
-      firstName: "Margaret",
-      lastName: "Conway",
-      email: "margaret@fake-emails.com"
-    }
+  address: "1 Kinning Park",
+  price: 180000,
+  currentOwner: {
+    firstName: "Margaret",
+    lastName: "Conway",
+    email: "margaret@fake-emails.com"
+  }
 };
 
 let parkAvenueHouse = {
-    address: "50 Park Avenue",
-    price: 195000,
-    currentOwner: {
-      firstName: "Marie",
-      lastName: "McDonald",
-      email: "marie.m@real-emails.com"
-    }
+  address: "50 Park Avenue",
+  price: 195000,
+  currentOwner: {
+    firstName: "Marie",
+    lastName: "McDonald",
+    email: "marie.m@real-emails.com"
+  }
 };
 
 /*
@@ -33,15 +33,18 @@ let parkAvenueHouse = {
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
 
+  return `${kinningParkHouse.currentOwner.firstName} ${kinningParkHouse.currentOwner.lastName}`
 }
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
+  return [house1.currentOwner.email, house2.currentOwner.email]
 
 }
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
+  return house1.price < house2.price ? house1.address : house2.address
 
 }
 

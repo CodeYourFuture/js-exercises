@@ -53,6 +53,10 @@ Exercise 1:
   insert corresponding values to the place holder that are indicated in courle braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
+let writerInformation = writers.map(p => {
+
+  console.log(`Hi, my name is ${p.firstName} ${p.lastName}. I am ${p.age} years old, and work as a ${p.occupation}.`)
+});
 
 
 
@@ -62,6 +66,12 @@ Exercise 2:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
+let fortyAge = writers.filter(year => year.age >= 40 && year.age < 50)
+// console.log(fortyAge);
+let output = fortyAge.map(print => {
+  console.log(`Writer ${print.firstName}  ${print.lastName} died at ${print.age} years old.`);
+
+})
 
 
 /*
@@ -69,3 +79,12 @@ Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+let contemporaryWriter = fortyAge.filter(writer => writer.alive === true)
+
+let aliveWriter = contemporaryWriter.map(writer1 => {
+  console.log(`Hi, my name is ${writer1.firstName} ${writer1.lastName}. I am ${writer1.age} years old.`);
+
+})
+
+
+
