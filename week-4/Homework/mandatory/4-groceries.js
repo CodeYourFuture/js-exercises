@@ -11,7 +11,7 @@ that contains the missing ingredients to your menus. It is stored in the "weekly
 Complete the exercises below.
 */
 
-// Here is your 
+// Here is your    
 let weeklyMealPlan = {
   monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
   tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
@@ -30,6 +30,22 @@ Exercise 1:
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
 
+// weeklyMealPlan.forEach(function (day) {
+//   if (day.length > 0) {
+//     for (let i = 0; i <day.length; i++) {
+//       weeklyGroceriesToBuy.push(day[i])
+//     }
+//   }
+// })
+
+for (day in weeklyMealPlan) {
+  if (weeklyMealPlan[day].length > 0) {   
+    for (let i = 0; i < weeklyMealPlan[day].length; i ++)
+      weeklyGroceriesToBuy.push(weeklyMealPlan[day][i])   
+  }
+}
+console.log(weeklyGroceriesToBuy);
+
 
 
 /*
@@ -39,7 +55,13 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
-
+for (day in weeklyMealPlan) {
+  if (day == "saturday" || day == "sunday" && weeklyMealPlan[day].length > 0 ) {   
+    for (let i = 0; i < weeklyMealPlan[day].length; i ++)
+      weekendGroceriesToBuy.push(weeklyMealPlan[day][i])   
+  }
+}
+console.log(weekendGroceriesToBuy);
 
 
 /*
@@ -60,3 +82,13 @@ let numberOfItemsPerWeak = {
   saturday: 0,
   sunday: 0
 };
+
+for (count in numberOfItemsPerWeak) {
+  for (day in weeklyMealPlan){
+    if (count == day) {
+      numberOfItemsPerWeak[count] = weeklyMealPlan[day].length
+    } 
+  }
+}
+
+console.log(numberOfItemsPerWeak);

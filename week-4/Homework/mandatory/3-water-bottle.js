@@ -22,18 +22,33 @@ let bottle = {
   volume: 0,
   fillUp: function() {
     // calling this function should pour your bottle full (volume = 100);
+    this.volume = 100
   },
   pour: function () {
     // calling this function should increase your bottle volume by 10 unit;
+    this.volume += 10
+    if (this.volume > 100) {
+      this.volume = 100      
+    }
   },
   drink: function() {
     // calling this function should decrease your bottle volume by 10 unit;
+    this.volume -= 10
+    if (this.volume < 0) {
+      this.volume = 0
+    }
   },
   isFull: function () {
     // this function should return true if your bottle is empty;
+    if (this.volume == 100) {
+      return true
+    }
   },
   isEmpty: function() {
     // this function should return true if your bottle is full;
+    if (this.volume == 0) {
+      return true
+    }
   }
 };
 
@@ -50,7 +65,7 @@ Extra question:
   Leave your answer below:
 */
 
-// HERE COMES YOUR ANSWER
+// HERE COMES YOUR ANSWER : I don't exactly know why, but I find it clearer and more conveinent to use this rather than the object name when i'm referring to things inside it.
 
 /*
 Once you have completed your object run the following 
