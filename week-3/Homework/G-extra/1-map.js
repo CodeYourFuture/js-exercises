@@ -10,10 +10,19 @@ var stationTransportOptionsPairs = [
   ["Angel", ["tube", "bus"]],
   ["London Bridge", ["tube", "bus", "river boat"]],
   ["Tower bridge", ["tube", "bus"]],
-  ["Greenwich", ["tube", "bus", "river boat"]]
+  ["Greenwich", ["tube", "bus", "river boat"]],
 ];
 
-var stationsWithRiverBoat; // <-- Complete this statement
+var stationsWithRiverBoat = stationTransportOptionsPairs.map(
+  findingDestination
+);
+// <-- Complete this statement
+
+function findingDestination(x) {
+  if (x[1][2] === "river boat") {
+    return x[0];
+  }
+}
 
 console.log(stationsWithRiverBoat);
 
