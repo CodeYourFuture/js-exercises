@@ -7,17 +7,17 @@ You're going to have to used what we learned at the start of this lesson, and so
 */
 
 let mentorsAges = {
-  james: 29,
-  JOSH: 35,
-  JAMIE: 25,
-  Mozafar: 30
+    james: 29,
+    JOSH: 35,
+    JAMIE: 25,
+    Mozafar: 30
 };
 
 // ONLY EDIT BELOW THIS LINE
 
-let mentorsNames = ;
+let mentorsNames = Object.keys(mentorsAges);
 
-let mentorsNamedUppercased = ;
+let mentorsNamedUppercased = mentorsNames.map(p => p.toUpperCase());
 
 // ONLY EDIT ABOVE THIS LINE
 

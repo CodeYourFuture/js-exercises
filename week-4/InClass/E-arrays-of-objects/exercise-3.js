@@ -59,14 +59,32 @@ let restaurantFinderApplication = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
-    findAvailableRestaurants: function (numberOfPeople) {
-        // Complete here
+    findAvailableRestaurants: function(numberOfPeople) {
+        let availableRestasurants = []
+        for (let restaurant of restaurants) {
+            if (restaurant.totalSeats = numberOfPeople) {
+                availableRestasurants.push(restaurant.name)
+            }
+        }
+        return availableRestasurants
     },
-    findRestaurantServingDish: function (dishName) {
-        // Complete here
+    findRestaurantServingDish: function(dishName) {
+        let availableRestasurants = []
+        for (let restaurant of restaurants) {
+            if (restaurant.menu.includes(dishName)) {
+                availableRestasurants.push(restaurant.name)
+            }
+        }
+        return availableRestasurants
     },
-    countNumberOfRestaurantsInArea: function (area) {
-        // Complete here
+    countNumberOfRestaurantsInArea: function(area) {
+        let restaurantsInArea = []
+        for (let restaurant of restaurants) {
+            if (restaurant.address.area === area) {
+                restaurantsInArea.push(restaurant.name)
+            }
+        }
+        return restaurantsInArea.length
     }
 };
 

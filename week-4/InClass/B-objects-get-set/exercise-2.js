@@ -5,14 +5,13 @@
 */
 
 let phone = {
-    brand: 'iPhone,
-    model 'iPhone X'
+    brand: 'iPhone',
+    model: 'iPhone X',
     launchYear: 2017,
-    is Unlocked: true
-;
-
+    isUnlocked: true
+}
 let phoneBrand = phone.bbrand;
-let phoneLaunchYear = phone[launchYear];
+let phoneLaunchYear = phone["launchYear"];
 
 // DO NOT MODIFY BELOW THIS LINE
 
