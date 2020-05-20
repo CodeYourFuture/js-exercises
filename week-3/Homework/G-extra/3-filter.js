@@ -542,10 +542,12 @@ var streetNames = [
   "Wine Office Court",
   "Wood Street",
   "Wormwood Street",
-  "Wrestler's Court"
+  "Wrestler's Court",
 ];
 
-var laneNames; // Complete this line
+var laneNames = streetNames.filter(function (x) {
+  return x.includes("Lane");
+}); // Complete this line
 
 console.log(laneNames);
 console.log(laneNames.length);
