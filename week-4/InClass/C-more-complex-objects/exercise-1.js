@@ -12,6 +12,9 @@ let house = {
       lastName: "Conway"
     }
 };
+house.address = "51 Berkley Road";
+house.previousOwners = ["Brian M.", "Fiona S."];
+house.currentOwner.lastName = "Montgomery";
 
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE

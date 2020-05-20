@@ -32,16 +32,26 @@ let parkAvenueHouse = {
 
 // returns the full name (first name + last name) of the owner of the house
 function getOwnerFullName(house) {
+  return house.currentOwner.firstName + " "+ house.currentOwner.lastName;
 
 }
 
 // returns an array of the owners' email addresses of the two houses
 function getEmailAddresses(house1, house2) {
+  let emailHouse1 = house1.currentOwner.email;
+  let emailHouse2 = house2.currentOwner.email;
+  let emailArr = [emailHouse1, emailHouse2];
+  return emailArr;
 
 }
 
 // returns the address for the cheapest house out of the two
 function getCheapestAddress(house1, house2) {
+  let priceOfHouse = house1.price;
+  let priceOfHouse2 = house2.price;
+  if (priceOfHouse > priceOfHouse2){
+    return house2.address;
+  }
 
 }
 
