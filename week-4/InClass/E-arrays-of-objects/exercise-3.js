@@ -62,7 +62,8 @@ let restaurantFinderApplication = {
     findAvailableRestaurants: function(numberOfPeople) {
         let availableRestasurants = []
         for (let restaurant of restaurants) {
-            if (restaurant.totalSeats = numberOfPeople) {
+            let availableSeats = restaurant.totalSeats - restaurant.numberOfCustomers
+            if (availableSeats >= numberOfPeople) {
                 availableRestasurants.push(restaurant.name)
             }
         }
