@@ -22,29 +22,29 @@ let writers = [
     lastName: "Woolf",
     occupation: "writer",
     age: 59,
-    alive: false
+    alive: false,
   },
   {
     firstName: "Zadie",
     lastName: "Smith",
     occupation: "writer",
     age: 41,
-    alive: true
+    alive: true,
   },
   {
     firstName: "Jane",
     lastName: "Austen",
     occupation: "writer",
     age: 41,
-    alive: false
+    alive: false,
   },
   {
     firstName: "bell",
     lastName: "hooks",
     occupation: "writer",
     age: 64,
-    alive: true
-  }
+    alive: true,
+  },
 ];
 
 /*
@@ -53,8 +53,20 @@ Exercise 1:
   insert corresponding values to the place holder that are indicated in courle braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
-
-
+let writersDetails = writers.forEach((p) =>
+  console.log(
+    "Hi, my name is " +
+      p.firstName +
+      " " +
+      p.lastName +
+      ". " +
+      "I am " +
+      p.age +
+      " years old, and work as a " +
+      p.occupation +
+      "."
+  )
+);
 
 /*
 Exercise 2:
@@ -62,11 +74,35 @@ Exercise 2:
   and not with us anymore, use the below sentence format:
   "Writer {firstName} {lastName} died at {age} years old."
 */
-
-
+let writersNotAlive = writers
+  .filter((p) => p.age >= 40 && p.age <= 49 && p.alive === false)
+  .map((p) =>
+    console.log(
+      "Writer " +
+        p.firstName +
+        " " +
+        p.lastName +
+        " died at " +
+        p.age +
+        " years old ."
+    )
+  );
 
 /*
 Exercise 3:
   Only `console.log()` out contemporary (meaning still alive) writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+let writersStillAlive = writers
+  .filter((p) => p.age >= 40 && p.age <= 49 && p.alive === true)
+  .map((p) =>
+    console.log(
+      "Hi, my name is " +
+        p.firstName +
+        " " +
+        p.lastName +
+        ". I am " +
+        p.age +
+        " years old ."
+    )
+  );
