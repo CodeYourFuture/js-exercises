@@ -50,7 +50,7 @@ Exercise 2:
 
   Finally use console.log() to print out the Object.
 */
-// Gather weekend item names into this array
+// Gather weekend item names into this object
 let numberOfItemsPerWeak = {
   monday: 0,
   tuesday: 0,
