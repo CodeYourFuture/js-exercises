@@ -21,7 +21,7 @@ You have to implement the missing features according to the specification.
 let bottle = {
   volume: 0,
   fillUp() {
-    return (this.volume += 100); // calling this function should pour your bottle full (volume = 100);
+    this.volume += 100; // calling this function should pour your bottle full (volume = 100);
   },
   pour() {
     if (this.volume <= 90) {

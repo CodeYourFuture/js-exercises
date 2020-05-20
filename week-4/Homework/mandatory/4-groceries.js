@@ -29,8 +29,8 @@ Exercise 1:
 */
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
-for (let itemName in weeklyMealPlan) {
-  weeklyGroceriesToBuy.push(weeklyMealPlan[itemName]);
+for (let items in weeklyMealPlan) {
+  weeklyGroceriesToBuy.push(weeklyMealPlan[items]);
 }
 
 console.log(weeklyGroceriesToBuy);
