@@ -4,7 +4,7 @@
 //    - each item in `percentages` formatted by your function
 
 var percentages = [1, 23, 92, 18];
-
+const percentagesFormatted = percentages.map(each => each+"%");
 console.log(percentagesFormatted);
 
 /*
