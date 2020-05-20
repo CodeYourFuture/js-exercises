@@ -13,16 +13,18 @@ var stationTransportOptionsPairs = [
   ["Greenwich", ["tube", "bus", "river boat"]],
 ];
 
-var stationsWithRiverBoat = stationTransportOptionsPairs.map(
-  findingDestination
-);
 // <-- Complete this statement
 
-function findingDestination(x) {
-  if (x[1][2] === "river boat") {
+var stationsWithRiverBoatOne = stationTransportOptionsPairs.map(function (x) {
+  if (x[1].includes("river boat")) {
     return x[0];
   }
-}
+});
+var stationsWithRiverBoat = stationsWithRiverBoatOne.filter(function (y) {
+  if (y !== "undefined") {
+    return y;
+  }
+});
 
 console.log(stationsWithRiverBoat);
 
