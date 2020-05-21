@@ -28,7 +28,14 @@ Exercise 1:
   Then use console.log() to print out the list.
 */
 // Gather all week item names into this array
-let weeklyGroceriesToBuy = [weeklyMealPlan.monday, weeklyMealPlan.tuesday, weeklyMealPlan.wednesday, weeklyMealPlan.thursday, weeklyMealPlan.friday, weeklyMealPlan.saturday, weeklyMealPlan.sunday]
+// let weeklyGroceriesToBuy = [weeklyMealPlan.monday, weeklyMealPlan.tuesday, weeklyMealPlan.wednesday, weeklyMealPlan.thursday, weeklyMealPlan.friday, weeklyMealPlan.saturday, weeklyMealPlan.sunday]
+// console.log(weeklyGroceriesToBuy);
+let weeklyGroceriesToBuy = []
+for (let day in weeklyMealPlan) {
+  weeklyMealPlan[day].forEach(food =>
+
+    weeklyGroceriesToBuy.push(food))
+}
 console.log(weeklyGroceriesToBuy);
 
 
@@ -40,10 +47,14 @@ Exercise 2:
   Then use console.log() to print out the list.
 */
 // Gather weekend item names into this array
-let weekendGroceriesToBuy = [weeklyMealPlan.saturday, weeklyMealPlan.sunday];
-console.log(weekendGroceriesToBuy);
+let weekendGroceriesToBuy = []
+for (let weekend in weeklyMealPlan) {
+  if (weekend === "saturday" || weekend === "sunday") {
+    weekendGroceriesToBuy.push(weekend)
+  }
 
-
+}
+console.log(weekendGroceriesToBuy)
 
 
 /*
@@ -55,14 +66,29 @@ Exercise 2:
   Finally use console.log() to print out the Object.
 */
 // Gather weekend item names into this array
-let numberOfIngredients = weeklyGroceriesToBuy.map(number => console.log(number.length))
+// let weeklyList = [weeklyMealPlan.monday, weeklyMealPlan.tuesday, weeklyMealPlan.wednesday, weeklyMealPlan.thursday, weeklyMealPlan.friday, weeklyMealPlan.saturday, weeklyMealPlan.sunday]
 
+// let numberOfIngredients = weeklyList.map(num => console.log(num.length))
 let numberOfItemsPerWeak = {
   monday: 5,
   tuesday: 6,
   wednesday: 4,
   thursday: 4,
-  fridray: 5,
+  friday: 5,
   saturday: 4,
   sunday: 0
 };
+for (let number in weeklyMealPlan) {
+  let total = 0;
+  weeklyMealPlan[number].forEach(num => {
+    total++
+    numberOfItemsPerWeak[number] = total
+  })
+}
+
+
+console.log(numberOfItemsPerWeak);
+
+
+
+
