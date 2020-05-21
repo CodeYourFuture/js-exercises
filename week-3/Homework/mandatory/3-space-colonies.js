@@ -8,8 +8,11 @@
   NOTE: don't include any element that is not a "family".
 */
 
-function colonisers() {
-
+function colonisers(families) {
+  return families.filter(
+    (checkNames) =>
+      checkNames.charAt(0) === "A" && checkNames.includes("family")
+  );
 }
 
 /* ======= TESTS - DO NOT MODIFY ===== */
@@ -26,7 +29,7 @@ const voyagers = [
   "Asimov",
   "Oscar family",
   "Avery family",
-  "Archer family"
+  "Archer family",
 ];
 
 function arraysEqual(a, b) {
@@ -52,6 +55,11 @@ function test(test_name, expr) {
   console.log(`${test_name}: ${status}`);
 }
 
-test("colonisers function works",
-  arraysEqual(colonisers(voyagers), ["Adam family", "Avery family", "Archer family"])
-)
+test(
+  "colonisers function works",
+  arraysEqual(colonisers(voyagers), [
+    "Adam family",
+    "Avery family",
+    "Archer family",
+  ])
+);
