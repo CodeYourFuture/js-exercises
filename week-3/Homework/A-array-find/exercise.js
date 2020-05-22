@@ -8,9 +8,6 @@ function isLongAName(name) {
   return name.length > 7 && name[0] === "A";
 }
 
-// function isStartsA(name) {
-//   return name[0] === "A";
-// }
 
 function findLongNameThatStartsWithA(arr) {
   return arr.find(isLongAName);

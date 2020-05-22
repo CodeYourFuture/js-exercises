@@ -6,8 +6,21 @@
 
   An array with numbers 1-15 has been provided.
 */
+function change(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return "fizzbuzz";
+  } else if (num % 5 === 0) {
+    return "buzz";
+  } else if (num % 3 === 0 ) {
+    return "fizz";
+  } else {
+    return num;
+  }
+}
 
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+//consol.log arr.forEach(change));
+arr.forEach(num => console.log(change(num)) )
 
 /* EXPECTED OUTPUT */
 
