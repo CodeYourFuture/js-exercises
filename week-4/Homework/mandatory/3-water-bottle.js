@@ -60,7 +60,10 @@ Extra question:
   Leave your answer below:
 */
 
-// HERE COMES YOUR ANSWER
+/* HERE COMES YOUR ANSWER
+I think, using this helps us not writing the variable name repeatedly which keeps our code simpler and clean.
+Also if we did not use 'this' and if we need to use 'bottle' variable in an anoter object later on, 
+we would need to change so many lines of codes.*/
 
 /*
 Once you have completed your object run the following 

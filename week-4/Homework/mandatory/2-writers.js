@@ -83,14 +83,6 @@ writers.forEach(function (obj) {
   }
 });
 
-// for (let i = 0; i < writers.length; i++) {
-//   if (writers.age <= 49 && writers.age >= 40 && writers.alive === false) {
-//     console.log(
-//       `Writer ${writers[i].firstName} ${writers[i].lastName} died at ${writers[i].age} years old.`
-//     );
-//   }
-// }
-
 /*
 Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
