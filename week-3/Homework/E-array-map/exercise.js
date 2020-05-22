@@ -9,7 +9,7 @@ function multiple100(number) {
 }
 var numbersMultiplied = numbers.map(multiple100);
 console.log("way 1", numbersMultiplied);
-
+//some different ways
 //way 2
 var numbersMultiplied1 = numbers.map(function multiple100V2(number) {
   return number * 100;
