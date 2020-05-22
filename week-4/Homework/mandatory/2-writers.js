@@ -76,7 +76,7 @@ Exercise 2:
 */
 
 writers.forEach(function (obj) {
-  if (obj.age <= 49 && obj.age >= 40 && obj.alive === false) {
+  if (obj.age <= 49 && obj.age >= 40 && !obj.alive) {
     console.log(
       `Writer ${obj.firstName} ${obj.lastName} died at ${obj.age} years old.`
     );
@@ -90,7 +90,7 @@ Exercise 3:
 */
 
 writers.forEach(function (obj) {
-  if (obj.age <= 49 && obj.age >= 40 && obj.alive === true) {
+  if (obj.age <= 49 && obj.age >= 40 && obj.alive) {
     console.log(
       `Hi, my name is ${obj.firstName} ${obj.lastName}. I am ${obj.age} years old.`
     );
