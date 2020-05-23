@@ -29,10 +29,8 @@ Exercise 1:
 */
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
-
 for (days in weeklyMealPlan) {
-  for (let i = 0; i < weeklyMealPlan[days].length; i++)
-    weeklyGroceriesToBuy.push(weeklyMealPlan[days][i]);
+  weeklyGroceriesToBuy.push(...weeklyMealPlan[days]);
 }
 
 console.log(weeklyGroceriesToBuy);
@@ -46,7 +44,7 @@ Exercise 2:
 let weekendGroceriesToBuy = [];
 for (let items in weeklyMealPlan) {
   if (items.startsWith("s")) {
-    weekendGroceriesToBuy.push(weeklyMealPlan[items]);
+    weekendGroceriesToBuy.push(...weeklyMealPlan[items]);
   }
 }
 
