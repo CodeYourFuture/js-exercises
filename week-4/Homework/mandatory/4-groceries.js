@@ -29,9 +29,20 @@ Exercise 1:
 */
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
-for (days in weeklyMealPlan) {
-  weeklyGroceriesToBuy.push(...weeklyMealPlan[days]);
-}
+
+// for (days in weeklyMealPlan) {
+//   for (let i = 0; i < weeklyMealPlan[days].length; i++) {
+//     weeklyGroceriesToBuy.push(weeklyMealPlan[days][i]);
+//   }
+// }
+// for (days in weeklyMealPlan) {
+//     weeklyGroceriesToBuy.push(...weeklyMealPlan[days]);
+//  }
+// }
+
+weeklyGroceriesToBuy = weeklyGroceriesToBuy.concat(
+  ...Object.values(weeklyMealPlan)
+);
 
 console.log(weeklyGroceriesToBuy);
 
@@ -44,9 +55,17 @@ Exercise 2:
 let weekendGroceriesToBuy = [];
 for (let items in weeklyMealPlan) {
   if (items.startsWith("s")) {
-    weekendGroceriesToBuy.push(...weeklyMealPlan[items]);
+    for (i = 0; i < weeklyMealPlan[items].length; i++) {
+      weekendGroceriesToBuy.push(weeklyMealPlan[items][i]);
+    }
   }
 }
+
+// for (let items in weeklyMealPlan) {
+//   if (items.startsWith("s")) {
+//     weekendGroceriesToBuy.push(...weeklyMealPlan[items]);
+//   }
+// }
 
 console.log(weekendGroceriesToBuy);
 
