@@ -26,12 +26,20 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
-<!-- Write your answer here -->
+<!-- Write your answer here -- Is the ability to have a framework before solving a problem. The framework is to:
+a). understand the problem
+b). split problem in smaller chunks
+c). Get unstuck - understand how to fix the bug
+>
 
 ## 2. When trying to solve a challenge, what should you do first?
 
-<!-- Write your answer here -->
+<!-- Write your answer here --
+The first thing to do when trying to solve a problem is to try and understand the problem
+>
 
 ## 3. What should you do if you get stuck?
 
-<!-- Write your answer here -->
+<!-- Write your answer here --
+When you get stuck disect the big problem in smaller chunks and if it doesn't work start over or ask for help.
+>
