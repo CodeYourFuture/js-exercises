@@ -24,8 +24,10 @@ The following endpoint is publicly available from Github
 
 1. Describe in a sentence what this API endpoint returns.
 
-<!-- Write your answer here -->
+<!-- Write your answer here --> 
+<!--Lists review comments for a pull request. By default, review comments are in ascending order by ID.>
 
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
+<!-- Write your answer here>
+    <!--in first field you would put the github username, then you would put repository name and then the pull request number>
 
-<!-- Write your answer here -->

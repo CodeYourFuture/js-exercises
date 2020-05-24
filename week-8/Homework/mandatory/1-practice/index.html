@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        #fact{
+            display:none;
+        }
+    </style>
+    
+    <title>Number facts</title>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+             <div class="col-md-6 mx-auto">
+                 <div class="card bg-primary text-white mt-5 p-5">
+                     <h1>Number facts</h1>
+                     <p>Enter a number and get a random fact</p>
+                     <input type="number" class="form-control form-control-lg" id="numberInput" placeholder="Enter any number...">
+                     <div id="fact" class="card-body">
+                         <h4 class="card-title">
+                             Number fact
+                         </h4>
+                         <p id="factText" class="card-text"></p>
+                     </div>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+    <script>
+        let fact = document.querySelector('#fact');
+        let factText = document.querySelector('#factText');
+        let numberInput = document.querySelector('#numberInput');
+        
+        numberInput.addEventListener('input', getFactAjax);
+
+        function getFactAjax()
+        {
+            let number = numberInput.value;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', 'http://numbersapi.com/'+number);
+            
+            xhr.onload = function()
+            {
+               if(this.status == 200 && number != '')
+               {
+                   fact.style.display = 'block';
+                   factText.innerText = this.responseText;
+               }
+            }
+
+            xhr.send();
+        }
+
+   </script>
+</body>
+</html>
