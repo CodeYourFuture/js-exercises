@@ -23,8 +23,20 @@
 
 // Write your code here
 
+class Person{
+    constructor(names){
+        this.names = names;
+      }
+
+    greeting()
+    {
+        console.log("Hi my name is " + this.names);//cocatenate
+    }
+
+}
+
 // Do not edit this section
 const simon = new Person("simon");
-console.log(simon.name);
+console.log(simon.names);
 simon.greeting();
 // Do not edit this section

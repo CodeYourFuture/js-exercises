@@ -1,4 +1,27 @@
-class MusicPlayer {
+class MusicPlayer {//creating a class called MusicPlayer in javaScript
+    constructor(){ //creating constructor to use when creating instance of class
+       this.song = [], //empty array to store the song
+       this.artist = [], //empty array to store the artist
+       this.number = 0; //index for song
+    }
+    add(songNumber, singer){ //add function
+      let song = this.song.push(songNumber); //pushing the song into empty array
+      let artist = this.artist.push(singer);//pushing the singer into empty array
+    }
+
+    play(){
+     console.log("Currently playing:" +this.song[this.number]+ " By the artist" +this.artist[this.number]);
+    } 
+
+    skip(){
+      this.number++;
+      console.log("Currently playing:" + this.song[this.number] + " By the artist" + this.artist[this.number]);
+    }
+
+    previous(){
+      this.number--;
+      console.log("Currently playing:" + this.song[this.number] + " By the artist" + this.artist[this.number]);
+    }
     // Add your code here
 
 }
