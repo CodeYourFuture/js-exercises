@@ -9,16 +9,16 @@ We made a start on this for you here:
 */
 
 let bottle = {
-  volume: 0,
-  fill: function() {
+  percentageFull: 0,
+  fill: function () {
     // calling this function should make you bottles volume = 100;
   },
-  drink: function() {
+  drink: function () {
     // calling this function should decrease your bottles volume by 10;
   },
-  empty: function() {
+  isEmpty: function () {
     // this function should return true if your bottles volume = 0
-  }
+  },
 };
 
 /*
@@ -35,7 +35,7 @@ bottle.fill();
 bottle.drink();
 bottle.drink();
 bottle.drink();
-if (!bottle.empty()) {
-  console.log(`bottles volume = ${bottle.volume}`);
+if (!bottle.isEmpty()) {
+  console.log(`Your bottle is ${bottle.volume}% full`);
 }
-console.log("Above volume should be: 70");
+console.log("Above fill should be 70%");
