@@ -11,15 +11,15 @@ that contains the missing ingredients to your menus. It is stored in the "weekly
 Complete the exercises below.
 */
 
-// Here is your 
+// Here is your
 let weeklyMealPlan = {
   monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
   tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
   wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
   thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
-  fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
+  friday: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
   saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: []
+  sunday: [],
 };
 
 /*
@@ -28,10 +28,20 @@ Exercise 1:
   Then use console.log() to print out the list.
 */
 // Gather all week item names into this array
+
 let weeklyGroceriesToBuy = [];
-
-
-
+for (let meal in weeklyMealPlan) {
+  if (
+    meal === "monday" ||
+    meal === "tuesday" ||
+    meal === "wednesday" ||
+    meal === "thursday" ||
+    meal === "friday"
+  ) {
+    weeklyGroceriesToBuy.push(weeklyMealPlan[meal]);
+  }
+}
+console.log(weeklyGroceriesToBuy);
 /*
 Exercise 2:
   Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
@@ -40,8 +50,12 @@ Exercise 2:
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
 
-
-
+for (let meal in weeklyMealPlan) {
+  if (meal === "saturday" || meal === "sunday") {
+    weekendGroceriesToBuy.push(weeklyMealPlan[meal]);
+  }
+}
+console.log(weekendGroceriesToBuy);
 /*
 Exercise 2:
   Loop through your weekly meal plan:
@@ -58,5 +72,5 @@ let numberOfItemsPerWeak = {
   thursday: 0,
   fridray: 0,
   saturday: 0,
-  sunday: 0
+  sunday: 0,
 };
