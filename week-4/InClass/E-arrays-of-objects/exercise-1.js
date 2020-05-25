@@ -30,6 +30,14 @@ var personNames = persons.map((person) => person.name);
 
 var personsYoungerThan28YearsOld = persons.filter((person) => person.age < 28);
 
+console.log(personsYoungerThan28YearsOld);
+
+var personsYoungerThan28YearsOld = persons
+  .filter((person) => person.age < 28)
+  .map((person) => person.name);
+
+console.log(personsYoungerThan28YearsOld);
+
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
