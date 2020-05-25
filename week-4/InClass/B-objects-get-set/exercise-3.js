@@ -3,6 +3,10 @@
 */
 
 // WRITE CODE BELOW THIS
+kitten = {
+    name: "Gilbert"
+
+}
 
 // WRITE CODE ABOVE THIS
 

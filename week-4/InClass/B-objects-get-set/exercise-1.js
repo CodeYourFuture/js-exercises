@@ -8,10 +8,12 @@ let kitten = {
     furColour: "brown"
 };
 
+
+
 // YOUR CODE GOES BELOW HERE
 
 
-
+console.log(Object.keys(kitten));
 
 
 
