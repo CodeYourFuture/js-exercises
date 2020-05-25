@@ -74,3 +74,17 @@ let numberOfItemsPerWeak = {
   saturday: 0,
   sunday: 0,
 };
+let arr = [];
+for (let count in weeklyMealPlan) {
+  // console.log(count);
+  arr.push(weeklyMealPlan[count].length);
+}
+numberOfItemsPerWeak.monday = arr[0];
+numberOfItemsPerWeak.tuesday = arr[1];
+numberOfItemsPerWeak.wednesday = arr[2];
+numberOfItemsPerWeak.thursday = arr[3];
+numberOfItemsPerWeak.fridray = arr[4];
+numberOfItemsPerWeak.saturday = arr[5];
+numberOfItemsPerWeak.sunday = arr[6];
+
+console.log(numberOfItemsPerWeak);
