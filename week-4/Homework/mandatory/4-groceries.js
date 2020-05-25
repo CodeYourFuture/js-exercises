@@ -53,18 +53,18 @@ Exercise 2:
   Finally use console.log() to print out the Object.
 */
 //Gather weekend item names into this array
-let numberOfItemsPerWeak = [];
-for (let day in weeklyMealPlan) {
-  numberOfItemsPerWeak.push(`${day}: ${weeklyMealPlan[day].length}`);
-}
-console.log(numberOfItemsPerWeak);
 
-// let numberOfItemsPerWeak = {
-//   monday: 0,
-//   tuesday: 0,
-//   wednesday: 0,
-//   thursday: 0,
-//   fridray: 0,
-//   saturday: 0,
-//   sunday: 0,
-// };
+let numberOfItemsPerWeak = {
+  monday: 0,
+  tuesday: 0,
+  wednesday: 0,
+  thursday: 0,
+  fridray: 0,
+  saturday: 0,
+  sunday: 0,
+};
+for (let day in weeklyMealPlan) {
+  let numberOfItemsPerWeak = `${day}: ${weeklyMealPlan[day].length}`;
+
+  console.log(numberOfItemsPerWeak);
+}
