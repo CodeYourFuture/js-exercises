@@ -1,5 +1,3 @@
-//TODO think about exercises for this
-
 let myFavFood = {
   name: "falafel wrap",
   isVeggie: true,
@@ -11,29 +9,43 @@ let myFavFood = {
   },
 };
 
-console.log(`Favorite food ${myFavFood.name}`);
+// 1. console.log() the name of myFavFood
 
-function prepareFood(food) {
-  console.log(
-    `I need to buy these ingredients first: ${food.ingredients.join(",")}`
-  );
+console.log("Favorite food is " + myFavFood.name);
+
+// 2. Declare a function "getTakeAwayAddress" that accepts "food" as a parameter
+// and returns the address of where to buy it
+
+function getTakeAwayAddress(food) {
+  // write code here
 }
 
-function buy(food) {
-  console.log(`I am on my way to ${food.takeAway.name}`);
+console.log("I can buy my favorite food from " + getTakeAwayAddress(myFavFood));
+
+// 3. Declare a function "isVeggie" that accepts "food" as a parameter
+// and returns true if it's vegetarian, or false if not
+
+function isVeggie(food) {
+  // write code here
 }
 
-function isItVeggie(food) {
-  if (food.isVeggie) {
-    console.log(`${food.name} is a veggie dish`);
-  } else {
-    console.log(`${food.name} is NOT a veggie dish`);
-  }
+console.log("Is my favorite vegetarian? " + isVeggie(food));
+
+// 3. Declare a function "isLowCalorie" that accepts "food" as a parameter
+// and returns true if it has less than 600 calories, or false otherwise
+// write your own console.log() that calls the function to test it, as in the examples above!
+// no example code is provided here!
+
+//---------------------------------------
+
+// 3. Declare a function "isSafeForNutAllergies" that accepts "food" as a parameter
+// and returns false if it found the word "sesame" in the ingredients, or true otherwise
+
+function isSafeForNutAllergies(food) {
+  //write code here
 }
-function isItGoodForDiet(food) {
-  return food.calPerPortion < 600;
-}
-prepareFood(myFavFood);
-buy(myFavFood);
-isItVeggie(myFavFood);
-console.log("Is my favorite food good for my diet: " + goodForDiet(myFavFood));
+
+console.log(
+  "Is my favorite food nut allergy safe? ",
+  isSafeForNutAllergies(myFavFood)
+);
