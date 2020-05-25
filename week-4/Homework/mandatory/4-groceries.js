@@ -30,17 +30,8 @@ Exercise 1:
 // Gather all week item names into this array
 
 let weeklyGroceriesToBuy = [];
-for (let meal in weeklyMealPlan) {
-  if (
-    meal === "monday" ||
-    meal === "tuesday" ||
-    meal === "wednesday" ||
-    meal === "thursday" ||
-    meal === "friday"
-  ) {
-    weeklyGroceriesToBuy.push(weeklyMealPlan[meal]);
-  }
-}
+
+weeklyGroceriesToBuy = Object.values(weeklyMealPlan);
 console.log(weeklyGroceriesToBuy);
 /*
 Exercise 2:
@@ -74,17 +65,22 @@ let numberOfItemsPerWeak = {
   saturday: 0,
   sunday: 0,
 };
-let arr = [];
-for (let count in weeklyMealPlan) {
-  // console.log(count);
-  arr.push(weeklyMealPlan[count].length);
-}
-numberOfItemsPerWeak.monday = arr[0];
-numberOfItemsPerWeak.tuesday = arr[1];
-numberOfItemsPerWeak.wednesday = arr[2];
-numberOfItemsPerWeak.thursday = arr[3];
-numberOfItemsPerWeak.fridray = arr[4];
-numberOfItemsPerWeak.saturday = arr[5];
-numberOfItemsPerWeak.sunday = arr[6];
+// let arr = [];
+// for (let count in weeklyMealPlan) {
+//   // console.log(count);
+//   arr.push(weeklyMealPlan[count].length);
+// }
+// numberOfItemsPerWeak.monday = arr[0];
+// numberOfItemsPerWeak.tuesday = arr[1];
+// numberOfItemsPerWeak.wednesday = arr[2];
+// numberOfItemsPerWeak.thursday = arr[3];
+// numberOfItemsPerWeak.fridray = arr[4];
+// numberOfItemsPerWeak.saturday = arr[5];
+// numberOfItemsPerWeak.sunday = arr[6];
 
+// console.log(numberOfItemsPerWeak);
+
+for (let key in weeklyMealPlan) {
+  numberOfItemsPerWeak[key] = weeklyMealPlan[key].length;
+}
 console.log(numberOfItemsPerWeak);
