@@ -28,7 +28,15 @@ Exercise 1:
   Then use console.log() to print out the list.
 */
 // Gather all week item names into this array
-let weeklyGroceriesToBuy = [].concat(weeklyMealPlan);
+let weeklyGroceriesToBuy = [].concat(
+  weeklyMealPlan.monday,
+  weeklyMealPlan.tuesday,
+  weeklyMealPlan.wednesday,
+  weeklyMealPlan.thursday,
+  weeklyMealPlan.fridray,
+  weeklyMealPlan.saturday,
+  weeklyMealPlan.sunday
+);
 
 // method 2
 let weeklyGroceriesToBuy2 = [];
@@ -46,10 +54,13 @@ Exercise 2:
   Then use console.log() to print out the list.
 */
 // Gather weekend item names into this array
-let weekendGroceriesToBuy = [];
+let weekendGroceriesToBuy = [].concat(
+  weeklyMealPlan.saturday,
+  weeklyMealPlan.sunday
+);
 
-let weekendList = weeklyMealPlan.saturday + weeklyMealPlan.sunday;
-weekendGroceriesToBuy.push(weekendList);
+// let weekendList = weeklyMealPlan.saturday + weeklyMealPlan.sunday;
+// weekendGroceriesToBuy.push(weekendList);
 
 console.log(weekendGroceriesToBuy);
 
