@@ -61,12 +61,19 @@ let restaurantFinderApplication = {
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
         // Complete here
+        let availableSeats = this.restaurants.filter(r=> (r.totalSeats - r.numberOfCustomers)  > numberOfPeople);
+       return availableSeats.map(n=>n.name)
     },
+
     findRestaurantServingDish: function (dishName) {
         // Complete here
+        let availableDishes = this.restaurants.filter(n=> n.menu.includes(dishName))
+        return availableDishes.map(d=> d.name)
     },
     countNumberOfRestaurantsInArea: function (area) {
         // Complete here
+        let numOfresInArea = this.restaurants.filter(a=> a.address.area === area);
+        return numOfresInArea.length
     }
 };
 

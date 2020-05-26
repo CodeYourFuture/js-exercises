@@ -33,19 +33,20 @@ let destination4 = {
 };
 
 let travelDestinations = [destination1, destination2, destination3, destination4];
-
 /* 
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
 
-let destinationNamesWithin500Kms = // Complete here
+let destinationNamesWithin500Kms = travelDestinations.filter(d=> d.distanceKms < 500).map(n=> n.destinationName) // Complete here
 
-let destinationNameReachableByFerry = // Complete here
+let destinationNameReachableByFerry =  travelDestinations.filter(d=> d.transportations.includes("ferry")).map(n=> n.destinationName)// Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
-
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+.filter(d=> d.distanceKms > 300 &&  d.transportations.includes("train")).map(n=> n.destinationName)
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+destinationNamesMoreThan300KmsAwayByTrain.forEach(n=> console.log(n))
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

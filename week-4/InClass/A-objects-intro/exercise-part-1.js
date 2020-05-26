@@ -7,3 +7,18 @@ Assign each of them to a separate variable
 
 */
 
+let house = {
+
+};
+let car = {
+
+};
+let phone = {
+
+};
+let laptop = {
+
+};
+let building = {
+
+};
