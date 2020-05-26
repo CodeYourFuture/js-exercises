@@ -58,7 +58,7 @@ Exercise 1:
 
 writers.forEach((p) => {
   console.log(
-    `Hi, my name is ${p.firstName}${p.lastName}. I am ${p.age} years old, and work as a ${p.occupation}.`
+    `Hi, my name is ${p.firstName} ${p.lastName}. I am ${p.age} years old, and work as a ${p.occupation}.`
   );
 });
 
@@ -69,7 +69,7 @@ Exercise 2:
 */
 
 const writersDead = writers
-  .filter((x) => x.age > 40 && x.age < 50 && x.alive === false)
+  .filter((x) => x.age >= 40 && x.age < 50 && !x.alive)
   .forEach((x) => {
     console.log(
       `Writer ${x.firstName} ${x.lastName} died at ${x.age} years old.`
@@ -82,7 +82,7 @@ Exercise 3:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
 const comtemWriters = writers
-  .filter((x) => x.age >= 40 && x.age <= 49)
+  .filter((x) => x.age >= 40 && x.age <= 49 && x.alive === true)
   .forEach((x) => {
     console.log(
       `Hi, my name is ${x.firstName} ${x.lastName}. I am ${x.age} years old.`

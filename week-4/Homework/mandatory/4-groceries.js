@@ -28,15 +28,18 @@ Exercise 1:
   Then use console.log() to print out the list.
 */
 // Gather all week item names into this array
-let weeklyGroceriesToBuy = [];
+let weeklyGroceriesToBuy = [].concat(weeklyMealPlan);
 
+// method 2
+let weeklyGroceriesToBuy2 = [];
 for (let day in weeklyMealPlan) {
   weeklyMealPlan[day].forEach((items) => {
-    weeklyGroceriesToBuy.push(items);
+    weeklyGroceriesToBuy2.push(items);
   });
 }
-console.log(weeklyGroceriesToBuy);
 
+console.log(weeklyGroceriesToBuy);
+console.log(weeklyGroceriesToBuy2);
 /*
 Exercise 2:
   Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
