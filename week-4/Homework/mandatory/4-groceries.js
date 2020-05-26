@@ -11,15 +11,15 @@ that contains the missing ingredients to your menus. It is stored in the "weekly
 Complete the exercises below.
 */
 
-// Here is your 
+// Here is your
 let weeklyMealPlan = {
   monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
   tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
   wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
   thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
-  fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
+  friday: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
   saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: []
+  sunday: [],
 };
 
 /*
@@ -28,9 +28,17 @@ Exercise 1:
   Then use console.log() to print out the list.
 */
 // Gather all week item names into this array
-let weeklyGroceriesToBuy = [];
-
-
+let weeklyGroceriesToBuy = Object.values(weeklyMealPlan);
+let weeklyItems = [];
+for (let i = 0; i < weeklyGroceriesToBuy.length; i++) {
+  for (let j = 0; j < weeklyGroceriesToBuy[i].length; j++) {
+    weeklyItems.push(weeklyGroceriesToBuy[i][j]);
+  }
+}
+//console.log(weeklyItems);
+//Or
+// let newArray = weeklyGroceriesToBuy.reduce((a, b) => a.concat(b), []);
+// console.log(newArray);
 
 /*
 Exercise 2:
@@ -39,11 +47,19 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
-
-
-
+for (let key in weeklyMealPlan) {
+  if (key.startsWith("s")) {
+    weekendGroceriesToBuy.push(weeklyMealPlan[key]);
+  }
+}
+// trying to flatten the array using reduce
+let weekendItem = weekendGroceriesToBuy.reduce(
+  (items, food) => items.concat(food),
+  []
+);
+//console.log(weekendItem);
 /*
-Exercise 2:
+Exercise 3:
   Loop through your weekly meal plan:
     - count how many ingredients you should buy per each day
     - and update the corresponding properties of numberOfItemsPerWeak object.
@@ -51,12 +67,22 @@ Exercise 2:
   Finally use console.log() to print out the Object.
 */
 // Gather weekend item names into this array
+let numberOfItemsPerWeak2 = [];
+for (let numOfItems in weeklyMealPlan) {
+  numberOfItemsPerWeak2.push(
+    numOfItems + ":" + weeklyMealPlan[numOfItems].length
+  );
+}
+console.log(numberOfItemsPerWeak2);
+
 let numberOfItemsPerWeak = {
   monday: 0,
   tuesday: 0,
   wednesday: 0,
   thursday: 0,
-  fridray: 0,
+  friday: 0,
   saturday: 0,
-  sunday: 0
+  sunday: 0,
 };
+numberOfItemsPerWeak = numberOfItemsPerWeak2;
+console.log(numberOfItemsPerWeak);
