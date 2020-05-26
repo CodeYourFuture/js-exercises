@@ -82,7 +82,7 @@ Exercise 3:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
 const comtemWriters = writers
-  .filter((x) => x.age >= 40 && x.age <= 49 && x.alive === true)
+  .filter((x) => x.age >= 40 && x.age <= 49 && x.alive)
   .forEach((x) => {
     console.log(
       `Hi, my name is ${x.firstName} ${x.lastName}. I am ${x.age} years old.`
