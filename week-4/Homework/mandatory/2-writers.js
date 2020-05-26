@@ -1,14 +1,16 @@
 /* 
 Challenge 1: Famous Writers
 
-Did you know you can also have an Array of Objects? You might think "This is madness!" but in everyday coding life
-it is quite frequent combination. Just think about it what benefits we can get from this construct.
+Did you know you can also have an Array of Objects? You might think "This is madness!" but 
+in everyday coding life it is quite frequent combination. Just think about it what benefits we
+ can get from this construct.
 
-Object lets you store multiple values in a single variable, then you can store complex objects in an array.
-Let's assume you have list of data about people names and their birthday and you would like to print each name
-with corresponding birthdays together. Storing these information in different arrays and then pairing them up
-makes the iteration unnecessarily complicated, code will be less intuitive, needs extra cognitive effort to
-reason about and last but not least it can be error-prone for example you pick up the wrong birthday to a name.
+Object lets you store multiple values in a single variable, then you can store complex objects 
+in an array.Let's assume you have list of data about people names and their birthday and you would
+ like to print each name with corresponding birthdays together. Storing these information in
+  different arrays and then pairing them up makes the iteration unnecessarily complicated, 
+  code will be less intuitive, needs extra cognitive effort to reason about and last but not
+ least it can be error-prone for example you pick up the wrong birthday to a name.
 
 In this exercise you will practice how to access to Objects stored in Array and to their properties.
 You already know different ways how to loop through Arrays, it won't be different in this case too.
@@ -22,29 +24,29 @@ let writers = [
     lastName: "Woolf",
     occupation: "writer",
     age: 59,
-    alive: false
+    alive: false,
   },
   {
     firstName: "Zadie",
     lastName: "Smith",
     occupation: "writer",
     age: 41,
-    alive: true
+    alive: true,
   },
   {
     firstName: "Jane",
     lastName: "Austen",
     occupation: "writer",
     age: 41,
-    alive: false
+    alive: false,
   },
   {
     firstName: "bell",
     lastName: "hooks",
     occupation: "writer",
     age: 64,
-    alive: true
-  }
+    alive: true,
+  },
 ];
 
 /*
@@ -54,7 +56,11 @@ Exercise 1:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
 
-
+writers.forEach((p) => {
+  console.log(
+    `Hi, my name is ${p.firstName}${p.lastName}. I am ${p.age} years old, and work as a ${p.occupation}.`
+  );
+});
 
 /*
 Exercise 2:
@@ -62,10 +68,23 @@ Exercise 2:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
-
+const writersDead = writers
+  .filter((x) => x.age > 40 && x.age < 50 && x.alive === false)
+  .forEach((x) => {
+    console.log(
+      `Writer ${x.firstName} ${x.lastName} died at ${x.age} years old.`
+    );
+  });
 
 /*
 Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+const comtemWriters = writers
+  .filter((x) => x.age >= 40 && x.age <= 49)
+  .forEach((x) => {
+    console.log(
+      `Hi, my name is ${x.firstName} ${x.lastName}. I am ${x.age} years old.`
+    );
+  });

@@ -1,5 +1,5 @@
 /*
-As you you can have an Array of Objects, you can also store Arrays in Objects.
+As you can have an Array of Objects, you can also store Arrays in Objects.
 In this exercise, you'll practice:
  - How to loop through the properties (keys) of an Object and read its values.
  - How to access Array stored inside Object.
@@ -11,7 +11,7 @@ that contains the missing ingredients to your menus. It is stored in the "weekly
 Complete the exercises below.
 */
 
-// Here is your 
+// Here is your
 let weeklyMealPlan = {
   monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
   tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
@@ -19,7 +19,7 @@ let weeklyMealPlan = {
   thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
   fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
   saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: []
+  sunday: [],
 };
 
 /*
@@ -30,7 +30,12 @@ Exercise 1:
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
 
-
+for (let day in weeklyMealPlan) {
+  weeklyMealPlan[day].forEach((items) => {
+    weeklyGroceriesToBuy.push(items);
+  });
+}
+console.log(weeklyGroceriesToBuy);
 
 /*
 Exercise 2:
@@ -40,7 +45,10 @@ Exercise 2:
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
 
+let weekendList = weeklyMealPlan.saturday + weeklyMealPlan.sunday;
+weekendGroceriesToBuy.push(weekendList);
 
+console.log(weekendGroceriesToBuy);
 
 /*
 Exercise 2:
@@ -58,5 +66,11 @@ let numberOfItemsPerWeak = {
   thursday: 0,
   fridray: 0,
   saturday: 0,
-  sunday: 0
+  sunday: 0,
 };
+
+for (let day in weeklyMealPlan) {
+  numberOfItemsPerWeak[day] = weeklyMealPlan[day].length;
+}
+
+console.log(numberOfItemsPerWeak);
