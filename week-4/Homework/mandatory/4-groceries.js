@@ -65,11 +65,8 @@ let numberOfItemsPerWeak = {
   sunday: 0
 };
 
-for(let item in weeklyMealPlan) {
-    numberOfItemsPerWeak[item] = weeklyMealPlan[item].length
+for(let items in weeklyMealPlan) {
+    numberOfItemsPerWeak[items] = weeklyMealPlan[items].length
 }
-
-  // numberOfItemsPerWeak = numberOfItemsPerWeak2
 console.log(numberOfItemsPerWeak);
-// for (let day in weeklyMealPlan) {
-//   numberOfItemsPerWeak[day] = weeklyMealPlan[day].length
+
