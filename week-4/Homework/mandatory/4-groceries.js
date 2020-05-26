@@ -1,5 +1,5 @@
 /*
-As you you can have an Array of Objects, you can also store Arrays in Objects.
+As you cansee you have an Array of Objects, you can also store Arrays in Objects.
 In this exercise, you'll practice:
  - How to loop through the properties (keys) of an Object and read its values.
  - How to access Array stored inside Object.
@@ -11,7 +11,7 @@ that contains the missing ingredients to your menus. It is stored in the "weekly
 Complete the exercises below.
 */
 
-// Here is your 
+// Here is your
 let weeklyMealPlan = {
   monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
   tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
@@ -19,7 +19,7 @@ let weeklyMealPlan = {
   thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
   fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
   saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: []
+  sunday: [],
 };
 
 /*
@@ -28,19 +28,30 @@ Exercise 1:
   Then use console.log() to print out the list.
 */
 // Gather all week item names into this array
+
 let weeklyGroceriesToBuy = [];
+for (let property in weeklyMealPlan[property]) {
+  weeklyGroceriesToBuy.push(weeklyMealPlan);
+}
 
+console.log(weeklyGroceriesToBuy.flat());
 
+console.log(weeklyGroceriesToBuy);
 
 /*
 Exercise 2:
-  Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
+  Loop through your list again, but now only collect the weekend items into the weekendGroceriesToBuy array.
   Then use console.log() to print out the list.
 */
 // Gather weekend item names into this array
-let weekendGroceriesToBuy = [];
+// let weekendGroceriesToBuy = [];
 
-
+for (let property in weeklyMealPlan) {
+  if (property.startsWith("s")) {
+    weekendGroceriesToBuy.push(weeklyMealPlan[property]);
+  }
+}
+console.log(weekendGroceriesToBuy.flat());
 
 /*
 Exercise 2:
@@ -51,6 +62,7 @@ Exercise 2:
   Finally use console.log() to print out the Object.
 */
 // Gather weekend item names into this array
+
 let numberOfItemsPerWeak = {
   monday: 0,
   tuesday: 0,
@@ -58,5 +70,12 @@ let numberOfItemsPerWeak = {
   thursday: 0,
   fridray: 0,
   saturday: 0,
-  sunday: 0
+  sunday: 0,
 };
+
+numberOfItemsPerWeak = [];
+
+for (key in weeklyMealPlan) {
+  numberOfItemsPerWeak.push(`${key}: ${weeklyMealPlan[key].length}`);
+}
+console.log(numberOfItemsPerWeak);

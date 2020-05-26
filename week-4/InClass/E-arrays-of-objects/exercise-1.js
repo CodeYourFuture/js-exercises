@@ -1,3 +1,4 @@
+//COMPLETED
 /* 
 1) Define an array containing the 3 persons defined below.
 2) Return an array of the person names (hint: use map).
@@ -25,12 +26,22 @@ WRITE YOUR CODE BELOW
 */
 
 
-var persons = // Complete here
+var persons = [person1, person2, person3]
+console.log(persons)
 
-var personNames = // Complete here
+function getName(person){
+    return person.name
+}
+var personNames = persons.map(getName)
 
-var personsYoungerThan28YearsOld = // Complete here
+console.log(personNames)
 
+function getYoungerThan28 (person) {
+    return person.age < 28
+}
+
+var personsYoungerThan28YearsOld = persons.filter(getYoungerThan28)
+console.log(personsYoungerThan28YearsOld)
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

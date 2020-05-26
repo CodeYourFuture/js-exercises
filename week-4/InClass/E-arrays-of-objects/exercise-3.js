@@ -1,3 +1,4 @@
+//COMPLETED
 /* 
 Below are some restaurants in Glasgow. Each restaurant has a name, the number of total seats, 
 the number of customers in the restaurant at the moment and the menu with prices.
@@ -48,29 +49,44 @@ let restaurant3 = {
 };
 
 let restaurants = [restaurant1, restaurant2, restaurant3];
+// console.log(restaurants["restaurant1"])
 
 /* 
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+  ///1  ///
+  
 
 let restaurantFinderApplication = {
     applicationName: "Restaurant Finder",
     applicationVersion: "1.0",
     restaurants: restaurants,
+
     findAvailableRestaurants: function (numberOfPeople) {
-        // Complete here
-    },
+         return this.restaurants
+              .filter(
+                (restaurant) => restaurant.totalSeats - restaurant.numberOfCustomers > numberOfPeople)
+              .map((restaurant) => restaurant.name);
+          },
+
     findRestaurantServingDish: function (dishName) {
-        // Complete here
+        return this.restaurants 
+        .filter((restaurant) => restaurant.menu.includes(dishName)) 
+        .map((restaurant) => restaurant.name);
     },
+     
     countNumberOfRestaurantsInArea: function (area) {
-        // Complete here
-    }
+        return this.restaurants 
+        .filter((restaurant) => restaurant.address.area.includes(area) ) 
+        .map((restaurant) => restaurant.name);
+    },
 };
 
-
+console.log(restaurantFinderApplication.findAvailableRestaurants(2))
+console.log(restaurantFinderApplication.findRestaurantServingDish("salad"))
+console.log(restaurantFinderApplication.countNumberOfRestaurantsInArea("center"))
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */

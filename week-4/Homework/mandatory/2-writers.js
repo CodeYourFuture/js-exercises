@@ -22,29 +22,29 @@ let writers = [
     lastName: "Woolf",
     occupation: "writer",
     age: 59,
-    alive: false
+    alive: false,
   },
   {
     firstName: "Zadie",
     lastName: "Smith",
     occupation: "writer",
     age: 41,
-    alive: true
+    alive: true,
   },
   {
     firstName: "Jane",
     lastName: "Austen",
     occupation: "writer",
     age: 41,
-    alive: false
+    alive: false,
   },
   {
     firstName: "bell",
     lastName: "hooks",
     occupation: "writer",
     age: 64,
-    alive: true
-  }
+    alive: true,
+  },
 ];
 
 /*
@@ -52,9 +52,14 @@ Exercise 1:
   Loop through the Array, and for each object, `console.log()` out the sentence and
   insert corresponding values to the place holder that are indicated in courle braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
-*/
 
 
+  */
+writers.forEach((p) => {
+  console.log(
+    `Hi, my name is ${p.firstName}${p.lastName}. I am ${p.age} years old, and work as a ${p.occupation}.`
+  );
+});
 
 /*
 Exercise 2:
@@ -62,10 +67,26 @@ Exercise 2:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
+//expected result J
 
+const writersDead = writers
+  .filter((x) => x.age > 40 && x.age < 50 && x.alive === false)
+  .forEach((p) => {
+    console.log(
+      `Writer ${p.firstName} ${p.lastName} died at ${p.age} years old.`
+    );
+  });
 
 /*
 Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+
+const writersIn40s = writers
+  .filter((x) => x.age > 40 && x.age < 50)
+  .forEach((p) => {
+    console.log(
+      `Writer ${p.firstName} ${p.lastName} died at ${p.age} years old.`
+    );
+  });
