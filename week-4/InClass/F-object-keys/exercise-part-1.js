@@ -10,14 +10,16 @@ let mentorsAges = {
   james: 29,
   JOSH: 35,
   JAMIE: 25,
-  Mozafar: 30
+  Mozafar: 30,
 };
 
 // ONLY EDIT BELOW THIS LINE
 
-let mentorsNames = ;
+let mentorsNames = Object.keys(mentorsAges);
 
-let mentorsNamedUppercased = ;
+let mentorsNamedUppercased = mentorsNames.map((i) =>
+  i.toString().toUpperCase()
+);
 
 // ONLY EDIT ABOVE THIS LINE
 
