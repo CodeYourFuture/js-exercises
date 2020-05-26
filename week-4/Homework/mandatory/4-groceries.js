@@ -35,7 +35,7 @@ for (let i = 0; i < weeklyGroceriesToBuy.length; i++) {
     weeklyItems.push(weeklyGroceriesToBuy[i][j]);
   }
 }
-//console.log(weeklyItems);
+console.log(weeklyItems);
 //Or
 // let newArray = weeklyGroceriesToBuy.reduce((a, b) => a.concat(b), []);
 // console.log(newArray);
@@ -57,7 +57,7 @@ let weekendItem = weekendGroceriesToBuy.reduce(
   (items, food) => items.concat(food),
   []
 );
-//console.log(weekendItem);
+console.log(weekendItem);
 /*
 Exercise 3:
   Loop through your weekly meal plan:
@@ -67,13 +67,9 @@ Exercise 3:
   Finally use console.log() to print out the Object.
 */
 // Gather weekend item names into this array
-let numberOfItemsPerWeak2 = [];
-for (let numOfItems in weeklyMealPlan) {
-  numberOfItemsPerWeak2.push(
-    numOfItems + ":" + weeklyMealPlan[numOfItems].length
-  );
+for (let food in weeklyMealPlan) {
+  numberOfItemsPerWeak[food] = weeklyMealPlan[food].length;
 }
-console.log(numberOfItemsPerWeak2);
 
 let numberOfItemsPerWeak = {
   monday: 0,
@@ -84,5 +80,5 @@ let numberOfItemsPerWeak = {
   saturday: 0,
   sunday: 0,
 };
-numberOfItemsPerWeak = numberOfItemsPerWeak2;
+
 console.log(numberOfItemsPerWeak);
