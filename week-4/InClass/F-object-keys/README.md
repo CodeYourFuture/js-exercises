@@ -12,9 +12,9 @@ Here is an example output for using `.keys()`:
 
 ```js
 let footballClubs = {
-  chelsea_fc: 'England',
-  fc_barcelona: 'Spain',
-  ac_milan: 'Italy'
+  chelsea_fc: "England",
+  fc_barcelona: "Spain",
+  ac_milan: "Italy",
 };
 
 console.log(Object.keys(footballClubs));

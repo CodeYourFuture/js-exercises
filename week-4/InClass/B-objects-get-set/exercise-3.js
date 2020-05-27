@@ -3,7 +3,10 @@
 */
 
 // WRITE CODE BELOW THIS
-
+let kitten = {
+  name: "Gilbert",
+  furColour: "Mauve",
+};
 // WRITE CODE ABOVE THIS
 
 console.log(kitten.name);
