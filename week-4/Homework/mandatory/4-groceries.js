@@ -31,34 +31,51 @@ Exercise 1:
 
 // Solution 1
 let weeklyGroceriesToBuy = [];
-for (let key in weeklyMealPlan) {
-    let values = weeklyMealPlan[key]
-    for (let item of values) {
-        weeklyGroceriesToBuy.push(item)
-    }
-}
-console.log(weeklyGroceriesToBuy)
 
+// Solution 1
+// for (let key in weeklyMealPlan) {
+//     let values = weeklyMealPlan[key]
+//     for (let item of values) {
+//         weeklyGroceriesToBuy.push(item)
+//     }
+// }
+// console.log(weeklyGroceriesToBuy)
 //Solution 2 
 
 // let weeklyGroceriesToBuy = Array.from([].concat(...Object.values(weeklyMealPlan)))
 
+// solution 3
+for (let key in weeklyMealPlan) {
+    weeklyGroceriesToBuy = weeklyGroceriesToBuy.concat(weeklyMealPlan[key])
+}
+console.log(weeklyGroceriesToBuy)
+    /*, 
+            Exercise 2:
+              Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
+              Then use console.log() to print out the list.
+            */
+    // Gather weekend item names into this array
 
-/*
-Exercise 2:
-  Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
-  Then use console.log() to print out the list.
-*/
-// Gather weekend item names into this array
+/// Solution 1
+// let weekendGroceriesToBuy = []
+// let weekendDays = ["saturday", "sunday"]
+// for (let key in weeklyMealPlan) {
+//     if (weekendDays.includes(key)) {
+//         let values = weeklyMealPlan[key]
+//         for (let item of values) {
+//             weekendGroceriesToBuy.push(item)
+//         }
+//     }
+// }
+// console.log(weekendGroceriesToBuy)
 
+
+/// Solution 2
 let weekendGroceriesToBuy = []
 let weekendDays = ["saturday", "sunday"]
 for (let key in weeklyMealPlan) {
     if (weekendDays.includes(key)) {
-        let values = weeklyMealPlan[key]
-        for (let item of values) {
-            weekendGroceriesToBuy.push(item)
-        }
+        weekendGroceriesToBuy = weekendGroceriesToBuy.concat(weeklyMealPlan[key])
     }
 }
 console.log(weekendGroceriesToBuy)
