@@ -14,7 +14,17 @@ var attendanceCounts = [
   ["Nina", 10]
 ];
 
-var eligibleStudentNames; // TODO: Complete this line.
+function attended (arr) {
+  if (arr[1] >= 8) {
+    return true;
+  }
+}
+
+function firstEl (arr) {
+  return arr[0];
+}
+
+var eligibleStudentNames = attendanceCounts.filter(attended).map(firstEl); // TODO: Complete this line.
 
 console.log(eligibleStudentNames);
 

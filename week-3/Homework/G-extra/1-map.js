@@ -13,7 +13,21 @@ var stationTransportOptionsPairs = [
   ["Greenwich", ["tube", "bus", "river boat"]]
 ];
 
-var stationsWithRiverBoat; // <-- Complete this statement
+//Array.isArray(trans) && 
+function byBoat(trans) {
+  if (trans[1].includes("river boat")) {
+    return trans[0];
+  }
+}
+
+
+function firstEl (arr) {
+  return arr[0];
+}
+
+var stationsWithRiverBoat = stationTransportOptionsPairs.filter(byBoat).map(firstEl);
+  
+// <-- Complete this statement
 
 console.log(stationsWithRiverBoat);
 
