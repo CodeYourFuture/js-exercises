@@ -30,12 +30,11 @@ Exercise 1:
 // Gather all week item names into this array
 
 let weeklyGroceriesToBuy = [];
-for (let property in weeklyMealPlan[property]) {
-  weeklyGroceriesToBuy.push(weeklyMealPlan);
+for (let property in weeklyMealPlan) {
+  weeklyGroceriesToBuy.push(weeklyMealPlan[property]);
+  
 }
-
-console.log(weeklyGroceriesToBuy.flat());
-
+weeklyGroceriesToBuy = weeklyGroceriesToBuy.flat();
 console.log(weeklyGroceriesToBuy);
 
 /*
@@ -44,7 +43,8 @@ Exercise 2:
   Then use console.log() to print out the list.
 */
 // Gather weekend item names into this array
-// let weekendGroceriesToBuy = [];
+
+let weekendGroceriesToBuy = [];
 
 for (let property in weeklyMealPlan) {
   if (property.startsWith("s")) {
@@ -52,6 +52,18 @@ for (let property in weeklyMealPlan) {
   }
 }
 console.log(weekendGroceriesToBuy.flat());
+
+
+
+
+let weekendGroceriesToBuy2 = []
+
+let saturdayArray = weeklyMealPlan.saturday 
+let sundayArray = weeklyMealPlan.sunday
+weekendGroceriesToBuy2 = [...saturdayArray,...sundayArray]
+
+console.log(weekendGroceriesToBuy2)
+
 
 /*
 Exercise 2:
@@ -73,9 +85,8 @@ let numberOfItemsPerWeak = {
   sunday: 0,
 };
 
-numberOfItemsPerWeak = [];
 
 for (key in weeklyMealPlan) {
-  numberOfItemsPerWeak.push(`${key}: ${weeklyMealPlan[key].length}`);
+  numberOfItemsPerWeak[key] = (weeklyMealPlan[key].length);
 }
 console.log(numberOfItemsPerWeak);
