@@ -22,19 +22,30 @@ let bottle = {
   volume: 0,
   fillUp: function() {
     // calling this function should pour your bottle full (volume = 100);
+      return this.volume =  100
   },
   pour: function () {
     // calling this function should increase your bottle volume by 10 unit;
+    this.volume  += 10 
+    if(this.volume > 100){
+      return this.volume = 100
+    }
   },
   drink: function() {
     // calling this function should decrease your bottle volume by 10 unit;
+    this.volume -=  10 
+    if(this.volume < 0){
+      return this.volume = 0
+    }
   },
-  isFull: function () {
-    // this function should return true if your bottle is empty;
-  },
-  isEmpty: function() {
-    // this function should return true if your bottle is full;
-  }
+ isFull: function() {
+  // this function should return true if your bottle is full;
+return this.volume === 100 ? true : false
+},
+isEmpty: function() {
+// this function should return true if your bottle is empty;
+return this.volume === 0 ? true : false
+}
 };
 
 /*
@@ -50,7 +61,7 @@ Extra question:
   Leave your answer below:
 */
 
-// HERE COMES YOUR ANSWER
+// it's perferd to use 'this' in large/big objects and in general to make it easier to call the object since it's easy to foget the variables names if there was mutiple objects in the same code.
 
 /*
 Once you have completed your object run the following 

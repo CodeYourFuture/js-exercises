@@ -54,6 +54,12 @@ Exercise 1:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
 
+writers.forEach((A) => {
+  console.log(
+    `Hi, my name is ${A.firstName} ${A.lastName}. I am ${A.age} years old, and work as a ${A.occupation}.`
+  );
+});
+
 
 
 /*
@@ -62,7 +68,13 @@ Exercise 2:
   and not with us anymore, use the below sentence format:
   "Writer {firstName} {lastName} died at {age} years old."
 */
-
+for (i = 0; i < writers.length; i++) {
+  console.log(
+    `Hi, my name is ${writers[i].firstName} ${writers[i].lastName}.I am ${
+      writers[i].age
+    } years old, and work as a ${writers[i].occupation}.`
+  );
+}
 
 
 /*
@@ -70,3 +82,11 @@ Exercise 3:
   Only `console.log()` out contemporary (meaning still alive) writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+for (let i = 0; i < writers.length; i++)
+  if (writers[i].alive === true) {
+    console.log(
+      `Hi, my name is ${writers[i].firstName} ${writers[i].lastName}. I am ${
+        writers[i].age
+      } years old, and work as a ${writers[i].occupation}.I am alive.`
+    );
+  }
