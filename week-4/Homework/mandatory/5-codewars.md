@@ -11,3 +11,5 @@ Exercises:
 - [Crash Override](https://www.codewars.com/kata/crash-override/train/javascript)
 - [Job Matching #1](https://www.codewars.com/kata/56c22c5ae8b139416c00175d/train/javascript)
 - [Split the Bill](https://www.codewars.com/kata/5641275f07335295f10000d0/train/javascript)
+
+My link to CodeWars https://www.codewars.com/users/VitoJeanPaul
