@@ -8,7 +8,10 @@
 
 function replace(arr, valueToReplace, newValue) {
   let index = arr.indexOf(valueToReplace);
-  return `${arr.slice(0, index)} ${newValue} ${arr.slice(index + 1)}`; // complete this statement
+  let arr1 = arr.slice(0, index);
+  let arr2 = arr.slice(index + 1);
+  return arr1.concat(newValue, arr2);
+   // complete this statement
 }
 
 /*
