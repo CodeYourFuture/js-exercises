@@ -15,7 +15,7 @@ function isArr(v) {
 }
 
 var pairsByIndex = pairsByIndexRaw.filter(isArr);
-console.log(pairsByIndex)
+
 
 // Complete this statement
 

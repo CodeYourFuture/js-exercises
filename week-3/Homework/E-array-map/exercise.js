@@ -22,4 +22,4 @@ let numbers100 = numbers.map(num => {
 });
 
 let numbers100 = numbers.map(num => num * 100);
-//console.log(numbers100);
+
