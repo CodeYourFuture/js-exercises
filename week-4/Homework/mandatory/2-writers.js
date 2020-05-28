@@ -67,7 +67,6 @@ Exercise 2:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
-
 const writersDead = writers
   .filter((writer) => writer.age > 40 && writer.age < 50 && !writer.alive)
   .forEach((writer) => {
@@ -83,9 +82,10 @@ Exercise 3:
 */
 
 const writersIn40s = writers
-  .filter((writer) => writer.age > 40 && writer.age < 50)
+  .filter((writer) => writer.age > 40 && writer.age < 50 && writer.alive)
   .forEach((writer) => {
     console.log(
       `Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`
     );
   });
+
