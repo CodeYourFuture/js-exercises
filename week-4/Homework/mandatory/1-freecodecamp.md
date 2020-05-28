@@ -4,7 +4,8 @@ You should complete all of these FreeCodeCamp exercises - https://www.freecodeca
 
 Go to **JavaScript Algorithms and Data Structures Certification (300 hours)**
 
-## Scope in functions 
+## Scope in functions
+
 - Basic JavaScript: Global Scope and Functions
 - Basic JavaScript: Local Scope and Functions
 - Basic JavaScript: Global vs. Local Scope in Functions
@@ -13,7 +14,6 @@ Helpufl Video:
 
 - [Scope in JS](https://www.youtube.com/watch?v=iJKkZA215tQ)
 
-
 Open section **Object Oriented Programming** and do the following exercises **(if you have not done already in the previous homework)**
 
 - Introduction to the Object Oriented Programming Challenges
@@ -21,3 +21,5 @@ Open section **Object Oriented Programming** and do the following exercises **(i
 - Use Dot Notation to Access the Properties of an Object
 - Create a Method on an Object
 - Make Code More Reusable with the this Keyword
+
+My link to FreeCodeCamp https://www.freecodecamp.org/fcc79d1d88a-d198-48ad-b35a-c7565509ffda
