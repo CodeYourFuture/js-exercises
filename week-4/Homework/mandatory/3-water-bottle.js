@@ -19,23 +19,65 @@ You have to implement the missing features according to the specification.
 
 // Here is your starting point:
 let bottle = {
-  volume: 0,
-  fillUp: function() {
-    // calling this function should pour your bottle full (volume = 100);
-  },
-  pour: function () {
-    // calling this function should increase your bottle volume by 10 unit;
-  },
-  drink: function() {
-    // calling this function should decrease your bottle volume by 10 unit;
-  },
-  isFull: function () {
-    // this function should return true if your bottle is empty;
-  },
-  isEmpty: function() {
-    // this function should return true if your bottle is full;
-  }
+	//will return if bottled is full
+	isEmpty: true,
+	//will return if bottle is Empty
+	isFull: true,
+
+	add: 0,
+	checkpour: 0,
+	increment: 0,
+	volume: 100,
+	drink: 10,
+	pour: 10,
+	fillUp: function () {
+		// calling this function should pour my bottle full (volume = 100);
+		if (this.isEmpty == true && this.volume == 100) {
+			this.add += this.volume; //using volume =100
+			return "Volume is= " + this.add + " " + bottle.isFullObject();
+			//decrease bottle volume by 10 unit;
+		} else if (this.isFull == true && this.volume == 100 && this.drink <= 10) {
+			this.add += this.drink; //initialise drink to add
+			return (
+				"Volume is = " +
+				(this.volume - this.add) +
+				" " +
+				bottle.drinkdecreaseObject()
+			);
+			//increase bottle volume by 10 unit
+		} else if (
+			this.checkpour == this.add &&
+			this.volume == 100 &&
+			this.pour <= 10
+		) {
+			this.increment += this.pour; //pour to increment
+			this.volume - this.increment; //passing the value of incremented into volume
+			return "Volume is = " + this.volume + " " + bottle.pourObject();
+		} else {
+			return "Please check your bottle, something is wrong, the bottle should be full or empty!";
+		}
+	},
+	// this function returns true if bottle is full;
+	isFullObject: function () {
+		return " Bottle is full";
+	},
+	// this function return true if my bottle is full;
+	isEmptyObject: function () {
+		// this function should return true if my bottle is full;
+		return "Full = " + this.isEmpty;
+	},
+	// this decrease bottled volume by 10 unit;
+	pourObject: function () {
+		return "bottle volume increased by " + this.pour + " unit";
+	},
+	drinkdecreaseObject: function () {
+		return "decrease bottle volume by " + this.drink + " unit";
+	},
 };
+
+console.log(bottle.fillUp());
+// console.log(bottle.drinkdecreaseObject()); //test
+// console.log(bottle.pourObject()); //test
 
 /*
 TIP:
@@ -48,6 +90,9 @@ Extra question:
   What do you think why it is preferred using `this` inside object over its variable name in our case `bottle`?
 
   Leave your answer below:
+
+Because "this" is used to point to the instance of an object from its own constructor and methods
+ And when used inside function or class scope.
 */
 
 // HERE COMES YOUR ANSWER
@@ -67,14 +112,23 @@ if (bottle.isFull()) console.log(`That's correct! Bottle is full.`);
 else console.warn(`Not quite right! Bottle should be full but it is not.`);
 
 if (!bottle.isEmpty()) console.log(`That's correct! Bottle isn't empty.`);
-else console.warn(`Not quite right! Bottle should not be empty but it is already.`);
+else
+	console.warn(
+		`Not quite right! Bottle should not be empty but it is already.`
+	);
 
 // ACTIONS
 bottle.pour();
 
 // CHECKS
-if (bottle.volume === 100) console.log(`That's correct. Bottle is already full water volume cannot go beyond.`);
-else console.warn(`Whoops!!! Looks like you've changed your bottle to a bigger one, it went beyond its maximum capacity up to ${bottle.volume} unit.`);
+if (bottle.volume === 100)
+	console.log(
+		`That's correct. Bottle is already full water volume cannot go beyond.`
+	);
+else
+	console.warn(
+		`Whoops!!! Looks like you've changed your bottle to a bigger one, it went beyond its maximum capacity up to ${bottle.volume} unit.`
+	);
 
 if (bottle.isFull()) console.log(`That's correct! Bottle is still full.`);
 else console.warn(`Not quite right! Bottle should be still full but is not.`);
@@ -85,8 +139,12 @@ bottle.drink();
 bottle.drink();
 
 // CHECKS
-if (bottle.volume === 70) console.log(`That's correct! Water volume is ${bottle.volume}.`);
-else console.warn(`Not quite right! Water volume should be 70 unit instead of ${bottle.volume}.`);
+if (bottle.volume === 70)
+	console.log(`That's correct! Water volume is ${bottle.volume}.`);
+else
+	console.warn(
+		`Not quite right! Water volume should be 70 unit instead of ${bottle.volume}.`
+	);
 
 // ACTIONS
 bottle.drink();
@@ -98,7 +156,10 @@ if (!bottle.isFull()) console.log(`That's correct! Bottle isn't full.`);
 else console.warn(`Not quite right! Bottle should not be full but it is.`);
 
 if (!bottle.isEmpty()) console.log(`That's correct! Bottle isn't empty yet.`);
-else console.warn(`Not quite right! Bottle should not be still empty but it is already.`);
+else
+	console.warn(
+		`Not quite right! Bottle should not be still empty but it is already.`
+	);
 
 // ACTIONS
 bottle.drink();
@@ -108,17 +169,28 @@ bottle.drink();
 
 // CHECKS
 if (bottle.isEmpty()) console.log(`That's correct! Bottle is finally emptied.`);
-else console.warn(`Not quite right. Bottle should be already empty but it is not.`);
+else
+	console.warn(
+		`Not quite right. Bottle should be already empty but it is not.`
+	);
 
-if (bottle.volume === 0) console.log(`That's correct! Empty bottle volume is repesented as zero.`);
-else console.warn(`Not quite right. Volume should be zero instead of ${bottle.volume}.`);
+if (bottle.volume === 0)
+	console.log(`That's correct! Empty bottle volume is repesented as zero.`);
+else
+	console.warn(
+		`Not quite right. Volume should be zero instead of ${bottle.volume}.`
+	);
 
 // ACTIONS
 bottle.drink();
 
 // CHECKS
-if (bottle.volume === 0) console.log(`That's correct! Water volume cannot go below zero.`);
-else console.warn(`Whoops!!! Looks like your water volume went negative. Your water volume is ${bottle.volume} unit.`);
+if (bottle.volume === 0)
+	console.log(`That's correct! Water volume cannot go below zero.`);
+else
+	console.warn(
+		`Whoops!!! Looks like your water volume went negative. Your water volume is ${bottle.volume} unit.`
+	);
 
 if (bottle.isEmpty()) console.log(`That's correct! Bottle is still empty.`);
 else console.warn(`Not quite right. Bottle should be empty but it is not.`);
@@ -127,18 +199,28 @@ else console.warn(`Not quite right. Bottle should be empty but it is not.`);
 bottle.pour();
 
 // CHECKS
-if (bottle.volume === 10) console.log(`That's correct! Water volume is ${bottle.volume}.`);
-else console.warn(`Not quite right! Water volume should be 10 unit instead of ${bottle.volume}.`);
+if (bottle.volume === 10)
+	console.log(`That's correct! Water volume is ${bottle.volume}.`);
+else
+	console.warn(
+		`Not quite right! Water volume should be 10 unit instead of ${bottle.volume}.`
+	);
 
 if (!bottle.isFull()) console.log(`That's correct! Bottle isn't yet full.`);
 else console.warn(`Not quite right! Bottle should not be full but it is.`);
 
-if (!bottle.isEmpty()) console.log(`That's correct! Bottle isn't empty anymore.`);
-else console.warn(`Not quite right! Bottle should not be empty again but it is still.`);
+if (!bottle.isEmpty())
+	console.log(`That's correct! Bottle isn't empty anymore.`);
+else
+	console.warn(
+		`Not quite right! Bottle should not be empty again but it is still.`
+	);
 
 // ACTIONS
 bottle.drink();
 
 // CHECKS
-if (bottle.isEmpty()) console.log(`That's correct! Bottle is emptied once more.`);
-else console.warn(`Not quite right. Bottle should be empty again but it is not.`);
+if (bottle.isEmpty())
+	console.log(`That's correct! Bottle is emptied once more.`);
+else
+	console.warn(`Not quite right. Bottle should be empty again but it is not.`);

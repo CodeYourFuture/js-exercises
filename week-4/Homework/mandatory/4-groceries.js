@@ -11,15 +11,15 @@ that contains the missing ingredients to your menus. It is stored in the "weekly
 Complete the exercises below.
 */
 
-// Here is your 
+// Here is your
 let weeklyMealPlan = {
-  monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
-  tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
-  wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
-  thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
-  fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
-  saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: []
+	monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
+	tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
+	wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
+	thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
+	fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
+	saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
+	sunday: [],
 };
 
 /*
@@ -30,8 +30,6 @@ Exercise 1:
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
 
-
-
 /*
 Exercise 2:
   Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
@@ -39,8 +37,6 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
-
-
 
 /*
 Exercise 2:
@@ -52,11 +48,11 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let numberOfItemsPerWeak = {
-  monday: 0,
-  tuesday: 0,
-  wednesday: 0,
-  thursday: 0,
-  fridray: 0,
-  saturday: 0,
-  sunday: 0
+	monday: 0,
+	tuesday: 0,
+	wednesday: 0,
+	thursday: 0,
+	fridray: 0,
+	saturday: 0,
+	sunday: 0,
 };
