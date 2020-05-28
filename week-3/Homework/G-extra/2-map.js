@@ -15,14 +15,8 @@ var attendanceCounts = [
 ];
 
 var eligibleStudentNames = attendanceCounts
-  .map((pair) => {
-    let name = pair[0];
-    let attendance = pair[1];
-    if (attendance >= 8) return name;
-  })
-  .filter((name) => {
-    return name != undefined;
-  }); // TODO: Complete this line.
+  .filter((array) => array[1] >= 8)
+  .map((array) => array[0]);
 
 console.log(eligibleStudentNames);
 
