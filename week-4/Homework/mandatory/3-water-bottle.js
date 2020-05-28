@@ -22,12 +22,12 @@ You have to implement the missing features according to the specification.
 let bottle = {
   volume: 0,
   fillUp: function () {
-    this.volume += 100;
+    this.volume = 100;
   },
   // calling this function should increase your bottle volume by 10 unit;
   pour: function () {
     if (this.volume <= 90) {
-      this.volume += 10;
+      return (this.volume += 10);
     }
   },
 
@@ -35,7 +35,7 @@ let bottle = {
 
   drink: function () {
     if (this.volume >= 10) {
-      this.volume = this.volume - 10;
+      return (this.volume -= 10);
     }
   },
 
@@ -67,11 +67,14 @@ TIP:
 /*
 Extra question:
   What do you think why it is preferred using `this` inside object over its variable name in our case `bottle`?
-
   Leave your answer below:
 */
 
 // HERE COMES YOUR ANSWER
+
+//By using this keyword we ensure that if we want the change the object name for example
+//from bottle to jug, the code will still work and we don't have to update the code with
+//the new object name everywhere. Is there any other reason?
 
 /*
 Once you have completed your object run the following 

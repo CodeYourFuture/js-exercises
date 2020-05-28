@@ -68,18 +68,10 @@ Exercise 2:
 */
 function getNotAliveIn40s() {
   return writers
-    .filter(
-      (writer) => writer.alive === false && writer.age >= 40 && writer.age < 50
-    )
+    .filter((writer) => !writer.alive && writer.age >= 40 && writer.age <= 49)
     .map((writer) =>
       console.log(
-        "Writer " +
-          writer.firstName +
-          " " +
-          writer.lastName +
-          " died at " +
-          writer.age +
-          " years old."
+        `Writer ${writer.firstName} ${writer.lastName} died at ${writer.age} years old.`
       )
     );
 }
@@ -93,18 +85,11 @@ Exercise 3:
 function getAliveIn40s() {
   return writers
     .filter(
-      (writer) => writer.alive === true && writer.age >= 40 && writer.age < 50
+      (writer) => writer.alive === true && writer.age >= 40 && writer.age <= 49
     )
     .forEach((writer) =>
       console.log(
-        "Hi, my name is " +
-          writer.firstName +
-          " " +
-          writer.lastName +
-          "." +
-          " I am " +
-          writer.age +
-          " years old."
+        `Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`
       )
     );
 }
