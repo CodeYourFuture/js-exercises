@@ -21,14 +21,14 @@ You have to implement the missing features according to the specification.
 let bottle = {
   volume: 0,
   fillUp: function () {
-    return (this.volume = 100);
+    this.volume = 100;
 
     // calling this function should pour your bottle full (volume = 100);
   },
   pour: function () {
     this.volume += 10;
     if (this.volume > 100) {
-      return (this.volume = 100);
+      this.volume = 100;
     }
 
     // calling this function should increase your bottle volume by 10 unit;
@@ -36,15 +36,15 @@ let bottle = {
   drink: function () {
     this.volume -= 10;
     if (this.volume < 0) {
-      return (this.volume = 0);
+      this.volume = 0;
     }
     // calling this function should decrease your bottle volume by 10 unit;
   },
   isFull: function () {
     if (this.volume === 100) {
-      return true;
+      true;
     } else {
-      return false;
+      false;
     }
     // this function should return true if your bottle is full;
   },
@@ -70,9 +70,8 @@ Extra question:
 
   Leave your answer below:
 */
-/* If the variable name changes, any code referencing the original name would need to be updated as well.
- In a short object definition, it isn't a problem, but if an object has many references to its 
-*/
+// then this refers to the object which contains the method being invoked
+
 // HERE COMES YOUR ANSWER
 
 /*

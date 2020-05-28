@@ -53,45 +53,39 @@ Exercise 1:
   insert corresponding values to the place holder that are indicated in courle braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
-function introducing() {
-  for (let i = 0; i < writers.length; i++) {
-    console.log(
-      `Hi, my name is ${writers[i].firstName} ${writers[i].lastName}. I am ${writers[i].age} years old, and work as a ${writers[i].occupation}.`
-    );
-  }
+
+for (let i = 0; i < writers.length; i++) {
+  console.log(
+    `Hi, my name is ${writers[i].firstName} ${writers[i].lastName}. I am ${writers[i].age} years old, and work as a ${writers[i].occupation}.`
+  );
 }
-introducing();
+
 /*
 Exercise 2:
   Only `console.log()` the writers who are in their 40s with us anymore with the sentence:(meaning between 40 and 49)
   "Writer {firstName} {lastName} died at {age} years old."
 */
-function getAgeDied() {
-  let diedAge = writers.filter(
-    (p) => p.age >= 40 && p.age <= 49 && p.alive === true
+
+let diedAge = writers.filter(
+  (p) => p.age >= 40 && p.age <= 49 && p.alive === true
+);
+// console.log(diedAge);
+for (let n = 0; n < diedAge.length; n++) {
+  console.log(
+    `Writer ${diedAge[n].firstName} ${diedAge[n].lastName} died at ${diedAge[n].age} years old.`
   );
-  // console.log(diedAge);
-  for (let n = 0; n < diedAge.length; n++) {
-    console.log(
-      `Writer ${diedAge[n].firstName} ${diedAge[n].lastName} died at ${diedAge[n].age} years old.`
-    );
-  }
-  return diedAge;
 }
-getAgeDied();
+
 /*
 Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
-function nameAndYears() {
-  let yearsOld = writers.filter((s) => s.age >= 40 && s.age <= 49);
 
-  for (let m = 0; m < yearsOld.length; m++) {
-    console.log(
-      `Hi, my name is ${yearsOld[m].firstName} ${yearsOld[m].lastName}. I am ${yearsOld[m].age} years old.`
-    );
-  }
-  return yearsOld;
+let yearsOld = writers.filter((s) => s.age >= 40 && s.age <= 49);
+
+for (let m = 0; m < yearsOld.length; m++) {
+  console.log(
+    `Hi, my name is ${yearsOld[m].firstName} ${yearsOld[m].lastName}. I am ${yearsOld[m].age} years old.`
+  );
 }
-nameAndYears();
