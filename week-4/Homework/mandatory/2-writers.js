@@ -55,9 +55,9 @@ Exercise 1:
 
 
   */
-writers.forEach((p) => {
+writers.forEach((writer) => {
   console.log(
-    `Hi, my name is ${p.firstName}${p.lastName}. I am ${p.age} years old, and work as a ${p.occupation}.`
+    `Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and work as a ${writer.occupation}.`
   );
 });
 
@@ -67,13 +67,12 @@ Exercise 2:
   "Writer {firstName} {lastName} died at {age} years old."
 */
 
-//expected result J
 
 const writersDead = writers
-  .filter((x) => x.age > 40 && x.age < 50 && x.alive === false)
-  .forEach((p) => {
+  .filter((writer) => writer.age > 40 && writer.age < 50 && !writer.alive)
+  .forEach((writer) => {
     console.log(
-      `Writer ${p.firstName} ${p.lastName} died at ${p.age} years old.`
+      `Writer ${writer.firstName} ${writer.lastName} died at ${writer.age} years old.`
     );
   });
 
@@ -84,9 +83,9 @@ Exercise 3:
 */
 
 const writersIn40s = writers
-  .filter((x) => x.age > 40 && x.age < 50)
-  .forEach((p) => {
+  .filter((writer) => writer.age > 40 && writer.age < 50)
+  .forEach((writer) => {
     console.log(
-      `Writer ${p.firstName} ${p.lastName} died at ${p.age} years old.`
+      `Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old.`
     );
   });

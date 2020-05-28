@@ -17,7 +17,7 @@ Today, you'll be using a platform called [CodeWars](https://codewars.com) to hel
 - [convert boolean](https://www.codewars.com/kata/convert-boolean-values-to-strings-yes-or-no/train/javascript)
 - [opposite number](https://www.codewars.com/kata/opposite-number/train/javascript)
 - [return negative](https://www.codewars.com/kata/return-negative/train/javascript)
-- [hydrated](https://www.codewars.com/kata/keep-hydrated-1/train/javascript)
+- [hydrated](https://www.codewars.com/kata/keep-hydrated-1/train/javascrip)
 - [bonus](https://www.codewars.com/kata/do-i-get-a-bonus/train/javascript)
 - [remove string spaces](https://www.codewars.com/kata/remove-string-spaces/train/javascript)
 - [remove first and last character](https://www.codewars.com/kata/remove-first-and-last-character/train/javascript)

@@ -6,18 +6,18 @@
 */
 
 var person1 = {
-    name: "Alice",
-    age: 25
+  name: "Alice",
+  age: 25,
 };
 
 var person2 = {
-    name: "Bob",
-    age: 30
+  name: "Bob",
+  age: 30,
 };
 
 var person3 = {
-    name: "John",
-    age: 20
+  name: "John",
+  age: 20,
 };
 
 /* 
@@ -25,33 +25,47 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+var persons = [person1, person2, person3];
+console.log(persons);
 
-var persons = [person1, person2, person3]
-console.log(persons)
-
-function getName(person){
-    return person.name
+function getName(person) {
+  return person.name;
 }
-var personNames = persons.map(getName)
+var personNames = persons.map(getName);
 
-console.log(personNames)
+console.log(personNames);
 
-function getYoungerThan28 (person) {
-    return person.age < 28
+function getYoungerThan28(person) {
+  return person.age < 28;
 }
 
-var personsYoungerThan28YearsOld = persons.filter(getYoungerThan28)
-console.log(personsYoungerThan28YearsOld)
+var personsYoungerThan28YearsOld = persons.filter(getYoungerThan28);
+console.log(personsYoungerThan28YearsOld);
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log("Question 1: array defined with 3 persons -> ", 
-    (persons[0] === person1 && persons[1] === person2 && persons[2] === person3) ? 'Passed :)' : 'Not yet :(');
+console.log(
+  "Question 1: array defined with 3 persons -> ",
+  persons[0] === person1 && persons[1] === person2 && persons[2] === person3
+    ? "Passed :)"
+    : "Not yet :("
+);
 
-console.log("Question 2: array containing the person names -> ", 
-    (personNames[0] === "Alice" && personNames[1] === "Bob" && personNames[2] === "John") ? 'Passed :)' : 'Not yet :(');
+console.log(
+  "Question 2: array containing the person names -> ",
+  personNames[0] === "Alice" &&
+    personNames[1] === "Bob" &&
+    personNames[2] === "John"
+    ? "Passed :)"
+    : "Not yet :("
+);
 
-console.log("Question 3: array containing the persons younger than 28 years old -> ", 
-    (personsYoungerThan28YearsOld[0] === person1 && personsYoungerThan28YearsOld[1] === person3) ? 'Passed :)' : 'Not yet :(');
+console.log(
+  "Question 3: array containing the persons younger than 28 years old -> ",
+  personsYoungerThan28YearsOld[0] === person1 &&
+    personsYoungerThan28YearsOld[1] === person3
+    ? "Passed :)"
+    : "Not yet :("
+);
