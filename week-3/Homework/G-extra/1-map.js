@@ -12,22 +12,10 @@ var stationTransportOptionsPairs = [
   ["Tower bridge", ["tube", "bus"]],
   ["Greenwich", ["tube", "bus", "river boat"]],
 ];
-function riverBoatFiltered(pair) {
-  let station = pair[0];
-  let transport = pair[1];
-  // console.log(station);
-  // console.log(transport);
-  if (transport.includes("river boat")) {
-    return station;
-  }
-  return;
-}
 
 var stationsWithRiverBoat = stationTransportOptionsPairs
-  .map(riverBoatFiltered)
-  .filter((station) => {
-    return station !== undefined;
-  }); // <-- Complete this statement
+  .filter((arr) => arr[1].includes("river boat"))
+  .map((arr) => arr[0]);
 
 console.log(stationsWithRiverBoat);
 
