@@ -53,26 +53,24 @@ Exercise 1:
   insert corresponding values to the place holder that are indicated in courle braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
-let bioList = writers
+writers
 .forEach(n=> console.log(
   "Hi, my name is " +
    n.firstName + " " +
      n.lastName + ". I am " +
       n.age + " years old, and work as a " +
         n.occupation + "."));
-
-
 /*
 Exercise 2:
-  Only `console.log()` the writers who are in their 40s with us anymore with the sentence:(meaning between 40 and 49)
+  Only `console.log()` the writers who are in their 40s and not with us anymore with the sentence:(meaning between 40 and 49)
   "Writer {firstName} {lastName} died at {age} years old."
 */
-let deathList = writers.filter(a=> a.age >= 40 && a.age < 50 && a.alive === true)
-.forEach(n=> console.log(
+writers.filter(writersAge=> writersAge.age >= 40 && writersAge.age < 50 && !writersAge.alive)
+.forEach(name=> console.log(
   "Writer " +
-   n.firstName + " " +
-     n.lastName + " died at " +
-      n.age + " years old."));
+   name.firstName + " " +
+     name.lastName + " died at " +
+      name.age + " years old."));
 
 
 /*
@@ -80,7 +78,7 @@ Exercise 3:
   Only `console.log()` contemporary writers who are in their forties:
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
-let contemporary = writers.filter(a=> a.age >= 40 && a.age < 50)
+writers.filter(a=> a.age >= 40 && a.age < 50 && a.alive)
 .forEach(n=> console.log(
   "Hi, my name is " +
    n.firstName + " " +

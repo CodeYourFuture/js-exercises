@@ -27,10 +27,22 @@ Exercise 1:
   Loop through the weekly meal plan object to gather weakly ingredients into the weeklyGroceriesToBuy array.
   Then use console.log() to print out the list.
 */
-// Gather all week item names into this array
-let weekItems = Object.values(weeklyMealPlan);
-let array = weekItems.reduce((a, b) => a.concat(b), [])
-console.log(array);
+// Gather all week item names into this array.....
+// let weeklist = Object.values(weeklyMealPlan)
+//  let list =  weeklist.reduce((a, b) => a.concat(b), [])
+//   console.log(list);
+
+
+let weeklyGroceriesToBuy = [];
+for (let key in weeklyMealPlan) {
+  let values = weeklyMealPlan[key]
+  for (let item of values) {
+      weeklyGroceriesToBuy.push(item)
+  }
+  values.forEach(item => weeklyGroceriesToBuy.push(item) )
+}
+  console.log(weeklyGroceriesToBuy)
+
 /*
 Exercise 2:
   Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
@@ -38,13 +50,15 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
-for(let list in weeklyMealPlan){
-  if(list.startsWith("s")){
-  weekendGroceriesToBuy.push(weeklyMealPlan[list])
-}
-}
-let items = weekendGroceriesToBuy.reduce((a, b) => a.concat(b),[])
-console.log(items)
+let weekends = ['saturday', 'sunsay']
+Object.keys(weeklyMealPlan).filter(item=> weekends.includes(item))
+.forEach(key=> {
+  let dailyItems = weeklyMealPlan[key];
+  dailyItems.forEach(items => weekendGroceriesToBuy.push(items))
+});
+
+console.log(weekendGroceriesToBuy)
+
 
 /*
 Exercise 2:
@@ -69,4 +83,3 @@ for(let items in weeklyMealPlan) {
     numberOfItemsPerWeak[items] = weeklyMealPlan[items].length
 }
 console.log(numberOfItemsPerWeak);
-
