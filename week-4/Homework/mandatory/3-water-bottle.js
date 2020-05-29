@@ -22,18 +22,52 @@ let bottle = {
   volume: 0,
   fillUp: function() {
     // calling this function should pour your bottle full (volume = 100);
+    if(this.volume === 100){
+      console.log("Bottle already full.");
+    }
+    else if(this.volume === 0) {
+      this.volume = this.volume + 100;
+    }
+    else if (this.volume > 0 && this.volume < 100 ){
+      console.log("Bottle not empty");
+    }
   },
   pour: function () {
     // calling this function should increase your bottle volume by 10 unit;
+    if (this.volume === 100){
+      console.log("Bottle is already full water volume cannot go beyond.");
+    }
+    else if(this.volume >=0 && this.volume <= 90){
+      this.volume = this.volume + 10;
+
+    } else{
+      this.volume = this.volume + 10;
+      console.log(`Whoops!!! Looks like you've changed your bottle to a bigger one, it went beyond its maximum capacity up to ${this.volume} unit.`)
+    }
   },
   drink: function() {
     // calling this function should decrease your bottle volume by 10 unit;
+    if(this.volume === 0){
+      console.log("Bottle Empty!");
+    }
+    else if( this.volume < 10){
+      console.log("Not enough water");
+    }
+    else{
+      this.volume = this.volume - 10;
+    }
   },
   isFull: function () {
-    // this function should return true if your bottle is empty;
+    // this function should return true if your bottle is full;
+    if(this.volume === 100){
+      return true;
+    }
   },
   isEmpty: function() {
-    // this function should return true if your bottle is full;
+    // this function should return true if your bottle is empty;
+    if(this.volume === 0){
+      return true;
+    }
   }
 };
 
@@ -46,8 +80,10 @@ TIP:
 /*
 Extra question:
   What do you think why it is preferred using `this` inside object over its variable name in our case `bottle`?
+  
 
   Leave your answer below:
+  "this" is perferred as that way if the name of the object is not known the code can still work. Provides more flexibility.
 */
 
 // HERE COMES YOUR ANSWER

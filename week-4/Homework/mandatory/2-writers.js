@@ -54,19 +54,30 @@ Exercise 1:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
 
+writers.forEach(writer => console.log(`Hi, my name is ${writer.firstName} ${writer.lastName}. I am ${writer.age} years old, and I work as a ${writer.occupation}`));
 
 
 /*
 Exercise 2:
-  Only `console.log()` out the writers who are in their 40s (meaning between 40 and 49)
+  Only console.log() out the writers who are in their 40s (meaning between 40 and 49)
   and not alive anymore. Use the below sentence format:
   "Writer {firstName} {lastName} died at {age} years old."
 */
+let deadWritersBetween40And49 = writers
+                          .filter(writersInfo => writersInfo.age >= 40 && writersInfo.age < 50)
+                          .filter(writersBetween40And49 => writersBetween40And49.alive === false)
+                          .forEach(deadWriters => console.log(`Writer ${deadWriters.firstName} ${deadWriters.lastName} died at ${deadWriters.age} years old.`))
 
 
 
 /*
 Exercise 3:
-  Only `console.log()` out alive writers who are in their 40s (meaning between 40 and 49):
+  Only console.log() out alive writers who are in their 40s (meaning between 40 and 49):
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
-*/
+
+*/ 
+
+let aliveWritersBetween40And49 = writers
+                            .filter(writersInfo => writersInfo.age >= 40 && writersInfo.age <50)
+                            .filter(writersBetween40And49 => writersBetween40And49.alive === true)
+                            .forEach(aliveWriters => console.log(`Hi, my name is ${aliveWriters.firstName} ${aliveWriters.lastName}. I am ${aliveWriters.age}`))

@@ -20,13 +20,13 @@ let highScores = {
 
 // ONLY EDIT BELOW HERE
 
-let capitalCitiesKeys = ;
-let highScoresKeys;
+let capitalCitiesKeys = Object.keys(capitalCities);
+let highScoresKeys = Object.keys(highScores);
 
 // ONLY EDIT ABOVE HERE
 
 console.log(capitalCitiesKeys);
 // prints [ 'scotland', 'kenya', 'australia', 'canada' ]
 
-console.log(highScoresKeys)
+console.log(highScoresKeys);
 // prints ['34, '55', '89', '100']

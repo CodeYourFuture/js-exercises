@@ -60,15 +60,32 @@ let restaurantFinderApplication = {
     applicationVersion: "1.0",
     restaurants: restaurants,
     findAvailableRestaurants: function (numberOfPeople) {
-        // Complete here
+        
+      let seatsAvailable =   this.restaurants
+                .filter(restaurantInfo => (restaurantInfo.totalSeats - restaurantInfo.numberOfCustomers) >= numberOfPeople)
+                .map(availableRestaurants => availableRestaurants.name);
+      return  seatsAvailable;
+        
     },
     findRestaurantServingDish: function (dishName) {
-        // Complete here
+
+        let restaurantsWithRequiredDish = this.restaurants
+                                     .filter(restaurantMenu => restaurantMenu.menu.includes(dishName))
+                                     .map(restaurantName => restaurantName.name);
+        return restaurantsWithRequiredDish;
+
     },
     countNumberOfRestaurantsInArea: function (area) {
-        // Complete here
+
+        let resturantsInSameArea = this.restaurants.filter(restaurantAddress => restaurantAddress.address.area.includes(area));
+        return resturantsInSameArea.length;         
+
     }
 };
+
+restaurantFinderApplication.findAvailableRestaurants(5);
+restaurantFinderApplication.findRestaurantServingDish("salad");
+restaurantFinderApplication.countNumberOfRestaurantsInArea("center");
 
 
 /*

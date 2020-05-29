@@ -35,14 +35,14 @@ let storeBranches = {
 
 // # 1 get the names of the cities 
 // prints [ 'glasgow', 'edinburgh' ]
-console.log()
+console.log(Object.keys(storeBranches));
 
 // # 2 get the positions in Glasgow
 // prints [ 'manager', 'assistant', 'interns' ]
-console.log()
+console.log(Object.keys(storeBranches.glasgow));
 
 // # 3 get the positions for internt in Glasgow
 // prints [ 'head_intern', 'intern' ]
-console.log()
+console.log(Object.keys(storeBranches.glasgow.interns));
 
 // ONLY EDIT ABOVE THIS LINE
