@@ -9,12 +9,18 @@ The output of running your code should be:
 
 class ShoppingCart {
   // Add your code here
+
+  cartContains() {
+    // Use console.log() to output everything contained in your cart
+  }
 }
 
 let myCart = new ShoppingCart(); // Creates an empty shopping cart
 
-myCart.addItem("toilet roll");
-myCart.addItem("pasta");
-myCart.addItem("eggs");
+myCart.addItem("Toilet Roll");
+myCart.addItem("Pasta");
+myCart.addItem("Eggs");
 
 myCart.listItems();
+
+myCart.cartContains();
