@@ -8,13 +8,7 @@
 
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1, 0], false, "whoops"];
 function filteredPairs(pair) {
-  return (
-    pair !== null &&
-    Array.isArray(pair) &&
-    pair.length == 2 &&
-    pair[0] >= 0 &&
-    pair[1] >= 0
-  );
+  return Array.isArray(pair) && pair.length == 2;
 }
 
 var pairsByIndex = pairsByIndexRaw.filter(filteredPairs);
