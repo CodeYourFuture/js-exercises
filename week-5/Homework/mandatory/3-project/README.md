@@ -43,7 +43,10 @@ For all the fields that invalid, it should make their background color `red`.
 If all the fields are valid, when you click **Submit** it should:
 
 - Display an alert to thank you for filling out the for.
-  Hint: (how to use alert)[https://www.w3schools.com/jsref/met_win_alert.asp]
 - Blank out (make empty) all the text fields
 
-**Important hint:** In your function that handles clicks on the `Submit` button you will need to call `event.preventDefault()` to stop the browser from refreshing the page. To read more on how to do this: https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault
+**Hints**
+- [How to obtain values from form fields](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-events/pt/processing-forms-with-events)
+- [How to use alert](https://www.w3schools.com/jsref/met_win_alert.asp)
+
+**Important hint:** In your function that handles clicks on the `Submit` button you will need to call `event.preventDefault()` to stop the browser from refreshing the page. To read more on how to do this: https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault. Revisit the relevant part on [Kahnacademy](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-events/pt/preventing-default-behavior-of-events) for further practice.
