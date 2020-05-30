@@ -18,9 +18,9 @@ The second skill, problem solving, is the most important one. If you get good at
 
 Take a look at the following resources to learn more about problem solving as applied to programming:
 
-[How to THINK like a programmer](https://www.youtube.com/watch?v=NNazO2tMHno)
-[Lessons in problem solving](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/)
-[Computational thinking](https://www.youtube.com/watch?v=qbnTZCj0ugI)
+- [How to THINK like a programmer](https://www.youtube.com/watch?v=NNazO2tMHno)
+- [Lessons in problem solving](https://www.freecodecamp.org/news/how-to-think-like-a-programmer-lessons-in-problem-solving-d1d8bf1de7d2/)
+- [Computational thinking](https://www.youtube.com/watch?v=qbnTZCj0ugI)
 
 After you've watched these videos I'd like you to answer these questions
 
