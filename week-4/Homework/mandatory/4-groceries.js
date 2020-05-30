@@ -29,10 +29,22 @@ Exercise 1:
 */
 // Gather all week item names into this array
 
-let weeklyGroceriesToBuy = [];
+// or method 1
 
-weeklyGroceriesToBuy = Object.values(weeklyMealPlan);
-console.log(weeklyGroceriesToBuy);
+// for(let item in weeklyMealPlan){
+// weeklyMealPlan[item].forEach(p => weeklyGroceriesToBuy.push(p)))
+// }
+
+let weeklyGroceriesToBuy = [];
+let arr;
+
+for (let meal in weeklyMealPlan) {
+  weeklyGroceriesToBuy.push(weeklyMealPlan[meal]);
+}
+arr = weeklyGroceriesToBuy.reduce((a, b) => {
+  return a.concat(b);
+});
+console.log(arr);
 /*
 Exercise 2:
   Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
@@ -40,13 +52,14 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
-
+let arr1;
 for (let meal in weeklyMealPlan) {
   if (meal === "saturday" || meal === "sunday") {
     weekendGroceriesToBuy.push(weeklyMealPlan[meal]);
   }
 }
-console.log(weekendGroceriesToBuy);
+arr1 = weekendGroceriesToBuy.reduce((a, b) => a.concat(b), []);
+console.log(arr1);
 /*
 Exercise 2:
   Loop through your weekly meal plan:
