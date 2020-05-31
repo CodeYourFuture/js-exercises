@@ -45,6 +45,7 @@ Exercise 2:
 // Gather weekend item names into this array
 
 let weekendGroceriesToBuy = [];
+let weekend = ["saturday", "sunday"]
 
 for (let property in weeklyMealPlan) {
   if (property.startsWith("s")) {
