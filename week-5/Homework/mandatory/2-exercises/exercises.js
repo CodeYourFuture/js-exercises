@@ -69,7 +69,7 @@ function insertShoppingList(shoppingList) {
  *  
  * All of your HTML elements should go inside the Div tag with the id "content".
  * 
- * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/*
+ * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com
  */
 function insertBooks(books) {
   //Write your code in here
