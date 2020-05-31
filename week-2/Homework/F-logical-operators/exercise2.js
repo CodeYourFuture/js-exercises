@@ -5,8 +5,25 @@
   Update the code so that you get the expected result.
 */
 
-function isNegative() {}
+function isNegative(inputNumber) {
+  let result = inputNumber < 0;
+  return result;
+}
+ 
+function isBetween5and10(inputValue){
+  let result=(inputValue > 5) && (inputValue < 10);
+  return result;
+}
 
+function isShortName(inputName){
+  let result=inputName.length < 10;
+  return result;
+}
+
+function startsWithD(inputName){
+  let result = inputName.substring(0,1) === "D";
+  return result;
+}
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

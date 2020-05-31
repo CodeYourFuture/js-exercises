@@ -48,6 +48,11 @@ while(k < loopLimit) { //don't change this line
 
   let slices = 0;
   const hungry = 6;
+  while (slices < 6){
+    console.log("eating 1 slice of pizza")
+    slices++;
+  }
+  
   
   // add your code here, start with: while(...) {...}
 
@@ -63,3 +68,5 @@ while(k < loopLimit) { //don't change this line
     eating 1 slice of pizza
     eating 1 slice of pizza
     */
+
+   

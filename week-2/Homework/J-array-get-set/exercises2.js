@@ -7,7 +7,8 @@
 */
 
 var numbers = [1, 2, 3]; // Don't change this array literal declaration
-
+numbers.push(4);
+//numbers.splice(0, 1, 1);
 /* 
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */

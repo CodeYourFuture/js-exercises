@@ -9,9 +9,20 @@
 */
 
 function containsCode(sentence) {
+  if(sentence.includes("code")){
+  return true;
+  }else{
+    return false;
+  }
 
 }
+// OR //
 
+function containsCode(sentence) {
+  let result = (sentence.includes("code"));
+  return result;
+
+}
 /* 
 DO NOT EDIT BELOW THIS LINE
 --------------------------- */

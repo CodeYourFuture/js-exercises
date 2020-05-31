@@ -7,12 +7,14 @@
 
 // Finish the predicate function to test if the passed number is negative (less than zero)
 function isNegative(number) {
-
+let result = number < 0;
+return result;
 }
 
 // Finish the predicate function to test if the passed number is between 0 and 10
 function isBetweenZeroAnd10(number) {
-
+let result = number <= 10 && number >= 0;
+return result;
 }
 
 /* 
