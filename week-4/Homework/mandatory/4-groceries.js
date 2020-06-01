@@ -41,8 +41,14 @@ Exercise 2:
 // Gather weekend item names into this array
 
 let weekendGroceriesToBuy = weeklyMealPlan.saturday + weeklyMealPlan.sunday;
-console.log(weekendGroceriesToBuy);
-
+//console.log(weekendGroceriesToBuy.split(" "));
+function cutName(a){
+  var newArray = [];
+  a.forEach(function(entry) {
+    newArray.push.apply(newArray, entry.split(" "));
+  });
+  return newArray;
+}
 
 /*
 Exercise 2:
