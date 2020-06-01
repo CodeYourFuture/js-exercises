@@ -11,7 +11,11 @@ let kitten2 = {
 let kittens = [kitten1, kitten2];
 
 function getName(kitten) {
-  return kitten.name.length === 5;
+  return kitten.name;
 }
 
+kittens.push((kitten3 = { name: "Billy", weeksOld: 0 }));
+
 kittens.map(getName); // should return ["Fluffy", "Megatron", "Billy"]
+
+console.log(kittens.map(getName));

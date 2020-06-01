@@ -8,6 +8,9 @@ let person = {
   age: 25,
 };
 
+person.sayName = function (person) {
+  return `My name is ${this.name}`;
+};
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
