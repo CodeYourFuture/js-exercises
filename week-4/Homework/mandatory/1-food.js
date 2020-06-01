@@ -18,6 +18,7 @@ console.log("Favorite food is " + myFavFood.name);
 
 function getTakeAwayAddress(food) {
   // write code here
+  return food.takeAway.address;
 }
 
 console.log("I can buy my favorite food from " + getTakeAwayAddress(myFavFood));
@@ -27,15 +28,21 @@ console.log("I can buy my favorite food from " + getTakeAwayAddress(myFavFood));
 
 function isVeggie(food) {
   // write code here
+  return food.isVeggie;
 }
 
-console.log("Is my favorite vegetarian? " + isVeggie(food));
+console.log("Is my favorite vegetarian? " + isVeggie(myFavFood));
 
 // 3. Declare a function "isLowCalorie" that accepts "food" as a parameter
 // and returns true if it has less than 600 calories, or false otherwise
 // write your own console.log() that calls the function to test it, as in the examples above!
 // no example code is provided here!
-
+function isLowCalorie(food) {
+  return food.caloriesPerPortion < 600;
+}
+console.log(
+  "Is my favorite food has less than 600 calories? " + isLowCalorie(myFavFood)
+);
 //---------------------------------------
 
 // 3. Declare a function "isSafeForNutAllergies" that accepts "food" as a parameter
@@ -43,6 +50,7 @@ console.log("Is my favorite vegetarian? " + isVeggie(food));
 
 function isSafeForNutAllergies(food) {
   //write code here
+  return !food.ingredients.find((ingredient) => ingredient.includes("sesame"));
 }
 
 console.log(
