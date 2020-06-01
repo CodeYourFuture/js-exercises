@@ -2,6 +2,7 @@
 function getNumber() {
     return Math.random() * 10;
 }
+// 
 
 // Add comments to explain what this function does. You're meant to use Google!
 function s(w1, w2) {
@@ -9,6 +10,10 @@ function s(w1, w2) {
 }
 
 function concatenate(firstWord, secondWord, thirdWord) {
+    let sum = firstWord + " " + secondWord + " " + thirdWord; 
+    console.log(sum);
+    return sum;
+
     // Write the body of this function to concatenate three words together
     // Look at the test case below to understand what to expect in return 
 }
