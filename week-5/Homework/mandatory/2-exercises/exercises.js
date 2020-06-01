@@ -39,7 +39,17 @@
  */
 function insertPeopleData(arrayOfPeople) {
   let content = document.querySelector("#content");
-  //Write your code in here
+  
+ arrayOfPeople.forEach(person => {
+
+    let nameOfPerson = document.createElement('h1')
+      let jobOfPerson = document.createElement('h2')
+      nameOfPerson.textContent = person.name
+      jobOfPerson.textContent = person.job
+    content.appendChild(nameOfPerson)     
+    content.appendChild(jobOfPerson)
+
+  }) 
 }
 
 /**
@@ -52,7 +62,13 @@ function insertPeopleData(arrayOfPeople) {
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
 function insertShoppingList(shoppingList) {
-  //Write your code in here
+  const unOrderedList= document.createElement('ul');
+content.appendChild(unOrderedList);
+shoppingList.forEach(items => {
+     let listItem = document.createElement('li');
+    listItem.textContent = items;
+    unOrderedList.appendChild(listItem)
+ })
 }
 
 /**
@@ -71,8 +87,39 @@ function insertShoppingList(shoppingList) {
  * 
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/*
  */
+
 function insertBooks(books) {
-  //Write your code in here
+
+
+
+  let bookShelfEl = document.createElement('ul');
+  content.appendChild(bookShelfEl);
+  books.forEach(book => {
+    let bookListEl = document.createElement('li');
+    let pEl = document.createElement('p')
+    bookShelfEl.appendChild(pEl)
+    bookListEl.textContent = `${book.title} by ${book.author}`
+    pEl.appendChild(bookListEl)
+
+    
+})
+  
+
+
+var ArrayOfImages = ['https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY475_.jpg', 
+'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg',
+ 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1564417439l/52715562._SX318_SY475_.jpg'
+]; //bookcover images
+ArrayOfImages.forEach(function(image) {    // for each link l in ArrayOfImages
+  var img = document.createElement('img'); // create an img element
+  
+  img.src = image;                         // set its src to the link 
+  img.setAttribute('height', '300px')
+  img.style.padding = "50px 10px 20px 30px";
+  bookShelfEl.appendChild(img);          // append it to the body 
+  
+});
+  
 }
 
 //
