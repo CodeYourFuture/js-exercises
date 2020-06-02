@@ -13,13 +13,13 @@ Complete the exercises below.
 
 // Here is your 
 let weeklyMealPlan = {
-    monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
-    tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
-    wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
-    thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
-    fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
-    saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-    sunday: []
+  monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
+  tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
+  wednesday: ["Orange Juice", "Apple", "Ananas", "Black tea"],
+  thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
+  fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
+  saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
+  sunday: []
 };
 
 /*
@@ -46,37 +46,38 @@ let weeklyGroceriesToBuy = [];
 
 // solution 3
 for (let key in weeklyMealPlan) {
-    weeklyGroceriesToBuy = weeklyGroceriesToBuy.concat(weeklyMealPlan[key])
+  weeklyGroceriesToBuy = weeklyGroceriesToBuy.concat(weeklyMealPlan[key])
 }
 console.log(weeklyGroceriesToBuy)
-    /*, 
-            Exercise 2:
-              Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
-              Then use console.log() to print out the list.
-            */
-    // Gather weekend item names into this array
+/*, 
+        Exercise 2:
+          Loop through your list again, but now only collect the weekend items into the weeklyGroceriesToBuy array.
+          Then use console.log() to print out the list.
+        */
+// Gather weekend item names into this array
 
 /// Solution 1
 // let weekendGroceriesToBuy = []
 // let weekendDays = ["saturday", "sunday"]
 // for (let key in weeklyMealPlan) {
-//     if (weekendDays.includes(key)) {
-//         let values = weeklyMealPlan[key]
-//         for (let item of values) {
-//             weekendGroceriesToBuy.push(item)
-//         }
+//   console.log('keeey:' + key)
+//   if (weekendDays.includes(key)) {
+//     let values = weeklyMealPlan[key]
+//     for (let item of values) {
+//       weekendGroceriesToBuy.push(item)
 //     }
+//   }
 // }
 // console.log(weekendGroceriesToBuy)
 
 
 /// Solution 2
-let weekendGroceriesToBuy = []
+// let weekendGroceriesToBuy = []
 let weekendDays = ["saturday", "sunday"]
-for (let key in weeklyMealPlan) {
-    if (weekendDays.includes(key)) {
-        weekendGroceriesToBuy = weekendGroceriesToBuy.concat(weeklyMealPlan[key])
-    }
+for (let item in weeklyMealPlan) {
+  if (weekendDays.includes(item)) {
+    weekendGroceriesToBuy = weekendGroceriesToBuy.concat(weeklyMealPlan[item])
+  }
 }
 console.log(weekendGroceriesToBuy)
 
@@ -91,16 +92,16 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let numberOfItemsPerWeak = {
-    monday: 1,
-    tuesday: 2,
-    wednesday: 3,
-    thursday: 0,
-    fridray: 0,
-    saturday: 0,
-    sunday: 0
+  monday: 1,
+  tuesday: 2,
+  wednesday: 3,
+  thursday: 0,
+  fridray: 0,
+  saturday: 0,
+  sunday: 0
 };
 
 for (let day in weeklyMealPlan) {
-    numberOfItemsPerWeak[day] = weeklyMealPlan[day].length
+  numberOfItemsPerWeak[day] = weeklyMealPlan[day].length
 }
 console.log(numberOfItemsPerWeak)
