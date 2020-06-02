@@ -118,7 +118,7 @@ books.forEach(function (book) {
   liEl.appendChild(coverImg)
   coverImg.setAttribute('height', '200px')
 coverImg.style.alignItems = 'center'
-if (book.alreadyRead === true){
+if (book.alreadyRead){
  
   liEl.style.backgroundColor = 'green'
 
@@ -126,8 +126,8 @@ if (book.alreadyRead === true){
   
   liEl.style.backgroundColor= 'red'
 }
-liEl.style.padding = '20px 0px 20px 50px'
-liEl.style.width = '350px'
+liEl.style.padding = '20px 20px 20px 50px'
+liEl.style.width = '200px'
 coverImg.style.alignContent = 'center'
 
 })
