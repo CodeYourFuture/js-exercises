@@ -52,6 +52,8 @@ function insertPeopleData(arrayOfPeople) {
   }) 
 }
 
+
+
 /**
  *
  * Create a list of shopping items using an unordered HTML list.
@@ -89,36 +91,54 @@ shoppingList.forEach(items => {
  */
 
 function insertBooks(books) {
-
-
-
-  let bookShelfEl = document.createElement('ul');
-  content.appendChild(bookShelfEl);
-  books.forEach(book => {
-    let bookListEl = document.createElement('li');
-    let pEl = document.createElement('p')
-    bookShelfEl.appendChild(pEl)
-    bookListEl.textContent = `${book.title} by ${book.author}`
-    pEl.appendChild(bookListEl)
-
-    
-})
-  
-
-
-var ArrayOfImages = ['https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY475_.jpg', 
+let ArrayOfImages= ['https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442460745l/840._SY475_.jpg', 
 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1295465264l/8884400.jpg',
  'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1564417439l/52715562._SX318_SY475_.jpg'
 ]; //bookcover images
-ArrayOfImages.forEach(function(image) {    // for each link l in ArrayOfImages
-  var img = document.createElement('img'); // create an img element
-  
-  img.src = image;                         // set its src to the link 
-  img.setAttribute('height', '300px')
-  img.style.padding = "50px 10px 20px 30px";
-  bookShelfEl.appendChild(img);          // append it to the body 
+
+ArrayOfImages.forEach((item, index) => {
+  books[index].coverImageUrl = item;
   
 });
+
+books.forEach(function (book) {
+  let ulEl = document.createElement('ul');
+  content.appendChild(ulEl)
+  //creating li
+  let liEl = document.createElement('li');
+     ulEl.appendChild(liEl)
+     liEl.textContent = `${book.title}` 
+     let pEl = document.createElement('p');
+     liEl.appendChild(pEl)
+     pEl.textContent =`by ${book.author}`
+     liEl.setAttribute('width', '100px')
+  //creating img
+    let coverImg = document.createElement("img")
+      coverImg.src = book.coverImageUrl;
+  liEl.appendChild(coverImg)
+  coverImg.setAttribute('height', '200px')
+coverImg.style.alignItems = 'center'
+if (book.alreadyRead === true){
+ 
+  liEl.style.backgroundColor = 'green'
+
+} else {
+  
+  liEl.style.backgroundColor= 'red'
+}
+liEl.style.padding = '20px 0px 20px 50px'
+liEl.style.width = '350px'
+coverImg.style.alignContent = 'center'
+
+})
+
+
+
+
+
+
+
+
   
 }
 
