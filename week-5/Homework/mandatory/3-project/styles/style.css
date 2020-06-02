@@ -6,9 +6,8 @@
  * Class: Scotland 2017
  */
 
-html,
-body {
-	font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+html, body {
+	font-family: "Source Sans Pro", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .site-footer {
@@ -21,7 +20,7 @@ body {
 	padding-bottom: 2em;
 }
 
-.navbar-brand > img {
+.navbar-brand>img {
 	max-height: 40px;
 	width: auto;
 }
@@ -33,11 +32,13 @@ body {
 }
 
 /* Buttons */
+
 .btn {
 	border-radius: 0.15em;
 }
 
 /* Alert */
+
 .alert {
 	position: relative;
 	margin-top: 2em;
@@ -63,11 +64,13 @@ body {
 }
 
 /* Jumbotron */
+
 .jumbotron {
 	border-radius: 0;
 }
 
 /* Headings */
+
 .heading-underline {
 	position: relative;
 	margin-bottom: 2em;
@@ -90,6 +93,7 @@ body {
 }
 
 /* Article */
+
 .article {
 	margin-bottom: 2em;
 }
@@ -105,8 +109,7 @@ body {
 	text-decoration: uppercase;
 }
 
-.article-read-more a:hover,
-.article-read-more a:focus {
+.article-read-more a:hover, .article-read-more a:focus {
 	text-decoration: none;
 }
 
@@ -129,18 +132,18 @@ body {
 
 #addArticleBtn {
 	margin-left: 20px;
-    height: 37px;
+	height: 37px;
 }
 
 .colorButton {
 	margin-bottom: 20px;
-    margin-right: 20px;
-    width: 100px;
-    height: 50px;
+	margin-right: 20px;
+	width: 100px;
+	height: 50px;
 }
 
 #blueBtn {
-    background: #588fbd;
+	background: #588fbd;
 }
 
 #orangeBtn {
@@ -152,8 +155,7 @@ body {
 }
 
 @media screen and (min-width: 992px) {
-
-	.navbar-brand > img {
-	   max-height: 80px;
+	.navbar-brand>img {
+		max-height: 80px;
 	}
 }

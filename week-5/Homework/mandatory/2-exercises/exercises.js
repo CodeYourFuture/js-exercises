@@ -39,6 +39,14 @@
  */
 function insertPeopleData(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach(p => {
+    let h1 = document.createElement('h1')
+    h1.innerText = p.name
+    let h2 = document.createElement('h2')
+    h2.innerText = p.job
+    content.appendChild(h1)
+    content.appendChild(h2)
+  })
   //Write your code in here
 }
 
@@ -52,7 +60,13 @@ function insertPeopleData(arrayOfPeople) {
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
 function insertShoppingList(shoppingList) {
-  //Write your code in here
+  let unorderedList = document.createElement('ul')
+  shoppingList.forEach(p => {
+    let listItem = document.createElement('li')
+    listItem.innerText = p
+    unorderedList.appendChild(listItem)
+  })
+  content.appendChild(unorderedList)
 }
 
 /**
@@ -72,7 +86,26 @@ function insertShoppingList(shoppingList) {
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com
  */
 function insertBooks(books) {
-  //Write your code in here
+  let bookslist = document.createElement('ul')
+  bookslist.style.display = 'flex'
+  let bookImgSrc = ['./img/1.jpg', './img/2.jpg', './img/3.jpg']
+  books.forEach((p, i) => {
+    let book = document.createElement('li')
+    book.style.width = '350px'
+    book.style.margin = '10px'
+    book.style.listStyle = 'none'
+    p.alreadyRead ? book.style.backgroundColor = 'green' : book.style.backgroundColor = 'red'
+    let bookName = document.createElement('p')
+    bookName.innerText = `${p.title}-${p.author}`
+    let bookImg = document.createElement('img')
+    bookImg.style.width = '200px'
+    bookImg.style.margin = '5px'
+    bookImg.src = bookImgSrc[i]
+    book.appendChild(bookName)
+    book.appendChild(bookImg)
+    bookslist.appendChild(book)
+  })
+  content.appendChild(bookslist)
 }
 
 //
