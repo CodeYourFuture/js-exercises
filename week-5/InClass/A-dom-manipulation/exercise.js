@@ -16,7 +16,21 @@ Write JavaScript below that logs:
 
 */
 
+// const paragraphs = document.getElementsByTagName('p')
+// const paragraphs1 = document.querySelectorAll('p')
 
+// console.log(paragraphs)
+
+// const diveewe = document.getElementsByTagName('div')[0]
+// console.log(diveewe)
+// // const div = document.querySelector('div')
+// // console.log(div)
+
+// const jumbotron = document.getElementById('jumbotron-text')
+// console.log(jumbotron)
+
+const p = document.querySelector('.primary-content p')
+console.log(p)
 /*
 Task 2
 ======
@@ -48,3 +62,12 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+
+let largerLinksBtn = document.getElementById('largerLinksBtn')
+let links = document.querySelectorAll('a')
+console.log(links, links.textContent)
+function increaseText() {
+    links.innerHtml.style.fontSize = '2em'
+}
+
+largerLinksBtn.addEventListener('click', increaseText)
