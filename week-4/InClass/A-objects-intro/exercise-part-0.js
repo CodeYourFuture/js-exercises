@@ -8,7 +8,7 @@ Try to think of as many properties as you can!
 
 let laptop = {
     brand: "HP",
-    screenSize: 13,
+    screenSize: 15,
     processor: "i5",
     isTouchable : false
   };

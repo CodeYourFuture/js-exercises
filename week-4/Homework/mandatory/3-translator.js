@@ -27,8 +27,19 @@ or in the event of an invalid input.
 */
 
 function greet(language) {
+ 
+    if (Object.keys(languages).includes(language.toLowerCase())){
+      return languages[language];
+    }else{ 
+    return "Welcome";
+    }
   //write your code here
 }
+
+console.log(greet("irish"));
+console.log(greet("IRISH"));
+console.log(greet("Turkish"));
+console.log(greet("*%-+"));
 
 /*
 Test your function works correctly calling it inside a console.log(), for each one of these cases:

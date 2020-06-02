@@ -8,10 +8,16 @@ let kitten2 = {
   weeksOld: 1,
 };
 
-let kittens = [kitten1, kitten2];
+let kitten3 = {
+  name: "Billy",
+  weeksOld: 1,
+};
+
+let kittens = [kitten1, kitten2,kitten3];
 
 function getName(kitten) {
-  return kitten.name.length === 5;
+  if (kitten.name.length >= 5)
+  return kitten.name;
 }
 
-kittens.map(getName); // should return ["Fluffy", "Megatron", "Billy"]
+console.log(kittens.map(getName)); // should return ["Fluffy", "Megatron", "Billy"]

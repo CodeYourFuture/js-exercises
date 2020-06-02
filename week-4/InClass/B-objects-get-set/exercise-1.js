@@ -11,7 +11,9 @@ let kitten = {
 // YOUR CODE GOES BELOW HERE
 
 
-
+console.log(kitten.ageMonths);
+console.log(kitten.isFemale);
+console.log(kitten.furColour);
 
 
 
