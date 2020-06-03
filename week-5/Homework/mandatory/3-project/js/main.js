@@ -51,6 +51,8 @@ function submitForm(e) {
     formControl.forEach(p => {
         if (p.value.length > 0) {
             p.type === 'email' && p.value.includes('@') ? alert('thank you for filling out the form') : alert('please check your e-mail adresse')
+        } else {
+            alert('please fill required places in the form')
         }
     })
     formControl.forEach(p => p.value = '')
