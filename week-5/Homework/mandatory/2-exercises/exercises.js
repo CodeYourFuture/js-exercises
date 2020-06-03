@@ -40,6 +40,15 @@
 function insertPeopleData(arrayOfPeople) {
   let content = document.querySelector("#content");
   //Write your code in here
+  
+  for (let i = 0; i < arrayOfPeople.length ; i ++) {
+    let name  = document.createElement("h1");
+    let job = document.createElement("h2");
+    name.innerText = arrayOfPeople[i].name;
+    job.innerText = arrayOfPeople[i].job;
+    content.append(name);
+    content.append(job);
+  }
 }
 
 /**
@@ -53,7 +62,16 @@ function insertPeopleData(arrayOfPeople) {
  */
 function insertShoppingList(shoppingList) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let myList = document.createElement("ul");
+  content.appendChild(myList)
+  for (let i = 0; i < shoppingList.length ; i ++) {
+    let tempLi = document.createElement("li")
+    tempLi.innerText = shoppingList[i];
+    myList.append(tempLi)
+  }
 }
+
 
 /**
  * I'd like to display my three favorite books inside a nice webpage!
@@ -73,6 +91,29 @@ function insertShoppingList(shoppingList) {
  */
 function insertBooks(books) {
   //Write your code in here
+  let images = ["https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTcej0xfvRf7aB-hIonqVwHAgrxSOyUyEAt_z9w1jKmMPudjZG5ZIqZKXqxhmgoBVmmfk3e3b_e4gPkVfKYmn4bAZj6fy9cfL8Rsv7dgi7-&usqp=CAY",
+  "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg",
+  "https://imagery.pragprog.com/products/595/tpp20.jpg?1557173963"]
+  let content = document.querySelector("#content");
+  let myList = document.createElement("ul");
+  myList.className = "ul";
+  content.appendChild(myList)
+  for (let i = 0; i < books.length ; i ++) {
+    let tempLi = document.createElement("li");
+    tempLi.className = "li";
+    let para = document.createElement("p");
+    let image = document.createElement("img");
+    image.src = images[i];
+    image.width = "182";
+    image.height = "277";
+    tempLi.appendChild(para);
+    tempLi.appendChild(image);
+    para.innerText = books[i].title + " - " + books[i].author;
+    myList.append(tempLi)
+    if (books[i].alreadyRead === true) {
+      tempLi.style.backgroundColor = "green"
+    } else { tempLi.style.backgroundColor = "red"}
+  }
 }
 
 //

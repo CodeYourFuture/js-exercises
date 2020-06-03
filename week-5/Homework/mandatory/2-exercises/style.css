@@ -10,7 +10,20 @@ html,
 body {
 	font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
+.ul {
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: calc( 100% - 41px);
+}
 
+.li {
+    width: calc(25% - 51px);
+    margin: 15px;
+    padding: 10px;
+    min-width: 350px;
+}
 .site-footer {
 	margin-top: 4em;
 }
