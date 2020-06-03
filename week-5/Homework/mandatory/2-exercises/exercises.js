@@ -88,12 +88,17 @@ function insertShoppingList(shoppingList) {
 function insertBooks(books) {
   let list = document.createElement("ul");
   let imageList = [
-    "http://ecx.images-amazon.com/images/I/41j2ODGkJDL._AA115_.jpg",
-    "https://images-na.ssl-images-amazon.com/images/I/418M2053aNL._SX396_BO1,204,203,200_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg",
     "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/418M2053aNL._SX396_BO1,204,203,200_.jpg",
   ];
   books.forEach(function (item, index) {
     let listItem = document.createElement("li");
+    if (item.alreadyRead) {
+      listItem.style.backgroundColor = "green";
+    } else {
+      listItem.style.backgroundColor = "red";
+    }
     let itempara = document.createElement("p");
     itempara.textContent = `${item.title} : ${item.author}`;
     listItem.appendChild(itempara);
@@ -102,6 +107,13 @@ function insertBooks(books) {
     let bookImg = document.createElement("img");
     bookImg.src = imageList[index];
     listItem.appendChild(bookImg);
+    bookImg.style.width = "250";
+    bookImg.style.height = "350";
+    listItem.style.width = "350";
+    listItem.style.padding = "20";
+    list.style.listStyle = "none";
+    list.style.display = "flex";
+    list.style.justifyContent = "space-around";
   });
   content.appendChild(list);
 }
