@@ -84,8 +84,26 @@ function insertShoppingList(shoppingList) {
  *
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/*
  */
+
 function insertBooks(books) {
-  //Write your code in here
+  let list = document.createElement("ul");
+  let imageList = [
+    "http://ecx.images-amazon.com/images/I/41j2ODGkJDL._AA115_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/418M2053aNL._SX396_BO1,204,203,200_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg",
+  ];
+  books.forEach(function (item, index) {
+    let listItem = document.createElement("li");
+    let itempara = document.createElement("p");
+    itempara.textContent = `${item.title} : ${item.author}`;
+    listItem.appendChild(itempara);
+    list.appendChild(listItem);
+
+    let bookImg = document.createElement("img");
+    bookImg.src = imageList[index];
+    listItem.appendChild(bookImg);
+  });
+  content.appendChild(list);
 }
 
 //
