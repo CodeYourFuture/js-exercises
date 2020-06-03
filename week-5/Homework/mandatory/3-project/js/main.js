@@ -32,19 +32,31 @@ const form = document.getElementsByTagName('form')
 const formControl = document.querySelectorAll('.form-control')
 const submitBtn = document.querySelector('form button')
 
-console.log(form)
+// Solution 1
+
+// function submitForm(e) {
+//     e.preventDefault()
+//     for (let i = 0; i < formControl.length; i++) {
+//         if (formControl[i].value.length > 0) {
+//             formControl[0].value.includes('@') ? alert('thank you for filling out the form') : alert('please check your e-mail adresse')
+//         } else { alert('please fill required places in the form') }
+//     }
+//     formControl.forEach(p => p.value = '')
+// }
+
+// Solution 2
 
 function submitForm(e) {
     e.preventDefault()
-    for (let i = 0; i < formControl.length; i++) {
-        if (formControl[i].value.length > 0) {
-            formControl[0].value.includes('@') ? alert('thank you for filling out the form') : alert('please check your e-mail adresse')
-        } else { alert('please fill required places in the form') }
-    }
+    formControl.forEach(p => {
+        if (p.value.length > 0) {
+            p.type === 'email' && p.value.includes('@') ? alert('thank you for filling out the form') : alert('please check your e-mail adresse')
+        }
+    })
     formControl.forEach(p => p.value = '')
 }
 
-submitBtn.addEventListener('click', submitForm)
 
+submitBtn.addEventListener('click', submitForm)
 
 
