@@ -96,18 +96,25 @@ let ArrayOfImages= ['https://i.gr-assets.com/images/S/compressed.photo.goodreads
  'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1564417439l/52715562._SX318_SY475_.jpg'
 ]; //bookcover images
 
+let divEl = document.createElement('p'); // added this to make the layout of books in a row
+content.appendChild(divEl)
+
 ArrayOfImages.forEach((item, index) => {
   books[index].coverImageUrl = item;
   
 });
 
 books.forEach(function (book) {
+
+  
   let ulEl = document.createElement('ul');
-  content.appendChild(ulEl)
+  
+  divEl.appendChild(ulEl)
   //creating li
   let liEl = document.createElement('li');
      ulEl.appendChild(liEl)
      liEl.textContent = `${book.title}` 
+     // creating p
      let pEl = document.createElement('p');
      liEl.appendChild(pEl)
      pEl.textContent =`by ${book.author}`
@@ -129,18 +136,15 @@ if (book.alreadyRead){
 liEl.style.padding = '20px 20px 20px 50px'
 liEl.style.width = '200px'
 coverImg.style.alignContent = 'center'
+divEl.style.display= 'flex';
+divEl.style.flexWrap = 'wrap';
 
 })
-
-
-
-
-
-
-
-
-  
+ 
 }
+
+
+
 
 //
 //

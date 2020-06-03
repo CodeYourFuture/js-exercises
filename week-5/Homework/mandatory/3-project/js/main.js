@@ -66,10 +66,44 @@ If all the fields are valid, when you click **Submit** it should:
 
 - Display an alert to thank you for filling out the for.
 - Blank out (make empty) all the text fields
+*/
+ 
 
-**Hints**
-- [How to obtain values from form fields](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-events/pt/processing-forms-with-events)
-- [How to use alert](https://www.w3schools.com/jsref/met_win_alert.asp)
 
-**Important hint:** In your function that handles clicks on the `Submit` button you will need to call `event.preventDefault()` to stop the browser from refreshing the page. To read more on how to do this: https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault. Revisit the relevant part on [Kahnacademy](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-events/pt/preventing-default-behavior-of-events) for further practice.
- */
+let submitBtn = document.querySelector('form button');
+
+submitBtn.addEventListener("click", function() {
+        event.preventDefault();
+
+let yourName= document.getElementById('example-text-input');
+let describeText = document.getElementById('exampleTextarea');
+let email= document.getElementById('exampleInputEmail1');
+
+
+      if (yourName.value.length <= 0 ) {
+         yourName.style.backgroundColor = "red";
+
+        (describeText.value.length <= 0) 
+        describeText.style.backgroundColor = "red";
+
+        (email.value.length <= 0) 
+        email.style.backgroundColor= "red";
+
+        (!email.value.includes("@")) 
+        email.style.backgroundColor = "red";
+        alert("Email is not correct");
+      }
+
+       
+        
+        
+        else {
+            alert ("Thank you for filling out this form")
+          
+        }
+}) 
+ 
+
+
+
+
