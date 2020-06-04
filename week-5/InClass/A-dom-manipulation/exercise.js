@@ -15,16 +15,21 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
-
-
+console.log(document.querySelectorAll('p'))
+console.log(document.querySelector('.site-header'))
+console.log(document.getElementById('jumbotron-text'))
+console.log(document.querySelectorAll('.primary-content p').length)
 /*
 Task 2
 ======
 
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
+const alertButton = document.getElementById('alertBtn')
 
-
+alertButton.addEventListener('click', function(){
+    alert("Thanks for visiting Bikes for Refugees!")
+})
 /*
 Task 3
 =======
@@ -32,7 +37,9 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
-
+const backgroundColorButton = document.querySelector('#bgrChangeBtn');
+const changeBackgroundColour = () => document.body.style.backgroundColor = 'green';
+backgroundColorButton.addEventListener('click', changeBackgroundColour);
 /*
 Task 4
 ======

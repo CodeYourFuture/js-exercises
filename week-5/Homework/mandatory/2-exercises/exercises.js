@@ -38,8 +38,20 @@
  * </div>
  */
 function insertPeopleData(arrayOfPeople) {
-  let content = document.querySelector("#content");
+
   //Write your code in here
+  let content = document.querySelector("#content");
+  
+  for (let i = 0 ; i < arrayOfPeople.length ; i++){
+    let h1El = document.createElement('h1')
+  let h2El = document.createElement('h2')
+     h1El.textContent =  arrayOfPeople[i].name
+     h2El.textContent = arrayOfPeople[i].job
+     
+    content.appendChild(h1El);
+    content.appendChild(h2El);
+  }
+ 
 }
 
 /**
@@ -51,10 +63,18 @@ function insertPeopleData(arrayOfPeople) {
  *
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
+
 function insertShoppingList(shoppingList) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let ulList = document.createElement('ul')
+  content.appendChild(ulList)
+  for(let i = 0 ; i < shoppingList.length ; i++){
+    let liList = document.createElement('li')
+    liList.textContent = shoppingList[i]
+    ulList.appendChild(liList)
+  }
 }
-
 /**
  * I'd like to display my three favorite books inside a nice webpage!
  * 
@@ -73,6 +93,33 @@ function insertShoppingList(shoppingList) {
  */
 function insertBooks(books) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let headingEl = document.createElement('h1')
+  headingEl.textContent = 'Book List'
+  content.appendChild(headingEl)
+  let ulList = document.createElement('ul')
+  content.appendChild(ulList)
+  for(let i = 0 ; i < books.length ; i++){
+    let liList = document.createElement('li')
+    liList.className = 'li-style'
+     let pEl = document.createElement('p')
+    pEl.innerHTML = books[i].title + ' - ' + books[i].author
+     liList.appendChild(pEl)
+     ulList.appendChild(liList)
+     let imgEl = document.createElement('img')
+     imgEl.style.height = '300px'
+     liList.appendChild(imgEl)
+    if (books[i].alreadyRead == true){
+      liList.style.backgroundColor = 'green'
+    } else {
+      liList.style.backgroundColor = 'red'
+    }
+  }
+  let imgLinks = document.getElementsByTagName('img')
+  imgLinks[0].src = 'https://m.media-amazon.com/images/I/416Hql52NCL.jpg'
+  imgLinks[1].src ='https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg'
+  imgLinks[2].src ='https://images-na.ssl-images-amazon.com/images/I/418M2053aNL._SX258_BO1,204,203,200_.jpg'
+  
 }
 
 //

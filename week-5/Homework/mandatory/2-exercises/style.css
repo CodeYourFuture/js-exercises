@@ -6,6 +6,14 @@
  * Class: Scotland 2017
  */
 
+.li-style{
+ padding: 20px;
+ width: 30em;
+ margin: 20px;
+ list-style-type:none;
+}
+
+
 html,
 body {
 	font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
