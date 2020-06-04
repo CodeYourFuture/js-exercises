@@ -15,18 +15,15 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
-  
-    for (var i = 0; i < arrayOfPeople.length; i++) {
-      
-        
-            let nameElement = document.createElement('h1');
-            let jobElement = document.createElement('h2');
-            nameElement.textContent = arrayOfPeople[i].name;
-            jobElement.textContent = arrayOfPeople[i].job;
-            content.appendChild(nameElement);
-         content.appendChild(jobElement);
-      
-   }
+
+  for (var i = 0; i < arrayOfPeople.length; i++) {
+    let nameElement = document.createElement("h1");
+    let jobElement = document.createElement("h2");
+    nameElement.textContent = arrayOfPeople[i].name;
+    jobElement.textContent = arrayOfPeople[i].job;
+    content.appendChild(nameElement);
+    content.appendChild(jobElement);
+  }
 }
 
 /**
@@ -37,13 +34,13 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-    let content = document.querySelector("#content"); //select div
+  let content = document.querySelector("#content"); //select div
   let ulList = document.createElement("ul"); //create ul element
   content.appendChild(ulList); // insert ul inside div
   for (var i = 0; i < shopping.length; i++) {
     let liItems = document.createElement("li"); //create li element
     liItems.textContent = shopping[i]; //grab array items
-    ulList.appendChild(liItems);  //insert li items to ul
+    ulList.appendChild(liItems); //insert li items to ul
   }
 }
 
@@ -74,38 +71,34 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 
-
 function exerciseThree(books) {
   let content = document.querySelector("#content"); //select div
   let ulList = document.createElement("ul"); //create ul element
   content.appendChild(ulList); // insert ul inside div
-  ulList.style.listStyle = "none";  //lu position - flex - wrap 
-  ulList.style.display = "flex"; 
+  ulList.style.listStyle = "none"; //lu position - flex - wrap
+  ulList.style.display = "flex";
   ulList.style.flexWrap = "wrap";
   ulList.style.padding = "20px";
   ulList.style.width = "calc (100% - 40px)";
-  
 
   for (var i = 0; i < books.length; i++) {
     let liItems = document.createElement("li"); //create li element
-    ulList.appendChild(liItems);  //insert li items to ul
+    ulList.appendChild(liItems); //insert li items to ul
     let bookTitleAndAuthor = document.createElement("p"); //create a p element
     bookTitleAndAuthor.textContent = `${books[i].title} - ${books[i].author}`; //grab array items
     liItems.appendChild(bookTitleAndAuthor); //insert p into li
-    let bookImage = document.createElement("img"); //create img element  
+    let bookImage = document.createElement("img"); //create img element
     liItems.appendChild(bookImage); // insert img inside li
-    
+
     liItems.style.padding = "10px";
     liItems.style.margin = "20px";
     liItems.style.width = "350px";
-    
-    if (books[i].alreadyRead) {
-      liItems.style.backgroundColor = 'green'
-    } else {
-      liItems.style.backgroundColor = 'red'
-    } 
 
-    
+    if (books[i].alreadyRead) {
+      liItems.style.backgroundColor = "green";
+    } else {
+      liItems.style.backgroundColor = "red";
+    }
   }
 
   let img1 = document.querySelector("#content > ul > li:nth-child(1) > img");
@@ -114,8 +107,6 @@ function exerciseThree(books) {
   img1.src = "images/The Design of Everyday Things.jpg";
   img2.src = "images/The Most Human Human.jpg";
   img3.src = "images/The Pragmatic Programmer.jpeg";
-  
-
 } 
  
      
