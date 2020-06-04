@@ -18,6 +18,10 @@
  */
 // LEAVE YOUR ANSWER HERE (THIS IS OPTIONAL)
 
+// It doesn't work--Because the webpage evaluates the `<script>` tag before it sees the `content` id.
+//And it says, "Uh-oh, I haven't even seen `content` yet,"And you're trying to manipulate it! That can't happen."
+//That's why we have to put our `<script>` tag at the bottom of the page.So that the webpage sees the `<body>`tag and other "id"  first,
+
 
 /**
  * This function recieves a lists of people. Each object should contain the name and the occupation of a person.
@@ -38,10 +42,18 @@
  * </div>
  */
 function insertPeopleData(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  //Write your code in here
-}
+    let content = document.querySelector("#content");
+    //Write your code in here
+    for (var i = 0; i < arrayOfPeople.length; i++) {
+        const nameHeading = document.createElement("h1");
+        nameHeading.innerHTML = arrayOfPeople[i].name;
+        const jobHeading = document.createElement("h2");
+        jobHeading.innerHTML = arrayOfPeople[i].job;
+        content.appendChild(nameHeading);
+        content.appendChild(jobHeading);
 
+    }
+}
 /**
  *
  * Create a list of shopping items using an unordered HTML list.
@@ -52,7 +64,16 @@ function insertPeopleData(arrayOfPeople) {
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
 function insertShoppingList(shoppingList) {
-  //Write your code in here
+    //Write your code in here
+    let content = document.querySelector("#content");
+    const unorderedList = document.createElement("ul");
+    content.appendChild(unorderedList);
+    for (var i = 0; i < shoppingList.length; i++) {
+        const shoppingListItem = document.createElement("li");
+        shoppingListItem.innerHTML = shoppingList[i];
+        unorderedList.appendChild(shoppingListItem);
+
+    }
 }
 
 /**
@@ -72,7 +93,28 @@ function insertShoppingList(shoppingList) {
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com
  */
 function insertBooks(books) {
-  //Write your code in here
+    //Write your code in here
+    books[0].imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDU8QtShe3TZ2fVXkEJvleQCMwmYt05ROUG5AYf1okHiZF8TwsghWNkLgnGw&usqp=CAc"
+    books[1].imageUrl = "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg"
+    books[2].imageUrl = " https://images-na.ssl-images-amazon.com/images/I/418M2053aNL.jpg"
+    const unorderedList = document.createElement("ul");
+    content.appendChild(unorderedList);
+    for (var i = 0; i < books.length; i++) {
+        const bookItem = document.createElement("li");
+        const bookItemDetail = document.createElement("p");
+        bookItemDetail.innerHTML = books[i].title + " - " + books[i].author;
+        const bookItemImg = document.createElement("img");
+        bookItemImg.src = books[i].imageUrl;
+        if (books[i].alreadyRead)
+            bookItem.style.backgroundColor = "green";
+        else
+            bookItem.style.backgroundColor = "red";
+        bookItem.style.maxWidth = "500px";
+        unorderedList.appendChild(bookItem);
+        bookItem.appendChild(bookItemDetail);
+        bookItem.appendChild(bookItemImg);
+
+    }
 }
 
 //
@@ -86,33 +128,32 @@ function insertBooks(books) {
 //
 
 let people = [
-  { name: "Chris", job: "Teacher" },
-  { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+    { name: "Chris", job: "Teacher" },
+    { name: "Joanna", job: "Student" },
+    { name: "Boris", job: "Prime Minister" }
 ];
 
 insertPeopleData(people);
 
-let shopping = ["Milk", "Break", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
+let shopping = ["Milk", "Bread", "Eggs", "A Dinosaur", "Cake", "Sugar", "Tea"];
 
 insertShoppingList(shopping);
 
-const books = [
-  {
-    title: "The Design of Everyday Things",
-    author: "Don Norman",
-    alreadyRead: false
-  },
-  {
-    title: "The Most Human Human",
-    author: "Brian Christian",
-    alreadyRead: true
-  },
-  {
-    title: "The Pragmatic Programmer",
-    author: "Andrew Hunt",
-    alreadyRead: true
-  }
+const books = [{
+        title: "The Design of Everyday Things",
+        author: "Don Norman",
+        alreadyRead: false
+    },
+    {
+        title: "The Most Human Human",
+        author: "Brian Christian",
+        alreadyRead: true
+    },
+    {
+        title: "The Pragmatic Programmer",
+        author: "Andrew Hunt",
+        alreadyRead: true
+    }
 ];
 
 insertBooks(books);
