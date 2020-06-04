@@ -40,7 +40,25 @@
 function insertPeopleData(arrayOfPeople) {
   let content = document.querySelector("#content");
   //Write your code in here
+  //console.log(content);
+  
+  
+  for(var i = 0; i < arrayOfPeople.length; i++){
+    //console.log(arrayOfPeople.length);
+
+    let nameEls = document.createElement("h1");
+    let occupationEls = document.createElement("h2");
+    nameEls.innerHTML = arrayOfPeople[i].name;
+    let OccupationH2 = arrayOfPeople[i].job;
+    occupationEls.innerHTML = OccupationH2;
+    content.appendChild(nameEls);
+    content.appendChild(occupationEls);
+    
+  }
+  
+
 }
+
 
 /**
  *
@@ -53,6 +71,16 @@ function insertPeopleData(arrayOfPeople) {
  */
 function insertShoppingList(shoppingList) {
   //Write your code in here
+  let content = document.querySelector("#content");
+
+  let list = document.createElement('ul');
+  shoppingList.forEach(function (item){
+    let li = document.createElement('li');
+    li.textContent = item;
+    list.appendChild(li);
+  })
+  content.appendChild(list);
+
 }
 
 /**
@@ -73,6 +101,58 @@ function insertShoppingList(shoppingList) {
  */
 function insertBooks(books) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let list = document.createElement('ul');
+
+  for(let i = 0; i < books.length; i++){
+    let infoEls = document.createElement('li');
+    infoEls.innerHTML = books[i].title + " -" + books[i].author;
+    
+    content.appendChild(infoEls);
+    
+  }
+  content.appendChild(list);
+
+ let imgArr = ["https://miro.medium.com/max/1000/1*Qo27inBKBKY4Q4Pgk5KkbQ.png",
+                "https://images-na.ssl-images-amazon.com/images/I/51aKPFuUy1L._SX324_BO1,204,203,200_.jpg",
+                "https://imagery.pragprog.com/products/595/tpp20.jpg?1557173963"];
+
+ for(let j = 0; j <books.length; j++){
+ let paraEls = document.createElement('p');
+ 
+ //paraEls.innerHTML = books[j].title + " -" + books[j].author;
+
+ let imgEls = document.createElement('img');
+
+ let linkEls = document.createElement('a');
+
+ paraEls.innerHTML = books[j].title + " -" + books[j].author + linkEls;
+
+ if(books[j].alreadyRead === true){
+  paraEls.style.backgroundColor = "green";
+  
+ }else{
+  paraEls.style.backgroundColor = "red";
+ }
+
+ paraEls.style.marginRight = 0;
+ 
+ imgEls.src = imgArr[j];
+ imgEls.height = 250;
+
+ linkEls.href = imgEls.src;
+ linkEls.target = "_blank";
+
+ content.appendChild(paraEls);
+ 
+ paraEls.appendChild(linkEls);
+ linkEls.appendChild(imgEls);
+
+ // I know I am doing something wrong here, but cant figure out what
+ 
+ }
+  
+
 }
 
 //
