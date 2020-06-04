@@ -139,7 +139,7 @@ liEl.style.width = '200px'
 ulEl.style.display= 'flex';
 ulEl.style.flexWrap = 'wrap';
 ulEl.style.justifyContent= 'space-between'
-
+liEl.style.listStyle = 'none'
 
 })
  
