@@ -79,25 +79,25 @@ let yourName= document.getElementById('example-text-input');
 let describeText = document.getElementById('exampleTextarea');
 let email= document.getElementById('exampleInputEmail1');
 
+ if(email.value.length <= 0) {
+  email.style.backgroundColor= "red";
+}
+         
+else if  (yourName.value.length <= 0 ) {
+  yourName.style.backgroundColor = "red";
+}
 
-      if (yourName.value.length <= 0 ) {
-         yourName.style.backgroundColor = "red";
-
-        (describeText.value.length <= 0) 
-        describeText.style.backgroundColor = "red";
-
-        (email.value.length <= 0) 
-        email.style.backgroundColor= "red";
-
-        (!email.value.includes("@")) 
-        email.style.backgroundColor = "red";
-        alert("Email is not correct");
-      }
+else if (describeText.value.length <= 0) {
+describeText.style.backgroundColor = "red";
+}
+else if (!email.value.includes("@")) {
+email.style.backgroundColor = "red";
+        
+}          
+else {
+alert ("Thank you for filling out this form")
           
-          else {
-            alert ("Thank you for filling out this form")
-          
-        }
+ }
 }) 
  
 
