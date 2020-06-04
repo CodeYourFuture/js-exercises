@@ -93,11 +93,8 @@ let email= document.getElementById('exampleInputEmail1');
         email.style.backgroundColor = "red";
         alert("Email is not correct");
       }
-
-       
-        
-        
-        else {
+          
+          else {
             alert ("Thank you for filling out this form")
           
         }
