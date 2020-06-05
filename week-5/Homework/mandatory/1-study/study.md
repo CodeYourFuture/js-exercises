@@ -6,4 +6,4 @@
 
 # Watch
 
-- [Easy Way to Understand How the DOM Works](https://www.youtube.com/watch?v=2Tld4yyN_tw)
+- [Easy Way to Understand How the DOM Works](https://www.youtube.com/watch?v=2Tld4yyN_tw) //done

@@ -39,8 +39,20 @@
  */
 function insertPeopleData(arrayOfPeople) {
   let content = document.querySelector("#content");
-  //Write your code in here
+  arrayOfPeople.forEach(element => {
+    let createH1 = document.createElement('h1')
+    createH1.innerText = element.name
+    let createH2 = document.createElement('h2')
+    createH2.textContent = element.job
+    content.appendChild(createH1)
+    content.appendChild(createH2)
+
+  });
+
 }
+
+//Write your code in here
+
 
 /**
  *
@@ -52,8 +64,19 @@ function insertPeopleData(arrayOfPeople) {
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
 function insertShoppingList(shoppingList) {
-  //Write your code in here
+  let myList = document.createElement('ul')
+  // console.log(myList)
+  shoppingList.forEach(element => {
+    let item = document.createElement('li')
+    // console.log(item)
+    item.innerHTML = element
+    myList.appendChild(item)
+    content.appendChild(myList)
+
+
+  });
 }
+//Write your code in here
 
 /**
  * I'd like to display my three favorite books inside a nice webpage!
@@ -72,8 +95,37 @@ function insertShoppingList(shoppingList) {
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/*
  */
 function insertBooks(books) {
-  //Write your code in here
+  let chosenBook = ['https://productdork.com/uploads/default/original/1X/ddbda1150301e89cdf0119d84f2a7fb8930beffb.png', 'https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL.jpg', 'https://images-na.ssl-images-amazon.com/images/I/418M2053aNL.jpg']
+  let newList = document.createElement('ul')
+
+  books.forEach((element, index) => {
+    let bookList = document.createElement('li')
+    bookList.style.width = '300px'
+    let createP = document.createElement('p')
+    createP.innerHTML = `${element.title} - ${element.author}`;
+    bookList.appendChild(createP)
+    // console.log(bookList);
+    let createImg = document.createElement('img') // I don't know how to change between the photos?//
+    createImg.src = chosenBook[index]
+    createImg.alt = "books"
+    createImg.style.width = "250px"
+    newList.style.display = 'flex';
+    newList.style.justifyContent = "space-between" // why this instruction can't be applied on the document??//
+    bookList.appendChild(createImg)
+    console.log(createImg);
+    if (element.alreadyRead) {
+      bookList.style.backgroundColor = 'green'
+    }
+    else {
+      bookList.style.backgroundColor = 'red'
+    }
+
+    newList.appendChild(bookList)
+    content.appendChild(newList)
+
+  });
 }
+//Write your code in here
 
 //
 //
