@@ -42,7 +42,6 @@ let travelDestinations = [
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
-
 let destinationNamesWithin500Kms = travelDestinations
   .filter((place) => place.distanceKms <= 500)
   .map((place) => place.destinationName); // Complete here
@@ -57,6 +56,17 @@ let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
       place.distanceKms >= 300 && place.transportations.includes("train")
   )
   .map((place) => place.destinationName); // Complete here// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+
+/* let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .filter(
+    (place) =>
+      place.distanceKms >= 300 && place.transportations.includes("train")
+  )
+  .forEach((place) => console.log(place.destinationName)); */
+
+/* The variant with forEach does not pass the test and does not give expected result because it print out city's names in a column
+ */
+
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
