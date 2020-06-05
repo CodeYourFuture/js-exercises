@@ -53,7 +53,25 @@ let restaurants = [restaurant1, restaurant2, restaurant3];
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+function findAvailableRestaurants(restaurants, requiredNumber) {
+  return restaurants
+    .filter(
+      (place) => place.totalSeats - place.numberOfCustomers > requiredNumber
+    )
+    .map((place) => place.name);
+}
 
+function findRestaurantServingDish(restaurants, dish) {
+  return restaurants
+    .filter((place) => place.menu.includes(dish))
+    .map((place) => place.name);
+}
+
+function countNumberOfRestaurantsInArea(restaurants, area) {
+  return restaurants
+    .filter((place) => place.address.area.includes(area))
+    .map((place) => place.name).length;
+}
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */

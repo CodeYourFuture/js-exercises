@@ -42,3 +42,28 @@ let writers = [
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+/* for (let i = 0; i < writers.length; i++) {
+  console.log(
+    `Hi, my name is ${writers[i].firstName} ${writers[i].lastName}. I am ${writers[i].age} years old, and work as a ${writers[i].occupation}.`
+  );
+} */
+
+function greetingPrint(object) {
+  console.log(
+    `Hi, my name is ${object.firstName} ${object.lastName}. I am ${object.age} years old, and work as a ${object.occupation}.`
+  );
+}
+
+writers.forEach(greetingPrint);
+
+console.log("The authors are alive: ");
+
+writers.filter((writer) => writer.alive).forEach(greetingPrint);
+
+/* console.log(
+  "The authors are alive: ",
+  writers
+    .filter((writer) => writer.alive)
+    .map((writer) => writer.firstName + " " + writer.lastName)
+);
+ */
