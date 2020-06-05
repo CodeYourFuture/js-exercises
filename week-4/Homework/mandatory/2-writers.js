@@ -39,6 +39,41 @@ let writers = [
   },
 ];
 
+for (let i = 0; i < writers.length; i++) {
+  function firstName(obj) {
+    return obj[i].firstName;
+  }
+  function lastName(obj) {
+    return obj[i].lastName;
+  }
+  function age(obj) {
+    return obj[i].age;
+  }
+  function occupation(obj) {
+    return obj[i].occupation;
+  }
+  console.log(
+    "Hi, my name is " +
+      firstName(writers) +
+      lastName(writers) +
+      "." +
+      " I am " +
+      age(writers) +
+      " years old, and work as a " +
+      occupation(writers) +
+      "."
+  );
+}
 /*
 If you want an extra challenge, only `console.log()` the writers that are alive.
 */
+
+for (let i = 0; i < writers.length; i++) {
+  function isAlive(obj) {
+    if (obj[i].alive === true) {
+      console.log(obj[i].firstName + obj[i].lastName);
+      return obj[i].firstName + obj[i].lastName;
+    }
+  }
+  isAlive(writers);
+}
