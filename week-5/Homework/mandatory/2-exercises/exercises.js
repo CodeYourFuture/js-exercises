@@ -37,8 +37,16 @@
  *      <h2>Plumber</h2>
  * </div>
  */
-function insertPeopleData(arrayOfPeople) {
+function insertPeopleData(People) {
   let content = document.querySelector("#content");
+  for (let i = 0; i < people.length; i++) {
+    let name = document.createElement('h1');
+    let job = document.createElement('h2');
+    content.appendChild(name).textContent = people[i].name;
+    content.appendChild(job).textContent = people[i].job;
+    console.log(content)
+    
+  }
   //Write your code in here
 }
 
@@ -51,7 +59,15 @@ function insertPeopleData(arrayOfPeople) {
  *
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
-function insertShoppingList(shoppingList) {
+function insertShoppingList(shopping) {
+  let container = document.querySelector('#content');
+  let shoppingList = document.createElement('ul');
+  container.appendChild(shoppingList);
+  shopping.forEach(h => {
+    let items = document.createElement('li');
+     items.innerHTML = h;
+     shoppingList.appendChild(items)
+  });
   //Write your code in here
 }
 
@@ -71,9 +87,56 @@ function insertShoppingList(shoppingList) {
  * 
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com
  */
+
+ /*const books = [
+  {
+    title: "The Design of Everyday Things",
+    author: "Don Norman",
+    alreadyRead: false
+  },
+  {
+    title: "The Most Human Human",
+    author: "Brian Christian",
+    alreadyRead: true
+  },
+  {
+    title: "The Pragmatic Programmer",
+    author: "Andrew Hunt",
+    alreadyRead: true
+  }
+];*/
+
 function insertBooks(books) {
-  //Write your code in here
+  let images = ["https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTcej0xfvRf7aB-hIonqVwHAgrxSOyUyEAt_z9w1jKmMPudjZG5ZIqZKXqxhmgoBVmmfk3e3b_e4gPkVfKYmn4bAZj6fy9cfL8Rsv7dgi7-&usqp=CAY",
+  "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg",
+  "https://imagery.pragprog.com/products/595/tpp20.jpg?1557173963"]
+  
+  let content = document.querySelector("#content");
+  let booksList = document.createElement("ul");
+  booksList.className = "ul";
+  content.appendChild(booksList)
+  for (let i = 0; i < books.length ; i ++) {
+    let myBooks = document.createElement("li");
+    myBooks.className = "li";
+    let para = document.createElement("p");
+    let image = document.createElement("img");
+    image.src = images[i];
+    image.width = "260";
+    image.height = "200";
+    myBooks.appendChild(para);
+    myBooks.appendChild(image);
+    para.innerText = books[i].title + " - " + books[i].author;
+    booksList.append(myBooks)
+    booksList.style.display = "flex";
+    booksList.style.margin = "30px";
+    //booksList.style.justifyContent = "space-between"
+    if (books[i].alreadyRead === true) {
+      myBooks.style.backgroundColor = "green"
+    } else { myBooks.style.backgroundColor = "red"}
+  }
 }
+  //Write your code in here
+
 
 //
 //
