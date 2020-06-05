@@ -33,22 +33,20 @@ function greenMaker() {
 
 //-----------------PART-TWO----------------------------------
 
-/*Just below the buttons, there's a form called **Register with us today**.
-
-Continue working in `./js/main.js` to add the following functionality:
-
-When the submit button is pressed, it should check that all the form fields are valid:
-
-- The **Email address**, **Your name** and **Describe yourself** fields need to be non-empty (Hint: their `value` length has to be greater than zero)
-- For the **Email Address** field also check if it contains the `@` character
-
-For all the fields that invalid, it should make their background color `red`.
-If all the fields are valid, when you click **Submit** it should:
-
-- Display an alert to thank you for filling out the for.
-- Blank out (make empty) all the text fields*/
-
 let submitButton = document.querySelector("form > button");
-submitButton.addEventListener("click", function () {
-  let labels = document.querySelectorAll("form label");
-});
+let labels = document.querySelectorAll(".form-control");
+let mailLabel = document.getElementById("exampleInputEmail1");
+
+function verifyLogin(e) {
+  e.preventDefault();
+  for (let i = 0; i < labels.length; i++) {
+    if ((labels[i].value.length > 0) & mailLabel.value.includes("@")) {
+      alert(`Thank you for filling out the form`);
+      label[i].value = " ";
+    } else {
+      labels[i].style.backgroundColor = "red";
+    }
+  }
+}
+
+submitButton.addEventListener("click", verifyLogin);
