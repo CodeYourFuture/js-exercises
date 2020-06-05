@@ -54,6 +54,23 @@ DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+function numberOfSeats(numberOfPeople) {
+  return (freeSeats = restaurants.filter(function (restaurant) {
+    let seatsLeft = restaurant.totalSeats - restaurant.numberOfCustomers;
+    if (seatsLeft >= numberOfPeople) {
+      return restaurant.name;
+    }
+  }));
+}
+let findingRestaurantName = numberOfSeats(restaurants);
+
+let restaurantss = findingRestaurantName.map(function (restaurant) {
+  return restaurant.name;
+});
+
+console.log(restaurantss);
+//function findAvailableRestaurants
+
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
