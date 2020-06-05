@@ -20,9 +20,20 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 //1)Create the function inside, Think about nested loops
+
+/*func array(arr){
+  let len = arr.length;
+  for (i = 0; i < len; i++) {
+    if (typeof (arr[i])) !== 'number'{
+      newArr[i] = arr.splice(i, 1);
+      return newArr[i];
+    }
+
+  }
+
+}*/
 function sortAges(arr) {
-  var len = arr.length;
-  for (var i = len - 1; i >= 0; i--) {
+  for (var i = arr.length - 1; i >= 0; i--) {
     for (var j = 1; j <= i; j++) {
       if (arr[j - 1] > arr[j]) {
         var temp = arr[j - 1];

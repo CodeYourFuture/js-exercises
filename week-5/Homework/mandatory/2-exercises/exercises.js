@@ -15,6 +15,14 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach((p) => {
+    let createhead1 = document.createElement("h1");
+    let createhead2 = document.createElement("h2");
+    content.appendChild(createhead1);
+    content.appendChild(createhead2);
+    createhead1.textContent = p.name;
+    createhead2.textContent = p.job;
+  });
 }
 
 /**
@@ -26,6 +34,15 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shopping) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let ullist = document.createElement("ul");
+  content.appendChild(ullist);
+  shopping.forEach((p) => {
+    let lilist = document.createElement("li");
+    lilist.textContent = p;
+    ullist.appendChild(lilist);
+    
+  });
 }
 
 /**
@@ -59,8 +76,31 @@ function exerciseTwo(shopping) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+  let content = document.querySelector("#content");
+  let list = document.createElement("ul");
+  content.appendChild(list);
+  let urls = [url1,url2, url3];
+  for (i = 0; i < books.length; i++) {
+    let listli = document.createElement("li");
+    listli.style.width = "500px";
+    list.appendChild(listli);
+    let para = document.createElement("p");
+    para.innerHTML = `${books[i].title} - ${books[i].author}`;
+    listli.appendChild(para);
+    let image = document.createElement("img");
+    listli.appendChild(image);
+    image.src = urls[i];
+    //books[i].alreadyRead((listli.style.backgroundColor = "green"))
+    if alreadyRead {
+      listli.style.background = "green";
+    }else{
+      listli.style.background = "red";
+    }
+  });
 }
-
+url1 = https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg
+url2 = https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL.jpg
+url3 = https://images-na.ssl-images-amazon.com/images/I/418M2053aNL.jpg
 //
 //
 //
@@ -74,7 +114,7 @@ function exerciseThree(books) {
 let people = [
   { name: "Chris", job: "Teacher" },
   { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+  { name: "Boris", job: "Prime Minister" },
 ];
 
 exerciseOne(people);
@@ -87,18 +127,18 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
-  }
+    alreadyRead: true,
+  },
 ];
 
 exerciseThree(books);

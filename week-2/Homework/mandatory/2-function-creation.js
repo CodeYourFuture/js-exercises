@@ -21,7 +21,9 @@ Tip: use logical operators
 */
 
 function validate(num) {
-  if (typeof num == 'number') && (num % 2 === 0) && (num <= 100) return true
+  if (typeof num == 'number') && (num % 2 === 0) && (num <= 100) {
+    return true;
+  }
 }
     
 /* 
@@ -38,6 +40,10 @@ function remove(arr, index) {
   }
   return arr; // complete this statement
 }
+ 
+/*function remove(arr, index) {
+ return arr.slice(index);
+}*/
 
 /*
 Write a function that:
