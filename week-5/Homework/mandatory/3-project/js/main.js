@@ -35,3 +35,37 @@ orangeButton.addEventListener("click", newTheme);
 greenButton.addEventListener("click", greenTheme);
 
 //Part Two;
+
+// let field = document.querySelectorAll(".form-control");
+// console.log(field);
+let emailField = document.getElementById("exampleInputEmail1");
+console.log(emailField);
+let textInput = document.getElementById("example-text-input");
+console.log(textInput);
+let textArea = document.getElementById("exampleTextarea");
+console.log(textArea);
+let submitButton = document.querySelectorAll("button");
+let targetButton;
+for (let i = 0; i < submitButton.length; i++) {
+  if (submitButton[i].innerHTML === "Submit") {
+    targetButton = submitButton[i];
+  }
+}
+console.log(submitButton);
+console.log(targetButton);
+// console.log(emailField.values.length);
+// console.log(field.values.length);
+function responseToClick() {
+  if (
+    textInput.value.length > 0 &&
+    emailField.value.includes("@") &&
+    emailField.value.length > 0 &&
+    textArea.value.length > 0
+  ) {
+    alert("Thank you for filling out the form");
+  } else {
+    return (emailField.style.backgroundColor = "red");
+  }
+}
+
+targetButton.addEventListener("click", responseToClick);
