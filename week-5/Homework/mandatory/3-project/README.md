@@ -42,10 +42,11 @@ When the submit button is pressed, it should check that all the form fields are 
 For all the fields that invalid, it should make their background color `red`.
 If all the fields are valid, when you click **Submit** it should:
 
-- Display an alert to thank you for filling out the for.
+- Display an alert to thank you for filling out the form.
 - Blank out (make empty) all the text fields
 
 **Hints**
+
 - [How to obtain values from form fields](https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-events/pt/processing-forms-with-events)
 - [How to use alert](https://www.w3schools.com/jsref/met_win_alert.asp)
 
