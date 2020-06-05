@@ -15,6 +15,14 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  for (let i = 0; i < arrayOfPeople.length; i++) {
+    let title = document.createElement("h1");
+    title.textContent = arrayOfPeople[i].name;
+    content.appendChild(title);
+    let secondTitle = document.createElement("h2");
+    secondTitle.textContent = arrayOfPeople[i].job;
+    content.appendChild(secondTitle);
+  }
 }
 
 /**
@@ -25,7 +33,13 @@ function exerciseOne(arrayOfPeople) {
  *
  */
 function exerciseTwo(shopping) {
-  //Write your code in here
+  orderedList = document.createElement("ul");
+  for (let i = 0; i < shopping.length; i++) {
+    let list = document.createElement("li");
+    list.textContent = shopping[i];
+    orderedList.appendChild(list);
+  }
+  content.appendChild(orderedList);
 }
 
 /**
@@ -58,7 +72,35 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  //Write your code in here
+  books[0].imageUrl =
+    "/Users/Hafsa/Desktop/CYF/JavaScript/JSI/js-exercises/week-5/Homework/mandatory/2-exercises/download.jpeg";
+  books[1].imageUrl =
+    "/Users/Hafsa/Desktop/CYF/JavaScript/JSI/js-exercises/week-5/Homework/mandatory/2-exercises/image2.jpeg";
+  books[2].imageUrl =
+    "/Users/Hafsa/Desktop/CYF/JavaScript/JSI/js-exercises/week-5/Homework/mandatory/2-exercises/image3.jpeg";
+  let orderedList = document.createElement("ul");
+
+  for (let i = 0; i < books.length; i++) {
+    let list = document.createElement("li");
+    let text = document.createElement("p");
+    let image = document.createElement("img");
+    image.src = books[i].imageUrl;
+    text.textContent = `${books[i].title} - ${books[i].author}`;
+    list.appendChild(text);
+    list.style.listStyle = "none";
+    list.style.maxWidth = "500px";
+    if (books[i].alreadyRead === false) {
+      list.style.backgroundColor = "red";
+    } else {
+      list.style.backgroundColor = "green";
+    }
+    orderedList.appendChild(list);
+    list.appendChild(image);
+  }
+
+  let div = document.getElementById("content");
+  div.appendChild(orderedList);
+  console.log(div);
 }
 
 //
@@ -74,7 +116,7 @@ function exerciseThree(books) {
 let people = [
   { name: "Chris", job: "Teacher" },
   { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+  { name: "Boris", job: "Prime Minister" },
 ];
 
 exerciseOne(people);
@@ -87,18 +129,18 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
-  }
+    alreadyRead: true,
+  },
 ];
 
 exerciseThree(books);
