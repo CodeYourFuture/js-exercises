@@ -26,9 +26,26 @@ It should default to English if the language is not in your object of languages,
 or in the event of an invalid input.
 */
 
+
+
 function greet(language) {
-  //write your code here
-}
+  if (typeof language === "string") {
+    let lang = language.toLowerCase();
+    if (Object.keys(languages).includes(lang)) {
+      return languages[lang];
+    } else {
+      return languages.english;
+    }
+  } else {
+    return "that's not a language";
+  }
+}  
+  
+
+console.log(greet("irish"));
+console.log(greet("FINNish"));
+console.log(greet("russian"));
+console.log(greet(6));
 
 /*
 Test your function works correctly calling it inside a console.log(), for each one of these cases:
