@@ -1,18 +1,147 @@
 <!DOCTYPE >
 <html lang="en_US">
-  <head>
-    <title>JS Week 2 - Exercises</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="content">
-      <!-- 
+	<head>
+		<title>JS Week 2 - Exercises</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div id="content">
+			<!-- 
         DO NOT EDIT.
         Your work should be put in here using JavaScript.
-      -->
-    </div>
+	  -->
+			<div class="peopls"></div>
 
-    <script src="exercises.js"></script>
-  </body>
+			<h1 class="people">Chris</h1>
+			<h2 class="job">Teacher</h2>
+			<p>Chris is teaching in Manchester</p>
+
+			<h1 class="people">joanna</h1>
+			<h2 class="job">student</h2>
+			<p>Joanna is currently studiying</p>
+
+			<h1 class="people">Boris</h1>
+			<h2 class="job">Prim minister</h2>
+			<p>Is the current prim minister of the UK since last election</p>
+
+			<div class="Shoping">
+				<h2>My ShopingList</h2>
+
+				<ul>
+					<li>Milk</li>
+					<li>Bread</li>
+					<li>eggs</li>
+					<li>A Dinosaur</li>
+					<li>Cake</li>
+					<li>Sugar</li>
+					<li>Tea</li>
+				</ul>
+			</div>
+
+			<div class="Books1">
+				<h2>The Design of Everyday Things</h2>
+
+				<ul>
+					<li>The genre of this Book is Dissertation</li>
+					<p>
+						The Design of Everyday Things is a best-selling book by cognitive
+						scientist and usability engineer Donald Norman about how design
+						serves as the communication between object and user, and how to
+						optimize that conduit of communication in order to make the
+						experience of using the object pleasurable.
+					</p>
+					<img
+						class="Book1 pucture"
+						src="https://upload.wikimedia.org/wikipedia/en/3/33/The_Design_of_Everyday_Things_%28cover_1988%29.jpg"
+						alt="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things"
+					/>
+					<a href="https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things"
+						>link to the Book1</a
+					>
+				</ul>
+			</div>
+
+			<div class="Books2">
+				<h2>The Most Human Human</h2>
+
+				<ul>
+					<li>
+						Cognitive Psychology & Cognition Technology & Engineering Robotics.
+					</li>
+
+					<p>
+						"The Most Human Human" is a provocative, exuberant, and profound
+						exploration of the ways in which computers are reshaping our ideas
+						of what it means to be human. Its starting point is the annual
+						Turing Test, which pits artificial intelligence programs against
+						people to determine if computers can "think.
+					</p>
+					<img
+						class="Book2cover"
+						src="https://brettworks.files.wordpress.com/2011/04/5515319365_f0c813c40f.jpeg"
+						alt="https://www.goodreads.com/book/show/8884400-the-most-human-human"
+					/>
+					<a
+						href="https://www.goodreads.com/book/show/8884400-the-most-human-human"
+						>link to the Book2</a
+					>
+				</ul>
+			</div>
+
+			<div class="Books3">
+				<h2>The Pragmatic Programmer</h2>
+
+				<ul>
+					<li>The genre of this scientific/technology</li>
+					<p>
+						The Pragmatic Programmer, From Journeyman to Master is a book about
+						computer programming, and software engineering, written by Andrew
+						Hunt and David Thomas and published in October 1999. It is used as a
+						textbook in related university courses
+					</p>
+					<img
+						class="Book3cover"
+						src="https://images-na.ssl-images-amazon.com/images/I/51cUVaBWZzL._SX380_BO1,204,203,200_.jpg"
+						alt="https://pragprog.com/book/tpp20/the-pragmatic-programmer-20th-anniversary-edition"
+					/>
+					<a
+						href="https://pragprog.com/book/tpp20/the-pragmatic-programmer-20th-anniversary-edition"
+						>link to Book3</a
+					>
+				</ul>
+			</div>
+		</div>
+
+		<script src="exercises.js">
+
+
+
+									function insertPeopleData(name, job) {
+										let content = document.querySelector("#content");
+										document.getElementsByTagName("h1,h2").innerHTML =
+											"The innerHTML is h1 and h2 tags containing the name and job: " +
+											content[0][1].innerHTML;
+
+										//Write your code in here
+									}
+
+
+
+									function insertShoppingList(shoppingList) {
+							const Shopping = document.createElement("ul");
+							document.body.appendChild(Shopping);
+							//Write your code in he
+
+						}
+
+
+						function insertBooks(books) {
+				const bookOwners = document.createElement("ul");
+				for (let i = 0; i < bookOwners.length; i++) {
+					bookOwners[i].style.Color = "blue";
+				} //Write your code in here
+			}
+		</script>
+	</body>
 </html>
