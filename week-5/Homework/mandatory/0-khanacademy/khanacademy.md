@@ -9,3 +9,5 @@ You should complete the following sections from these online tutorials on Khanac
 - DOM events
 
 https://www.khanacademy.org/computing/computer-programming/html-css-js
+
+Link to my Khanacademy : https://www.khanacademy.org/profile/kaid_860892762525193872513524/progress
