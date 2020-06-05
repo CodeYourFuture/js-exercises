@@ -31,30 +31,29 @@ greenBtn.addEventListener('click', () => {
 const form = document.getElementsByTagName('form')
 const formControl = document.querySelectorAll('.form-control')
 const submitBtn = document.querySelector('form button')
-
-// Solution 1
-
-// function submitForm(e) {
-//     e.preventDefault()
-//     for (let i = 0; i < formControl.length; i++) {
-//         if (formControl[i].value.length > 0) {
-//             formControl[0].value.includes('@') ? alert('thank you for filling out the form') : alert('please check your e-mail adresse')
-//         } else { alert('please fill required places in the form') }
-//     }
-//     formControl.forEach(p => p.value = '')
-// }
-
-// Solution 2
+const email = document.querySelectorAll('.form-control')[0]
+const name = document.querySelectorAll('.form-control')[1]
+const description = document.querySelectorAll('.form-control')[2]
 
 function submitForm(e) {
     e.preventDefault()
-    formControl.forEach(p => {
-        if (p.value.length > 0) {
-            p.type === 'email' && p.value.includes('@') ? alert('thank you for filling out the form') : alert('please check your e-mail adresse')
+
+    if (email.value.length > 0 && email.value.includes('@')) {
+        if (name.value.length > 0) {
+            if (description.value.length > 0) {
+                alert('thank you for filling out the form')
+            } else {
+                description.style.backgroundColor = 'red'
+                return
+            }
         } else {
-            alert('please fill required places in the form')
+            name.style.backgroundColor = 'red'
+            return
         }
-    })
+    } else {
+        email.style.backgroundColor = 'red'
+        return
+    }
     formControl.forEach(p => p.value = '')
 }
 
