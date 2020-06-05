@@ -72,12 +72,9 @@ function exerciseTwo(shopping) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 function exerciseThree(books) {
-  books[0].imageUrl =
-    "/Users/Hafsa/Desktop/CYF/JavaScript/JSI/js-exercises/week-5/Homework/mandatory/2-exercises/download.jpeg";
-  books[1].imageUrl =
-    "/Users/Hafsa/Desktop/CYF/JavaScript/JSI/js-exercises/week-5/Homework/mandatory/2-exercises/image2.jpeg";
-  books[2].imageUrl =
-    "/Users/Hafsa/Desktop/CYF/JavaScript/JSI/js-exercises/week-5/Homework/mandatory/2-exercises/image3.jpeg";
+  books[0].imageUrl = "./images/download.jpeg";
+  books[1].imageUrl = "./images/image2.jpeg";
+  books[2].imageUrl = "./images/image3.jpeg";
   let orderedList = document.createElement("ul");
 
   for (let i = 0; i < books.length; i++) {
