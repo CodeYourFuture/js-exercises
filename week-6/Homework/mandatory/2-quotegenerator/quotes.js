@@ -1,7 +1,6 @@
 // DO NOT EDIT BELOW HERE
 
-// A function which will return one item, at
-// random, from the given array.
+// A function which will return one item, at random, from the given array.
 //
 // Parameters
 // ----------
