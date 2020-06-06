@@ -25,8 +25,8 @@ console.log(calculateSalesTax(53)); // outcome should be 63.6
 */
 
 function formatCurrency(productPrice) {
-  let newPrice= Math.round(calculateSalesTax(productPrice)*100)/100;
-  let fixed= newPrice.toFixed(2);
+  let newPrice=(calculateSalesTax(productPrice)) 
+  let fixed= newPrice.toFixed(2); // toFixed can be used to format a number with a specific number of digits to the right of the decimal.
   return `£${fixed}`;
 }
 
