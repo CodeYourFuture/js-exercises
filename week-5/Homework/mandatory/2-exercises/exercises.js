@@ -5,7 +5,7 @@
  you need to implement functions' body.
  */
 
- 
+
 /*
  Optional question:
  Notice how this JavaScript file linked to the index.html file.
@@ -62,6 +62,8 @@ function insertPeopleData(arrayOfPeople) {
  *
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
+
+
 function insertShoppingList(shoppingList) {
   let content = document.querySelector("#content");
   let ulElement = document.createElement("ul");
@@ -175,10 +177,7 @@ function insertBooks(books) {
  
 }
 
-//
-//
-//
-//
+
 // DO NOT EDIT BELOW HERE
 //
 //
