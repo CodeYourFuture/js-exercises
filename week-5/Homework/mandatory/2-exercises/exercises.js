@@ -1,13 +1,15 @@
+
 /*
  In this exercise you will deal with Objects stored in array and DOM manipulation with JavaScript.
+ 
  From now, exercise descriptions don't provide detailed examples about input and output of functions.
  You should be already able to read and understand the code in order to extract the necessary information
  you need to implement functions' body.
  */
 
-
 /*
  Optional question:
+
  Notice how this JavaScript file linked to the index.html file.
  What do you think when this JavaScript file is being executed?
  When you finished this exercise try to move the script tag around the Div tag with the id "content",
