@@ -18,6 +18,8 @@ const languages = {
   welsh: "Croeso",
 };
 
+console.log(languages.english);
+console.log(languages["english"]);
 /*
 Write a 'greet' function that takes a parameter 'language' (always a string), 
 and returns the greeting for that language - if it exists in your "languages" object.
@@ -28,6 +30,7 @@ or in the event of an invalid input.
 
 function greet(language) {
   //write your code here
+  return languages[language];
 }
 
 /*
