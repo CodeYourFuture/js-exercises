@@ -5,6 +5,7 @@
  you need to implement functions' body.
  */
 
+ 
 /*
  Optional question:
  Notice how this JavaScript file linked to the index.html file.
