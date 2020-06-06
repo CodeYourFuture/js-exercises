@@ -24,7 +24,7 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
-function exerciseTwo(shopping) {
+function exerciseTwo(shoppingItems) {
   //Write your code in here
 }
 
@@ -35,17 +35,20 @@ function exerciseTwo(shopping) {
         {
             title: "The Design of Everyday Things",
             author: "Don Norman",
-            alreadyRead: false
+            alreadyRead: false,
+            coverImageUrl: "assets/design_of_things.jpeg"
         },
         {
             title: "The Most Human Human",
             author: "Brian Christian",
-            alreadyRead: true
+            alreadyRead: true,
+            coverImageUrl: "assets/most_human_human.jpeg"
         },
         {
             title: "The Pragmatic Programmer",
             author: "Andrew Hunt",
-            alreadyRead: true
+            alreadyRead: true,
+            coverImageUrl: "assets/pragmatic_programmer.jpeg"
         }
     ];
 
@@ -74,7 +77,7 @@ function exerciseThree(books) {
 let people = [
   { name: "Chris", job: "Teacher" },
   { name: "Joanna", job: "Student" },
-  { name: "Boris", job: "Prime Minister" }
+  { name: "Boris", job: "Prime Minister" },
 ];
 
 exerciseOne(people);
@@ -87,18 +90,21 @@ const books = [
   {
     title: "The Design of Everyday Things",
     author: "Don Norman",
-    alreadyRead: false
+    alreadyRead: false,
+    coverImageUrl: "assets/design_of_things.jpeg",
   },
   {
     title: "The Most Human Human",
     author: "Brian Christian",
-    alreadyRead: true
+    alreadyRead: true,
+    coverImageUrl: "assets/most_human_human.jpeg",
   },
   {
     title: "The Pragmatic Programmer",
     author: "Andrew Hunt",
-    alreadyRead: true
-  }
+    alreadyRead: true,
+    coverImageUrl: "assets/pragmatic_programmer.jpeg",
+  },
 ];
 
 exerciseThree(books);
