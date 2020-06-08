@@ -25,9 +25,6 @@ let containerDiv = document.createElement("div");
 containerDiv.style.width = "800px";
 containerDiv.style.height = "100%";
 containerDiv.style.backgroundColor = "pink";
-containerDiv.style.padding = "20px";
-
-console.log(containerDiv);
 
 let quoteLine = document.createElement("h1");
 let authorLine = document.createElement("h3");
@@ -513,7 +510,7 @@ const quotes = [
   },
   {
     quote: "Nothing is impossible, the word itself says, “I’m possible!”",
-    author: "–Audrey Hepburn",
+    author: "Audrey Hepburn",
   },
   {
     quote: "The only way to do great work is to love what you do.",
