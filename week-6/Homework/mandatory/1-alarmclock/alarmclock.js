@@ -5,34 +5,29 @@ let timer;
 
 function setAlarm() {
   clearInterval(timer);
-  let input = document.getElementById("alarmSet").value;
-  timer = window.setInterval(alarmCount, 1000);
+  let inputVal = document.getElementById("alarmSet").value;
+  timer = setInterval(alarmCount, 1000);
   function alarmCount() {
-    if (input >= 0) {
+    if (inputVal >= 0) {
       document.getElementById(
         "timeRemaining"
-      ).innerText = `Time Remaining: ${formatTime(input)} `;
-      input -= 1;
-      if (input < 0) {
+      ).innerText = `Time Remaining: ${sec2time(inputVal)} `;
+      inputVal -= 1;
+      if (inputVal < 0) {
         playAlarm();
-        clearInterval(timer);
       }
     }
   }
 }
 
-function formatTime(number) {
-  let minutes = Math.floor(number / 60);
-  let seconds = number - minutes * 60;
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-  if (seconds < 10) {
-    seconds = `0${seconds}`;
-  }
-  return `${minutes}:${seconds}`;
+function sec2time(timeEntry) {
+  let displayMins = Math.floor(timeEntry / 60)
+    .toString()
+    .padStart(2, "0");
+  let displaySecs = (timeEntry % 60).toString().padStart(2, "0");
+  return `${displayMins}:${displaySecs}`;
 }
+
 // DO NOT EDIT BELOW HERE
 /* 
  Try to reason about the code below and understand what it will do.
