@@ -34,6 +34,41 @@ TIP: Use the functions you created on tasks 1-3
 Prefer to work on a codepen? https://codepen.io/makanti/pen/MWwMgmW?editors
 ================
 */
+
+// create showMovies function
+
+function showMovies() {
+  setTimeout(function () {
+    let movieContainer = document.getElementById("all-movies");
+    movies.forEach(function (movie) {
+      let para = document.createElement("p");
+      para.innerText = `Title : ${movie.title}  - Director : ${movie.director}`;
+      movieContainer.appendChild(para);
+    });
+    document.getElementById("movies-number").innerText = movies.length;
+  }, 1000);
+}
+
+// create a new movie object for your favorite movie
+
+const myMovie = {
+  title: "Neseli Gunler",
+  director: "Orhan Aksoy",
+  typr: "Drama",
+  haveWatched: true,
+};
+
+// // create addMovies function
+
+function addMovie(movie, callback) {
+  setTimeout(function () {
+    movies.push(movie);
+    callback();
+  }, 2000);
+}
+
+addMovie(myMovie, showMovies);
+
 const movies = [
   {
     title: "Color Out of Space",
@@ -60,11 +95,3 @@ const movies = [
     haveWatched: false,
   },
 ];
-
-// create showMovies function
-
-
-// create a new movie object for your favorite movie
-
-
-// create addMovies function

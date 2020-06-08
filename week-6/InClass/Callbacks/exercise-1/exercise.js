@@ -11,3 +11,17 @@ Update your code to make the colour change every 5 seconds to something differen
 Prefer to work on a codepen? https://codepen.io/makanti/pen/abOreLg
 ================
 */
+
+function changeScreenColor() {
+  var screenColor = document.qu("body");
+  screenColor.style.backgroundColor =
+    "rgb(" +
+    Math.floor(Math.random() * 256) +
+    "," +
+    Math.floor(Math.random() * 256) +
+    "," +
+    Math.floor(Math.random() * 256) +
+    ")";
+}
+// setTimeout(changeScreenColor(),5000);
+setInterval(changeScreenColor, 5000);
