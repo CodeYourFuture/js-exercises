@@ -1,17 +1,31 @@
-// Add comments to explain what this function does. You're meant to use Google!
+// Add comments to explain what this function does. You're meant to use Google!,  
+
+//This is a function that uses "Math.random". 
+//This returnes a randome number or a random number within a range, (in this case it is 10).
+
 function getNumber() {
     return Math.random() * 10;
 }
 
+
+
+
 // Add comments to explain what this function does. You're meant to use Google!
+
+//concat is use to join multiple strings together
+
 function s(w1, w2) {
     return w1.concat(w2);
 }
 
+
+
 function concatenate(firstWord, secondWord, thirdWord) {
     // Write the body of this function to concatenate three words together
+    return firstWord.concat(" ",secondWord," ",thirdWord);
     // Look at the test case below to understand what to expect in return 
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
