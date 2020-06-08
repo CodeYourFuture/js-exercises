@@ -9,6 +9,7 @@ body {
 
 div {
   margin-top: 100px;
+  border-radius: 20px;
 }
 
 h3 {
@@ -17,5 +18,5 @@ h3 {
 
 button {
   background-color: aqua;
-  margin-top: 50px;
+  margin-top: 20px;
 }

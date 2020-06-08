@@ -102,6 +102,10 @@ const quotes = [
     author: "Kevin Kruse",
   },
   {
+    quote: "Quote Generator works!",
+    author: "Halit Oskan",
+  },
+  {
     quote: "Life is what happens to you while you’re busy making other plans.",
     author: "John Lennon",
   },
