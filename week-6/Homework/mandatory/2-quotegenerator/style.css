@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+body {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+div {
+  margin-top: 100px;
+}
+
+h3 {
+  padding: 30px;
+}
+
+button {
+  background-color: aqua;
+  margin-top: 50px;
+}

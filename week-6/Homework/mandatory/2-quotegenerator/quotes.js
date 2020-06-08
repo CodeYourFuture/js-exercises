@@ -16,12 +16,43 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
+let containerDiv = document.createElement("div");
+containerDiv.style.width = "800px";
+containerDiv.style.height = "100%";
+containerDiv.style.backgroundColor = "pink";
+containerDiv.style.padding = "20px";
+
+console.log(containerDiv);
+
+let quoteLine = document.createElement("h1");
+let authorLine = document.createElement("h3");
+
+let nextButton = document.createElement("button");
+nextButton.innerText = "Next Quote";
+
+function load() {
+  let chosenQuote = pickFromArray(quotes);
+  quoteLine.innerText = '"' + chosenQuote.quote + '"';
+  authorLine.innerText = "- " + chosenQuote.author;
+  containerDiv.appendChild(quoteLine);
+  containerDiv.appendChild(authorLine);
+  containerDiv.appendChild(nextButton);
+}
+
+nextButton.addEventListener("click", load);
+
+window.addEventListener("DOMContentLoaded", load);
+
+document.body.appendChild(containerDiv);
+
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
+
 const quotes = [
   {
     quote: "Life isn’t about getting and having, it’s about giving and being.",
