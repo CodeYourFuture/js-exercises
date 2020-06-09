@@ -28,7 +28,7 @@ Here's an example of how the website should look for the blue button:
 
 ![Blue button example](images/blue_clicked.png)
 
-## Part 2
+## Part 2 - VERY BONUS BONUS
 
 Just below the buttons, there's a form called **Register with us**.
 
