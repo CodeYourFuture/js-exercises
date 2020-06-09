@@ -37,9 +37,16 @@
  *      <h2>Plumber</h2>
  * </div>
  */
-function insertPeopleData(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  //Write your code in here
+
+    function insertPeopleData(arrayOfPeople) {
+      let content = document.querySelector("#content");
+      for (let i = 0; i < arrayOfPeople.length; i++) {
+        var h1El = document.createElement("h1");
+        h1El.textContent = arrayOfPeople[i].name;
+        content.appendChild(h1El);
+        var h2El = document.createElement("h2");
+        h2El.textContent = arrayOfPeople[i].job;
+        content.appendChild(h2El)
 }
 
 /**
@@ -51,8 +58,15 @@ function insertPeopleData(arrayOfPeople) {
  *
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
+
 function insertShoppingList(shoppingList) {
-  //Write your code in here
+  let content = document.querySelector("#content");
+  let listToBuy = document.createElement("ul");
+  for (let i = 0; i < shoppingList.length; i++) {
+    let list = document.createElement("li");
+    list.textContent = shoppingList[i];
+    listToBuy.appendChild(list);
+    content.appendChild(listToBuy);
 }
 
 /**
@@ -71,9 +85,37 @@ function insertShoppingList(shoppingList) {
  * 
  * The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com
  */
-function insertBooks(books) {
-  //Write your code in here
-}
+
+  function insertBooks(books) {
+    let content = document.querySelector("#content");
+    let unorderedList = document.createElement("ul");
+    content.appendChild(unorderedList);
+    for (let i = 0; i < books.length; i++) {
+      let liOfBook = document.createElement("li");
+      unorderedList.appendChild(liOfBook);
+      let bookList = document.createElement("p");
+      bookList.textContent = books[i].title + " - " + books[i].author;
+      liOfBook.appendChild(bookList);
+      let imgEl = document.createElement("img");
+      let images = [
+        "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/71HMyqG6MRL.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/418M2053aNL.jpg",
+      ];
+      imgEl.src = images[i];
+      imgEl.width = "180";
+      imgEl.height = "280";
+      liOfBook.appendChild(imgEl);
+};
+
+    if (books[i].alreadyRead === true) {
+      liOfBook.style.backgroundColor = "green";
+    } else {
+      liOfBook.style.backgroundColor = "red";
+    }
+  }
+  unorderedList.style.display = "flex";
+  unorderedList.style.justifyContent = "space-around";
 
 //
 //
