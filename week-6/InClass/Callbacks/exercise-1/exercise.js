@@ -13,7 +13,7 @@ Prefer to work on a codepen? https://codepen.io/makanti/pen/abOreLg
 */
 
 function changeScreenColor() {
-  var screenColor = document.qu("body");
+  var screenColor = document.querySelector("body");
   screenColor.style.backgroundColor =
     "rgb(" +
     Math.floor(Math.random() * 256) +
@@ -24,4 +24,4 @@ function changeScreenColor() {
     ")";
 }
 // setTimeout(changeScreenColor(),5000);
-setInterval(changeScreenColor, 5000);
+setInterval(changeScreenColor, 3000);
