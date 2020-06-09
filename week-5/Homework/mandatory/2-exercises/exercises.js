@@ -64,7 +64,7 @@ function insertPeopleData(arrayOfPeople) {
  * Hint for type of lists in HTML: https://www.w3schools.com/html/html_lists.asp
  */
 function insertShoppingList(shoppingList) {
-  const unOrderedList= document.createElement('ul');
+  letunOrderedList= document.createElement('ul');
 content.appendChild(unOrderedList);
 shoppingList.forEach(items => {
      let listItem = document.createElement('li');
