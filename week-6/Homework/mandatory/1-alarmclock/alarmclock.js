@@ -1,7 +1,33 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+
+function setAlarm() {
+  let time = document.getElementById("alarmSet").value
+  let timeMin = Math.floor((time / 60))
+  let timeSecond = (time % 60)
+  alarmInt = setInterval(() => {
+    if (timeSecond === 0 && timeMin > 0) {
+      timeMin--;
+      timeSecond = 59;
+    } else if (timeSecond > 0) {
+      timeSecond--;
+    } else {
+      playAlarm();
+    }
+    document.getElementById("timeRemaining").innerText = `Time Remaining: ${addZero(timeMin)} : ${addZero(timeSecond)}`
+  }, 1000)
+}
+
+let alarmInt;
+window.clearInterval(alarmInt)
+
+function addZero(number) {
+  return (parseInt(number, 10) < 10 ? "0" : "") + number;
+}
+
+
+
 
 // DO NOT EDIT BELOW HERE
 /* 
@@ -31,27 +57,29 @@ function playAlarm() {
 }
 
 function pauseAlarm() {
+  clearInterval(alarmInt)
   audio.pause();
 }
 
 /*
  This "window.onload" construct below might be something new that you haven't seen before.
- 
+
  Window Object represents the current open window (tab) in the browser.
  The Window interface contains loads of functionality among others the reference to the DOM Object.
- 
+
  Here you can read more about window interface and see what properties it has:
  https://developer.mozilla.org/en-US/docs/Web/API/Window
 
  We use the "onload" Window event to run a function when all resources and the DOM has been loaded and ready to use.
  This ensures that "setup" function can find the elements defined in index.html file even if the script HTML tag
- in the index file is appears earlier than the actual HTML elements we look up inside that function. 
- 
+ in the index file is appears earlier than the actual HTML elements we look up inside that function.
+
  You can play and try to see what happens if you replace "window.onload = setup;" with "setup();" function call instead.
  If you open the browser console, you should see an error "Cannot read property 'addEventListener' of null".
  It occurs because this script is being executed earlier and the elements it tries to find hasn't been yet loaded.
  (An alternative way to fix it is by moving the script tags after element with the id "stop".)
- 
+
  Documentation for onload event documentation: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload
 */
 window.onload = setup;
+
