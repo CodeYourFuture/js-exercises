@@ -1,1 +1,20 @@
 /** Write your CSS in here **/
+.button-forward,
+.button-backward {
+  
+  width:6rem;
+  height: 3rem;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+  position: sticky;
+}
+
+.button-forward,
+.button-backward {
+  content: " ";
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+  
+}

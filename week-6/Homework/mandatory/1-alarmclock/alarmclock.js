@@ -1,7 +1,30 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+function setAlarm() {
+
+  let inputValue = document.getElementById("alarmSet").value;
+  let timeRemain = document.getElementById("timeRemaining");
+  let newTime = setInterval(function () {
+    inputValue--;
+    timeRemain.textContent = `Time Remaining: 00:${inputValue}`;
+    if (inputValue === 0) {
+  
+      changeBackgroundColor();
+      playAlarm(audio);
+      clearInterval(newTime);
+    }
+    document.getElementById("stop").addEventListener("click", () => {
+      document.querySelector("body").style.backgroundColor = "white";
+      stopChangeBackgroundColor();
+      pauseAlarm(audio);
+    });
+  }, 1000);
+}
+ 
+  
+  
+
 
 // DO NOT EDIT BELOW HERE
 /* 
