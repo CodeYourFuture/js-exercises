@@ -496,19 +496,19 @@ function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
-let containerDiv = document.createElement("div");
+const containerDiv = document.createElement("div");
 containerDiv.style.width = "800px";
 containerDiv.style.height = "100%";
 containerDiv.style.backgroundColor = "pink";
 
-let quoteLine = document.createElement("h1");
-let authorLine = document.createElement("h3");
+const quoteLine = document.createElement("h1");
+const authorLine = document.createElement("h3");
 
-let nextButton = document.createElement("button");
+const nextButton = document.createElement("button");
 nextButton.innerText = "Next Quote";
 
-function load() {
-  let chosenQuote = pickFromArray(quotes);
+function loadQuote() {
+  const chosenQuote = pickFromArray(quotes);
   quoteLine.innerText = '"' + chosenQuote.quote + '"';
   authorLine.innerText = "- " + chosenQuote.author;
   containerDiv.appendChild(quoteLine);
@@ -516,8 +516,8 @@ function load() {
   containerDiv.appendChild(nextButton);
 }
 
-nextButton.addEventListener("click", load);
+nextButton.addEventListener("click", loadQuote);
 
-window.addEventListener("load", load);
+window.addEventListener("load", loadQuote);
 
 document.body.appendChild(containerDiv);
