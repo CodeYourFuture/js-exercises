@@ -1,7 +1,57 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+function setAlarm() {
+    var getTheTime = document.getElementById("alarmSet");
+    var timeRemaining = document.getElementById("timeRemaining");
+    var leftTime = getTheTime.value;
+
+
+    function time_convert(num) {
+        var minutes = Math.floor(num / 60);
+        var seconds = num % 60;
+        if (minutes < 10)
+            minutes = "0" + minutes
+        if (seconds < 10)
+            seconds = "0" + seconds
+        return minutes + ":" + seconds;
+    }
+
+
+    setInterval(function() {
+        if (leftTime >= 0) {
+            timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
+            leftTime--;
+        } else {
+            document.body.style.backgroundColor =
+                "rgb(" +
+                Math.floor(Math.random() * 256) +
+                "," +
+                Math.floor(Math.random() * 256) +
+                "," +
+                Math.floor(Math.random() * 256) +
+                ")";
+
+
+        }
+    }, 1000)
+    setTimeout(playAlarm, getTheTime.value * 1000);
+
+
+
+}
+
+// var pauseButt = document.getElementById("set");
+// pauseButt.innerText = "Pause Alarm";
+// pauseButt.addEventListener("click", function () {
+//   var pauseLeftTime = leftTime;
+//   pauseButt.innerText = "Set Alarm";
+// puase =true;
+//   return getTheTime.value.pauseLeftTime
+// });
+
+
+
 
 // DO NOT EDIT BELOW HERE
 /* 
@@ -17,21 +67,21 @@ function setAlarm() { }
 var audio = new Audio("alarmsound.mp3");
 
 function setup() {
-  document.getElementById("set").addEventListener("click", () => {
-    setAlarm();
-  });
+    document.getElementById("set").addEventListener("click", () => {
+        setAlarm();
+    });
 
-  document.getElementById("stop").addEventListener("click", () => {
-    pauseAlarm();
-  });
+    document.getElementById("stop").addEventListener("click", () => {
+        pauseAlarm();
+    });
 }
 
 function playAlarm() {
-  audio.play();
+    audio.play();
 }
 
 function pauseAlarm() {
-  audio.pause();
+    audio.pause();
 }
 
 /*

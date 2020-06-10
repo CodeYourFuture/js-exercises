@@ -1,1 +1,28 @@
 /** Write your CSS in here **/
+
+body {
+    margin: 10px;
+    background-color: antiquewhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+img {
+    width: 500px;
+    height: 430px;
+    position: relative;
+    border: 10px solid rgb(255, 188, 111);
+}
+
+button {
+    height: 80px;
+    min-width: 80px;
+}
+
+h1 {
+    color: blue;
+}
