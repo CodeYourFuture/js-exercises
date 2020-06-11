@@ -1,1 +1,11 @@
-/** Write your CSS in here **/
+.jumbotron {
+    padding: 1em;
+    margin: 100px auto auto auto;
+    width: 900px;
+    align-content: center;
+    text-align: center;
+}
+.lead{
+    font-weight: 400;
+    font-size: 25px;
+}

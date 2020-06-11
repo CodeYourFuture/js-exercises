@@ -1,3 +1,39 @@
+// Global variables
+let quote = document.getElementById("quote"), 
+    author = document.getElementById("author"),
+    newbtn = document.getElementById("newbtn"),
+    label = document.getElementById("autolabel"),
+    checkbox = document.getElementById("checkbox"),
+    timer;
+
+// Event listener to call change function.
+newbtn.addEventListener("click", () => {
+change();
+});
+
+// Function to call pickFromArray and change the display with the result
+function change(){
+  let temp = pickFromArray(quotes);
+      quote.innerText = temp.quote;
+      author.innerText = temp.author;
+};
+
+// event lister attahced to the checkbox
+checkbox.addEventListener('click', ()=> {
+  if (checkbox.checked) {
+    change();
+    timer = setInterval(change, 60000);
+    let notify = document.createElement("span");
+    notify.classList.add("alert", "alert-info");
+    notify.innerText = "auto-play :ON";
+    label.appendChild(notify);
+  } else {
+    clearInterval(timer);
+    label.removeChild(label.lastChild)
+  }
+  
+})
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.

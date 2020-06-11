@@ -1,7 +1,40 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
+// Global variables
+let setbtn = document.getElementById("set");
+let stopbtn = document.getElementById("stop");
+let display = document.getElementById("timeRemaining");
+let timeValue = document.getElementById("alarmSet");
+let timer;
 
-function setAlarm() { }
+// This function will have a counter in seconds and will change the display by deducting a second everytime it's called. when the counter is 0 it will call playAlarm function
+function trigger() {
+  let counter = parseInt(display.innerText.slice(0,2) * 60) + parseInt(display.innerText.slice(3));
+  let seconds = counter%60;
+  let minutes =  Math.floor(counter/60);
+  if (counter > 0 ) {
+    display.innerText = minutes.toString().padStart(2,"0") + ":" + (seconds-1).toString().padStart(2,"0");
+    counter--;
+  } else if (counter === 0) {
+    playAlarm();
+  }
+}
+
+// This function will read the value inputed by user, convert it to minutes and seconds then display it and call the trigger function every second.
+function setAlarm() {
+  if (timeValue.value <60 && timeValue.value > 0){
+    display.innerText = "00:" + timeValue.value.toString().padStart(2,"0");
+  } else {
+    display.innerText = Math.floor(timeValue.value/60).toString().padStart(2,"0") + ":" + (timeValue.value % 60).toString().padStart(2,"0");
+  }
+  timer = setInterval(trigger,1000);
+}
+// This is an event handler for the stop button that will clear the interval to stop the alarm 
+stopbtn.addEventListener("click", () =>{
+  clearInterval(timer); 
+})
+
+
 
 // DO NOT EDIT BELOW HERE
 /* 

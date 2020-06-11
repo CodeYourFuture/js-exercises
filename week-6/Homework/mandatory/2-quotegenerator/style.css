@@ -1,1 +1,27 @@
 /** Write your CSS in here **/
+body {
+    background-color: #fca903;
+}
+.jumbotron {
+    padding: 1em;
+    margin: 20% auto auto auto;
+    width: 50%;
+    align-content: center;
+    text-align: center;
+    background-color: white;
+}
+.btn-primary{
+    background-color: #fca903;
+}
+.btn-primary:focus, .btn-primary:hover, .btn-primary:active{
+    background-color: darkgoldenrod;
+}
+.my-2 {
+    background-color: #fca903;
+}
+.lead{
+    color: #fca903;
+    font-weight: 600;
+    font-size: 25px;
+
+}

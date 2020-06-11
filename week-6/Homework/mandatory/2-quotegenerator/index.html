@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Quote Generator</title>
-    <script src="quotes.js"></script>
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -12,6 +12,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="jumbotron">
+      <h1 class="display-6">Get a random quote</h1>
+      <q class="lead" id="quote">Click the button or tick the box to get a quote</q>
+      <hr class="my-2">
+      <p id="author" class="lead">Author</p>
+      <p>
+        <a class="btn btn-primary" href="#" role="button" id="newbtn">New Quote</a>
+        
+      </p>
+      <p><label id="autolabel" class="form-check-label">
+          <input id="checkbox" class="form-check-input" type="checkbox" value="">
+          Auto quote
+        </label>
+      </p>
+    </div>
     <!-- Write your HTML in here -->
+    <script src="quotes.js"></script>
   </body>
 </html>

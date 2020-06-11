@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -11,7 +11,23 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body><div class="jumbotron">
+    <p class="lead">    <img id="display" class="rounded mx-auto d-block" src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b" width="700" height="500">
+    </p>
+    <hr class="my-2">
+    <p class="lead">
+      <button id="autoBackward" class="btn btn-outline-info"><< Auto Backward</button>
+      <button id="backward" class="btn btn-outline-primary">< Backward</button>
+      <button id="stop" class="btn btn-outline-danger">Stop Automation</button>
+      <button id="forward" class="btn btn-outline-primary">Forward ></button>
+      <button id="autoForward" class="btn btn-outline-info">Auto Forward >></button></Backward>
+    </p>
+    <p>How Fast in seconds (default is 3): 
+      <input id="setInterval" type="number" />
+    </p>
+  </div>
+    
     <!-- Write your HTML in here -->
+    <script src="slideshow.js"></script>
   </body>
 </html>
