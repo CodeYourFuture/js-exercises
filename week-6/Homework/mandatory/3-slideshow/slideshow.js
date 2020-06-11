@@ -13,7 +13,11 @@ function moveForward() {
   imgContainer.setAttribute("src", `${slideImages[i]}`);
   i++;
   j = i - 2;
-  i = i === slideImages.length ? 0 : i;
+  if (i === slideImages.length) {
+    i = 0;
+  } else {
+    i = i;
+  }
 }
 
 function moveBack() {
