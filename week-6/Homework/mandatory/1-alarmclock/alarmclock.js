@@ -1,7 +1,13 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
+var myInterval;
+//var theBackground = document.getElementsByTagName("body").style.backgroundColor;
 
 function setAlarm() {
+    if (myInterval !== undefined) {
+        clearInterval(myInterval)
+        document.body.style.backgroundColor = "white";
+    }
     var getTheTime = document.getElementById("alarmSet");
     var timeRemaining = document.getElementById("timeRemaining");
     var leftTime = getTheTime.value;
@@ -18,24 +24,26 @@ function setAlarm() {
     }
 
 
-    setInterval(function() {
-        if (leftTime >= 0) {
-            timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
-            leftTime--;
-        } else {
-            document.body.style.backgroundColor =
-                "rgb(" +
-                Math.floor(Math.random() * 256) +
-                "," +
-                Math.floor(Math.random() * 256) +
-                "," +
-                Math.floor(Math.random() * 256) +
-                ")";
+    myInterval = setInterval(function() {
+            if (leftTime > 0) {
+                timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
+                leftTime--;
+            } else {
+                timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
+                playAlarm();
+                document.body.style.backgroundColor =
+                    "rgb(" +
+                    Math.floor(Math.random() * 256) +
+                    "," +
+                    Math.floor(Math.random() * 256) +
+                    "," +
+                    Math.floor(Math.random() * 256) +
+                    ")";
 
 
-        }
-    }, 1000)
-    setTimeout(playAlarm, getTheTime.value * 1000);
+            }
+        }, 1000)
+        //setTimeout(playAlarm, getTheTime.value * 1000);
 
 
 
@@ -73,6 +81,10 @@ function setup() {
 
     document.getElementById("stop").addEventListener("click", () => {
         pauseAlarm();
+        if (myInterval !== undefined) {
+            clearInterval(myInterval)
+            document.body.style.backgroundColor = "white";
+        }
     });
 }
 
