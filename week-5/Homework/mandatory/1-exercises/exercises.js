@@ -15,6 +15,15 @@
  */
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  arrayOfPeople.forEach((element) => {
+    hOnes = document.createElement("h1");
+    hOnes.innerHTML = element.name;
+    hTwoes = document.createElement("h2");
+    hTwoes.innerHTML = element.job;
+    let myDiv = document.querySelector("#content");
+    myDiv.appendChild(hOnes);
+    myDiv.appendChild(hTwoes);
+  });
 }
 
 /**
@@ -26,6 +35,15 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shoppingItems) {
   //Write your code in here
+  ulEl = document.createElement("ul");
+  ulEl.className = "ulstyle";
+  let content = document.querySelector("#content");
+  content.appendChild(ulEl);
+  shoppingItems.forEach((element) => {
+    let liEl = document.createElement("li");
+    liEl.innerHTML = element;
+    ulEl.appendChild(liEl);
+  });
 }
 
 /**
@@ -62,6 +80,42 @@ function exerciseTwo(shoppingItems) {
 **/
 function exerciseThree(books) {
   //Write your code in here
+
+  let hOne = document.createElement("h1");
+  hOne.textContent = "Book list";
+  document.body.appendChild(hOne);
+  ulEl = document.createElement("ul");
+  ulEl.className = "unList";
+  document.body.appendChild(ulEl);
+
+  ulEl.style.listStyle = "none";
+  ulEl.style.display = "flex";
+  ulEl.style.flexWrap = "nowrap";
+  ulEl.style.padding = "20px";
+  ulEl.style.width = "calc(100%-41px)";
+
+  books.forEach((element) => {
+    let liEl = document.createElement("li");
+    ulEl.appendChild(liEl);
+
+    liEl.style.width = "calc(25% - 51px)";
+    liEl.style.margin = "15px";
+    liEl.style.padding = "10px";
+    liEl.style.minWidth = "350px";
+
+    if (element.alreadyRead) {
+      liEl.style.backgroundColor = "green";
+    } else {
+      liEl.style.backgroundColor = "red";
+    }
+
+    let paragraph = document.createElement("p");
+    paragraph.textContent = element.title + " - " + element.author;
+    liEl.appendChild(paragraph);
+    let imgEl = document.createElement("img");
+    imgEl.src = element.coverImageUrl;
+    liEl.appendChild(imgEl);
+  });
 }
 
 //
