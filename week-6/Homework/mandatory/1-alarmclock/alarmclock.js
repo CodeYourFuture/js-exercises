@@ -5,48 +5,40 @@ var myInterval;
 
 function setAlarm() {
     if (myInterval !== undefined) {
-        clearInterval(myInterval)
+        clearInterval(myInterval);
+        audio.pause();
         document.body.style.backgroundColor = "white";
     }
     var getTheTime = document.getElementById("alarmSet");
     var timeRemaining = document.getElementById("timeRemaining");
     var leftTime = getTheTime.value;
 
-
     function time_convert(num) {
         var minutes = Math.floor(num / 60);
         var seconds = num % 60;
-        if (minutes < 10)
-            minutes = "0" + minutes
-        if (seconds < 10)
-            seconds = "0" + seconds
+        if (minutes < 10) minutes = "0" + minutes;
+        if (seconds < 10) seconds = "0" + seconds;
         return minutes + ":" + seconds;
     }
 
-
     myInterval = setInterval(function() {
-            if (leftTime > 0) {
-                timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
-                leftTime--;
-            } else {
-                timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
-                playAlarm();
-                document.body.style.backgroundColor =
-                    "rgb(" +
-                    Math.floor(Math.random() * 256) +
-                    "," +
-                    Math.floor(Math.random() * 256) +
-                    "," +
-                    Math.floor(Math.random() * 256) +
-                    ")";
-
-
-            }
-        }, 1000)
-        //setTimeout(playAlarm, getTheTime.value * 1000);
-
-
-
+        if (leftTime > 0) {
+            timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
+            leftTime--;
+        } else {
+            timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
+            playAlarm();
+            document.body.style.backgroundColor =
+                "rgb(" +
+                Math.floor(Math.random() * 256) +
+                "," +
+                Math.floor(Math.random() * 256) +
+                "," +
+                Math.floor(Math.random() * 256) +
+                ")";
+        }
+    }, 1000);
+    //setTimeout(playAlarm, getTheTime.value * 1000);
 }
 
 // var pauseButt = document.getElementById("set");
@@ -57,9 +49,6 @@ function setAlarm() {
 // puase =true;
 //   return getTheTime.value.pauseLeftTime
 // });
-
-
-
 
 // DO NOT EDIT BELOW HERE
 /* 
@@ -82,7 +71,7 @@ function setup() {
     document.getElementById("stop").addEventListener("click", () => {
         pauseAlarm();
         if (myInterval !== undefined) {
-            clearInterval(myInterval)
+            clearInterval(myInterval);
             document.body.style.backgroundColor = "white";
         }
     });
