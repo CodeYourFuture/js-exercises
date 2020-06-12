@@ -10,11 +10,11 @@ let timer;
 // This function will have a counter in seconds and will change the display by deducting a second everytime it's called. when the counter is 0 it will call playAlarm function
 function trigger() {
   let counter = parseInt(display.innerText.slice(0,2) * 60) + parseInt(display.innerText.slice(3));
-  let seconds = counter%60;
-  let minutes =  Math.floor(counter/60);
   if (counter > 0 ) {
-    display.innerText = minutes.toString().padStart(2,"0") + ":" + (seconds-1).toString().padStart(2,"0");
     counter--;
+    let seconds = counter % 60;
+    let minutes =  Math.floor(counter/60);
+    display.innerText = minutes.toString().padStart(2,"0") + ":" + seconds.toString().padStart(2,"0");
   } else if (counter === 0) {
     playAlarm();
   }
