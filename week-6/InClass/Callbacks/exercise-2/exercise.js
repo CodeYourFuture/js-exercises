@@ -9,7 +9,25 @@ Create a function called "showMovies" that
 - iterates through the "movies" array and
 - for each movie, it creates a <p> element with the movie title and director and append it to the #all-movies div.
 - it sets the innerText of the #movies-number element to the total number of the movies in the array "movies"
+*/
 
+function showMovies(allMovies) {
+  let getDiv = document.getElementById("all-movies");
+  console.log(getDiv);
+  setTimeout(function () {
+    allMovies.forEach((element, index) => {
+      let paragraph = document.createElement("p");
+      console.log(paragraph);
+      paragraph.textContent = ` ${(index += 1)} - ${element.title} - ${
+        element.director
+      }`;
+      getDiv.appendChild(paragraph);
+      document.getElementById("movies-number").innerText = allMovies.length;
+    });
+  }, 1000);
+}
+
+/*
 Task 2
 Amend your function above to only show movies after 1 second. Remember to use setTimeout to achieve that
 Create a new function called "addMovie"
@@ -17,7 +35,12 @@ Create a new function called "addMovie"
 - it adds the new movie to the list of movies after 2 seconds. Remember to setTimeout to achieve that
 Call addMovies to add the new movie to the list and then showMovies to see the movies added on the screen.
 How many movies can you see on your page?
-
+*/
+function addMovie(myMovie, callback) {
+  movies.push(myMovie);
+  setTimeout(callback, 2000);
+}
+/*
 Task 3
 Can you make sure the new movie you just added is showing on the screen? 
 TIP: use callbacks
@@ -60,11 +83,17 @@ const movies = [
     haveWatched: false,
   },
 ];
+showMovies(movies);
+let myMovies = {
+  title: "No Time to Die",
+  director: "Cary Joji Fukunaga",
+  type: "action",
+  haveWatched: true,
+};
+addMovie(myMovies);
 
 // create showMovies function
 
-
 // create a new movie object for your favorite movie
-
 
 // create addMovies function

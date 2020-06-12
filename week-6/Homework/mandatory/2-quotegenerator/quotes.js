@@ -1,3 +1,16 @@
+let getQuote = document.getElementById("myQuote");
+let getAuthor = document.getElementById("myAuthor");
+let getBtn = document.getElementById("myBtn");
+getBtn.style.marginLeft = "80%";
+function quoteButton() {
+  let temp = pickFromArray(quotes);
+  getQuote.innerText = `" ${temp.quote} "`;
+  getAuthor.innerText = temp.author;
+  getAuthor.style.color = "#a84c32";
+  getAuthor.style.marginLeft = "80%";
+}
+getBtn.addEventListener("click", quoteButton);
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.
@@ -19,7 +32,7 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
-
+window.onload = quoteButton;
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [

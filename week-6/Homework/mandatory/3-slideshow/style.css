@@ -1,1 +1,12 @@
 /** Write your CSS in here **/
+body {
+  background-color: cyan;
+}
+.main {
+  width: 50%;
+  margin: 15% auto auto 30%;
+}
+/* .main-image {
+  width: 50%;
+  border: solid 6px green;
+} */

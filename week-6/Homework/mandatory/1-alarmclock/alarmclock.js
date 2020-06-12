@@ -1,7 +1,32 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
+let timer;
+function setAlarm() {
+  setTime = document.getElementById("alarmSet");
+  let num = setTime.value;
+  if (num === "") {
+    return;
+  }
+  document.getElementById("alarmSet").value = "";
+  let count = document.getElementById("timeRemaining");
 
-function setAlarm() { }
+  if (timer) {
+    clearInterval(timer);
+    num < 10
+      ? (count.innerText = "Time Remaining: 00:0" + num)
+      : (count.innerText = "Time Remaining: 00:" + num);
+  }
+  timer = setInterval(function () {
+    if (num > 0) num--;
+    num < 10
+      ? (count.innerText = "Time Remaining: 00:0" + num)
+      : (count.innerText = "Time Remaining: 00:" + num);
+    if (num === 0) {
+      clearInterval(timer);
+      playAlarm();
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 /* 

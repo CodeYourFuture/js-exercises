@@ -1,1 +1,17 @@
 /** Write your CSS in here **/
+body {
+  background-color: rgb(245, 173, 39);
+}
+.jumbotron {
+  margin: 10% auto auto auto;
+  width: 80%;
+  height: auto;
+  padding: 30px;
+  background-color: white;
+}
+.lead {
+  color: rgb(25, 12, 209);
+}
+.float {
+  color: red;
+}
