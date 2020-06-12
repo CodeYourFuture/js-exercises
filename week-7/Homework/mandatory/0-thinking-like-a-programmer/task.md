@@ -26,12 +26,26 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
-<!-- Write your answer here -->
+<!-- Understanding a problem
+•	Draw diagram or user interface to be able to understand better.
+•	Visualize what will you working on make is a lot easier to understand.
+•	If you cannot visualise talk to a rubber docky or to your die- cast car to be able understand better.
+-->
 
 ## 2. When trying to solve a challenge, what should you do first?
 
-<!-- Write your answer here -->
+<!-- Once Understand the problem then you can break it into smaller pieces and try to solve them one time at a bit.
+•	 Plan how are you going to break up your problem.
+•	Allows you apply the libraries that you have in your tool box to move faster.
+•	each task will be independent to create the bigger picture which is the final solution to our problem. -->
 
 ## 3. What should you do if you get stuck?
 
-<!-- Write your answer here -->
+<!-- Getting Unstock on fix error/bugs
+•	See the errors/bugs as challenges Not annoyances
+•	Errors /bugs help you to learn more because helps you investigating on that Error/bug research.
+•	Fixing the bug and understanding an error are to different thing.
+•	Understand the error/bug go back to visualising the problem use diagram/rubber ducky
+•	Break the problems into smaller problems.
+•	Re evaluate make sure that you are targeting the problem correctly.
+•	If None of step 3 works comment out your code and start over. -->
