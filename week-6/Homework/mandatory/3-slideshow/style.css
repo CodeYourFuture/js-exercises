@@ -1,1 +1,70 @@
 /** Write your CSS in here **/
+body {
+  background-color: darkred;
+}
+h1 {
+  font-family: serif;
+  text-align: center;
+  color: aliceblue;
+  margin-top: 20px;
+}
+img {
+  position: fixed;
+  background-color: ivory;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 60%;
+  max-width: 100%;
+}
+#buttons {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: darksalmon;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 80vw;
+}
+button {
+  font: sans-serif;
+  background-color: rgb(197, 145, 97);
+  border-radius: 0.5vw;
+  margin-left: 0.5vw;
+}
+button:hover {
+  background-color: crimson;
+}
+@media screen and (min-width: 360px) {
+  img {
+    max-width: 80%;
+    height: auto;
+  }
+  button {
+    font-size: 2em;
+  }
+  h1 {
+    font-size: 5em;
+  }
+}
+@media screen and (min-width: 1224px) {
+  #buttons {
+    width: 80vw;
+    height: 80%;
+  }
+  img {
+    height: 70%;
+    max-width: 100%;
+  }
+  button {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+}
