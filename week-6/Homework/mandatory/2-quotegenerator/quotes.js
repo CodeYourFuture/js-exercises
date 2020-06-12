@@ -1,3 +1,11 @@
+function pressButton() {
+  document.getElementById("buttonQuote").addEventListener("click", () => {
+    document.getElementById("quote").innerHTML = pickFromArray(quotes).quote;
+
+    document.getElementById("author").innerHTML = pickFromArray(quotes).author;
+  });
+}
+window.onload = pressButton;
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.

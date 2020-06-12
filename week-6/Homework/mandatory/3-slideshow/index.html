@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -10,8 +9,22 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <!-- Write your HTML in here -->
+    <h1>Some Coding Images</h1>
+
+    <div id="buttons">
+      <button id="autoBack" type="button">Auto Back</button>
+      <button id="Back" type="button">Back</button>
+      <button id="stop" type="button">Stop</button>
+      <button id="Forward" type="button">Forward</button>
+      <button id="autoForward" type="button">Auto Forward</button>
+    </div>
+    <div id="imageContainer">
+      <img src="" />
+    </div>
+
+    <script src="slideshow.js"></script>
   </body>
 </html>

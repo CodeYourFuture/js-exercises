@@ -1,1 +1,37 @@
 /** Write your CSS in here **/
+#buttonQuote {
+  background-color: rgb(223, 233, 139);
+  border: 2em;
+  color: rgb(20, 13, 13);
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  justify-content: center;
+  position: fixed;
+  top: 650px;
+  left: 800px;
+  border: lightcoral;
+}
+body {
+  background-color: lightcoral;
+}
+#press {
+  margin: 200px;
+  margin-left: 350px;
+
+  width: 700px;
+  height: 400px;
+  background-color: rgb(224, 216, 224);
+  position: fixed;
+}
+#quote {
+  text-align: center;
+  font-style: initial;
+  color: deeppink;
+}
+#author {
+  text-align: center;
+  font-style: italic;
+  color: darkred;
+  margin-top: 80px;
+}

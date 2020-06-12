@@ -1,7 +1,41 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
+function setAlarm() {
+  var alarm = document.getElementById("alarmSet").value;
 
-function setAlarm() { }
+  var newTimeExample = setTimeout(playAlarm, alarm * 1000 + 1000);
+  var mind = alarm % (60 * 60);
+  var minutes = Math.floor(mind / 60);
+  var secd = mind % 60;
+  var seconds = Math.ceil(secd);
+
+  var countdown = setInterval(function () {
+    document.getElementById("timeRemaining").innerHTML =
+      "Time remaining:" + `${minutes}:${seconds}`;
+    seconds--;
+    if (seconds == 0 && minutes >= 1) {
+      minutes--;
+      seconds = 59;
+    }
+    if (minutes < 10) {
+      document.getElementById("timeRemaining").innerHTML =
+        "Time remaining: 0" + `${minutes}:${seconds}`;
+    }
+    if (seconds < 10) {
+      document.getElementById("timeRemaining").innerHTML =
+        "Time remaining: " + `${minutes}: 0${seconds}`;
+    }
+    if (minutes < 10 && seconds < 10) {
+      document.getElementById("timeRemaining").innerHTML =
+        "Time remaining: 0" + `${minutes}: 0${seconds}`;
+    }
+    if (seconds < 0) {
+      clearInterval(countdown);
+      document.getElementById("timeRemaining").innerHTML =
+        "Time remaining: 00:00";
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 /* 
