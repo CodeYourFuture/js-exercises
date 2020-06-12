@@ -1,7 +1,99 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+function setAlarm() {
+  let getTime = document.getElementById("alarmSet").value;
+  let setTime = setTimeout(playAlarm, getTime * 1000 + 1000);
+  let minutes = Math.floor(getTime / 60);
+  let seconds = Math.floor(getTime - minutes) % 60;
+  let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  const displayRemainingTime = document.getElementById("timeRemaining");
+  const alarmPause = document.getElementById("pause");
+  const continueAlarm = document.getElementById("continue");
+  var countDown;
+
+  countDown = setInterval(function set() {
+    if (seconds < 10 && minutes > 10) {
+      displayRemainingTime.innerHTML =
+        "Time Remaining is " + minutes + ":0" + seconds;
+    } else if (minutes < 10 && seconds > 10) {
+      displayRemainingTime.innerHTML =
+        "Time Remaining is 0" + minutes + ":" + seconds;
+    } else if (seconds < 10 && minutes < 10) {
+      displayRemainingTime.innerHTML =
+        "Time Remaining is 0" + minutes + ":0" + seconds;
+    } else {
+      displayRemainingTime.innerHTML =
+        "Time Remaining is " + minutes + ":" + seconds;
+    }
+
+    if (seconds < 0) {
+      displayRemainingTime.innerHTML = "Time Remaining is 00:00";
+      clearInterval(countDown);
+    } else if (seconds == 0 && minutes >= 1) {
+      seconds = 60;
+      minutes--;
+    }
+
+    seconds--;
+  }, 1000);
+
+  alarmPause.addEventListener("click", function () {
+    console.log(seconds);
+    clearInterval(countDown);
+    clearTimeout(setTime);
+    clearTimeout(backgroundColor);
+  });
+
+  continueAlarm.addEventListener("click", () => {
+    setTimeout(playAlarm, seconds * 1000 + 1000);
+    setTimeout(() => {
+      document.body.style.backgroundColor =
+        "rgb(" +
+        Math.floor(Math.random() * 255) +
+        "," +
+        Math.floor(Math.random() * 255) +
+        "," +
+        Math.floor(Math.random() * 255) +
+        ")";
+    }, seconds * 1000 + 1000);
+    setTimeout(() => {
+      document.body.style.backgroundColor = "#" + randomColor;
+    }, seconds * 1000 + 1000);
+
+    countDown = setInterval(function set() {
+      if (seconds < 10 && minutes > 10) {
+        displayRemainingTime.innerHTML =
+          "Time Remaining is " + minutes + ":0" + seconds;
+      } else if (minutes < 10 && seconds > 10) {
+        displayRemainingTime.innerHTML =
+          "Time Remaining is 0" + minutes + ":" + seconds;
+      } else if (seconds < 10 && minutes < 10) {
+        displayRemainingTime.innerHTML =
+          "Time Remaining is 0" + minutes + ":0" + seconds;
+      } else {
+        displayRemainingTime.innerHTML =
+          "Time Remaining is " + minutes + ":" + seconds;
+      }
+
+      if (seconds < 0) {
+        displayRemainingTime.innerHTML = "Time Remaining is 00:00";
+        clearInterval(countDown);
+      } else if (seconds == 0 && minutes >= 1) {
+        seconds = 60;
+        minutes--;
+      }
+
+      seconds--;
+    }, 1000);
+  });
+
+  var backgroundColor = setTimeout(() => {
+    setInterval(() => {
+      document.body.style.backgroundColor = "#" + randomColor;
+    }, 1000);
+  }, getTime * 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 /* 

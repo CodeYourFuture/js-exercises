@@ -1,3 +1,15 @@
+function getQuote() {
+  document
+    .getElementById("new-quote")
+    .addEventListener("click", function writeQuote() {
+      document.getElementById("quote").innerHTML = pickFromArray(quotes).quote;
+      document.getElementById("author").innerHTML = pickFromArray(
+        quotes
+      ).author;
+    });
+}
+window.onload = getQuote;
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.
