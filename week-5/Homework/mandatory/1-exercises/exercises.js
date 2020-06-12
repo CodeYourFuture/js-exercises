@@ -16,11 +16,11 @@
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
   arrayOfPeople.forEach((element) => {
-    hOnes = document.createElement("h1");
+    const hOnes = document.createElement("h1");
     hOnes.innerHTML = element.name;
-    hTwoes = document.createElement("h2");
+    const hTwoes = document.createElement("h2");
     hTwoes.innerHTML = element.job;
-    let myDiv = document.querySelector("#content");
+    const myDiv = document.querySelector("#content");
     myDiv.appendChild(hOnes);
     myDiv.appendChild(hTwoes);
   });
@@ -35,12 +35,12 @@ function exerciseOne(arrayOfPeople) {
  */
 function exerciseTwo(shoppingItems) {
   //Write your code in here
-  ulEl = document.createElement("ul");
+  const ulEl = document.createElement("ul");
   ulEl.className = "ulstyle";
-  let content = document.querySelector("#content");
+  const content = document.querySelector("#content");
   content.appendChild(ulEl);
   shoppingItems.forEach((element) => {
-    let liEl = document.createElement("li");
+    const liEl = document.createElement("li");
     liEl.innerHTML = element;
     ulEl.appendChild(liEl);
   });
@@ -84,7 +84,7 @@ function exerciseThree(books) {
   let hOne = document.createElement("h1");
   hOne.textContent = "Book list";
   document.body.appendChild(hOne);
-  ulEl = document.createElement("ul");
+  const ulEl = document.createElement("ul");
   ulEl.className = "unList";
   document.body.appendChild(ulEl);
 

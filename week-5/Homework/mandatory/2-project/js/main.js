@@ -32,7 +32,7 @@ function orangeBtnFunc() {
 
 //settings for green button
 
-let greengeBtn = document.querySelector("#greenBtn");
+let greenBtn = document.querySelector("#greenBtn");
 greenBtn.addEventListener("click", greenBtnFunc);
 
 function greenBtnFunc() {
