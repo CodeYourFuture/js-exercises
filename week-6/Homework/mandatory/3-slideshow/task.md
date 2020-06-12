@@ -38,7 +38,7 @@ If you want hints, then you will find some below.
 
 ## Suggested approach
 
-Here's one approach you might take to building this app.
+Here's one approach you might take to building this app..
 
 ### Task: Design your layout _on paper_
 
