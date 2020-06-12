@@ -14,6 +14,14 @@
       body {
         padding: 30px;
       }
+
+      .hide {
+        display: none;
+      }
+
+      .show {
+        display: block;
+      }
     </style>
   </head>
 
@@ -22,7 +30,7 @@
       <div class="jumbotron">
         <h1>My movies</h1>
         <div id="all-movies"></div>
-        <p class="alert alert-info" id="loading-text">
+        <p class="hide" id="loading-text">
           Saving your new movie...
         </p>
       </div>
