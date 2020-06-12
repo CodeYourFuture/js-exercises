@@ -5,7 +5,6 @@
 Make a website which allows the user to navigate a set of images (first manually, then with an auto-playing slideshow).
 
 [Try this live demo!](https://cyf-image-carousel.netlify.app/)
-
 # Level 1 Challenge
 
 Make forward and back buttons to move _manually_ in that direction through a list of at least 4 images.

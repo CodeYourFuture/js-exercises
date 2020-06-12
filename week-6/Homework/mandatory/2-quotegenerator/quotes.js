@@ -16,9 +16,45 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+function randDarkColor() {
+  var lum = -0.25;
+  var hex = String('#' + Math.random().toString(16).slice(2, 8).toUpperCase()).replace(/[^0-9a-f]/gi, '');
+  if (hex.length < 6) {
+      hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+  }
+  var rgb = "#",
+      c, i;
+  for (i = 0; i < 3; i++) {
+      c = parseInt(hex.substr(i * 2, 2), 16);
+      c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+      rgb += ("00" + c).substr(c.length);
+  }
+  return rgb;
+}
+
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+
+let quotePanel = document.getElementById('quote-panel')
+let pEl = document.createElement('p');
+quotePanel.appendChild(pEl)
+let hEl = document.createElement('h');
+quotePanel.appendChild(hEl);
+
+function quoteButton(){
+let q = pickFromArray(quotes);
+  pEl.innerHTML = '&#8220; ' + q.quote + '	&#8221;'
+  hEl.innerHTML = '- ' + q.author
+  document.body.style.backgroundColor = randDarkColor();
+  quotePanel.style.color =  randDarkColor();
+}
+document.getElementsByClassName('btn btn-dark')[0]
+.addEventListener('click', ()=>{
+   quoteButton();
+})
+window.onload = quoteButton
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.

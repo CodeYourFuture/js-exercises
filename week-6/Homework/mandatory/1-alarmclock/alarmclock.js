@@ -1,7 +1,30 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
-
-function setAlarm() { }
+let setTime = document.getElementById("alarmSet");
+let count = document.getElementById("timeRemaining");
+let timer;
+function setAlarm() {
+  clearInterval(timer);
+  let num = setTime.value;
+  timer = setInterval(counter, 1000)
+    function counter() {
+   if (num > 0) num--;
+   num < 10
+     ? (count.innerText = "Time Remaining: 00:0" + num)
+     : (count.innerText = "Time Remaining: 00:" + num);
+   if (num === 0) {
+    clearInterval(timer);
+     playAlarm();
+     alarmColor = setInterval(function(){ 
+        if(document.body.style.backgroundColor === 'red'){
+        document.body.style.backgroundColor = 'white'
+        } else {
+          document.body.style.backgroundColor = 'red' 
+        }
+      },100)
+    }
+  }
+}
 
 // DO NOT EDIT BELOW HERE
 /* 
@@ -31,6 +54,8 @@ function playAlarm() {
 }
 
 function pauseAlarm() {
+  document.body.style.backgroundColor = 'white'
+  clearInterval(alarmColor);
   audio.pause();
 }
 
@@ -54,4 +79,4 @@ function pauseAlarm() {
  
  Documentation for onload event documentation: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload
 */
-window.onload = setup;
+window.onload = setup

@@ -1,1 +1,17 @@
 /** Write your CSS in here **/
+
+button {
+    margin: 3px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: rgb(230, 255, 243);
+  color: rgb(105, 0, 88);
+  border: 2px solid rgb(129, 0, 161);
+}
+
+img {
+margin: 20px;
+width: 500px;
+height: 350px;
+}

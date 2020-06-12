@@ -63,8 +63,37 @@ const movies = [
 
 // create showMovies function
 
+let allMovies = document.getElementById('all-movies');
+
+function showMovies() {
+  let numOfMovies = document.getElementById('movies-number')
+numOfMovies.innerText = movies.length
+setTimeout(function () {
+  movies.forEach(film=> {
+    let pEl = document.createElement('p');
+    pEl.innerText = film.title + ' - ' + film.director
+    allMovies.appendChild(pEl);
+  })
+ },1000)
+}
+
+
 
 // create a new movie object for your favorite movie
-
+let myFavoriteMovie = {
+  title: "Ariska",
+    director: "William Wolas",
+    type: "action",
+    haveWatched: true,
+}
 
 // create addMovies function
+  function addMovies(Movie, callbacks) {
+    movies.push(Movie); 
+    setTimeout(callbacks, 2000);
+  }
+
+setTimeout(addMovies,myFavoriteMovie,showMovies)
+// addMovies(myFavoriteMovie);
+// showMovies();
+

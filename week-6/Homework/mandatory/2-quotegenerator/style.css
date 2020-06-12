@@ -1,1 +1,41 @@
 /** Write your CSS in here **/
+.main {
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+#quote-panel {
+
+    justify-content: center;
+    align-items: center;
+    width: 35em;
+    height: 20em;
+    background-color: rgb(231, 229, 229); 
+    border-radius: 40px;
+}
+button{
+    position: fixed;
+    top: 90%;
+    left: 80%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+  p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10% 15px 15px 15px ;
+
+  }
+  h {
+      font-style: italic;
+    position: fixed;
+    top: 85%;
+    left: 20%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
