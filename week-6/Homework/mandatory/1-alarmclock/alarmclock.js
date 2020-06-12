@@ -12,6 +12,7 @@ function setAlarm() {
     var getTheTime = document.getElementById("alarmSet");
     var timeRemaining = document.getElementById("timeRemaining");
     var leftTime = getTheTime.value;
+    // if (leftTime < 0) alert("please enter  positive number");
 
     function time_convert(num) {
         var minutes = Math.floor(num / 60);
@@ -25,7 +26,7 @@ function setAlarm() {
         if (leftTime > 0) {
             timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
             leftTime--;
-        } else {
+        } else if (leftTime === 0) {
             timeRemaining.innerText = "Time Remaining:" + time_convert(leftTime);
             playAlarm();
             document.body.style.backgroundColor =
@@ -36,6 +37,9 @@ function setAlarm() {
                 "," +
                 Math.floor(Math.random() * 256) +
                 ")";
+        } else {
+            alert("please enter  positive number");
+            clearInterval(myInterval);
         }
     }, 1000);
     //setTimeout(playAlarm, getTheTime.value * 1000);
