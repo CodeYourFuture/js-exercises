@@ -1,48 +1,40 @@
 //settings for blue button
 
 let blueBtn = document.querySelector("#blueBtn");
-blueBtn.addEventListener("click", blueBtnFunc);
-
-function blueBtnFunc() {
-  document.querySelector(".jumbotron").style.backgroundColor = `#588fbd`;
-  document.querySelector(
-    ".btn.btn-primary.btn-lrg"
-  ).style.backgroundColor = `#ffa500`;
-  document.querySelector(
-    ".btn.btn-secondary.btn-lrg"
-  ).style.backgroundColor = `black`;
-  document.querySelector(".btn.btn-secondary.btn-lrg").style.color = `white`;
-}
+blueBtn.addEventListener("click", setColor(`#87ca8a`, `black`, `#8c9c08`));
 
 //settings for orange button
 
-let orangeBtn = document.querySelector("#orangeBtn");
-orangeBtn.addEventListener("click", orangeBtnFunc);
-
-function orangeBtnFunc() {
-  document.querySelector(".jumbotron").style.backgroundColor = `#f0ad4e`;
-  document.querySelector(
-    ".btn.btn-primary.btn-lrg"
-  ).style.backgroundColor = `#5751fd`;
-  document.querySelector(
-    ".btn.btn-secondary.btn-lrg"
-  ).style.backgroundColor = `#31b0d5`;
-  document.querySelector(".btn.btn-secondary.btn-lrg").style.color = `white`;
-}
-
+/* let orangeBtn = document.querySelector("#orangeBtn");
+orangeBtn.addEventListener(
+  "click",
+  setColor(`#f0ad4e`, `#5751fd`, `#31b0d5`, `white`)
+);
+ */
 //settings for green button
 
-let greenBtn = document.querySelector("#greenBtn");
-greenBtn.addEventListener("click", greenBtnFunc);
+/* let greenBtn = document.querySelector("#greenBtn");
+greenBtn.addEventListener(
+  "click",
+  setColor("#588fbd", "#ffa500", "black", "white")
+); */
 
-function greenBtnFunc() {
-  document.querySelector(".jumbotron").style.backgroundColor = `#87ca8a`;
+function setColor(
+  colorJumbotron,
+  colorBtnPrimary,
+  colorBtnSecondary,
+  ColorFontBtnSecondary = "black"
+) {
+  document.querySelector(".jumbotron").style.backgroundColor = colorJumbotron;
   document.querySelector(
     ".btn.btn-primary.btn-lrg"
-  ).style.backgroundColor = `black`;
+  ).style.backgroundColor = colorBtnPrimary;
   document.querySelector(
     ".btn.btn-secondary.btn-lrg"
-  ).style.backgroundColor = `#8c9c08`;
+  ).style.backgroundColor = colorBtnSecondary;
+  document.querySelector(
+    ".btn.btn-secondary.btn-lrg"
+  ).style.color = ColorFontBtnSecondary;
 }
 
 //settings for submit button
