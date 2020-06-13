@@ -47,10 +47,31 @@ let travelDestinations = [
 
 // ["Dublin", "Paris", "Edinburgh"]
 
+<<<<<<< Updated upstream
 
 // 1. Print in the console 
 // 2. all the destination names
 // 3. more than 300 kms far away and reachable by train.
+=======
+let destinationNameReachableByFerry = travelDestinations
+  .filter((destination) => destination.transportations.includes("ferry"))
+  .map((destination) => destination.destinationName);
+// Complete here
+
+function byTrain300km(destination) {
+  return (
+    destination.distanceKms > 300 &&
+    destination.transportations.includes("train")
+  );
+}
+
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .forEach(byTrain300km(destination));
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 function isReachable(destination) {
     let isFar = destination.distanceKms > 300;

@@ -13,8 +13,23 @@
  *      .....
  * </div>
  */
+// function getName(person) {
+//   return person.name;
+// }
+// function getJob(person) {
+//   return person.job;
+// }
+
 function exerciseOne(arrayOfPeople) {
   let content = document.querySelector("#content");
+  for (i = 0; i < arrayOfPeople.length; i++) {
+    let h1 = document.createElement("h1");
+    h1.innerText = i[name];
+    content.appendChild(h1);
+    let h2 = document.createElement("h2");
+    h2.innerText = i.job;
+    content.appendChild(h2);
+  }
 }
 
 /**
