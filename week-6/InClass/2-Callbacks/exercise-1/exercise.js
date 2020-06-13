@@ -1,7 +1,6 @@
 /*
 ================
 EXERCISE 1
-
 Task 1
 Using setTimeout, change the background colour of the page after 5 seconds (5000 milliseconds).
 
@@ -10,3 +9,15 @@ Update your code to make the colour change every 5 seconds to something differen
 
 ================
 */
+
+setInterval(function () {
+  document.body.style.backgroundColor = `rgb(${Math.random() * 255}, ${
+    Math.random() * 255
+  }, ${Math.random() * 255})`;
+}, 5000);
+
+/* 
+setInterval(function () {
+  document.body.style.backgroundColor = "white";
+}, 5000);
+ */
