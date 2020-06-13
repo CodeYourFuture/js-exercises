@@ -1,23 +1,26 @@
 //settings for blue button
 
 let blueBtn = document.querySelector("#blueBtn");
-blueBtn.addEventListener("click", setColor(`#87ca8a`, `black`, `#8c9c08`));
+blueBtn.addEventListener(
+  "click",
+  setColor("#588fbd", "#ffa500", "black", "white")
+);
 
 //settings for orange button
 
-/* let orangeBtn = document.querySelector("#orangeBtn");
+let orangeBtn = document.querySelector("#orangeBtn");
 orangeBtn.addEventListener(
   "click",
-  setColor(`#f0ad4e`, `#5751fd`, `#31b0d5`, `white`)
+  setColor("#f0ad4e", "#5751fd", "#31b0d5", "white")
 );
- */
+
 //settings for green button
 
-/* let greenBtn = document.querySelector("#greenBtn");
+let greenBtn = document.querySelector("#greenBtn");
 greenBtn.addEventListener(
   "click",
-  setColor("#588fbd", "#ffa500", "black", "white")
-); */
+  setColor("#87ca8a", "black", "#8c9c08", "white")
+);
 
 function setColor(
   colorJumbotron,
@@ -25,6 +28,7 @@ function setColor(
   colorBtnSecondary,
   ColorFontBtnSecondary = "black"
 ) {
+  // console.log("*");
   document.querySelector(".jumbotron").style.backgroundColor = colorJumbotron;
   document.querySelector(
     ".btn.btn-primary.btn-lrg"
@@ -39,7 +43,7 @@ function setColor(
 
 //settings for submit button
 
-let submitBtn = document.querySelector(".form-group + .btn.btn-primary");
+/* let submitBtn = document.querySelector(".form-group + .btn.btn-primary");
 submitBtn.addEventListener("click", submitFunc);
 
 function submitFunc() {
@@ -73,7 +77,7 @@ function submitFunc() {
     yourName.value = "";
     describeYourself.value = "";
   }
-}
+} */
 
 /* 
 - The **Your name**, **Email** and **Describe yourself** fields need to be non-empty (Hint: their `value` length has to be greater than zero)
@@ -87,3 +91,28 @@ IF all the fields are valid, when you click **Submit** it should:
 
 **Important hint:** In your function that handles clicks on the `Submit` button you will need to call `event.preventDefault()` to stop the browser from refreshing the page. To read more on how to do this: https://developer.mozilla.org/en/docs/Web/API/Event/preventDefault
  */
+let submitBtn = document.querySelector(".form-group + .btn.btn-primary");
+submitBtn.addEventListener("click", submitFunc);
+
+function submitFunc() {
+  let email = document.querySelector("#exampleInputEmail1");
+  let yourName = document.querySelector("#example-text-input");
+  let describeYourself = document.querySelector("#exampleTextarea");
+  event.preventDefault();
+
+  if (email.value.length === 0 || email.value.includes("@") === false) {
+    email.style.backgroundColor = "red";
+  } else if (yourName.value.length === 0) {
+    yourName.style.backgroundColor = "red";
+  } else if (describeYourself.value.length === 0) {
+    describeYourself.style.backgroundColor = "red";
+  } else {
+    alert("Thank you for filling");
+    email.style.backgroundColor = "white";
+    yourName.style.backgroundColor = "white";
+    describeYourself.style.backgroundColor = "white";
+    email.value = "";
+    yourName.value = "";
+    describeYourself.value = "";
+  }
+}
