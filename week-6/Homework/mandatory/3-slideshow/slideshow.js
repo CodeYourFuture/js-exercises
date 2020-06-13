@@ -57,12 +57,17 @@ var newQuot = document.getElementById("autoBack");
 newQuot.addEventListener("click", function() {
     if (myInterval !== undefined) clearInterval(myInterval);
     myInterval = setInterval(function() {
-        numOfPhotoNum = Number(numOfPhoto.innerText);
-        if (numOfPhotoNum > 0) numOfPhotoNum = numOfPhotoNum - 1;
-        else numOfPhotoNum = slideShow.length - 1;
-        theImage.src = slideShow[numOfPhotoNum].src;
+        if (getTheTime.value > 0) {
+            numOfPhotoNum = Number(numOfPhoto.innerText);
+            if (numOfPhotoNum > 0) numOfPhotoNum = numOfPhotoNum - 1;
+            else numOfPhotoNum = slideShow.length - 1;
+            theImage.src = slideShow[numOfPhotoNum].src;
 
-        numOfPhoto.innerText = numOfPhotoNum;
+            numOfPhoto.innerText = numOfPhotoNum;
+        } else {
+            alert("please enter a positive number");
+            clearInterval(myInterval);
+        }
     }, getTheTime.value * 1000);
 });
 
@@ -72,12 +77,18 @@ var newQuot = document.getElementById("autoForward");
 newQuot.addEventListener("click", function() {
     if (myInterval !== undefined) clearInterval(myInterval);
     myInterval = setInterval(function() {
-        numOfPhotoNum = Number(numOfPhoto.innerText);
-        if (numOfPhotoNum < slideShow.length - 1) numOfPhotoNum = numOfPhotoNum + 1;
-        else numOfPhotoNum = 0;
-        theImage.src = slideShow[numOfPhotoNum].src;
+        if (getTheTime.value > 0) {
+            numOfPhotoNum = Number(numOfPhoto.innerText);
+            if (numOfPhotoNum < slideShow.length - 1)
+                numOfPhotoNum = numOfPhotoNum + 1;
+            else numOfPhotoNum = 0;
+            theImage.src = slideShow[numOfPhotoNum].src;
 
-        numOfPhoto.innerText = numOfPhotoNum;
+            numOfPhoto.innerText = numOfPhotoNum;
+        } else {
+            alert("please enter a positive number");
+            clearInterval(myInterval);
+        }
     }, getTheTime.value * 1000);
 });
 

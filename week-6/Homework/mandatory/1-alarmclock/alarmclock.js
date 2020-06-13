@@ -38,7 +38,7 @@ function setAlarm() {
                 Math.floor(Math.random() * 256) +
                 ")";
         } else {
-            alert("please enter  positive number");
+            alert("please enter a positive number");
             clearInterval(myInterval);
         }
     }, 1000);
