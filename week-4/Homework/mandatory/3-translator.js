@@ -18,6 +18,8 @@ const languages = {
   welsh: "Croeso",
 };
 
+console.log(languages.english);
+console.log(languages["english"]);
 /*
 Write a 'greet' function that takes a parameter 'language' (always a string), 
 and returns the greeting for that language - if it exists in your "languages" object.
@@ -29,6 +31,7 @@ or in the event of an invalid input.
 
 
 function greet(language) {
+
   if (typeof language === "string") {
     let lang = language.toLowerCase();
     if (Object.keys(languages).includes(lang)) {
@@ -46,6 +49,8 @@ console.log(greet("irish"));
 console.log(greet("FINNish"));
 console.log(greet("russian"));
 console.log(greet(6));
+return languages[language];
+}
 
 /*
 Test your function works correctly calling it inside a console.log(), for each one of these cases:
