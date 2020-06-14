@@ -1,3 +1,17 @@
+
+
+ /* if( i in qoutes) {
+   let body =  document.getElementsByClassName('body');
+   let container = document.createElement('div');
+   body.appendChild(container);
+   let adjkaj = function pickFromArray(qoutes) {
+    return qoutes[Math.floor(Math.random() * qoutes.length)];
+   }
+   container.innerHTML = '<h3>'+qoutes[i].qoute+'</h3>'+'<h5>'+quotes[i].author+'</h5>'+'<button></button>' ;
+   let clicker = document.getElementsByTagName('button')
+   document.addEventListener('click',adjkaj);
+  } */
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.

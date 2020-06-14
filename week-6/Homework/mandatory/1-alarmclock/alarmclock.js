@@ -1,7 +1,59 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
+/* 
+let counter = Number;
+let alarmSet = document.querySelector("#alarmSet");
+alarmSet.html('0');
+let timer = document.querySelector("#timeRemaining");
 
-function setAlarm() { }
+document.querySelector("#set").addEventListener("click",()=>{
+  setInterval(setAlarm, 1000);
+})
+
+document.querySelector("#stop").addEventListener("click",()=>{
+  clearInterval(clear);
+})
+
+function setAlarm() { 
+  
+counter--;
+alarmSet.innerHTML  =  counter;
+timer.innerText = ("time remaining: 00.0" + counter);
+if (counter === 0){
+  playAlarm()
+}
+} */
+ 
+function setAlarm() {
+  
+  let timer = document.querySelector('#alarmSet');
+  let counter = timer.value;
+  
+
+  document.querySelector("#set").addEventListener("click",()=>{
+    setInterval(setTheAlam, 1000);
+  })
+  
+  document.querySelector("#stop").addEventListener("click",()=>{
+    clearInterval(clear);
+  }) 
+
+  function setTheAlam(){
+    for (let i = 0; i < counter+1; i++) {
+      let alarm = document.querySelector('#timeRemaining');
+  alarm.innerText = 'Time Remaining:'+ counter;
+      
+    }
+    counter--;
+   
+    if(counter === 0){
+      playAlarm();
+    }
+  }
+ 
+}
+
+
 
 // DO NOT EDIT BELOW HERE
 /* 
