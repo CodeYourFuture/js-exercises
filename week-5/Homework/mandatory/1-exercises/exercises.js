@@ -79,7 +79,7 @@ function exerciseTwo(shoppingItems) {
 **/
 
 
-let ul2 = document.createElement("ul"); //creates dots - how to delete them?
+let ul2 = document.createElement("ul"); //creates dots - how to delete them? div?
 ul2.style.display = "flex";
 ul2.style.justifyContent = "space-between"; 
 content.appendChild(ul2);

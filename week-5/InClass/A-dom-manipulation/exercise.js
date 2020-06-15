@@ -15,14 +15,14 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
-// let task1 = document.querySelectorAll("p");
-// console.log(task1);
-// let task2 = document.querySelector("div");
-// console.log(task2);
-// let task3 = document.querySelector("#jumbotron-text");
-// console.log(task3);
-// let task4 = document.querySelectorAll(".primary-content p");
-// console.log(task4);
+let task1 = document.querySelectorAll("p");
+console.log(task1);
+let task2 = document.querySelector("div");
+console.log(task2);
+let task3 = document.querySelector("#jumbotron-text");
+console.log(task3);
+let task4 = document.querySelectorAll(".primary-content p");
+console.log(task4);
 
 /*
 Task 2
@@ -36,6 +36,7 @@ alertText.addEventListener("click", showAlert);
 function showAlert() {
   alert("Thanks for visiting Bikes for Refugees!");
 }
+
 /*
 Task 3
 =======
@@ -50,12 +51,15 @@ function changeColor() {
   let newBackGr = document.querySelector("body");
   newBackGr.style.backgroundColor = "yellow";
 }
+
 /*
 Task 4
 ======
 
 When a user clicks the 'Add some text' button, a new paragraph should be added below the buttons that says "Read more below."
 */
+
+
 let newPar = document.querySelector("#addTextBtn");
 newPar.addEventListener("click", addPar);
 
