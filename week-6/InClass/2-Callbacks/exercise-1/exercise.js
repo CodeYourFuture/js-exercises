@@ -10,3 +10,9 @@ Update your code to make the colour change every 5 seconds to something differen
 
 ================
 */
+
+setTimeout(function() {
+    document.body.style.background = "yellow"
+}, 5000)
+
+// task2 ---?

@@ -88,26 +88,15 @@ Using JavaScript, create an unordered list under the "Add" button.
 When the "Add" button is pressed, get the value of the text box on its left, and add it to the list you created above.
 */
 
-let list = document.createElement("ul");
-let newField = document.querySelector('.primary-content');
-newField.appendChild(list);
-//let list = document.createElement('ul');
 
-let newEl = document.createElement("li");
-newEl.innerText = "something here";
-let myList = document.querySelector("ul");
-myList.appendChild(newEl);
-console.log(myList);
+let ul = document.createElement("ul"); // ul also accepts display flex from parent div... how to change?
+const inputDiv = document.querySelectorAll(".primary-content div")[3];
+inputDiv.appendChild(ul);
+let addText = document.querySelector("#addArticleBtn");
+addText.addEventListener("click", addList);
 
-// let addInfo = document.querySelector('#addArticleBtn');
-// addInfo.addEventListener('click',addText);
-
-// function addText() {
-//     //let text = document.querySelector('input');
-//     let newEl = document.createElement('li');
-//     newEl.innerText = "something here";
-//     console.log(newEl);
-//     let myList = document.querySelector('ul');
-//     console.log(myList);
-//     myList.appendChild(newEl);
-// }
+function addList() {
+  let li = document.createElement("li");
+  li.innerText = document.querySelector("input").value;
+  ul.appendChild(li);
+}

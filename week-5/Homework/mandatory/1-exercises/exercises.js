@@ -13,23 +13,17 @@
  *      .....
  * </div>
  */
-// function getName(person) {
-//   return person.name;
-// }
-// function getJob(person) {
-//   return person.job;
-// }
+let content = document.querySelector("#content");
 
 function exerciseOne(arrayOfPeople) {
-  let content = document.querySelector("#content");
-  for (i = 0; i < arrayOfPeople.length; i++) {
+  arrayOfPeople.forEach((person) => {
     let h1 = document.createElement("h1");
-    h1.innerText = i[name];
+    h1.innerText = person.name;
     content.appendChild(h1);
     let h2 = document.createElement("h2");
-    h2.innerText = i.job;
+    h2.innerText = person.job;
     content.appendChild(h2);
-  }
+  });
 }
 
 /**
@@ -39,7 +33,15 @@ function exerciseOne(arrayOfPeople) {
  * All of your HTML should go inside the Div tag with the id "content".
  *
  */
+let ul = document.createElement("ul");
+content.appendChild(ul);
+
 function exerciseTwo(shoppingItems) {
+  shoppingItems.forEach((item) => {
+    let li = document.createElement("li");
+    li.innerText = item;
+    ul.appendChild(li);
+  });
   //Write your code in here
 }
 
@@ -75,7 +77,29 @@ function exerciseTwo(shoppingItems) {
 
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
+
+
+let ul2 = document.createElement("ul"); //creates dots - how to delete them?
+ul2.style.display = "flex";
+ul2.style.justifyContent = "space-between"; 
+content.appendChild(ul2);
+
 function exerciseThree(books) {
+  books.forEach((book) => {
+    let li = document.createElement("li");
+    ul2.appendChild(li);
+    let p = document.createElement("p")
+    p.innerText = `${book.title} - ${book.author}`;
+    li.appendChild(p);
+    let img = document.createElement("img");
+    img.src = book.coverImageUrl;
+    li.appendChild(img);
+    if (book.alreadyRead === true) {
+      return li.style.backgroundColor = "green";
+    } else {
+      return li.style.backgroundColor = "red";
+    }
+  });
   //Write your code in here
 }
 
