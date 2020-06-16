@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+
+.title {
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.space {
+  margin-top: 10px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+}
