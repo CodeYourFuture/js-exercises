@@ -498,7 +498,6 @@ function pickFromArray(choices) {
 
 const containerDiv = document.createElement("div");
 containerDiv.style.width = "800px";
-containerDiv.style.height = "100%";
 containerDiv.style.backgroundColor = "pink";
 
 const quoteLine = document.createElement("h1");

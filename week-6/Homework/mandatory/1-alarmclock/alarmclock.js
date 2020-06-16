@@ -11,7 +11,7 @@ function setAlarm() {
     if (inputVal >= 0) {
       document.getElementById(
         "timeRemaining"
-      ).innerText = `Time Remaining: ${sec2time(inputVal)} `;
+      ).innerText = `Time Remaining: ${formatDisplay(inputVal)} `;
       inputVal -= 1;
       if (inputVal < 0) {
         playAlarm();
@@ -20,7 +20,7 @@ function setAlarm() {
   }
 }
 
-function sec2time(timeEntry) {
+function formatDisplay(timeEntry) {
   let displayMins = Math.floor(timeEntry / 60)
     .toString()
     .padStart(2, "0");

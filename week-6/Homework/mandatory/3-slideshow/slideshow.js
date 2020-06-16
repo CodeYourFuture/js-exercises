@@ -68,8 +68,8 @@ autoForwardBtn.innerText = "Auto-Forward";
 document.body.appendChild(autoForwardBtn);
 
 autoForwardBtn.addEventListener("click", function () {
-  var myVar = setInterval(moveForward, 2000);
+  var forward = setInterval(moveForward, 2000);
   stopBtn.addEventListener("click", function () {
-    clearInterval(myVar);
+    clearInterval(forward);
   });
 });
