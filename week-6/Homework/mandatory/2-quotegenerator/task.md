@@ -10,6 +10,7 @@ When the page loads it should show a random quote from the `quotes` array on the
 
 When you click a button on the screen it should change the quote on the screen.
 
+
 It can look however you like but there is an example in this folder at `quote_generator_example.png`.
 
 ## Need Help?
