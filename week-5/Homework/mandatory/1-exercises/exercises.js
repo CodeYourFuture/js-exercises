@@ -78,26 +78,26 @@ function exerciseTwo(shoppingItems) {
     The end result should look something like this: https://hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
 **/
 
-
-let ul2 = document.createElement("ul"); //creates dots - how to delete them? div?
+let ul2 = document.createElement("ul");
+ul2.style.listStyleType = "none";
 ul2.style.display = "flex";
-ul2.style.justifyContent = "space-between"; 
+ul2.style.justifyContent = "space-between";
 content.appendChild(ul2);
 
 function exerciseThree(books) {
   books.forEach((book) => {
     let li = document.createElement("li");
     ul2.appendChild(li);
-    let p = document.createElement("p")
+    let p = document.createElement("p");
     p.innerText = `${book.title} - ${book.author}`;
     li.appendChild(p);
     let img = document.createElement("img");
     img.src = book.coverImageUrl;
     li.appendChild(img);
     if (book.alreadyRead === true) {
-      return li.style.backgroundColor = "green";
+      return (li.style.backgroundColor = "green");
     } else {
-      return li.style.backgroundColor = "red";
+      return (li.style.backgroundColor = "red");
     }
   });
   //Write your code in here
