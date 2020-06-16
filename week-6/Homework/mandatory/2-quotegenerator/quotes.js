@@ -16,9 +16,21 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
-function pickFromArray(choices) {
-  return choices[Math.floor(Math.random() * choices.length)];
-}
+// function pickFromArray(choices) {
+//   return choices[Math.floor(Math.random() * choices.length)];
+// }
+
+// // let quote = document.getElementById("quote");
+// // let author = document.getElementById("author");
+// // let button = document.getElementById("button");
+
+// // button.addEventListener("click", function);
+
+// // function getRandomQuote() {
+
+// // }
+
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
@@ -489,3 +501,40 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+// function getRandomQuote(callBack) {
+//   let i = (callBack(quotes));
+//   quote.textContent = quotes[i].quote;
+//   author.textContent = quotes[i].author;
+// }
+
+// button.addEventListener("click", getRandomQuote(x));
+
+// function getRandomQuote() {
+//   let i = [Math.floor(Math.random() * quotes.length)]
+  
+//   quote.textContent = quotes[i].quote;
+//   author.textContent = quotes[i].author;
+// }
+
+let quote = document.getElementById("quote");
+let author = document.getElementById("author");
+let button = document.getElementById("button");
+
+function pickFromArray(quotes) {
+  return [Math.floor(Math.random() * quotes.length)]
+}
+
+function getRandomQuote() {
+  let i = (pickFromArray(quotes));
+  quote.textContent = `"${quotes[i].quote}"`;
+  author.textContent = `-${quotes[i].author;
+}
+
+button.addEventListener("click", getRandomQuote);
+
+getRandomQuote();
+
+
+

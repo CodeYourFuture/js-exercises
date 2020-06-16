@@ -1,1 +1,9 @@
 /** Write your CSS in here **/
+.jumbotron {
+    background-color: aliceblue;
+    width: 70%;
+}
+
+body {
+    background-color: yellow;
+}
