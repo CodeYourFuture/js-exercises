@@ -489,3 +489,49 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+// let newQuotes = pickFromArray(quotes);
+// console.log(newQuotes);
+// let newAuthor = newQuotes.author;
+// console.log(newAuthor);
+
+// let newQuote = newQuotes.quote;
+// console.log(newQuote);
+
+// let Quote = document.createElement("p");
+// let author = document.createElement("p");
+// Quote.innerHTML = `${newQuote}`;
+// author.innerHTML = `${newAuthor}`;
+// let div = document.querySelector(".main");
+// div.appendChild(Quote);
+// div.appendChild(author);
+// let button = document.createElement("button");
+// button.innerHTML = "Quote Generator";
+// div.appendChild(button);
+
+// function changeQuotes() {
+//   Quote.innerHTML = `${newQuote}`;
+// }
+
+// button.addEventListener("click", changeQuotes);
+
+let quote = document.createElement("h2");
+let author = document.createElement("h5");
+let div = document.querySelector(".main");
+
+let button = document.createElement("button");
+button.innerHTML = "Quote generator";
+
+function chnageQuote() {
+  let randomNumber = [Math.floor(Math.random() * quotes.length)];
+  quote.innerHTML = quotes[randomNumber].quote;
+  author.innerHTML = quotes[randomNumber].author;
+  quote.style.color = "orange";
+  author.style.color = "orange";
+  div.appendChild(quote);
+  div.appendChild(author);
+  div.appendChild(button);
+}
+chnageQuote();
+
+button.addEventListener("click", chnageQuote);

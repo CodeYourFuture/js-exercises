@@ -1,1 +1,24 @@
 /** Write your CSS in here **/
+
+body {
+  background-color: orange;
+}
+.main button {
+  color: white;
+  background-color: orange;
+  border: none;
+}
+
+h5 {
+  padding-right: 30px;
+}
+
+.main {
+  text-align: center;
+  margin-top: 10px;
+  margin-top: 120px;
+  border: 2px solid white;
+  background-color: white;
+  max-width: 600px;
+  margin-left: 300px;
+}
