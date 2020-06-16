@@ -7,10 +7,11 @@ body {
   color: white;
   background-color: orange;
   border: none;
+  display: inherit;
 }
 
 h5 {
-  padding-right: 30px;
+  padding-left: 25rem;
 }
 
 .main {
