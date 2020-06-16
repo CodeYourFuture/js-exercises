@@ -1,7 +1,29 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+let setAlarmEl = document.getElementById("set");
+let inputEl = document.getElementById("alarmSet");
+let timeremainEl = document.getElementById("timeRemaining");
+
+setAlarmEl.addEventListener("click", setAlarm);
+
+function setAlarm() {
+  let count = inputEl.value;
+
+  setInterval(() => {
+    count -= 1;
+    let min = Math.floor(count / 60);
+    let sec = count % 60;
+    timeremainEl.innerHTML = `Time Remaining:${min
+      .toString()
+      .padStart(2, "0")}:${sec.toString().padStart(2, "0")}`;
+
+    if (count === 0) {
+      var audio = new Audio("alarmsound.mp3");
+      audio.play();
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 /* 
