@@ -42,6 +42,14 @@ function addMovie() {
   const loadingText = document.querySelector("#loading-text");
   const movieTitleInput = document.querySelector("#new-movie-input");
   const movieTitle = movieTitleInput.value;
+  movieTitleInput.value = "";
+  loadingText.className = "show";
+  setTimeout(function () {
+    let movie = { title: movieTitle, haveWatched: false };
+    movies.push(movie);
+    reloadMovieList();
+    loadingText.className = "hide";
+  }, 4000);
 
   // Your task - write the code in this function:
   // 1. The moment this function is called:
