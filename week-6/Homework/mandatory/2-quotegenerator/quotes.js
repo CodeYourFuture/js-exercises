@@ -1,3 +1,4 @@
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.
@@ -490,3 +491,23 @@ const quotes = [
   },
 ];
 
+
+function qoutesGenerator(){
+  let h2 = document.getElementById('qoute-text');
+  let h5 = document.getElementById('author-text');
+  let button = document.querySelector('.flicker');
+  let autoButton = document.querySelector('.auto-flicker');
+  button.addEventListener("click",picker);  
+  autoButton.addEventListener("click",()=>{
+    setInterval(picker, 1000);
+  })
+  function picker() {
+  let myPicker = quotes[Math.floor(Math.random() * quotes.length)];
+  h2.innerHTML ='<span>"</span>'+ myPicker.quote + '<span>"</span>';
+  h5.innerHTML ='<span>--</span>'+ myPicker.author ;
+
+  }
+ 
+ 
+
+}
