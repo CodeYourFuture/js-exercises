@@ -14,19 +14,23 @@ div {
   border-radius: 20px;
   padding: 20px;
   width: 1000px;
-  background-color: rgb(169, 188, 194);
+  /* background-color: rgb(169, 188, 194); */
 }
 
+h1 {
+  color: white;
+}
 h3 {
   padding: 30px;
+  color: white;
 }
 
 button {
   background-color: rgb(90, 99, 99);
   padding: 10px;
   position: relative;
-  left: 850px;
-  top: 400px;
+  left: 800px;
+  top: 300px;
   color: white;
   border-radius: 5px;
 }
