@@ -2,7 +2,11 @@
 body {
   text-align: center;
   margin-top: 100px;
+  background-color: bisque;
 }
-/* div {
-  background-color: aqua;
-} */
+
+button {
+  margin: 5px;
+  background-color: rgb(226, 173, 126);
+  width: 120px;
+}

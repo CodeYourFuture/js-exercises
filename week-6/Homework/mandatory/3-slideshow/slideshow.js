@@ -41,7 +41,10 @@ backBtn.innerText = "Back";
 document.body.appendChild(backBtn);
 backBtn.addEventListener("click", moveBack);
 
+let back;
+
 autoBackBtn.addEventListener("click", function () {
+  clearInterval(back);
   var back = setInterval(moveBack, 2000);
   stopBtn.addEventListener("click", function () {
     clearInterval(back);
@@ -67,7 +70,10 @@ const autoForwardBtn = document.createElement("button");
 autoForwardBtn.innerText = "Auto-Forward";
 document.body.appendChild(autoForwardBtn);
 
+let forward;
+
 autoForwardBtn.addEventListener("click", function () {
+  clearInterval(forward);
   var forward = setInterval(moveForward, 2000);
   stopBtn.addEventListener("click", function () {
     clearInterval(forward);

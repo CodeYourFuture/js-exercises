@@ -1,16 +1,19 @@
 /** Write your CSS in here **/
 body {
-  background-color: aliceblue;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-content: center;
+  background-image: url("https://wallpapercave.com/wp/5KLTq1z.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 div {
   margin-top: 100px;
   border-radius: 20px;
   padding: 20px;
+  width: 1000px;
+  background-color: rgb(169, 188, 194);
 }
 
 h3 {
@@ -18,8 +21,10 @@ h3 {
 }
 
 button {
-  background-color: aqua;
+  background-color: rgb(90, 99, 99);
   margin-top: 20px;
   position: relative;
-  left: 650px;
+  left: 850px;
+  color: white;
+  border-radius: 5px;
 }
