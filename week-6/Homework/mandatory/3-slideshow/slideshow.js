@@ -15,12 +15,12 @@ let images = [
 let i = 0;
 let autoForward;
 let autoGetBack;
-//imageSource = images[i];
 
 function imageChange() {
   autoNextsButton.addEventListener("click", () => {
     clearInterval(autoGetBack);
     clearInterval(autoForward);
+    pauseButton.style.color = "black";
     autoForward = setInterval(() => {
       imageSource.src = images[i++];
       if (i == images.length) {
@@ -28,9 +28,11 @@ function imageChange() {
       }
     }, 3000);
   });
+
   autoPreviusButton.addEventListener("click", () => {
     clearInterval(autoForward);
     clearInterval(autoGetBack);
+    pauseButton.style.color = "black";
     autoGetBack = setInterval(() => {
       imageSource.src = images[i--];
       if (i < 0) {
@@ -38,6 +40,7 @@ function imageChange() {
       }
     }, 3000);
   });
+
   nextButton.addEventListener("click", () => {
     clearInterval(autoForward);
     clearInterval(autoGetBack);
@@ -46,6 +49,7 @@ function imageChange() {
       i = 0;
     }
   });
+
   previusButton.addEventListener("click", () => {
     clearInterval(autoForward);
     clearInterval(autoGetBack);
@@ -54,9 +58,13 @@ function imageChange() {
       i = images.length - 1;
     }
   });
+
   pauseButton.addEventListener("click", function () {
     clearInterval(autoForward);
     clearInterval(autoGetBack);
+    if (autoForward || autoGetBack) {
+      pauseButton.style.color = "red";
+    }
   });
 }
 window.onload = imageChange;
