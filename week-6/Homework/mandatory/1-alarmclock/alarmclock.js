@@ -22,16 +22,15 @@ function trigger() {
 
 // This function will read the value inputed by user, convert it to minutes and seconds then display it and call the trigger function every second.
 function setAlarm() {
-  if (timeValue.value <60 && timeValue.value > 0){
-    display.innerText = "00:" + timeValue.value.toString().padStart(2,"0");
-  } else {
-    display.innerText = Math.floor(timeValue.value/60).toString().padStart(2,"0") + ":" + (timeValue.value % 60).toString().padStart(2,"0");
-  }
+  display.innerText = Math.floor(timeValue.value/60).toString().padStart(2,"0") + ":" + (timeValue.value % 60).toString().padStart(2,"0");
+  if(!timer){
   timer = setInterval(trigger,1000);
+}
 }
 // This is an event handler for the stop button that will clear the interval to stop the alarm 
 stopbtn.addEventListener("click", () =>{
   clearInterval(timer); 
+  timer = null;
 })
 
 

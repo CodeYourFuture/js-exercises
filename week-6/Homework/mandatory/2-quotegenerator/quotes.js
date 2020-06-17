@@ -7,9 +7,7 @@ let quote = document.getElementById("quote"),
     timer;
 
 // Event listener to call change function.
-newbtn.addEventListener("click", () => {
-change();
-});
+newbtn.addEventListener("click",change);
 
 // Function to call pickFromArray and change the display with the result
 function change(){

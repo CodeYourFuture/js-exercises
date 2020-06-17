@@ -24,40 +24,36 @@ let imagesArr = ["https://images.unsplash.com/photo-1452860606245-08befc0ff44b",
     autoBck = document.getElementById("autoBackward"),
     stop = document.getElementById("stop"), 
     timer,
-    userPref = document.getElementById("setInterval");
+    userPref = document.getElementById("setInterval"),
+    defaultTime = 3000;
     
 // Manual forward event handler
-fwdBtn.addEventListener("click", () => {
-forward();
-});
+fwdBtn.addEventListener("click",forward);
 // Manual backward event handler
 bckBtn.addEventListener("click", () => {
 backward();
 });
 // Automatic forward event handler
 autoFwd.addEventListener("click", ()=>{
-    clearInterval(timer);
-    if (userPref.value > 0) {
-        timer = setInterval(forward,userPref.value*1000);
-    } else {
-        timer = setInterval(forward,3000);
-    }
-    } 
-);
+automate(forward); 
+});
 // Automatic backward event handler
 autoBck.addEventListener("click", () => {
-    clearInterval(timer);
-    if (userPref.value > 0 ) {
-        timer = setInterval(backward,userPref.value*1000);
-    } else {
-        timer = setInterval(backward,3000);
-    }
+    automate(backward);
 });
 // Stop automation handler
 stop.addEventListener("click",() => {
     clearInterval(timer);
 });
-
+// Automation function
+function automate(callback){
+    clearInterval(timer);
+    if (userPref.value > 0 ) {
+        timer = setInterval(callback,userPref.value*1000);
+    } else {
+        timer = setInterval(callback,defaultTime);
+    }
+}
 // added clear interval at the end of the cycle for both functions to make life easier I guess
 // forward function
 function backward() {
