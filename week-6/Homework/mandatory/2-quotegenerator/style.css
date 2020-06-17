@@ -1,5 +1,6 @@
 /** Write your CSS in here **/
 body {
+  margin: 10px;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -22,9 +23,10 @@ h3 {
 
 button {
   background-color: rgb(90, 99, 99);
-  margin-top: 20px;
+  padding: 10px;
   position: relative;
   left: 850px;
+  top: 400px;
   color: white;
   border-radius: 5px;
 }
