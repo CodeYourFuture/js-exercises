@@ -16,17 +16,19 @@ function getRemainder(a, b) {
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-function test(test_name, expr) {
+const util = require('util');
+
+function test(test_name, actual, expected) {
     let status;
-    if (expr) {
-        status = "PASSED"
+    if (actual === expected) {
+        status = "PASSED";
     } else {
-        status = "FAILED"
+        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
     }
 
-    console.log(`${test_name}: ${status}`)
+    console.log(`${test_name}: ${status}`);
 }
 
-test("fixed addNumbers function - case 1", addNumbers(3,4,6) === 13)
-test("fixed introduceMe function", introduceMe("Sonjide",27) === "Hello, my name is Sonjide and I am 27 years old")
-test("fixed getRemainder function", getRemainder(23,5) === "The remainder is 3")
+test("fixed addNumbers function - case 1", addNumbers(3, 4, 6), 13);
+test("fixed introduceMe function", introduceMe("Sonjide", 27), "Hello, my name is Sonjide and I am 27 years old");
+test("fixed getRemainder function", getRemainder(23, 5), "The remainder is 3");

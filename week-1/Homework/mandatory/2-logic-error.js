@@ -15,17 +15,19 @@ function multiply(a, b, c) {
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-function test(test_name, expr) {
-  let status;
-  if (expr) {
-      status = "PASSED"
-  } else {
-      status = "FAILED"
-  }
+const util = require('util');
 
-  console.log(`${test_name}: ${status}`)
+function test(test_name, actual, expected) {
+    let status;
+    if (actual === expected) {
+        status = "PASSED";
+    } else {
+        status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
+    }
+
+    console.log(`${test_name}: ${status}`);
 }
 
-test("fixed trimWord function", trimWord("  CodeYourFuture ") === "CodeYourFuture")
-test("fixed wordLength function", getWordLength("A wild sentence appeared!") === 25)
-test("fixed multiply function", multiply(2,3,6) === 36)
+test("fixed trimWord function", trimWord("  CodeYourFuture "), "CodeYourFuture");
+test("fixed wordLength function", getWordLength("A wild sentence appeared!"), 25);
+test("fixed multiply function", multiply(2, 3, 6), 36);
