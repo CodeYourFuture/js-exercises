@@ -1,4 +1,60 @@
-function setAlarm() {}
+function setAlarm() {
+  //get the value of the input field
+  let inputField = document.querySelector("#alarmSet").value;
+
+  //set the title to the correct value
+  const timeRemaining = document.querySelector("#timeRemaining");
+  timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
+
+  let myAlarm;
+  //update the `Time Remaining` title every second
+  myAlarm = setInterval(() => {
+    //add `pause` functionality so that the count down stops
+    document.getElementById("set").removeEventListener("click", () => {
+      setAlarm();
+    });
+    document.getElementById("set").textContent = "Pause";
+    document.getElementById("set").addEventListener("click", () => {
+      clearInterval(myAlarm);
+      //then restart it later
+      document.getElementById("set").textContent = "Restart";
+
+      document.getElementById("set").removeEventListener("click", () => {
+        clearInterval(myAlarm);
+      });
+      document.getElementById("set").addEventListener("click", () => {
+        setAlarm();
+      });
+    });
+
+    if (inputField == 0) {
+      clearInterval(myAlarm);
+      //play the alarm sound
+      playAlarm();
+
+      //Make the background change color when the alarm clock finishes
+      setTimeout(() => {
+        document.body.style.backgroundColor = "orange";
+        //making the background flash
+        let index = 0;
+        setInterval(function () {
+          if (index % 2) {
+            document.body.style.backgroundColor = "white";
+            index++;
+          } else {
+            document.body.style.backgroundColor = "orange";
+            index++;
+            timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
+          }
+        }, 1000);
+        //
+      }, audio.duration);
+    } else {
+      timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
+      inputField--;
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 

@@ -42,12 +42,14 @@ function addMovie() {
   const loadingText = document.querySelector("#loading-text");
   const movieTitleInput = document.querySelector("#new-movie-input");
   const movieTitle = movieTitleInput.value;
-  createDomMovie(movie);
+
   movieTitleInput.value = "";
   loadingText.className = "show";
 
   setTimeout(function () {
-    let movie = movieTitle;
+    let movie = {};
+    movie.title = movieTitle;
+    movie.haveWatched = false;
     movies.push(movie);
     console.log(movies);
     loadingText.className = "hide";

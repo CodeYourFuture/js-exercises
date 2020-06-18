@@ -15,9 +15,3 @@ setInterval(function () {
     Math.random() * 255
   }, ${Math.random() * 255})`;
 }, 5000);
-
-/* 
-setInterval(function () {
-  document.body.style.backgroundColor = "white";
-}, 5000);
- */
