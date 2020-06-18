@@ -11,26 +11,23 @@ function mood() {
   }
 }
 
-function greaterThan10() {
-  let num = 10;
+function greaterThan10(num) {
   let isBigEnough;
 
   if (isBigEnough) {
-    return "num is greater than or equal to 10";
+    return "num is greater than 10";
   } else {
     return "num is not big enough";
   }
 }
 
-function sortArray() {
-  let letters = ["a", "n", "c", "e", "z", "f"];
-  let sortedLetters;
+function sortArray(letters) {
+  let sortedLetters = letters;
 
   return sortedLetters;
 }
 
-function first5() {
-  let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+function first5(numbers) {
   let sliced;
 
   return sliced;
@@ -45,12 +42,22 @@ function get3rdIndex(arr) {
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
-function test(test_name, expr) {
+const util = require('util');
+
+function test(test_name, actual, expected) {
   let status;
-  if (expr) {
+
+  let isEqual;
+  if (Array.isArray(expected)) {
+    isEqual = arraysEqual(actual, expected);
+  } else {
+    isEqual = actual === expected;
+  }
+
+  if (isEqual) {
     status = "PASSED";
   } else {
-    status = "FAILED";
+    status = `FAILED: expected: ${util.inspect(expected)} but your function returned: ${util.inspect(actual)}`;
   }
 
   console.log(`${test_name}: ${status}`);
@@ -68,23 +75,38 @@ function arraysEqual(a, b) {
   return true;
 }
 
-test("mood function works", mood() === "I am not happy");
+test("mood function works for true", mood(true), "I am happy");
+test("mood function works for false", mood(false), "I am not happy");
 test(
-  "greaterThanTen function works",
-  greaterThan10() === "num is greater than or equal to 10"
+  "greaterThanTen function works for 11",
+  greaterThan10(11), "num is greater than 10"
+);
+test(
+  "greaterThanTen function works for 10",
+  greaterThan10(10), "num is not big enough"
+);
+test(
+  "greaterThanTen function works for 9",
+  greaterThan10(9), "num is not big enough"
 );
 test(
   "sortArray function works",
-  arraysEqual(sortArray(), ["a", "c", "e", "f", "n", "z"])
+  sortArray(["a", "n", "c", "e", "z", "f"]), ["a", "c", "e", "f", "n", "z"]
 );
-test("first5 function works", arraysEqual(first5(), [1, 2, 3, 4, 5]));
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+test("first5 function works", first5(numbers), [1, 2, 3, 4, 5]);
+if (!arraysEqual(numbers, [1, 2, 3, 4, 5, 6, 7, 8])) {
+  console.log("PROBLEM: first5 changed its input array - it shouldn't!")
+}
 
 test(
   "get3rdIndex function works - case 1",
-  get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]) ===
-    "strawberry"
+  get3rdIndex(["fruit", "banana", "apple", "strawberry", "raspberry"]),
+  "strawberry"
 );
 test(
   "get3rdIndex function works - case 2",
-  get3rdIndex([11, 37, 62, 18, 19, 3, 30]) === 18
+  get3rdIndex([11, 37, 62, 18, 19, 3, 30]),
+  18
 );
