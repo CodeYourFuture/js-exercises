@@ -7,26 +7,27 @@ function setAlarm() {
   timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
 
   let myAlarm;
-  //update the `Time Remaining` title every second
-  myAlarm = setInterval(() => {
-    //add `pause` functionality so that the count down stops
-    document.getElementById("set").removeEventListener("click", () => {
+
+  document.getElementById("set").removeEventListener("click", () => {
+    setAlarm();
+  });
+  // add `pause` functionality
+  document.getElementById("set").textContent = "Pause";
+
+  document.getElementById("set").addEventListener("click", pauseCount);
+  function pauseCount() {
+    clearInterval(myAlarm);
+    //then restart it later
+
+    document.getElementById("set").textContent = "Restart";
+    document.getElementById("set").removeEventListener("click", pauseCount);
+    document.getElementById("set").addEventListener("click", () => {
       setAlarm();
     });
-    document.getElementById("set").textContent = "Pause";
-    document.getElementById("set").addEventListener("click", () => {
-      clearInterval(myAlarm);
-      //then restart it later
-      document.getElementById("set").textContent = "Restart";
+  }
 
-      document.getElementById("set").removeEventListener("click", () => {
-        clearInterval(myAlarm);
-      });
-      document.getElementById("set").addEventListener("click", () => {
-        setAlarm();
-      });
-    });
-
+  //update the `Time Remaining` title every second
+  myAlarm = setInterval(() => {
     if (inputField == 0) {
       clearInterval(myAlarm);
       //play the alarm sound
@@ -50,8 +51,8 @@ function setAlarm() {
         //
       }, audio.duration);
     } else {
-      timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
       inputField--;
+      timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
     }
   }, 1000);
 }
