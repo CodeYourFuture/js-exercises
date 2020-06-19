@@ -9,30 +9,31 @@ body {
     height : 400px;
     width : 580px;
     background-color: rgb(247, 246, 191);
-    display : flex;
-    align-items: flex-end;
     border:1px solid rgb(226, 178, 245) ;
     border-radius: 12px;
 }
 #qoute-text {
-  background-color: deepskyblue;
+ /*  background-color: deepskyblue; */
   color: rgb(88, 31, 31);
+  justify-content: center;
+  position: relative;
+  top: 90px;
+  left: 20px;
 
 }
 #author-text {
     color: rgb(88, 31, 31);
+    position: relative;
+    top: 160px;
+    left: 310px;
 }
 .flicker {
     background-color: rgb(227, 120, 236);
     border: 1px solid rgb(227, 120, 236) ;
     border-radius: 10px;
     color: rgb(238, 216, 216);
-
-}
-.auto-flicker{
-    background-color: rgb(227, 120, 236);
-    border: 1px solid rgb(227, 120, 236) ;
-    border-radius: 10px;
-    color: rgb(238, 216, 216);
-
+    position: relative;
+    top: 280px;
+    
+  
 }
