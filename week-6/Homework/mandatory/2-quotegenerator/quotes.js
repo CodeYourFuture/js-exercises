@@ -496,20 +496,11 @@ const quotes = [
 function quoteGenerator(){
 
   let quoteEl = document.querySelector('.quote');
-  // let qute = document.createElement('q');
-  // let athr = document.createElement('p');
-  // let newQuote = pickFromArray(quotes);
-  // qute.innerText = newQuote.quote;
-  // athr.innerText = " -" + newQuote.author;
-  // athr.style.marginLeft = '250px';
-  // athr.style.marginTop = '15px';
-  // quoteEl.appendChild(qute);
-  // qute.appendChild(athr);
   let qute = document.getElementById('rndQuote');
   let athr = document.getElementById('rndAthr');
   let newQuote = pickFromArray(quotes);
   let generatedQuote = newQuote.quote;
-  let randomQuote = generatedQuote.replace('’', '&#8217');
+  let randomQuote = generatedQuote.replace('/’/g', '&#8217');
   qute.innerHTML = '<b>"</b>' + randomQuote;
   athr.innerText = " -" + newQuote.author;
   athr.style.marginLeft = '250px';
@@ -533,7 +524,7 @@ function quoteSelector(){
   
   let rndQuote = pickFromArray(quotes);
   let generatedQuote = rndQuote.quote;
-  let randomQuote = generatedQuote.replace("’", '&#8217');
+  let randomQuote = generatedQuote.replace('/’/g', '&#8217');
   qEl.innerHTML = '<b>"</b>' + randomQuote;
   pEl.innerText = " -" + rndQuote.author;
   pEl.style.marginLeft = '250px';

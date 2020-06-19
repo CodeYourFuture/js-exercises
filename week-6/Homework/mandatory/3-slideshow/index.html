@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
+
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -11,7 +12,44 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- Write your HTML in here -->
-  </body>
+    <div class="slideshow-container">
+      <div class="mySlides">
+        <img src='images/image1.jpg'  alt="View of the sea"/>
+          <div class="text">Serenity</div>
+      </div>
+
+     <div class="mySlides">
+       <img  src='images/image2.jpg'  alt="couple running"/>
+        <div class="text">Bliss</div>
+     </div>
+
+     <div class="mySlides">
+       <img  src='images/image3.jpg'  alt="ballet shows hanging against a plain wall"/>
+        <div class="text">Accomplishment</div>
+      </div>
+
+     <div class="mySlides">
+       <img  src='images/image4.jpg'  alt="purple colour against a black backdrop"/>
+        <div class="text">Chaos</div>
+     </div>
+  
+
+      <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+      <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+   </div>
+  <br/>
+
+    <div style='text-align: center;'>
+      <span class="dot" onclick='currentSlide(1)'></span>
+      <span class="dot" onclick='currentSlide(2)'></span>
+      <span class="dot" onclick='currentSlide(3)'></span>
+      <span class="dot" onclick='currentSlide(4)'></span>
+    </div>
+      
+     
+    <script src="slideshow.js"></script>
+    </body>
 </html>
