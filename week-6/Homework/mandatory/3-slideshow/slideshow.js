@@ -1,10 +1,42 @@
 // Write your code here
-let imgsrc = "/Homework/mandatory/3-slideshow/imgs/slide-1.jpg";
-console.log("test ", imgsrc.substr(1, 42), imgsrc.substr(43, 1));
-console.log(Math.ceil(Math.random() * 4));
+const NoOfImages = 4;
+let currentImage;
+let imgSrc = "/Homework/mandatory/3-slideshow/imgs/slide-1.jpg";
+let nextImage;
 
-document.getElementById("btn").addEventListener("click", (e) => {
-  console.log(e);
+function imageNo() {
+  let image = document.getElementById("image");
+  let imgSrc = image.src;
+  return imgSrc.substr(64, 1);
+}
+// getElementById("btn").
+
+document.addEventListener("click", (e) => {
+  if (e.target.innerText === "Backward") {
+    let currentImage = imageNo();
+    console.log("current " + currentImage, "next ", nextImage);
+
+    if (currentImage <= 1) {
+      currentImage = 5;
+      nextImage = currentImage;
+      console.log("2", "current " + currentImage, "next ", nextImage);
+    }
+    nextImage = --currentImage;
+    image.src =
+      "/Homework/mandatory/3-slideshow/imgs/slide-" + nextImage + ".jpg";
+  }
+
+  if (e.target.innerText === "Forward") {
+    let currentImage = imageNo();
+
+    if (currentImage >= 4) {
+      currentImage = 0;
+      nextImage = currentImage;
+    }
+    nextImage = ++currentImage;
+    image.src =
+      "/Homework/mandatory/3-slideshow/imgs/slide-" + nextImage + ".jpg";
+  }
 });
 
 // function pickFromArray(choices) {
