@@ -12,6 +12,13 @@
     body {
       padding: 30px;
     }
+    .TheForm {
+        font-size: 20px;
+        color: black;
+        background-color: blanchedalmond;
+        margin-left: 3em;
+        margin-bottom: 3em;
+      }
   </style>
 </head>
 
@@ -23,6 +30,20 @@
         <p class="alert alert-info">Number of movies: <span id="movies-number"></span></p>
       </div>
     </div>
+
+    <form class="TheForm">
+      <label for="title">The title : </label> <br />
+      <input id="title" type="text" value=""/> <br>
+      <label for="director">The director: </label> <br />
+      <input id="director" type="text" value=""/> <br>
+      <label for="type">The type: </label> <br />
+      <input id="type" type="text" value=""/> <br>
+      <label for="haveWatched">haveWatched: </label> <br />
+      <input id="watched" type="text" value=""/> <br /><br />
+    </form>
+    <hr /> 
+<button id="btn" type="submit">Save</button>
+
     <script src="exercise.js"></script>
 </body>
 

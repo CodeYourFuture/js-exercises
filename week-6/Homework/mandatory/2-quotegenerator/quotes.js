@@ -1,3 +1,13 @@
+const Thelable = document.getElementById("space");
+const TheQouteBtn = document.getElementById("btn");
+const TheP = document.getElementById("p");
+
+TheQouteBtn.addEventListener("click", function () {
+  let temp = pickFromArray(quotes);
+  Thelable.innerText = temp.quote;
+  TheP.innerText = temp.author;
+});
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -14,7 +24,7 @@
 // Examples of use
 // ---------------
 // pickFromArray([1,2,3,4])     //maybe returns 2
-// pickFromArray(coloursArray)  //maybe returns "#F38630"
+// pickFromArray(co loursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
 function pickFromArray(choices) {
