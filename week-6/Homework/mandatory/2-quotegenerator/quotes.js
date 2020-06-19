@@ -490,3 +490,53 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+//let q = pickFromArray(quotes);
+// console.log(q);
+
+let phrase = document.createElement("h1");
+let text = pickFromArray(quotes);
+phrase.innerText = text.quote;
+let main = document.querySelector("#main");
+main.appendChild(phrase);
+let author = document.createElement("h2");
+author.innerText = text.author;
+main.appendChild(author);
+
+let click = document.querySelector("#change");
+click.addEventListener("click", newPhrase);
+
+function newPhrase() {
+  text = pickFromArray(quotes);
+  phrase.innerText = text.quote;
+  author.innerText = text.author;
+}
+
+let autoPlay = document.querySelector("#checkbox");
+autoPlay.addEventListener("CheckboxStateChange", autoPlayOn);
+
+let counter = 0;
+let interval;
+
+function autoPlayOn() {
+  let checkbox = document.querySelector("#checkbox");
+  let label = document.querySelector("label");
+  if (checkbox.checked) {
+    label.innerText = "autoplay:ON";
+    interval = setInterval(
+      function () {
+        newPhrase();
+        counter++;
+        if (counter >= quotes.length) {
+          counter = 0;
+        }
+      },
+      5000,
+      quotes
+    );
+  } else {
+    label.innerText = "autoplay:OFF";
+    console.log(interval);
+    clearInterval(interval);
+  }
+}
