@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(128, 240, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 160px;
+}
+.slider {
+width: 600px;
+height: 300px;
+
+
+}
+.img-box{
+    border: 1px solid rgb(218, 247, 248);
+    width: 600px;
+    height: 300px;
+    border-radius: 25%;
+
+}
+/* .sildes{
+   
+
+}
+#forward #backward{}
+
+
+ */
+
+
