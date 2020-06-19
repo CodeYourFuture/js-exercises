@@ -1,7 +1,20 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+function setAlarm() {
+  let text = "Time Remaining: ";
+  let element = document.getElementById("timeRemaining");
+  let remain = document.getElementById("alarmSet").value;
+  var intID = setInterval(() => {
+    if (remain > 0) {
+      remain = remain - 1;
+      element.innerHTML = text + "00:" + remain;
+    } else {
+      clearInterval(intID);
+      playAlarm();
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 /* 

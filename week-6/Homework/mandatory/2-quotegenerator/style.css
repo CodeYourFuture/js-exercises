@@ -1,1 +1,21 @@
 /** Write your CSS in here **/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+h5,
+p,
+button {
+  margin-left: 50px;
+}
