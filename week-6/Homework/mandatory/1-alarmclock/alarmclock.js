@@ -1,7 +1,26 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
+var buttonType = document.getElementById("set");
+var TimeToset = document.querySelector("#alarmSet");
+var clocStart = document.getElementById("timeRemaining");
+function playAlarm() {
+	setInterval(function (num) {
+		if (num < 10) {
+			num = "00" + num;
+		} else {
+			num = num.toString();
+		}
+		return num;
+	}, 1000);
+}
 
-function setAlarm() { }
+var CurrentTime = document.getElementById("timeTostart");
+document.getElementById("alarmSet").appendChild(alarmClock.timeHour);
+
+function initiateAlarm() {
+	alarmClock.sound = document.getElementById("alarm-sound");
+	setInterval(alarmClock.updateCurrentTime, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 /* 
@@ -17,21 +36,21 @@ function setAlarm() { }
 var audio = new Audio("alarmsound.mp3");
 
 function setup() {
-  document.getElementById("set").addEventListener("click", () => {
-    setAlarm();
-  });
+	document.getElementById("set").addEventListener("click", () => {
+		setAlarm();
+	});
 
-  document.getElementById("stop").addEventListener("click", () => {
-    pauseAlarm();
-  });
+	document.getElementById("stop").addEventListener("click", () => {
+		pauseAlarm();
+	});
 }
 
 function playAlarm() {
-  audio.play();
+	audio.play();
 }
 
 function pauseAlarm() {
-  audio.pause();
+	audio.pause();
 }
 
 /*
