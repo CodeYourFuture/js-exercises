@@ -17,9 +17,13 @@ let autobackward = document.querySelector("#autobackward");
 autobackward.addEventListener("click", backwardAutoPlay);
 let stopButton = document.querySelector("#stop");
 
-stopButton.addEventListener.addEventListener("click",()=>{
-    clearInterval(clear);
-  }) 
+function stoper() {
+    stopButton.addEventListener.addEventListener("click",()=>{
+        clearInterval(clear);
+      });
+    
+}
+ 
 
 function changeImg(){
 	document.querySelector(".slides").src = images[i];
@@ -37,10 +41,10 @@ function changeImg(){
 function changeImg1(){
 	document.querySelector(".slides").src = images[i];
 
-	if(i < images.length - 1){
-	  i--; 
+	if(i === 0){
+	  i = images.length - 1; 
 	} else { 
-		i = 0;
+		i --;
 	}
 
 	setTimeout("changeImg1()", time);
@@ -48,11 +52,33 @@ function changeImg1(){
 
 
 
-  function forwardAutoPlay() {
-    window.onload=changeImg; 
+  function forwardPlay() {
+   
+        document.querySelector(".slides").src = images[i];
+    
+        if(i < images.length - 1){
+          i++; 
+        } else { 
+            i = 0;
+        }
+    
+        setTimeout("changeImg()", time);
+
+    
   }
 
-  function backwardAutoPlay() {
-    window.onload=changeImg1; 
+  function backwardPlay() {
+    document.querySelector(".slides").src = images[i];
+
+	if(i === 0){
+	  i = images.length - 1; 
+	} else { 
+		i --;
+	}
+
+	setTimeout("changeImg1()", time);
+}
+
+    
       
-  }
+  
