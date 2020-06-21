@@ -1,10 +1,11 @@
+
 let myLibrary = [];
 
 window.addEventListener("load", function (e) {
   populateStorage();
   render();
 });
-
+//rajouter 2 nouveau livres quand la page load
 function populateStorage() {
   if (myLibrary.length == 0) {
     let book1 = new Book("Robison Crusoe", "Daniel Defoe", "252", true);
@@ -54,7 +55,7 @@ function render() {
   let table = document.getElementById("display");
   let rowsNumber = table.rows.length;
   //delete old table
-  for (let n = rowsNumber - 1; n > 0; n-- {
+  for (let n = rowsNumber - 1; n > 0; n--) {
     table.deleteRow(n);
   }
   //insert updated row and cells
@@ -89,7 +90,7 @@ function render() {
     });
 
     //add delete button to every row and render again
-    let delButton = document.createElement("button");
+    let delBut = document.createElement("button");
     delBut.id = i + 5;
     cell5.appendChild(delBut);
     delBut.className = "btn btn-warning";
