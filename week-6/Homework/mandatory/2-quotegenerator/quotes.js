@@ -24,6 +24,23 @@ function quotEs(favorite) {
 	document.getElementsByTagName("title").innerHTML = quotEs[myGenerator];
 	return favorite;
 }
+
+// Homework solution Bellow
+window.onload = setup;
+
+function setNewQuote() {
+	const quoteObject = pickFromArray(quotes);
+	const textElement = document.getElementById("quoteText");
+	const authorElement = document.getElementById("quoteAuthor");
+	textElement.textContent = `"${quoteObject.quote}"`;
+	authorElement.textContent = "- " + quoteObject.author;
+}
+
+function setup() {
+	const button = document.getElementById("regenerateButton");
+	button.addEventListener("click", setNewQuote);
+	setNewQuote();
+}
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
 const quotes = [
