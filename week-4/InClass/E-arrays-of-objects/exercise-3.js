@@ -73,7 +73,17 @@ let restaurantFinderApplication = {
   countNumberOfRestaurantsInArea: function (area) {
     return restaurants.filter((a) => a.address.area.includes(area)).length; // Complete here
   },
+
+  findtotalSeats: function (number) {
+    let totalSeatsNumber = restaurants.totalSeats.reduce((a, b) => a + b);
+    return totalSeatsNumber;
+  },
 };
+console.log(restaurantFinderApplication.findtotalSeats());
+var obj = {};
+Object.keys(obj1).map(function (a) {
+  obj[a] = obj1[a] + obj2[a];
+});
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
