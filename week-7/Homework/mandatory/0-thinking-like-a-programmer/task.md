@@ -26,12 +26,18 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
+A passion for problem solving
+
 <!-- Write your answer here -->
 
 ## 2. When trying to solve a challenge, what should you do first?
+
+Understand the problem,plan the solution and then break it into sub-problems.
 
 <!-- Write your answer here -->
 
 ## 3. What should you do if you get stuck?
 
 <!-- Write your answer here -->
+
+Debug,Reassess and Research
