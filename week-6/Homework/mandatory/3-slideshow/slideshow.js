@@ -22,7 +22,7 @@ function imageChange() {
     clearInterval(autoForward);
     pauseButton.style.color = "black";
     autoForward = setInterval(() => {
-      imageSource.src = images[i++];
+      imageSource.src = images[++i];
       if (i == images.length) {
         i = 0;
       }
