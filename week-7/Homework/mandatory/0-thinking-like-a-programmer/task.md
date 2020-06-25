@@ -28,10 +28,22 @@ After you've watched these videos I'd like you to answer these questions
 
 <!-- Write your answer here -->
 
+The most important quality of a programmer is to be able to solve problems!
+Problem solving skills are the most important skill/qualifications employers are looking
+for when they are hiring a programmer. We have to be able to take a problem,
+figure out the solution and write code to implement that soluton.
+
 ## 2. When trying to solve a challenge, what should you do first?
 
 <!-- Write your answer here -->
 
+The first thing to do is try to understand the problem. We have to know exactly what is being asked.
+Drawing some diagram, split the problem into smaller tasks and explaning the problem to a person or a rubber duck can help to understand the problem.
+Another important step is planning. We should not diving in straight away without a plan. Planning will give our brain time to analyze and process the informantion and will also help save some time.
+
 ## 3. What should you do if you get stuck?
 
 <!-- Write your answer here -->
+
+Try to understand what we have told the computer to do. Understand how to fix bugs, this implies going step by step through the solution trying to find where we went wrong.
+We should not try to solve on big problem in one go, instead we should break the problem into sub problems and solve them one by one from the simplest to the more challenging one. Once we understand the problem it will be easier to solve it. Again, explaining the problem to a person or to a rubber duck will help in this process.
