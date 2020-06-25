@@ -1,3 +1,66 @@
+document
+  .querySelector("#newQuoteButton")
+  .addEventListener("click", renderQuotes);
+
+let toggleSwitch = document.querySelector("#autoSwitch");
+let timerQuote;
+toggleSwitch.addEventListener("change", () => {
+  if (toggleSwitch.checked) {
+    // do this
+    timerQuote = setInterval(() => {
+      renderQuotes();
+    }, 60000);
+    document.querySelector("#autoPlaySign").textContent = "auto-play:ON";
+  } else {
+    // do that
+    clearInterval(timerQuote);
+  }
+});
+
+/* 
+ document.addEventListener("DOMContentLoaded", function () {
+  let checkbox = document.querySelector("#autoSwitch");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      // do this
+let timer=setInterval(() => {
+  
+}, interval);
+
+      renderQuotes();
+      console.log("Checked");
+    } else {
+      // do that
+      console.log("Not checked");
+    }
+  });
+ */
+
+//////////
+
+function renderQuotes() {
+  let color = colorGenerator();
+  let quotePack = pickFromArray(quotes);
+  let quote = document.querySelector("#quote");
+  quote.innerHTML = "&ldquo;" + quotePack.quote;
+  let author = document.querySelector("#author");
+  author.textContent = "-" + quotePack.author;
+  let button = document.querySelector("#newQuoteButton");
+
+  document.body.style.backgroundColor = color;
+  quote.style.color = color;
+  author.style.color = color;
+  button.style.backgroundColor = color;
+}
+
+function colorGenerator() {
+  let color = `rgb(${Math.random() * 255},${Math.random() * 255},${
+    Math.random() * 255
+  })`;
+  return color;
+}
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at
@@ -490,3 +553,4 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+window.onload = renderQuotes;

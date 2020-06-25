@@ -7,24 +7,34 @@ function setAlarm() {
   timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
 
   let myAlarm;
+  ///
+  document.getElementById("set").hidden = true;
 
-  document.getElementById("set").removeEventListener("click", () => {
-    setAlarm();
-  });
   // add `pause` functionality
   document.getElementById("set").textContent = "Pause";
 
-  document.getElementById("set").addEventListener("click", pauseCount);
-  function pauseCount() {
-    clearInterval(myAlarm);
-    //then restart it later
+  //create new button Pause
+  let pauseButton = document.createElement("button");
+  pauseButton.textContent = "Pause";
+  let divButton = document.querySelector(".centre >:last-child");
+  divButton.prepend(pauseButton);
+  pauseButton.className = "pauseButton";
 
-    document.getElementById("set").textContent = "Restart";
-    document.getElementById("set").removeEventListener("click", pauseCount);
-    document.getElementById("set").addEventListener("click", () => {
-      setAlarm();
+  document.querySelector(".pauseButton").addEventListener("click", () => {
+    clearInterval(myAlarm);
+    document.querySelector(".pauseButton").hidden = true;
+
+    let restartButton = document.createElement("button");
+    restartButton.textContent = "Restart";
+    let divButton = document.querySelector(".centre >:last-child");
+    divButton.prepend(restartButton);
+    restartButton.className = "restartButton";
+
+    //restart functionality
+    document.querySelector(".restartButton").addEventListener("click", () => {
+      location.reload();
     });
-  }
+  });
 
   //update the `Time Remaining` title every second
   myAlarm = setInterval(() => {
