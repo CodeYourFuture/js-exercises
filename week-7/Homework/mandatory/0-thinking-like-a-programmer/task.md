@@ -28,10 +28,20 @@ After you've watched these videos I'd like you to answer these questions
 
 <!-- Write your answer here -->
 
+1. Patience, Persistent
+2. Intrigued by Bugs
+
 ## 2. When trying to solve a challenge, what should you do first?
 
 <!-- Write your answer here -->
 
+1. Try to understand it.
+2. Break to small chucks
+
 ## 3. What should you do if you get stuck?
 
 <!-- Write your answer here -->
+
+1. Go step by step through your solution trying to find where you went wrong.
+2. Reassess, take a step back
+3. Research
