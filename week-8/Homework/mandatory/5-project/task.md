@@ -1,9 +1,10 @@
 # Project - Part 2
 
-This project should consolidate knowledge from JS2
+Continue working on the next levels of TV Show DOM Project at your own pace. Make sure that you understand your code thoroughly and keep improving it based on reviews from your classmates and mentors.
 
-This could include
+This project should consolidate knowledge from JS2.
 
+This could include:
 - DOM Manipulation
 - Working with an API
 - Get & Post Requests
