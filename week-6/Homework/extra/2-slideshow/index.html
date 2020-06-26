@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Slideshow</title>
-    <script src="slideshow.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,5 +12,26 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
+
+    <div id="container">
+      <h1>Code Your Future course contains:</h1>
+      <div>
+        <img
+          id="imgPlace"
+          src="pics/html.jpg"
+          alt="Technologies in CYF course"
+        />
+      </div>
+      <div id="indexPlace">0</div>
+      <div id="time_remain"></div>
+      <div>
+        <button id="autobackBtn">AutoBack</button>
+        <button id="backBtn">Back</button>
+        <button id="stopBtn">Stop</button>
+        <button id="forwardBtn">Forward</button>
+        <button id="autoforwardBtn">Auto Forward</button>
+      </div>
+    </div>
+    <script src="slideshow.js"></script>
   </body>
 </html>
