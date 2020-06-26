@@ -11,7 +11,17 @@ let house = {
       firstName: "Margaret",
       lastName: "Conway"
     }
+    
 };
+
+function getCurrentOwnerFullName(house){
+  return `${house.currentOwner.firstName} ${house.currentOwner.lastName}`;
+};
+
+getCurrentOwnerFullName(house);
+
+//
+// console.log(getCurrentOwnerFullName(house));
 
 /*
   DO NOT EDIT ANYTHING ABOVE THIS LINE
@@ -28,6 +38,6 @@ let house = {
   DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-console.log("Expected result: 51 Berkley Road. Actual result: " + house.address);
-console.log("Expected result: Brian M., Fiona S. Actual result: " + house.previousOwners.toString());
-console.log("Expected result: Montgomery. Actual result: " + house.currentOwner.lastName);
+// console.log("Expected result: 51 Berkley Road. Actual result: " + house.address);
+// console.log("Expected result: Brian M., Fiona S. Actual result: " + house.previousOwners.toString());
+// console.log("Expected result: Montgomery. Actual result: " + house.currentOwner.lastName);
