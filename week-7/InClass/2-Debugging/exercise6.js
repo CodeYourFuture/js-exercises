@@ -6,6 +6,6 @@ What is the problem, and can you fix it?
 
 let myName = "Sundar";
 
-if (myName = "Reshma" ){
+if (myName === "Reshma" ){
     console.log("Hello");
 }

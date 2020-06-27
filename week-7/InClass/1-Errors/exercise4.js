@@ -3,7 +3,7 @@ type of error, and see which line the error is on
 
 Then please fix the error! */
 
-let ages;  // = [4, 28, 55, 15];
+let ages = [4, 28, 55, 15];
 
 let a = ages.length;
 

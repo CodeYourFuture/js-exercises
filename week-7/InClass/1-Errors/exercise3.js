@@ -3,6 +3,6 @@ type of error, and see which line the error is on
 
 Then please fix the error! */
 
-// let greeting = "Hello";
+let greeting = "Hello";
 
 console.log(greeting);

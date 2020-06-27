@@ -9,8 +9,8 @@ function greet(firstName, lastName){
     console.log("Hello " + firstName + " " + lastName);
 }
 
-let myFirstName = "Safra";
+let firstName = "Safra";
 
-let mySurname = "Catz";
+let lastName = "Catz";
 
-greet(myFirstName);
+greet(firstName, lastName);

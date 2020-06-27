@@ -14,6 +14,6 @@ function multiplyBy12(age){
 
 let peopleAges = [4, 28, 55, 15];
 
-let agesInMonths = calculateAgeInMonths();
+let agesInMonths = calculateAgeInMonths(peopleAges);
 
 console.log(agesInMonths);

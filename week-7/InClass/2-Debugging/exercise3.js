@@ -8,7 +8,7 @@ Why is the bug happening? How do we fix it?
 */
 
 function canDrive(a){
-    if(a <= 17){
+    if(a >= 17){
         return true;
     }else{
         return false;

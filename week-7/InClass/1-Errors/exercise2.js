@@ -5,6 +5,6 @@ Then please fix the error! */
 
 let myAge = 25;
 
-if myAge > 18 {
+if(myAge > 18) {
     console.log("Yes can vote");
 }
