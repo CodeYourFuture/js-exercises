@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Images</title>
+  </head>
+  <body>
+    <button id="next">Click</button>
+    <ul id="dogList">
+      <li id="breed"></li>
+    </ul>
+    <style>
+      img {
+        width: 300px;
+        border: solid black;
+        margin-top: 50px;
+      }
+      button {
+        padding: 6px 10px;
+      }
+      ul li {
+        list-style: none;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        background-color: rgb(160, 144, 144);
+      }
+    </style>
+
+    <script>
+      let nextImg = document.getElementById("next");
+
+      nextImg.addEventListener("click", function () {
+        fetch("https://dog.ceo/api/breeds/image/random")
+          .then((response) => response.json())
+
+          .then((data) => {
+            let dogImg = document.getElementById("breed");
+            dogImg.innerHTML = `<img src="${data.message}">`;
+          })
+
+          .catch((err) => console.log(err));
+      });
+    </script>
+  </body>
+</html>
