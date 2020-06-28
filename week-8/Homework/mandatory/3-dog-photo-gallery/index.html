@@ -41,6 +41,7 @@
           .then((data) => {
             let dogImg = document.getElementById("breed");
             dogImg.innerHTML = `<img src="${data.message}">`;
+            console.log(data.message);
           })
 
           .catch((err) => console.log(err));
