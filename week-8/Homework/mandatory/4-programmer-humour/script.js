@@ -1,10 +1,18 @@
 fetch("https://xkcd.now.sh/?comic=latest")
-  .then((response) => response.json())
+  .then((response) => {
+    if (response.status >= 200 && response.status <= 299) {
+      return response.json();
+    } else {
+      throw new Error(
+        `Encountered something unexpected: ${response.status} ${response.statusText}`
+      );
+    }
+  })
 
-  .then((data) => {
+  .then((response) => {
     let imageTag = document.createElement("img");
-    console.log(data);
-    imageTag.src = data.img;
+    console.log(response);
+    imageTag.src = response.img;
     document.body.appendChild(imageTag);
   })
 

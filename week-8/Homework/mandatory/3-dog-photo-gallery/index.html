@@ -3,51 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Dog Images</title>
   </head>
   <body>
     <button id="next">Click</button>
-    <ul id="dogList">
-      <li id="breed"></li>
-    </ul>
-    <style>
-      img {
-        width: 300px;
-        border: solid darksalmon 10px;
-        margin-top: 50px;
-      }
-      button {
-        padding: 10px;
-        background-color: darksalmon;
-        width: 100px;
-      }
-      ul li {
-        list-style: none;
-      }
-      body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50px;
-        background-image: url(paws.png);
-      }
-    </style>
-
-    <script>
-      let nextImg = document.getElementById("next");
-
-      nextImg.addEventListener("click", function () {
-        fetch("https://dog.ceo/api/breeds/image/random")
-          .then((response) => response.json())
-
-          .then((data) => {
-            let dogImg = document.getElementById("breed");
-            dogImg.innerHTML = `<img src="${data.message}">`;
-            console.log(data.message);
-          })
-
-          .catch((err) => console.log(err));
-      });
-    </script>
+    <div class="container">
+      <ul id="dogList">
+        <li id="breed"></li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
