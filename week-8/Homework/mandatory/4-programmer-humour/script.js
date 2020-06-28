@@ -13,7 +13,8 @@ fetch("https://xkcd.now.sh/?comic=latest")
     let imageTag = document.createElement("img");
     console.log(response);
     imageTag.src = response.img;
-    document.body.appendChild(imageTag);
+    let imgContainer = document.getElementById("imgBox");
+    imgContainer.appendChild(imageTag);
   })
 
   .catch((error) => console.log(error));

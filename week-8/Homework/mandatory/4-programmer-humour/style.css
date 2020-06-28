@@ -1,5 +1,8 @@
 body {
+  background-color: silver;
+}
+
+#imgBox {
   text-align: center;
   margin-top: 150px;
-  background-color: silver;
 }
