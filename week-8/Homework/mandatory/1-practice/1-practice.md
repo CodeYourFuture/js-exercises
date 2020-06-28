@@ -24,8 +24,8 @@ The following endpoint is publicly available from Github
 
 1. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+   {GitHub username}, {repository name} and {PR number}
 
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
 
-<!-- Write your answer here -->
+   It returns the comments made on that spesific PR in repo belongs to owner.
