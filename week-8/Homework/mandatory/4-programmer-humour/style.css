@@ -1,0 +1,10 @@
+ h1 {
+     border: 1px solid #ccc;
+     background-color: #ddd;
+     text-align: center;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     padding: 30px;
+     color: blue;
+ }
