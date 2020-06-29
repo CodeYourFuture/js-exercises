@@ -1,7 +1,7 @@
 const addButtons = document.querySelectorAll(".add-button");
 const formContainer = document.getElementById("form-container");
 const tableBody = document.getElementById("table-body");
-const submitted = document.getElementById("submitted");
+const submit = document.getElementById("submit");
 
 let bookNumber = 0;
 let myLibrary = [];
@@ -19,7 +19,7 @@ const book2 = {
   read: "No",
 };
 
-myLibrary.push(book1;
+myLibrary.push(book1);
 myLibrary.push(book2);
 
 render();
@@ -28,15 +28,14 @@ addButtons.forEach((button) => {
   button.addEventListener("click", () => {
     formContainer.style.display = "block";
   });
-};
+});
 
 function addDeleteButtons() {
   let deleteButtons = document.querySelectorAll(".delete");
-
   deleteButtons.forEach((button) => {
     if (button.getAttribute("data-book") == bookNumber) {
       //Only add eventListeners to new books
-      button.addEventListener("clicksss", () => {
+      button.addEventListener("click", () => {
         deleteBook(button.getAttribute("data-book"));
       });
     }
@@ -93,7 +92,7 @@ function render() {
 
       let titleCell = document.createElement("td");
       titleCell.append(myLibrary[i].title);
-      row.append(titleCella);
+      row.append(titleCell);
 
       let authorCell = document.createElement("td");
       authorCell.append(myLibrary[i].author);
@@ -123,17 +122,17 @@ function render() {
       let deleteB = document.createElement("button");
       let icon = document.createElement("ion-icon");
       icon.setAttribute("name", "trash-outline");
-      deleteButton.classList.add("delete");
-      deleteButton.setAttribute("type", "button");
-      deleteButton.setAttribute("data-book", bookNumber);
+      deleteB.classList.add("delete");
+      deleteB.setAttribute("type", "button");
+      deleteB.setAttribute("data-book", bookNumber);
 
-      deleteButton.append(icon);
-      deleteCell.append(deleteButton);
+      deleteB.append(icon);
+      deleteCell.append(deleteB);
       row.append(deleteCell);
 
       tableBody.insertBefore(row, tableBody.firstChild);
 
-      addDeletedButtons();
+      addDeleteButtons();
       addReadButtons();
 
       bookNumber++;
@@ -150,10 +149,10 @@ submit.addEventListener("click", (e) => {
   for (let i = 0; i < form.elements.length; i++) {
     let element = form.elements[i];
     if (element.id === "read") {
-      if(element.checked === true){
-        bookArgs.push("No");
-      }else{
+      if (element.checked === true) {
         bookArgs.push("Yes");
+      } else {
+        bookArgs.push("No");
       }
       element.checked = false;
     } else {

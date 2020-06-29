@@ -7,17 +7,17 @@ output.
 Why is the bug happening? How do we fix it?
 */
 
-function canDrive(a){
-    if(a <= 17){
-        return true;
-    }else{
-        return false;
-    }
+function canDrive(a) {
+  if (a <= 17) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 const ages = [22, 15, 29, 31, 7, 54, 13];
 
-const legalDrivers = ages.filter(canDrive);
+const legalDrivers = ages.filter(canDrive(ages));
 
 console.log(legalDrivers);
 

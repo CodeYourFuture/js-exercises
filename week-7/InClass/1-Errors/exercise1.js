@@ -15,3 +15,5 @@ let myAge = 44;
 myAge = myAge.toUpperCase();
 
 console.log(myAge);
+
+//because myAge's value is a number, not string, we can add quotes around it, an it will work.
