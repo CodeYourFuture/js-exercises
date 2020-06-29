@@ -26,6 +26,10 @@ The following endpoint is publicly available from Github
 
 <!-- Write your answer here -->
 
+`{owner user id} {repo name} {pull request number}`
+
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
 
 <!-- Write your answer here -->
+
+Data stored in this endpoint.
