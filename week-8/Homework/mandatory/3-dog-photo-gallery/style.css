@@ -4,12 +4,23 @@ img {
   border: solid darksalmon 10px;
   margin-top: 20px;
 }
-button {
+#next {
   padding: 10px;
   background-color: darksalmon;
   width: 100px;
   position: fixed;
 }
+
+#home {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: darksalmon;
+}
+
+a {
+  text-decoration: none;
+}
+
 ul li {
   list-style: none;
 }
