@@ -7,7 +7,7 @@ let techs = [
   "pics/react.jpg",
 ];
 let index = 0;
-
+let timer = document.querySelector("#timechange").value;
 function slideShow() {
   renderIndex(index);
 }
@@ -33,52 +33,70 @@ function backMove() {
 function renderIndex(i) {
   document.querySelector("#indexPlace").textContent = i;
 }
+
 function renderImage(i) {
   document.querySelector("#imgPlace").src = techs[i];
 }
+////////////////////////////////////////////////////////////////////
+function renderTimeChange() {
+  document.querySelector("#timechange").style.visibility = "visible";
+}
+//////////////////////////////////////////////////////////////////////
 
+///document.querySelector("#timechange").value);
+
+///////////////////////////////////////////////////////////////////////////
 function autoBackMove() {
-  addRemainTime();
+  addRemainTime(timer);
   setTimer(backMoveWithTime);
+  renderTimeChange();
 }
 
 function backMoveWithTime() {
   backMove();
-  addRemainTime();
+  addRemainTime(timer);
 }
 
 function forwardMoveWithTime() {
   forwardMove();
-  addRemainTime();
+  addRemainTime(timer);
 }
 
 function autoForwardMove() {
+  addRemainTime(timer);
   setTimer(forwardMoveWithTime);
-  addRemainTime();
+  renderTimeChange();
 }
 
 function stopAuto() {
   clearInterval(timerImage);
   clearInterval(timerRemainTime);
+  document.querySelector("#time_remain").textContent = "Time remain: Stopped";
 }
 
 let timerImage, timerRemainTime;
 function setTimer(func) {
-  timerImage = setInterval(func, 5000);
+  timerImage = setInterval(func, timer * 1000); ////////////////////////////////////////
 }
 
-function addRemainTime() {
-  let timer = 5;
-  document.querySelector("#time_remain").textContent = `Time remain: ${timer}`;
+function addRemainTime(t) {
+  document.querySelector(
+    "#time_remain"
+  ).textContent = `Time remain: ${t} seconds`; //////////////////////////////
   timerRemainTime = setInterval(() => {
-    if (timer > 0) {
-      timer--;
+    if (t > 0) {
+      t--;
       document.querySelector(
         "#time_remain"
-      ).textContent = `Time remain: ${timer}`;
-      console.log(timer);
+      ).textContent = `Time remain: ${t} seconds`; ///////////////////////////////////////////
+      //console.log(timer);
     }
   }, 1000);
+}
+
+function changeTimeInterval() {
+  timer = document.querySelector("#timechange").value;
+  stopAuto();
 }
 
 function setup() {
@@ -91,5 +109,8 @@ function setup() {
     .querySelector("#autoforwardBtn")
     .addEventListener("click", autoForwardMove);
   document.querySelector("#stopBtn").addEventListener("click", stopAuto);
+  document
+    .querySelector("#timechange")
+    .addEventListener("change", changeTimeInterval);
 }
 window.onload = setup;

@@ -1,1 +1,13 @@
 /** Write your CSS in here **/
+#container {
+  text-align: center;
+}
+.autoMove {
+  display: flex;
+  justify-content: center;
+}
+#timechange {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  visibility: hidden;
+}
