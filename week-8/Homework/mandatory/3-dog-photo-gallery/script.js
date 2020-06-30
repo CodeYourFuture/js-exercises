@@ -9,7 +9,14 @@ fetch ('https://dog.ceo/api/breeds/image/random')
        
       getRandomDogImg(randomDogImg)
    })
+
+   .catch((error) => {
+        console.log(error);
+        
+    })
 }
+
+
 const main = document.getElementById('main')
 const btnElement = document.createElement('button')
       btnElement.innerText = 'Show next image'
