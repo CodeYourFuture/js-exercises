@@ -7,36 +7,41 @@ Each destination has a name, a distance from Glasgow, and a list of transportati
 3) Find all the destination names that are both more than 300 kms far away and reachable by train.
 */
 
-
 let destination1 = {
-    destinationName: "Edinburgh",
-    distanceKms: 80,
-    transportations: ["car", "bus", "train"]
+  destinationName: "Edinburgh",
+  distanceKms: 80,
+  transportations: ["car", "bus", "train"],
 };
 
 let destination2 = {
-    destinationName: "London",
-    distanceKms: 650,
-    transportations: ["car", "bus", "train"]
+  destinationName: "London",
+  distanceKms: 650,
+  transportations: ["car", "bus", "train"],
 };
 
 let destination3 = {
-    destinationName: "Paris",
-    distanceKms: 900,
-    transportations: ["train", "plane"]
+  destinationName: "Paris",
+  distanceKms: 900,
+  transportations: ["train", "plane"],
 };
 
 let destination4 = {
-    destinationName: "Dublin",
-    distanceKms: 350,
-    transportations: ["plane", "ferry"]
+  destinationName: "Dublin",
+  distanceKms: 350,
+  transportations: ["plane", "ferry"],
 };
 
 let travelDestinations = [
+ week4
+  destination1,
+  destination2,
+  destination3,
+  destination4,
     destination1, 
     destination2, 
     destination3, 
-    destination4
+   destination4
+scotland-class4
 ];
 
 // [
@@ -45,6 +50,30 @@ let travelDestinations = [
 //     {destinationName: "Dublin", distanceKms: 350},
 // ]
 
+
+let destinationNamesWithin500Kms = travelDestinations
+  .filter((destination) => destination.distanceKms <= 500)
+  .map((destination) => destination.destinationName); // Complete here
+
+let destinationNameReachableByFerry = travelDestinations
+  .filter((destination) => destination.transportations.includes("ferry"))
+  .map((destination) => destination.destinationName);
+// Complete here
+
+
+
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .filter(
+    (destination) =>
+      destination.distanceKms > 300 &&
+      destination.transportations.includes("train")
+  )
+  .map((destination) => destination.destinationName)
+  //.forEach(destination => console.log(destination.destinationName));
+/* it doesn't work with forEach() and given consol.log() */
+
+// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+=======
 // ["Dublin", "Paris", "Edinburgh"]
 
 
@@ -60,6 +89,7 @@ function isReachable(destination) {
 
 let reachableDestinations = travelDestinations.filter(isReachable);
 
+
 function transformDestination(destination) {
     let destinationName = destination.destinationName;
     return destinationName;
@@ -72,4 +102,16 @@ function printToConsole(destinationName) {
     console.log(destinationName);
 }
 
+
+console.log(
+  `Question 1) Expected result: Edinburgh,Dublin, actual result: ${destinationNamesWithin500Kms}`
+);
+console.log(
+  `Question 2) Expected result: Dublin, actual result: ${destinationNameReachableByFerry}`
+);
+console.log(
+  `Question 3) Expected result: London,Paris, actual result: ${destinationNamesMoreThan300KmsAwayByTrain}`
+);
+
 destinationNames.forEach(printToConsole);
+
