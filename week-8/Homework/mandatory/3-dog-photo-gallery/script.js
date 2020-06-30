@@ -1,4 +1,4 @@
-
+function getImage(){
 fetch ('https://dog.ceo/api/breeds/image/random')
 .then((response )=> {
     return response.json();
@@ -9,12 +9,14 @@ fetch ('https://dog.ceo/api/breeds/image/random')
        
       getRandomDogImg(randomDogImg)
    })
-
+}
 const main = document.getElementById('main')
 const btnElement = document.createElement('button')
+      btnElement.innerText = 'Show next image'
 const ulElement = document.createElement('ul')
       main.append(btnElement, ulElement)
 const liElement =document.createElement('li')
+        liElement.classList='list'
 const imgElement =document.createElement('img')
 const containerList = ulElement.appendChild(liElement)
 const imgList = liElement.appendChild(imgElement)
@@ -23,3 +25,10 @@ const imgList = liElement.appendChild(imgElement)
     imgElement.src = dogImg.message
     
 }
+
+// Next button
+btnElement.addEventListener('click', getImage)
+
+
+
+  
