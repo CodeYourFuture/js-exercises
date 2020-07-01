@@ -2,6 +2,8 @@ function setAlarm() {
   //get the value of the input field
   let inputField = document.querySelector("#alarmSet").value;
 
+  checkInputField(inputField);
+
   //set the title to the correct value
   const timeRemaining = document.querySelector("#timeRemaining");
   timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
@@ -29,6 +31,17 @@ function setAlarm() {
     let divButton = document.querySelector(".centre >:last-child");
     divButton.prepend(restartButton);
     restartButton.className = "restartButton";
+
+    //create new button Resume
+    let resumeButton = document.createElement("button");
+    resumeButton.textContent = "Resume";
+
+    divButton.prepend(resumeButton);
+    pauseButton.className = "resumeButton";
+
+    document.querySelector(".resumeButton").addEventListener("click", () => {
+      console.log("resumed");
+    });
 
     //restart functionality
     document.querySelector(".restartButton").addEventListener("click", () => {
@@ -65,6 +78,14 @@ function setAlarm() {
       timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
     }
   }, 1000);
+}
+
+function checkInputField(inputtedValue) {
+  console.log(typeof inputtedValue);
+  if (inputtedValue < 0 || inputtedValue.match(/^[0-9]+$/) === null) {
+    alert("Interval must be greater than 0. Please input again");
+    location.reload();
+  }
 }
 
 // DO NOT EDIT BELOW HERE
