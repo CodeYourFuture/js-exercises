@@ -24,8 +24,12 @@ The following endpoint is publicly available from Github
 
 1. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+<!--
+{owner} = octocat
+{repo} = Hello-World
+{pull_number} = 1
+-->
 
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
 
-<!-- Write your answer here -->
+<!-- Provides details for a review comment. I havn't catch that much -->
