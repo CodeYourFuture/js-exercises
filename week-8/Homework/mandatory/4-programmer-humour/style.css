@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+    background-color: rgb(132, 91, 138);
+}
+
+img{
+    display: flex;
+    padding: 70px 500px;
+    height: 600px;
+    border-inline: rgb(218, 64, 97);
+    
+}
