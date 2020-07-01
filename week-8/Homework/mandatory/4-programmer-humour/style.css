@@ -1,0 +1,9 @@
+body {
+  background-color: cyan;
+}
+#container {
+  display: block;
+  margin-left: 40%;
+  margin-right: 30%;
+  width: 60%;
+}
