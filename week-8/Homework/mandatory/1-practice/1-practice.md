@@ -26,6 +26,8 @@ The following endpoint is publicly available from Github
 
 <!-- Write your answer here -->
 
-2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
+`{owner}`= `{v3}` `{repo}`=`{pulls}` `{pull_number}`=`{}`
 
+2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
+It returns list of comments on a pull request
 <!-- Write your answer here -->
