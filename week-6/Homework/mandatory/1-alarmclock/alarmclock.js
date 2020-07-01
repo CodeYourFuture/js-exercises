@@ -1,9 +1,5 @@
 let inputField;
 function setAlarm(timeout) {
-  //get the value of the input field
-
-  /////////////////////////////
-
   //set the title to the correct value
   const timeRemaining = document.querySelector("#timeRemaining");
   timeRemaining.textContent = `Time Remaining: ${timeout}:00`;
@@ -55,7 +51,6 @@ function setAlarm(timeout) {
 
   //update the `Time Remaining` title every second
   myAlarm = setInterval(() => {
-    ////////////////////////////////////////////////////////////////////////
     if (timeout == 0) {
       clearInterval(myAlarm);
       //play the alarm sound
@@ -97,6 +92,7 @@ function checkInputField(inputtedValue) {
 var audio = new Audio("alarmsound.mp3");
 
 function setup() {
+  //get the value from  the input field
   document.getElementById("set").addEventListener("click", () => {
     inputField = document.querySelector("#alarmSet").value;
     checkInputField(inputField);
@@ -117,4 +113,3 @@ function pauseAlarm() {
 }
 
 window.onload = setup;
-//// just comment
