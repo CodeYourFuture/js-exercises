@@ -1,3 +1,11 @@
 body {
     background-color: antiquewhite;
 }
+
+ul {
+    list-style-type: none;
+   }
+
+.center {
+    margin: auto;
+   }
