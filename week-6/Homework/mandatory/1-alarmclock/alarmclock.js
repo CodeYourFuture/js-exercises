@@ -1,12 +1,12 @@
-function setAlarm() {
+let inputField;
+function setAlarm(timeout) {
   //get the value of the input field
-  let inputField = document.querySelector("#alarmSet").value;
 
-  checkInputField(inputField);
+  /////////////////////////////
 
   //set the title to the correct value
   const timeRemaining = document.querySelector("#timeRemaining");
-  timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
+  timeRemaining.textContent = `Time Remaining: ${timeout}:00`;
 
   let myAlarm;
   ///
@@ -37,21 +37,26 @@ function setAlarm() {
     resumeButton.textContent = "Resume";
 
     divButton.prepend(resumeButton);
-    pauseButton.className = "resumeButton";
-
-    document.querySelector(".resumeButton").addEventListener("click", () => {
-      console.log("resumed");
-    });
+    resumeButton.className = "resumeButton";
 
     //restart functionality
     document.querySelector(".restartButton").addEventListener("click", () => {
       location.reload();
     });
+
+    //resume functionality
+    document.querySelector(".resumeButton").addEventListener("click", () => {
+      document.querySelector(".pauseButton").hidden = true;
+      document.querySelector(".restartButton").hidden = true;
+      document.querySelector(".resumeButton").hidden = true;
+      setAlarm(timeout);
+    });
   });
 
   //update the `Time Remaining` title every second
   myAlarm = setInterval(() => {
-    if (inputField == 0) {
+    ////////////////////////////////////////////////////////////////////////
+    if (timeout == 0) {
       clearInterval(myAlarm);
       //play the alarm sound
       playAlarm();
@@ -68,20 +73,19 @@ function setAlarm() {
           } else {
             document.body.style.backgroundColor = "orange";
             index++;
-            timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
+            timeRemaining.textContent = `Time Remaining: ${timeout}:00`;
           }
         }, 1000);
         //
       }, audio.duration);
     } else {
-      inputField--;
-      timeRemaining.textContent = `Time Remaining: ${inputField}:00`;
+      timeout--;
+      timeRemaining.textContent = `Time Remaining: ${timeout}:00`;
     }
   }, 1000);
 }
 
 function checkInputField(inputtedValue) {
-  console.log(typeof inputtedValue);
   if (inputtedValue < 0 || inputtedValue.match(/^[0-9]+$/) === null) {
     alert("Interval must be greater than 0. Please input again");
     location.reload();
@@ -94,7 +98,9 @@ var audio = new Audio("alarmsound.mp3");
 
 function setup() {
   document.getElementById("set").addEventListener("click", () => {
-    setAlarm();
+    inputField = document.querySelector("#alarmSet").value;
+    checkInputField(inputField);
+    setAlarm(inputField);
   });
 
   document.getElementById("stop").addEventListener("click", () => {
