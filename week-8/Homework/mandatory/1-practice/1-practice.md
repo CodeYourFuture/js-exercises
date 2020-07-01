@@ -23,9 +23,11 @@ The following endpoint is publicly available from Github
     GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
 
 1. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
-
 <!-- Write your answer here -->
-
+https://api.github.com/repos/CodeYourFuture/js-exercises/pulls/1/comments
+`{owner}`: account name
+`{repo}`: repository name
+`{pull_number}`:shows the pull request number
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
-
+it shows all details about specified pull request. for instance, when created, by whom created. reviewers, comments etc
 <!-- Write your answer here -->
