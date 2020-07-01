@@ -24,8 +24,15 @@ The following endpoint is publicly available from Github
 
 1. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+<!-- Write your answer here 
+
+The :owner here is the 37signals.
+The :repo is sub.
+The :pull_number is 2
+
+https://api.github.com/repos/37signals/sub/issues/2/comments -->
+
 
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
 
-<!-- Write your answer here -->
+<!-- It will return the comments posted on a Pull Request from owner 37signals for their repo 'sub'-->
