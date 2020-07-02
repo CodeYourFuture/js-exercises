@@ -5,6 +5,7 @@ This week's concepts can be challenging, therefore let's get an easy introductio
 You can ignore anything to do with `XMLHttpRequest`
 
 - [FreeCodeCamp](https://www.freecodecamp.org/news/a-practical-es6-guide-on-how-to-perform-http-requests-using-the-fetch-api-594c3d91a547/)
+(done)
 
 ## Code along
 
@@ -20,12 +21,12 @@ Enjoy!
 
 The following endpoint is publicly available from Github
 
-    GET https://api.github.com/repos/{owner}/{repo}/pulls/{pull_number}/comments
+    GET https://api.github.com/repos/FarhanaFKhan/tv-show-dom-project/pulls/1/comments
 
 1. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
-<!-- Write your answer here -->
+<!-- Write your answer here -->FarhanaFKhan, tv-show-dom-project,1
 
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
 
-<!-- Write your answer here -->
+<!-- Write your answer here --> It returns an object with the data about all the comments on the first PR of repo 'tv-show-dom-project'
