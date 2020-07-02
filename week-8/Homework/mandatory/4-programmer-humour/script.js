@@ -10,6 +10,7 @@ fetch("https://xkcd.now.sh/?comic=latest")
   .then(function (newData) {
     const newImage = document.getElementById("image");
     newImage.src = newData.img;
+    newImage = newData.alt;
   })
   .catch((error) => {
     console.log(error);
