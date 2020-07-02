@@ -28,10 +28,16 @@ After you've watched these videos I'd like you to answer these questions
 
 <!-- Write your answer here -->
 
+Problem solving
+
 ## 2. When trying to solve a challenge, what should you do first?
 
 <!-- Write your answer here -->
 
+Define the problem
+
 ## 3. What should you do if you get stuck?
 
 <!-- Write your answer here -->
+
+Read the problem several times and write a pseudocode
