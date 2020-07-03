@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a randomized dog photo gallery!</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Random Dog Image Generator!</h1>
+    </div>
+    <div class="container">
+      <ul class="images">
+        <li id="dog-img1">
+          <p>Placeholder Image</p>
+        </li>
+        <li id="dog-img2">
+          <p>Placeholder Image</p>
+        </li>
+      </ul>
+
+      <div class="buttons">
+        <button id="btn1-dog">Random1 DOG!</button>
+        <button id="btn2-dog">Random2 DOG!</button>
+      </div>
+    </div>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Cute+Font&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #9c2e5873;
+        margin: 0;
+        font-family: "Cute Font", cursive;
+        font-size: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+        color: #fff;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      .header {
+        margin-top: 10px;
+      }
+
+      .container {
+        background-color: #53119e;
+        /*   width: 70vw; */
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        box-shadow: 8px 8px 8px #114d99, -8px -8px 8px #114d99,
+          8px -8px 8px #114d99, -8px 8px 8px #114d99;
+      }
+
+      .images,
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+
+      #dog-img1,
+      #dog-img2 {
+        background-color: #fff;
+        margin: 10px;
+        width: 300px;
+        height: 300px;
+        border-radius: 15px;
+      }
+
+      #dog-img1 img,
+      #dog-img2 img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 15px;
+      }
+
+      #btn1-dog,
+      #btn2-dog {
+        margin: 10px;
+        padding: 2px 12px;
+        border-radius: 5px;
+        outline: none;
+        font-family: inherit;
+        font-size: 36px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #114d99;
+      }
+
+      #btn1-dog:hover,
+      #btn2-dog:hover {
+        background-color: #ea9306;
+        transform: scale(1.2);
+      }
+
+      #btn1-dog:active,
+      #btn2-dog:active {
+        transform: scale(0.9);
+      }
+
+      @media only screen and (max-width: 590px) {
+        .header {
+          font-size: 20px;
+        }
+        #dog-img1,
+        #dog-img2 {
+          background-color: #fff;
+          width: 200px;
+          height: 200px;
+        }
+      }
+    </style>
+    <script src="script.js"></script>
+  </body>
+</html>

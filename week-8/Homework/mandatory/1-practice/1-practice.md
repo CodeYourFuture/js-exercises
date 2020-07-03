@@ -26,6 +26,8 @@ The following endpoint is publicly available from Github
 
 <!-- Write your answer here -->
 
+an API returns data in one of two possible formats: Extensible Markup Language (XML) and JavaScript Object Notation (JSON).
+
 2. What would you put in the following fields? `{owner}`, `{repo}`, `{pull_number}`?
 
 <!-- Write your answer here -->
