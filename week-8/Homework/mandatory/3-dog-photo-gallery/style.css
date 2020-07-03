@@ -1,0 +1,13 @@
+. {
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  height: auto;
+  width: 600px;
+  /* max-width: 500px; */
+}
