@@ -1,0 +1,14 @@
+.image-size {
+  width: 400px;
+  display: flex;
+}
+#container {
+  display: flex;
+}
+.ul-size {
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-list {
+  max-width: 400px;
+}
