@@ -18,10 +18,26 @@
 
     When you run this code using `node 2-convertion.js`, what should you see?
     
-
 */
 
 // Write your code here
+
+class Person {
+constructor (name) {
+    // let obj = {};
+this.personName = name;   
+}
+
+// store (name) {
+//     this.name = name;
+// }
+
+
+greeting() {
+ console.log('Hi! I\'m ' + this.personName + '.');
+}
+}
+
 
 // Do not edit this section
 const simon = new Person("simon");
