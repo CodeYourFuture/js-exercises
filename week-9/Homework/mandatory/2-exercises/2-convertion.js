@@ -16,7 +16,7 @@
         simon.greeting()
     ```
 
-    When you run this code using `node 2-convertion.js` you should be able to
+    When you run this code using `node 2-convertion.js`, what should you see?
     
 
 */
