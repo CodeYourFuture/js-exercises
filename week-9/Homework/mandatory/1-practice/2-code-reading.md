@@ -1,20 +1,22 @@
-# Code reading
+// # Code reading
 
-## Question 1
+// ## Question 1
 
-Take a look at the following code:
+// Take a look at the following code:
 
-```
-1    let x = 1;
+// ```
+
+
+1let x = 1;
 2    {
 3        let x = 2;
 4        console.log(x);
 5    }
 6    console.log(x);
-```
 
-Explain why line 4 and line 6 output different numbers.
+ Explain why line 4 and line 6 output different numbers.
 
+line 4 has a local varible declared inside a local scope. Line 6 only has access to the global scope.
 ## Question 2
 
 Take a look at the following code:
@@ -24,12 +26,12 @@ let x = 10
 
 function f1()
 {
-    console.log(x)
+    console.log(x) // 10
     let y = 20
 }
 
-console.log(f1())
-console.log(y)
+console.log(f1()) //undefined - no parameter
+console.log(y) // undefined- y is local scope and not global so value found.
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
@@ -47,7 +49,7 @@ function f1(val) {
 }
 
 f1(x);
-console.log(x);
+console.log(x); // 9
 
 const y = { x: 9 };
 
@@ -57,7 +59,7 @@ function f2(val) {
 }
 
 f2(y);
-console.log(y);
-```
+console.log(y); // x : 10 y is an object and returning its value pair
+// ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
