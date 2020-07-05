@@ -4,7 +4,7 @@ const button = document.querySelector('button')
 button.addEventListener('click', getPicture)
 
 function getPicture() {
-    fetch('https://dog.ceo/api/breeds/image/random')
+    fetch('https://dog.ceo/api/breeds/image/random/13232')
         .then(response => {
             return response.json()
         })
