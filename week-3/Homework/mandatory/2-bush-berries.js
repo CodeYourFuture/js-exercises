@@ -18,22 +18,22 @@
 
 let array = [12, 73, 92, 45, 100, 14, 61];
 
-array.some((value) => {return (value % 2 == 0)}); /* this will return true as SOME values 
+array.some((value) => { return (value % 2 == 0) }); /* this will return true as SOME values 
 will have a remainder of 0 i.e. they are even numbers*/
 
-array.every((value) => {return (value % 2 == 0)}); /* this will return false as not ALL 
+array.every((value) => { return (value % 2 == 0) }); /* this will return false as not ALL 
 values will have a remainder of 0 i.e. there are some odd numbers in the array too*/
 
 /* + + + + + + + + + + + + + + */
 
 /* Now try to complete the exercise */
-function bushChecker(colourBush) {
-  let checkPink = colourBush.every((berriesPink) => berriesPink === "pink");
-  if (checkPink) {
-    //you can also write  if (arr.every(pinkBerries => pinkBerries === "pink"))
-    return "Bush is safe to eat from";
-  } else {
-    return "Toxic! Leave bush alone!";
+function bushChecker(safeBush) {
+  if (bushBerryColours1 === "pink") {
+    console.log("Bush is safe to eat from");
+
+  } else if (bushBerryColours2 === "pink") {
+    console.log("Toxic! Leave bush alone!");
+
   }
 }
 
