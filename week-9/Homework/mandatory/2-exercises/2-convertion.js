@@ -20,6 +20,23 @@
     
 
 */
+class Person {
+    constructor(name) {
+            this.name = name;
+        }
+        // Add your code here
+    greeting() {
+        console.log('Hi! I\'m ' + this.name + '.');
+
+    }
+
+    cartContains() {
+        console.log(this.cart);
+
+        // Use console.log() to output everything contained in your cart
+    }
+}
+
 
 // Write your code here
 

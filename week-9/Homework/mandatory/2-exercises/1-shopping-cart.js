@@ -10,11 +10,18 @@ The output of running your code should be:
 */
 
 class ShoppingCart {
-  // Add your code here
+    constructor() {
+            this.cart = [];
+        }
+        // Add your code here
+    addItem(item) {
+        this.cart.push(item)
+    }
+    cartContains() {
+        console.log(this.cart);
 
-  cartContains() {
-    // Use console.log() to output everything contained in your cart
-  }
+        // Use console.log() to output everything contained in your cart
+    }
 }
 
 let myCart = new ShoppingCart(); // Creates an empty shopping cart

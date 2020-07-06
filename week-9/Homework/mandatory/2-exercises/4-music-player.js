@@ -20,34 +20,50 @@ This means the order the songs are played in will be random, but each song will 
 
 
 class MusicPlayer {
-    // Add your code here
+    constructor() {
+        this.playing = [];
+        this.MusicPlayer = [];
+        this.index = 0;
+    }
+    add(playing, player) {
+        this.playing.push(playing);
+        this.MusicPlayer.push(player);
+
+    }
+    play() {
+        console.log("Currently playing: " + this.playing[this.index] + " by " + this.MusicPlayer[this.index]);
+
+    }
+    skip() {
+        if (this.index < this.playing.length)
+            this.index++;
+        else this.index = 0;
+        console.log("Currently playing: " + this.playing[this.index] + " by " + this.MusicPlayer[this.index]);
+    }
+    previous() {
+        if (this.index < this.playing.length)
+            this.index--;
+        else this.index = this.playing.length - 1;
+
+        console.log("Currently playing: " + this.playing[this.index] + " by " + this.MusicPlayer[this.index]);
+    }
+
 
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
 
 // Add some songs to your playlist
-myMusicPlayer.add("Bohemian Rhapsody","Queen");
-myMusicPlayer.add("Yesterday","The Beatles");
-myMusicPlayer.add("Vogue","Madonna");
+myMusicPlayer.add("Bohemian Rhapsody", "Queen");
+myMusicPlayer.add("Yesterday", "The Beatles");
+myMusicPlayer.add("Vogue", "Madonna");
 
-myMusicPlayer.play();      // Output: "Currently playing: Bohemian Rhapsody by Queen"
+myMusicPlayer.play(); // Output: "Currently playing: Bohemian Rhapsody by Queen"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
+myMusicPlayer.skip(); // Output: "Currently playing: Yesterday by The Beatles"
 
-myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Queen"
+myMusicPlayer.previous(); // Output: "Currently playing: Bohemian Rhapsody by Queen"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
+myMusicPlayer.skip(); // Output: "Currently playing: Yesterday by The Beatles"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
-
-
-
-
-
-
-
-
-
-
-
+myMusicPlayer.skip(); // Output: "Currently playing: Vogue by Madonna"
