@@ -13,8 +13,8 @@
   
 */
 
-function colonisers() {}
-
+function colonisers() {
+};
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
