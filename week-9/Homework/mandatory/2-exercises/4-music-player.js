@@ -18,36 +18,113 @@ This means the order the songs are played in will be random, but each song will 
 
  */
 
-
 class MusicPlayer {
-    // Add your code here
+  // Add your code here
+  constructor() {
+    this.playlist = [];
+    this.playing = false;
+    this.trackIndex = 0;
+  }
+  add(track, artist) {
+    let song = {};
+    song.name = track;
+    song.artist = artist;
+    this.playlist.push(song);
+  }
 
+  play(choice) {
+    if (this.playlist.length == 0) {
+      console.log("You have no songs in your playlist!");
+    } else {
+      if (choice) {
+        console.log(
+          `Currently playing:${this.playlist[choice].name} by ${this.playlist[choice].artist}`
+        );
+      } else {
+        console.log(
+          `Currently playing:${this.playlist[this.trackIndex].name} by ${
+            this.playlist[this.trackIndex].artist
+          }`
+        );
+      }
+    }
+  }
+  repeat() {
+    if (this.trackIndex === this.playlist.length - 1) {
+      this.trackIndex = 0;
+      this.play;
+      console.log(
+        `Currently playing:${this.playlist[this.trackIndex].name} by ${
+          this.playlist[this.trackIndex].artist
+        }`
+      );
+    } else {
+      this.play;
+    }
+  }
+  skip() {
+    if (this.trackIndex < this.playlist.length - 1) {
+      this.trackIndex++;
+      console.log(
+        `Currently playing:${this.playlist[this.trackIndex].name} by ${
+          this.playlist[this.trackIndex].artist
+        }`
+      );
+    } else {
+      console.log(
+        `Currently playing:${this.playlist[this.trackIndex].name} by ${
+          this.playlist[this.trackIndex].artist
+        } and it's the last song in your list!`
+      );
+    }
+  }
+  shuffle() {
+    let playedSongs = [];
+    let randNumber = Math.floor(Math.random() * this.playlist.length);
+    if (playedSongs.includes(randNumber)) {
+      console.log("We went through the whole playlist");
+    } else {
+      this.play(randNumber);
+    }
+  }
+  previous() {
+    if (this.trackIndex > 0) {
+      this.trackIndex--;
+      console.log(
+        `Currently playing:${this.playlist[this.trackIndex].name} by ${
+          this.playlist[this.trackIndex].artist
+        }`
+      );
+    } else {
+      console.log(
+        `Currently playing:${this.playlist[this.trackIndex].name} by ${
+          this.playlist[this.trackIndex].artist
+        } and it's the first song in your list`
+      );
+    }
+  }
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
 
 // Add some songs to your playlist
-myMusicPlayer.add("Bohemian Rhapsody","Queen");
-myMusicPlayer.add("Yesterday","The Beatles");
-myMusicPlayer.add("Vogue","Madonna");
+myMusicPlayer.add("Bohemian Rhapsody", "Queen");
+myMusicPlayer.add("Yesterday", "The Beatles");
+myMusicPlayer.add("Vogue", "Madonna");
+myMusicPlayer.add("I Will Always Love You", "Dolly Parton");
+myMusicPlayer.add("My Heart Will Go On", "Celine Dion");
+myMusicPlayer.add("Ain't No Sunshine", "Bill Withers");
+myMusicPlayer.add("Smooth ft. Rob Thomas", "Santana");
+myMusicPlayer.add(`Bailando`, `Enrique Iglesias`);
 
-myMusicPlayer.play();      // Output: "Currently playing: Bohemian Rhapsody by Queen"
+myMusicPlayer.play(); // Output: "Currently playing: Bohemian Rhapsody by Queen"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
+myMusicPlayer.skip(); // Output: "Currently playing: Yesterday by The Beatles"
 
-myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Queen"
+myMusicPlayer.previous(); // Output: "Currently playing: Bohemian Rhapsody by Queen"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
+myMusicPlayer.skip(); // Output: "Currently playing: Yesterday by The Beatles"
 
-myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
-
-
-
-
-
-
-
-
-
-
-
+myMusicPlayer.skip(); // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.repeat();
+myMusicPlayer.shuffle();

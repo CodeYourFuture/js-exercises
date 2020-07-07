@@ -16,13 +16,25 @@
         simon.greeting()
     ```
 
-    When you run this code using `node 2-convertion.js`, what should you see?
-    
+    When you run this code using `node 2-convertion.js`, what should you see? 
+    alert is not defined
+    but, using console.log("Hi! I'm " + this.name + ".");
+    this was the output :
+    simon
+    Hi! I'm simon.
 
 */
 
 // Write your code here
-
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greeting() {
+    alert("Hi! I'm " + this.name + ".");
+    // console.log("Hi! I'm " + this.name + ".");
+  }
+}
 // Do not edit this section
 const simon = new Person("simon");
 console.log(simon.name);
