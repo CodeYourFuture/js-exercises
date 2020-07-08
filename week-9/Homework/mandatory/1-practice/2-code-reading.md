@@ -16,7 +16,7 @@
 
  Explain why line 4 and line 6 output different numbers.
 
-line 4 has a local varible declared inside a local scope. Line 6 only has access to the global scope.
+line 4 has a local varible declared inside a local scope. Line 6 only has access only codeto the global scope.
 ## Question 2
 
 Take a look at the following code:
@@ -30,8 +30,8 @@ function f1()
     let y = 20
 }
 
-console.log(f1()) //undefined - no parameter
-console.log(y) // undefined- y is local scope and not global so value found.
+console.log(f1()) //undefined - no parameter inside.
+console.log(y) // undefined- y is a local scope and not global so value found.
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
