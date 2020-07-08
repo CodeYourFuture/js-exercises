@@ -24,14 +24,9 @@
 
 class Person {
 constructor (name) {
-    // let obj = {};
+    
 this.personName = name;   
 }
-
-// store (name) {
-//     this.name = name;
-// }
-
 
 greeting() {
  console.log('Hi! I\'m ' + this.personName + '.');

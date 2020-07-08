@@ -9,13 +9,10 @@ The output of running your code should be:
 class ShoppingCart {
   // Add your code here
   constructor() {
-    // this.currentTotal = 0;
     this.currentTotal = [];
   }
 
   addItem(item) {
-  // 
-  // this.currentTotal += item;
   this.currentTotal.push(item);
   }
   
