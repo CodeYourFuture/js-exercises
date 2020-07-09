@@ -21,7 +21,37 @@ This means the order the songs are played in will be random, but each song will 
 
 class MusicPlayer {
     // Add your code here
+    constructor(){
+       this.index
+       this.music = []
+    }
+add(song, singer){
+let addSong = {
+    song: song,
+   singer: singer
+}
+this.music.push(addSong)
+}
+play(){
+    this.index = 0
+    if(this.music.length > 0 ){
+        console.log(`Currently playing: ${this.music[this.index].song} by ${this.music[this.index].singer}`)
+    } else {
+        console.log('Sorry there is no songs to play')
+    } 
 
+}
+skip(){
+this.index++
+
+if(this.index === this.music.length){this.index = 0}
+  console.log(`Currently playing: ${this.music[this.index].song} by ${this.music[this.index].singer}`);
+}
+previous(){
+    this.index--
+    if(this.index < 0){this.index = this.music.length - 1}
+    console.log(`Currently playing: ${this.music[this.index].song} by ${this.music[this.index].singer}`);
+}
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
@@ -40,7 +70,6 @@ myMusicPlayer.previous();  // Output: "Currently playing: Bohemian Rhapsody by Q
 myMusicPlayer.skip();      // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip();      // Output: "Currently playing: Vogue by Madonna"
-
 
 
 
