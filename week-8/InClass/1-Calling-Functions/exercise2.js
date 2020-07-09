@@ -12,14 +12,14 @@ Please fix this code so we get the result 10
 ONLY CHANGE LINE 23
 */
 
-function doubleNumber(num){
-    num = num * 2;
-    return num;
+function doubleNumber(num) {
+  num = num * 2;
+  return num;
 }
 
 let a = 5;
 
 // ONLY CHANGE CODE ON LINE 23
-let b = doubleNumber();
+let b = doubleNumber(a);
 
 console.log(b);

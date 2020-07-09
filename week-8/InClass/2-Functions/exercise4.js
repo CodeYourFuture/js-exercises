@@ -10,10 +10,10 @@ What is the result we need to return?
 To complete this exercise you ONLY need to
 write the function
 */
-
-// write your function here
-
-
+function calculateMonthsInYear(time) {
+  // write your function here
+  return time * 12;
+}
 // Don't change any of the code below
 let years = 5;
 
