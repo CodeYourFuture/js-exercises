@@ -9,10 +9,10 @@ let person = {
     name: "Alice",
     age: 25,
     sayName: function () {
-        return "My name is " + this.name;
-    },
+        return 'My name is ' + this.name;
+    }
 };
-person.sayName();
+
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE

@@ -8,10 +8,10 @@ let person = {
     name: "Alice",
     age: 25,
     greet: function () {
-        return "hello everybody";
-    },
+        return 'hello everybody';
+    }
 };
-person.greet();
+
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
