@@ -50,12 +50,3 @@ window.addEventListener('load', ()=> {
      return skycons.set(iconID, Skycons[currentIcon])
   }
 }) 
-
-
-// if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(position => {
-//         long = position.coords.longitude;
-//         lat = position.coords.latitude;
-//         const proxy = " https://cors-anywhere.herokuapp.com/";
-//         const url = "https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/" + lat + "," + long;
-//         fetch(proxy + url)
