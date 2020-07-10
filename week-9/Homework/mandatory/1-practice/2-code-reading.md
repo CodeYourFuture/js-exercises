@@ -82,4 +82,4 @@ What will be the output of this code. Explain your answer in 50 words or less.
 
 When we call f1 function with the argument of x variable, it will return 10,
 but this doesn't change global x and console on next line will log 9.
-Same logic should be with declaration oy y object globally, and changing its key/value inside function scope, it won't change global y(not sure about this).
+Objects are passed by reference but not value, so they are mutable
