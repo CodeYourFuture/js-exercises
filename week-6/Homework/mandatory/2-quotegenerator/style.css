@@ -1,1 +1,52 @@
 /** Write your CSS in here **/
+
+ #button-1 {
+    background-color: rgba(218, 148, 44, 0.932);
+    color: cornsilk;
+    /* margin-top: 14px;
+    margin-left: 40px;
+    position: fixed; */
+    border-color: cornsilk;
+    position: fixed;
+    bottom: 200px;
+    right: 300px; 
+   
+} 
+
+body {
+  background-color: rgba(218, 148, 44, 0.932);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 12rem;
+  margin-top: 10rem;
+  width: 900px;
+  height: 300px;
+  background-color: rgb(224, 216, 224);
+  
+}
+
+#quote {
+  
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 25px;
+  margin: 2rem;
+  color: rgba(218, 148, 44, 0.932);
+  z-index:1;
+   
+}
+
+#author {
+position: fixed;
+display: flex;
+flex-wrap: wrap;
+font-style: italic;
+color: rgba(218, 148, 44, 0.932);
+margin-top:12rem;
+margin-left: 40rem;
+  
+}

@@ -1,3 +1,24 @@
+
+ 
+  let button = document.querySelector("#button-1");
+  let quote = document.querySelector("#quote");
+  let author =document.querySelector("#author");
+
+  function getNextQuote() {
+    let nextQuote = pickFromArray(quotes);
+    quote.innerHTML = '	❝' + nextQuote.quote ;
+    author.innerText = " -" + nextQuote.author;
+
+  
+//   document.body.getEleme("#button-1").addEventListener("click", () => {
+//  document.querySelector("#quote").innerHTML = pickFromArray(quotes).quote;
+//  document.querySelector("#author").innerHTML = pickFromArray(quotes).author;
+// });
+}
+button.addEventListener("click", getNextQuote);
+
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.
@@ -19,6 +40,7 @@
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.

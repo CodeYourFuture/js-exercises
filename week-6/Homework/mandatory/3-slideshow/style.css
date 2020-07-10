@@ -1,1 +1,23 @@
 /** Write your CSS in here **/
+.button-next,
+.button-back,
+.auto {
+  
+  width:6rem;
+  height: 3rem;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+ 
+}
+
+.button-next,
+.button-back,
+.auto {
+  content: " ";
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+ display: inline-block
+}
+
