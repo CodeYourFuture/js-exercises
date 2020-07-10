@@ -10,17 +10,19 @@ The output of running your code should be:
 */
 
 class ShoppingCart {
-  // Add your code here
-
-  cartContains() {
-    // Use console.log() to output everything contained in your cart
-  }
+	constructor(toiletRoll, eggs, pasta) {
+		this.toiletRoll = toiletRoll;
+		this.eggs = eggs;
+		this.pasta = pasta;
+	}
+	cartContains() {
+		console.log("Your Shopping cart has 3 Items:");
+		console.log("Toilet Roll " + this.toiletRoll);
+		console.log("Egg" + this.eggs);
+		console.log("Pasta" + this.pasta);
+	}
 }
 
-let myCart = new ShoppingCart(); // Creates an empty shopping cart
-
-myCart.addItem("Toilet Roll");
-myCart.addItem("Pasta");
-myCart.addItem("Eggs");
+let myCart = new ShoppingCart(" ", " ", " ");
 
 myCart.cartContains();

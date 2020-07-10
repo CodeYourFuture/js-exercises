@@ -12,14 +12,29 @@
  */
 
 class ATM {
-    // Add your code here
-
+	constructor() {
+		this.accountBalance = 100;
+		this.deposit = 0;
+		return this.accountBalance;
+	}
+	make_deposit(deposit) {
+		this.deposit = deposit;
+		return this.deposit;
+	}
+	check_balance() {
+		this.accountBalance += this.deposit;
+		return this.accountBalance;
+	}
+	make_withdrawl(withdraw) {
+		this.withdraw = withdraw;
+		return this.withdraw;
+	}
 }
-
 let atm = new ATM(); // Create the ATM
-
-atm.make_deposit(200);
-atm.check_balance();
-atm.make_withdrawl(100);
-
-atm.make_withdrawl(500); // Your ATM should be able to handle this scenario
+console.log(
+	atm.check_balance(),
+	atm.make_deposit(200),
+	atm.check_balance(),
+	atm.make_withdrawl(100),
+	atm.make_withdrawl(500)
+); // Your ATM should be able to handle this scenario
