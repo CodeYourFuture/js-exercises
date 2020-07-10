@@ -21,15 +21,32 @@ This means the order the songs are played in will be random, but each song will 
 
 class MusicPlayer {
     // Add your code here
-
+    constructor() {
+        this.playlist = []
+        this.currentsongIndex = 0
+    }
+    add(song, singer) {
+        const newObject = {}
+        newObject[song] = singer
+        this.playlist.push(newObject)
+    }
+    play() {
+        console.log("Currently playing: ", Object.keys(this.playlist[this.currentsongIndex]).toString(), "by ", Object.values(this.playlist[this.currentsongIndex]).toString())
+    }
+    skip() {
+        return this.currentsongIndex++
+    }
+    previous() {
+        return this.currentsongIndex--
+    }
 }
 
 let myMusicPlayer = new MusicPlayer(); // Create an empty playlist
 
 // Add some songs to your playlist
-myMusicPlayer.add("Bohemian Rhapsody","Queen");
-myMusicPlayer.add("Yesterday","The Beatles");
-myMusicPlayer.add("Vogue","Madonna");
+myMusicPlayer.add("Bohemian Rhapsody", "Queen");
+myMusicPlayer.add("Yesterday", "The Beatles");
+myMusicPlayer.add("Vogue", "Madonna");
 
 myMusicPlayer.play();      // Output: "Currently playing: Bohemian Rhapsody by Queen"
 

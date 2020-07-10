@@ -15,6 +15,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+line4 is in block scope and can access global and block scope. variable X value has been changed in the block scope so, line4 can acces new value but line6 cant acces changed value and it stil see x as 1. 
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +35,9 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+f1 function is called on line 32 and so it goes to inside this function and log x value as 10. but due to function doesnt return anything it gives undefined on line32. and y is not accessible outside function and so it gives y is not defined.
+
 
 ## Question 3
 
@@ -61,3 +66,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+we called f1() function x parameter and it actually returns 10 but we didnt logged it. on line55, it logs 9 because x value is 9. f2 function is called with y object and x value inside the object ressigned as 10 and so it logs {x:10} on line 65  

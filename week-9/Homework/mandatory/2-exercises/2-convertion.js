@@ -2,6 +2,7 @@
     Convert the Function here into a JavaScript Class called 'Person'
 
     ```
+
         function createNewPerson(name) {
             const obj = {};
             obj.name = name;
@@ -22,8 +23,19 @@
 */
 
 // Write your code here
+class Person {
+    constructor(name) {
+        this.name = name
+    }
+
+    greeting() {
+        alert('Hi! I\'m ' + this.name + '.')
+    }
+}
 
 // Do not edit this section
+
+
 const simon = new Person("simon");
 console.log(simon.name);
 simon.greeting();
