@@ -10,10 +10,16 @@ The output of running your code should be:
 */
 
 class ShoppingCart {
+  constructor() {
+    this.item = [];
+  }
+  addItem(item) {
+    this.item.push(" " + item);
+  }
   // Add your code here
-
   cartContains() {
     // Use console.log() to output everything contained in your cart
+    console.log(`Your shopping cart has ${this.length} items: ${this.item}`);
   }
 }
 
@@ -24,3 +30,4 @@ myCart.addItem("Pasta");
 myCart.addItem("Eggs");
 
 myCart.cartContains();
+// console.log(myCart);

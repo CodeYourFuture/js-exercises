@@ -12,14 +12,29 @@
  */
 
 class ATM {
-    // Add your code here
-
+  constructor() {
+    this.money = 100;
+  }
+  make_deposit(deposit) {
+    this.money += deposit;
+    // console.log(this.money);
+  }
+  check_balance() {
+    console.log(this.money);
+  }
+  make_withdraw(Withdraw) {
+    if (this.money - Withdraw > 0) {
+      this.money -= Withdraw;
+    } else {
+      console.log("Sorry you don't have enough money in your account");
+    }
+  }
 }
 
-let atm = new ATM(); // Create the ATM
-
-atm.make_deposit(200);
-atm.check_balance();
-atm.make_withdrawl(100);
-
-atm.make_withdrawl(500); // Your ATM should be able to handle this scenario
+let atm = new ATM(); // Create the AT
+atm.make_deposit(200),
+  atm.check_balance(),
+  atm.make_withdraw(100),
+  atm.check_balance(),
+  atm.make_withdraw(500);
+// Your ATM should be able to handle this scenario
