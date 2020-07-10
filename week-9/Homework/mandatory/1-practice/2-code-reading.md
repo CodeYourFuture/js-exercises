@@ -14,6 +14,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
+Because line 4 will print Local variable (which x is defined again) which is 2 but line 6 will print global variable which is 1
 
 ## Question 2
 
@@ -33,6 +34,7 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+line 32 print 10 and undefined because line 28 print 10 and y will return as undefined ,line 33 dosen't print anything because y is not defined globally.
 
 ## Question 3
 
@@ -61,3 +63,4 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+9 and {x:10} because in line 50 it console.log (x) which is 9 and in line 60 it console.log(y) which is {x:9}
