@@ -10,7 +10,7 @@ function sayHello(name) {
   console.log(greeting + name);
 }
 
-greetPerson("Etzali");
+sayHello("Etzali");
 
 const goodbye = "Au revoir ";
 const personName = "Emilia";
