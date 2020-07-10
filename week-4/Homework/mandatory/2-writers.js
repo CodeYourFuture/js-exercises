@@ -22,29 +22,29 @@ let writers = [
     lastName: "Woolf",
     occupation: "writer",
     age: 59,
-    alive: false
+    alive: false,
   },
   {
     firstName: "Zadie",
     lastName: "Smith",
     occupation: "writer",
     age: 41,
-    alive: true
+    alive: true,
   },
   {
     firstName: "Jane",
     lastName: "Austen",
     occupation: "writer",
     age: 41,
-    alive: false
+    alive: false,
   },
   {
     firstName: "Bell",
     lastName: "Hooks",
     occupation: "writer",
     age: 64,
-    alive: true
-  }
+    alive: true,
+  },
 ];
 
 /*
@@ -53,8 +53,10 @@ Exercise 1:
   insert corresponding values to the place holder that are indicated in curly braces:
   "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
 */
-
-
+for (let key in writers)
+  console.log(
+    `Hi, my name is ${writers[key].firstName} ${writers[key].lastName}. I am ${writers[key].age} years old, and work as a ${writers[key].occupation}.`
+  );
 
 /*
 Exercise 2:
@@ -62,11 +64,31 @@ Exercise 2:
   and not alive anymore. Use the below sentence format:
   "Writer {firstName} {lastName} died at {age} years old."
 */
-
-
+for (let i = 0; i < writers.length; i++) {
+  if (
+    writers[i].age >= 40 &&
+    writers[i].age < 49 &&
+    writers[i].alive === false
+  ) {
+    console.log(
+      `Writer ${writers[i].firstName} ${writers[i].lastName} died at ${writers[i].age} years old.`
+    );
+  }
+}
 
 /*
 Exercise 3:
   Only `console.log()` out alive writers who are in their 40s (meaning between 40 and 49):
   "Hi, my name is {firstName} {lastName}. I am {age} years old."
 */
+for (let i = 0; i < writers.length; i++) {
+  if (
+    writers[i].age >= 40 &&
+    writers[i].age < 49 &&
+    writers[i].alive === true
+  ) {
+    console.log(
+      `Hi,my name is ${writers[i].firstName} ${writers[i].lastName}. I am ${writers[i].age} years old.`
+    );
+  }
+}

@@ -11,7 +11,7 @@ that contains the missing ingredients to your menus. It is stored in the "weekly
 Complete the exercises below.
 */
 
-// Here is your 
+// Here is your
 let weeklyMealPlan = {
   monday: ["Cheese", "Eggs", "Tomato", "Paprika", "Leek"],
   tuesday: ["Wrap", "Tuna", "Canned beans", "Cheese", "Carrot", "Aubergine"],
@@ -19,7 +19,7 @@ let weeklyMealPlan = {
   thursday: ["Lamb", "Salt", "Bulgur", "Potato"],
   fridray: ["Rice milk", "Blueberries", "Porridge", "Banana", "Cinnamon"],
   saturday: ["Olive oil", "Potato", "Salmon", "Asparagus"],
-  sunday: []
+  sunday: [],
 };
 
 /*
@@ -29,8 +29,8 @@ Exercise 1:
 */
 // Gather all week item names into this array
 let weeklyGroceriesToBuy = [];
-
-
+weeklyGroceriesToBuy = Object.values(weeklyMealPlan);
+console.log(weeklyGroceriesToBuy);
 
 /*
 Exercise 2:
@@ -39,9 +39,11 @@ Exercise 2:
 */
 // Gather weekend item names into this array
 let weekendGroceriesToBuy = [];
-
-
-
+weekendGroceriesToBuy = Object.values(
+  weeklyMealPlan.saturday,
+  weeklyMealPlan.sunday
+);
+console.log(weekendGroceriesToBuy);
 /*
 Exercise 2:
   Loop through your weekly meal plan:
@@ -50,7 +52,8 @@ Exercise 2:
 
   Finally use console.log() to print out the Object.
 */
-// Gather weekend item names into this object
+//Gather weekend item names into this array
+
 let numberOfItemsPerWeak = {
   monday: 0,
   tuesday: 0,
@@ -58,5 +61,9 @@ let numberOfItemsPerWeak = {
   thursday: 0,
   fridray: 0,
   saturday: 0,
-  sunday: 0
+  sunday: 0,
 };
+for (let day in weeklyMealPlan) {
+  numberOfItemsPerWeak[day] = weeklyMealPlan[day].length;
+}
+console.log(numberOfItemsPerWeak);
