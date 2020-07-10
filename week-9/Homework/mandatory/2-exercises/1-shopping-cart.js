@@ -11,9 +11,15 @@ The output of running your code should be:
 
 class ShoppingCart {
   // Add your code here
-
+  constructor() {
+    this.myBasket = [];
+  }
+  addItem(item) {
+    this.myBasket.push(item);
+  }
   cartContains() {
     // Use console.log() to output everything contained in your cart
+    console.log(this.myBasket);
   }
 }
 

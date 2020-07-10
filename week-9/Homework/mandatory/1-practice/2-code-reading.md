@@ -15,6 +15,10 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+line 6 log first variable, the first variable is global variable and can be use evrywhere in code,
+but om line 4 the second variable been logged which is local variable.
+means it's just been defined inside the square bracets.
+
 ## Question 2
 
 Take a look at the following code:
@@ -33,6 +37,9 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+the first log's output is 10, it's been defined globally and used inside the function.
+the second log's output is not defined because it tries to log a local variable outside the function.
 
 ## Question 3
 
@@ -61,3 +68,5 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+first console.log output is 9,
+second console.log is an object: x: 9
