@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>Alarm Clock</title>
-    <script src="alarmclock.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -16,13 +15,17 @@
     <div class="centre">
       <h1 id="timeRemaining">Time Remaining: 00:00</h1>
       <div>
-        Set Time to:
+        <span>Set Time to:</span>
         <input id="alarmSet" type="number" />
       </div>
       <div>
         <button id="set" type="button">Set Alarm</button>
         <button id="stop" type="button">Stop Alarm</button>
+        <button id="pause" type="button">Pause Alarm</button>
       </div>
     </div>
+
+    <script src="alarmclock.js"></script>
+    <!-- <script src="alarmclockAdvance.js"></script> -->
   </body>
 </html>

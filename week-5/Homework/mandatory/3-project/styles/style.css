@@ -1,3 +1,14 @@
+
+
+
+#bt1 {
+
+	background-color:yellow;
+}
+
+
+
+
 /**
  * Base styles to use at the start of the class
  *
@@ -6,7 +17,7 @@
  * Class: Scotland 2017
  */
 
-html,
+/* html,
 body {
 	font-family: "Source Sans Pro",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
@@ -156,4 +167,4 @@ body {
 	.navbar-brand > img {
 	   max-height: 80px;
 	}
-}
+} */

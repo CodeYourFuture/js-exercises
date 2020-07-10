@@ -11,3 +11,15 @@ Update your code to make the colour change every 5 seconds to something differen
 Prefer to work on a codepen? https://codepen.io/makanti/pen/abOreLg
 ================
 */
+
+// Separate function definition
+function myCallbackFunction() {
+    console.log("Hello world!");
+  }
+  setTimeout(myCallbackFunction, 1000);
+  
+  // Inline function
+  setTimeout(function () {
+    console.log("Hello world!");
+  }, 500);
+  

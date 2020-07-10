@@ -1,1 +1,42 @@
-/** Write your CSS in here **/
+/* Warning: bad CSS practices here! */
+body {
+    background-color: lightgreen;
+    margin: 0px auto;
+    width: 80%;
+    max-width: 800px;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  #quoteText {
+    font-size: 250%;
+  }
+  
+  #quoteAuthor {
+    text-align: right;
+    margin-right: 50px;
+    margin-top: 20px;
+  }
+  
+  #container {
+    height: auto;
+    background-color: aqua;
+  }
+  
+  blockquote {
+    border-radius: 8px;
+    border: 10px solid lightsalmon;
+    box-shadow: 10px 10px 10px 10px lightblue;
+    margin: 40px 0;
+    padding: 30px;
+  }
+  
+  button {
+    background: none;
+    border-radius: 8px;
+    border: 2px solid rgb(221, 120, 120);
+    cursor: pointer;
+    font-size: larger;
+    margin-top: 40px;
+    padding: 10px;
+  }
+  
