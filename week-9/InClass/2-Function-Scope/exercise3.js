@@ -16,3 +16,5 @@ let greeting = "Holla!";
 console.log(greeting);
 greetOnce("Mimi");
 greetAgain("Awet");
+
+//Holla, Hi Mimi, Shalom Awet

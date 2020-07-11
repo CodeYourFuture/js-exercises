@@ -6,4 +6,6 @@ function greetUser(name) {
 }
 
 greetUser("Naima");
-console.log(greeting);
+//console.log(greeting);
+
+//the variable greeting is defined into a function so it is not accessible for console.log in line 9

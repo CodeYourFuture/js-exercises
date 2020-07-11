@@ -9,3 +9,5 @@ function f1() {
 
 console.log(f1());
 console.log(y);
+
+//the variable y was declared into the function so it is not accessible outside the scope

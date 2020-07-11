@@ -9,9 +9,9 @@ if (today === "Saturday") {
   for (let i = 0; i < 10; i++) {
     startingNumber = startingNumber + 1;
   }
-  console.log(startingNumber);
 }
 
 for (let i = 0; i < 10; i++) {
   startingNumber = startingNumber + 1;
 }
+console.log(startingNumber);

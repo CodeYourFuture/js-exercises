@@ -2,12 +2,12 @@
 
 function greetUser(name) {
   let greeting = "Hi";
-  let greeting = "Shalom";
+  //let greeting = "Shalom";
   console.log(greeting);
 }
 
 greetUser("Mimi");
 
 let greeting = "Bonjour";
-let greeting = "Holla";
+//let greeting = "Holla";
 console.log(greeting);
