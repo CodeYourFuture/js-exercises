@@ -1,3 +1,7 @@
+
+//console.log(btnEl);
+
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.
@@ -16,9 +20,13 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+
+
 
 // A list of quotes you can use in your app.
 // Feel free to edit them, and to add your own favourites.
@@ -36,8 +44,7 @@ const quotes = [
     author: "Albert Einstein",
   },
   {
-    quote:
-      "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.",
+    quote:"Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.",
     author: "Robert Frost",
   },
   {
@@ -49,13 +56,11 @@ const quotes = [
     author: "Wayne Gretzky",
   },
   {
-    quote:
-      "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
+    quote: "I’ve missed more than 9000 shots in my career. I’ve lost almost 300 games. 26 times I’ve been trusted to take the game winning shot and missed. I’ve failed over and over and over again in my life. And that is why I succeed.",
     author: "Michael Jordan",
   },
   {
-    quote:
-      "The most difficult thing is the decision to act, the rest is merely tenacity.",
+    quote:"The most difficult thing is the decision to act, the rest is merely tenacity.",
     author: "Amelia Earhart",
   },
   {
@@ -79,8 +84,7 @@ const quotes = [
     author: "Earl Nightingale",
   },
   {
-    quote:
-      "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover.",
+    quote:"Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails.  Explore, Dream, Discover.",
     author: "Mark Twain",
   },
   {
@@ -88,8 +92,7 @@ const quotes = [
     author: "Charles Swindoll",
   },
   {
-    quote:
-      "The most common way people give up their power is by thinking they don’t have any.",
+    quote:"The most common way people give up their power is by thinking they don’t have any.",
     author: "Alice Walker",
   },
   {
@@ -489,3 +492,50 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+function quoteGenerator(){
+
+  let quoteEl = document.querySelector('.quote');
+  let qute = document.getElementById('rndQuote');
+  let athr = document.getElementById('rndAthr');
+  let newQuote = pickFromArray(quotes);
+  let generatedQuote = newQuote.quote;
+  let randomQuote = generatedQuote.replace('/’/g', '&#8217');
+  qute.innerHTML = '<b>"</b>' + randomQuote;
+  athr.innerText = " -" + newQuote.author;
+  athr.style.marginLeft = '250px';
+  athr.style.marginTop = '15px';
+  quoteEl.appendChild(qute);
+  qute.appendChild(athr);
+
+  
+}
+
+
+
+let btnEl = document.getElementById('btn');
+
+function quoteSelector(){
+
+  let divEl = document.querySelector('.quote');
+  let qEl = document.getElementById('rndQuote');
+  let pEl = document.getElementById('rndAthr');
+  
+  
+  let rndQuote = pickFromArray(quotes);
+  let generatedQuote = rndQuote.quote;
+  let randomQuote = generatedQuote.replace('/’/g', '&#8217');
+  qEl.innerHTML = '<b>"</b>' + randomQuote;
+  pEl.innerText = " -" + rndQuote.author;
+  pEl.style.marginLeft = '250px';
+  pEl.style.marginTop = '15px';
+  divEl.appendChild(qEl);
+  qEl.appendChild(pEl);
+   
+}
+
+
+
+btnEl.addEventListener("click",quoteSelector);
+
+

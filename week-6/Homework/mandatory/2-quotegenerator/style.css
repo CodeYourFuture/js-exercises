@@ -1,1 +1,44 @@
 /** Write your CSS in here **/
+body{
+    background-color: #e8dcce;
+}
+.heading{
+       
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.container{
+    position: relative;
+    width:50%;
+}
+
+#image{
+    width:100%;
+    height: auto;
+}
+
+#btn{
+    position: absolute;
+    top: 75%;
+    left: 80%;
+    background-color:#e8dcce;
+    border: ridge;
+}
+#btn:hover{
+    border: solid;
+    font-weight: bold;
+}
+
+.quote{
+    position: absolute;
+    top:220px;
+    left:85px;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+
+

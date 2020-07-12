@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta charset="UTF-8">
     <title>Quote Generator</title>
-    <script src="quotes.js"></script>
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -11,7 +12,20 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- Write your HTML in here -->
+  <body onload="quoteGenerator()">
+    <div>
+      <div class="heading"><h1>Quote Generator</h1></div>
+      
+      <div class="container">
+        <img id="image" src="backgroundImg.jpg" alt="pastel background">
+        <div class="quote">
+          <p id="rndQuote"></p>
+          <p id="rndAthr"></p>
+        </div>
+          <button id="btn"> New Quote</button>
+        
+      </div>
+    </div>
+    <script src="quotes.js"></script>
   </body>
 </html>

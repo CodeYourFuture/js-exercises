@@ -1,7 +1,49 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+function setAlarm() {
+  let alarmValue = document.getElementById('alarmSet').value;
+  let countDown = document.querySelector('#timeRemaining');
+  let num = alarmValue;
+  let x = setInterval(function(){
+    
+
+    if(num > 0){
+      num --;
+      
+      if(num < 10){
+        countDown.textContent = "Time Remaining : 00:0" + num;
+      }else{
+        countDown.textContent = "Time Remaining : 00:" + num;
+      }
+
+    }else{
+      clearInterval(x);
+      playAlarm();
+      setInterval(function(){
+        function randomNum(number){
+          return Math.floor(Math.random() * (number +1))
+        }
+         const rndColor = `rgb(${randomNum(255)},${randomNum(255)},${randomNum(255)})`;
+         document.body.style.backgroundColor = rndColor;
+        
+      },150);
+    }
+    let stopBtn = document.querySelector('#stop');
+    function onStopBtn(){
+      num = 0;
+      clearInterval(x);
+      document.body.style.backgroundColor = 'rgb(255,255,255)';
+      
+    }
+    stopBtn.addEventListener("click",onStopBtn);
+
+  },1000);
+
+  
+ }
+
+
 
 // DO NOT EDIT BELOW HERE
 /* 
