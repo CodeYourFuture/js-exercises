@@ -20,8 +20,14 @@
     
 
 */
-
-// Write your code here
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greeting() {
+    console.log(`I am ${this.name}.`);
+  }
+}
 
 // Do not edit this section
 const simon = new Person("simon");
