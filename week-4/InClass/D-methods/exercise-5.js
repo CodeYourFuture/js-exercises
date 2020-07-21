@@ -17,12 +17,18 @@ let coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function (amount) {
-
+        this.insertedAmount = amount;
     },
     getCoffee: function (coffee) {
-
+        if (this.insertedAmount >= this.prices[coffee]) { // why coffee is in square brackets?
+            return `Please take your ${coffee}`
+        } else {
+            return `Sorry you don't have enough money for a ${coffee}`
+        }
     }
 };
+
+
 
 
 /*
@@ -30,6 +36,7 @@ DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
 coffeeMachine.insertMoney(2.40);
+
 console.log(`Expected result: 'Please take your cappuccino'. Actual result: ${coffeeMachine.getCoffee('cappuccino')}`);
 
 coffeeMachine.insertMoney(1.50);
