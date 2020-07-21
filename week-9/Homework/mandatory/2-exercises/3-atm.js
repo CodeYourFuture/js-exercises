@@ -17,17 +17,17 @@ class ATM {
     this.balance = 100.0;
   }
   make_deposit(number) {
-    if (typeof number === "number") {
+    if (typeof number === "number" && number >= 0) {
       this.balance += number;
     } else {
-      console.log("Please input a number!");
+      console.log("Please input a positive number!");
     }
   }
   check_balance() {
     console.log("Your current Balance is : " + this.balance);
   }
   make_withdrawl(number) {
-    if (typeof number === "number") {
+    if (typeof number === "number" && number >= 0) {
       if (number > this.balance) {
         console.log(
           "You don't have enough in your account! want to make a deposite instead?"
@@ -36,7 +36,7 @@ class ATM {
         this.balance -= number;
       }
     } else {
-      console.log("Please input a number!");
+      console.log("Please input a positive number!");
     }
   }
 }

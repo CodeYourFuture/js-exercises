@@ -24,6 +24,7 @@ class MusicPlayer {
     this.playlist = [];
     this.playing = false;
     this.trackIndex = 0;
+    this.playedSongs = [];
   }
   add(track, artist) {
     let song = {};
@@ -37,9 +38,13 @@ class MusicPlayer {
       console.log("You have no songs in your playlist!");
     } else {
       if (choice) {
-        console.log(
-          `Currently playing:${this.playlist[choice].name} by ${this.playlist[choice].artist}`
-        );
+        if (choice >= 0 && choice <= this.playlist.length) {
+          console.log(
+            `Currently playing:${this.playlist[choice].name} by ${this.playlist[choice].artist}`
+          );
+        } else {
+          console.log(`This choice is out of the range of your list!`);
+        }
       } else {
         console.log(
           `Currently playing:${this.playlist[this.trackIndex].name} by ${
@@ -52,24 +57,15 @@ class MusicPlayer {
   repeat() {
     if (this.trackIndex === this.playlist.length - 1) {
       this.trackIndex = 0;
-      this.play;
-      console.log(
-        `Currently playing:${this.playlist[this.trackIndex].name} by ${
-          this.playlist[this.trackIndex].artist
-        }`
-      );
+      this.play(this.trackIndex);
     } else {
-      this.play;
+      this.play(this.trackIndex);
     }
   }
   skip() {
     if (this.trackIndex < this.playlist.length - 1) {
       this.trackIndex++;
-      console.log(
-        `Currently playing:${this.playlist[this.trackIndex].name} by ${
-          this.playlist[this.trackIndex].artist
-        }`
-      );
+      this.play(this.trackIndex);
     } else {
       console.log(
         `Currently playing:${this.playlist[this.trackIndex].name} by ${
@@ -78,23 +74,23 @@ class MusicPlayer {
       );
     }
   }
+  randNumberGen() {
+    return Math.floor(Math.random() * this.playlist.length);
+  }
+
   shuffle() {
-    let playedSongs = [];
-    let randNumber = Math.floor(Math.random() * this.playlist.length);
-    if (playedSongs.includes(randNumber)) {
+    let randNumber = this.randNumberGen();
+    if (this.playedSongs.includes(randNumber)) {
       console.log("We went through the whole playlist");
     } else {
       this.play(randNumber);
+      this.playedSongs.push(randNumber);
     }
   }
   previous() {
     if (this.trackIndex > 0) {
       this.trackIndex--;
-      console.log(
-        `Currently playing:${this.playlist[this.trackIndex].name} by ${
-          this.playlist[this.trackIndex].artist
-        }`
-      );
+      this.play(this.trackIndex);
     } else {
       console.log(
         `Currently playing:${this.playlist[this.trackIndex].name} by ${
@@ -127,4 +123,15 @@ myMusicPlayer.skip(); // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip(); // Output: "Currently playing: Vogue by Madonna"
 myMusicPlayer.repeat();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
+myMusicPlayer.shuffle();
 myMusicPlayer.shuffle();
