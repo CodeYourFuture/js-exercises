@@ -37,7 +37,7 @@ class MusicPlayer {
     if (this.playlist.length == 0) {
       console.log("You have no songs in your playlist!");
     } else {
-      if (choice) {
+      if (typeof choice == "number") {
         if (choice >= 0 && choice <= this.playlist.length) {
           console.log(
             `Currently playing:${this.playlist[choice].name} by ${this.playlist[choice].artist}`
@@ -79,9 +79,13 @@ class MusicPlayer {
   }
 
   shuffle() {
+    if (this.playlist.length === this.playedSongs.length) {
+      console.log("We went through the whole playlist, try repeat()");
+      return;
+    }
     let randNumber = this.randNumberGen();
     if (this.playedSongs.includes(randNumber)) {
-      console.log("We went through the whole playlist");
+      this.shuffle();
     } else {
       this.play(randNumber);
       this.playedSongs.push(randNumber);
@@ -122,16 +126,14 @@ myMusicPlayer.previous(); // Output: "Currently playing: Bohemian Rhapsody by Qu
 myMusicPlayer.skip(); // Output: "Currently playing: Yesterday by The Beatles"
 
 myMusicPlayer.skip(); // Output: "Currently playing: Vogue by Madonna"
-myMusicPlayer.repeat();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
-myMusicPlayer.shuffle();
+myMusicPlayer.repeat(); // Output: "Currently playing: Vogue by Madonna"
+myMusicPlayer.shuffle(); // Output : random choice from the playlist
+myMusicPlayer.shuffle(); // Output : random choice from the remaining songs on the playlist
+myMusicPlayer.shuffle(); // Output : random choice from the remaining songs on the playlist
+myMusicPlayer.shuffle(); // Output : random choice from the remaining songs on the playlist
+myMusicPlayer.shuffle(); // Output : random choice from the remaining songs on the playlist
+myMusicPlayer.shuffle(); // Output : random choice from the remaining songs on the playlist
+myMusicPlayer.shuffle(); // Output : random choice from the remaining songs on the playlist
+myMusicPlayer.shuffle(); // Output : random choice from the remaining songs on the playlist
+myMusicPlayer.shuffle(); // Output : We went through the whole playlist, try repeat()
+myMusicPlayer.shuffle(); // Output : We went through the whole playlist, try repeat()
