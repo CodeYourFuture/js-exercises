@@ -1,3 +1,13 @@
+# Archived - DO NOT USE
+
+This homework has now been split into it's own modules. Please use 
+
+https://github.com/CodeYourFuture/JavaScript-Core-1-Homework
+
+https://github.com/CodeYourFuture/JavaScript-Core-2-Homework
+
+https://github.com/CodeYourFuture/JavaScript-Core-3-Homework
+
 # JavaScript exercises
 
 1. Fork this repo
