@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+  #container img {
+    width: 15rem;
+    height: 5rem;
+  }
+  #title {
+    font-size: medium;
+  }
+}
+
+#container img {
+  border: 5px dotted black;
+}
