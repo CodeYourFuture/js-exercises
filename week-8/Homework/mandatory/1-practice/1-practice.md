@@ -27,7 +27,7 @@ The following endpoint is publicly available from Github
 <!-- Write your answer here -->
 
 `${owner}` : name of the github account owner;
-`${repo}` : name of the reposiory
+`${repo}` : name of the repository
 `${pull_number}` : number of the pull request
 
 2. Describe in a sentence what this API endpoint returns when all of the fields are completed?
