@@ -4,7 +4,7 @@
 let startingNumber = 0;
 
 for (let i = 0; i < 10; i++) {
-  let startingNumber = 55;
+  //let startingNumber = 55;
   startingNumber = startingNumber + 1;
 }
 

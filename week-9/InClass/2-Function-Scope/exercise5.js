@@ -20,3 +20,6 @@ function sayGoodbye(name) {
 }
 
 sayGoodbye("Gianluca");
+// Hi Etzali, Au revoir Emilia
+
+// the function sayGoodbye used global variables because it did not find local ones into the function.
