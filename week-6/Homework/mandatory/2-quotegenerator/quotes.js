@@ -1,3 +1,4 @@
+
 // DO NOT EDIT BELOW HERE
 
 // A function which will return one item, at random, from the given array.
@@ -489,3 +490,19 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+
+
+function qoutesGenerator(){
+  let h2 = document.getElementById('qoute-text');
+  let h5 = document.getElementById('author-text');
+  let button = document.querySelector('.flicker');
+
+  button.addEventListener("click", quotePicker);  
+  
+  function quotePicker() {
+  let numberPicker = Math.floor(Math.random() * quotes.length);
+   h2.innerHTML = '<span>"</span>'+  quotes[numberPicker].quote +'<span>"</span>' ;
+   h5.innerHTML = '<span>--</span>'+ quotes[numberPicker].author ;
+  
+  }
+}
