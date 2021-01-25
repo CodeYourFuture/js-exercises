@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dog photo gallery</title>
+    <meta name="description" content="Introduction to Fetch" />
+    <meta name="author" content="CodeYourFuture" />
+    <style>
+      #info {
+        font-size: 20px;
+        border: 1px solid #ccc;
+        background-color: #ddd;
+        width: 20%;
+        text-align: center;
+        margin: 0 50px;
+        padding: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="btn">Press</button>
+    <ul id="container"></ul>
+
+    <script>
+      document.querySelector("#btn").addEventListener("click", () => {
+        fetch("https://dog.ceo/api/breeds/image/random")
+          .then(function (result) {
+            return result.json();
+          })
+
+          .then(function (dog) {
+            let photoDog = document.createElement("li");
+            document.querySelector("#container").appendChild(photoDog);
+            let imgDog = document.createElement("img");
+            photoDog.appendChild(imgDog);
+            imgDog.src = dog.message;
+            photoDog.appendChild;
+          })
+          .catch((error) => console.log(error));
+      });
+    </script>
+  </body>
+</html>
