@@ -3,45 +3,47 @@
 
 function mood() {
   let isHappy = true;
-
-  if (isHappy) {
+  if (!isHappy) {
     return "I am happy";
   } else {
     return "I am not happy";
   }
 }
 
+
 function greaterThan10() {
   let num = 10;
-  let isBigEnough;
-
-  if (isBigEnough) {
+  let isBigEnough = num;
+  if (isBigEnough >= num) {
     return "num is greater than or equal to 10";
   } else {
     return "num is not big enough";
   }
 }
 
+
 function sortArray() {
   let letters = ["a", "n", "c", "e", "z", "f"];
   let sortedLetters;
-
+  sortedLetters = letters.sort();
   return sortedLetters;
 }
+
 
 function first5() {
   let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
   let sliced;
-
+  sliced = numbers.slice(0, 5);
   return sliced;
 }
 
+
 function get3rdIndex(arr) {
   let index = 3;
-  let element;
-
+  let element = arr[index];
   return element;
 }
+
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

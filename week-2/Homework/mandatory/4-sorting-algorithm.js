@@ -14,7 +14,52 @@ You don't have to worry about making this algorithm work fast! The idea is to ge
 "think" like a computer and practice your knowledge of basic JavaScript.
 */
 
-function sortAges(arr) {}
+const ages1 = [
+  "🎹",
+  100,
+  "💩",
+  55,
+  "🥵",
+  "🙈",
+  45,
+  "🍕",
+  "Sanyia",
+  66,
+  "James",
+  23,
+  "🎖",
+  "Ismeal"
+];
+const ages2 = ["28", 100, 60, 55, "75", "🍕", "Elamin"];
+
+function filterNumsOnly(arr) {
+  for (i = 0; i < arr.length; i++) {
+    if (typeof arr[i] !== "number") {
+      arr.splice(i, 1);
+      i = i - 1;
+    }
+  }
+  return arr;
+}
+
+function sortAges(arr) {
+  filterNumsOnly(arr);
+
+  let temp;
+  for (let i = 0; i < arr.length; i++) {
+    for (j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+
+console.log(sortAges(ages1));
+console.log(sortAges(ages2));
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
