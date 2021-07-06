@@ -1,1 +1,15 @@
 /** Write your CSS in here **/
+body {
+  padding: 150px;
+}
+
+h1 {
+  color: green;
+  font-style: italic;
+}
+
+#secondary {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
