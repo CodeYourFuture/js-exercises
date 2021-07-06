@@ -1,8 +1,10 @@
 # Project - Part 2
 
-This project should consolidate knowledge from JS2
+Continue working on the next levels of the TV Show DOM Project at your own pace. There is no limit for this week (i.e. if you want, you can go all the way to Level 999). However, please make sure that you understand your code thoroughly and keep improving it based on reviews from your classmates and mentors.
 
-This could include
+This project should consolidate knowledge from JS2.
+
+This could include:
 
 - DOM Manipulation
 - Working with an API
