@@ -1,1 +1,39 @@
-/** Write your CSS in here **/
+body {
+  background-color: paleturquoise;
+}
+
+h1 {
+  color: gray;
+}
+
+#slideBox {
+  right: 30%;
+  bottom: 50%;
+  width: 800px;
+}
+
+img {
+  width: 80%;
+  height: 400px;
+}
+
+#buttons {
+  font-size: 20px;
+  position: fixed;
+  bottom: 20px;
+}
+
+button {
+  background-color: coral;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}

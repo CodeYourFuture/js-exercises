@@ -1,1 +1,23 @@
 /** Write your CSS in here **/
+
+body {
+  background-color: pink;
+}
+
+.quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 130px;
+  padding: 20px;
+  background-color: #44bbee;
+}
+
+.button {
+  position: fixed;
+  bottom: 150px;
+  right: 550px;
+  z-index: 1000;
+}

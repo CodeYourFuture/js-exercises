@@ -1,12 +1,30 @@
 // Implement the missing functionality according to the task description.
 // Hint: Remember which function you need to call when it's time to alarm.
 
-function setAlarm() { }
+function setAlarm() {
+  let remainingTime = document.getElementById("timeRemaining");
+  let input = document.getElementById("alarmSet").value;
+
+  let interval = setInterval(function () {
+    if (input > 0 && input < 10) {
+      remainingTime.innerText = `Time Remaining: 00:0${input}`;
+      input--;
+    } else if (input >= 10) {
+      remainingTime.innerText = `Time Remaining: 00:${input}`;
+      input--;
+    } else if (input === 0) {
+      remainingTime.innerText = `Time Remaining: 00:0${input}`;
+      clearInterval(interval);
+      playAlarm();
+    }
+  }, 1000);
+}
 
 // DO NOT EDIT BELOW HERE
 /* 
  Try to reason about the code below and understand what it will do.
- You will see that it attaches some event listeners to buttons on the page as well as how to play Audio from JS.
+ You will see that it attaches some event listeners to buttons on the page 
+ as well as how to play Audio from JS.
  If you don't remember how to use events, please revisit the previous lession.
 */
 
