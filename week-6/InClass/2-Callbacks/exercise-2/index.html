@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CodeYourFuture - Callbacks</title>
+    <meta content="Callbacks" name="description" />
+    <meta content="CodeYourFuture" name="author" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 30px;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .show {
+        display: block;
+      }
+
+      #loading-text {
+        background: lightblue;
+        width: 200px;
+        padding: 5px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="jumbotron">
+        <h1>My movies</h1>
+        <div id="all-movies"></div>
+        <p class="hide" id="loading-text">
+          Saving your new movie...
+        </p>
+      </div>
+    </div>
+    <label for="new-movie-input">New movie text:</label>
+    <input id="new-movie-input" />
+    <button id="add-movie-btn">Add movie</button>
+    <script src="exercise.js"></script>
+  </body>
+</html>
