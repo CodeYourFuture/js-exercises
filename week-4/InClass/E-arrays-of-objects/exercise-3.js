@@ -15,36 +15,36 @@ and returns the number of restaurants in this area.
 */
 
 let restaurant1 = {
-    name: "Paesano",
-    totalSeats: 10,
-    numberOfCustomers: 8,
-    address: {
-        city: "Glasgow",
-        area: "center"
-    },
-    menu: ["pizza", "calzone", "salad"]
+  name: "Paesano",
+  totalSeats: 10,
+  numberOfCustomers: 8,
+  address: {
+    city: "Glasgow",
+    area: "center",
+  },
+  menu: ["pizza", "calzone", "salad"],
 };
 
 let restaurant2 = {
-    name: "Ubiquitous Chip",
-    totalSeats: 20,
-    numberOfCustomers: 10,
-    address: {
-        city: "Glasgow",
-        area: "west"
-    },
-    menu: ["salad", "chocolate cake", "roast lamb"]
+  name: "Ubiquitous Chip",
+  totalSeats: 20,
+  numberOfCustomers: 10,
+  address: {
+    city: "Glasgow",
+    area: "west",
+  },
+  menu: ["salad", "chocolate cake", "roast lamb"],
 };
 
 let restaurant3 = {
-    name: "Monkeyz",
-    totalSeats: 15,
-    numberOfCustomers: 8,
-    address: {
-        city: "Glasgow",
-        area: "center"
-    },
-    menu: ["stew", "chocolate cake", "panini"]
+  name: "Monkeyz",
+  totalSeats: 15,
+  numberOfCustomers: 8,
+  address: {
+    city: "Glasgow",
+    area: "center",
+  },
+  menu: ["stew", "chocolate cake", "panini"],
 };
 
 let restaurants = [restaurant1, restaurant2, restaurant3];
@@ -53,33 +53,38 @@ let restaurants = [restaurant1, restaurant2, restaurant3];
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+function findAvailableRestaurants(restaurants,number){
+  return restaurants.filter(restaurant => (restaurant.totalSeats - restaurant.numberOfCustomers)>number)
+  .map(restaurant => restaurant.name);
+  };
 
+ function findRestaurantServingDish(restaurants, dishName){
+  return restaurants.filter(restaurant => restaurant.menu.includes(dishName))
+  .map(restaurant => restaurant.name);
+ };
 
-let restaurantFinderApplication = {
-    applicationName: "Restaurant Finder",
-    applicationVersion: "1.0",
-    restaurants: restaurants,
-    findAvailableRestaurants: function (numberOfPeople) {
-        // Complete here
-    },
-    findRestaurantServingDish: function (dishName) {
-        // Complete here
-    },
-    countNumberOfRestaurantsInArea: function (area) {
-        // Complete here
-    }
-};
-
-
+ function countNumberOfRestaurantsInArea(restaurants, place){
+  return restaurants.filter(restaurant =>restaurant.address.area.includes(place))
+  .map(restaurant => restaurant.name).length;
+ };
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-let restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(5);
-console.log(`Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: ${restaurantsAvailableFor5People}`);
+let restaurantsAvailableFor5People = findAvailableRestaurants(restaurants, 5);
+console.log(
+  `Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: ${restaurantsAvailableFor5People}`
+);
 
-let restaurantsServingSalad = restaurantFinderApplication.findRestaurantServingDish("salad");
-console.log(`Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: ${restaurantsServingSalad}`);
+let restaurantsServingSalad = findRestaurantServingDish(restaurants, "salad");
+console.log(
+  `Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: ${restaurantsServingSalad}`
+);
 
-let numberOfRestaurantsInCityCentre = restaurantFinderApplication.countNumberOfRestaurantsInArea("center");
-console.log(`Number of restaurants in city centre: Expected result: 2, actual result: ${numberOfRestaurantsInCityCentre}`);
+let numberOfRestaurantsInCityCentre = countNumberOfRestaurantsInArea(
+  restaurants,
+  "center"
+);
+console.log(
+  `Number of restaurants in city centre: Expected result: 2, actual result: ${numberOfRestaurantsInCityCentre}`
+);
