@@ -1,4 +1,8 @@
-
+.jumbotron{
+    background-color: rgb(71, 14, 226);
+    color: cornsilk;
+    font-family: 'Balsamiq Sans', cursive, Arial, Helvetica, sans-serif;
+}
 .form-group{
     width:400px;
     height:300px; 
