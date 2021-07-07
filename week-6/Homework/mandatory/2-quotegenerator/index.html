@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Quote Generator</title>
-    <script src="quotes.js"></script>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -13,5 +13,19 @@
   </head>
   <body>
     <!-- Write your HTML in here -->
+    <h1 id="autoPlaySign"></h1>
+    <div>
+      <h2 id="quote">Quote</h1>
+      <h3 id="author">author</h2>
+
+      <button id="newQuoteButton">New quote</button>
+      <label class="switch">
+        <input type="checkbox" id="autoSwitch" />
+        <span class="slider round"></span>
+        Autoplay
+      </label>
+    </div>
+
+    <script src="quotes.js"></script>
   </body>
 </html>

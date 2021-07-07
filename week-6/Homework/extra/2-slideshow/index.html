@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Slideshow</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Write your HTML in here -->
+
+    <div id="container">
+      <h1>Code Your Future course contains:</h1>
+      <div>
+        <img
+          id="imgPlace"
+          src="pics/html.jpg"
+          alt="Technologies in CYF course"
+        />
+      </div>
+      <div id="indexPlace">0</div>
+      <div class="autoMove">
+        <div id="time_remain"></div>
+
+        <select name="timer" id="timechange">
+          <option>5</option>
+          <option>10</option>
+          <option>15</option>
+          <option>20</option>
+          <option>25</option>
+          <option>30</option>
+        </select>
+      </div>
+      <div id="buttons">
+        <button id="autobackBtn">AutoBack</button>
+        <button id="backBtn">Back</button>
+        <button id="stopBtn">Stop</button>
+        <button id="forwardBtn">Forward</button>
+        <button id="autoforwardBtn">Auto Forward</button>
+      </div>
+    </div>
+    <script src="slideshow.js"></script>
+  </body>
+</html>
