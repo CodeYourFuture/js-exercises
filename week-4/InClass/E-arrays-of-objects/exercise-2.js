@@ -32,25 +32,44 @@ let destination4 = {
     transportations: ["plane", "ferry"]
 };
 
-let travelDestinations = [destination1, destination2, destination3, destination4];
+let travelDestinations = [
+    destination1, 
+    destination2, 
+    destination3, 
+    destination4
+];
 
-/* 
-DO NOT EDIT ANYTHING ABOVE THIS LINE
-WRITE YOUR CODE BELOW
-*/
+// [
+//     {destinationName: "Dublin", distanceKms: 350},
+//     {destinationName: "Dublin", distanceKms: 350},
+//     {destinationName: "Dublin", distanceKms: 350},
+// ]
+
+// ["Dublin", "Paris", "Edinburgh"]
 
 
-let destinationNamesWithin500Kms = // Complete here
+// 1. Print in the console 
+// 2. all the destination names
+// 3. more than 300 kms far away and reachable by train.
 
-let destinationNameReachableByFerry = // Complete here
+function isReachable(destination) {
+    let isFar = destination.distanceKms > 300;
+    let trainReachable = destination.transportations.includes("train");
+    return isFar && trainReachable;
+}
 
-let destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+let reachableDestinations = travelDestinations.filter(isReachable);
+
+function transformDestination(destination) {
+    let destinationName = destination.destinationName;
+    return destinationName;
+}
+
+let destinationNames = reachableDestinations.map(transformDestination);
 
 
-/*
-DO NOT EDIT ANYTHING BELOW THIS LINE
-*/
+function printToConsole(destinationName) {
+    console.log(destinationName);
+}
 
-console.log(`Question 1) Expected result: Edinburgh,Dublin, actual result: ${destinationNamesWithin500Kms}`);
-console.log(`Question 2) Expected result: Dublin, actual result: ${destinationNameReachableByFerry}`);
-console.log(`Question 3) Expected result: London,Paris, actual result: ${destinationNamesMoreThan300KmsAwayByTrain}`);
+destinationNames.forEach(printToConsole);
