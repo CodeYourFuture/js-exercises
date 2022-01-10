@@ -45,17 +45,59 @@ Very doubtful.
 
 // This should log "The ball has shaken!"
 // and return the answer.
-function shakeBall() {}
 
 // The answer should come from shaking the ball
-let answer;
+
 
 // When checking the answer, we should tell someone if the answer is
 // - very positive
 // - positive
 // - negative
 // - very negative
-function checkAnswer() {}
+function checkAnswer(message) {
+  if (message === 'It is certain') {
+    answer = 'Very positive'
+  } else if (message === 'It is decidedly so') {
+    answer = 'very positive'
+  } else if (message === 'Without a doubt') {
+    answer = 'very positive'
+  } else if (message === 'Yes - definitely') {
+    answer = 'very positive'
+  } else if (message === 'You may rely on it') {
+    answer = 'very positive'
+  } else if (message === 'As I see it, yes') {
+    answer = 'positive'
+  } else if (message === 'Most likely') {
+    answer = 'positive'
+  } else if (message === 'Outlook good') {
+    answer = 'positive'
+  } else if (message === 'Yes') {
+    answer = 'positive'
+  } else if (message === 'Signs point to yes') {
+    answer = 'positive'
+  } else if (message === 'Reply hazy, try again') {
+    answer = 'very negative'
+  } else if (message === 'Ask again later') {
+    answer = 'very negative'
+  } else if (message === 'Better not tell you now') {
+    answer = 'very negative'
+  } else if (message === 'Cannot predict now') {
+    answer = 'very negative'
+  } else if (message === 'Concentrate and ask again') {
+    answer = 'very negative'
+  } else if (message === "Don't count on it") {
+    answer = 'negative'
+  } else if (message === 'My reply is no') {
+    answer = 'negative'
+  } else if (message === 'My sources say no') {
+    answer = 'negative'
+  } else if (message === 'Outlook not so good') {
+    answer = 'negative'
+  } else {
+    answer = 'negative'
+  }
+  return answer
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 const log = console.log;
