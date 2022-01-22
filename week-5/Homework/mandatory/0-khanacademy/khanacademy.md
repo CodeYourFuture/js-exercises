@@ -1,6 +1,6 @@
 # Complete this online course
 
-You should complete the following sections from this online tutorial:
+You should complete the following sections from these online tutorials on Khanacademy:
 
 - Get ready to make your webpages interactive
 - JS and the DOM

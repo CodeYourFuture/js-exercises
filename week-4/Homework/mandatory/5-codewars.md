@@ -1,7 +1,3 @@
-## Reading
-
-- [Understanding JavaScript Constructors](https://css-tricks.com/understanding-javascript-constructors/)
-
 ## CodeWars Exercises
 
 Complete the following CodeWars exercises. Go to the webpages below and follow the instructions there.
