@@ -26,12 +26,19 @@ After you've watched these videos I'd like you to answer these questions
 
 ## 1. What do you think the most important quality for a programmer is?
 
+patient
+Positive Attitude
+
 <!-- Write your answer here -->
 
 ## 2. When trying to solve a challenge, what should you do first?
 
+understanding the problems
+
 <!-- Write your answer here -->
 
 ## 3. What should you do if you get stuck?
+
+I will go step by step through my solution trying to find where I went wrong.
 
 <!-- Write your answer here -->
