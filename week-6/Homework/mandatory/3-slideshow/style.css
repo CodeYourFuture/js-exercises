@@ -1,1 +1,111 @@
 /** Write your CSS in here **/
+/* @media (min-width: 768px) and (max-width: 1223px) {
+  body {
+    background-color: gray;
+  }
+  div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 90vh;
+  }
+  #main {
+    background-color: antiquewhite;
+  }
+  button {
+    position: relative;
+    top: 95%;
+    left: 25%;
+    border-radius: 5px;
+    height: 40px;
+  }
+
+  #buttons {
+    position: relative;
+    background-color: aqua;
+    height: 10vh;
+     -webkit-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%); 
+  }
+
+  button:hover {
+    background-color: gray;
+  }
+
+  #pic-container {
+    position: relative;
+    margin: auto 0;
+    width: 90vw;
+    height: 50vh;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+} 
+
+@media only screen and (min-width: 1224px) {
+  body {
+    background-color: gray;
+  }
+  div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 95%;
+  }
+
+  button {
+    position: relative;
+    top: 85%;
+    left: 25%;
+    border-radius: 5px;
+    height: 40px;
+  }
+  button:hover {
+    background-color: gray;
+  }
+
+  #pic-container {
+    position: relative;
+    margin: auto 0;
+    -webkit-transform: translate(-35%, -40%);
+    transform: translate(-35%, -40%);
+  }
+}
+*/
+
+body {
+  background-color: gray;
+}
+div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 95%;
+}
+
+button {
+  position: relative;
+  top: 85%;
+  left: 25%;
+  border-radius: 5px;
+  height: 40px;
+}
+button:hover {
+  background-color: gray;
+}
+
+#pic-container {
+  position: relative;
+  margin: auto 0;
+  -webkit-transform: translate(-35%, -40%);
+  transform: translate(-35%, -40%);
+}

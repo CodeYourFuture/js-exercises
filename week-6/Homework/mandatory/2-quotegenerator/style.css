@@ -1,1 +1,47 @@
 /** Write your CSS in here **/
+body {
+  background-color: rgb(0, 140, 255);
+  font-family: "Bree Serif", serif;
+  color: rgb(0, 140, 255);
+}
+
+#quote-box {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 140, 255);
+  font-size: larger;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 60%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+button {
+  background-color: rgb(0, 140, 255);
+  border: none;
+  position: fixed;
+  top: 80%;
+  left: 80%;
+  height: 50px;
+}
+
+button:active {
+  font-weight: bold;
+  background-color: rgb(255, 196, 0);
+}
+
+h1 {
+  margin-left: 50px;
+  margin-top: 50px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+h4 {
+  margin-left: 50px;
+  margin-top: 80px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
