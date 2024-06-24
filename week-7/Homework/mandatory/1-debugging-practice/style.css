@@ -1,20 +1,19 @@
-
-.form-group{
-    width:400px;
-    height:300px; 
-    align-self:left;
-    padding-left: 20px;
+.form-group {
+  width: 400px;
+  height: 300px;
+  align-self: left;
+  padding-left: 20px;
 }
 
 .btn {
-    display: block;
+  display: block;
 }
 
 .form-check-label {
-    padding-left: 20px;
-    margin: 5px 0px 5px 0px;
+  padding-left: 20px;
+  margin: 5px 0px 5px 0px;
 }
 
 button.btn-info {
-    margin: 20px;
+  margin: 20px;
 }
