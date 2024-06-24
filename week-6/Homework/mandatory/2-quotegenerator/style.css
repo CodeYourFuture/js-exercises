@@ -1,1 +1,25 @@
 /** Write your CSS in here **/
+body {
+  background-color: #fc2;
+  padding: 200px;
+  color: #fc2;
+}
+
+div {
+  background-color: white;
+  padding: 15px;
+}
+.btn {
+  display: flex;
+  margin-left: 70rem;
+  color: white;
+  background-color: #fc2;
+  border-color: #fc2;
+}
+
+span {
+  display: block;
+  color: fc2;
+  font-size: 25px;
+  margin-left: 50rem;
+}

@@ -1,4 +1,21 @@
-## FreeCodeCamp
+# Introducion
+
+## Instructions
+
+- Just making the tests become `passed` is not enough, you need to use the code already there, to help answer your the task properly
+- Read instructions in the README.md on how to make correct PRs to the main repo
+- Remember to use Google as much as you can help
+
+**Good Luck! Keep calm and code along**
+
+## Resources
+
+To get a better understanding of loops and arrays
+
+- [while and for loops](https://javascript.info/while-for)
+- [arrays](https://javascript.info/array)
+
+## Freecodecamp
 
 If you haven't already, you should complete all of these lessons on FreeCodeCamp - https://www.freecodecamp.org/learn
 

@@ -1,1 +1,12 @@
 /** Write your CSS in here **/
+h1 {
+  color: lightseagreen;
+}
+
+.btn {
+  display: inline-block;
+}
+img {
+  display: block;
+  padding: 15px;
+}

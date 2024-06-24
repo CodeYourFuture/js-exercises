@@ -1,6 +1,6 @@
 # Complete this online course
 
-You should complete the following sections from this tutorial:
+You should complete the following sections from these tutorials on Khanacademy:
 
 - DOM animation
 - Using JS libraries in your webpage

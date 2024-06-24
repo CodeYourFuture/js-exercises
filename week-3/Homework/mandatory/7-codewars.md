@@ -1,12 +1,15 @@
 # Codewars Exercises
 
-Today, you'll be using a platform called [CodeWars](https://codewars.com) to help you recap the materials you learnt in JS1. CodeWars is an excellent platform for going through interesting JavaScript exercises, and allows you to communicate with the wider community to learn about the best way of writing JavaScript code. 
+Today, you'll be using a platform called [CodeWars](https://codewars.com) to help you recap the materials you learnt in JS1. CodeWars is an excellent platform for going through interesting JavaScript exercises, and allows you to communicate with the wider community to learn about the best way of writing JavaScript code.
 
 1. Make sure you finish all the pending exercies in week-1, week-2 and week-3 of the [js-exercises repo](https://github.com/CodeYourFuture/js-exercises).
 
 2. Signup to [CodeWars](https://codewars.com) and work on these challenges:
 
-*Functions, types, conditionals etc...*
+3. You need to finish a minimum of **3 Exercises from [functions part](Section_1)** and a minimum of **3 Exercises from [Arrays part](Section_2)**
+
+(Section*1)
+\_Functions, types, conditionals etc...*
 
 - [even or odd](https://www.codewars.com/kata/even-or-odd/train/javascript)
 - [code under pressure](https://www.codewars.com/kata/you-cant-code-under-pressure-number-1/train/javascript)
@@ -21,7 +24,8 @@ Today, you'll be using a platform called [CodeWars](https://codewars.com) to hel
 - [string repeat](https://www.codewars.com/kata/string-repeat/train/javascript)
 - [mathematical operations](https://www.codewars.com/kata/basic-mathematical-operations/train/javascript)
 
-*Arrays*
+(Section*2)
+\_Arrays*
 
 - [invert values](https://www.codewars.com/kata/invert-values/train/javascript)
 - [needle in haystack](https://www.codewars.com/kata/a-needle-in-the-haystack/train/javascript)

@@ -1,7 +1,19 @@
+let buttonEl = document.querySelector(".btn");
+let quotesEl = document.getElementById("quote");
+
+window.addEventListener("load", zision);
+
+buttonEl.addEventListener("click", zision);
+
+function zision() {
+  let jani = quotes.map((i) => `❝${i.quote}<span>-${i.author}</span>`);
+  let randomQuotes = jani[Math.floor(Math.random() * jani.length)];
+  quotesEl.innerHTML = randomQuotes;
+}
+
 // DO NOT EDIT BELOW HERE
 
-// A function which will return one item, at
-// random, from the given array.
+// A function which will return one item, at random, from the given array.
 //
 // Parameters
 // ----------
