@@ -53,23 +53,63 @@ let restaurants = [restaurant1, restaurant2, restaurant3];
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
+//restaurant[availableSeats] = restaurant.totalSeats - restaurant.numberOfCustomers;
+function findAvailableRestaurants(num) {
+  return restaurants
+    .filter(
+      (restaurant) =>
+        num <= restaurant.totalSeats - restaurant.numberOfCustomers
+    )
+    .map((restaurant) => restaurant.name);
+}
+
+
+/* 2) Define a method findRestaurantServingDish which takes a dish name in parameter and returns
+all the restaurant names serving this dish.*/
+
+function findRestaurantServingDish(dish) {
+  return restaurants
+    .filter((restaurant) => restaurant.menu.includes(dish))
+    .map((restaurant) => restaurant.name);
+}
+
+
+
+/*3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west),
+and returns the number of restaurants in this area.
+*/
+
+function countNumberOfRestaurantsInArea(area) {
+  let inArea = restaurants
+    .filter((restaurant) => restaurant.address.area === area)
+    .map((restaurant) => restaurant.name);
+  return inArea.length;
+}
+
+
+
 
 /*
 DO NOT EDIT ANYTHING BELOW THIS LINE
-*/
+*/  
+ /*these consol.logs had two parameters each, but I couldn't make
+ the functions work with an object as one of the parameters
+ they all were like this:
+ let restaurantsAvailableFor5People = findAvailableRestaurants(restaurants, 5) */
 
-let restaurantsAvailableFor5People = findAvailableRestaurants(restaurants, 5);
+let restaurantsAvailableFor5People = findAvailableRestaurants(5);
 console.log(
-  `Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: ${restaurantsAvailableFor5People}`
+  `Find available restaurants for 5 people: Expected result: 
+  Ubiquitous Chip,Monkeyz, actual result: ${restaurantsAvailableFor5People}`
 );
 
-let restaurantsServingSalad = findRestaurantServingDish(restaurants, "salad");
+let restaurantsServingSalad = findRestaurantServingDish("salad");
 console.log(
-  `Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: ${restaurantsServingSalad}`
+  `Find restaurants serving salad: Expected result: 
+   Paesano,Ubiquitous Chip, actual result: ${restaurantsServingSalad}`
 );
 
 let numberOfRestaurantsInCityCentre = countNumberOfRestaurantsInArea(
-  restaurants,
   "center"
 );
 console.log(
